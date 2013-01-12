@@ -16,7 +16,7 @@
 
 get_header(); ?>
 	<div id="primary" class="site-content">
-		<div id="content" role="main">
+		<div id="content" class="content-wrap" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>

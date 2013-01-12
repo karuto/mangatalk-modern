@@ -44,7 +44,23 @@ http://snook.ca/archives/html_and_css/font-size-with-rem
 http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 
 
-/* =Reset
+
+
+
+/* Base rules */
+/* Notes
+--------------------------------------------------------------
+
+	* Base rules are defaults for the basic element selectors. 
+	* Exclusively single element selectors, like html, body, form, input, a...
+		* NO CLASS / ID SELECTORS ALLOWED.
+	* Can include some attribute selectors or what not, but keep it minor.
+	* Essentially, a base style says that whenever this element is on page, it 
+	  should look like this by default (without extra styling).
+	* Includes heading sizes, default link styles, default fonts, body bg...
+	  and / or CSS resets.
+	* No need to use !important here.
+
 -------------------------------------------------------------- */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
@@ -141,30 +157,94 @@ hr {
 }
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 sup {
-	top: -0.5em;
+  top: -0.5em;
 }
 sub {
-	bottom: -0.25em;
+  bottom: -0.25em;
 }
 small {
-	font-size: smaller;
+  font-size: smaller;
 }
 img {
-	border: 0;
-	-ms-interpolation-mode: bicubic;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
 }
+
+
+
+/* Layout rules */
+/* Notes
+--------------------------------------------------------------
+
+	* Layout rules divide page into sections. Think of visual layout.
+	* Each layout hold / contain one or more modules.
+	* Layout itself is an empty container, it doesn't describe content.
+	* Naming rule: add prefix "layout-".
+
+-------------------------------------------------------------- */
+
+.layout-site-wrap {}
+
+.layout-main-wrap {}
+
+
+/* Module rules */
+/* Notes
+--------------------------------------------------------------
+
+	* Modules are reusable, modular parts of design.
+	* Modules contain the actual content of a web-page. 
+	* Think of sidebar widgets, post summaries, product lists...
+	* Modules usually take the majority of lines in your CSS file.
+	* Naming rule: no need, because this will be the majority of code.
+		* But related elements of the same module (or, of a variation of that 
+		  module) should have recognizable prefix to easily group them.
+
+-------------------------------------------------------------- */
+
+.site-header {}
+
+.main-navigation{}
+
+.main-footer {}
+
+/* State rules */
+/* Notes
+--------------------------------------------------------------
+
+	* State rules describe how modules / layouts look like in a state.
+	* Think of hidden, expanded, hover, highlighted, inactive, etc...
+	* State rules also describe how modules / layout look on screen.
+		* For example, how a sidebar module might look different in homepage,
+		  and in an article page...
+	* Naming rule: add prefix "is-".
+		  
+-------------------------------------------------------------- */
+
+
+
+
+/* Misc rules */
+/* Notes
+--------------------------------------------------------------
+
+	* Anything else that doesn't belong to the previous categories.
+	* Usually contains common helper methods or what not.
+	    * But keep it at a minimum.
+		  
+-------------------------------------------------------------- */
 
 /* Clearing floats */
 .clear:after,
 .wrapper:after,
 .format-status .entry-header:after {
-	clear: both;
+  clear: both;
 }
 .clear:before,
 .clear:after,
@@ -172,8 +252,6 @@ img {
 .wrapper:after,
 .format-status .entry-header:before,
 .format-status .entry-header:after {
-	display: table;
-	content: "";
+  display: table;
+  content: "";
 }
-
-
