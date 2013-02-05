@@ -233,7 +233,7 @@ body {
   position: relative;
 }
 .layout-posts-row {
-  display: table-row;
+  display: table;
   margin: 20px 0;
 }
 
@@ -275,7 +275,7 @@ body {
 .main-navigation{}
 
 
-
+/* This defines the block properties of main-item. */
 .main-item-block {
   display: table-cell;
   margin: 20px 0 100px;
@@ -284,10 +284,11 @@ body {
   width: 50%;
 }
 
+/* This defines the appearance of main-item; much more universal. */
 .main-item-style {
   background-color: #fff;
   /*border: 1px solid #d0d0d0;*/
-  border: 1px solid reading;
+  /*border: 1px solid red;*/
   color: #000;
 
 }
@@ -307,6 +308,9 @@ body {
 /* Entry related */
 
 .entry-masthead {
+  background-attachment: scroll;
+  background-position: center; 
+  background-repeat: repeat;
   display: block;
   height: 250px;
   overflow: hidden;

@@ -9,7 +9,7 @@
 ?>
 
   <article id="post-<?php the_ID(); ?>" 
-    <?php post_class('main-item-block, main-item-style'); ?>>
+    <?php post_class('main-item-block main-item-style'); ?>>
 
 
 <!-- 
