@@ -304,12 +304,11 @@ a {
 }
 
 /* This defines the appearance of main-item; much more universal. */
+.widget-area .widget,
 .main-item-style {
   background-color: #fff;
   border: 1px solid #d0d0d0;
-  /*border: 1px solid red;*/
   color: #000;
-
 }
 
 .main-item-gap {
@@ -347,8 +346,16 @@ a {
   padding: 20px;
 }
 
-
-
+/* Widget related */
+.widget-area .widget {
+  margin: 0 0 20px;
+}
+.widget-title {
+  margin: 20px;
+}
+.widget > ul {
+  margin: 0 20px 20px;
+}
 
 
 
