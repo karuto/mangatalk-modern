@@ -176,6 +176,11 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+body {
+  background-color: #E7E7E2;
+
+}
+
 
 
 /* Layout rules */
@@ -189,9 +194,47 @@ img {
 
 -------------------------------------------------------------- */
 
-.layout-site-wrap {}
+/* Wholesite content (defined in header.php / footer.php) */
+.layout-page-wrap { /* #page */
+}
 
-.layout-main-wrap {}
+.layout-header-wrap {
+/*  background-color: gray;
+  position: fixed;
+  width: 100%;
+  z-index: 99;*/
+}
+
+.layout-main-wrap { /* #main */
+  background-color: teal;
+  margin: 0 auto;
+  max-width: 1244px;
+  padding: 10px 2px;
+}
+.layout-main-inner-wrap {
+  background-color: silver;
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+
+/* Primary content */
+.layout-primary-wrap {
+  float: left;
+  max-width: 
+}
+.layout-content-wrap {}
+
+/* Secondary content */
+.layout-sidebar-wrap {}
+
+/* Footer content */
+.layout-footer-wrap {}
+
+
+
+
+
 
 
 /* Module rules */
@@ -208,7 +251,9 @@ img {
 
 -------------------------------------------------------------- */
 
-.site-header {}
+.site-header {
+
+}
 
 .main-navigation{}
 
