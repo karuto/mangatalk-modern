@@ -47,7 +47,7 @@
             <?php bloginfo( 'name' ); ?>
           </a>
         </h1>
-        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+        <!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
       </hgroup>
 
 
@@ -59,7 +59,9 @@
           <?php _e( 'Skip to content', 'twentytwelve' ); ?>
         </a>
 
+<!--
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+-->
 
       </nav><!-- #site-navigation -->
 
@@ -76,11 +78,11 @@
 
     </header><!-- #masthead -->
 
-    <div class="" style="height: 200px;
-    background-image: url('http://www.blastoffcomics.com/wp-content/uploads/2012/04/avengersbanner1.jpg');"></div>
 
   </div><!-- .layout-header-wrap -->
 
+  <div class="" style="height: 200px;
+  background-image: url('http://www.blastoffcomics.com/wp-content/uploads/2012/04/avengersbanner1.jpg');"></div>
 
 
   <div id="main" class="layout-main-wrap">

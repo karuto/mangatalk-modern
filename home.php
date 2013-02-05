@@ -17,11 +17,11 @@
 get_header(); ?>
   <div id="primary" class="layout-primary-wrap">
     <div id="content" class="layout-content-wrap" role="main">
-      
+
 <!-- 
     <div class="layout-hero main-item-style">
     </div>
-     -->
+-->
       
     <?php if ( have_posts() ) : /* THE MAIN LOOP OF WORDPRESS */ ?>
       <div class="layout-posts-section">

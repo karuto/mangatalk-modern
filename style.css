@@ -217,7 +217,11 @@ a {
 }
 
 .layout-header-wrap {
-
+  background-color: #fff;
+  border-bottom: 2px solid #d0d0d0;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
 }
 
 .layout-main-wrap { /* #main */
@@ -288,11 +292,11 @@ a {
 -------------------------------------------------------------- */
 
 .site-header { /* #masthead */
-  background-color: gray;
-  height: 45px;
-  position: fixed;
-  width: 100%;
-  z-index: 20;
+  /*background-color: teal;*/
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+  margin: 0 auto;
+  max-width: 1238px; /* 1+1238+1 = 1240 */
 }
 
 .main-navigation{
@@ -342,16 +346,18 @@ a {
   width: 100%;
 }
 .entry-header {
-  margin: 20px;
+  border-bottom: 1px solid #d0d0d0;
 /*  font-size: 16px;
   font-style: bold;*/
 }
+.entry-title {
+  margin: 20px;  
+}
 .entry-summary {
-  margin: 0 20px;
-
+  margin: 20px;
 }
 .entry-meta {
-  padding: 20px;
+  padding: 0 20px 20px;
 }
 
 /* Widget related */
@@ -359,10 +365,12 @@ a {
   margin: 0 0 20px;
 }
 .widget-title {
-  margin: 20px 20px 0;
+  padding: 20px;
+  background-image: url('http://i.imgur.com/FV2MV.png');
+  background-position: center;
 }
 .widget > ul {
-  margin: 0 20px 20px;
+  margin: 20px;
 }
 
 
