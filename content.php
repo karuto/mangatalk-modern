@@ -29,7 +29,7 @@
     <?php 
     if ($image[0] == '') {
       /* If this post does NOT have a featured image, we set one */
-      $image[0] = "http://i.imgur.com/FV2MV.png"; } ?>
+      $image[0] = "http://www.wordofthenerdonline.com/wp-content/uploads/2012/03/saga-2-1311467620.jpg"; } ?>
 
     <!-- /* Else create a div and set it as background down below */ -->
     <div class="entry-masthead" 

@@ -208,7 +208,7 @@ body {
 }
 
 .layout-main-wrap { /* #main */
-  background-color: silver;
+  /*background-color: silver;*/
   margin: 0 auto 100px;
   max-width: 1244px;
   padding: 10px 2px;
@@ -216,7 +216,7 @@ body {
 .layout-main-inner-wrap {
   background-color: teal;
   margin: 0 auto;
-  max-width: 1242px;
+  max-width: 1244px;
 }
 
 
@@ -229,7 +229,7 @@ body {
   /*border-collapse: collapse;*/
   display: table;
   float: left;
-  margin: 0 420px 0 0;
+  margin: 0 424px 0 0;
   position: relative;
 }
 .layout-posts-row {
@@ -240,9 +240,9 @@ body {
 /* Secondary content */
 .layout-sidebar-wrap {
   float: right;
-  margin: 0 0 0 -400px;
+  margin: 20px 0 0 -400px;
   position: relative;
-  width: 400px;
+  width: 398px;
 }
 
 /* Footer content */
@@ -287,7 +287,7 @@ body {
 /* This defines the appearance of main-item; much more universal. */
 .main-item-style {
   background-color: #fff;
-  /*border: 1px solid #d0d0d0;*/
+  border: 1px solid #d0d0d0;
   /*border: 1px solid red;*/
   color: #000;
 
