@@ -206,13 +206,13 @@ body {
 }
 
 .layout-main-wrap { /* #main */
-  background-color: teal;
+  background-color: silver;
   margin: 0 auto;
   max-width: 1244px;
   padding: 10px 2px;
 }
 .layout-main-inner-wrap {
-  background-color: silver;
+  background-color: teal;
   margin: 0 auto;
   max-width: 1240px;
 }
@@ -220,23 +220,28 @@ body {
 
 /* Primary content */
 .layout-primary-wrap {
-  float: left;
-  max-width: 
 }
 .layout-content-wrap {}
 
 .layout-posts-section {
   /*border-collapse: collapse;*/
   display: table;
-  margin: 0 auto; /* Merely testing */
-  width: 70%; /* Merely testing */
+  float: left;
+  margin: 0 420px 0 0;
+  position: relative;
 }
 .layout-posts-row {
   display: table-row;
 }
 
 /* Secondary content */
-.layout-sidebar-wrap {}
+.layout-sidebar-wrap {
+  background-color: green;
+  float: right;
+  margin: 0 0 0 -400px;
+  position: relative;
+  width: 400px;
+}
 
 /* Footer content */
 .layout-footer-wrap {}
