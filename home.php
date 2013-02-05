@@ -18,15 +18,35 @@ get_header(); ?>
   <div id="primary" class="layout-primary-wrap">
     <div id="content" class="layout-content-wrap" role="main">
       
-    <?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : /* THE MAIN LOOP OF WORDPRESS */ ?>
+      <div class="layout-posts-section">
 
-      <?php /* Start the Loop */ ?>
+      <?php /* Start the Loop */ 
+      $counter = 1; /* Loop counter */ 
+      echo '<div class="layout-posts-row">'; /* Print the first div row */ ?>
+
       <?php while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( 'content', get_post_format() ); ?>
-      <?php endwhile; ?>
+
+        <?php 
+        /* It loads content.php for normal single posts without formats */
+        get_template_part( 'content', get_post_format() );  
+
+        if ($counter % 2 == 0) {
+          /* For every 2 post items, we print a div row! */
+          echo '</div><div class="layout-posts-row">';
+        }
+
+        $counter++; /* Increment counter */ 
+        ?>
+
+
+      <?php endwhile; 
+      $counter = 1; /* Make sure counter is reset */
+      echo '</div>'; /* Make sure the open div is closed */ ?>
 
       <?php twentytwelve_content_nav( 'nav-below' ); ?>
 
+      </div><!-- .layout-posts-section -->
     <?php else : ?>
 
       <article id="post-0" class="post no-results not-found">

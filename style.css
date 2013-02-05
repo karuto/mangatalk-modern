@@ -228,6 +228,8 @@ body {
 .layout-posts-section {
   /*border-collapse: collapse;*/
   display: table;
+  margin: 0 auto; /* Merely testing */
+  width: 70%; /* Merely testing */
 }
 .layout-posts-row {
   display: table-row;
