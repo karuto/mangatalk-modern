@@ -34,6 +34,8 @@ get_header(); ?>
         if ($counter % 2 == 0) {
           /* For every 2 post items, we print a div row! */
           echo '</div><div class="layout-posts-row">';
+        } else {
+          echo '<div class="main-item-gap"></div>';
         }
 
         $counter++; /* Increment counter */ 

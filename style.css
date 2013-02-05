@@ -273,13 +273,18 @@ body {
 .main-navigation{}
 
 .main-item-block {
-  border: 1px solid #ce5333;
   display: table-cell;
+  padding: 20px 0;
   position: relative;
   vertical-align: top;  
-  width: 33%;
+  width: 50%;
 }
-
+.main-item-gap {
+  background-color: black;
+  display: table-cell;
+  width: 20px;
+  min-width: 20px;
+}
 
 .main-footer {}
 
