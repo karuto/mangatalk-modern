@@ -177,8 +177,10 @@ img {
 }
 
 body {
-  background-color: #E7E7E2;
-
+  /*background-color: #E7E7E2;*/
+  background-color: #eef0f2;
+  background-image: url(http://i.imgur.com/FV2MV.png);
+  background-repeat: repeat;
 }
 
 
@@ -214,7 +216,7 @@ body {
 .layout-main-inner-wrap {
   background-color: teal;
   margin: 0 auto;
-  max-width: 1240px;
+  max-width: 1242px;
 }
 
 
@@ -232,11 +234,11 @@ body {
 }
 .layout-posts-row {
   display: table-row;
+  margin: 20px 0;
 }
 
 /* Secondary content */
 .layout-sidebar-wrap {
-  background-color: green;
   float: right;
   margin: 0 0 0 -400px;
   position: relative;
@@ -272,21 +274,55 @@ body {
 
 .main-navigation{}
 
+
+
 .main-item-block {
   display: table-cell;
-  padding: 20px 0;
+  margin: 20px 0 100px;
   position: relative;
   vertical-align: top;  
   width: 50%;
 }
+
+.main-item-style {
+  background-color: #fff;
+  /*border: 1px solid #d0d0d0;*/
+  border: 1px solid reading;
+  color: #000;
+
+}
+
 .main-item-gap {
-  background-color: black;
+  /*background-color: black;*/
   display: table-cell;
-  width: 20px;
   min-width: 20px;
+  width: 20px;
 }
 
 .main-footer {}
+
+
+
+
+/* Entry related */
+.entry-masthead {
+  display: block;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* State rules */
 /* Notes
