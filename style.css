@@ -201,17 +201,14 @@ body {
 }
 
 .layout-header-wrap {
-/*  background-color: gray;
-  position: fixed;
-  width: 100%;
-  z-index: 99;*/
+
 }
 
 .layout-main-wrap { /* #main */
   /*background-color: silver;*/
   margin: 0 auto 100px;
   max-width: 1244px;
-  padding: 10px 2px;
+  padding: 100px 2px;
 }
 .layout-main-inner-wrap {
   background-color: teal;
@@ -268,11 +265,17 @@ body {
 
 -------------------------------------------------------------- */
 
-.site-header {
-
+.site-header { /* #masthead */
+  background-color: gray;
+  height: 45px;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
 }
 
-.main-navigation{}
+.main-navigation{
+
+}
 
 
 /* This defines the block properties of main-item. */
