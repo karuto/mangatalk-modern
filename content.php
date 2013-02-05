@@ -8,7 +8,8 @@
  */
 ?>
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class('main-item-block, main-item-style'); ?>>
+  <article id="post-<?php the_ID(); ?>" 
+    <?php post_class('main-item-block, main-item-style'); ?>>
 
 
 <!-- 
@@ -19,13 +20,23 @@
     <?php endif; ?> 
  -->
 
+
+    <?php 
+    /* Retrieving the featured image URL of this post */
+    $image = wp_get_attachment_image_src( 
+    get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+
+    <?php 
+    if ($image[0] == '') {
+      /* If this post does NOT have a featured image, we set one */
+      $image[0] = "http://i.imgur.com/FV2MV.png"; } ?>
+
+    <!-- /* Else create a div and set it as background down below */ -->
+    <div class="entry-masthead" 
+    style="background-image: url('<?php echo $image[0]; ?>')"></div>
+
+
     <header class="entry-header">
-
-      <!-- <?php the_post_thumbnail(); ?> -->
-      <?php $image = wp_get_attachment_image_src( 
-      get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-      <div class="entry-masthead" style="background-image: url('<?php echo $image[0]; ?>')"></div>
-
 
       <?php if ( is_single() ) : ?>
         <h1 class="entry-title"><?php the_title(); ?></h1>
