@@ -63,6 +63,8 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 
 -------------------------------------------------------------- */
 
+/* Wordpress default reset */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, 
 img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, 
@@ -176,12 +178,26 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+
+/* MangaTalk global */
+
 body {
   /*background-color: #E7E7E2;*/
   background-color: #eef0f2;
-  background-image: url(http://i.imgur.com/FV2MV.png);
+  background-image: url(http://hi.bdimg.com/static/qhome/img/home/tpl_n0001_theme_001_background.jpg?v=30ab89f5.jpg);
   background-repeat: repeat;
 }
+body, input, textarea {
+  color: #444;
+  font: 14px/175% "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
+  font-weight: 300;
+}
+a {
+  color: #ce5333;
+  text-decoration: none;
+}
+
+
 
 
 
