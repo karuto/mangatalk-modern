@@ -35,6 +35,7 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="hfeed layout-page-wrap">
+
   <div class="layout-header-wrap">
 
     <header id="masthead" class="site-header" role="banner">
@@ -75,6 +76,8 @@
 
     </header><!-- #masthead -->
 
+    <div class="" style="height: 200px;
+    background-image: url('http://www.blastoffcomics.com/wp-content/uploads/2012/04/avengersbanner1.jpg');"></div>
 
   </div><!-- .layout-header-wrap -->
 
