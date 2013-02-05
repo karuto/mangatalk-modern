@@ -225,6 +225,14 @@ body {
 }
 .layout-content-wrap {}
 
+.layout-posts-section {
+  /*border-collapse: collapse;*/
+  display: table;
+}
+.layout-posts-row {
+  display: table-row;
+}
+
 /* Secondary content */
 .layout-sidebar-wrap {}
 
@@ -256,6 +264,15 @@ body {
 }
 
 .main-navigation{}
+
+.main-item-block {
+  border: 1px solid #ce5333;
+  display: table-cell;
+  position: relative;
+  vertical-align: top;  
+  width: 33%;
+}
+
 
 .main-footer {}
 
