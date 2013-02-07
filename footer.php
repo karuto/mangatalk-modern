@@ -10,7 +10,8 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-  </div><!-- #main .layout-main-wrap -->
+	  </div><!-- .layout-main-inner-wrap -->
+	</div><!-- #main .layout-main-wrap -->
   
   <div class="layout-footer-wrap">
 

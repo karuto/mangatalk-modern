@@ -233,34 +233,26 @@ a {
 }
 
 .layout-main-wrap { /* #main */
-  background-color: silver;
-  margin: 0 auto 100px;
-  max-width: 1244px;
-  padding: 0 2px;
-}
-.layout-main-subheader-wrap { /* #main */
-  background-color: red;
-  margin: 0 auto 100px;
+  /*TODO: Great debugging tool */
+  /*background-color: silver;*/
+  margin: 0 auto;
   max-width: 1244px;
   padding: 0 2px;
 }
 .layout-main-inner-wrap {
   /*TODO: Great debugging tool */
-  background-color: black;  
+  /*background-color: teal;  */
   margin: 0 auto;
   max-width: 1240px;
   padding: 65px 0;
 }
-.layout-main-subheader-wrap .layout-main-inner-wrap {
-  background-color: teal; 
-  padding: 0;
-}
-
 
 /* Primary content */
 .layout-primary-wrap {
 }
-.layout-content-wrap {}
+.layout-content-wrap {
+
+}
 
 .layout-posts-section {
   /*border-collapse: collapse;*/
@@ -320,9 +312,10 @@ a {
 }
 
 .subheader {
-  background-color: yellow;
+  background-color: teal;
   height: 50px;
-  margin: 45px 0;
+  padding: 45px 0 0;  /* 45px is the height of topbar */
+  margin: 0 0 45px;
   width: 100%;
 }
 

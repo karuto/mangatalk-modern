@@ -68,7 +68,6 @@
 <!--
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 -->
-
       </nav><!-- #site-navigation -->
 
 
@@ -93,10 +92,12 @@
   
   <?php 
     if ( is_page() || is_post_type_archive() || is_archive() || is_search() ) {
-      echo '<div id="main" class="layout-main-subheader-wrap">';
-      echo '<div class="layout-main-inner-wrap">';      
+      // If it's a type of webpage (see above) that needs a subheader
+      // We will define the max-width framework after the subheader, thus blank
+      echo '';
     } else {
-      echo '<div id="main" class="layout-main-wrap">';
+      // This defines the max-width framework here since no subheader exists
+      echo '<div id="main" class="layout-main-wrap">'; 
       echo '<div class="layout-main-inner-wrap">';      
     }
   ?>
