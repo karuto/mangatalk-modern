@@ -90,5 +90,13 @@
   <!-- <div class="layout-tophero"></div> -->
 
 
-  <div id="main" class="layout-main-wrap">
-    <div class="layout-main-inner-wrap">
+  
+  <?php 
+    if ( is_page() || is_post_type_archive() || is_archive() || is_search() ) {
+      echo '<div id="main" class="layout-main-subheader-wrap">';
+      echo '<div class="layout-main-inner-wrap">';      
+    } else {
+      echo '<div id="main" class="layout-main-wrap">';
+      echo '<div class="layout-main-inner-wrap">';      
+    }
+  ?>
