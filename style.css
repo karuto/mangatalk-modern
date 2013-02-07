@@ -346,14 +346,16 @@ a {
   background-attachment: scroll;
   background-position: center; 
   background-repeat: repeat;
+  background-size: cover;
   display: block;
   height: 250px;
   overflow: hidden;
   position: relative;
   width: 100%;
 }
-.post .entry-masthead {
-  background-size: cover;
+.layout-regular-post .entry-masthead,
+.layout-featured-post .entry-masthead {
+  height: 400px;
 }
 .entry-topimg img {
   width: 100%;

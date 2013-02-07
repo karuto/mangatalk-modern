@@ -13,9 +13,9 @@
     <article id="post-<?php the_ID(); ?>" 
       <?php post_class('main-item-block main-item-style'); ?>>
 
-      <div class="entry-topimg"><?php the_post_thumbnail(); ?></div>
+<!--      <div class="entry-topimg"><?php the_post_thumbnail('full'); ?></div>
+-->
 
-<!--
       <?php 
       /* Retrieving the featured image URL of this post */
       $image = wp_get_attachment_image_src( 
@@ -30,7 +30,7 @@
       
       <div class="entry-masthead" 
       style="background-image: url('<?php echo $image[0]; ?>')"></div>
--->
+
 
       <header class="entry-header">
 

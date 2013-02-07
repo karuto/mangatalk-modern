@@ -27,6 +27,9 @@
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+
+  <!-- TODO: Change to dynamic loading scripts later. Refer to:
+  http://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_wrappers -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
 
