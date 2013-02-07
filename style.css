@@ -223,6 +223,11 @@ a {
   width: 100%;
   z-index: 20;
 }
+.layout-subheader-wrap {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid #ce5333;
+  width: 100%; 
+}
 
 .layout-tophero,
 .layout-hero {
@@ -246,10 +251,11 @@ a {
   max-width: 1240px;
   padding: 65px 0;
 }
-.subheader ~ .layout-main-wrap .layout-main-inner-wrap { 
+.layout-subheader-wrap ~ .layout-main-wrap .layout-main-inner-wrap { 
   /* Badass General sibling combinator works here */
-  background-color: red;
-  padding: 0;
+  /*TODO: Great debugging tool */
+  /*background-color: red;  */
+  padding: 40px 0;
 }
 
 /* Primary content */
@@ -309,20 +315,28 @@ a {
   margin: 0 auto;
   max-width: 1238px; /* 1+1238+1 = 1240 */
 }
+.sub-header {
+  padding: 45px 0 0;  /* 45px is the height of topbar */
+  margin: 0 auto;
+  max-width: 1238px; /* 1+1238+1 = 1240 */
+}
 .site-title {
   font-size: 16px;
   padding: 10px 20px;
 }
+.sub-title {
+  color: #FFF;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  line-height: 75px;
+  padding: 0 20px;  
+  text-transform: uppercase;
+}
 .main-navigation{
 }
 
-.subheader {
-  background-color: teal;
-  height: 50px;
-  padding: 45px 0 0;  /* 45px is the height of topbar */
-  margin: 0 0 45px;
-  width: 100%;
-}
+
 
 
 /* This defines the block properties of main-item. */

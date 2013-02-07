@@ -19,21 +19,24 @@
 
 get_header(); ?>
 
-  <header class="subheader archive-header">
-    <h1 class="archive-title"><?php
-      if ( is_day() ) :
-        printf( __( 'Daily Archives: %s', 'twentytwelve' ), '<span>' . get_the_date() . '</span>' );
-      elseif ( is_month() ) :
-        printf( __( 'Monthly Archives: %s', 'twentytwelve' ), '<span>' . 
-          get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>' );
-      elseif ( is_year() ) :
-        printf( __( 'Yearly Archives: %s', 'twentytwelve' ), '<span>' . 
-          get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwelve' ) ) . '</span>' );
-      else :
-        _e( 'Archives', 'twentytwelve' );
-      endif;
-    ?></h1>
-  </header><!-- .layout-subheader -->
+  <div class="layout-subheader-wrap">
+    <header class="sub-header" roll="banner">
+
+      <h1 class="archive-title sub-title"><?php
+        if ( is_day() ) :
+          printf( __( 'Daily Archives: %s', 'twentytwelve' ), '<span>' . get_the_date() . '</span>' );
+        elseif ( is_month() ) :
+          printf( __( 'Monthly Archives: %s', 'twentytwelve' ), '<span>' . 
+            get_the_date( _x( 'F Y', 'monthly archives date format', 'twentytwelve' ) ) . '</span>' );
+        elseif ( is_year() ) :
+          printf( __( 'Yearly Archives: %s', 'twentytwelve' ), '<span>' . 
+            get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwelve' ) ) . '</span>' );
+        else :
+          _e( 'Archives', 'twentytwelve' );
+        endif;
+      ?></h1>
+    </header><!-- .sub-header -->
+  </div><!-- .layout-subheader-wrap -->
 
   <div id="main" class="layout-main-wrap"><!-- This defines the max-width framework -->
     <div class="layout-main-inner-wrap">
