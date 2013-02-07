@@ -275,6 +275,7 @@ a {
 .layout-posts-row {
   display: table;
   margin: 20px 0;
+  width: 100%;
 }
 
 /* Secondary content */
@@ -325,7 +326,7 @@ a {
   border-right: 1px solid #d0d0d0;
   float: left;
   position: relative;
-  width: 398px;
+  width: 398px; /* 1+398+1 = 400 */
 }
 .site-title {
   font-size: 21px;
