@@ -315,6 +315,10 @@ a {
   vertical-align: top;  
   width: 50%;
 }
+.layout-regular-post .main-item-block {
+  width: 100%;
+}
+
 
 /* This defines the appearance of main-item; much more universal. */
 .widget-area .widget,
