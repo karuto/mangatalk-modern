@@ -86,8 +86,8 @@ get_header(); ?>
 
     <?php endif; // end have_posts() check ?>
 
-    </div><!-- #layout-content-wrap -->
-  </div><!-- #layout-primary-wrap -->
+    </div><!-- .layout-content-wrap -->
+  </div><!-- .layout-primary-wrap -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

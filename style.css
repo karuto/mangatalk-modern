@@ -348,6 +348,10 @@ a {
   position: relative;
   width: 100%;
 }
+.layout-regular-post .entry-masthead,
+.layout-featured-post .entry-masthead {
+  background-size: cover;
+}
 .entry-header {
   border-bottom: 1px solid #d0d0d0;
 /*  font-size: 16px;
@@ -356,6 +360,7 @@ a {
 .entry-title {
   margin: 20px;  
 }
+.entry-content,
 .entry-summary {
   margin: 20px;
 }

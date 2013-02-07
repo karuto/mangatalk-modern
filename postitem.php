@@ -1,8 +1,7 @@
 <?php
 /**
- * The template for displaying posts in the Aside post format.
- * CAUTION: This post format is used in MangaTalk for single-column featured post.
- * TODO: CHANGE THIS.
+ * The default template for displaying content. 
+ * Used for index/archive/search only, not for single post.
  *
  * @package WordPress
  * @subpackage Twenty_Twelve
@@ -11,7 +10,7 @@
 ?>
 
   <article id="post-<?php the_ID(); ?>" 
-    <?php post_class('main-item-block main-item-style layout-featured-post'); ?>>
+    <?php post_class('main-item-block main-item-style'); ?>>
 
 
 <!-- 
@@ -61,16 +60,16 @@
     <?php if ( is_search() ) : // Only display full content for search results
     // TODO: change this when implementing actual search ?>
 
-      <div class="entry-summary">
-        <?php the_excerpt(); ?>
-      </div><!-- .entry-summary -->
+      <div class="entry-content">
+        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+        <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+      </div><!-- .entry-content -->
 
     <?php else : // Only display excerpts for regular pages ?>    
 
-      <div class="entry-content">
-          <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-          <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-      </div><!-- .entry-content -->
+      <div class="entry-summary">
+        <?php the_excerpt(); ?>
+      </div><!-- .entry-summary -->
 
     <?php endif; ?>
 
