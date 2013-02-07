@@ -239,7 +239,8 @@ a {
   padding: 70px 2px;
 }
 .layout-main-inner-wrap {
-  background-color: teal;
+  /*TODO: Great debugging tool */
+  /*background-color: teal;  */
   margin: 0 auto;
   max-width: 1240px;
 }
