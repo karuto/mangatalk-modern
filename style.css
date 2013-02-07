@@ -310,7 +310,6 @@ a {
 
 .site-header { /* #masthead */
   /*background-color: teal;*/
-  border-left: 1px solid #d0d0d0;
   border-right: 1px solid #d0d0d0;
   margin: 0 auto;
   max-width: 1238px; /* 1+1238+1 = 1240 */
@@ -319,6 +318,14 @@ a {
   padding: 45px 0 0;  /* 45px is the height of topbar */
   margin: 0 auto;
   max-width: 1238px; /* 1+1238+1 = 1240 */
+}
+.site-title-wrap {
+  /*background-color: yellow;*/
+  border-left: 1px solid #d0d0d0;
+  border-right: 1px solid #d0d0d0;
+  float: left;
+  position: relative;
+  width: 398px;
 }
 .site-title {
   font-size: 21px;
