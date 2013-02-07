@@ -14,6 +14,8 @@
       <?php post_class('main-item-block main-item-style'); ?>>
 
 <!--      <div class="entry-topimg"><?php the_post_thumbnail('full'); ?></div>
+  TODO: Potential solution using images rather than CSS background but JS required:
+  http://stackoverflow.com/questions/643500/html-ie-stretch-image-to-fit-preserve-aspect-ratio
 -->
 
       <?php 
