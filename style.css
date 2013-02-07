@@ -246,6 +246,11 @@ a {
   max-width: 1240px;
   padding: 65px 0;
 }
+.subheader ~ .layout-main-wrap .layout-main-inner-wrap { 
+  /* Badass General sibling combinator works here */
+  background-color: red;
+  padding: 0;
+}
 
 /* Primary content */
 .layout-primary-wrap {
