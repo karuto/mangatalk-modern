@@ -44,46 +44,7 @@ get_header(); ?>
     <div id="primary" class="layout-primary-wrap">
       <div id="content" class="layout-content-wrap" role="main">
 
-
-
-        <?php if ( have_posts() ) : ?>
-
-          <div class="layout-posts-section">
-
-          <?php /* Start the Loop */ 
-          $counter = 1; /* Loop counter */ 
-          echo '<div class="layout-posts-row">'; /* Print the first div row */ ?>
-
-          <?php while ( have_posts() ) : the_post(); ?>
-
-            <?php 
-            /* It loads content.php for normal single posts without formats */
-            get_template_part('postitem');  
-
-            if ($counter % 2 == 0) {
-              /* For every 2 post items, we print a div row! */
-              echo '</div><div class="layout-posts-row">';
-            } else {
-              echo '<div class="main-item-gap"></div>';
-            }
-
-            $counter++; /* Increment counter */ 
-            ?>
-
-
-          <?php endwhile; 
-          $counter = 1; /* Make sure counter is reset */
-          echo '</div>'; /* Make sure the open div is closed */ ?>
-
-          <?php twentytwelve_content_nav( 'nav-below' ); ?>
-
-          </div><!-- .layout-posts-section -->
-
-        <?php else : ?>
-
-          <?php get_template_part( 'content', 'none' ); ?>
-          
-        <?php endif; ?>
+        <?php get_template_part('mainlooplogic'); ?>
 
       </div><!-- .layout-content-wrap -->
     </div><!-- .layout-primary-wrap -->

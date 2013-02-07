@@ -18,13 +18,11 @@ get_header(); ?>
 
   <div id="primary" class="layout-primary-wrap">
     <div id="content" class="layout-content-wrap" role="main">
-
  
     <div class="layout-hero main-item-style">
     </div>
 
-    <?php get_template_part('looplogic'); ?>
-
+    <?php get_template_part('mainlooplogic'); ?>
 
     </div><!-- .layout-content-wrap -->
   </div><!-- .layout-primary-wrap -->
