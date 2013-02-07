@@ -321,8 +321,11 @@ a {
   max-width: 1238px; /* 1+1238+1 = 1240 */
 }
 .site-title {
-  font-size: 16px;
-  padding: 10px 20px;
+  font-size: 21px;
+  font-weight: 100;
+  line-height: 45px;  /* Use this to control height of header */
+  padding: 0 20px;  
+  text-transform: uppercase;
 }
 .sub-title {
   color: #FFF;
