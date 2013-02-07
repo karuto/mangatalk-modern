@@ -224,11 +224,19 @@ a {
   z-index: 20;
 }
 
+.layout-tophero,
+.layout-hero {
+  background-image: url('http://fc01.deviantart.net/fs70/i/2012/311/d/8/the_world__s_finest_by_thegerjoos-d5kbxrx.jpg');
+  background-position: right-top;
+  height: 250px;
+  width: 100%;
+}
+
 .layout-main-wrap { /* #main */
   /*background-color: silver;*/
   margin: 0 auto 100px;
   max-width: 1244px;
-  padding: 100px 2px;
+  padding: 70px 2px;
 }
 .layout-main-inner-wrap {
   background-color: teal;
@@ -236,17 +244,10 @@ a {
   max-width: 1240px;
 }
 
-
 /* Primary content */
 .layout-primary-wrap {
 }
 .layout-content-wrap {}
-
-.layout-hero {
-  width: 100%;
-  margin: 0px;
-}
-
 
 .layout-posts-section {
   /*border-collapse: collapse;*/
@@ -298,9 +299,11 @@ a {
   margin: 0 auto;
   max-width: 1238px; /* 1+1238+1 = 1240 */
 }
-
+.site-title {
+  font-size: 16px;
+  padding: 10px 20px;
+}
 .main-navigation{
-
 }
 
 

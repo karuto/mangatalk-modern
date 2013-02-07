@@ -54,11 +54,6 @@
       <nav id="site-navigation" class="main-navigation" role="navigation">
 
         <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
-        <a class="assistive-text" href="#content" 
-          title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>">
-          <?php _e( 'Skip to content', 'twentytwelve' ); ?>
-        </a>
-
 <!--
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 -->
@@ -81,8 +76,7 @@
 
   </div><!-- .layout-header-wrap -->
 
-  <div class="" style="height: 200px;
-  background-image: url('http://www.blastoffcomics.com/wp-content/uploads/2012/04/avengersbanner1.jpg');"></div>
+  <!-- <div class="layout-tophero"></div> -->
 
 
   <div id="main" class="layout-main-wrap">
