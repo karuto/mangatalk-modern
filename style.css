@@ -370,9 +370,11 @@ a {
 .entry-title {
   margin: 20px;  
 }
-.entry-content,
 .entry-summary {
   margin: 20px;
+}
+.entry-content {
+  margin: 30px; 
 }
 .entry-meta {
   padding: 0 20px 20px;
