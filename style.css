@@ -212,7 +212,7 @@ a {
 
 -------------------------------------------------------------- */
 
-/* Wholesite content (defined in header.php / footer.php) */
+/* Whole-site content (defined in header.php / footer.php) */
 .layout-page-wrap { /* #page */
 }
 
@@ -287,7 +287,11 @@ a {
 }
 
 /* Footer content */
-.layout-footer-wrap {}
+.layout-footer-wrap {
+  margin: 0 auto;
+  width: 100%;
+
+}
 
 
 
