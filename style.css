@@ -409,25 +409,29 @@ a {
   height: 100%;
 }
 .entry-header {
+  background: #F5F5F5;
+  text-align: center;
   border-bottom: 1px solid #d0d0d0;
 /*  font-size: 16px;
   font-style: bold;*/
 }
 .author-avatar .avatar {
-  vertical-align: bottom;
-  float: left;
-  -webkit-border-radius: 0px 0px 100px 0px;
-  border-radius: 0px 0px 100px 0px;
-/*  float: right;
-  -webkit-border-radius: 0px 0px 0px 100px;
-  border-radius: 0px 0px 0px 100px;*/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+/*  float: left;
+  -webkit-border-radius: 0px 100px 0px 0px;
+  border-radius: 0px 100px 0px 0px;*/
+  /*float: right;*/
+  -webkit-border-radius: 100px 0px 0px 0px;
+  border-radius: 100px 0px 0px 0px;
 }
 
 .entry-title {
-  margin: 20px;  
+  padding: 20px;  
 }
 .post-item .entry-title {
-  margin: 20px 20px 0px;  
+  padding: 20px 20px 0px;  
 }
 .entry-summary {
   margin: 20px;
