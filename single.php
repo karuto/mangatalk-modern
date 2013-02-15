@@ -14,20 +14,27 @@ get_header(); ?>
 
       <?php $format = get_post_format();
 
-        // TODO: Stop using 'aside' format as featured post! Use meta box instead.
-        if ( $format == 'aside' )
+        // Before entering main logic, retrieve meta box data for format detection
+        // CAUTION: Mangatalk Meta Box plugin is required in your plugin directory
+        $post_meta_box_likes = get_post_meta( $post->ID, "post_meta_box_likes", true );
+        $post_meta_box_interface = get_post_meta( $post->ID, "post_meta_box_interface", true );
+        $post_meta_box_enlarge_check = get_post_meta( $post->ID, "post_meta_box_enlarge_check", true );
+
+        if ($post_meta_box_interface == "feature") {
           // If it's a featured post, we print nothing to keep it a single column
           $featuredflag = true;
-        else 
+        } else {
           // For regular posts, we print out the CSS table & row for two columns
           echo '<div class="layout-posts-section">';
           echo '<div class="layout-posts-row">';
+        }
 
       ?>
 
       <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'content', get_post_format() ); ?>
+        <?php /* This is where the meat comes in */
+          get_template_part( 'content', get_post_format() ); ?>
 
         <nav class="nav-single">
           <h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
@@ -41,9 +48,11 @@ get_header(); ?>
 
       <?php endwhile; // end of the loop. ?>
 
-      <?php if ($featuredflag == true) 
-        echo '</div><!-- .layout-post-row -->';
-        echo '</div><!-- .layout-posts-section -->';              
+      <?php 
+        if ($featuredflag == true) {
+          echo '</div><!-- .layout-post-row -->';
+          echo '</div><!-- .layout-posts-section -->';                      
+        }
       ?>
 
     </div><!-- .layout-content-wrap -->
