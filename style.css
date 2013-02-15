@@ -388,7 +388,9 @@ a {
 
 
 /* Entry related */
-
+.post-item {
+  position: relative;
+}
 .entry-masthead { /* This is where the feature image lies */
   background-attachment: scroll;
   background-position: center; 
@@ -405,26 +407,23 @@ a {
   height: 400px;
 }
 .entry-topimg img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 .entry-header {
   background: #F5F5F5;
-  text-align: center;
   border-bottom: 1px solid #d0d0d0;
 /*  font-size: 16px;
   font-style: bold;*/
+  text-align: center;
 }
 .author-avatar .avatar {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-/*  float: left;
-  -webkit-border-radius: 0px 100px 0px 0px;
-  border-radius: 0px 100px 0px 0px;*/
-  /*float: right;*/
   -webkit-border-radius: 100px 0px 0px 0px;
   border-radius: 100px 0px 0px 0px;
+  bottom: 0;
+  float: right;
+  position: absolute;
+  right: 0;
 }
 
 .entry-title {
@@ -436,14 +435,29 @@ a {
 .entry-summary {
   margin: 20px;
 }
-.entry-content {
-  margin: 30px; 
+.post-item .entry-readmore {
+  bottom: 0;
+  margin: 20px 0;
+  position: relative;
+  text-align: center;
+}
+.readmore {
+  background-color: #ce5333;
+  color: #FFF;
+  padding: 5px 10px;
+
 }
 .entry-meta {
-  padding: 0 20px 20px;
+  margin: 0 20px 20px;
 }
 .post-item .entry-meta {
-  padding: 10px 20px;
+  color: #999;
+  margin: 5px 20px 20px;
+}
+
+
+.entry-content {
+  margin: 30px; 
 }
 .post img {
   max-width: 100%;
@@ -513,7 +527,6 @@ a {
   content: "";
 }
 .roboto-font {
-  color: #999;
   font: 12px/175% "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
   font-style: italic;
   font-weight: 300;

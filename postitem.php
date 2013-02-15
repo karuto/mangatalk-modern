@@ -36,10 +36,10 @@
     <div class="entry-masthead" 
     style="background-image: url('<?php echo $image[0]; ?>')">
 
-      <div class="author-avatar">
+<!--       <div class="author-avatar">
         <?php echo get_avatar( get_the_author_meta( 'user_email' ), 
         apply_filters( 'twentytwelve_author_bio_avatar_size', 75 ) ); ?>
-      </div><!-- .author-avatar -->
+      </div> -->
 
     </div>
 
@@ -81,6 +81,10 @@
       <div class="entry-summary">
         <?php the_excerpt(); ?>
       </div><!-- .entry-summary -->
+
+      <div class="entry-readmore">
+        <span class="readmore roboto">MORE</span>
+      </div><!-- .entry-readmore -->
 
     <?php endif; ?>
 
