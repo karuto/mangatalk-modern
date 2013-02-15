@@ -51,6 +51,19 @@
         <?php endif; // comments_open() ?>
    -->
 
+
+<?php 
+  $post_meta_box_likes = get_post_meta( $post->ID, "post_meta_box_likes", true );
+  $post_meta_box_interface = get_post_meta( $post->ID, "post_meta_box_interface", true );
+  $post_meta_box_enlarge_check = get_post_meta( $post->ID, "post_meta_box_enlarge_check", true );
+
+  if ($post_meta_box_interface = "feature") {
+    echo "FEATURED!!!";
+  }
+  // echo $post_meta_box_likes . " + " . $post_meta_box_interface . " + " . $post_meta_box_enlarge_check;
+?>
+
+
       </header><!-- .entry-header -->
 
 
