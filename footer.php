@@ -10,8 +10,11 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+
+  <?php if( $has_subheader != true ): ?>
     </div><!-- .layout-main-inner-wrap -->
   </div><!-- #main .layout-main-wrap -->
+  <?php endif; ?>
   
   <div class="layout-footer-wrap">
 

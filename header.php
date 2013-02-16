@@ -63,18 +63,18 @@
 
       <nav id="site-navigation" class="main-navigation" role="navigation">
 
-        <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3>
+hi
       </nav><!-- #site-navigation -->
 
 
-      <?php $header_image = get_header_image();
+<!--       <?php $header_image = get_header_image();
       if ( ! empty( $header_image ) ) : ?>
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
           <img src="<?php echo esc_url( $header_image ); ?>" class="header-image" 
           width="<?php echo get_custom_header()->width; ?>" 
           height="<?php echo get_custom_header()->height; ?>" alt="" />
         </a>
-      <?php endif; ?>
+      <?php endif; ?> -->
 
 
     </header><!-- #masthead -->
@@ -90,10 +90,10 @@
     if ( is_page() || is_post_type_archive() || is_archive() || is_search() ) {
       // If it's a type of webpage (see above) that needs a subheader
       // We will define the max-width framework after the subheader, thus blank
-      echo '';
+      $has_subheader = true;
     } else {
       // This defines the max-width framework here since no subheader exists
-      echo '<div id="main" class="layout-main-wrap">'; 
+      echo '<div id="main" class="layout-main-wrap non-archive">'; 
       // This container below is where the float trouble takes place
       echo '<div class="layout-main-inner-wrap clearfix-modern">';      
     }
