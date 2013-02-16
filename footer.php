@@ -16,9 +16,9 @@
   <div class="layout-footer-wrap">
 
     <footer id="colophon" class="main-footer" role="contentinfo">
-      <div class="footer-info">
-        Hi
-      </div><!-- .footer-info -->
+      <figure class="footer-plug">
+        Have something unique to share? We want to publish it.
+      </figure><!-- .footer-info -->
     </footer><!-- #colophon -->
 
   </div><!-- .layout-footer-wrap -->

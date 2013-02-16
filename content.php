@@ -36,7 +36,7 @@
       /* Retrieving the featured image URL of this post */
       $image = wp_get_attachment_image_src( 
       get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-      
+
       if ($image[0] == '') {
         /* If this post does NOT have a featured image, we set one */
         $image[0] = "http://gnnaz.com/wp-content/uploads/2012/12/Saga-e1357012394969.jpg"; } 
@@ -56,13 +56,22 @@
             <a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
           </h1>
         <?php endif; // is_single() ?>
-  <!-- 
-        <?php if ( comments_open() ) : ?>
-          <div class="comments-link">
-            <?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
-          </div>
-        <?php endif; // comments_open() ?>
-   -->
+
+      <?php if ( 'post' == get_post_type() ) : ?>
+      <h3 class="entry-meta roboto-font">Written By 
+        <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author() ?></a>
+        on <?php echo get_the_date(); ?> 
+        <b class="red">+</b> 
+        <a href="<?php the_permalink(); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?></a>  
+        <?php the_tags( '<span style="">Tagged with ', '<span style="color:#ce5333"> | </span>', '</span>' ); ?>  
+        <?php edit_post_link( __( '- Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+        <!--
+        + <strong><?php if(function_exists('wpcc_output_navi')) wpcc_output_navi(); ?></strong>
+      -->
+        <br>
+      </h3>
+      <?php endif; ?>
+
 
       </header><!-- .entry-header -->
 
