@@ -636,12 +636,13 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   color: #fff; 
 }
 .global-dropdown .drop-item a { /* First level dropdown items */
-  border: 1px solid #d0d0d0;
-  border-width: 0;
   display: block; 
   font: 14px/24px "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
   font-weight: bold;
   padding: 5px 10px;
+}
+.drop-list li:first-child a {
+  border-top: 2px solid #d0d0d0;  
 }
 .global-dropdown li:last-child a { 
   border-right: none; 
