@@ -607,10 +607,10 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 }
 .touch-logo a:active,
 .touch-logo a:hover { /* Only targets top logo */
-  color: yellow;
+  color: #8B0000;
 } 
-.global-dropdown a:hover,
-.global-dropdown a:active { 
+.global-dropdown .drop-item a:hover,
+.global-dropdown .drop-item a:active { /* First level dropdown items */
   color: #fff; 
 }
 .global-dropdown .drop-item a { /* First level dropdown items */
@@ -619,13 +619,18 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   display: block; 
   font: 14px/24px "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
   font-weight: bold;
-  padding: 5px 10px 0;
+  padding: 5px 10px;
 }
 .global-dropdown li:last-child a { 
   border-right: none; 
 } /* Doesn't work in IE */
-.global-dropdown li.hover,
-.global-dropdown li:hover { 
+.global-dropdown li.touch-logo:hover { /* Targeting logo */
+  background-color: #f5f5f5;
+  color: #fff;
+  position: relative; 
+}
+.global-dropdown .drop-list li.hover,
+.global-dropdown .drop-list li:hover { /* Targeting first levels */
   background: #ce5333; 
   color: #fff; 
   position: relative; 
