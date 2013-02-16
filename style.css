@@ -388,6 +388,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .main-item-style {
   background-color: #fff;
   border: 1px solid #d0d0d0;
+  border-top: 3px solid #ce5333;
   color: #000;
 }
 
@@ -524,6 +525,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .widget-title {
   background-color: #F5F5F5;
   border-bottom: 1px solid #d0d0d0;
+  color: #666;
   letter-spacing: 0.1em;
   padding: 5px 20px;
   text-transform: uppercase;
