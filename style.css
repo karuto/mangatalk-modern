@@ -594,28 +594,32 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 
 
 /* SIMPLE JQUERY DROPDOWN MENU LEVEL 1 */
-ul.dropdown { 
+.global-dropdown { 
   position: relative; 
 }
-ul.dropdown li { 
+.global-dropdown li { 
   float: left; 
   zoom: 1; 
 }
-ul.dropdown a:hover { 
+.touch-logo a:hover { /* Only targets top logo */
+  color: yellow;
+} 
+.global-dropdown a:hover,
+.global-dropdown a:active { 
   color: #fff; 
 }
-ul.dropdown a:active { 
-  color: pink; 
-}
-ul.dropdown li a { 
+.global-dropdown .drop-item a { /* First level dropdown items */
+  /*background-color: teal;*/
   display: block; 
-  /*padding: 4px 0px;*/
+  font: 14px/24px "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
+  font-weight: bold;
+  padding: 5px 10px 0;
 }
-ul.dropdown li:last-child a { 
+.global-dropdown li:last-child a { 
   border-right: none; 
 } /* Doesn't work in IE */
-ul.dropdown li.hover,
-ul.dropdown li:hover { 
+.global-dropdown li.hover,
+.global-dropdown li:hover { 
   background: #ce5333; 
   color: white; 
   position: relative; 
@@ -624,20 +628,20 @@ ul.dropdown li:hover {
 
 
 /* SIMPLE JQUERY DROPDOWN MENU LEVEL 2 */
-ul.dropdown ul { 
+.global-dropdown ul { 
   left: 0; 
   position: absolute; 
   top: 100%; 
   visibility: hidden; 
   width: 220px; 
 }
-ul.dropdown ul li { 
+.global-dropdown ul li { 
   background: white; 
   float: none; 
   font-weight: normal; 
 }
   /* IE 6 & 7 Needs Inline Block */
-ul.dropdown ul li a { 
+.global-dropdown ul li a { 
   border-right: none; 
   display: inline-block; 
   width: 100%; 
@@ -645,10 +649,10 @@ ul.dropdown ul li a {
 
 
 /* SIMPLE JQUERY DROPDOWN MENU LEVEL 3 */
-ul.dropdown ul ul { 
+.global-dropdown ul ul { 
   left: 100%; 
   top: 0; 
 }
-ul.dropdown li:hover > ul { 
+.global-dropdown li:hover > ul { 
   visibility: visible; 
 }
