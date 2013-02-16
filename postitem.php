@@ -84,9 +84,9 @@
         <?php the_excerpt(); ?>
       </div><!-- .entry-summary -->
 
-      <div class="entry-readmore">
+<!--       <div class="entry-readmore">
         <span class="readmore roboto">MORE</span>
-      </div><!-- .entry-readmore -->
+      </div> -->
 
     <?php endif; ?>
 
