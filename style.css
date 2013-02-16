@@ -264,7 +264,6 @@ a {
 .layout-content-wrap {
 
 }
-
 .layout-posts-section {
   /*border-collapse: collapse;*/
   display: table;
@@ -277,7 +276,11 @@ a {
   margin: 20px 0;
   width: 100%;
 }
-
+/* TODO: This margin-top thing is annoying. Find an elegant solution. */
+.layout-single-post .layout-posts-row,
+.layout-single-post .layout-sidebar-wrap {
+  margin-top: 0;
+}
 /* Secondary content */
 .layout-sidebar-wrap {
   float: right;
@@ -445,7 +448,6 @@ a {
   background-color: #ce5333;
   color: #FFF;
   padding: 5px 10px;
-
 }
 .entry-meta {
   margin: 0 20px 20px;

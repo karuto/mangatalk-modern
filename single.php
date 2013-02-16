@@ -10,7 +10,7 @@
 get_header(); ?>
 
   <div id="primary" class="layout-primary-wrap">
-    <div id="content" class="layout-content-wrap" role="main">
+    <div id="content" class="layout-content-wrap layout-single-post" role="main">
 
       <?php $format = get_post_format();
 
