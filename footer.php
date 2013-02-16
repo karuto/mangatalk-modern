@@ -12,6 +12,7 @@
 ?>
 
   <?php if( $has_subheader != true ): ?>
+    <!-- Only endtag if has no subheader, since those end before here -->
     </div><!-- .layout-main-inner-wrap -->
   </div><!-- #main .layout-main-wrap -->
   <?php endif; ?>

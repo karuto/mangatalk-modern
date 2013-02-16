@@ -58,5 +58,5 @@ get_header(); ?>
     </div><!-- .layout-content-wrap -->
   </div><!-- .layout-primary-wrap -->
 
-<?php get_sidebar(); ?>
+<?php if ($featuredflag != true) { get_sidebar(); } ?>
 <?php get_footer(); ?>
