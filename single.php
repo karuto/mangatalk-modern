@@ -49,7 +49,7 @@ get_header(); ?>
       <?php endwhile; // end of the loop. ?>
 
       <?php 
-        if ($featuredflag == true) {
+        if ($featuredflag != true) {
           echo '</div><!-- .layout-post-row -->';
           echo '</div><!-- .layout-posts-section -->';                      
         }

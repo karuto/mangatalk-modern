@@ -10,19 +10,18 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-	  </div><!-- .layout-main-inner-wrap -->
-	</div><!-- #main .layout-main-wrap -->
+    </div><!-- .layout-main-inner-wrap -->
+  </div><!-- #main .layout-main-wrap -->
   
   <div class="layout-footer-wrap">
 
-	  <footer id="colophon" class="main-footer" role="contentinfo">
-	    <div class="site-info">
-	      <?php do_action( 'twentytwelve_credits' ); ?>
-	      <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
-	    </div><!-- .site-info -->
-	  </footer><!-- #colophon -->
+    <footer id="colophon" class="main-footer" role="contentinfo">
+      <div class="footer-info">
+        Hi
+      </div><!-- .footer-info -->
+    </footer><!-- #colophon -->
 
-	</div><!-- .layout-footer-wrap -->
+  </div><!-- .layout-footer-wrap -->
 
 </div><!-- #page .layout-page-wrap -->
 
