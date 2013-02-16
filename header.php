@@ -94,6 +94,7 @@
     } else {
       // This defines the max-width framework here since no subheader exists
       echo '<div id="main" class="layout-main-wrap">'; 
-      echo '<div class="layout-main-inner-wrap">';      
+      // This container below is where the float trouble takes place
+      echo '<div class="layout-main-inner-wrap clearfix-modern">';      
     }
   ?>
