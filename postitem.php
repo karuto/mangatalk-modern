@@ -64,7 +64,7 @@
       <h3 class="entry-meta roboto-font">
         By 
         <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php the_author() ?></a>
-        on <?php echo get_the_date(); ?> 
+        on <?php echo get_the_date(); ?> <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
       </h3><!-- .entry-postitem-meta -->
 
     </header><!-- .entry-header -->

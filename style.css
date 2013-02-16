@@ -388,7 +388,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .main-item-style {
   background-color: #fff;
   border: 1px solid #d0d0d0;
-  border-top: 3px solid #ce5333;
+  /*border-top: 3px solid #ce5333;*/
   color: #000;
 }
 
@@ -402,7 +402,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 
 /* Entry related */
 .post-item {
-  border-top: 3px solid #ce5333;
+  /*border-top: 3px solid #ce5333;*/
   position: relative;
 }
 .entry-masthead { /* This is where the feature image lies */
@@ -519,7 +519,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 
 /* Widget related */
 .widget-area .widget {
-  border-top: 3px solid #ce5333;
+  /*border-top: 3px solid #ce5333;*/
   margin: 0 0 20px;
 }
 .widget-title {
