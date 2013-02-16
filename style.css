@@ -401,6 +401,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 
 /* Entry related */
 .post-item {
+  border-top: 3px solid #ce5333;
   position: relative;
 }
 .entry-masthead { /* This is where the feature image lies */
@@ -517,12 +518,17 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 
 /* Widget related */
 .widget-area .widget {
+  border-top: 3px solid #ce5333;
   margin: 0 0 20px;
 }
 .widget-title {
-  padding: 20px;
-  background-image: url('http://i.imgur.com/FV2MV.png');
-  background-position: center;
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #d0d0d0;
+  letter-spacing: 0.1em;
+  padding: 5px 20px;
+  text-transform: uppercase;
+/*  background-image: url('http://i.imgur.com/FV2MV.png');
+  background-position: center;*/
 }
 .widget > ul {
   margin: 20px;
