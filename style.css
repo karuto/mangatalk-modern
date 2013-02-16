@@ -343,7 +343,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   font-size: 21px;
   font-weight: 100;
   line-height: 45px;  /* Use this to control height of header */
-  padding: 0 20px;  
+  /*padding: 0 20px;  */
   text-transform: uppercase;
 }
 .sub-title {
@@ -601,6 +601,11 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   float: left; 
   zoom: 1; 
 }
+.touch-logo {
+  padding: 0 20px;
+  width: 100%;
+}
+.touch-logo a:active,
 .touch-logo a:hover { /* Only targets top logo */
   color: yellow;
 } 
@@ -609,7 +614,8 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   color: #fff; 
 }
 .global-dropdown .drop-item a { /* First level dropdown items */
-  /*background-color: teal;*/
+  border: 1px solid #d0d0d0;
+  border-width: 0;
   display: block; 
   font: 14px/24px "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", FreeSans, sans-serif;
   font-weight: bold;
@@ -621,7 +627,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .global-dropdown li.hover,
 .global-dropdown li:hover { 
   background: #ce5333; 
-  color: white; 
+  color: #fff; 
   position: relative; 
 }
 
