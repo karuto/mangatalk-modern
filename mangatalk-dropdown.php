@@ -1,5 +1,5 @@
 <ul class="global-dropdown">
-	<li class="touch-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">MangaTalk</a>
+	<li class="touch-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><!-- <span class="sitename-cn">漫言 </span> -->MangaTalk <span class="sitedesc">Newest Edition</span></a>
 		<ul class="drop-list">
       <li class="drop-item"><a href="#">文集 Everything</a></li>
       <li class="drop-item"><a href="#">专题 Features</a></li>
