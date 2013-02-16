@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * The template for displaying Archive pages.
  *
@@ -39,7 +39,7 @@ get_header(); ?>
   </div><!-- .layout-subheader-wrap -->
 
   <div id="main" class="layout-main-wrap"><!-- This defines the max-width framework -->
-    <div class="layout-main-inner-wrap">
+    <div class="layout-main-inner-wrap clearfix-modern">
 
     <div id="primary" class="layout-primary-wrap">
       <div id="content" class="layout-content-wrap" role="main">
@@ -49,5 +49,5 @@ get_header(); ?>
       </div><!-- .layout-content-wrap -->
     </div><!-- .layout-primary-wrap -->
 
-<?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
 <?php get_footer(); ?>
