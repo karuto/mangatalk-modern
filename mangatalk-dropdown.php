@@ -6,13 +6,13 @@
       <li class="drop-item"><a href="#">漫评 Reviews</a></li>
       <li class="drop-item"><a href="#">资讯 News</a></li>
       <li class="drop-item"><a href="#">访谈 Interviews</a></li>
-      <li class="drop-item">
+<!--       <li class="drop-item">
         <a href="#">Batting Cages</a>
         <ul>
           <li><a href="#">Indoor</a></li>
           <li><a href="#">Outdoor</a></li>
         </ul>
-      </li>
+      </li> -->
 		</ul>
 	</li>
 </ul>
