@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * The default template for displaying content. 
  * Used for regular single post only, not for index/archive/search.

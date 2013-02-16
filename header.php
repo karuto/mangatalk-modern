@@ -53,10 +53,12 @@
 
       <hgroup class="site-title-wrap">
         <h1 class="site-title">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
+<!--           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" 
             title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
             <?php bloginfo( 'name' ); ?>
-          </a>
+          </a> -->
+          <?php get_template_part('mangatalk-dropdown'); ?>
+
         </h1>
       </hgroup>
 
