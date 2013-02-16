@@ -25,8 +25,7 @@
     echo '<div class="layout-regular-post">';
   }
 ?>
-    <article id="post-<?php the_ID(); ?>" 
-      <?php post_class('main-item-block main-item-style'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('main-item-block main-item-style'); ?>>
 
 <!--      <div class="entry-topimg"><?php the_post_thumbnail('full'); ?></div>
   TODO: Potential solution using images rather than CSS background but JS required:
@@ -36,9 +35,8 @@
       <?php 
       /* Retrieving the featured image URL of this post */
       $image = wp_get_attachment_image_src( 
-      get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
-      <?php 
+      get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+      
       if ($image[0] == '') {
         /* If this post does NOT have a featured image, we set one */
         $image[0] = "http://gnnaz.com/wp-content/uploads/2012/12/Saga-e1357012394969.jpg"; } 
