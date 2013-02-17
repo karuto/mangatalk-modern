@@ -7,10 +7,13 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+
 <?php  
+// Search for all attachments for the current post
 $args = array(
     'post_type' => 'attachment',
-    'numberposts' => 1,
+    // -1 for getting all, 1 for just getting the first one
+    'numberposts' => 1, 
     'offset' => 0,
     'orderby' => 'menu_order',
     'order' => 'asc',
@@ -20,8 +23,8 @@ $args = array(
 $attachments = get_posts($args);
 if ($attachments) {
     foreach ($attachments as $attachment) {
-        echo apply_filters( 'the_title' , $attachment->post_title );
-		the_attachment_link( $attachment->ID , true, false );
+    	// Returns a full URI for an attachment file or false on failure
+    	echo wp_get_attachment_url($attachment->ID) . "<br>";    	
 	}
 }
 

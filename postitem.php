@@ -25,7 +25,7 @@
     <?php 
     /* Retrieving the featured image URL of this post */
     $image = wp_get_attachment_image_src( 
-    get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+    get_post_thumbnail_id( $post->ID )); ?>
 
     <?php 
     if ($image[0] == '') {
