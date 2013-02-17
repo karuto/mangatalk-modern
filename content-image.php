@@ -20,11 +20,13 @@ $args = array(
     'post_status' => null,
     'post_parent' => $post->ID,
     );
+// As of WP 3.5, this is the only way to get specific size of thumbnail's URL
+echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium')[0] . "<br>";
 $attachments = get_posts($args);
 if ($attachments) {
     foreach ($attachments as $attachment) {
     	// Returns a full URI for an attachment file or false on failure
-    	echo wp_get_attachment_url($attachment->ID) . "<br>";    	
+		echo wp_get_attachment_image_src( $attachment->ID, 'medium')[0] . "<br>";
 	}
 }
 
