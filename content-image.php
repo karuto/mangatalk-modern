@@ -7,6 +7,26 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+<?php  
+$args = array(
+    'post_type' => 'attachment',
+    'numberposts' => 1,
+    'offset' => 0,
+    'orderby' => 'menu_order',
+    'order' => 'asc',
+    'post_status' => null,
+    'post_parent' => $post->ID,
+    );
+$attachments = get_posts($args);
+if ($attachments) {
+    foreach ($attachments as $attachment) {
+        echo apply_filters( 'the_title' , $attachment->post_title );
+		the_attachment_link( $attachment->ID , true, false );
+	}
+}
+
+?>
+
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="entry-content">
