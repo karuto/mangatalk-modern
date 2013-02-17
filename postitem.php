@@ -24,17 +24,15 @@
 
     <?php 
     /* Retrieving the featured image URL of this post */
-    $image = wp_get_attachment_image_src( 
-    get_post_thumbnail_id( $post->ID )); ?>
-
+    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>
     <?php 
-    if ($image[0] == '') {
+    if ($image == '') {
       /* If this post does NOT have a featured image, we set one */
-      $image[0] = "http://www.wordofthenerdonline.com/wp-content/uploads/2012/03/saga-2-1311467620.jpg"; } ?>
+      $image = "http://www.wordofthenerdonline.com/wp-content/uploads/2012/03/saga-2-1311467620.jpg"; } ?>
 
     <!-- /* Else create a div and set it as background down below */ -->
     <div class="entry-masthead" 
-    style="background-image: url('<?php echo $image[0]; ?>')">
+    style="background-image: url('<?php echo $image; ?>')">
 
 <!--       <div class="author-avatar">
         <?php echo get_avatar( get_the_author_meta( 'user_email' ), 

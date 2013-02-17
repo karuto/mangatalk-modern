@@ -419,9 +419,12 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   position: relative;
   width: 100%;
 }
-.layout-regular-post .entry-masthead,
-.layout-featured-post .entry-masthead {
+.layout-regular-post .entry-masthead {
   height: 400px;
+}
+
+.layout-feature-post .entry-masthead {
+  height: 800px;
 }
 .entry-topimg img {
   height: 100%;
