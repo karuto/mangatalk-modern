@@ -20,7 +20,7 @@ get_header(); ?>
         $post_meta_box_interface = get_post_meta( $post->ID, "post_meta_box_interface", true );
         $post_meta_box_enlarge_check = get_post_meta( $post->ID, "post_meta_box_enlarge_check", true );
 
-        if ($post_meta_box_interface == "feature") {
+        if ($post_meta_box_interface == "feature" || $post_meta_box_interface == "on") {
           // If it's a featured post, we print nothing to keep it a single column
           $featuredflag = true;
         } else {
