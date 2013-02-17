@@ -510,7 +510,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   font-weight: 900;
   padding: 5px 0;
 }
-.entry-content .wp-caption {
+.format-image .wp-caption {
   width: 100%;
 }
 .entry-content blockquote {
