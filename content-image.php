@@ -49,9 +49,19 @@
 
 ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class('main-item-block main-item-style'); ?>>
+    <article id="post-<?php the_ID(); ?>" 
+      <?php post_class('main-item-block main-item-style'); ?>>
+
       <div class="entry-content">
         <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
       </div><!-- .entry-content -->
+
+      <div class="entry-like">
+        <!-- <span class="like-pretext">喜欢就赞一下</span> -->
+        <div class="like-wrapper">
+          <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
+        </div>
+      </div>
+
     </article><!-- #post -->
   </div><!-- .layout-regular-post / .layout-featured-post -->

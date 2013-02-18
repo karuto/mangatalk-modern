@@ -4,7 +4,7 @@ var $j = jQuery.noConflict();
 
 $j(function(){
 
-  
+  // Making the entire div clickable, by searching the inner hidden link.
   $j(".entry-masthead").click(function(){
     // var v = $(this).find("a").attr("href");
     // alert(v);
