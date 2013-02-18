@@ -604,6 +604,39 @@ function custom_profile_help_by_K($help) {
 }
 
 
+/**
+ * Author: Karuto
+ *
+ * Hacking dashboard interfaces: change external logo & login background.
+ * @since Twenty Twelve 1.0
+ */
+function my_logo() {
+  echo '<style type="text/css">
+    body { background:url(http://i.imgur.com/FV2MV.png) repeat !important; }
+    .login #nav a, .login #backtoblog a { text-decoration: none; color: #ce5333; }
+    h1 a { background-image:url(http://i.imgur.com/rzsoh.png) !important; }
+  </style>';
+}
+add_action('login_head', 'my_logo');
+
+
+/**
+ * Author: Karuto
+ *
+ * The following function automatically removes attachment links around images.
+ * @since Twenty Twelve 1.0
+ */
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+function attachment_image_link_remove_filter( $content ) {
+    $content =
+        preg_replace(
+            array('{<a(.*?)(wp-att|wp-content\/uploads)[^>]*><img}',
+                '{ wp-image-[0-9]*" /></a>}'),
+            array('<img','" />'),
+            $content
+        );
+    return $content;
+}
 
 
 
