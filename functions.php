@@ -639,6 +639,17 @@ function attachment_image_link_remove_filter( $content ) {
 }
 
 
+/**
+ * Author: Karuto
+ *
+ * Remove the new Twitter-like admin menu bar that WP 3.1 introduced.
+ * @since Twenty Twelve 1.0
+ */
+add_filter( 'show_admin_bar', '__return_false' );
+
+
+
+
 
 
 
