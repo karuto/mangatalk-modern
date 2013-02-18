@@ -512,6 +512,7 @@ h1.entry-title {
 .author-info-table {
   background-color: #F0F0F0;
   display: table;
+  width: 100%;
 }
 .entry-author-info {
   display: table-row;
@@ -540,12 +541,18 @@ img.avatar {
 }
 .author-meta {
   color: #666;
-  padding: 30px 20px;
+  padding: 20px 20px 30px;
   width: 80%;
 }
+.author-name {
+  font-size: 21px;
+  /*font-weight: bold;*/
+  line-height: 30px;
+}
 .author-contact-item {
+  font-size: 12px;
   display: inline-block;
-  margin: 0 5px 0 0;
+  margin: 0;
 }
 .author-desc {
   font-size: 12px;
