@@ -114,9 +114,15 @@
         </div><!-- #author-avatar -->
         
         <div class="author-meta">
-          <h3 class="author-name roboto-font"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
-              rel="author"><?php printf( __( '%s', 'twentyeleven' ), get_the_author() ); ?></a></h3><br/>
-          <h4 class="author-desc roboto-font"><?php the_author_meta( 'description' ); ?></h4>
+          <h3 class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+              rel="author"><?php printf( __( '%s', 'twentyeleven' ), get_the_author() ); ?></a></h3>
+          <ul class="author-contact">
+            <li class="author-contact-item">Email</li>
+            <li class="author-contact-item">Email</li>
+            <li class="author-contact-item">Email</li>
+            <li class="author-contact-item">Email</li>
+          </ul>
+          <h4 class="author-desc"><?php the_author_meta( 'description' ); ?></h4>
         </div><!-- .author-meta -->
       </div><!-- .author-info -->
 

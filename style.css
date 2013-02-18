@@ -112,7 +112,8 @@ h3,
 h4,
 h5,
 h6 {
- clear: both;
+  clear: both;
+  font-weight: normal;
 }
 html {
   overflow-y: scroll;
@@ -528,10 +529,13 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   text-align: center;
 }
 .author-meta {
-  padding: 20px;
+  padding: 20px 20px 20px 0;
   width: 80%;
 }
-
+.author-contact-item {
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
 
 /* Entry content related */
 .entry-content {
