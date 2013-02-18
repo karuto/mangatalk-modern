@@ -395,6 +395,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .main-item-block {
   display: table-cell;
   margin: 20px 0 100px;
+  min-width: 398px;
   position: relative;
   vertical-align: top;  
   width: 50%;
