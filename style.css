@@ -460,7 +460,8 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   font-style: bold;*/
   text-align: center;
 }
-.entry-title {
+h1.entry-title {
+  font-weight: bold;
   padding: 20px 20px 0px;  
   text-shadow: 0px 1px 1px #FF9999;
 }
@@ -507,7 +508,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   padding: 20px 50px;
 }
 .author-info-table {
-  background-color: #F1F1F1;
+  background-color: #F0F0F0;
   display: table;
 }
 .entry-author-info {
@@ -535,10 +536,6 @@ img.avatar {
   padding: 3px;
   text-align: center;
 }
-.layout-feature-post .avatar {
-  
-}
-
 .author-meta {
   padding: 30px 20px;
   width: 80%;
@@ -551,7 +548,30 @@ img.avatar {
   font-size: 12px;
   line-height: 21px;
 }
-
+.entry-nav-single {
+  display: table;
+  margin: 20px 0;
+  padding: 20px 0;
+  width: 100%;
+}
+.entry-nav-single .nav-previous,
+.entry-nav-single .nav-next {
+  font-weight: bold;
+  display: table-cell;
+  padding: 0px 20px;
+  vertical-align: center;
+  width: 50%; 
+}
+.entry-nav-single .nav-previous {
+  border-right: 1px solid #d0d0d0;
+  margin: 20px 0px 20px 0px;
+  text-align: right;
+}
+.entry-nav-single .nav-next {
+  border-left: 1px solid #d0d0d0;
+  margin: 20px 0px 20px 0px;
+  text-align: left;
+}
 
 /* Entry content related */
 .entry-content {
