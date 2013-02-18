@@ -63,9 +63,10 @@
       </hgroup>
 
 
-      <nav id="site-navigation" class="main-navigation" role="navigation">
-
-&emsp;
+      <nav class="external-nav" role="navigation">
+        <li class="external-item"><a href="#">搜索</a></li>
+        <li class="external-item"><a href="#">微博</a></li>
+        <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">订阅</a></li>
       </nav><!-- #site-navigation -->
 
 

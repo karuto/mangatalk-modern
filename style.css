@@ -196,7 +196,10 @@ a {
   color: #ce5333;
   text-decoration: none;
 }
-
+a:hover {
+  color: darkRed;
+  text-shadow: 0px 1px 1px #FF9999;
+}
 
 
 
@@ -322,6 +325,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 
 -------------------------------------------------------------- */
 
+/* Header related */
 .site-header { /* #masthead */
   margin: 0 auto;
   max-width: 1240px;
@@ -360,12 +364,23 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   padding: 0 20px;  
   text-transform: uppercase;
 }
-.main-navigation{
+.external-nav{
   /*background-color: teal;*/
   float: right;
   line-height: 45px;
   border-right: 1px solid #d0d0d0;
 }
+.external-item {
+  font-size: 14px;
+  font-weight: 900;
+  display: inline;
+  list-style: none;
+  padding: 0 5px;
+}
+.external-item:last-child {
+  padding-right: 20px;
+}
+
 
 
 
@@ -405,6 +420,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   position: relative;
 }
 .widget-area .widget:hover,
+.main-item-style:hover,
 .post-item:hover {
   border: 1px solid #ce5333;
 }
@@ -494,6 +510,9 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .entry-content {
   margin: 30px; 
 }
+.format-image .entry-content {
+  margin: 0;
+}
 .entry-content h2,
 .entry-content p {
   margin-bottom: 21px;
@@ -520,6 +539,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   padding: 0 0 0 20px;
 }
 .post img {
+  max-height: 100%;
   max-width: 100%;
 }
 
