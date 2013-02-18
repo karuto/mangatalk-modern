@@ -6,9 +6,9 @@ $j(function(){
 
   
   $j(".entry-masthead").click(function(){
-    var v = $(this).find("a").attr("href");
-    alert(v);
-    // window.location = $(this).find("a").attr("href"); 
+    // var v = $(this).find("a").attr("href");
+    // alert(v);
+    window.location = $j(this).find("a").attr("href"); 
     // window.location = "http://g.cn"; 
     return false;
   });
