@@ -18,7 +18,7 @@
   // Printing stuff out for testing
   // echo $post_meta_box_likes . " + " . $post_meta_box_interface . " + " . $post_meta_box_enlarge_check;
 
-  if ($post_meta_box_interface == "feature") {
+  if ($featuredflag == true) {
     echo '<div class="layout-feature-post">';
   } else {
     echo '<div class="layout-regular-post">';

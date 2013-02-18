@@ -20,8 +20,12 @@ get_header(); ?>
         $post_meta_box_interface = get_post_meta( $post->ID, "post_meta_box_interface", true );
         $post_meta_box_enlarge_check = get_post_meta( $post->ID, "post_meta_box_enlarge_check", true );
 
-        if ($post_meta_box_interface == "feature" || $post_meta_box_interface == "on") {
+          print_r($post_meta_box_interface);
+          print_r($format);
+
+        if ($format == "post" && $post_meta_box_interface == "feature") {
           // If it's a featured post, we print nothing to keep it a single column
+          echo "YOLOHEY";
           $featuredflag = true;
         } else {
           // For regular posts, we print out the CSS table & row for two columns
