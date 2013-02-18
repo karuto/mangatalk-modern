@@ -619,6 +619,17 @@ function my_logo() {
 }
 add_action('login_head', 'my_logo');
 
+/**
+ * Author: Karuto
+ *
+ * Add the blog's favicon to the dashboard pages as well.
+ * @since Twenty Twelve 1.0
+ */
+function blog_favicon() {
+  echo '<link rel="Shortcut Icon" type="image/x-icon" href="'
+  .get_bloginfo('wpurl').'/favicon.ico" />';
+}
+add_action('wp_head', 'blog_favicon');
 
 /**
  * Author: Karuto
@@ -684,7 +695,6 @@ function new_contactmethods( $contactmethods ) {
   return $contactmethods;
 } 
 add_filter('user_contactmethods', 'new_contactmethods', 10, 1);
-
 
 
 
