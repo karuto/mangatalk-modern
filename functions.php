@@ -506,7 +506,7 @@ add_filter('pre_get_posts','SearchFilter');
 /**
  * Author: Karuto
  *
- * Hacking dashboard interfaces, adding a informative global widget.
+ * Hacking dashboard interfaces, adding a informative contact helper widget.
  * @since Twenty Twelve 1.0
  */
 function contact_helper_dashboard_widget_function() {
@@ -530,7 +530,7 @@ add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
 /**
  * Author: Karuto
  *
- * Hacking dashboard interfaces, adding a helper widget for post editing.
+ * Hacking dashboard interfaces, adding a posting guideline helper widget (to dashboard frontpage).
  * @since Twenty Twelve 1.0
  */
 function guidelines_posting_widget_function() {
@@ -549,6 +549,33 @@ function example_add_dashboard_widgets() {
 // Hoook into the 'wp_dashboard_setup' action to register our other functions
 add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
 
+
+/**
+ * Author: Karuto
+ *
+ * Hacking dashboard interfaces, adding a posting guideline helper widget (to post editing pages).
+ * @since Twenty Twelve 1.0
+ */
+//  Adding custom helper while posting
+add_action('load-post-new.php','custom_help_page');
+add_action('load-page.php','custom_help_page');
+add_action('load-post.php','custom_help_page');
+function custom_help_page() {
+  add_filter('contextual_help','custom_page_help_by_K');
+}
+function custom_page_help_by_K($help) {
+  echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
+  echo '<style type="text/css">
+    .update-nag { display:none !important; }
+    #post-foreplay a { text-decoration: none; }
+  </style>';
+  
+  echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
+  echo '<p>亲爱的作者：在撰文之前，请您抽出几分钟，阅读<strong><a href="http://mangatalk.net/author-faq/" style="color:#ce5333;">『漫言发文答疑指南』</a></strong>，相信能解答您的大部分问题。</p><p>
+  <a href="http://mangatalk.net">漫言</a>自诞生以来，便致力于为数以万计的读者们奉上最优雅的阅读体验。
+  还望您也能稍尽一方之力、共同来维护这片净土。^ ^</p><p>';
+  echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
+}
 
 
 
