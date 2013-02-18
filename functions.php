@@ -647,7 +647,43 @@ function attachment_image_link_remove_filter( $content ) {
  */
 add_filter( 'show_admin_bar', '__return_false' );
 
+/**
+ * Author: Karuto
+ *
+ * Remove the Visual Editor that WP dashboard by default uses in editing sections.
+ * @since Twenty Twelve 1.0
+ */
+add_filter('user_can_richedit', create_function('', 'return false;'), 50);
 
+/**
+ * Author: Karuto
+ *
+ * Disable the “please upgrade now” message in dashboard for non-admin users.
+ * @since Twenty Twelve 1.0
+ */
+if ( !current_user_can( 'edit_users' ) ) {
+  add_action( 
+    'init', 
+    create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 
+    2 );
+  add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
+}
+
+/**
+ * Author: Karuto
+ *
+ * Add new contact fields in the user profiles, remove useless ones.
+ * @since Twenty Twelve 1.0
+ */
+function new_contactmethods( $contactmethods ) {
+  $contactmethods['douban'] = '豆瓣'; // Add Twitter
+  $contactmethods['weibo'] = '微博'; // Add Facebook
+  unset($contactmethods['yim']); // Remove Yahoo IM
+  unset($contactmethods['aim']); // Remove AIM
+  unset($contactmethods['jabber']); // Remove Jabber
+  return $contactmethods;
+} 
+add_filter('user_contactmethods', 'new_contactmethods', 10, 1);
 
 
 
