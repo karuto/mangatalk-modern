@@ -20,6 +20,7 @@
   // echo $post_meta_box_likes . " + " . $post_meta_box_interface . " + " . $post_meta_box_enlarge_check;
 
   if ($post_meta_box_interface == "feature") {
+    $featuredflag = true;
     echo '<div class="layout-feature-post">';
   } else {
     echo '<div class="layout-regular-post">';
@@ -108,23 +109,34 @@
 
       </footer><!-- .entry-copyright -->
 
-      <div class="author-info">
-        <div class="author-avatar">
-          <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 100 ) ); ?>
-        </div><!-- #author-avatar -->
-        
-        <div class="author-meta">
-          <h3 class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
-              rel="author"><?php printf( __( '%s', 'twentyeleven' ), get_the_author() ); ?></a></h3>
-          <ul class="author-contact">
-            <li class="author-contact-item">Email</li>
-            <li class="author-contact-item">Email</li>
-            <li class="author-contact-item">Email</li>
-            <li class="author-contact-item">Email</li>
-          </ul>
-          <h4 class="author-desc"><?php the_author_meta( 'description' ); ?></h4>
-        </div><!-- .author-meta -->
-      </div><!-- .author-info -->
+      <div class="author-info-table">
+        <div class="entry-author-info clearfix-modern">
+          <div class="author-avatar">
+            <?php 
+            if ($featuredflag == true)
+              $avatarsize = 125;
+            else
+              $avatarsize = 100;
+            echo get_avatar( get_the_author_meta( 'user_email' ), 
+            apply_filters( 'twentyeleven_author_bio_avatar_size', $avatarsize ) ); 
+            ?>
+          </div><!-- #author-avatar -->
+          
+          <div class="author-meta">
+            <h3 class="author-name">
+              <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+                rel="author"><?php printf( __( '%s', 'twentyeleven' ), get_the_author() ); ?></a>
+            </h3>
+            <ul class="author-contact">
+              <li class="author-contact-item">Email</li>
+              <li class="author-contact-item">Email</li>
+              <li class="author-contact-item">Email</li>
+              <li class="author-contact-item">Email</li>
+            </ul>
+            <h4 class="author-desc"><?php the_author_meta( 'description' ); ?></h4>
+          </div><!-- .author-meta -->
+        </div><!-- .author-info -->
+      </div><!-- .author-info-table -->
 
 
     </article><!-- #post -->
