@@ -499,6 +499,7 @@ h1.entry-title {
   background-color: #F5F5F5;
   border-bottom: 1px solid #d0d0d0;
   border-top: 1px solid #d0d0d0;
+  color: #666;
   font-size: 12px;
   line-height: 170%;
   margin-top: 40px;
@@ -538,6 +539,7 @@ img.avatar {
   text-align: center;
 }
 .author-meta {
+  color: #666;
   padding: 30px 20px;
   width: 80%;
 }

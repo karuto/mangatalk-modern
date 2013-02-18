@@ -453,6 +453,15 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
 
 
+
+/**
+ * ABOVE: ALL THE ORIGINAL FUNCTIONS
+ * BELOW: ALL THE ADDITIONAL FUNCTIONS
+ */
+
+
+
+
 /**
  * Author: Karuto
  *
@@ -478,3 +487,72 @@ function fixed_img_caption_shortcode($attr, $content = null) {
   . do_shortcode( $content ) . '<p class="wp-caption-text">'
   . $caption . '</p></div>';
 }
+
+
+/**
+ * Author: Karuto
+ *
+ * Exclude pages from search results.
+ * @since Twenty Twelve 1.0
+ */
+function SearchFilter($query) {
+  if ($query->is_search) {
+    $query->set('post_type', 'post');
+  } return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+
+
+/**
+ * Author: Karuto
+ *
+ * Hacking dashboard interfaces, adding a informative global widget.
+ * @since Twenty Twelve 1.0
+ */
+function contact_helper_dashboard_widget_function() {
+  echo '<div id="admin-foreplay" style="font-size: 12px; line-height: 20px;">';
+  echo '<p><a href="http://mangatalk.net">欢迎来到漫言！</a><br />
+  站点现正处于 Beta 公开测试期间，如果您在使用中遇到 Bug、技术故障，或是有任何建议吐槽，请务必来信<a href="mailto:iamkaruto@gmail.com">联系技术人员</a>。</p><p>';
+  echo '<a href="http://mangatalk.net/changelog/">Log #15527 - You can now browse MangaTalk via Android / iPhone.</a></p><p>';
+  echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
+}
+// Create the function use in the action hook
+function add_custom_dashboard_widget() {
+  wp_add_dashboard_widget(
+    'contact_helper_dashboard_widget', 
+    '感谢您登入漫言！', 
+    'contact_helper_dashboard_widget_function');
+}
+// Hoook into the 'wp_dashboard_setup' action to register our other functions
+add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
+
+
+/**
+ * Author: Karuto
+ *
+ * Hacking dashboard interfaces, adding a helper widget for post editing.
+ * @since Twenty Twelve 1.0
+ */
+function guidelines_posting_widget_function() {
+  echo '<div id="post-foreplay" style="font-size: 12px; line-height: 20px;">';
+  echo '<p>亲爱的作者：在撰文之前，请您抽出几分钟，阅读<strong><a href="http://mangatalk.net/author-faq/" style="color:#ce5333;">『漫言发文答疑指南』</a></strong>，相信能解答您的大部分问题。</p><p>
+  
+  <a href="http://mangatalk.net">漫言</a>自诞生以来，便致力于为数以万计的读者们奉上最优雅的阅读体验。
+  还望您也能稍尽一方之力、共同来维护这片净土。^ ^</p><p>';
+
+  echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
+}
+// Create the function use in the action hook
+function example_add_dashboard_widgets() {
+  wp_add_dashboard_widget('guidelines_posting_widget', '撰文时的注意事项', 'guidelines_posting_widget_function');
+}
+// Hoook into the 'wp_dashboard_setup' action to register our other functions
+add_action('wp_dashboard_setup', 'example_add_dashboard_widgets' );
+
+
+
+
+
+
+
+
