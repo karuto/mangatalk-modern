@@ -10,12 +10,20 @@
 ?>
 
 <?php 
-  if ($featuredflag == true) {
-    echo "YOLO";
+  // Before entering main logic, retrieve meta box data for format detection
+  // CAUTION: Mangatalk Meta Box plugin is required in your plugin directory
+  $post_meta_box_likes = get_post_meta( $post->ID, "post_meta_box_likes", true );
+  $post_meta_box_interface = get_post_meta( $post->ID, "post_meta_box_interface", true );
+  $post_meta_box_enlarge_check = get_post_meta( $post->ID, "post_meta_box_enlarge_check", true );
+
+  // Printing stuff out for testing
+  // echo $post_meta_box_likes . " + " . $post_meta_box_interface . " + " . $post_meta_box_enlarge_check;
+
+  if ($post_meta_box_interface == "feature") {
     echo '<div class="layout-feature-post">';
   } else {
-    echo '<div class="layout-regular-post">';  
-  } 
+    echo '<div class="layout-regular-post">';
+  }
 ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('main-item-block main-item-style'); ?>>
 
@@ -29,9 +37,9 @@
       $image = wp_get_attachment_image_src( 
       get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 
-      if ($image[0] == '') 
+      if ($image[0] == '') {
         /* If this post does NOT have a featured image, we set one */
-        $image[0] = "http://gnnaz.com/wp-content/uploads/2012/12/Saga-e1357012394969.jpg";
+        $image[0] = "http://gnnaz.com/wp-content/uploads/2012/12/Saga-e1357012394969.jpg"; } 
 
         /* Else create a div and set it as background down below */?>
       
@@ -85,7 +93,7 @@
 
       <?php endif; ?>
 
-      <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
+<?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
 
       <footer class="entry-copyright">
 
@@ -100,32 +108,23 @@
 
       </footer><!-- .entry-copyright -->
 
-      <div class="author-info-table">
-        <div class="entry-author-info clearfix-modern">
-          <div class="author-avatar">
-            <?php 
-            if ($featuredflag == true)
-              $avatarsize = 125;
-            else
-              $avatarsize = 100;
-            echo get_avatar( get_the_author_meta( 'user_email' ), 
-            apply_filters( 'twentyeleven_author_bio_avatar_size', $avatarsize ) ); 
-            ?>
-          </div><!-- #author-avatar -->
-          
-          <div class="author-meta">
-            <h3 class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
-                rel="author"><?php printf( __( '%s', 'twentyeleven' ), get_the_author() ); ?></a></h3>
-            <ul class="author-contact">
-              <li class="author-contact-item">Email</li>
-              <li class="author-contact-item">Email</li>
-              <li class="author-contact-item">Email</li>
-              <li class="author-contact-item">Email</li>
-            </ul>
-            <h4 class="author-desc"><?php the_author_meta( 'description' ); ?></h4>
-          </div><!-- .author-meta -->
-        </div><!-- .author-info -->
-      </div><!-- .author-info-table -->
+      <div class="author-info">
+        <div class="author-avatar">
+          <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 100 ) ); ?>
+        </div><!-- #author-avatar -->
+        
+        <div class="author-meta">
+          <h3 class="author-name"><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"
+              rel="author"><?php printf( __( '%s', 'twentyeleven' ), get_the_author() ); ?></a></h3>
+          <ul class="author-contact">
+            <li class="author-contact-item">Email</li>
+            <li class="author-contact-item">Email</li>
+            <li class="author-contact-item">Email</li>
+            <li class="author-contact-item">Email</li>
+          </ul>
+          <h4 class="author-desc"><?php the_author_meta( 'description' ); ?></h4>
+        </div><!-- .author-meta -->
+      </div><!-- .author-info -->
 
 
     </article><!-- #post -->
