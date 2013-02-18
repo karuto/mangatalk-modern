@@ -578,6 +578,33 @@ function custom_page_help_by_K($help) {
 }
 
 
+/**
+ * Author: Karuto
+ *
+ * Hacking dashboard interfaces, adding a informative helper for profile editing.
+ * @since Twenty Twelve 1.0
+ */
+//  Adding custom helper while user changing profile
+add_action('load-profile.php','custom_help_profile');
+function custom_help_profile() {
+  add_filter('contextual_help','custom_profile_help_by_K');
+}
+function custom_profile_help_by_K($help) {
+  echo $help; // Uncomment if you just want to append your custom Help text to the default Help text
+  echo '<style type="text/css">
+    .update-nag { display:none !important; }
+    #post-foreplay a { text-decoration: none; }
+  </style>';
+  
+  echo '<div id="post-foreplay" style="margin-right: 25px; font-size: 12px; line-height: 18px; color: #555; border-bottom: 1px solid #e0e0e0;">';
+  echo '<p>亲，漫言后台使用<a href="http://cn.gravatar.com/" target=_BLANK> Gravatar </a>的外挂头像系统，它的原理是为每个 Email 地址进行匹配：</p><p>';
+  echo '当你在<a href="http://cn.gravatar.com/" target=_BLANK> Gravatar </a>上传一张图片后，这张头像到任何网站都会自动显示——只要你输入的是同样的 Email。</p><p>';
+  echo '<a href="http://cn.gravatar.com/" target=_BLANK> Gravatar </a>的使用过程非常简单，两三分钟即可完成上传，如果你还没有头像，不妨去<a href="http://cn.gravatar.com/" target=_BLANK>设置</a>一下吧？^v^</p>';
+  echo '深切感谢您的理解与协作。一切都是为了爱！　　—— <a href="http://mangatalk.net">漫言团队</a> 敬上</p></div>';
+}
+
+
+
 
 
 
