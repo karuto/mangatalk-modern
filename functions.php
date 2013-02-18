@@ -700,13 +700,13 @@ add_filter('user_contactmethods', 'new_contactmethods', 10, 1);
 /**
  * Author: Karuto
  *
- * Add new contact fields in the user profiles, remove useless ones.
+ * Append copyright statements to the feed output.
  * @since Twenty Twelve 1.0
  */
 function mangatalk_rss($content) {
   global $wp_query;
   $a = $GLOBALS['wp_query']->query_vars['author_name'];
-  
+
   if (is_feed()) {
     $content = $content . '<br /><br />本文源自 <a href="http://mangatalk.net">漫言 | MangaTalk </a>，采用 <a href="http://creativecommons.org/licenses/by-nc-sa/2.5/deed.zh">BY-NC-SA 中国大陆许可协议</a> 授权，可以自由转载，但转载时请务必以超链接形式标明本文原始出处、作者信息及本声明，并且不得商用。任何违反协议的侵权行为将被追究法律责任。';
   }
