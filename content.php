@@ -94,7 +94,12 @@
 
       <?php endif; ?>
 
-<?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
+      <div class="entry-like">
+        <!-- <span class="like-pretext">喜欢就赞一下</span> -->
+        <div class="like-wrapper">
+          <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
+        </div>
+      </div>
 
       <footer class="entry-copyright">
 
