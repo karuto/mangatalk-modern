@@ -31,7 +31,7 @@
   <!-- TODO: Change to dynamic loading scripts later. Refer to:
   http://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_wrappers -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/mangatalk.js"></script>
 
 
   <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>

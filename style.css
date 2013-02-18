@@ -432,6 +432,10 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   border: 1px solid #ce5333;
 }
 .entry-masthead { /* This is where the feature image lies */
+/*  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;*/
   background-attachment: scroll;
   background-position: center; 
   background-repeat: repeat;
@@ -442,6 +446,13 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   position: relative;
   width: 100%;
 }
+/*.entry-masthead:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}*/
 .layout-regular-post .entry-masthead {
   height: 400px;
 }

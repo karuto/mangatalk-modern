@@ -21,20 +21,30 @@
       <?php while ( have_posts() ) : the_post(); ?>
 
         <?php 
-        /* It loads postitem.php for normal single posts without formats */
-        get_template_part('postitem');  
+        $format = get_post_format();
+        /* We want the loop to just display standard posts 
+         * But problem is it hides it but it's still in the count
+         * TODO: write a custom loop to only count standard posts */
+        // if ( false === $format ) { /* Enable this line if you want standard posts only */
+        if (true ) {
+          /* False return value means this is a standard post */
+          $format = 'standard';
+          
+          /* It loads postitem.php for normal single posts without formats */
+          get_template_part('postitem');  
 
-        if ($counter % 2 == 0) {
-          /* For every 2 post items, we print a div row! */
-          echo '</div><div class="layout-posts-row">';
-        } else {
-          /* And between the 2 post items in a row, we print a div gap! */
-          echo '<div class="main-item-gap"></div>';
+          if ($counter % 2 == 0) {
+            /* For every 2 post items, we print a div row! */
+            echo '</div><div class="layout-posts-row">';
+          } else {
+            /* And between the 2 post items in a row, we print a div gap! */
+            echo '<div class="main-item-gap"></div>';
+          }
+
+          /* Increment counter */ 
+          $counter++; 
+
         }
-
-        /* Increment counter */ 
-        $counter++; 
-
         ?>
 
 

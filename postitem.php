@@ -33,12 +33,7 @@
     <!-- /* Else create a div and set it as background down below */ -->
     <div class="entry-masthead" 
     style="background-image: url('<?php echo $image; ?>')">
-
-<!--       <div class="author-avatar">
-        <?php echo get_avatar( get_the_author_meta( 'user_email' ), 
-        apply_filters( 'twentytwelve_author_bio_avatar_size', 75 ) ); ?>
-      </div> -->
-
+      <a href="<?php the_permalink(); ?>" class="entry-masthead-link">&emsp;</a>        
     </div>
 
 
