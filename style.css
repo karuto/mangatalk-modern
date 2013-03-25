@@ -403,6 +403,9 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .layout-regular-post .main-item-block {
   width: 100%;
 }
+.layout-page-navigation .main-item-block {
+  margin: 0;
+}
 
 
 /* This defines the appearance of main-item; much more universal. */
@@ -419,6 +422,12 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   display: table-cell;
   min-width: 20px;
   width: 20px;
+}
+.nav-previous {
+  float: left;
+}
+.nav-next {
+  float: right;
 }
 
 
