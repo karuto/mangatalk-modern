@@ -653,8 +653,23 @@ img.avatar {
 /*  background-image: url('http://i.imgur.com/FV2MV.png');
   background-position: center;*/
 }
+.RandomPostWidget .widget-title {
+  display: none;
+}
+.widget .widget-post-list {
+  margin: 0px;
+}
 .widget > ul {
   margin: 20px;
+}
+.widget-post-list .entry-header {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.widget-post-list .entry-header:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.widget-post-list .entry-meta {
+  color: #666;
 }
 
 
