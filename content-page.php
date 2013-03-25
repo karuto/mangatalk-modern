@@ -8,7 +8,7 @@
  */
 ?>
 
-  <div class="layout-regular-post">
+  <div class="layout-feature-post">
     <article id="post-<?php the_ID(); ?>" 
       <?php post_class('main-item-block main-item-style'); ?>>
       
@@ -25,5 +25,5 @@
       </footer><!-- .entry-meta -->
 
     </article><!-- #post -->
-  </div><!-- .layout-regular-post -->
+  </div><!-- .layout-featured-post -->
 
