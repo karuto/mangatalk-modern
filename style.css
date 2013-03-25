@@ -517,6 +517,10 @@ h1.entry-title {
   margin-top: 40px;
   padding: 20px;
 }
+.entry-copyright:hover,
+.author-meta:hover {
+  color: #444;
+}
 .layout-feature-post .author-info-table,
 .layout-feature-post .entry-copyright {
   padding: 20px 50px;
@@ -647,6 +651,7 @@ img.avatar {
   background-color: #F5F5F5;
   border-bottom: 1px solid #d0d0d0;
   color: #666;
+  font-size: 12px;
   letter-spacing: 0.1em;
   padding: 5px 20px;
   text-transform: uppercase;
@@ -654,7 +659,7 @@ img.avatar {
   background-position: center;*/
 }
 .RandomPostWidget .widget-title {
-  display: none;
+  /*display: none;*/
 }
 .widget .widget-post-list {
   margin: 0px;
@@ -671,6 +676,40 @@ img.avatar {
 .widget-post-list .entry-meta {
   color: #666;
 }
+
+
+.social-unit {
+  border-bottom: 1px dashed #EDE8EA;
+  display: block;
+  margin: 0 0 10px;
+  overflow: hidden; /* KM: Fix IE Collapse */
+  padding: 0 0 10px;
+}
+.social-unit:last-child {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.social-img img {
+  float: left;
+  margin: 2px 0 0;
+  width: 40px;
+}
+.social-title {
+  display: block;
+  font-size: 12px;
+  margin-left: 55px;
+}
+.social-note {
+  display: block;
+  font: 12px/160% 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font-weight: normal;
+  color: #666;
+}
+.social-unit a:hover,{
+  color: #000;
+}
+
 
 
 /* Footer related */
@@ -765,6 +804,7 @@ img.avatar {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 
 
 

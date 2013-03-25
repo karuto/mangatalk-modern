@@ -67,6 +67,7 @@
         <li class="external-item"><a href="#">搜索</a></li>
         <li class="external-item"><a href="http://weibo.com/mangatalk">微博</a></li>
         <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">订阅</a></li>
+          <?php get_search_form( $echo ); ?>
       </nav><!-- #site-navigation -->
 
 

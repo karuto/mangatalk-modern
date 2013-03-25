@@ -106,7 +106,7 @@
         <h3>版权声明：本文采用<a href="http://creativecommons.org/licenses/by-nc-sa/2.5/deed.zh"> 
         BY-NC-SA 中国大陆许可协议</a> 授权，可以自由转载，但转载时请务必
         <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '《%s》的原文链接', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>"
-         rel="bookmark"><strong>以超链接形式</strong>标明本文原始出处</a>、
+         rel="bookmark"><strong>以超链接形式</strong> 标明本文原始出处</a>、
          <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
           作者信息</a>及本声明，并且不得商用。任何违反协议的侵权行为将被追究法律责任。</h3>
         
