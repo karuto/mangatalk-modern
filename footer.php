@@ -21,7 +21,7 @@
 
     <footer id="colophon" class="main-footer" role="contentinfo">
       <figure class="footer-plug">
-        Have something unique to share? We want to publish it.
+        Have something unique to share? We'd love to publish it.
       </figure><!-- .footer-info -->
     </footer><!-- #colophon -->
 

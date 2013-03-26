@@ -32,7 +32,18 @@
   http://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_wrappers -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.9.1.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/mangatalk.js"></script>
+  <!-- Flexslider support, can be used on both list pages and single post pages -->
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.flexslider.js"></script>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/flexslider.css" type="text/css">
 
+  <!-- Activate the flex slider markup -->
+  <script type="text/javascript" charset="utf-8">
+    // Including jQuery in WordPress (The Right Way)
+    var $j = jQuery.noConflict();
+    $j(window).load(function() {
+      $j('.flexslider').flexslider();
+    });
+  </script>
 
   <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
   <!--[if lt IE 9]>

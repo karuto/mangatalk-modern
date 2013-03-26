@@ -203,8 +203,6 @@ a:hover {
 }
 
 
-
-
 /* Layout rules */
 /* Notes
 --------------------------------------------------------------
@@ -760,6 +758,7 @@ img.avatar {
 .footer-plug {  
   background-color: #fff;
   font: 34px/175% Georgia, serif;
+  /*font-family: "Microsoft Yahei","冬青黑体简体中文 w3","黑体", serif;*/
   font-style: italic;
   padding: 40px;
   text-align: center;
