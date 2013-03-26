@@ -424,16 +424,16 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   min-width: 20px;
   width: 20px;
 }
-.nav-item {
+.layout-page-navigation .nav-item {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
-.nav-previous {
+.layout-page-navigation .nav-previous {
   float: left;
   text-align: left;
 }
-.nav-next {
+.layout-page-navigation .nav-next {
   float: right;
   text-align: right;
 }
@@ -540,7 +540,7 @@ h1.entry-title {
 }
 .layout-feature-post .author-info-table,
 .layout-feature-post .entry-copyright {
-  padding: 20px 50px;
+  /*padding: 20px 50px;*/
 }
 .author-info-table {
   background-color: #F0F0F0;
@@ -655,8 +655,31 @@ img.avatar {
   height: auto;
   max-width: 100%;
 }
-
-
+/* Entry content related legacy support */
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.625em;
+  margin-bottom: 20px;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.625em;
+  margin-bottom: 20px;
+}
+.aligncenter {
+  text-align: center;
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.layout-feature-post .normal {
+  padding:0 40px;
+}
 
 
 /* Widget related */
