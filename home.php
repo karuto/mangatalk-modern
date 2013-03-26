@@ -23,7 +23,7 @@ get_header(); ?>
   <div class="flexslider">
     <ul class="slides">
       <li>
-        <img src="http://localhost/2013/wp-content/uploads/2013/03/7O6t0-1024x346.png" />
+        <img src="http://localhost/2013/wp-content/uploads/2011/02/R1-08398-0001x-1024x691.jpg" />
         <p class="flex-caption">This image is wrapped in a link!</p>
       </li>
       <li>
