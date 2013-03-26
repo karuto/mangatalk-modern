@@ -14,14 +14,17 @@ $j(function(){
   });
 });
 
+// Make the sidebar sticky once user scrolls past the bottom of sidebar
 $j(document).ready(function() {
+	// Retrieve divs with css selectors
 	var stickyWidget = $j(".RandomPostWidget");
 	var sidebar = $j("#secondary");
+	// Get the bottom coordination of sidebar
 	var pos = sidebar.position().top + sidebar.height();
-	alert(pos);                    
+	// alert(pos);                    
+
 	$j(window).scroll(function() {
     var windowpos = $j(window).scrollTop();
-    // s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
     if (windowpos >= pos) {
       stickyWidget.addClass("stick");
     } else {

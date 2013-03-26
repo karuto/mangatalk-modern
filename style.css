@@ -682,7 +682,8 @@ img.avatar {
 }
 .stick {
   position: fixed;
-  top: 50px;
+  top: 70px;
+  width: 396px; /* KM TODO: Temporary imperfect solution, change later */
 }
 
 /* Widget related */
