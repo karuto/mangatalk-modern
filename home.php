@@ -20,14 +20,14 @@ get_header(); ?>
     <div id="content" class="layout-content-wrap" role="main">
  
 
-  <div class="flexslider">
+  <div id="global-hero-slider" class="flexslider">
     <ul class="slides">
       <li>
-        <img src="http://localhost/2013/wp-content/uploads/2011/02/R1-08398-0001x-1024x691.jpg" />
+        <img style="height:250px;" src="http://localhost/2013/wp-content/uploads/2011/02/R1-08398-0001x-1024x691.jpg" />
         <p class="flex-caption">This image is wrapped in a link!</p>
       </li>
       <li>
-        <img src="http://i.imgur.com/FV2MV.png" />
+        <img style="height:250px;" src="http://i.imgur.com/FV2MV.png" />
         <p class="flex-caption">This image is wrapped in a link!</p>
       </li>
     </ul>

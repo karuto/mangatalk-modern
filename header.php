@@ -41,6 +41,13 @@
     // Including jQuery in WordPress (The Right Way)
     var $j = jQuery.noConflict();
     $j(window).load(function() {
+      $j('#global-hero-slider').flexslider({
+        animation: 'fade',
+        animationLoop: true,
+        pauseOnAction: true,
+        pauseOnHover: true,
+        controlNav: false
+      });
       $j('.flexslider').flexslider();
     });
   </script>
