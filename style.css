@@ -680,7 +680,10 @@ img.avatar {
 .layout-feature-post .normal {
   padding:0 40px;
 }
-
+.stick {
+  position: fixed;
+  top: 50px;
+}
 
 /* Widget related */
 .widget-area .widget {

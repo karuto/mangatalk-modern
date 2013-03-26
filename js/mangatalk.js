@@ -12,6 +12,20 @@ $j(function(){
     // window.location = "http://g.cn"; 
     return false;
   });
+});
 
-
+$j(document).ready(function() {
+	var stickyWidget = $j(".RandomPostWidget");
+	var sidebar = $j("#secondary");
+	var pos = sidebar.position().top + sidebar.height();
+	alert(pos);                    
+	$j(window).scroll(function() {
+    var windowpos = $j(window).scrollTop();
+    // s.html("Distance from top:" + pos.top + "<br />Scroll position: " + windowpos);
+    if (windowpos >= pos) {
+      stickyWidget.addClass("stick");
+    } else {
+      stickyWidget.removeClass("stick"); 
+    }
+	});
 });
