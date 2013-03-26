@@ -251,17 +251,24 @@ function twentytwelve_content_nav( $html_id ) {
       <?php echo paginate_links( $args ) ?>
       <!-- <h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3> -->
       <div class="layout-posts-row">
+
+      <?php if (!is_null(get_next_posts_link())) : ?>
         <div class="main-item-block main-item-style post-item nav-item nav-previous">
           <div class="entry-summary">
             <?php next_posts_link('« 更旧的文章 | OLDER', 0); ?>
           </div>
         </div>
-        <div class="main-item-gap">
+      <?php endif; ?>
+      <div class="main-item-gap"></div>
+        
+      <?php if (!is_null(get_previous_posts_link())) : ?>
         <div class="main-item-block main-item-style post-item nav-item nav-next">
           <div class="entry-summary">
             <?php previous_posts_link('NEWER | 更新的文章 »', 0); ?>
           </div>          
         </div>
+      <?php endif; ?>
+
       </div>
     </nav><!-- #<?php echo $html_id; ?> .page-navigation -->
   <?php endif;
