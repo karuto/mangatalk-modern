@@ -34,7 +34,8 @@ get_header(); ?>
           printf( __( 'Yearly Archives: %s', 'twentytwelve' ), '<span>' . 
             get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwelve' ) ) . '</span>' );
         else :
-          _e( 'Archives', 'twentytwelve' );
+          // _e( 'Archives', 'twentytwelve' );
+          printf('文章合集');
         endif;
       ?></h1>
     </header><!-- .sub-header -->
