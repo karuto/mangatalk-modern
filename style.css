@@ -350,7 +350,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
 .site-title {
   font-size: 21px;
   font-weight: 100;
-  line-height: 45px;  /* Use this to control height of header */
+  /*line-height: 45px;*/  /* Use this to control height of header */
   /*padding: 0 20px;  */
   text-transform: uppercase;
 }
@@ -423,7 +423,7 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   width: 20px;
 }
 .layout-page-navigation .nav-item {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
@@ -739,12 +739,11 @@ img.avatar {
 }
 .social-title {
   display: block;
-  font-size: 12px;
   margin-left: 55px;
 }
 .social-note {
   display: block;
-  font: 12px/160% 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font: 13px/160% 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-weight: normal;
   color: #666;
 }
@@ -863,8 +862,9 @@ img.avatar {
   zoom: 1; 
 }
 .touch-logo {
-  padding: 0 20px;
-  width: 358px; /* 1+20+358+20+1 = 400px */
+  height: 46px;
+  /*padding: 0 20px;*/
+  /*width: 358px;*/ /* 1+20+358+20+1 = 400px */
 }
 .touch-logo a:active,
 .touch-logo a:hover { /* Only targets top logo */
