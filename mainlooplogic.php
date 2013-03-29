@@ -58,8 +58,21 @@
         */
         if ($counter & 1) {
           /* Print an extra post-item manually to fill the void of the row */
-          echo '<article class="main-item-block main-item-style">';
-          echo '</article>';
+          ?>
+
+          <article class="main-item-block main-item-style empty-item">
+            <a href="#">
+              <img src="/sg/t.gif" alt="" style="width:1px; height:10em; vertical-align:middle" />
+              <h3 class="entry-summary">
+                想让自己的文字出现在这里？<br>
+                想看到更多有趣的内容？<br>
+                请大胆地投稿给我们吧！<br>
+              </h3>
+            </a>
+            
+          </article>
+
+          <?php 
         }
 
         $counter = 1; /* Make sure counter is reset */
