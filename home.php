@@ -20,7 +20,8 @@ get_header(); ?>
     <div id="content" class="layout-content-wrap" role="main">
  
 
-  <div id="global-hero-slider" class="flexslider">
+<!-- TODO: Find a way to make caption elegant, until then I'll freeze the development on this. -->
+<!--   <div id="global-hero-slider" class="flexslider">
     <ul class="slides">
       <li>
         <img style="height:250px;" src="http://localhost/2013/wp-content/uploads/2011/02/R1-08398-0001x-1024x691.jpg" />
@@ -28,10 +29,10 @@ get_header(); ?>
       </li>
       <li>
         <img style="height:250px;" src="http://i.imgur.com/FV2MV.png" />
-        <p class="flex-caption">This image is wrapped in a link!</p>
+        <p class="flex-caption">This image is wrapped in a link 2!</p>
       </li>
     </ul>
-  </div>
+  </div> -->
   
 <!--     <div class="layout-hero main-item-style">
     </div> -->

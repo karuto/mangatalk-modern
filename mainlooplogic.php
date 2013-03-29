@@ -58,6 +58,7 @@
         */
         if ($counter & 1) {
           /* Print an extra post-item manually to fill the void of the row */
+          $empty_item_appear = true; /* Detector boolean, will use later */
           $rand_icon = rand(0, 1); /* Randomize the encourage icon, just for fun */
           ?>
 
