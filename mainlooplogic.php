@@ -64,7 +64,8 @@
           <article class="main-item-block main-item-style empty-item">
             <a href="#">
               <div class="empty-masthead">
-                <?php if ($rand_icon == 0) : ?>
+                
+                <?php if ($rand_icon == 1) : ?>
                   <img src="http://i.imgur.com/ydzehKy.png" class="encourage-icon">
                 <?php else : ?>
                   <img src="http://i.imgur.com/lIq3Nez.png" class="encourage-icon">
