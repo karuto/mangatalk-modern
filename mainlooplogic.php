@@ -58,12 +58,17 @@
         */
         if ($counter & 1) {
           /* Print an extra post-item manually to fill the void of the row */
+          $rand_icon = rand(0, 1); /* Randomize the encourage icon, just for fun */
           ?>
 
           <article class="main-item-block main-item-style empty-item">
             <a href="#">
               <div class="empty-masthead">
-                <img src="http://i.imgur.com/ydzehKy.png" class="encourage-icon">
+                <?php if ($rand_icon == 0) : ?>
+                  <img src="http://i.imgur.com/ydzehKy.png" class="encourage-icon">
+                <?php else : ?>
+                  <img src="http://i.imgur.com/lIq3Nez.png" class="encourage-icon">
+                <?php endif; ?>
               </div>
               <!-- <img src="/sg/t.gif" alt="" style="width:1px; height:10em; vertical-align:middle;" /> -->
               <h3 class="entry-summary">
