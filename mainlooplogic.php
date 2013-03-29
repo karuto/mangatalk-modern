@@ -62,14 +62,17 @@
 
           <article class="main-item-block main-item-style empty-item">
             <a href="#">
-              <img src="/sg/t.gif" alt="" style="width:1px; height:10em; vertical-align:middle" />
+              <div class="empty-masthead">
+                <img src="http://i.imgur.com/ydzehKy.png" class="encourage-icon">
+              </div>
+              <!-- <img src="/sg/t.gif" alt="" style="width:1px; height:10em; vertical-align:middle;" /> -->
               <h3 class="entry-summary">
                 想让自己的文字出现在这里？<br>
                 想看到更多有趣的内容？<br>
                 请大胆地投稿给我们吧！<br>
               </h3>
             </a>
-            
+
           </article>
 
           <?php 

@@ -416,7 +416,8 @@ box-shadow:         0px -5px 15px rgba(50, 50, 50, 0.1);
   color: #000;
 }
 .empty-item {
-  background-image: url('http://i.imgur.com/FV2MV.png');
+  background-image: url('http://i.imgur.com/N6Yf32F.png');
+  background-size: cover;
 }
 .main-item-gap {
   /*background-color: black;*/
@@ -502,18 +503,26 @@ h1.entry-title {
   padding: 20px;  
   text-shadow: 0 1px 1px Darkred;
 }
+.empty-masthead {
+  height: 250px;
+  text-align: center;
+}
+.encourage-icon {
+  margin: 35px auto; /* 175+35+35 = 245 */
+}
 .entry-summary {
   margin: 20px;
 }
-h3.entry-summary {
+.empty-item .entry-summary {
   color: #ce5333;
   font-family: "Microsoft Yahei","冬青黑体简体中文 w3","黑体", serif;
-  font-size: 24px;
+  font-size: 21px;
+  font-weight: bold;
   /*font-weight: 900;*/
   line-height: 42px;
-  padding: 20px;
+  margin-top: 10px;
   text-align: center;
-  /*text-shadow: 0 1px 1px Darkred;*/
+  text-shadow: 0px 1px 1px #FF9999;
   vertical-align: middle;
 }
 .post-item .entry-readmore {
