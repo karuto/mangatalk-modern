@@ -641,7 +641,7 @@ img.avatar {
   margin: 30px; 
 }
 .layout-feature-post .entry-content {
-  margin: 30px 50px;
+  margin: 30px 0;
 }
 .format-image .entry-content {
   margin: 0 0 30px;
@@ -651,7 +651,7 @@ img.avatar {
   margin-bottom: 21px;
   text-shadow: 0 1px 0 #F9F6ED, 0 1px 0 rgba(0, 0, 0, .15);
 }
-.entry-content p:last-child {
+.entry-content > p:last-child {
   /*background-color: teal;*/
   margin-bottom: 50px; /* Huge margin for last one! */
 }
@@ -698,14 +698,36 @@ img.avatar {
   margin-right: auto;
   margin-bottom: 20px;
 }
-.layout-feature-post .normal {
-  /*padding:0 40px;*/
+/* Content styling */
+.layout-feature-post .normal { 
+  /* This enforces authors to manually apply this CSS class for displaying
+   content properly in featured posts, which is not an optimal solution. 
+   But hey, what gives, right? */
+  padding: 0 50px;
+}
+.layout-feature-post blockquote .big {
+  color: #ce5333;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 160%;
+}
+.semi-focus {
+  font-size: 12px;
+}
+.semi-focus, .less-focus {
+  color: #777;
+  font-weight: 300;
 }
 .stick {
   position: fixed;
   top: 70px;
   width: 396px; /* KM TODO: Temporary imperfect solution, change later */
 }
+
+
+
+
 
 /* Widget related */
 .widget-area .widget {
