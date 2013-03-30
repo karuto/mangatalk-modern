@@ -729,7 +729,9 @@ img.avatar {
   top: 70px;
   width: 396px; /* KM TODO: Temporary imperfect solution, change later */
 }
-
+#wpcc_widget_inner {
+  display: inline;
+}
 
 
 
