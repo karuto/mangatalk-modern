@@ -19,6 +19,7 @@
 #searchform-text {
   border: 0px;
   border-bottom: 1px solid #d0d0d0;
+  width: 100px;
 }
 #searchform-submit {
   background: transparent url(<?php echo get_template_directory_uri(); ?>/searchicon.png) no-repeat;
