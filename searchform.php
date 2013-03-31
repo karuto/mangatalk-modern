@@ -22,11 +22,12 @@
 }
 #searchform-submit {
   background: transparent url(<?php echo get_template_directory_uri(); ?>/searchicon.png) no-repeat;
+  background-position: center; 
   border: 0;
-  height: 30px;
+  height: 20px;
   padding: 0px;
   text-indent: -9999px;
-  width: 30px;
+  width: 20px;
 }
 </style>
 
