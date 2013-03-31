@@ -84,9 +84,9 @@
       <nav class="external-nav" role="navigation">
         <li class="external-item"><?php get_search_form(); ?></li>
         <li class="external-item" id="searchform-trigger"><a>搜索</a></li>
-        <li class="external-item"><a href="http://weibo.com/mangatalk">微博</a></li>
-        <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">订阅</a></li>
-        <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">给我们留言建议</a></li>          
+        <li class="external-item"><a href="http://weibo.com/mangatalk">官方微博</a></li>
+        <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">订阅更新</a></li>
+        <li class="external-item"><a href="/feedback/">留言建议</a></li>          
       </nav><!-- #site-navigation -->
 
     </header><!-- #masthead -->

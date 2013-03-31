@@ -63,7 +63,7 @@
           ?>
 
           <article class="main-item-block main-item-style empty-item">
-            <a href="#">
+            <a href="/about/#about-contact">
               <div class="empty-masthead">
                 
                 <?php if ($rand_icon == 1) : ?>

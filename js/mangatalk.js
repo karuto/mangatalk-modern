@@ -2,7 +2,7 @@
 // http://digwp.com/2009/06/including-jquery-in-wordpress-the-right-way/
 var $j = jQuery.noConflict();
 
-$j(function(){
+$j(function(){ /* Note to self: left is the same as $j(document).ready(function(){}); */
 
   /* Toggle triggering search form */
 
