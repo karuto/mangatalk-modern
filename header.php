@@ -82,23 +82,12 @@
 
 
       <nav class="external-nav" role="navigation">
+        <li class="external-item"><?php get_search_form(); ?></li>
         <li class="external-item"><a href="#">搜索</a></li>
         <li class="external-item"><a href="http://weibo.com/mangatalk">微博</a></li>
         <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">订阅</a></li>
-        <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">给我们留言建议</a></li>
-          <?php get_search_form( $echo ); ?>
+        <li class="external-item"><a href="<?php bloginfo('rss2_url'); ?>">给我们留言建议</a></li>          
       </nav><!-- #site-navigation -->
-
-
-<!--       <?php $header_image = get_header_image();
-      if ( ! empty( $header_image ) ) : ?>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          <img src="<?php echo esc_url( $header_image ); ?>" class="header-image" 
-          width="<?php echo get_custom_header()->width; ?>" 
-          height="<?php echo get_custom_header()->height; ?>" alt="" />
-        </a>
-      <?php endif; ?> -->
-
 
     </header><!-- #masthead -->
 
