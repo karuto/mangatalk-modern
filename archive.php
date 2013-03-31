@@ -19,8 +19,6 @@
 
 get_header(); ?>
 
-<!-- TODO: FIX THE TOP EMTPY MARGIN BUG!!! -->
-
   <div class="layout-subheader-wrap">
     <header class="sub-header" roll="banner">
 
