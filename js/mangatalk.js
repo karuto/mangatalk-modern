@@ -4,6 +4,27 @@ var $j = jQuery.noConflict();
 
 $j(function(){
 
+  /* Toggle triggering search form */
+
+  $j("#searchform").hide(); // Hide the searchform at first
+  $j("#searchform-trigger").click(function(){
+    // Once clicked, toggle the search form
+    $j("#searchform").toggle();
+    // Once clicked, also change the content just for messing with people
+    $j("#searchform-trigger").html("<a>&#9733;</a>");
+  });
+
+  /* Making the entire div clickable, by searching the inner hidden link. */
+  $j(".entry-masthead").click(function(){
+    // var v = $(this).find("a").attr("href");
+    // alert(v);
+    window.location = $j(this).find("a").attr("href"); 
+    // window.location = "http://g.cn"; 
+    return false;
+  });
+  
+
+
   /* Make the sidebar sticky once user scrolls past the bottom of sidebar */
 
   // Retrieve divs with css selectors
