@@ -18,7 +18,7 @@
     <?php 
     if ($image == '') {
       /* If this post does NOT have a featured image, we set one */
-      $image = "http://www.wordofthenerdonline.com/wp-content/uploads/2012/03/saga-2-1311467620.jpg"; } ?>
+      $image = "http://i.imgur.com/zk0ecX8.jpg"; } ?>
 
     <!-- /* Else create a div and set it as background down below */ -->
     <div class="entry-masthead" 

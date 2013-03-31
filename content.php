@@ -40,7 +40,7 @@
 
       if ($image[0] == '') {
         /* If this post does NOT have a featured image, we set one */
-        $image[0] = "http://gnnaz.com/wp-content/uploads/2012/12/Saga-e1357012394969.jpg"; } 
+        $image[0] = "http://i.imgur.com/zk0ecX8.jpg"; } 
 
         /* Else create a div and set it as background down below */?>
       
