@@ -34,16 +34,49 @@ get_header(); ?>
 
       <?php else : ?>
 
-        <article id="post-0" class="post no-results not-found">
-          <header class="entry-header">
-            <h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
-          </header>
+      <div class="layout-posts-section" style="margin-top:20px;">
+        <div class="layout-posts-row">
 
-          <div class="entry-content">
-            <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
-            <?php get_search_form(); ?>
-          </div><!-- .entry-content -->
-        </article><!-- #post-0 -->
+          <article class="main-item-block main-item-style empty-item">
+              <div class="empty-masthead">
+                
+                <?php if ($rand_icon == 1) : ?>
+                  <img src="http://i.imgur.com/ydzehKy.png" class="encourage-icon">
+                <?php else : ?>
+                  <img src="http://i.imgur.com/lIq3Nez.png" class="encourage-icon">
+                <?php endif; ?>
+              </div>
+              <!-- <img src="/sg/t.gif" alt="" style="width:1px; height:10em; vertical-align:middle;" /> -->
+              <h3 class="entry-summary">
+                很抱歉没有您想要查找的内容。<br>
+                您可以尝试重新搜索，或<a href="<?php echo esc_url( home_url( '/' ) ); ?>">返回主页。</a><br>
+                <?php get_search_form(); ?><br>
+              </h3>
+          </article>
+
+          <div class="main-item-gap"></div>
+
+          <article class="main-item-block main-item-style empty-item">
+            <a href="/about/#about-contact">
+              <div class="empty-masthead">
+                
+                <?php if ($rand_icon == 1) : ?>
+                  <img src="http://i.imgur.com/ydzehKy.png" class="encourage-icon">
+                <?php else : ?>
+                  <img src="http://i.imgur.com/lIq3Nez.png" class="encourage-icon">
+                <?php endif; ?>
+              </div>
+              <!-- <img src="/sg/t.gif" alt="" style="width:1px; height:10em; vertical-align:middle;" /> -->
+              <h3 class="entry-summary">
+                想让自己的文字出现在这里？<br>
+                想看到更多有趣的内容？<br>
+                请大胆地投稿给我们吧！<br>
+              </h3>
+            </a>
+          </article>
+
+        </div>
+      </div><!-- .layout-posts-section -->
 
       <?php endif; ?>
 
