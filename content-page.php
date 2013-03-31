@@ -16,7 +16,7 @@
         <h1 class="entry-title"><?php the_title(); ?></h1>
       </header>
 
-      <div class="entry-content">
+      <div id="page-content" class="entry-content">
         <?php the_content(); ?>
         <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
       </div><!-- .entry-content -->

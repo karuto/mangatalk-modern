@@ -644,6 +644,9 @@ img.avatar {
 .entry-content {
   margin: 30px; 
 }
+#page-content {
+  margin: 30px;
+}
 .layout-feature-post .entry-content {
   margin: 30px 0;
 }
@@ -731,7 +734,12 @@ img.avatar {
 #wpcc_widget_inner {
   display: inline;
 }
-
+#disqus_thread { /* Widget support */
+ background-color: #fff;
+ border: 1px solid #d0d0d0;
+ margin: 20px 0 40px;   
+ padding: 30px 20px;
+}
 
 
 
