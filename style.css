@@ -281,9 +281,7 @@ a:hover {
   margin: 20px 0;
   width: 100%;
 }
-.layout-posts-section > .layout-posts-row:last-child {
-  margin: 0;
-}
+
 .layout-page-navigation .layout-posts-row {
   margin: 0;
 }
