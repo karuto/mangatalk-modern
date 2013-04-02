@@ -99,7 +99,7 @@
 
   
   <?php 
-    if ( is_page() || is_post_type_archive() || is_archive() || is_search() ) {
+    if ( is_page() || is_post_type_archive() || is_archive() || is_search() || is_404() ) {
       // If it's a type of webpage (see above) that needs a subheader
       // We will define the max-width framework after the subheader, thus blank
       $has_subheader = true;
