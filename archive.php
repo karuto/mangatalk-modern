@@ -34,6 +34,14 @@ get_header(); ?>
         elseif ( is_tag() ):
           printf('文章合集：'); 
           $current_tag = single_tag_title("", true); 
+        elseif ( is_author() ):
+          printf('文章合集：'); 
+          if(get_query_var('author_name')) :
+            $curauth = get_user_by('slug', get_query_var('author_name'));
+          else :
+            $curauth = get_userdata(get_query_var('author'));
+          endif;
+          echo $curauth->nickname;
         else :
           printf('文章合集'); 
         endif;
