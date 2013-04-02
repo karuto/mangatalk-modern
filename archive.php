@@ -41,7 +41,7 @@ get_header(); ?>
           else :
             $curauth = get_userdata(get_query_var('author'));
           endif;
-          echo $curauth->nickname;
+          echo $curauth->display_name;
         else :
           printf('文章合集'); 
         endif;
