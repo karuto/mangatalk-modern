@@ -4,7 +4,10 @@ var $j = jQuery.noConflict();
 
 $j(function(){ /* Note to self: left is the same as $j(document).ready(function(){}); */
 
-  /* Toggle triggering search form */
+  /* @package MangaTalk
+   * Author: Karuto
+   * Toggle triggering search form
+   */
 
   $j("#searchform").hide(); // Hide the searchform at first
   $j("#searchform-trigger").click(function(){
@@ -25,7 +28,20 @@ $j(function(){ /* Note to self: left is the same as $j(document).ready(function(
   
 
 
-  /* Make the sidebar sticky once user scrolls past the bottom of sidebar */
+  /* @package MangaTalk
+   * Author: Karuto
+   * Make the Image Post widget the same height as the first main-item-block
+   */
+
+  var itemHeight = $j(".main-item-block:first-child").height();
+  alert(itemHeight);
+
+  
+
+  /* @package MangaTalk
+   * Author: Karuto
+   * Make the Random Article widget sticky once user scrolls past the bottom of sidebar
+   */
 
   // Retrieve divs with css selectors
   var stickyWidget = $j(".RandomPostWidget");
@@ -53,6 +69,6 @@ $j(function(){ /* Note to self: left is the same as $j(document).ready(function(
 });
 
 // Make the sidebar sticky once user scrolls past the bottom of sidebar
-$j(document).ready(function() {
+// $j(document).ready(function() {
 
-});
+// });
