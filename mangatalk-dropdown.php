@@ -8,7 +8,7 @@
         </a>
       </h1>
 		<ul class="drop-list">
-      <li class="drop-item"><a href="/category/uncategorized/">文集 Everything</a></li>
+      <li class="drop-item"><a href="/category/article/">文集 Everything</a></li>
       <li class="drop-item"><a href="/topic/featured/">专题 Features</a></li>
       <li class="drop-item"><a href="/topic/love/">漫评 Reviews</a></li>
       <li class="drop-item"><a href="/topic/interview/">访谈 Talks</a></li>
