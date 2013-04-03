@@ -31,6 +31,9 @@ get_header(); ?>
         elseif ( is_year() ) :
           printf( __( 'Yearly Archives: %s', 'twentytwelve' ), '<span>' . 
             get_the_date( _x( 'Y', 'yearly archives date format', 'twentytwelve' ) ) . '</span>' );
+        elseif ( is_category() ):
+          printf('文章合集：'); 
+          $current_tag = single_tag_title("", true); 
         elseif ( is_tag() ):
           printf('文章合集：'); 
           $current_tag = single_tag_title("", true); 

@@ -788,7 +788,7 @@ img.avatar {
 }
 
 /* TODO: This is a temp solution. Use different sidebar for different pages! */
-.single-format-standard .ImagePostWidget {
+.single-post .ImagePostWidget {
   display: none;
 }
 .ImagePostWidget .widget-title {
