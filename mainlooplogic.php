@@ -9,6 +9,19 @@
  */
 ?>
 
+    <script type="text/javascript" charset="utf-8">
+      /* @package MangaTalk
+       * Author: Karuto
+       * Make the Image Post widget the same height as the first main-item-block
+       */
+      $j(function(){
+        var itemHeight = $j(".main-item-block:first-child").height();
+        // alert(itemHeight);
+        var widgetMastheadHeight = itemHeight - 90;
+        $j(".ImagePostWidget .entry-header").css("margin-top", widgetMastheadHeight);
+      });
+    </script>
+
 
     <?php if ( have_posts() ) : /* THE MAIN LOOP OF WORDPRESS */ ?>
       <div class="layout-posts-section">
