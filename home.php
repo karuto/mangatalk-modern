@@ -40,6 +40,19 @@ get_header(); ?>
     <!-- Note: I wrote a plugin for excluding "ComicBits" category from main loop.
     Please refer to modify-main-loop-by-v.php in wp-content/plugins directory. -->
 
+  <script type="text/javascript" charset="utf-8">
+    /* @package MangaTalk
+     * Author: Karuto
+     * Make the Image Post widget the same height as the first main-item-block
+     */
+    $j(function(){
+      var itemHeight = $j(".main-item-block:first-child").height();
+      // alert(itemHeight);
+      var widgetMastheadHeight = itemHeight - 90;
+      $j(".ImagePostWidget .entry-header").css("margin-top", widgetMastheadHeight);
+    });
+  </script>
+
     <?php get_template_part('mainlooplogic'); ?>
 
     </div><!-- .layout-content-wrap -->
