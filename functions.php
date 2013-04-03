@@ -641,6 +641,52 @@ function attachment_image_link_remove_filter( $content ) {
     return $content;
 }
 
+/**
+ * Author: Karuto
+ *
+ * The following function removes inline style width in WP 3.4 and up.
+ * Note: this only works if it's an attachment link (not any other links),
+ * http://wp-snippets.com/remove-wp-caption-inline-style-width-in-wordpress-3-4-and-up/
+ * @since Twenty Twelve 1.0
+ */
+add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
+add_shortcode('caption', 'fixed_img_caption_shortcode');
+function fixed_img_caption_shortcode($attr, $content = null) {
+  // New-style shortcode with the caption inside the shortcode with the link and image tags.
+  if ( ! isset( $attr['caption'] ) ) {
+    if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
+      $content = $matches[1];
+      $attr['caption'] = trim( $matches[2] );
+    }
+  }
+
+  // Allow plugins/themes to override the default caption template.
+  $output = apply_filters('img_caption_shortcode', '', $attr, $content);
+  if ( $output != '' )
+    return $output;
+
+  extract(shortcode_atts(array(
+    'id'  => '',
+    'align' => 'alignnone',
+    'width' => '',
+    'caption' => ''
+  ), $attr));
+
+  // Manually set width to be 100% for captioned images
+  $width = "100%";
+
+  if ( 1 > (int) $width || empty($caption) )
+    return $content;
+
+  if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+
+  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: ' . $width . '">'
+  . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+}
+
+
+
+
 
 /**
  * Author: Karuto
