@@ -648,9 +648,6 @@ img.avatar {
 .layout-feature-post .entry-content {
   margin: 30px 0;
 }
-.format-image .entry-content {
-  margin: 0 0 30px;
-}
 .entry-content h2,
 .entry-content p {
   margin-bottom: 21px;
@@ -675,6 +672,19 @@ img.avatar {
   padding: 0 0 0 20px;
 }
 /* Image post format related support */
+
+.format-image .entry-content {
+  text-align: center;
+  margin: 0 0 30px;
+}
+.format-image .entry-content p {
+  margin: 20px 30px;
+}
+
+.format-image .entry-content blockquote {
+  border: 0;
+  margin: 0 30px;
+}
 .format-image .wp-caption {
   width: 100%;
 }
