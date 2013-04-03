@@ -771,6 +771,9 @@ img.avatar {
 .RandomPostWidget .widget-title {
   /*display: none;*/
 }
+.ImagePostWidget .widget-title {
+  display: none;
+}
 .widget .widget-post-list {
   margin: 0px;
 }
@@ -785,6 +788,9 @@ img.avatar {
 }
 .widget-post-list .entry-meta {
   color: #666;
+}
+.ImagePostWidget .entry-header {
+  margin-top: 420px; 
 }
 
 
