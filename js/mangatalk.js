@@ -35,8 +35,9 @@ $j(function(){ /* Note to self: left is the same as $j(document).ready(function(
 
   var itemHeight = $j(".main-item-block:first-child").height();
   alert(itemHeight);
+  var widgetMastheadHeight = itemHeight - 90;
+  $j(".ImagePostWidget .entry-header").css("margin-top", widgetMastheadHeight);
 
-  
 
   /* @package MangaTalk
    * Author: Karuto
