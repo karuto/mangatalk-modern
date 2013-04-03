@@ -668,14 +668,15 @@ img.avatar {
   padding: 5px 0;
   text-shadow: 0px 1px 1px Darkred;
 }
-.format-image .wp-caption {
-  width: 100%;
-}
 .entry-content blockquote {
   border-left: 5px solid #ce5333;
   color: darkRed;
   margin: 2em 0;
   padding: 0 0 0 20px;
+}
+/* Image post format related support */
+.format-image .wp-caption {
+  width: 100%;
 }
 .post img {
   height: auto;
@@ -684,9 +685,13 @@ img.avatar {
 .wp-caption {
 
 }
-.wp-caption-text{
-  color: yellow;
+.format-image .wp-caption-text{
+  padding: 0 20px;
+  text-align: center;
+
 }
+
+
 /* Entry content related legacy support */
 /* Alignment */
 .alignleft {
