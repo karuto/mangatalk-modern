@@ -771,9 +771,6 @@ img.avatar {
 .RandomPostWidget .widget-title {
   /*display: none;*/
 }
-.ImagePostWidget .widget-title {
-  display: none;
-}
 .widget .widget-post-list {
   margin: 0px;
 }
@@ -788,6 +785,14 @@ img.avatar {
 }
 .widget-post-list .entry-meta {
   color: #666;
+}
+
+/* TODO: This is a temp solution. Use different sidebar for different pages! */
+.single-format-standard .ImagePostWidget {
+  display: none;
+}
+.ImagePostWidget .widget-title {
+  display: none;
 }
 .ImagePostWidget .entry-header {
   height: 90px;
