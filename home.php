@@ -37,6 +37,9 @@ get_header(); ?>
 <!--     <div class="layout-hero main-item-style">
     </div> -->
 
+    <!-- Note: I wrote a plugin for excluding "ComicBits" category from main loop.
+    Please refer to modify-main-loop-by-v.php in wp-content/plugins directory. -->
+
     <?php get_template_part('mainlooplogic'); ?>
 
     </div><!-- .layout-content-wrap -->
