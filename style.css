@@ -681,6 +681,12 @@ img.avatar {
   height: auto;
   max-width: 100%;
 }
+.wp-caption {
+
+}
+.wp-caption-text{
+  color: yellow;
+}
 /* Entry content related legacy support */
 /* Alignment */
 .alignleft {

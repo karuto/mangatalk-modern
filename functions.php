@@ -624,6 +624,9 @@ add_action('wp_head', 'blog_favicon');
  * Author: Karuto
  *
  * The following function automatically removes attachment links around images.
+ * Note: this only works if it's an attachment link (not any other links),
+ * and the attachment link must use the directory of "wp-content/uploads"
+ * TODO: Improve RegEx logic so that it also removes image media page links.
  * @since Twenty Twelve 1.0
  */
 add_filter( 'the_content', 'attachment_image_link_remove_filter' );
