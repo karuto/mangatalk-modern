@@ -673,15 +673,23 @@ function fixed_img_caption_shortcode($attr, $content = null) {
   ), $attr));
 
   // Manually set width to be 100% for captioned images
-  $width = "100%";
+  /* Update: or, we simply do NOT set width, therefore voids the inline 
+   * width PIXEL property that WP enforced on captions, but you can still
+   * add your own percentage and it still works. Otherwise, the width will
+   * be controlled by CSS. I believe this is a better solution.   
+  */
+
+  // $width = "100%";
 
   if ( 1 > (int) $width || empty($caption) )
     return $content;
 
   if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
 
-  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: ' . $width . '">'
-  . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+  return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) .
+   '" style="width: ' . $width . '">' /* The trick is to remove "px" here to void it */
+   . do_shortcode( $content ) . 
+   '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
 
