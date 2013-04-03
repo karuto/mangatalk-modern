@@ -287,7 +287,7 @@ a:hover {
 }
 /* TODO: This margin-top thing is annoying. Find an elegant solution. */
 .layout-single-post .layout-regular-post {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 .layout-feature-post {
   margin: 20px 0;

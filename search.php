@@ -34,7 +34,7 @@ get_header(); ?>
 
       <?php else : ?>
 
-      <div class="layout-posts-section" style="margin-top:20px;">
+      <div class="layout-posts-section">
         <div class="layout-posts-row">
 
           <article class="main-item-block main-item-style empty-item">
