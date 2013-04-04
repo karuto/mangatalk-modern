@@ -14,7 +14,7 @@
 
     <?php 
     /* Retrieving the featured image URL of this post */
-    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large')[0]; ?>
+    $image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'thumbnail')[0]; ?>
     <?php 
     if ($image == '') {
       /* If this post does NOT have a featured image, we set one */
