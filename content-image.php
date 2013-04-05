@@ -69,7 +69,7 @@
       <footer class="entry-copyright">
 
         <h2 class="entry-title roboto-font"><?php the_title(); ?></h2>
-        <h3 class="roboto-font">Written on <?php echo get_the_date(); ?> 
+        <h3 class="entry-meta roboto-font">Written on <?php echo get_the_date(); ?> 
           <b class="red">+</b> 
           <a href="<?php the_permalink(); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?></a>  
           <?php the_tags( '<span style="">Tagged with ', '<span style="color:#ce5333"> | </span>', '</span>' ); ?>  

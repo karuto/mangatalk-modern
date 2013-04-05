@@ -702,8 +702,16 @@ img.avatar {
   padding: 0 20px;
   text-align: center;
 }
+.format-image .entry-copyright {
+  text-align: center;
+}
 .format-image .entry-title {
-  /*text-align: center;*/
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px #FF9999;
+}
+.format-image .entry-meta {
+  margin: 5px 0 10px;
 }
 .format-image .WPSNS_main {
   margin: 0 auto;
