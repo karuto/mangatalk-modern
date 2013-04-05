@@ -481,6 +481,17 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 /**
  * Author: Karuto
  *
+ * Disabling the filter (auto inserted HTML paragraphs <p></p>)
+ * http://codex.wordpress.org/Function_Reference/wpautop#Disabling_the_filter 
+ * @since Twenty Twelve 1.0
+ */
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
+
+/**
+ * Author: Karuto
+ *
  * Exclude pages from search results.
  * @since Twenty Twelve 1.0
  */
