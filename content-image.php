@@ -83,16 +83,11 @@
 
       <footer class="entry-comicbits-meta">
 
-        <h2 class="entry-title roboto-font"><?php the_title(); ?></h2>
-        <h3 class="entry-meta roboto-font">Written on <?php echo get_the_date(); ?> 
-          <b class="red">+</b> 
-          <a href="<?php the_permalink(); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?></a>  
-          <?php the_tags( '<span style="">Tagged with ', '<span style="color:#ce5333"> | </span>', '</span>' ); ?>  
-          <b class="red">+</b> <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
-          <?php edit_post_link( __( '- Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-          <?php if(function_exists('wpcc_output_navi')) echo " + "; wpcc_output_navi(); ?>
-          <br>
-        </h3>
+        <span class="roboto-font">
+          <a href="/category/comicbits" target="_blank">ComicBits</a>
+          是漫言除了传统长篇文章之外所开辟的一个崭新栏目。<br>
+          在这里，我们以轻量级的高清图片为载体，记录并分享全球漫画界值得收藏的分镜绘稿、优秀设计与业界写真。
+        </span>
         
         <span class="pspace social-stuff"><?php if(function_exists('wp_sns_share')) echo wp_sns_share();?></span>
 

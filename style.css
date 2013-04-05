@@ -567,7 +567,6 @@ h1.entry-title {
 .layout-feature-post .entry-copyright {
   /*padding: 20px 50px;*/
 }
-.entry-comicbits-meta,
 .author-info-table {
   background-color: #F0F0F0;
   display: table;
@@ -700,7 +699,12 @@ img.avatar {
 
 }
 .entry-comicbits-meta {
+  background-color: #F0F0F0;
   padding: 30px;
+}
+.entry-comicbits-meta .roboto-font {
+  color: #666;
+  text-transform: none;
 }
 .format-image .wp-caption-text{
   padding: 0 20px;
