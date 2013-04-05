@@ -79,6 +79,21 @@
           <br>
         </h3>
         
+      </footer><!-- .entry-copyright -->
+
+      <footer class="entry-comicbits-meta">
+
+        <h2 class="entry-title roboto-font"><?php the_title(); ?></h2>
+        <h3 class="entry-meta roboto-font">Written on <?php echo get_the_date(); ?> 
+          <b class="red">+</b> 
+          <a href="<?php the_permalink(); ?>" rel="bookmark"><?php comments_number( '<span class="red">0 notes</span>', '<span class="red">1 note</span>', '<span class="red">% notes</span>' ); ?></a>  
+          <?php the_tags( '<span style="">Tagged with ', '<span style="color:#ce5333"> | </span>', '</span>' ); ?>  
+          <b class="red">+</b> <?php if( function_exists('zilla_likes') ) zilla_likes(); ?>
+          <?php edit_post_link( __( '- Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+          <?php if(function_exists('wpcc_output_navi')) echo " + "; wpcc_output_navi(); ?>
+          <br>
+        </h3>
+        
         <span class="pspace social-stuff"><?php if(function_exists('wp_sns_share')) echo wp_sns_share();?></span>
 
       </footer><!-- .entry-copyright -->

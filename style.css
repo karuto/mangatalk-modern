@@ -567,6 +567,7 @@ h1.entry-title {
 .layout-feature-post .entry-copyright {
   /*padding: 20px 50px;*/
 }
+.entry-comicbits-meta,
 .author-info-table {
   background-color: #F0F0F0;
   display: table;
@@ -698,6 +699,9 @@ img.avatar {
 .wp-caption {
 
 }
+.entry-comicbits-meta {
+  padding: 30px;
+}
 .format-image .wp-caption-text{
   padding: 0 20px;
   text-align: center;
@@ -710,8 +714,8 @@ img.avatar {
   font-weight: bold;
   text-shadow: 0px 1px 1px #FF9999;
 }
-.format-image .entry-meta {
-  margin: 5px 0 10px;
+.format-image .entry-copyright .entry-meta {
+  margin: 5px 0;
 }
 .format-image .WPSNS_main {
   margin: 0 auto;
