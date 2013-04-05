@@ -798,6 +798,7 @@ img.avatar {
 }
 
 /* TODO: This is a temp solution. Use different sidebar for different pages! */
+/*.category-comicbits .ImagePostWidget,*/
 .single-post .ImagePostWidget {
   display: none;
 }
