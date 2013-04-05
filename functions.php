@@ -492,6 +492,7 @@ remove_filter( 'the_excerpt', 'wpautop' );
 add_filter( 'the_content', 'wpautop' , 99 );
 add_filter( 'the_content', 'shortcode_unautop', 100 );
 
+
 /**
  * Author: Karuto
  *
