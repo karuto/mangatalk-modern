@@ -487,7 +487,10 @@ add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
  */
 remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
-
+// These two calls will preserve regular filter, but only disable them on shortcodes
+// Which is what I want, since it's only the caption shortcode's autop bothering me 
+add_filter( 'the_content', 'wpautop' , 99 );
+add_filter( 'the_content', 'shortcode_unautop', 100 );
 
 /**
  * Author: Karuto
