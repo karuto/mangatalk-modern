@@ -15,8 +15,12 @@
   $post_meta_box_interface = get_post_meta( $post->ID, "post_meta_box_interface", true );
   $post_meta_box_enlarge_check = get_post_meta( $post->ID, "post_meta_box_enlarge_check", true );
 
+  // Printing stuff out for testing
+  // echo $post_meta_box_likes . " + " . $post_meta_box_interface . " + " . $post_meta_box_enlarge_check;
 
-  if ($post_meta_box_enlarge_check) {
+
+
+  if ($post_meta_box_enlarge_check == "on") {
     // Single column like feature article for "enlarged" image post
     echo '<div class="layout-feature-post">';
   } else {
