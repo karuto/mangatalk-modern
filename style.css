@@ -724,7 +724,11 @@ img.avatar {
 .format-image .WPSNS_main {
   margin: 0 auto;
 }
-
+.format-image .flexslider {
+  border: 0;
+  margin-bottom: 60px; 
+  margin-top: 0;
+}
 
 
 /* Entry content related legacy support */
