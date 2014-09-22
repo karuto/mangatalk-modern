@@ -16,15 +16,13 @@
       get_template_part('templates/header');
     }
   ?>
-
-  <?php include roots_template_path(); ?>
-
-
-  <?php if (roots_display_sidebar()) : ?>
-    <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-      <?php include roots_sidebar_path(); ?>
-    </aside><!-- /.sidebar -->
-  <?php endif; ?>
+<div class="wrap" role="document">
+  <div class="content row">
+    <main class="main <?php echo roots_main_class(); ?>" role="main">
+      <?php include roots_template_path(); ?>
+    </main><!-- /.main -->
+  </div><!-- /.content -->
+</div><!-- /.wrap -->      
   
 
   <?php get_template_part('templates/footer'); ?>

@@ -10,7 +10,7 @@
   } 
   ?>
 
-  <div class="cover-content container">
+  <div class="cover-content article-content-container">
       <h1 class="h1 entry-title"><?php the_title(); ?></h1>
       <?php get_template_part('templates/entry-meta'); ?>
   </div>
@@ -21,21 +21,20 @@
     
 </header>
 
-<div class="wrap container" role="document">
-  <div class="content row">
-    <main class="main <?php echo roots_main_class(); ?>" role="main">
-      
-      <div class="entry-content">
-        <?php the_content(); ?>
-      </div>
-      <footer>
-        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
-      </footer>
-      <?php comments_template('/templates/comments.php'); ?>
+<div class="entry-content article-content-container">
+  <?php the_content(); ?>
+</div>
 
-    </main><!-- /.main -->
-  </div><!-- /.content -->
-</div><!-- /.wrap -->
+<section class="container entry-extra-container">
+  <?php comments_template('/templates/comments.php'); ?>
+  
+  <?php if (roots_display_sidebar()) : ?>
+    <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+      <?php include roots_sidebar_path(); ?>
+    </aside><!-- /.sidebar -->
+  <?php endif; ?>
+
+</section>
 
 </article>
 <?php endwhile; ?>

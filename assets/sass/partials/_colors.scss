@@ -8,7 +8,8 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
-$semitrans-white: rgba(255, 255, 255, 0.3);
+$title-color-on-dark-bg: white;
+$semitrans-white: rgba(255, 255, 255, 0.5);
 
 $text-color: #333;
 $quiet-color: #ccc;
@@ -35,7 +36,13 @@ a {
 
 .mt-banner {
   background-color: $semitrans-white;
+  .dropdown-menu {
+    background-color: $semitrans-white;
+  }
 }
 .article-cover {
   background-color: $gray-darker;
+  .cover-content {
+    color: $title-color-on-dark-bg;
+  }
 }

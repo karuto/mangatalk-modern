@@ -14,6 +14,11 @@ $base-font-family: 'Roboto Condensed', sans-serif;
 $base-font-size: 18px;
 $base-font-weight: 300;
 
+$subtext-font-family: 'Roboto Condensed', sans-serif;
+$subtext-font-size: $base-font-size * 0.75;
+$subtext-font-weight: 300;
+$subtext-line-height: 1.4;
+
 $fixed-font-family: 'Andale Mono', AndaleMono, monospace;
 $fixed-font-size: 15px;
 $fixed-line-height: 1.2;
@@ -86,6 +91,14 @@ body {
 .ordered-list { 
   list-style: decimal; 
 }
+figcaption {
+  font-family: $subtext-font-family; 
+  font-size: $subtext-font-size; 
+  line-height: $subtext-line-height; 
+  letter-spacing: 0.01rem;
+  font-style: italic;
+}
+
 
 
 /* 
@@ -149,11 +162,11 @@ pre     {   font-family: monospace, serif;
 blockquote {
  font-style: italic; 
 }
-blockquote:before { 
- content: "\201C";
- display: inline-block;
- padding-right: .4em;
-}
+//blockquote:before {
+// content: "\201C";
+// display: inline-block;
+// padding-right: .4em;
+//}
 
 // Print styles, paint everything to black, remove shadows and stuff
 @media print {

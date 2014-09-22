@@ -15,7 +15,9 @@ $space-md: 20px;
 $space-sm: 10px;
 $space-xs: 8px;
 $space-xxs: 5px;
-
+$article-content-container-lg: 700px;
+$article-content-container-md: 600px;
+$cover-title-pos: 40vh;
 
 /*
  * MangaTalk global layout rules
@@ -29,8 +31,7 @@ $space-xxs: 5px;
 }
 .article-cover {
   height: 100vh;
-  margin-bottom: 80px; //TODO: change to xxl
-//  display: table;
+  margin-bottom: $space-xl;
   
   .cover-image {
     height: 100vh;
@@ -38,16 +39,106 @@ $space-xxs: 5px;
     left: 0;
     right: 0;
     top: 0;
-    z-index: 100;
+//    z-index: 0;
     @include background-size(cover);
+    
+    &:after {
+      content: '';
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 0;
+      left: 0;
+      right: 0;
+  //    background: rgba(0, 0, 0, 0.2); // slight shadow / tint
+  //    z-index: 1;
+    }
   }
   .cover-content {
-    margin-top: 50vh;
-//    display: table-cell;
-
+    margin-top: $cover-title-pos;
   }
 }
 
 .entry-content {
-//  margin-top: $space-lg;
+  margin: $space-lg 0;
+  img {
+    max-width: 100%;
+  }
+  p {
+    margin-bottom: $space-lg;
+  }
+  img,
+  figure {
+//    margin-top: $space-sm;
+    margin-bottom: $space-sm;
+    position: relative;
+
+    @media (max-width: $screen-sm-min) {
+      margin-right: auto;
+      margin-left: auto;
+      float: none;
+    }
+  }
+  figcaption.alignleft {
+    position: absolute;
+    left: -172px;
+    width: 150px;
+    top: 0;
+    text-align: right;
+    margin-top: 0;
+    
+    &:before {
+      width: 25%;
+      margin-left: 75%;
+      border-top: 1px solid rgba(0,0,0,0.15);
+      display: block;
+      content: "";
+      margin-bottom: $space-sm;
+    }
+  }
+//  figcaption.alignright {
+//    position: absolute;
+//    right: -172px;
+//    width: 150px;
+//    top: 0;
+//    text-align: left;
+//    margin-top: 0;
+//
+//    &:before {
+//      width: 25%;
+//      margin-left: 75%;
+//      border-top: 1px solid rgba(0,0,0,0.15);
+//      display: block;
+//      content: "";
+//      margin-bottom: $space-sm;
+//    }
+//  }
+  
+  img.alignleft,
+  figure.alignleft {
+    @extend figure;
+    margin-right: $space-lg;
+  }
+  img.alignright,
+  figure.alignright {
+    @extend figure;
+    margin-left: $space-lg;
+  }
+}
+
+
+// Container widths, borrowing Bootstrap's structure
+// Set the container width, and override it for fixed navbars in media queries.
+.article-content-container {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) { //768px
+    width: $article-content-container-md;
+  }
+  @media (min-width: $screen-md-min) { //992px
+    width: $article-content-container-lg;
+  }
+  @media (min-width: $screen-lg-min) { //1200px
+    width: $article-content-container-lg;
+  }
 }
