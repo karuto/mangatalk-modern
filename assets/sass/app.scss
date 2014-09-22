@@ -3,23 +3,21 @@
  */
 
 $bootstrap-sass-asset-helper: false;
+// Vendors: third-party library stylesheets, lowest priority
+@import "vendors/bootstrap/bootstrap";
 
-// Modules: Mixins and helper functions
+// Modules: Mixins and helper functions, medium priority
 // Modules shouldn't cause Sass to actually output any CSS
 @import "modules/all";
 
-// Partials: Actual CSS components and rules
+// Partials: Actual CSS components and rules, highest priority
 @import "partials/all";
-
-// Vendors: third-party library stylesheets
-@import "vendors/bootstrap/bootstrap";
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body {
-  background-color: $brand-color; }
+body { }
 
 
 

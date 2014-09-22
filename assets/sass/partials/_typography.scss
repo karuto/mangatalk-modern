@@ -1,7 +1,97 @@
+/*
+ * MangaTalk type variables
+ */
+$text-color: #333;
+$quiet-color: #ccc;
+$loud-color: #000;
+$heading-color: #111;
+
+$link-color: #d54aaf;
+$link-hover-color: saturate(#d54aaf, 20%);
+$link-visited-color: purple;
+
+$base-font-family: 'Roboto Condensed', sans-serif;
+$base-font-size: 18px;
+$base-font-weight: 300;
+
+$fixed-font-family: 'Andale Mono', AndaleMono, monospace;
+$fixed-font-size: 15px;
+$fixed-line-height: 1.2;
+
+$heading-font-family: 'Roboto Condensed', sans-serif;
+$heading-font-weight: 700;
+
+
+/*
+ * MangaTalk type styles
+ */
+body {
+  color: $text-color;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.6;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 { 
+  font-family: $heading-font-family; 
+  font-weight: $heading-font-weight; 
+}
+.h1, .h2 { 
+  line-height: 1.1; 
+}
+.h3, .h4 { 
+  line-height: 1.3; 
+}
+.h1 { 
+  font-size: 400%; 
+  letter-spacing: -2px; 
+}
+.h2 { 
+  font-size: 250%; 
+  letter-spacing: -1px; 
+}
+.h3 { 
+  font-size: 200%; 
+}
+.h4 { 
+  font-size: 180%; 
+}
+.h5 { 
+  font-size: 130%; 
+}
+.fixed { 
+  font-family: $fixed-font-family; 
+  font-size: $fixed-font-size; 
+  line-height: $fixed-line-height; 
+}
+.quiet { 
+  font-color: $quiet-color; 
+}
+.loud  { 
+  font-color: $loud-color; 
+}
+.italic { 
+  font-style: italic; 
+}
+.bold { 
+  font-weight: 700; 
+  @extend .loud; 
+}
+.block-margins { 
+  margin: 1em 0; 
+}
+.unordered-list { 
+  list-style-type: disc; 
+}
+.ordered-list { 
+  list-style: decimal; 
+}
+
+
 /* 
- A Web Designer's Typographic Boilerplate
- Source: http://bit.ly/1C3pej9
-*/
+ * A Web Designer's Typographic Boilerplate
+ * Source: http://bit.ly/1C3pej9
+ */
 
 // improve readability
 body  { text-rendering: optimizeLegibility; }
@@ -79,8 +169,3 @@ blockquote:before {
     h2,
     h3 {page-break-after: avoid; }
 }
-
-
-/*
- MangaTalk styles
-*/
