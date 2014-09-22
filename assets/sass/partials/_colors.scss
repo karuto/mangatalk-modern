@@ -1,5 +1,6 @@
 /*
  * MangaTalk color variables
+ * NOTE: The actual color defs should be copied to bootstrap/variables if duplicate
  */
 $brand-primary:         #ce5333;
 $brand-success:         #5cb85c;
@@ -12,8 +13,6 @@ $quiet-color: #ccc;
 $loud-color: #000;
 $heading-color: #111;
 
-$link-color: $brand-primary;
-$link-hover-color: saturate($link-color, 20%);
 $link-visited-color: purple;
 
 
