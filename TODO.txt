@@ -1,0 +1,27 @@
+TODO: Single post page
+ - full-width figure
+ - post without feature image
+ - image as background
+   - full-width
+   - container-width
+ - author & meta info at end
+ - disqus styling
+ - comments rules
+ - tooltips
+ 
+TODO: Other templates
+ - list view (archive, category, etc)
+ - static homepage
+ - image type for comicbits
+ - single page full-width blank state
+ - header
+ - footer
+ - search
+ 
+TODO: Things that are nice to have
+ - customizable sidebar
+ - 3rd party plug-in supports
+ - google analytics
+ - annotations (Medium style)
+ - author page
+ - custom plugin to insert figure shortcode
