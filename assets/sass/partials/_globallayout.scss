@@ -50,7 +50,7 @@ $space-xxs: 5px;
 $article-content-container-lg: 700px;
 $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
-$figcaption-width: 150px;
+$extracontent-width: 150px;
 $cover-title-pos: 40vh;
 
 
@@ -128,7 +128,7 @@ $cover-title-pos: 40vh;
     
     figcaption {
       position: absolute;
-      width: $figcaption-width;
+      width: $extracontent-width;
       top: 0;
       margin-top: 0;
       
@@ -142,7 +142,7 @@ $cover-title-pos: 40vh;
         }
 
         @media (min-width: $screen-md-min) {
-          left: -($figcaption-width + $article-content-container-padding);
+          left: -($extracontent-width + $article-content-container-padding);
           text-align: right;
           &:before {
             margin-left: 75%;
@@ -156,7 +156,7 @@ $cover-title-pos: 40vh;
       }
       &.alignright {
         @media (min-width: $screen-md-min) {
-          right: -($figcaption-width + $article-content-container-padding);
+          right: -($extracontent-width + $article-content-container-padding);
           text-align: left;
           &:before {
             margin-right: 75%;
@@ -171,8 +171,8 @@ $cover-title-pos: 40vh;
     }
 //    figcaption.alignright {
 //      position: absolute;
-//      right: -($figcaption-width + $article-content-container-padding);
-//      width: $figcaption-width;
+//      right: -($extracontent-width + $article-content-container-padding);
+//      width: $extracontent-width;
 //      top: 0;
 //      text-align: left;
 //      margin-top: 0;
@@ -195,13 +195,13 @@ $cover-title-pos: 40vh;
       @include pos-reset();
     }
     @media (min-width: $screen-md-min) {
-      max-width: $figcaption-width + $article-content-container-padding + $article-content-container-lg / 2;
-      margin-left: -($article-content-container-padding + $figcaption-width);
+      max-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
+      margin-left: -($article-content-container-padding + $extracontent-width);
     }
     
     figcaption {
       @media (min-width: $screen-md-min) {
-        margin-left: ($figcaption-width + $article-content-container-padding);        
+        margin-left: ($extracontent-width + $article-content-container-padding);        
       }
 
     }
@@ -229,7 +229,21 @@ $cover-title-pos: 40vh;
     margin-left: $space-lg;
   }
 }
+blockquote.large {
+  padding-left: 0;
+  border-left: none;
+  @media (max-width: $screen-sm-min) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: $screen-md-min) {
+    margin-left: -($extracontent-width + $article-content-container-padding);
+    margin-right: -($extracontent-width + $article-content-container-padding);
+    margin-top: $space-xl;
+    margin-bottom: $space-xl;
+  }
 
+}
 
 // Container widths, borrowing Bootstrap's structure
 // Set the container width, and override it for fixed navbars in media queries.
