@@ -91,7 +91,9 @@ body {
 .ordered-list { 
   list-style: decimal; 
 }
-figcaption {
+figcaption,
+figcaption.alignleft,
+figcaption.alignright {
   font-family: $subtext-font-family; 
   font-size: $subtext-font-size; 
   line-height: $subtext-line-height; 
