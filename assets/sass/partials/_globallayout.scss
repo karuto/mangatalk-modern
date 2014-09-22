@@ -8,6 +8,37 @@
           background-size: $style;
       background-position: center;
 }
+
+@mixin pos-reset() {
+  float: none;
+  width: auto;
+  border: none;
+  position: relative;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  
+  &:before,
+  &:after {
+    display: none;
+    float: none;
+    width: auto;
+    border-top: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+}
 $space-xxl: 80px;
 $space-xl: 50px;
 $space-lg: 30px;
@@ -76,49 +107,65 @@ $cover-title-pos: 40vh;
 //    margin-top: $space-sm;
     margin-bottom: $space-sm;
     position: relative;
-
     @media (max-width: $screen-sm-min) {
-      margin-right: auto;
-      margin-left: auto;
-      float: none;
+      max-width: 100%;
+      @include pos-reset();
     }
   }
-  figure {
+  figcaption {
+    @media (max-width: $screen-sm-min) {
+//      display: none;
+      @include pos-reset();
+    }
   }
   figure.is-inside { // default state
+    @extend figure;
     max-width: $article-content-container-lg / 2;
-
+    @media (max-width: $screen-sm-min) {
+      max-width: 100%;
+    }
+    
+    
     figcaption {
-      @extend figure;
       position: absolute;
       width: $figcaption-width;
       top: 0;
       margin-top: 0;
+      
+      @media (max-width: $screen-sm-min) {
+        @include pos-reset();
+      }
 
       &.alignleft {
-        left: -($figcaption-width + $article-content-container-padding);
-        text-align: right;
-    
-        &:before {
-          margin-left: 75%;
-          width: 25%;
-          border-top: 1px solid rgba(0,0,0,0.15);
-          display: block;
-          content: "";
-          margin-bottom: $space-sm;
+        @media (max-width: $screen-sm-min) {
+          @include pos-reset();
+        }
+
+        @media (min-width: $screen-md-min) {
+          left: -($figcaption-width + $article-content-container-padding);
+          text-align: right;
+          &:before {
+            margin-left: 75%;
+            width: 25%;
+            border-top: 1px solid rgba(0,0,0,0.15);
+            display: block;
+            content: "";
+            margin-bottom: $space-sm;
+          }
         }
       }
       &.alignright {
-        right: -($figcaption-width + $article-content-container-padding);
-        text-align: left;
-    
-        &:before {
-          margin-right: 75%;
-          width: 25%;
-          border-top: 1px solid rgba(0,0,0,0.15);
-          display: block;
-          content: "";
-          margin-bottom: $space-sm;
+        @media (min-width: $screen-md-min) {
+          right: -($figcaption-width + $article-content-container-padding);
+          text-align: left;
+          &:before {
+            margin-right: 75%;
+            width: 25%;
+            border-top: 1px solid rgba(0,0,0,0.15);
+            display: block;
+            content: "";
+            margin-bottom: $space-sm;
+          }
         }
       }
     }
@@ -142,24 +189,43 @@ $cover-title-pos: 40vh;
 //    }
   }
   figure.is-hanging { // half of figure is outside, only support left
-    max-width: $figcaption-width + $article-content-container-padding + $article-content-container-lg / 2;
-    margin-left: -($article-content-container-padding + $figcaption-width);
+    @extend figure;
+    @media (max-width: $screen-sm-min) {
+      max-width: 100%;
+      @include pos-reset();
+    }
+    @media (min-width: $screen-md-min) {
+      max-width: $figcaption-width + $article-content-container-padding + $article-content-container-lg / 2;
+      margin-left: -($article-content-container-padding + $figcaption-width);
+    }
     
     figcaption {
-      margin-left: ($figcaption-width + $article-content-container-padding);
+      @media (min-width: $screen-md-min) {
+        margin-left: ($figcaption-width + $article-content-container-padding);        
+      }
+
     }
   }
   figure.is-fullwidth { // ignores content container, only support left
-    
+    @extend figure;
+    @media (max-width: $screen-sm-min) {
+      @include pos-reset();
+    }
   }
   img.alignleft,
   figure.alignleft {
     @extend figure;
+    @media (max-width: $screen-sm-min) {
+      @include pos-reset();
+    }
     margin-right: $space-lg;
   }
   img.alignright,
   figure.alignright {
     @extend figure;
+    @media (max-width: $screen-sm-min) {
+      @include pos-reset();
+    }
     margin-left: $space-lg;
   }
 }
