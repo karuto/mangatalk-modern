@@ -1,0 +1,53 @@
+/*
+ * MangaTalk global layout variables and mixins
+ */
+@mixin background-size($style) {
+  -webkit-background-size: $style;
+     -moz-background-size: $style;
+       -o-background-size: $style;
+          background-size: $style;
+      background-position: center;
+}
+$space-xxl: 80px;
+$space-xl: 50px;
+$space-lg: 30px;
+$space-md: 20px;
+$space-sm: 10px;
+$space-xs: 8px;
+$space-xxs: 5px;
+
+
+/*
+ * MangaTalk global layout rules
+ */
+.mt-banner {
+  margin-bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.article-cover {
+  height: 100vh;
+  margin-bottom: 80px; //TODO: change to xxl
+//  display: table;
+  
+  .cover-image {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    @include background-size(cover);
+  }
+  .cover-content {
+    margin-top: 50vh;
+//    display: table-cell;
+
+  }
+}
+
+.entry-content {
+//  margin-top: $space-lg;
+}

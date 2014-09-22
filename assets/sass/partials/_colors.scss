@@ -8,6 +8,8 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$semitrans-white: rgba(255, 255, 255, 0.3);
+
 $text-color: #333;
 $quiet-color: #ccc;
 $loud-color: #000;
@@ -15,7 +17,9 @@ $heading-color: #111;
 
 $link-visited-color: purple;
 
-
+/*
+ * MangaTalk color rules
+ */
 a {
   color: $link-color;
 
@@ -23,4 +27,15 @@ a {
   &:focus {
     color: $link-hover-color;
   }
+}
+
+.is-darkBackgrounded {
+  
+}
+
+.mt-banner {
+  background-color: $semitrans-white;
+}
+.article-cover {
+  background-color: $gray-darker;
 }
