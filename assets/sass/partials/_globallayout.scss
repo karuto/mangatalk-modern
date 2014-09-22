@@ -39,6 +39,7 @@
     right: auto;
   }
 }
+
 $space-xxl: 100px;
 $space-xl: 50px;
 $space-lg: 30px;
@@ -55,7 +56,7 @@ $cover-title-pos: 40vh;
 
 
 /*
- * MangaTalk global layout rules
+ * MangaTalk global layout rules (starts with mt-)
  */
 .mt-banner {
   margin-bottom: 0;
@@ -64,202 +65,19 @@ $cover-title-pos: 40vh;
   right: 0;
   top: 0;
 }
-.article-cover {
-  height: 100vh;
+.mt-list {
   margin-bottom: $space-xl;
+}
+.mt-block {
+  height: 400px;
+  overflow: hidden;
   
-  .cover-image {
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-//    z-index: 0;
-    @include background-size(cover);
-    
-    &:after {
-      content: '';
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      top: 0;
-      left: 0;
-      right: 0;
-  //    background: rgba(0, 0, 0, 0.2); // slight shadow / tint
-  //    z-index: 1;
-    }
-  }
-  .cover-content {
-    margin-top: $cover-title-pos;
+  .block-cover {
+    @extend .mt-block;
+    height: 100%;
   }
 }
-.cover-content {
-  margin-top: $cover-title-pos/3;
-}
 
-.entry-content {
-  margin: $space-lg 0;
-  img {
-    max-width: 100%;
-  }
-  p {
-    margin-bottom: $space-lg;
-  }
-  img,
-  figure {
-//    margin-top: $space-sm;
-    margin-bottom: $space-sm;
-    position: relative;
-    @media (max-width: $screen-sm-min) {
-      max-width: 100%;
-      @include pos-reset();
-    }
-  }
-  figcaption {
-    @media (max-width: $screen-sm-min) {
-//      display: none;
-      @include pos-reset();
-    }
-  }
-  figure.is-inside { // default state
-    @extend figure;
-    max-width: $article-content-container-lg / 2;
-    @media (max-width: $screen-sm-min) {
-      max-width: 100%;
-    }
-    
-    
-    figcaption {
-      position: absolute;
-      width: $extracontent-width;
-      top: 0;
-      margin-top: 0;
-      
-      @media (max-width: $screen-sm-min) {
-        @include pos-reset();
-      }
 
-      &.alignleft {
-        @media (max-width: $screen-sm-min) {
-          @include pos-reset();
-        }
 
-        @media (min-width: $screen-md-min) {
-          left: -($extracontent-width + $article-content-container-padding);
-          text-align: right;
-          &:before {
-            margin-left: 75%;
-            width: 25%;
-            border-top: 1px solid rgba(0,0,0,0.15);
-            display: block;
-            content: "";
-            margin-bottom: $space-sm;
-          }
-        }
-      }
-      &.alignright {
-        @media (min-width: $screen-md-min) {
-          right: -($extracontent-width + $article-content-container-padding);
-          text-align: left;
-          &:before {
-            margin-right: 75%;
-            width: 25%;
-            border-top: 1px solid rgba(0,0,0,0.15);
-            display: block;
-            content: "";
-            margin-bottom: $space-sm;
-          }
-        }
-      }
-    }
-//    figcaption.alignright {
-//      position: absolute;
-//      right: -($extracontent-width + $article-content-container-padding);
-//      width: $extracontent-width;
-//      top: 0;
-//      text-align: left;
-//      margin-top: 0;
-//
-//      &:before {
-//        width: 25%;
-//        margin-right: 75%;
-//        border-top: 1px solid rgba(0,0,0,0.15);
-//        display: block;
-//        content: "";
-//        margin-bottom: $space-sm;
-//        text-align: left;
-//      }
-//    }
-  }
-  figure.is-hanging { // half of figure is outside, only support left
-    @extend figure;
-    @media (max-width: $screen-sm-min) {
-      max-width: 100%;
-      @include pos-reset();
-    }
-    @media (min-width: $screen-md-min) {
-      max-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
-      margin-left: -($article-content-container-padding + $extracontent-width);
-    }
-    
-    figcaption {
-      @media (min-width: $screen-md-min) {
-        margin-left: ($extracontent-width + $article-content-container-padding);        
-      }
 
-    }
-  }
-  figure.is-fullwidth { // ignores content container, only support left
-    @extend figure;
-    @media (max-width: $screen-sm-min) {
-      @include pos-reset();
-    }
-  }
-  img.alignleft,
-  figure.alignleft {
-    @extend figure;
-    @media (max-width: $screen-sm-min) {
-      @include pos-reset();
-    }
-    margin-right: $space-lg;
-  }
-  img.alignright,
-  figure.alignright {
-    @extend figure;
-    @media (max-width: $screen-sm-min) {
-      @include pos-reset();
-    }
-    margin-left: $space-lg;
-  }
-}
-blockquote.large {
-  padding-left: 0;
-  border-left: none;
-  @media (max-width: $screen-sm-min) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @media (min-width: $screen-md-min) {
-    margin-left: -($extracontent-width + $article-content-container-padding);
-    margin-right: -($extracontent-width + $article-content-container-padding);
-    margin-top: $space-xl;
-    margin-bottom: $space-xl;
-  }
-
-}
-
-// Container widths, borrowing Bootstrap's structure
-// Set the container width, and override it for fixed navbars in media queries.
-.article-content-container {
-  @include container-fixed();
-
-  @media (min-width: $screen-sm-min) { //768px
-    width: $article-content-container-md;
-  }
-  @media (min-width: $screen-md-min) { //992px
-    width: $article-content-container-lg;
-  }
-  @media (min-width: $screen-lg-min) { //1200px
-    width: $article-content-container-lg;
-  }
-}

@@ -14,6 +14,10 @@ $base-font-family: 'Roboto Condensed', sans-serif;
 $base-font-size: 18px;
 $base-font-weight: 300;
 
+$content-font-size: 22px;
+$content-line-height: 1.45;
+$content-line-height-px: $content-line-height * $content-font-size;
+
 $subtext-font-family: 'Roboto Condensed', sans-serif;
 $subtext-font-size: $base-font-size * 0.75;
 $subtext-font-weight: 300;
@@ -92,8 +96,9 @@ body {
   list-style: decimal; 
 }
 .entry-content p {
-  font-size: 120%;
-  line-height: 1.5;
+  font-size: $content-font-size;
+  line-height: $content-line-height;
+  margin-bottom: $content-line-height-px;
   letter-spacing: 0.01rem;
 }
 figcaption,
