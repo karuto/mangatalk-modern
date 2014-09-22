@@ -91,6 +91,11 @@ body {
 .ordered-list { 
   list-style: decimal; 
 }
+.entry-content p {
+  font-size: 120%;
+  line-height: 1.5;
+  letter-spacing: 0.01rem;
+}
 figcaption,
 figcaption.alignleft,
 figcaption.alignright {

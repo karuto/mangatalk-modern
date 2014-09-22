@@ -39,7 +39,7 @@
     right: auto;
   }
 }
-$space-xxl: 80px;
+$space-xxl: 100px;
 $space-xl: 50px;
 $space-lg: 30px;
 $space-md: 20px;
@@ -92,6 +92,9 @@ $cover-title-pos: 40vh;
   .cover-content {
     margin-top: $cover-title-pos;
   }
+}
+.cover-content {
+  margin-top: $cover-title-pos/3;
 }
 
 .entry-content {

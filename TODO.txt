@@ -10,6 +10,7 @@ TODO: Single post page
  - tooltips
  
 TODO: Other templates
+ - conditional base templates
  - list view (archive, category, etc)
  - static homepage
  - image type for comicbits
