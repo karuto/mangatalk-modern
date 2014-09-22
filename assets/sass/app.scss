@@ -3,13 +3,23 @@
  */
 
 $bootstrap-sass-asset-helper: false;
-@import "bootstrap/bootstrap";
+
+// Modules: Mixins, variables and helper functions
+// Modules shouldn't cause Sass to actually output any CSS
+@import "modules/all";
+
+// Partials: Actual CSS components and rules
+@import "partials/all";
+
+// Vendors: third-party library stylesheets
+@import "vendors/bootstrap/bootstrap";
 
 /* ==========================================================================
    Base
    ========================================================================== */
 
-body { }
+body {
+  background-color: $brand-color; }
 
 
 
