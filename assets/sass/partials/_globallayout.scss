@@ -83,6 +83,7 @@ $mt-block-height: $space-xxl * 4.5;
 }
 
 .mt-footer {
+  min-height: 1000px;
   margin-top: $space-xxl;
   padding-top: $space-xl;
   a {
