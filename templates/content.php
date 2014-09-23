@@ -16,7 +16,6 @@
         <header class="block-header">
           
           <h2 class="entry-title text-contrast"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <?php get_template_part('templates/entry-meta'); ?>
           <div class="entry-summary text-contrast">
             <?php the_excerpt(); ?>
           </div>

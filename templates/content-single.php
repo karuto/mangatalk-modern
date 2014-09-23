@@ -24,7 +24,7 @@
     
 </header>
 
-<div class="entry-content article-content-container">
+<div class="entry-content article-content-container" data-spy="scroll" data-target="#myScrollspy">
   <?php the_content(); ?>
 </div>
 

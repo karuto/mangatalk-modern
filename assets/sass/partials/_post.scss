@@ -182,18 +182,51 @@ blockquote.large {
 
 }
 
+.hentry .affix {
+  @media (max-width: $screen-md-min) {
+    display: none;
+  }
+  @media (min-width: $screen-lg-min) {
+    max-width: $extracontent-width;
+    float: right;
+    right: 300px;
+  
+    .nav > li > a {
+      display: block;
+      padding: 4px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: #999;
+    }
+    .nav > .active > a {
+      padding-left: 18px;
+      font-weight: 700;
+      color: #563d7c;
+      background-color: transparent;
+      border-left: 2px solid #563d7c;
+    }
+    .nav > .active > ul {
+      display: block;
+    }
+    .nav .nav {
+      display: none;
+      padding-bottom: 10px;
+    }
+  }
+}
+
 // Container widths, borrowing Bootstrap's structure
 // Set the container width, and override it for fixed navbars in media queries.
 .article-content-container {
   @include container-fixed();
 
   @media (min-width: $screen-sm-min) { //768px
-    width: $article-content-container-md;
+    max-width: $article-content-container-md;
   }
   @media (min-width: $screen-md-min) { //992px
-    width: $article-content-container-lg;
+    max-width: $article-content-container-lg;
   }
   @media (min-width: $screen-lg-min) { //1200px
-    width: $article-content-container-lg;
+    max-width: $article-content-container-lg;
   }
 }
