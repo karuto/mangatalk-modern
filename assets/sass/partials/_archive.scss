@@ -39,7 +39,7 @@
   }
   .block-header {
     width: 80%;
-    margin: $space-xxl auto;
+    margin: 20% auto;
   }
   .entry-title {
     margin-bottom: $space-md;
@@ -49,6 +49,21 @@
     padding-top: $space-md;
     max-height: 50%;
 //    -webkit-mask-image: -webkit-gradient(linear, left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
+}
+.is-inactive {
+  .block-header {
+    width: 80%;
+    margin: $space-xxl auto;
+  }
+  .entry-title {
+    margin-top: ($mt-block-height / 2) - $space-xl; // minus its own first line-height
+  }
+  .entry-summary {
+    display: none;  
+  }
+  .entry-meta {
+    display: none;
   }
 }
 .post-nav {

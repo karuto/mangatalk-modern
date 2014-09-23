@@ -65,32 +65,51 @@ $(document).ready(UTIL.loadEvents);
 // Load all your jQuery scripts from this point onward.
 
 
+// TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
+// Hover / toggle effect on article blocks
+$("section.mt-block").addClass("is-inactive");
+$("section.mt-block").mouseenter(function () {
+  
+  // Title needs to make room for entry summary and meta, move up
+  $(this).find(".entry-title").animate({marginTop:"20px"});
+  
+  // Roll in entry summary and meta
+  $(this).find(".entry-summary").fadeIn(1000);
+  $(this).find(".entry-meta").fadeIn(1000);
+  
+  // $(this).toggleClass("is-inactive");
+});
+$("section.mt-block").mouseleave(function () {
+  
+  // Roll out entry summary and meta first!
+  $(this).find(".entry-summary").fadeOut(1000);
+  $(this).find(".entry-meta").fadeOut(1000);
 
-// Hover effect on article blocks
-$(".mt-block").mouseenter(function() {
-    // console.log(this);
-    // $( this ).find( "span" ).text( "mouse enter x " + n );
-  })
-  .mouseleave(function() {
-    // console.log(this);
+  // Now entry title can reset itself back to original margin
+  $(this).find(".entry-title").animate({marginTop:"175px"});
+  // $(this).toggleClass("is-inactive");
 });
 
 
 
 // Fade out article's cover image as scrolling
 function fader() {
-    var coverDiv = $('.cover-image'),
-        windowHeight = $(window).height(),
-        currentPos = $(document).scrollTop(),
-        coverDivView = windowHeight - (coverDiv.offset().top - currentPos),
-        op;
-    //alert(coverDiv.offset().top + " | " + currentPos + "|" + windowHeight);
-    if (coverDivView > 0) {
-        op = 1 - 1 / (windowHeight + coverDiv.height()) * coverDivView;
-        op += op;
-        // console.log(op);
-        if (op > 0)
-            coverDiv.css({opacity: op});
+    var coverDiv = $('.cover-image');
+    if (coverDiv) {
+      var windowHeight = $(window).height(),
+          currentPos = $(document).scrollTop(),
+          coverDivView = windowHeight - (coverDiv.offset().top - currentPos),
+          op;
+      //alert(coverDiv.offset().top + " | " + currentPos + "|" + windowHeight);
+      if (coverDivView > 0) {
+          op = 1 - 1 / (windowHeight + coverDiv.height()) * coverDivView;
+          op += op;
+          // console.log(op);
+          if (op > 0)
+              coverDiv.css({opacity: op});
+      }      
+    } else {
+      console.log("This page doesn't have a cover.");
     }
 }
 // Event on scroll

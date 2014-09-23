@@ -21,6 +21,14 @@
           <div class="entry-summary text-contrast">
             <?php the_excerpt(); ?>
           </div>
+          <div class="entry-meta text-contrast">
+            <p class="entry-comment-count alignright">
+              By <?php echo get_the_author(); ?> &nbsp;
+              <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
+              &nbsp;
+              <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
+            </p>
+          </div>
           
         </header>
         
