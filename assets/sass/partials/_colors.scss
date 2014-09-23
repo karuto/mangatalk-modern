@@ -9,8 +9,8 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 $title-color-on-dark-bg: white;
-$semitrans-white: rgba(255, 255, 255, 0.5);
-
+$white-tint: rgba(255, 255, 255, 0.5);
+$grey-tint: rgba(0, 0, 0, 0.4);
 $text-color: #333;
 $quiet-color: #ccc;
 $loud-color: #000;
@@ -46,9 +46,9 @@ a {
 //  text-rendering: optimizelegibility;
 }
 .mt-banner {
-  background-color: $semitrans-white;
+  background-color: $white-tint;
   .dropdown-menu {
-    background-color: $semitrans-white;
+    background-color: $white-tint;
   }
 }
 .article-cover {
@@ -57,10 +57,12 @@ a {
     color: $title-color-on-dark-bg;
   }
 }
+.cover-content-wrapper {
+  background-color: $grey-tint;
+}
 .mt-block {
   .block-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: $grey-tint;
     
     .entry-title a {
       color: $contrast-color;

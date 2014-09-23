@@ -14,8 +14,10 @@
   ?>
 
   <div class="cover-content article-content-container">
+    <div class="cover-content-wrapper">
       <h1 class="h1 entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
+      <h3><?php the_excerpt(); ?></h3>
+    </div>
   </div>
 
   <?php 

@@ -28,11 +28,24 @@
   }
   .cover-content {
     margin-top: $cover-title-pos;
+    position: relative;
   }
 }
 .cover-content {
-  margin-top: $cover-title-pos/3;
+  margin-top: $cover-title-pos / 3;
 }
+.cover-content-wrapper {
+  padding: 50px;
+  position: absolute;               /* 2 */
+  top: 20%;                         /* 3 */
+  transform: translate(0, -20%);    /* 4 */
+  .entry-title {
+    @media (max-width: $screen-md-min) {
+      font-size: 300%;
+    }
+  }
+}
+
 
 .entry-content {
   margin: $space-lg 0;
