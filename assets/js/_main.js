@@ -61,3 +61,33 @@ var UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+// Load all your jQuery scripts from this point onward.
+
+// Hover effect on article blocks
+$(".mt-block").mouseenter(function() {
+    console.log(this);
+    // $( this ).find( "span" ).text( "mouse enter x " + n );
+  })
+  .mouseleave(function() {
+    console.log(this);
+});
+
+// Fade out article's cover image as scrolling
+function fader() {
+    var coverDiv = $('.cover-image'),
+        windowHeight = $(window).height(),
+        currentPos = $(document).scrollTop(),
+        coverDivView = windowHeight - (coverDiv.offset().top - currentPos),
+        op;
+    //alert(coverDiv.offset().top + " | " + currentPos + "|" + windowHeight);
+    if (coverDivView > 0) {
+        op = 1 - 1 / (windowHeight + coverDiv.height()) * coverDivView;
+        op += op;
+        console.log(op);
+        if (op > 0)
+            coverDiv.css({opacity: op});
+    }
+}
+// Event on scroll
+$(document).bind('scroll', fader);
