@@ -64,6 +64,8 @@ $(document).ready(UTIL.loadEvents);
 
 // Load all your jQuery scripts from this point onward.
 
+
+
 // Hover effect on article blocks
 $(".mt-block").mouseenter(function() {
     console.log(this);
@@ -72,6 +74,8 @@ $(".mt-block").mouseenter(function() {
   .mouseleave(function() {
     console.log(this);
 });
+
+
 
 // Fade out article's cover image as scrolling
 function fader() {
@@ -91,3 +95,4 @@ function fader() {
 }
 // Event on scroll
 $(document).bind('scroll', fader);
+

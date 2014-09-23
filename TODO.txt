@@ -1,7 +1,7 @@
 TODO: Single post page
- - full-width figure
- - post without feature image
- - image as background
+ - full-width figure [nth]
+ - post without feature image [nth]
+ - image as background [nth]
    - full-width
    - container-width
  - author & meta info at end
@@ -11,7 +11,7 @@ TODO: Single post page
  
 TODO: Other templates
  - conditional base templates
- - list view (archive, category, etc)
+ x list view (archive, category, etc)
  - static homepage
  - image type for comicbits
  - single page full-width blank state
@@ -26,3 +26,10 @@ TODO: Things that are nice to have
  - annotations (Medium style)
  - author page
  - custom plugin to insert figure shortcode
+ 
+DONE:
+ - feature cover for both articles and cards
+ - basic list / archive view
+ - typography 
+ - single post
+ 
