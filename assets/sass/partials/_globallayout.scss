@@ -1,6 +1,23 @@
 /*
  * MangaTalk global layout variables and mixins
  */
+$space-xxl: 100px;
+$space-xl: 50px;
+$space-lg: 30px;
+$space-md: 20px;
+$space-sm: 10px;
+$space-xs: 8px;
+$space-xxs: 5px;
+$row-margin: 15px;
+
+$article-content-container-lg: 700px;
+$article-content-container-padding: 15px;
+$article-content-container-md: 600px;
+$extracontent-width: 150px;
+$cover-title-pos: 40vh;
+$mt-block-height: $space-xxl * 4;
+
+
 @mixin background-size($style) {
   -webkit-background-size: $style;
      -moz-background-size: $style;
@@ -15,6 +32,13 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+@mixin absolute-center-align() {
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
 }
 @mixin pos-reset() {
   float: none;
@@ -47,22 +71,6 @@
   }
 }
 
-$space-xxl: 100px;
-$space-xl: 50px;
-$space-lg: 30px;
-$space-md: 20px;
-$space-sm: 10px;
-$space-xs: 8px;
-$space-xxs: 5px;
-$row-margin: 15px;
-
-$article-content-container-lg: 700px;
-$article-content-container-padding: 15px;
-$article-content-container-md: 600px;
-$extracontent-width: 150px;
-$cover-title-pos: 40vh;
-$mt-block-height: $space-xxl * 4;
-
 /*
  * MangaTalk global layout rules (starts with mt-)
  */
@@ -73,46 +81,7 @@ $mt-block-height: $space-xxl * 4;
   right: 0;
   top: 0;
 }
-.mt-list {
-  margin-bottom: $space-xl;
-}
-.mt-block {
-  height: $mt-block-height;
-  margin-top: $row-margin;
-  margin-bottom: $row-margin;
-  
-  .block-panel {
-    position: relative;
-    background: transparent;
-  }
-  
-  .block-cover-wrapper {
-    height: $mt-block-height;
-    backface-visibility: hidden;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .block-cover {
-    @include background-size(cover);
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    z-index: 8;
-  }
-  
-  .block-content {
-    height: 100%;
-    padding: 0 $row-margin;
-    vertical-align: middle;
-    z-index: 9;
-  }
-  .block-header {
-    width: 85%;
-    margin: $space-xl auto;
-  }
-}
+
 
 
 

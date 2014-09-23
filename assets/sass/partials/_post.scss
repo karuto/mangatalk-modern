@@ -30,15 +30,24 @@
     margin-top: $cover-title-pos;
     position: relative;
   }
+  .article-content-container {
+    @media (min-width: $screen-lg-min) { //1200px
+      width: $article-content-container-lg + $space-xl * 2;
+      max-width: $article-content-container-lg + $space-xl * 2;
+    }
+  }
 }
 .cover-content {
   margin-top: $cover-title-pos / 3;
 }
 .cover-content-wrapper {
-  padding: 50px;
-  position: absolute;               /* 2 */
-  top: 20%;                         /* 3 */
-  transform: translate(0, -20%);    /* 4 */
+  @include absolute-center-align();
+  padding: $space-xl;
+  top: 20%;                         /* Positioning */
+  transform: translate(0, -20%);    /* Positioning */
+  @media (min-width: $screen-lg-min) { //1200px
+    width: $article-content-container-lg + $space-xl * 2;
+  }
   .entry-title {
     @media (max-width: $screen-md-min) {
       font-size: 300%;
@@ -156,10 +165,25 @@
 
     }
   }
-  figure.is-fullwidth { // ignores content container, only support left
+  figure.is-fullwidth { // ignores content container, DOES NOT SUPPORT ALIGNLEFT!!
     @extend figure;
+    margin-bottom: $space-xl;
     @media (max-width: $screen-sm-min) {
       @include pos-reset();
+    }
+    @media (min-width: $screen-md-min) {
+      img {
+        max-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
+      }
+      max-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
+      margin-left: -($article-content-container-padding + $extracontent-width);
+      margin-right: -($article-content-container-padding + $extracontent-width);
+    }
+    figcaption {
+      @media (min-width: $screen-md-min) {
+        margin-left: ($extracontent-width + $article-content-container-padding);
+      }
+
     }
   }
   img.alignleft,

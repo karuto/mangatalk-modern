@@ -10,7 +10,7 @@ $link-color: #d54aaf;
 $link-hover-color: saturate(#d54aaf, 20%);
 $link-visited-color: purple;
 
-$base-font-family: 'Roboto Condensed', sans-serif;
+$base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $base-font-size: 18px;
 $base-font-weight: 300;
 
@@ -18,7 +18,7 @@ $content-font-size: 22px;
 $content-line-height: 1.45;
 $content-line-height-px: $content-line-height * $content-font-size;
 
-$subtext-font-family: 'Roboto Condensed', sans-serif;
+$subtext-font-family: $base-font-family;
 $subtext-font-size: $base-font-size * 0.75;
 $subtext-font-weight: 300;
 $subtext-line-height: 1.4;
@@ -27,7 +27,7 @@ $fixed-font-family: 'Andale Mono', AndaleMono, monospace;
 $fixed-font-size: 15px;
 $fixed-line-height: 1.2;
 
-$heading-font-family: 'Roboto Condensed', sans-serif;
+$heading-font-family: $base-font-family;
 $heading-font-weight: 700;
 
 
@@ -41,31 +41,35 @@ body {
   font-weight: $base-font-weight;
   line-height: 1.6;
 }
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 { 
   font-family: $heading-font-family; 
   font-weight: $heading-font-weight; 
 }
+h1, h2,
 .h1, .h2 { 
   line-height: 1.1; 
 }
+h3, h4,
 .h3, .h4 { 
   line-height: 1.3; 
 }
-.h1 { 
-  font-size: 400%; 
-  letter-spacing: -2px; 
+h1, .h1 { 
+  font-size: 400%; /* 18 * 4.0 = 72 */
+  letter-spacing: -0.04em; 
 }
-.h2 { 
-  font-size: 250%; 
-  letter-spacing: -1px; 
+h2, .h2 { /* entry title, hero text, etc */
+  font-size: 333%; /* 18 * 3.3 = 60 */
+  letter-spacing: -0.04em; 
 }
-.h3 { 
-  font-size: 200%; 
+h3, .h3 { /* chapter title in content */
+  font-size: 200%; /* 18 * 2.0 = 36 */
+  letter-spacing: -0.02em; 
 }
-.h4 { 
-  font-size: 180%; 
+h4, .h4 { /* not sure yet */
+  font-size: 166%; /* 18 * 1.6 = 30 */
 }
-.h5 { 
+h5, .h5 { 
   font-size: 130%; 
 }
 .fixed { 
@@ -95,12 +99,6 @@ body {
 .ordered-list { 
   list-style: decimal; 
 }
-.entry-content p {
-  font-size: $content-font-size;
-  line-height: $content-line-height;
-  margin-bottom: $content-line-height-px;
-  letter-spacing: 0.01rem;
-}
 figcaption,
 figcaption.alignleft,
 figcaption.alignright {
@@ -117,11 +115,53 @@ blockquote {
 }
 blockquote.large {
   font-weight: 400;
-  font-size: 180%;
+  font-size: 180%; /* 32px */
   line-height: 1.4;
   text-align: center;
   padding: 0;
   letter-spacing: 0.01rem;
+  transition: margin .1s;
+}
+
+/* Content specific styles */
+.page-header {
+  .h2 {
+    font-weight: 300;
+  }
+}
+.hentry {
+  .entry-title {
+    font-weight: 700;
+  }
+  .entry-subtitle {
+    font-weight: 300;
+  }
+}
+.mt-block {
+  .entry-title {
+    
+  }
+  .entry-summary {
+    
+  }
+}
+.entry-content {
+  p {
+    font-size: $content-font-size;
+    line-height: $content-line-height;
+    margin-bottom: $content-line-height-px;
+    letter-spacing: 0.01rem;
+    line-height: 1.5;
+  }
+  h2, .h2 {
+    margin-top: $space-xxl;
+  }
+  h3, .h3 {
+    margin-top: $space-xl;
+  }
+  h4, .h4 {
+    margin-top: $space-lg;
+  }
 }
 
 
@@ -144,16 +184,16 @@ button  { -webkit-font-smoothing: antialiased; }
 html    { font: 100%/1.5 Arial, sans-serif; }
 
 // Headings
-h1      { font-size: 2em;       /* 2*16 = 32 */         }
-h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
-h3      { font-size: 1.17em;    /* 1.17*16 = 18.72 */   }
-h4      { font-size: 1em;       /* 1*16 = 16 */         }
-h5      { font-size: 0.83em;    /* 0.83*16 = 13.28 */   }
-h6      { font-size: 0.75em;    /* 0.75*16 = 12 */      }
+//h1      { font-size: 2em;       /* 2*16 = 32 */         }
+//h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
+//h3      { font-size: 1.17em;    /* 1.17*16 = 18.72 */   }
+//h4      { font-size: 1em;       /* 1*16 = 16 */         }
+//h5      { font-size: 0.83em;    /* 0.83*16 = 13.28 */   }
+//h6      { font-size: 0.75em;    /* 0.75*16 = 12 */      }
 
 // Paragraphs spacing
-p { line-height: 1.5;
-    margin: 0 0 1em;    }
+//p { line-height: 1.5;
+//    margin: 0 0 1em;    }
 
 // Word breaks
 p       {   word-break: break-all;

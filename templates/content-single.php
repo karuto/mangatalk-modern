@@ -15,8 +15,8 @@
 
   <div class="cover-content article-content-container">
     <div class="cover-content-wrapper">
-      <h1 class="h1 entry-title"><?php the_title(); ?></h1>
-      <h3><?php the_excerpt(); ?></h3>
+      <h1 class="h2 entry-title"><?php the_title(); ?></h1>
+      <h4 class="h4 entry-subtitle"><?php the_excerpt(); ?></h4>
     </div>
   </div>
 

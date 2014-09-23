@@ -8,23 +8,36 @@ $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$body-bg-color: #f5f5f5;
 $title-color-on-dark-bg: white;
-$white-tint: rgba(255, 255, 255, 0.5);
+$white-tint: rgba(255, 255, 255, 0.4);
 $grey-tint: rgba(0, 0, 0, 0.4);
+$grey-tint-darker: rgba(0, 0, 0, 0.6);
+$red-tint: rgba(255, 0, 0, 0.4);
 $text-color: #333;
 $quiet-color: #ccc;
 $loud-color: #000;
 $contrast-color: #fff;
 $heading-color: #111;
 $cover-bg-color: #413c48;
-
 $link-visited-color: purple;
+
+@mixin gradient($from-color, $to-color) {
+    background-color: mix($from-color, $to-color); /* Fallback */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color, $to-color); 
+    background-image:    -moz-linear-gradient(top, $from-color, $to-color);
+    background-image:     -ms-linear-gradient(top, $from-color, $to-color);
+    background-image:      -o-linear-gradient(top, $from-color, $to-color);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
+}
+
 
 /*
  * MangaTalk color rules
  */
 body {
-  background-color: #f5f5f5;
+  background-color: $body-bg-color;
 }
 a {
   color: $link-color;
@@ -46,19 +59,45 @@ a {
 //  text-rendering: optimizelegibility;
 }
 .mt-banner {
-  background-color: $white-tint;
+  background-color: transparent;
+  background-image: url('http://i.imgur.com/JsQrMdo.png');
+  background-repeat: repeat-x;
+  background-position: 0 75%; /* the smaller this amount is the darker it gets */
+  border-color: transparent;
+  color: $contrast-color;
+  font-weight: 700;
+  
+  &:hover {
+    background-color: $grey-tint;
+    background-image: none;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form { // override Bootstrap's
+    border-color: transparent;
+  }
+  .navbar {
+    border: 0px solid transparent;
+  }
+  .navbar-nav>.open>a, 
+  .navbar-nav>.open>a:hover, 
+  .navbar-nav>.open>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  .dropdown-menu>li>a:hover, 
+  .dropdown-menu>li>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  .navbar-nav > li > a {
+    color: $contrast-color;
+  }
+  .dropdown-menu > li > a {
+    color: $contrast-color;
+  }
+  .navbar-brand {
+    color: $contrast-color;
+  }
   .dropdown-menu {
-    background-color: $white-tint;
+    background-color: $grey-tint;
   }
-}
-.article-cover {
-  background-color: $gray-darker;
-  .cover-content {
-    color: $title-color-on-dark-bg;
-  }
-}
-.cover-content-wrapper {
-  background-color: $grey-tint;
 }
 .mt-block {
   .block-content {
@@ -68,4 +107,13 @@ a {
       color: $contrast-color;
     }
   }
+}
+.article-cover {
+  background-color: $body-bg-color;
+  .cover-content {
+    color: $title-color-on-dark-bg;
+  }
+}
+.cover-content-wrapper {
+  background-color: $red-tint;
 }
