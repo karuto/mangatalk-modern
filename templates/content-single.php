@@ -17,6 +17,12 @@
     <div class="cover-content-wrapper">
       <h1 class="h2 entry-title"><?php the_title(); ?></h1>
       <h4 class="h4 entry-subtitle"><?php the_excerpt(); ?></h4>
+      
+      <h4 class="h4 entry-comment-count alignright">
+        <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
+        &nbsp;
+        <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
+      </h4>
     </div>
   </div>
 

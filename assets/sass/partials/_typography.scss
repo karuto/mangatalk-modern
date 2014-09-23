@@ -138,6 +138,11 @@ blockquote.large {
   .entry-subtitle {
     font-weight: 300;
   }
+  .entry-comment-count {
+    .glyphicon {
+      top: 7px; // override to align with text
+    }
+  }
 }
 .mt-block {
   .entry-title {
