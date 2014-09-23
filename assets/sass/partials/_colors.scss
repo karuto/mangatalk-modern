@@ -18,6 +18,9 @@ $text-color: #333;
 $quiet-color: #ccc;
 $loud-color: #000;
 $contrast-color: #fff;
+$contrast-color-darker: darken($contrast-color, 15%);
+
+$muted-gery-color: #82888a;
 $heading-color: #111;
 $cover-bg-color: #413c48;
 $link-visited-color: purple;
@@ -57,6 +60,9 @@ a {
 .text-contrast {
   color: $contrast-color;
 //  text-rendering: optimizelegibility;
+}
+.text-muted {
+  color: $muted-gery-color;
 }
 .mt-banner {
   background-color: transparent;
@@ -118,5 +124,15 @@ a {
   background-color: $red-tint;
 }
 .mt-footer {
-  background-color: $grey-tint-darker;
+  background-image: url(https://a1.muscache.com/airbnb/static/footer/background-262fb098625ce53df8c32efeaea46822.png);
+  background-color: #2b2d2e;  
+  color: $contrast-color;
+  
+  a {
+    color: $contrast-color;
+    &:hover {
+     color: $contrast-color-darker; 
+    }
+  }
+  
 }

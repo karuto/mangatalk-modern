@@ -18,10 +18,12 @@ $content-font-size: 22px;
 $content-line-height: 1.45;
 $content-line-height-px: $content-line-height * $content-font-size;
 
+$medium-font-size: 16px;
+
 $subtext-font-family: $base-font-family;
 $subtext-font-size: $base-font-size * 0.75;
 $subtext-font-weight: 300;
-$subtext-line-height: 1.4;
+$subtext-line-height: 1.43;
 
 $fixed-font-family: 'Andale Mono', AndaleMono, monospace;
 $fixed-font-size: 15px;
@@ -164,6 +166,24 @@ blockquote.large {
   }
 }
 
+.mt-footer {
+  font-weight: $subtext-font-weight;
+  font-size: $subtext-font-size; /* 14px; */
+  line-height: $subtext-line-height;
+  .footer-header {
+    font-size: $medium-font-size;
+  }
+}
+.mt-brand-capsule {
+   h5 {
+     line-height: $subtext-line-height;     
+   }
+}
+.signature {
+  text-align: center;
+  font-weight: 300;
+  font-size: $subtext-font-size; /* 14px; */
+}
 
 
 

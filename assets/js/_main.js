@@ -68,11 +68,11 @@ $(document).ready(UTIL.loadEvents);
 
 // Hover effect on article blocks
 $(".mt-block").mouseenter(function() {
-    console.log(this);
+    // console.log(this);
     // $( this ).find( "span" ).text( "mouse enter x " + n );
   })
   .mouseleave(function() {
-    console.log(this);
+    // console.log(this);
 });
 
 
@@ -88,7 +88,7 @@ function fader() {
     if (coverDivView > 0) {
         op = 1 - 1 / (windowHeight + coverDiv.height()) * coverDivView;
         op += op;
-        console.log(op);
+        // console.log(op);
         if (op > 0)
             coverDiv.css({opacity: op});
     }

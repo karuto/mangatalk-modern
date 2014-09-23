@@ -84,8 +84,48 @@ $mt-block-height: $space-xxl * 4;
 
 .mt-footer {
   margin-top: $space-xxl;
+  padding-top: $space-xl;
+  a {
+    
+  }
 }
-
-
+.footer-block {
+}
+ul.footer-list > li {
+  list-style-type: none;
+}
+.footer-header {
+  display: block;
+  margin-bottom: $space-sm;
+}
+.footer-list {
+  list-style-type: none;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+.footer-divider {
+  margin-top: $space-xl;
+  margin-bottom: $space-lg;
+  border: 0;
+  border-top: 1px solid #dce0e0;
+}
+.mt-brand-capsule {
+  margin-bottom: $space-lg;
+}
+.mt-about-us {
+  
+}
+.mt-connect-us {
+  
+}
+.signature {
+  display: block;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: $space-xl;
+}
 
 
