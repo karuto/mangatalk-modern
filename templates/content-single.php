@@ -17,12 +17,14 @@
     <div class="cover-content-wrapper">
       <h1 class="h2 entry-title"><?php the_title(); ?></h1>
       <h4 class="h4 entry-subtitle"><?php the_excerpt(); ?></h4>
-      
+            
       <h4 class="h4 entry-comment-count alignright">
+        By Karuto &nbsp;
         <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
         &nbsp;
         <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
       </h4>
+      
     </div>
   </div>
 
@@ -31,6 +33,11 @@
   ?>
     
 </header>
+
+  <!-- <div class="author-avatar">
+    <?php echo get_avatar( get_the_author_meta( 'user_email' ), 128); ?>
+  </div> -->
+
 
 <div class="entry-content article-content-container" data-spy="scroll" data-target="#myScrollspy">
   <?php the_content(); ?>

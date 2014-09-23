@@ -34,3 +34,9 @@ DONE:
  - typography 
  - single post
  
+MVP:
+ - single post template complete (comment, other article links etc)
+ - most basic blank page template
+ - header, footer, basic, no need for search yet
+ - archive page, very similar home page
+ - CONVERSIONS
