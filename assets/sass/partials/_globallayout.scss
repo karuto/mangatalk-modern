@@ -9,6 +9,13 @@
       background-position: center;
 }
 
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 @mixin pos-reset() {
   float: none;
   width: auto;
@@ -47,13 +54,14 @@ $space-md: 20px;
 $space-sm: 10px;
 $space-xs: 8px;
 $space-xxs: 5px;
+$row-margin: 15px;
 
 $article-content-container-lg: 700px;
 $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
 $extracontent-width: 150px;
 $cover-title-pos: 40vh;
-
+$mt-block-height: $space-xxl * 4;
 
 /*
  * MangaTalk global layout rules (starts with mt-)
@@ -69,13 +77,50 @@ $cover-title-pos: 40vh;
   margin-bottom: $space-xl;
 }
 .mt-block {
-  height: 400px;
-  overflow: hidden;
+  height: $mt-block-height;
+  margin-top: $row-margin;
+  margin-bottom: $row-margin;
+  background-color: #fff;
+  
+  .block-panel {
+    position: relative;
+    background: transparent;
+  }
+  
+  .block-cover-wrapper {
+    height: $mt-block-height;
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+  }
   
   .block-cover {
-    @extend .mt-block;
-    height: 100%;
+    @include background-size(cover);
+    @include absolute();
+    transition: opacity ease-in-out 200ms;
+    z-index: 8;
+    
+    &:after {
+      content: '';
+      clear: both;
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.2); // slight shadow / tint
+  //    z-index: 1;
+    }
   }
+  
+  .block-content {
+    height: 100%;
+    padding: 0 $row-margin;
+    vertical-align: middle;
+    z-index: 10;
+  }
+  
 }
 
 

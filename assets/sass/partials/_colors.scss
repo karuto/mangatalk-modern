@@ -14,7 +14,9 @@ $semitrans-white: rgba(255, 255, 255, 0.5);
 $text-color: #333;
 $quiet-color: #ccc;
 $loud-color: #000;
+$contrast-color: #fff;
 $heading-color: #111;
+$cover-bg-color: #413c48;
 
 $link-visited-color: purple;
 
@@ -29,9 +31,16 @@ a {
     color: $link-hover-color;
   }
 }
-
+.cover-image,
+.block-cover {
+  background-color: $cover-bg-color;
+}
 .is-darkBackgrounded {
   
+}
+.text-contrast {
+  color: $contrast-color;
+//  text-rendering: optimizelegibility;
 }
 
 .mt-banner {
