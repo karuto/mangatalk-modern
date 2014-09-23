@@ -16,8 +16,9 @@ TODO: Other templates
  - image type for comicbits
  - single page full-width blank state
  - header
- - footer
+ x footer
  - search
+ - 404 page
  
 TODO: Things that are nice to have
  - customizable sidebar

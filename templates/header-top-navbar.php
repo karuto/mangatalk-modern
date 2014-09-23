@@ -16,6 +16,12 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav'));
         endif;
       ?>
-    </nav>
+      
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+      
+    </nav><!-- .navbar-collapse -->
+    
   </div>
 </header>
