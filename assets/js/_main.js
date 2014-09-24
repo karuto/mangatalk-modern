@@ -66,10 +66,22 @@ $(document).ready(UTIL.loadEvents);
 
 
 
+var isNativeNormal;
 // Hover / toggle effect on top banner
-$("#mt-banner").hover(function () {
-  // $(this).removeClass("navbar-inverse");
-  $(this).addClass("is-normal");
+$("#mt-banner").mouseenter(function () {
+  if ($(this).hasClass("is-normal")) {
+    isNativeNormal = true;
+  } else {
+    isNativeNormal = false;
+    $(this).removeClass("is-immersive");
+    $(this).addClass("is-normal");
+  }
+});
+$(".mt-banner").mouseleave(function () {
+  if (!isNativeNormal) { // immersive by default
+    $(this).addClass("is-immersive");
+    $(this).removeClass("is-normal");
+  }
 });
 
 
@@ -86,6 +98,7 @@ $("#nav-menu-switch").click(function () {
     $("#mt-banner").css("position", "absolute");
   }
 });
+
 
 
 // Hover / toggle effect on article blocks

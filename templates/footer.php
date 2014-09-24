@@ -1,3 +1,66 @@
+<footer class="mt-swatches">
+  <div class="container">
+    
+    <h4>Primary colors - Light</h4>
+    <p>The primary application colors are neutralized to allow the sparse use of the primary brand color and content to take center stage.</p>
+    <div class="row">
+    <div class="cb col-md-2 cb-white">
+      <strong>White</strong>
+      <p>Pure white, used for container backgrounds inside body and hero text in image background blocks.
+      </p>
+    </div>  
+    <div class="cb col-md-2 cb-air">
+      <strong>Air</strong>
+      <p>Extra light grey, barely distinguishable from white, used as very subtle backgrounds for container headers and input fields. Pair with white and steam.</p>
+    </div>
+    <div class="cb col-md-2 cb-steam">
+      <strong>Steam</strong>
+      <p>Very light grey, used as site background for a slightly less contrast for large text blocks.</p>
+    </div>
+    <div class="cb col-md-2 cb-fog">
+      <strong>Fog</strong>
+      <p>light grey, can be used as text color in darker backgrounds (for less contrast than white), and placeholder color for white- or air-colored input fields (not steam).</p>
+    </div>
+    </div><!-- .row --> 
+    
+    <h4>Primary colors - Mid to dark</h4>
+    <p>The primary application colors are neutralized to allow the sparse use of the primary brand color and content to take center stage.</p>
+    <div class="row">
+    <div class="cb col-md-2 cb-dust">
+      <strong>Titanite Dust</strong>
+      <p>Medium grey. Faded grey text (unselected, disabled etc) on white- or steam-colored background. Divider color.</p>
+    </div>
+    <div class="cb col-md-2 cb-shard">
+      <strong>Titanite Shard</strong>
+      <p>Dark grey. Regular grey text on white- or steam-colored background. Can also be used as background color for light colored text.</p>
+    </div>
+    <div class="cb col-md-2 cb-chunk">
+      <strong>Titanite Chunk</strong>
+      <p>Extra dark grey. Usually paired with steam-colored whitespace and fog-colored text.</p>
+    </div>
+    <div class="cb col-md-2 cb-slab">
+      <strong>Titanite Slab</strong>
+      <p>Darkest midnight grey. Base text color for reader's contrast.</p>
+    </div>
+    </div><!-- .row -->
+    
+    <!-- <h4>Primary colors</h4>
+    <h5>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</h5> -->
+    <div class="row">
+    <!-- <<div class="cb col-md-1 cb-"></div>
+    <div class="cb col-md-1 cb-"></div>
+    <div class="cb col-md-1 cb-"></div>
+    <div class="cb col-md-1 cb-"></div>
+    <div class="cb col-md-1 cb-"></div>
+    <div class="cb col-md-1 cb-"></div>   -->
+    </div><!-- .row -->
+    
+    
+  </div>
+</footer>
+
+
+
 <footer class="mt-footer content-info" role="contentinfo">
   <div class="container">
     <div class="row">

@@ -1,13 +1,95 @@
 /*
  * MangaTalk color variables
  * NOTE: The actual color defs should be copied to bootstrap/variables if duplicate
+ * Naming convention: $base-[context]-[element]-[color/purpose]-[shade/state] (base means globally applicable)
+ * Example: $base-container-bg-grey-darker
+ * Example: $base-banner-text-brand-faded
  */
 
-/* MangaTalk official color guide 
+/* MangaTalk official color guide, HSB (hue, saturation, brightness) values in the comments
  * 
  */
-$white: #FFFFFF;
-$slate-grey: #F0F1F2;
+
+/* Light tones */
+$mt-white: #FFFFFF; // 0, 0, 100%
+
+$mt-air: #FAFAFA; // 0, 0, 97%
+$base-container-bg-extralight: $mt-air;
+
+$mt-steam: #F2F2F2; // 0, 0, 95%
+$base-site-bg: $mt-steam;
+
+$mt-fog: #CCCCCC; // 0, 0, 80%
+$base-text-light-on-dark-bg: $mt-fog;
+$base-form-input-placeholder: $mt-fog;
+
+/* Shades of grey */
+$mt-titanite-dust: #999999; // 0, 0, 60%
+$base-text-grey-faded: $mt-titanite-dust;
+$base-divider-color: $mt-titanite-dust;
+
+$mt-titanite-shard: #595959; // 0, 0, 35%
+$base-module-text-grey-normal: $mt-titanite-shard;
+$base-container-bg-dark: $mt-titanite-shard;
+
+$mt-titanite-chunk: #454545; // 0, 0, 25%
+$base-container-bg-darker: $mt-titanite-chunk;
+
+$mt-titanite-slab: #333333; // 0, 0, 20%
+$base-reading-text-color: $mt-titanite-slab;
+
+$mt-brand: #E84141;
+$mt-secondary: #E88D41;
+$mt-contrast: #278b8b;
+
+.mt-swatches {
+  .cb {
+    display: block;
+    height: 300px;
+    border: 1px solid #e5e5e5;
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+  .cb-white {
+    background-color: $mt-white;
+  }
+  .cb-air {
+    background-color: $mt-air;
+  }
+  .cb-steam {
+    background-color: $mt-steam;
+  }
+  .cb-fog {
+    background-color: $mt-fog;
+  }
+  .cb-dust {
+    background-color: $mt-titanite-dust;
+    color: #000;
+  }
+  .cb-shard {
+    background-color: $mt-titanite-shard;
+    color: #000;
+  }
+  .cb-chunk {
+    background-color: $mt-titanite-chunk;
+    color: #000;
+  }
+  .cb-slab {
+    background-color: $mt-titanite-slab;
+    color: #000;
+  }
+  .cb-secondary {
+    background-color: $mt-secondary;
+  }
+  .cb-contrast {
+    background-color: $mt-contrast;
+  }
+}
+
+
+
 
 /* Before */
 $brand-primary:         #ce5333;
@@ -17,7 +99,7 @@ $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 $body-text-color: #333;
-$body-bg-color: #f5f5f5;
+$body-bg-color: #F2F2F2;
 $title-color-on-dark-bg: #fff;
 $white-tint: rgba(255, 255, 255, 0.4);
 $grey-tint: rgba(0, 0, 0, 0.4);
