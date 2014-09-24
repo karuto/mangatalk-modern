@@ -66,6 +66,28 @@ $(document).ready(UTIL.loadEvents);
 
 
 
+// Hover / toggle effect on top banner
+$("#mt-banner").hover(function () {
+  // $(this).removeClass("navbar-inverse");
+  $(this).addClass("is-normal");
+});
+
+
+
+// Toggle fixed top banner
+$("#nav-menu-switch").click(function () {
+  if ($(this).hasClass("glyphicon-chevron-down")) {
+    $(this).removeClass("glyphicon-chevron-down");
+    $(this).addClass("glyphicon-chevron-up");
+    $("#mt-banner").css("position", "fixed");
+  } else {
+    $(this).removeClass("glyphicon-chevron-up");
+    $(this).addClass("glyphicon-chevron-down");
+    $("#mt-banner").css("position", "absolute");
+  }
+});
+
+
 // Hover / toggle effect on article blocks
 $(".mt-front").mouseenter(function () {
   $(this).addClass("coverActive");
@@ -75,6 +97,8 @@ $(".mt-front").mouseleave(function () {
   $(this).addClass("coverInactive");
   $(this).removeClass("coverActive");
 });
+
+
 
 // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 // Hover / toggle effect on article blocks
@@ -111,7 +135,7 @@ $("section.mt-block").mouseleave(function () {
 
 // Fade out article's cover image as scrolling
 function fader() {
-    var coverDiv = $('.cover-image');
+    var coverDiv = $('.article-front .cover-image');
     if (coverDiv) {
       var windowHeight = $(window).height(),
           currentPos = $(document).scrollTop(),

@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); ?>
 <article <?php post_class(); ?>>  
 
-<header>
+<header class="article-front">
   <?php // Retrieve cover image URL then set header's background
   if ( has_post_thumbnail() ) {
     $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0];

@@ -2,14 +2,23 @@
  * MangaTalk color variables
  * NOTE: The actual color defs should be copied to bootstrap/variables if duplicate
  */
+
+/* MangaTalk official color guide 
+ * 
+ */
+$white: #FFFFFF;
+$slate-grey: #F0F1F2;
+
+/* Before */
 $brand-primary:         #ce5333;
 $brand-success:         #5cb85c;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
+$body-text-color: #333;
 $body-bg-color: #f5f5f5;
-$title-color-on-dark-bg: white;
+$title-color-on-dark-bg: #fff;
 $white-tint: rgba(255, 255, 255, 0.4);
 $grey-tint: rgba(0, 0, 0, 0.4);
 $grey-tint-lighter: rgba(0, 0, 0, 0.2);
@@ -65,7 +74,7 @@ a {
 .text-muted {
   color: $muted-gery-color;
 }
-.mt-banner {
+.mt-banner.is-immersive { // default state
   background-color: transparent;
   background-image: url('http://i.imgur.com/JsQrMdo.png');
   background-repeat: repeat-x;
@@ -106,6 +115,31 @@ a {
     background-color: $grey-tint;
   }
 }
+.mt-banner.is-normal { // when hovered, and when not on full-width covers
+  background-color: #fff;
+  color: $body-text-color;
+  .navbar-nav>.active>a, 
+  .navbar-nav>.active>a:hover, 
+  .navbar-nav>.active>a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 5px solid ;
+  }
+  .navbar-nav>.open>a, 
+  .navbar-nav>.open>a:hover, 
+  .navbar-nav>.open>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  .dropdown-menu>li>a:hover, 
+  .dropdown-menu>li>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  
+}
+.mt-front {
+  
+}
+
 .mt-block {
   .block-content {
     background-color: $grey-tint;

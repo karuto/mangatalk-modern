@@ -1,4 +1,10 @@
-<header class="mt-banner banner navbar navbar-inverse navbar-static-top" role="banner">
+
+<?php if (is_front_page() ): /* A cover exists, so need immersive nav */ ?>
+<header id="mt-banner" class="mt-banner banner navbar navbar-static-top is-immersive" role="banner">
+<?php else: /* Normal page, don't need transparent nav */ ?>
+<header id="mt-banner" class="mt-banner banner navbar navbar-default navbar-static-top is-normal" role="banner">
+<?php endif; ?>
+
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,8 +24,8 @@
       ?>
       
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
-         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+         <li><a href="#"><span id="nav-menu-switch" class="glyphicon glyphicon-chevron-down"></span></a></li>
+         <li><a href="#"><span id="nav-search" class="glyphicon glyphicon-search"></span></a></li>
       </ul>
       
     </nav><!-- .navbar-collapse -->
