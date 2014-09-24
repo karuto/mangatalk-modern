@@ -52,11 +52,11 @@
       <p></p>
     </div>
     <div class="cb col-md-2 cb-brand-n">
-      <strong>Brand normal</strong>
+      <strong>Izalith - Brand normal</strong>
       <p></p>
     </div>
     <div class="cb col-md-2 cb-brand-d">
-      <strong>Brand darken</strong>
+      <strong>Rosen - Brand darken</strong>
       <p></p>
     </div>
     </div><!-- .row -->
@@ -65,15 +65,32 @@
     <p>Same hue, generating faded, regular and darken: brightness +30%, 0, -30%. Generate consistent chroma colors: keep Saturation within +/-25%.</p>
     <div class="row">
     <div class="cb col-md-2 cb-contrast-f">
-      <strong>Contrast faded</strong>
+      <strong>Amano - Contrast faded</strong>
       <p></p>
     </div>
     <div class="cb col-md-2 cb-contrast-n">
-      <strong>Contrast normal</strong>
+      <strong>Aria - Contrast normal</strong>
       <p></p>
     </div>
     <div class="cb col-md-2 cb-contrast-d">
-      <strong>Contrast darken</strong>
+      <strong>Aquamarine - Contrast darken</strong>
+      <p></p>
+    </div>
+    </div><!-- .row -->
+    
+    <h4>Primary colors - Supplementary colors</h4>
+    <p>Same hue, generating faded, regular and darken: brightness +30%, 0, -30%. Generate consistent chroma colors: keep Saturation within +/-25%.</p>
+    <div class="row">
+    <div class="cb col-md-2 cb-y">
+      <strong>Xanthous</strong>
+      <p></p>
+    </div>
+    <div class="cb col-md-2 cb-g">
+      <strong>Plummed</strong>
+      <p></p>
+    </div>
+    <div class="cb col-md-2 cb-b">
+      <strong>Tamriel</strong>
       <p></p>
     </div>
     </div><!-- .row -->
