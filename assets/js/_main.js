@@ -65,13 +65,27 @@ $(document).ready(UTIL.loadEvents);
 // Load all your jQuery scripts from this point onward.
 
 
+
+// Hover / toggle effect on article blocks
+$(".mt-front").mouseenter(function () {
+  $(this).addClass("coverActive");
+  $(this).removeClass("coverInactive");
+});
+$(".mt-front").mouseleave(function () {
+  $(this).addClass("coverInactive");
+  $(this).removeClass("coverActive");
+});
+
 // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 // Hover / toggle effect on article blocks
 $("section.mt-block").addClass("is-inactive");
 $("section.mt-block").mouseenter(function () {
   
+  // Tone down the block so that we can see clearly
+  $(this).animate({opacity:"1"}, "slow");
+  
   // Title needs to make room for entry summary and meta, move up
-  $(this).find(".entry-title").animate({marginTop:"20px"});
+  $(this).find(".entry-title").animate({marginTop:"20px"}, "slow");
   
   // Roll in entry summary and meta
   $(this).find(".entry-summary").fadeIn(1000);
@@ -81,12 +95,15 @@ $("section.mt-block").mouseenter(function () {
 });
 $("section.mt-block").mouseleave(function () {
   
+  // Restore its opacity
+  $(this).animate({opacity:"0.8"}, "slow");
+  
   // Roll out entry summary and meta first!
   $(this).find(".entry-summary").fadeOut(1000);
   $(this).find(".entry-meta").fadeOut(1000);
 
   // Now entry title can reset itself back to original margin
-  $(this).find(".entry-title").animate({marginTop:"175px"});
+  $(this).find(".entry-title").animate({marginTop:"175px"}, "slow");
   // $(this).toggleClass("is-inactive");
 });
 

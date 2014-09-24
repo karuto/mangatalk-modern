@@ -52,8 +52,8 @@
   }
 }
 .is-inactive {
+  opacity: 0.8;
   .block-header {
-    width: 80%;
     margin: $space-xxl auto;
   }
   .entry-title {

@@ -1,4 +1,34 @@
-<?php get_template_part('templates/page', 'header'); ?>
+
+<header class="mt-front">
+<section class="article-cover">
+  <div class="cover-image" style="background-image: url('http://i.imgur.com/zk0ecX8.jpg');">
+    
+    <div class="cover-content container">
+      <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8">
+        
+      </div>
+      <div class="cover-content-wrapper col-xs-12 col-sm-12 col-md-8">
+        <h1 class="h2 entry-title">TITLE</h1>
+        <h4 class="h4 entry-subtitle">EXCERPT</h4>
+            
+        <!-- <h4 class="h4 entry-comment-count alignright">
+          By Author &nbsp;
+          <span class="glyphicon glyphicon-heart"></span>3
+          &nbsp;
+          <span class="glyphicon glyphicon-comment"></span>3
+        </h4> -->
+      
+      </div><!-- .cover-content-wrapper -->
+      </div><!-- .row -->
+    </div><!-- .cover-content -->
+    
+  </div><!-- .cover-image -->
+</section>
+</header>
+
+
+
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
@@ -8,7 +38,7 @@
 <?php endif; ?>
 
 
-<div class="mt-list">
+<div class="mt-list container">
 <?php $count = 1; $rows = 0; ?>
 <?php while (have_posts()) : the_post(); ?>
   <?php 

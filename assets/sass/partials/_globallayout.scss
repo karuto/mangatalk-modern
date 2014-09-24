@@ -14,10 +14,15 @@ $article-content-container-lg: 700px;
 $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
 $extracontent-width: 150px;
+$frontpage-cover-dimension: 50vh;
 $cover-title-pos: 40vh;
 $mt-block-height: $space-xxl * 4.5;
 
-
+@mixin border-box() {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
 @mixin background-size($style) {
   -webkit-background-size: $style;
      -moz-background-size: $style;
@@ -74,6 +79,9 @@ $mt-block-height: $space-xxl * 4.5;
 /*
  * MangaTalk global layout rules (starts with mt-)
  */
+body {
+  min-height: 1000px;
+}
 .mt-banner {
   margin-bottom: 0;
   position: absolute;
@@ -82,8 +90,39 @@ $mt-block-height: $space-xxl * 4.5;
   top: 0;
 }
 
+/* Homepage cover styles */
+.mt-front {
+  .article-cover {
+    height: $mt-block-height;
+    .cover-image {
+      height: $mt-block-height;
+    }
+    .cover-content {
+      margin-top: $mt-block-height * 0.6;
+    }
+  }
+  .row > .cover-content-wrapper {
+    @include border-box();
+    margin-top: $mt-block-height / 4;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 66.66667%; /* enforce col-md-8 */
+    background-color: transparent;
+    .entry-title {
+      
+    }
+    .entry-subtitle {
+      
+    }
+    .entry-comment-count {
+      
+    }
+  }
+}
+
+/* Footer styles */
 .mt-footer {
-  min-height: 1000px;
   margin-top: $space-xxl;
   padding-top: $space-xl;
   a {
