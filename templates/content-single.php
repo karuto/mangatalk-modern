@@ -43,16 +43,26 @@
   <?php the_content(); ?>
 </div>
 
-<section class="container entry-extra-container">
-  <?php comments_template('/templates/comments.php'); ?>
+<div class="entry-extra-container">
+<section class="container">
+  <div class="row">
+    
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <?php comments_template('/templates/comments.php'); ?>
+    </div>
+    
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <?php if (roots_display_sidebar()) : ?>
+        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+          <?php include roots_sidebar_path(); ?>
+        </aside><!-- /.sidebar -->
+      <?php endif; ?>
+      
+    </div>
   
-  <?php if (roots_display_sidebar()) : ?>
-    <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-      <?php include roots_sidebar_path(); ?>
-    </aside><!-- /.sidebar -->
-  <?php endif; ?>
-
+  </div>
 </section>
+</div>
 
 </article>
 <?php endwhile; ?>

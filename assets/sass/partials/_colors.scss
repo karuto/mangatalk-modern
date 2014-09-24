@@ -52,7 +52,7 @@ $mt-titanite-dust: #999999; // 0, 0, 60%
 
 $base-text-grey-faded: $mt-titanite-dust;
 $base-divider-color: $mt-titanite-dust;
-
+$base-container-bg-grey-medium: $mt-titanite-dust;
 
 
 /* Dark grey */
@@ -205,6 +205,9 @@ a {
 .block-cover {
   background-color: $base-container-bg-light;
 }
+
+
+/* Banner nav */
 .mt-banner.is-immersive { // default state
   background-color: transparent;
   background-image: url('http://i.imgur.com/JsQrMdo.png');
@@ -281,6 +284,10 @@ a {
   }
   
 }
+
+
+
+/* Homepage cover */
 .mt-front.coverActive {
   .cover-image-inner {
     opacity: 1;
@@ -311,6 +318,7 @@ a {
   }
 }
 
+/* Block */
 .mt-block {
   .text-contrast {
     color: $contrast-color-on-image-bg;
@@ -329,6 +337,9 @@ a {
     color: $contrast-color-on-image-bg;
   }
 }
+
+
+/* Content */
 .cover-content-wrapper {
   background-color: $red-tint;
 }
@@ -336,6 +347,14 @@ a {
   color: $base-reading-text-color;
 }
 
+
+/* Entry meta and extra */
+.entry-extra-container {
+  background-image: url(http://i.imgur.com/849Csp9.png);
+  background-color: $base-container-bg-grey-medium;
+}
+
+/* Footer */
 .mt-footer {
   background-image: url(http://i.imgur.com/dmiiS4a.png);
   background-color: #2b2d2e;  

@@ -1,6 +1,8 @@
 /*
  * MangaTalk post page layout rules
  */
+
+/* Cover styles */
 .article-cover {
   height: 100vh;
   margin-bottom: $space-xl;
@@ -61,6 +63,9 @@
   border-radius: 50%;
 }
 
+
+
+/* Content styles */
 .entry-content {
   margin: $space-lg 0;
   img {
@@ -271,4 +276,11 @@ blockquote.large {
   @media (min-width: $screen-lg-min) { //1200px
     max-width: $article-content-container-lg;
   }
+}
+
+
+
+/* Meta and extra styles */
+.entry-extra-container {
+  min-height: $space-xxl;
 }
