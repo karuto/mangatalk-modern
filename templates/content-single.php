@@ -34,37 +34,51 @@
     
 </header>
 
-  <!-- <div class="author-avatar">
-    <?php echo get_avatar( get_the_author_meta( 'user_email' ), 128); ?>
-  </div> -->
+
 
 
 <div class="entry-content article-content-container" data-spy="scroll" data-target="#myScrollspy">
   <?php the_content(); ?>
-  
-  <div class="divider"></div>
 </div>
 
-<div class="entry-extra-container">
+<div class="entry-meta-container article-content-container">
+  <div class="divider"></div>
+  
+  <div class="author-container">
+    <div class="avatar">
+      <?php echo get_avatar( get_the_author_meta( 'user_email' ), 80); ?>
+    </div>
+    <div class="author-name">
+      <?php echo get_the_author_link(); ?>
+    </div>
+    <p class="author-bio">
+      <?php echo get_the_author_meta('description', $post->post_author ); ?> 
+    </p>
+    
+  </div>
+</div>
+
+<!-- <div class="entry-extra-container">
 <section class="container">
   <div class="row">
-    
+
     <div class="col-sm-12 col-md-6 col-lg-8">
       <?php comments_template('/templates/comments.php'); ?>
     </div>
-    
+
     <div class="col-sm-12 col-md-6 col-lg-4">
       <?php if (roots_display_sidebar()) : ?>
         <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
           <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
+
+        </aside>
       <?php endif; ?>
-      
+
     </div>
-  
+
   </div>
 </section>
-</div>
+</div> -->
 
 </article>
 <?php endwhile; ?>

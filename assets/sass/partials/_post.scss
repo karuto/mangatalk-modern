@@ -59,15 +59,10 @@
 
 }
 
-.avatar {
-  border-radius: 50%;
-}
-
-
 
 /* Content styles */
 .entry-content {
-  margin: $space-lg 0;
+  margin: $space-lg 0 0;
   min-height: $space-xxl;
   img {
     max-width: 100%;
@@ -280,8 +275,33 @@ blockquote.large {
 }
 
 
-
 /* Meta and extra styles */
+.entry-meta-container {
+  padding-bottom: $space-xl;
+  
+  .divider {
+    margin-top: $space-sm;
+    margin-bottom: $space-xl;
+    border-top: 1px solid $base-text-light-on-dark-bg;
+  }
+  .avatar {
+    border-radius: 50%;
+    margin: $space-lg auto $space-md;
+    display: block;
+  }
+  .author-name {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: $space-xs;
+  }
+  .author-bio {
+    font-size: 89%; /* 16px */
+    color: $grey-tint-normal;
+    text-align: center;
+    
+  }
+}
+
 .entry-extra-container {
   min-height: $space-xxl;
   padding: $space-xl 0;
