@@ -49,7 +49,7 @@
       <?php echo get_avatar( get_the_author_meta( 'user_email' ), 80); ?>
     </div>
     <div class="author-name">
-      <?php echo get_the_author_link(); ?>
+      <?php echo get_the_author_link(); ?>  发表于 <?php echo get_the_time('Y/m/d g:i:s A'); ?>
     </div>
     <p class="author-bio">
       <?php echo get_the_author_meta('description', $post->post_author ); ?> 
@@ -58,27 +58,6 @@
   </div>
 </div>
 
-<!-- <div class="entry-extra-container">
-<section class="container">
-  <div class="row">
-
-    <div class="col-sm-12 col-md-6 col-lg-8">
-      <?php comments_template('/templates/comments.php'); ?>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-
-        </aside>
-      <?php endif; ?>
-
-    </div>
-
-  </div>
-</section>
-</div> -->
 
 </article>
 <?php endwhile; ?>
