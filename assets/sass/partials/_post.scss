@@ -68,6 +68,7 @@
 /* Content styles */
 .entry-content {
   margin: $space-lg 0;
+  min-height: $space-xxl;
   img {
     max-width: 100%;
   }
@@ -283,4 +284,5 @@ blockquote.large {
 /* Meta and extra styles */
 .entry-extra-container {
   min-height: $space-xxl;
+  padding: $space-xl 0;
 }
