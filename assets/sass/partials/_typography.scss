@@ -1,7 +1,7 @@
 /*
  * MangaTalk type variables
  */
-$base-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$base-font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 $base-font-size: 18px;
 $base-font-weight: 300;
 
@@ -102,9 +102,11 @@ figcaption.alignright {
   font-style: italic;
 }
 blockquote {
-  border-left: 3px solid rgba(0,0,0,0.8);
-  padding-left: 15px;
-  margin-left: -18px;
+  border-left: 3px solid $base-reading-text-color;
+  padding-left: $content-font-size;
+  font-size: $content-font-size;
+  margin-left: -($content-font-size + 3);
+  margin-bottom: $content-font-size * $content-line-height;
 }
 blockquote.large {
   font-weight: 400;
@@ -120,6 +122,7 @@ blockquote.large {
 
 /* Content specific styles */
 .mt-banner {
+  font-weight: 700;
   .dropdown-menu>li>a { // override Bootstrap's
     font-size: 100%;
   }
@@ -168,10 +171,10 @@ blockquote.large {
 .entry-content {
   p {
     font-size: $content-font-size;
+    text-indent: $content-font-size*2;
     line-height: $content-line-height;
     margin-bottom: $content-line-height-px;
     letter-spacing: 0.01rem;
-    line-height: 1.5;
   }
   h2, .h2 {
     margin-top: $space-xxl;
@@ -181,6 +184,13 @@ blockquote.large {
   }
   h4, .h4 {
     margin-top: $space-lg;
+  }
+  h5, .h5 {
+    margin-top: $space-md;
+  }
+  h2, h3, h4, h5,
+  .h2, .h3, .h4, .h5 {
+    margin-bottom: $content-font-size * $content-line-height;
   }
 }
 

@@ -212,7 +212,6 @@ a {
   background-position: 0 50%; /* the smaller this amount is the darker it gets */
   border-color: transparent;
   color: $contrast-color-on-image-bg;
-  font-weight: 700;
   
   &:hover {
     background-color: $grey-tint-normal;
