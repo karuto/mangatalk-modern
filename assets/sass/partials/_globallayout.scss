@@ -88,6 +88,9 @@ body {
   left: 0;
   right: 0;
   top: 0;
+  .dropdown-menu > li > a {
+    
+  }
 }
 
 /* Homepage cover styles */
@@ -146,11 +149,11 @@ ul.footer-list > li {
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px;
 }
-.footer-divider {
+.divider {
   margin-top: $space-xl;
   margin-bottom: $space-lg;
   border: 0;
-  border-top: 1px solid #dce0e0;
+  border-top: 1px solid $base-divider-color;
 }
 .mt-brand-capsule {
   margin-bottom: $space-lg;

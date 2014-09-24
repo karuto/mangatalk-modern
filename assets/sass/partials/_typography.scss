@@ -116,7 +116,17 @@ blockquote.large {
   transition: margin .1s;
 }
 
+
+
 /* Content specific styles */
+.mt-banner {
+  .dropdown-menu>li>a { // override Bootstrap's
+    font-size: 100%;
+  }
+  .dropdown-menu { // override Bootstrap's
+    font-size: 100%;
+  }
+}
 .page-header {
   .h2 {
     font-weight: 300;

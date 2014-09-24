@@ -1,8 +1,8 @@
 
-<?php if (is_front_page() ): /* A cover exists, so need immersive nav */ ?>
+<?php if (is_front_page() || is_single() ): /* A cover exists, so need immersive nav */ ?>
 <header id="mt-banner" class="mt-banner banner navbar navbar-static-top is-immersive" role="banner">
 <?php else: /* Normal page, don't need transparent nav */ ?>
-<header id="mt-banner" class="mt-banner banner navbar navbar-default navbar-static-top is-normal" role="banner">
+<header id="mt-banner" class="mt-banner banner navbar navbar-static-top is-normal" role="banner">
 <?php endif; ?>
 
   <div class="container">

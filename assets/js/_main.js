@@ -66,50 +66,70 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-var isNativeNormal;
 // Hover / toggle effect on top banner
-$("#mt-banner").mouseenter(function () {
-  if ($(this).hasClass("is-normal")) {
-    isNativeNormal = true;
-  } else {
-    isNativeNormal = false;
-    $(this).removeClass("is-immersive");
-    $(this).addClass("is-normal");
-  }
-});
-$(".mt-banner").mouseleave(function () {
-  if (!isNativeNormal) { // immersive by default
-    $(this).addClass("is-immersive");
-    $(this).removeClass("is-normal");
-  }
-});
+var mtBanner = $('#mt-banner');
+if (mtBanner) {
+  var isNativeNormal;
+  
+  mtBanner.mouseenter(function () {
+    if ($(this).hasClass("is-normal")) {
+      isNativeNormal = true;
+    } else {
+      isNativeNormal = false;
+      $(this).removeClass("is-immersive");
+      $(this).addClass("is-normal");
+    }
+  });
+  
+  mtBanner.mouseleave(function () {
+    if (!isNativeNormal) { // immersive by default
+      $(this).addClass("is-immersive");
+      $(this).removeClass("is-normal");
+    }
+  });
+  
+  // Toggle fixed top banner via button switch
+  $("#nav-menu-switch").click(function () {
+    if ($(this).hasClass("glyphicon-chevron-down")) {
+      // Currently it's absolute, make it fixed!
+      $(this).removeClass("glyphicon-chevron-down");
+      $(this).addClass("glyphicon-chevron-up");
+      $("#mt-banner").css("position", "fixed");
+    } else {
+      // Currently it's fixed already, so change it back!
+      $(this).removeClass("glyphicon-chevron-up");
+      $(this).addClass("glyphicon-chevron-down");
+      $("#mt-banner").css("position", "absolute");
+    }
+  });
+  
+} else {
+  console.log("Banner did not exist on this page");
+}
 
 
 
-// Toggle fixed top banner
-$("#nav-menu-switch").click(function () {
-  if ($(this).hasClass("glyphicon-chevron-down")) {
-    $(this).removeClass("glyphicon-chevron-down");
-    $(this).addClass("glyphicon-chevron-up");
-    $("#mt-banner").css("position", "fixed");
-  } else {
-    $(this).removeClass("glyphicon-chevron-up");
-    $(this).addClass("glyphicon-chevron-down");
-    $("#mt-banner").css("position", "absolute");
-  }
-});
+
+
 
 
 
 // Hover / toggle effect on article blocks
-$(".mt-front").mouseenter(function () {
-  $(this).addClass("coverActive");
-  $(this).removeClass("coverInactive");
-});
-$(".mt-front").mouseleave(function () {
-  $(this).addClass("coverInactive");
-  $(this).removeClass("coverActive");
-});
+
+var mtFrontcover = $('#mt-front');
+if (mtFrontcover) {
+  mtFrontcover.mouseenter(function () {
+    $(this).addClass("coverActive");
+    $(this).removeClass("coverInactive");
+  });
+  mtFrontcover.mouseleave(function () {
+    $(this).addClass("coverInactive");
+    $(this).removeClass("coverActive");
+  });
+} else {
+  console.log("Front cover did not exist on this page");
+}
+
 
 
 
@@ -153,14 +173,27 @@ function fader() {
       var windowHeight = $(window).height(),
           currentPos = $(document).scrollTop(),
           coverDivView = windowHeight - (coverDiv.offset().top - currentPos),
-          op;
+          op; // opacity
       //alert(coverDiv.offset().top + " | " + currentPos + "|" + windowHeight);
       if (coverDivView > 0) {
           op = 1 - 1 / (windowHeight + coverDiv.height()) * coverDivView;
           op += op;
           // console.log(op);
-          if (op > 0)
-              coverDiv.css({opacity: op});
+          if (op > 0) {
+            coverDiv.css({opacity: op});            
+            // since we are in the cover, make banner immersive
+            if (mtBanner) {
+              mtBanner.removeClass("is-normal");
+              mtBanner.addClass("is-immersive");
+            }
+          } else {
+            // since we already scroll passed the cover, make banner normal
+            if (mtBanner) {
+              mtBanner.removeClass("is-immersive");
+              mtBanner.addClass("is-normal");
+            }
+            
+          }
       }      
     } else {
       console.log("This page doesn't have a cover.");

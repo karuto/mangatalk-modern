@@ -241,23 +241,38 @@ a {
   }
 }
 .mt-banner.is-normal { // when hovered, and when not on full-width covers
-  background-color: #fff;
-  color: $base-universal-text-color;
+  background-color: $base-white;
+  color: $base-module-text-grey-normal;
+  
+  a {
+    color: $base-module-text-grey-normal;
+    &:hover, &:focus {
+    color: $base-action-normal;
+    }
+  }
+  .nav>li>a:hover, .nav>li>a:focus {
+    background-color: transparent;
+  }
   .navbar-nav>.active>a, 
   .navbar-nav>.active>a:hover, 
-  .navbar-nav>.active>a:focus {
-    color: #555;
+  .navbar-nav>.active>a:focus { // override Bootstrap's
+    color: $base-action-normal;
     background-color: transparent;
-    border-bottom: 5px solid ;
+    border-bottom: 3px solid $base-action-normal;
   }
   .navbar-nav>.open>a, 
   .navbar-nav>.open>a:hover, 
   .navbar-nav>.open>a:focus { // override Bootstrap's
-    background-color: $grey-tint-darker;
+    color: $base-action-normal;
+    background-color: transparent;
+  }
+  .dropdown-menu>li>a { // override Bootstrap's
+    color: $base-module-text-grey-normal;
   }
   .dropdown-menu>li>a:hover, 
   .dropdown-menu>li>a:focus { // override Bootstrap's
-    background-color: $grey-tint-darker;
+    color: $base-action-normal;
+    background-color: transparent;
   }
   
 }
@@ -313,7 +328,7 @@ a {
  * MangaTalk color swatches
  */
 .mt-swatches {
-//  display: none;
+  display: none;
   
   .cb {
     display: block;

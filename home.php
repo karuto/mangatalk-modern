@@ -1,5 +1,5 @@
 
-<header class="mt-front">
+<header id="mt-front" class="mt-front">
 <section class="article-cover">
   <div class="cover-image" style="background-image: url('http://i.imgur.com/zk0ecX8.jpg');">
     

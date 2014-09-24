@@ -15,28 +15,22 @@ TODO: Other templates
  - static homepage
  - image type for comicbits
  - single page full-width blank state
- - header
+ x header
  x footer
- - search
+ - search bar
  - 404 page
  
 TODO: Things that are nice to have
- - customizable sidebar
  - 3rd party plug-in supports
  - google analytics
  - annotations (Medium style)
  - author page
  - custom plugin to insert figure shortcode
  
-DONE:
- - feature cover for both articles and cards
- - basic list / archive view
- - typography 
- - single post
- 
 MVP:
  - single post template complete (comment, other article links etc)
  - most basic blank page template
- - header, footer, basic, no need for search yet
- - archive page, very similar home page
+ x header, footer, basic, no need for search yet
+ x archive page
+ - very similar home page
  - CONVERSIONS
