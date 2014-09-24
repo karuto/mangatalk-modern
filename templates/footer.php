@@ -44,6 +44,40 @@
     </div>
     </div><!-- .row -->
     
+    <h4>Primary colors - Brand color</h4>
+    <p>Same hue, generating faded, regular and darken: brightness +30%, 0, -30%. Generate consistent chroma colors: keep Saturation within +/-25%.</p>
+    <div class="row">
+    <div class="cb col-md-2 cb-brand-f">
+      <strong>Brand faded</strong>
+      <p></p>
+    </div>
+    <div class="cb col-md-2 cb-brand-n">
+      <strong>Brand normal</strong>
+      <p></p>
+    </div>
+    <div class="cb col-md-2 cb-brand-d">
+      <strong>Brand darken</strong>
+      <p></p>
+    </div>
+    </div><!-- .row -->
+    
+    <h4>Primary colors - Contrast color</h4>
+    <p>Same hue, generating faded, regular and darken: brightness +30%, 0, -30%. Generate consistent chroma colors: keep Saturation within +/-25%.</p>
+    <div class="row">
+    <div class="cb col-md-2 cb-contrast-f">
+      <strong>Contrast faded</strong>
+      <p></p>
+    </div>
+    <div class="cb col-md-2 cb-contrast-n">
+      <strong>Contrast normal</strong>
+      <p></p>
+    </div>
+    <div class="cb col-md-2 cb-contrast-d">
+      <strong>Contrast darken</strong>
+      <p></p>
+    </div>
+    </div><!-- .row -->
+    
     <!-- <h4>Primary colors</h4>
     <h5>The primary application colors are neutralized to allow the sparse use of the primary blue and content to take center stage.</h5> -->
     <div class="row">

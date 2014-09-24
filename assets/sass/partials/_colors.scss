@@ -7,7 +7,8 @@
  */
 
 /* MangaTalk official color guide, HSB (hue, saturation, brightness) values in the comments
- * 
+ * Same hue, generating faded, regular and darken: brightness +30%, 0, -30%
+ * Generate consistent chroma colors: keep Saturation within +/-25%
  */
 
 /* Light tones */
@@ -38,9 +39,13 @@ $base-container-bg-darker: $mt-titanite-chunk;
 $mt-titanite-slab: #333333; // 0, 0, 20%
 $base-reading-text-color: $mt-titanite-slab;
 
-$mt-brand: #E84141;
-$mt-secondary: #E88D41;
-$mt-contrast: #278b8b;
+$mt-brand-faded: #FF9393; //0, 42, 100
+$mt-brand-normal: #E84141; //0, 72, 91
+$mt-brand-darker: #a62e2e; //0, 72, 65
+
+$mt-contrast-faded: #6FC0C0; 
+$mt-contrast-normal: #278b8b;
+$mt-contrast-darker: #066161;
 
 .mt-swatches {
   .cb {
@@ -80,11 +85,23 @@ $mt-contrast: #278b8b;
     background-color: $mt-titanite-slab;
     color: #000;
   }
-  .cb-secondary {
-    background-color: $mt-secondary;
+  .cb-brand-f {
+    background-color: $mt-brand-faded;
   }
-  .cb-contrast {
-    background-color: $mt-contrast;
+  .cb-brand-n {
+    background-color: $mt-brand-normal;
+  }
+  .cb-brand-d {
+    background-color: $mt-brand-darker;
+  }
+  .cb-contrast-f {
+    background-color: $mt-contrast-faded;
+  }
+  .cb-contrast-n {
+    background-color: $mt-contrast-normal;
+  }
+  .cb-contrast-d {
+    background-color: $mt-contrast-darker;
   }
 }
 
