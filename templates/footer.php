@@ -93,6 +93,10 @@
       <strong>Tamriel</strong>
       <p></p>
     </div>
+    <div class="cb col-md-2 cb-p">
+      <strong>Lamperouge</strong>
+      <p></p>
+    </div>
     </div><!-- .row -->
     
     <!-- <h4>Primary colors</h4>

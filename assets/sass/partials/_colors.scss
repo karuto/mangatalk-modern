@@ -1,67 +1,320 @@
 /*
  * MangaTalk color variables
  * NOTE: The actual color defs should be copied to bootstrap/variables if duplicate
- * Naming convention: $base-[context]-[element]-[color/purpose]-[shade/state] (base means globally applicable)
+ * Semantic naming convention: 
+ * $mt- is only used internally for raw color definitions
+ * $base- is for global applicable variables (not page specific)
+ * $[base if global, else pagename]-[context]-[element]-[color/purpose]-[shade/state]
  * Example: $base-container-bg-grey-darker
- * Example: $base-banner-text-brand-faded
+ * Example: $article-cover-title-brand-faded
  */
 
 /* MangaTalk official color guide, HSB (hue, saturation, brightness) values in the comments
  * Same hue, generating faded, regular and darken: brightness +30%, 0, -30%
  * Generate consistent chroma colors: keep Saturation within +/-25%
+ * All global colors ($base-) are defined in this section
  */
 
 /* Light tones */
+/* White */
 $mt-white: #FFFFFF; // 0, 0, 100%
 
+$base-white: $mt-white;
+
+
+
+/* Extra light grey */
 $mt-air: #FAFAFA; // 0, 0, 97%
+
 $base-container-bg-extralight: $mt-air;
 
+
+
+/* Very light grey */
 $mt-steam: #F2F2F2; // 0, 0, 95%
+
 $base-site-bg: $mt-steam;
 
+
+
+/* Light grey */
 $mt-fog: #CCCCCC; // 0, 0, 80%
+
 $base-text-light-on-dark-bg: $mt-fog;
 $base-form-input-placeholder: $mt-fog;
+$base-container-bg-light: $mt-fog;
+
+
 
 /* Shades of grey */
+/* Medium grey */
 $mt-titanite-dust: #999999; // 0, 0, 60%
+
 $base-text-grey-faded: $mt-titanite-dust;
 $base-divider-color: $mt-titanite-dust;
 
+
+
+/* Dark grey */
 $mt-titanite-shard: #595959; // 0, 0, 35%
+
 $base-module-text-grey-normal: $mt-titanite-shard;
 $base-container-bg-dark: $mt-titanite-shard;
+$base-universal-text-color: $base-module-text-grey-normal;
 
+
+
+/* Extra dark grey */
 $mt-titanite-chunk: #454545; // 0, 0, 25%
+
 $base-container-bg-darker: $mt-titanite-chunk;
 
+
+
+/* Darkest midnight grey */
 $mt-titanite-slab: #333333; // 0, 0, 20%
+
 $base-reading-text-color: $mt-titanite-slab;
 
+
+
 /* Red */
-$mt-izalith: #E84141;
-$mt-brand-faded: #FF9393; // 0, 42, 100
-$mt-brand-normal: $mt-izalith; // 0, 72, 91
-$mt-brand-darker: #a62e2e; // 0, 72, 65
+$base-brand-faded: #FF9393; // 0, 42, 100
+$mt-izalith: #E84141; // 0, 72, 91 /* BRAND COLOR!!! */
+$base-brand-darker: #a62e2e; // 0, 72, 65
+
+$base-brand-normal: $mt-izalith;
+$base-action-normal: $base-brand-normal;
+$base-action-faded: $base-brand-faded;
+$base-action-darker: $base-brand-darker; // 0, 72, 65
+
+
 
 /* Blue */
+$base-contrast-faded: #6FC0C0; 
 $mt-aria: #278b8b; // 180, 72, 55
-$mt-contrast-faded: #6FC0C0; 
-$mt-contrast-normal: $mt-aria;
-$mt-contrast-darker: #066161;
+$base-contrast-darker: #066161;
+
+$base-contrast-faded: $base-contrast-faded;
+$base-contrast-normal: $mt-aria;
+$base-contrast-darker: $base-contrast-darker;
+
+$base-info-faded: $base-contrast-faded;
+$base-info-normal: $base-contrast-normal;
+$base-info-darker: $base-contrast-darker;
+
+
 
 /* Yellow */
 $mt-xanthous: #fcad0d; // 40, 95, 99 (+40, +20%, same B)
-$mt-complimentary-normal: $mt-xanthous;
+
+$base-complimentary-normal: $mt-xanthous;
+$base-warning-normal: $base-complimentary-normal;
+
+
 
 /* Green */
 $mt-plummed: #9dd962; // 90, 55, 85 (+90, -20%, -8%)
 
+$base-sucess-normal: $mt-plummed;
+$base-friendly-normal: $base-sucess-normal;
+
+
+
 /* Brown */
 $mt-tamriel: #bfb26f; // 50, 42, 75
+$base-netural-normal: $mt-tamriel;
 
+
+/* Purple */
+$mt-lamperouge: #732057; // 320, 72, 45
+$base-link-color-visited: $mt-lamperouge;
+
+
+
+
+/* No reference to $mt-* after this point! */
+
+/* Contrast color for bg-ed containers */
+$contrast-color-on-dark-bg: $base-white;
+$contrast-color-on-image-bg: $base-white;
+$contrast-color-on-dark-bg-focused: darken($contrast-color-on-dark-bg, 25%);
+$contrast-color-on-image-bg-focused: darken($contrast-color-on-dark-bg, 25%);
+
+/* Bootstrap overrides - brand */
+$brand-primary:         $base-brand-normal;
+$brand-success:         $base-sucess-normal;
+$brand-info:            $base-info-normal;
+$brand-warning:         $base-warning-normal;
+$brand-danger:          $base-action-normal;
+
+/* Bootstrap overrides - base */
+$text-color: $base-universal-text-color;
+$loud-color: $contrast-color-on-dark-bg;
+$quiet-color: $base-text-grey-faded;
+
+/* Bootstrap overrides - link */
+$link-color: $base-brand-normal;
+$link-hover-color: saturate($link-color, 20%);
+$link-visited-color: $base-link-color-visited;
+
+
+/* Tints, transparencies */
+$white-tint: rgba(255, 255, 255, 0.4);
+$grey-tint-lighter: rgba(0, 0, 0, 0.2);
+$grey-tint-normal: rgba(0, 0, 0, 0.4);
+$grey-tint-darker: rgba(0, 0, 0, 0.6);
+$red-tint: rgba(255, 0, 0, 0.4);
+
+
+/* Mixins */
+@mixin gradient($from-color, $to-color) {
+    background-color: mix($from-color, $to-color); /* Fallback */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
+    background-image: -webkit-linear-gradient(top, $from-color, $to-color); 
+    background-image:    -moz-linear-gradient(top, $from-color, $to-color);
+    background-image:     -ms-linear-gradient(top, $from-color, $to-color);
+    background-image:      -o-linear-gradient(top, $from-color, $to-color);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
+}
+
+
+
+/*
+ * MangaTalk color rules
+ */
+body {
+  background-color: $base-site-bg;
+  color: $base-universal-text-color;
+}
+a {
+  color: $base-brand-normal;
+
+  &:hover,
+  &:focus {
+    color: $base-brand-darker;
+  }
+}
+.cover-image,
+.block-cover {
+  background-color: $base-container-bg-light;
+}
+.mt-banner.is-immersive { // default state
+  background-color: transparent;
+  background-image: url('http://i.imgur.com/JsQrMdo.png');
+  background-repeat: repeat-x;
+  background-position: 0 50%; /* the smaller this amount is the darker it gets */
+  border-color: transparent;
+  color: $contrast-color-on-image-bg;
+  font-weight: 700;
+  
+  &:hover {
+    background-color: $grey-tint-normal;
+    background-image: none;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form { // override Bootstrap's
+    border-color: transparent;
+  }
+  .navbar {
+    border: 0px solid transparent;
+  }
+  .navbar-nav>.open>a, 
+  .navbar-nav>.open>a:hover, 
+  .navbar-nav>.open>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  .dropdown-menu>li>a:hover, 
+  .dropdown-menu>li>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  .navbar-nav > li > a {
+    color: $contrast-color-on-image-bg;
+  }
+  .dropdown-menu > li > a {
+    color: $contrast-color-on-image-bg;
+  }
+  .navbar-brand {
+    color: $contrast-color-on-image-bg;
+  }
+  .dropdown-menu {
+    background-color: $grey-tint-normal;
+  }
+}
+.mt-banner.is-normal { // when hovered, and when not on full-width covers
+  background-color: #fff;
+  color: $base-universal-text-color;
+  .navbar-nav>.active>a, 
+  .navbar-nav>.active>a:hover, 
+  .navbar-nav>.active>a:focus {
+    color: #555;
+    background-color: transparent;
+    border-bottom: 5px solid ;
+  }
+  .navbar-nav>.open>a, 
+  .navbar-nav>.open>a:hover, 
+  .navbar-nav>.open>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  .dropdown-menu>li>a:hover, 
+  .dropdown-menu>li>a:focus { // override Bootstrap's
+    background-color: $grey-tint-darker;
+  }
+  
+}
+.mt-front {
+  
+}
+
+.mt-block {
+  .text-contrast {
+    color: $contrast-color-on-image-bg;
+  }
+  .block-content {
+    background-color: $grey-tint-normal;
+    
+    .entry-title a {
+      color: $contrast-color-on-image-bg;
+    }
+  }
+}
+.article-cover {
+  background-color: $base-site-bg;
+  .cover-content {
+    color: $contrast-color-on-image-bg;
+  }
+}
+.cover-content-wrapper {
+  background-color: $red-tint;
+}
+.entry-content {
+  color: $base-reading-text-color;
+}
+
+.mt-footer {
+  background-image: url(http://i.imgur.com/dmiiS4a.png);
+  background-color: #2b2d2e;  
+  color: $contrast-color-on-dark-bg;
+  
+  .text-muted {
+    color: $base-text-grey-faded;
+  }
+  
+  a {
+    color: $contrast-color-on-dark-bg;
+    &:hover {
+     color: $contrast-color-on-dark-bg-focused; 
+    }
+  }
+  
+}
+
+
+/*
+ * MangaTalk color swatches
+ */
 .mt-swatches {
+//  display: none;
+  
   .cb {
     display: block;
     height: 300px;
@@ -100,22 +353,22 @@ $mt-tamriel: #bfb26f; // 50, 42, 75
     color: #000;
   }
   .cb-brand-f {
-    background-color: $mt-brand-faded;
+    background-color: $base-brand-faded;
   }
   .cb-brand-n {
-    background-color: $mt-brand-normal;
+    background-color: $base-brand-normal;
   }
   .cb-brand-d {
-    background-color: $mt-brand-darker;
+    background-color: $base-brand-darker;
   }
   .cb-contrast-f {
-    background-color: $mt-contrast-faded;
+    background-color: $base-contrast-faded;
   }
   .cb-contrast-n {
-    background-color: $mt-contrast-normal;
+    background-color: $base-contrast-normal;
   }
   .cb-contrast-d {
-    background-color: $mt-contrast-darker;
+    background-color: $base-contrast-darker;
   }
   .cb-y {
     background-color: $mt-xanthous;
@@ -126,171 +379,8 @@ $mt-tamriel: #bfb26f; // 50, 42, 75
   .cb-b {
     background-color: $mt-tamriel;
   }
-  
-}
-
-
-
-
-/* Before */
-$brand-primary:         #ce5333;
-$brand-success:         #5cb85c;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
-
-$body-text-color: #333;
-$body-bg-color: #F2F2F2;
-$title-color-on-dark-bg: #fff;
-$white-tint: rgba(255, 255, 255, 0.4);
-$grey-tint: rgba(0, 0, 0, 0.4);
-$grey-tint-lighter: rgba(0, 0, 0, 0.2);
-$grey-tint-darker: rgba(0, 0, 0, 0.6);
-$red-tint: rgba(255, 0, 0, 0.4);
-$text-color: #333;
-$quiet-color: #ccc;
-$loud-color: #000;
-$contrast-color: #fff;
-$contrast-color-darker: darken($contrast-color, 15%);
-
-$muted-gery-color: #82888a;
-$heading-color: #111;
-$cover-bg-color: #413c48;
-$link-visited-color: purple;
-
-@mixin gradient($from-color, $to-color) {
-    background-color: mix($from-color, $to-color); /* Fallback */
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from-color), to($to-color));
-    background-image: -webkit-linear-gradient(top, $from-color, $to-color); 
-    background-image:    -moz-linear-gradient(top, $from-color, $to-color);
-    background-image:     -ms-linear-gradient(top, $from-color, $to-color);
-    background-image:      -o-linear-gradient(top, $from-color, $to-color);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$from-color}', EndColorStr='#{$to-color}')";
-}
-
-
-/*
- * MangaTalk color rules
- */
-body {
-  background-color: $body-bg-color;
-}
-a {
-  color: $link-color;
-
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-  }
-}
-.cover-image,
-.block-cover {
-  background-color: $cover-bg-color;
-}
-.is-darkBackgrounded {
-  
-}
-.text-contrast {
-  color: $contrast-color;
-//  text-rendering: optimizelegibility;
-}
-.text-muted {
-  color: $muted-gery-color;
-}
-.mt-banner.is-immersive { // default state
-  background-color: transparent;
-  background-image: url('http://i.imgur.com/JsQrMdo.png');
-  background-repeat: repeat-x;
-  background-position: 0 50%; /* the smaller this amount is the darker it gets */
-  border-color: transparent;
-  color: $contrast-color;
-  font-weight: 700;
-  
-  &:hover {
-    background-color: $grey-tint;
-    background-image: none;
-  }
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form { // override Bootstrap's
-    border-color: transparent;
-  }
-  .navbar {
-    border: 0px solid transparent;
-  }
-  .navbar-nav>.open>a, 
-  .navbar-nav>.open>a:hover, 
-  .navbar-nav>.open>a:focus { // override Bootstrap's
-    background-color: $grey-tint-darker;
-  }
-  .dropdown-menu>li>a:hover, 
-  .dropdown-menu>li>a:focus { // override Bootstrap's
-    background-color: $grey-tint-darker;
-  }
-  .navbar-nav > li > a {
-    color: $contrast-color;
-  }
-  .dropdown-menu > li > a {
-    color: $contrast-color;
-  }
-  .navbar-brand {
-    color: $contrast-color;
-  }
-  .dropdown-menu {
-    background-color: $grey-tint;
-  }
-}
-.mt-banner.is-normal { // when hovered, and when not on full-width covers
-  background-color: #fff;
-  color: $body-text-color;
-  .navbar-nav>.active>a, 
-  .navbar-nav>.active>a:hover, 
-  .navbar-nav>.active>a:focus {
-    color: #555;
-    background-color: transparent;
-    border-bottom: 5px solid ;
-  }
-  .navbar-nav>.open>a, 
-  .navbar-nav>.open>a:hover, 
-  .navbar-nav>.open>a:focus { // override Bootstrap's
-    background-color: $grey-tint-darker;
-  }
-  .dropdown-menu>li>a:hover, 
-  .dropdown-menu>li>a:focus { // override Bootstrap's
-    background-color: $grey-tint-darker;
-  }
-  
-}
-.mt-front {
-  
-}
-
-.mt-block {
-  .block-content {
-    background-color: $grey-tint;
-    
-    .entry-title a {
-      color: $contrast-color;
-    }
-  }
-}
-.article-cover {
-  background-color: $body-bg-color;
-  .cover-content {
-    color: $title-color-on-dark-bg;
-  }
-}
-.cover-content-wrapper {
-  background-color: $red-tint;
-}
-.mt-footer {
-  background-image: url(http://i.imgur.com/dmiiS4a.png);
-  background-color: #2b2d2e;  
-  color: $contrast-color;
-  
-  a {
-    color: $contrast-color;
-    &:hover {
-     color: $contrast-color-darker; 
-    }
+  .cb-p {
+    background-color: $mt-lamperouge;
   }
   
 }
