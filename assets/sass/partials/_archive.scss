@@ -1,6 +1,11 @@
 /*
  * MangaTalk archive page layout rules
  */
+.archive-entry-link {
+  text-align: center;
+  margin: $space-xl auto;
+  display: block;
+}
 .page-header {
   margin-top: $space-xxl;
   border-bottom: 1px solid $base-text-light-on-dark-bg;

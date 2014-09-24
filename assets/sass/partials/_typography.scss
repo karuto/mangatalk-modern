@@ -127,6 +127,15 @@ blockquote.large {
     font-size: 100%;
   }
 }
+.mt-front {
+  .entry-title {
+    font-size: 222%; /* 40px */
+  }
+  .entry-subtitle {
+//    font-size: 138%; /* 25px */
+//    font-weight: 300;
+  }
+}
 .page-header {
   .h2 {
     font-weight: 300;
@@ -136,7 +145,7 @@ blockquote.large {
   .entry-title {
     font-weight: 700;
   }
-  .entry-subtitle {
+  .entry-subtitle > p {
     font-weight: 300;
   }
 }

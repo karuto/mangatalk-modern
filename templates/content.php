@@ -15,9 +15,9 @@
         
         <header class="block-header">
           
-          <h3 class="entry-title text-contrast">
+          <h4 class="entry-title text-contrast">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          </h3>
+          </h4>
           <div class="entry-summary text-contrast">
             <?php the_excerpt(); ?>
           </div>

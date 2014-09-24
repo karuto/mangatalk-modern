@@ -95,32 +95,26 @@ body {
 
 /* Homepage cover styles */
 .mt-front {
+  .cover-image-inner {
+    height: $mt-block-height;
+    overflow: hidden;
+  }
   .article-cover {
     height: $mt-block-height;
     .cover-image {
       height: $mt-block-height;
     }
-    .cover-content {
-      margin-top: $mt-block-height * 0.6;
-    }
   }
-  .row > .cover-content-wrapper {
-    @include border-box();
-    margin-top: $mt-block-height / 4;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 66.66667%; /* enforce col-md-8 */
-    background-color: transparent;
-    .entry-title {
-      
-    }
-    .entry-subtitle {
-      
-    }
-    .entry-comment-count {
-      
-    }
+  .front-cover-content {
+    margin-top: $mt-block-height * 0.6;
+    overflow: hidden;
+  }
+  .entry-title {
+    
+  }
+  .entry-subtitle {
+  }
+  .entry-comment-count {
   }
 }
 
