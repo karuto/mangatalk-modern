@@ -315,28 +315,21 @@ $related-block-height: $mt-block-height/3;
 }
 .entry-meta-container {
   padding-bottom: $space-xl;
+}
+.avatar {
+//  border-radius: 50%;
+//  margin: $space-lg auto $space-md;
+  max-width: 100%;
+  display: block;
+}
+.author-name {
+//  text-align: center;
+  font-weight: 700;
+  margin-bottom: $space-xs;
+}
+.article-meta-spec,
+.author-bio {
   
-  .divider {
-    margin-top: $space-sm;
-    margin-bottom: $space-xl;
-    border-top: 1px solid $base-text-light-on-dark-bg;
-  }
-  .avatar {
-    border-radius: 50%;
-    margin: $space-lg auto $space-md;
-    display: block;
-  }
-  .author-name {
-    text-align: center;
-    font-weight: 700;
-    margin-bottom: $space-xs;
-  }
-  .author-bio {
-    font-size: 89%; /* 16px */
-    color: $grey-tint-normal;
-    text-align: center;
-    
-  }
 }
 
 .entry-extra-container {

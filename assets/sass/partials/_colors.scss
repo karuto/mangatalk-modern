@@ -366,7 +366,13 @@ a {
 //    border-top: 1px solid $base-divider-color;
   }
 }
-
+.author-info {
+  .article-meta-spec,
+  .author-bio {
+  //  text-align: center;
+    color: $base-text-grey-faded;
+  }
+}
 
 /* Footer */
 .mt-footer {

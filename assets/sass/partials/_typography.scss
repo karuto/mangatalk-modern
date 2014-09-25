@@ -203,11 +203,24 @@ blockquote.large {
     font-size: $medium-font-size;
   }
 }
+.author-info {
+//  font-size: $medium-font-size;
+  .article-meta-spec {
+    text-transform: uppercase;
+  }
+  .article-meta-spec,
+  .author-bio {
+  font-size: $subtext-font-size; /* 14px; */
+  font-weight: $subtext-font-weight;
+  line-height: $subtext-line-height;
+  margin-bottom: $subtext-font-size / 2;
+  }
+}
 
 /* Footer styles */
 .mt-footer {
-  font-weight: $subtext-font-weight;
   font-size: $subtext-font-size; /* 14px; */
+  font-weight: $subtext-font-weight;
   line-height: $subtext-line-height;
   .footer-header {
     font-size: $medium-font-size;
