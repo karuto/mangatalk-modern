@@ -174,10 +174,10 @@
   figure.is-fullwidth { // ignores content container, DOES NOT SUPPORT ALIGNLEFT!!
     @extend figure;
     margin-bottom: $space-xl;
-    @media (max-width: $screen-sm-min) {
+    @media (max-width: $screen-sm-min) { // small screen
       @include pos-reset();
     }
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-md-min) { // medium and large screen
       img {
         max-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
       }

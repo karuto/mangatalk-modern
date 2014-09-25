@@ -220,6 +220,9 @@ a {
     background-color: $grey-tint-normal;
     background-image: none;
   }
+  .navbar-toggle .icon-bar { // responsive toggle button
+    background-color: $base-white;
+  }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form { // override Bootstrap's
     border-color: transparent;
   }
@@ -257,6 +260,9 @@ a {
     &:hover, &:focus {
     color: $base-action-normal;
     }
+  }
+  .navbar-toggle .icon-bar { // responsive toggle button
+    background-color: $base-module-text-grey-normal;
   }
   .nav>li>a:hover, .nav>li>a:focus {
     background-color: transparent;
