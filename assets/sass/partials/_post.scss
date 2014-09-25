@@ -276,6 +276,42 @@ blockquote.large {
 
 
 /* Meta and extra styles */
+.meta-header {
+  margin-top: $space-xl;  // divider style
+  margin-bottom: $space-lg;  // divider style
+}
+$related-block-height: $mt-block-height/3;
+.related-article-list {
+  .mt-block {
+    height: $related-block-height;
+    .block-content {
+    }
+    .block-header {
+      width: 100%;
+    }
+    .block-cover-wrapper {
+      height: $related-block-height;
+    }
+  }
+  .row {
+   margin-left: 0;
+   margin-right: 0; 
+  }
+  .is-inactive {
+    .block-header {
+      margin: 0 auto;
+    }
+    .entry-summary {
+      display: block;
+      border-top: none;
+      max-height: 100%;
+    }
+  }
+  .entry-meta,
+  .entry-comment-count {
+    display: none;
+  }
+}
 .entry-meta-container {
   padding-bottom: $space-xl;
   

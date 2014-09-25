@@ -40,10 +40,10 @@ $mt-block-height: $space-xxl * 4.5;
 }
 @mixin absolute-center-align() {
   position: absolute;
-  left:0;
-  right:0;
-  margin-left:auto;
-  margin-right:auto;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 @mixin pos-reset() {
   float: none;
@@ -81,6 +81,9 @@ $mt-block-height: $space-xxl * 4.5;
  */
 body {
   min-height: 1000px;
+}
+.main {
+  margin-bottom: $space-xl;
 }
 .mt-banner {
   margin-bottom: 0;

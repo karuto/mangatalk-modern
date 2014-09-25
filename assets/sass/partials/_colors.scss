@@ -318,8 +318,12 @@ a {
   }
 }
 
+
 /* Block */
 .mt-block {
+  .entry-summary {
+    border-top: 1px solid $base-white;
+  }
   .text-contrast {
     color: $contrast-color-on-image-bg;
   }
@@ -353,6 +357,16 @@ a {
   background-image: url(http://i.imgur.com/849Csp9.png);
   background-color: $base-container-bg-extralight;
 }
+.meta-header {
+  color: $base-text-grey-faded;
+  border-top: 1px solid $base-divider-color;
+}
+.related-article-list {
+  .entry-summary {
+//    border-top: 1px solid $base-divider-color;
+  }
+}
+
 
 /* Footer */
 .mt-footer {
