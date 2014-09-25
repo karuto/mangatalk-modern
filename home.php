@@ -18,7 +18,7 @@ if ( $the_query->have_posts() ) {
 
 <header id="mt-front" class="mt-front">
 <section class="article-cover">
-  <div class="cover-image" <?php post_class();
+  <div id="cover-story" class="cover-image" <?php post_class();
      // Retrieve cover image URL then set header's background
     if ( has_post_thumbnail() ) {
       $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0];
@@ -32,7 +32,7 @@ if ( $the_query->have_posts() ) {
     <div class="container">
       <div class="row">
       <div class="front-cover-content col-xs-12 col-sm-12 col-md-10">
-        <h4 class="h4 entry-title">
+        <h4 id="cover-story-title" class="h4 entry-title">
           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h4>
         <div class="entry-subtitle">

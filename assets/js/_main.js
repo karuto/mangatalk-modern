@@ -66,7 +66,34 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-// Hover / toggle effect on top banner
+
+
+
+// // Check which element is being clicked; helper function
+// $('body').click(function(event) {
+//     console.log(event.target);
+// });
+
+
+// Enable smooth scrolling to an anchor on the same page
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});
+
+
+
+
+// Hover / toggle visual effect on top banner
 var mtBanner = $('#mt-banner');
 if (mtBanner) {
   var isNativeNormal;
@@ -110,22 +137,22 @@ if (mtBanner) {
 
 
 
-
-
-
-
-// Hover / toggle effect on article blocks
-
+// Hover / toggle effect on frontpage cover
 var mtFrontcover = $('#mt-front');
 if (mtFrontcover) {
-  mtFrontcover.mouseenter(function () {
-    $(this).addClass("coverActive");
-    $(this).removeClass("coverInactive");
+  
+  $("#cover-story").click(function () {
+    window.location = $("#cover-story-link").find("a").attr("href");
   });
-  mtFrontcover.mouseleave(function () {
-    $(this).addClass("coverInactive");
-    $(this).removeClass("coverActive");
-  });
+  
+  // mtFrontcover.mouseenter(function () {
+  //   $(this).addClass("coverActive");
+  //   $(this).removeClass("coverInactive");
+  // });
+  // mtFrontcover.mouseleave(function () {
+  //   $(this).addClass("coverInactive");
+  //   $(this).removeClass("coverActive");
+  // });
 } else {
   console.log("Front cover did not exist on this page");
 }

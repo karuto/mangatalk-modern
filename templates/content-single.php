@@ -65,7 +65,7 @@
   <?php   while( $related_posts_query->have_posts() ) {  
             $related_posts_query->the_post(); ?> 
       
-      <section class="mt-block clearfix">
+      <section class="mt-block mini-block clearfix">
         <?php get_template_part('templates/content', get_post_format()); ?>
       </section>
       
@@ -95,7 +95,7 @@
         </div>
         <p class="article-meta-spec">
            Written on <?php echo get_the_date(); ?>. 
-           <?php the_tags( '<span>Tagged with ', ' | ', '</span>' ); ?>
+           <?php the_tags( '<span>Tags: ', ' | ', '</span>' ); ?>
         </p>
         <p class="author-bio">
           <?php echo get_the_author_meta('description', $post->post_author ); ?> 
