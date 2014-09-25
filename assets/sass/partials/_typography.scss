@@ -177,7 +177,7 @@ blockquote.large {
     letter-spacing: 0.01rem;
   }
   h2, .h2 {
-    margin-top: $space-xxl;
+    margin-top: $space-xl;
   }
   h3, .h3 {
     margin-top: $space-xl;
@@ -275,6 +275,9 @@ pre     {   font-family: monospace, serif;
 // Blockquotes
 blockquote {
  font-style: italic; 
+ footer {
+   text-align: right;
+ }
 }
 //blockquote:before {
 // content: "\201C";
