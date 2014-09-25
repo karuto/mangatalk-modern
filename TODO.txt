@@ -28,9 +28,10 @@ TODO: Things that are nice to have
  - custom plugin to insert figure shortcode
  
 MVP:
- - single post template complete (comment, other article links etc)
+ x single post template complete (comment, other article links etc)
  - most basic blank page template
+ - image type template
  x header, footer, basic, no need for search yet
  x archive page
- - very similar home page
+ x very similar home page
  - CONVERSIONS

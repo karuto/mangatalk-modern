@@ -4,8 +4,8 @@
   }
 
  if (have_comments()) : ?>
-  <section id="comments" class="comments-container">
-    <h3><?php printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></h3>
+  <section id="comments" class="comments-container col-md-12">
+    <header><?php printf(_n('One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></header>
 
     <ol class="media-list">
       <?php wp_list_comments(array('walker' => new Roots_Walker_Comment)); ?>
@@ -41,8 +41,8 @@
 <?php endif; ?>
 
 <?php if (comments_open()) : ?>
-  <section id="respond">
-    <h3><?php comment_form_title(__('Leave a Reply', 'roots'), __('Leave a Reply to %s', 'roots')); ?></h3>
+  <section id="respond" class="col-md-12">
+    <header><?php comment_form_title(__('Leave a Reply', 'roots'), __('Leave a Reply to %s', 'roots')); ?></header>
     <p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
     <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
       <p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'roots'), wp_login_url(get_permalink())); ?></p>

@@ -274,6 +274,10 @@ a {
     color: $base-action-normal;
     background-color: transparent;
   }
+  .dropdown-menu>.active>a { // override Bootstrap's
+    color: $base-action-normal;
+    background-color: transparent;
+  }
   .dropdown-menu>li>a { // override Bootstrap's
     color: $base-module-text-grey-normal;
   }

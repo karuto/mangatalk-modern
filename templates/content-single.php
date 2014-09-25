@@ -104,9 +104,25 @@
 
     </div><!-- .row -->
   
-  </div>
+  </div><!-- .author-info -->
+  
+  
+  <div class="comments-root-container clearfix">
+    <header class="meta-header author-info-header"> 留言讨论&emsp;|&emsp;Goings-On About Town</header>
+    <div class="row">
+      <?php comments_template('/templates/comments.php'); ?>
+  
+    <!-- <?php if (roots_display_sidebar()) : ?>
+      <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+        <?php include roots_sidebar_path(); ?>
+      </aside>
+    <?php endif; ?> -->
+
+    </div><!-- .row -->
+  
+  </div><!-- .comments-container -->
     
-</div>
+</div><!-- .entry-meta-container -->
 
 
 </article>

@@ -123,12 +123,16 @@ blockquote.large {
 
 /* Content specific styles */
 .mt-banner {
+  font-size: $medium-font-size;
   font-weight: 700;
+  .navbar-brand { // override Bootstrap's
+    font-size: $medium-font-size;
+  }
   .dropdown-menu>li>a { // override Bootstrap's
-    font-size: 100%;
+    font-size: $medium-font-size;
   }
   .dropdown-menu { // override Bootstrap's
-    font-size: 100%;
+    font-size: $medium-font-size;
   }
 }
 .mt-front {
@@ -147,7 +151,7 @@ blockquote.large {
 }
 
 
-/* Article page styles */
+/* Article page content styles */
 .hentry {
   .entry-title {
     font-weight: 700;
@@ -186,6 +190,9 @@ blockquote.large {
     margin-bottom: $content-font-size * $content-line-height;
   }
 }
+
+
+/* Article page meta / extra styles */
 .meta-header {
   font-size: $subtext-font-size;
   padding-top: $subtext-font-size;
@@ -194,7 +201,7 @@ blockquote.large {
 }
 .related-article-list {
   .entry-title {
-    font-size: $base-font-size;  // h5 style
+    font-size: 130%;  // h5 style
     margin-top: $base-font-size;
     margin-bottom: $base-font-size * 0.5; // coordinate with .entry-summary
   }
@@ -215,6 +222,13 @@ blockquote.large {
   line-height: $subtext-line-height;
   margin-bottom: $subtext-font-size / 2;
   }
+}
+
+
+/* Comment styles */
+.comments-root-container {
+    font-size: $medium-font-size;
+  
 }
 
 /* Footer styles */
@@ -250,12 +264,17 @@ blockquote.large {
  */
 
 // improve readability
-body  { text-rendering: optimizeLegibility; }
+body  { 
+  text-rendering: optimizeLegibility; 
+  -webkit-font-smoothing: subpixel-antialiased!important; 
+}
 
 // font smoothing
 body,
 input,
-button  { -webkit-font-smoothing: antialiased; }
+button  { 
+  -webkit-font-smoothing: subpixel-antialiased!important; 
+}
 
 // Base font size to browser default (16px)
 html    { font: 100%/1.5 Arial, sans-serif; }
