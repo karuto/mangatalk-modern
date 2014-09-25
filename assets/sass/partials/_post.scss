@@ -304,6 +304,7 @@ $related-block-height: $mt-block-height/3;
     .entry-summary {
       display: block;
       border-top: none;
+      padding-top: 0;
       max-height: 100%;
     }
   }
