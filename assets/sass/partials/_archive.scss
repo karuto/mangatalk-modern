@@ -66,6 +66,9 @@
       display: none;
     }
   }
+  .entry-meta { //TODO: actually do things with this!
+    display: none;
+  }
 }
 .mini-block,
 .is-inactive {
@@ -81,9 +84,6 @@
     margin-top: ($mt-block-height / 2) - $space-xl; // minus its own first line-height
   }
   .entry-summary {
-    display: none;
-  }
-  .entry-meta {
     display: none;
   }
 }
