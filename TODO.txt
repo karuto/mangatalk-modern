@@ -1,24 +1,24 @@
 TODO: Single post page
  - full-width figure [nth]
- - post without feature image [nth]
+ x post without feature image [nth]
  - image as background [nth]
    - full-width
    - container-width
- - author & meta info at end
- - disqus styling
+ x author & meta info at end
+ x disqus styling
  - comments rules
  - tooltips
  
 TODO: Other templates
- - conditional base templates
+ x conditional base templates
  x list view (archive, category, etc)
- - static homepage
+ x static homepage
  - image type for comicbits
- - single page full-width blank state
+ x single page full-width blank state
  x header
  x footer
- - search bar
- - 404 page
+ - search bar (at top)
+ x 404 page
  
 TODO: Things that are nice to have
  - 3rd party plug-in supports
@@ -29,7 +29,7 @@ TODO: Things that are nice to have
  
 MVP:
  x single post template complete (comment, other article links etc)
- - most basic blank page template
+ x most basic blank page template
  - image type template
  x header, footer, basic, no need for search yet
  x archive page

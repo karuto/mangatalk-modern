@@ -388,6 +388,8 @@ a {
 
 
 /* 404 */
+.oops-subheader,
+.oops-explain,
 .oops-errorcode {
   color: $base-text-grey-faded;
 }
@@ -406,7 +408,7 @@ a {
   a {
     color: $contrast-color-on-dark-bg;
     &:hover {
-     color: $contrast-color-on-dark-bg-focused; 
+     color: $contrast-color-on-dark-bg-focused;
     }
   }
   
