@@ -82,13 +82,12 @@
   }
   .entry-title {
     margin-top: ($mt-block-height / 2) - $space-xl; // minus its own first line-height
-  }
+  }  
   .entry-summary {
     display: none;
   }
 }
-.post-nav {
-  
+.is-inactive {
 }
 .pager {
   border-bottom: 1px solid #eee;

@@ -327,6 +327,9 @@ $related-block-height: $mt-block-height * 0.6;
   .mt-block {
     height: $related-block-height;
     .block-content {
+      .entry-title {
+        margin-top: $row-margin;
+      }
     }
     .block-header {
       width: 100%;
