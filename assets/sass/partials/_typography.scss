@@ -191,6 +191,11 @@ blockquote.large {
   .h2, .h3, .h4, .h5 {
     margin-bottom: $content-font-size * $content-line-height;
   }
+  aside {
+    font-size: $subtext-font-size;
+    line-height: $subtext-line-height;
+    padding: $subtext-font-size * 2;
+  }
 }
 
 

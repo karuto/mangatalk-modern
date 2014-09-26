@@ -359,6 +359,11 @@ a {
 }
 .entry-content {
   color: $base-reading-text-color;
+  aside {
+    border: 1px solid #aaa;
+    background-color: #fff;
+    color: #777;
+  }
 }
 
 

@@ -205,6 +205,29 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 
     }
   }
+  aside {
+    margin-bottom: $space-lg; 
+  }
+  aside.alignleft {
+    @media (max-width: $screen-sm-min) { // small screen
+      @include pos-reset();
+    }
+    @media (min-width: $screen-md-min) { // medium and large screen
+      width: 50%;
+      margin-right: $space-lg;
+      margin-left: -($extracontent-width + $article-content-container-padding);
+    }
+  }
+  aside.alignright {
+    @media (max-width: $screen-sm-min) { // small screen
+      @include pos-reset();
+    }
+    @media (min-width: $screen-md-min) { // medium and large screen
+      width: 50%;
+      margin-left: $space-lg;
+      margin-right: -($extracontent-width + $article-content-container-padding);
+    }
+  }
   img.alignleft,
   figure.alignleft {
     @extend figure;
