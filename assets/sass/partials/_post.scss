@@ -1,11 +1,16 @@
 $two-side-content-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
 $one-side-content-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
+$cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 
 /*
  * MangaTalk post page layout rules
  */
 
 /* Cover styles */
+.article-header {
+  margin: ($cover-title-height * 2) auto $cover-title-height;
+  text-align: center;
+}
 .article-cover {
   height: 100vh;
   margin-bottom: $space-xl;

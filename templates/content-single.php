@@ -5,31 +5,41 @@
   <?php // Retrieve cover image URL then set header's background
   if ( has_post_thumbnail() ) {
     $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0];
+  ?>
+  <section class="article-cover is-darkBackgrounded">
+    <div class="cover-image" style="background-image: url('<?php echo $cover_img_url; ?>');">
+      <div class="cover-content article-content-container">
+        <div class="cover-content-wrapper">
+          <h1 class="h2 entry-title"><?php the_title(); ?></h1>
+          <h4 class="h4 entry-subtitle"><?php the_excerpt(); ?></h4>
+            
+          <h4 class="h4 entry-comment-count alignright">
+            By <?php echo get_the_author(); ?> &nbsp;
+            <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
+            &nbsp;
+            <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
+          </h4>
+      
+        </div><!-- .cover-content-wrapper -->
+      </div><!-- .cover-content -->
+    </div><!-- .cover-image -->
+  </section><!-- .article-cover -->
+  <?php 
   } else {
-    $cover_img_url = 'http://i.imgur.com/zk0ecX8.jpg';
+  ?>
+    <section class="article-header article-header-no-cover">
+      <h2 class="h2 entry-title"><?php the_title(); ?></h2>
+    </section>
+  <?php 
   }
-    echo '<section class="article-cover is-darkBackgrounded">' .
-      '<div class="cover-image" style="background-image: url(' . $cover_img_url . ');">';
+    // echo '<section class="article-cover is-darkBackgrounded">' .
+    //   '<div class="cover-image" style="background-image: url(' . $cover_img_url . ');">';
   
   ?>
 
-  <div class="cover-content article-content-container">
-    <div class="cover-content-wrapper">
-      <h1 class="h2 entry-title"><?php the_title(); ?></h1>
-      <h4 class="h4 entry-subtitle"><?php the_excerpt(); ?></h4>
-            
-      <h4 class="h4 entry-comment-count alignright">
-        By <?php echo get_the_author(); ?> &nbsp;
-        <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
-        &nbsp;
-        <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
-      </h4>
-      
-    </div>
-  </div>
 
   <?php 
-  echo "</div></section>"; 
+  echo ""; 
   ?>
     
 </header>

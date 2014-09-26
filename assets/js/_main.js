@@ -117,6 +117,15 @@ if (mtBanner) {
     }
   });
   
+  // Change banner display mode based on if the cover image exists
+  if ($('.cover-image').length == 0) { // no cover, normal mode
+      mtBanner.removeClass("is-immersive");
+      mtBanner.addClass("is-normal");
+  } else { // cover exists, immersive mode
+      mtBanner.addClass("is-immersive");
+      mtBanner.removeClass("is-normal");
+  }
+  
   // Toggle fixed top banner via button switch
   $("#nav-menu-switch").click(function () {
     if ($(this).hasClass("glyphicon-chevron-down")) {
@@ -168,7 +177,7 @@ $(".mt-block").addClass("is-inactive");
 
 var blockheight = $(".mt-block").height();
 var marginTopVar = (blockheight * 0.2) + "px";
-console.log(marginTopVar);
+// console.log(marginTopVar);
 
 $(".mt-block").mouseenter(function () {
   

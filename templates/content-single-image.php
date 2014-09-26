@@ -59,7 +59,7 @@
         </div>
         <p class="article-meta-spec">
            Written on <?php echo get_the_date(); ?>. 
-           <?php the_tags( '<span>Tags: ', ' | ', '</span>' ); ?>
+           <?php the_tags( '<span>Published under: ', ' | ', '</span>' ); ?>
         </p>
         <p class="author-bio">
           <?php echo get_the_author_meta('description', $post->post_author ); ?> 
