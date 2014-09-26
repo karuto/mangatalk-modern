@@ -70,26 +70,7 @@ wp_reset_postdata();
 
 
 <div class="mt-list container">
-  
-  <ul id="tabs" class="nav nav-pills" data-tabs="tabs" role="tablist">
-    <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-    <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-    <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-    <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div class="tab-pane active" id="home">0</div>
-    <div class="tab-pane" id="profile">1</div>
-    <div class="tab-pane" id="messages">2</div>
-    <div class="tab-pane" id="settings">3</div>
-  </div>
-  <script type="text/javascript">
-      jQuery(document).ready(function ($) {
-          $('#tabs').tab();
-      });
-  </script>
+  <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
   
   <?php $count = 1; $rows = 0; ?>
   <?php while (have_posts()) : the_post(); ?>

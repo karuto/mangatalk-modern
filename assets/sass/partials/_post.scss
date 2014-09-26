@@ -317,7 +317,7 @@ blockquote.large {
   margin-top: $space-xl;  // divider style
   margin-bottom: $space-lg;  // divider style
 }
-$related-block-height: $mt-block-height/3;
+$related-block-height: $mt-block-height * 0.6;
 .related-article-list {
   .mt-block {
     height: $related-block-height;

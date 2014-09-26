@@ -75,6 +75,8 @@ $(document).ready(UTIL.loadEvents);
 // });
 
 
+
+
 // Enable smooth scrolling to an anchor on the same page
 $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
@@ -163,6 +165,11 @@ if (mtFrontcover) {
 // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 // Hover / toggle effect on article blocks
 $(".mt-block").addClass("is-inactive");
+
+var blockheight = $(".mt-block").height();
+var marginTopVar = (blockheight * 0.2) + "px";
+console.log(marginTopVar);
+
 $(".mt-block").mouseenter(function () {
   
   // Tone down the block so that we can see clearly
@@ -171,12 +178,15 @@ $(".mt-block").mouseenter(function () {
   // Only do the following effect if we don't have a related article list (not on post page)
   if ($('#related-article-list').length == 0) {
     // Title needs to make room for entry summary and meta, move up
-    $(this).find(".entry-title").animate({marginTop:"20px"}, "slow");
+    // $(this).find(".entry-title").animate({marginTop: '0px'}, "slow");
 
     // Roll in entry summary and meta
-    $(this).find(".entry-summary").fadeIn(1000);
-    $(this).find(".entry-meta").fadeIn(1000);
-  // $(this).toggleClass("is-inactive");
+    // if (  $( window ).width() > 768 ) {
+    //   $(this).find(".entry-summary").fadeIn(1000);
+    //   $(this).find(".entry-meta").fadeIn(1000);
+    // }
+    
+    $(this).toggleClass("is-inactive");
   }
   
 });
@@ -187,13 +197,16 @@ $(".mt-block").mouseleave(function () {
   
   // Only do the following effect if we don't have a related article list (not on post page)
   if ($('#related-article-list').length == 0) {
-    // Roll out entry summary and meta first!
-    $(this).find(".entry-summary").fadeOut(1000);
-    $(this).find(".entry-meta").fadeOut(1000);
+    // Roll out entry summary and meta first
+    // if ( $( window ).width() > 768 ) {
+    //   $(this).find(".entry-summary").fadeOut(1000);
+    //   $(this).find(".entry-meta").fadeOut(1000);
+    // }
 
     // Now entry title can reset itself back to original margin
-    $(this).find(".entry-title").animate({marginTop:"175px"}, "slow");
-  // $(this).toggleClass("is-inactive");
+    // $(this).find(".entry-title").animate({marginTop: marginTopVar}, "slow");
+    
+    $(this).toggleClass("is-inactive");
   }
   
 });
