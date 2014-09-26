@@ -1,3 +1,6 @@
+$two-side-content-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
+$one-side-content-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
+
 /*
  * MangaTalk post page layout rules
  */
@@ -61,6 +64,11 @@
 
 
 /* Content styles */
+.format-image {
+  .entry-content {
+    margin-top: 0; 
+  } 
+}
 .entry-content {
   margin: $space-lg 0 0;
   min-height: $space-xxl;
@@ -160,7 +168,7 @@
       @include pos-reset();
     }
     @media (min-width: $screen-md-min) {
-      max-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
+      max-width: $one-side-content-width;
       margin-left: -($article-content-container-padding + $extracontent-width);
     }
     
@@ -179,9 +187,9 @@
     }
     @media (min-width: $screen-md-min) { // medium and large screen
       img {
-        max-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
+        max-width: $two-side-content-width;
       }
-      max-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
+      max-width: $two-side-content-width;
       margin-left: -($article-content-container-padding + $extracontent-width);
       margin-right: -($article-content-container-padding + $extracontent-width);
     }
@@ -271,6 +279,35 @@ blockquote.large {
   }
   @media (min-width: $screen-lg-min) { //1200px
     max-width: $article-content-container-lg;
+  }
+}
+
+.entry-content {
+  .comicbits {    
+    p {
+      font-size: 0px;
+      margin-bottom: 0;
+//      display: none;
+    }    
+  }
+}
+.comicbits.wide {
+  max-width: $two-side-content-width;
+  margin-left: -($article-content-container-padding + $extracontent-width);
+  margin-right: -($article-content-container-padding + $extracontent-width);
+}
+@mixin max-height-fullscreen() {
+  height: auto;
+  max-width: 100vw;
+}
+.carousel-inner {
+  @include max-height-fullscreen();
+  .item {
+    @include max-height-fullscreen();
+    &>img, 
+    &>a>img {
+      @include max-height-fullscreen();
+    }
   }
 }
 
