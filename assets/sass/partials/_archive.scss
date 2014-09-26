@@ -8,15 +8,12 @@
 }
 .page-header {
   margin-top: $space-xxl;
-  border-bottom: 1px solid $base-text-light-on-dark-bg;
+  margin-bottom: 0;
+  padding-bottom: 0;
+//  border-bottom: 1px solid $base-text-light-on-dark-bg;
 }
 .mt-list {
-  margin-bottom: $space-sm;
-  .meta-header {
-    margin-top: 0;
-    margin-bottom: 0;
-    border-top: none;
-  }
+//  margin-bottom: $space-sm;
 }
 .mt-block {
   height: $mt-block-height;
@@ -89,13 +86,20 @@
 }
 .is-inactive {
 }
+
 .pager {
   border-bottom: 1px solid #eee;
   padding-bottom: $space-sm;
+  margin-top: 0;
   
   li > a, 
   li > span {
     border-radius: 0px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: $subtext-font-size;
+    text-transform: uppercase;
   }
   
 }

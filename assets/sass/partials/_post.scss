@@ -318,9 +318,12 @@ blockquote.large {
 
 
 /* Meta and extra styles */
-.meta-header {
-  margin-top: $space-xl;  // divider style
-  margin-bottom: $space-lg;  // divider style
+
+.hentry {
+  .meta-header {
+    margin-top: $space-xl;  // divider style
+    margin-bottom: $space-lg;  // divider style
+  }
 }
 $related-block-height: $mt-block-height * 0.6;
 .related-article-list {

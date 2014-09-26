@@ -369,6 +369,8 @@ a {
 }
 .meta-header {
   color: $base-text-grey-faded;
+}
+.hentry .meta-header {
   border-top: 1px solid $base-divider-color;
 }
 .related-article-list {
