@@ -233,6 +233,25 @@ blockquote.large {
   
 }
 
+/* 404 styles */
+.oops-header {
+}
+.oops-subheader {
+  margin-bottom: $base-font-size * 2; /* h3 36px */
+  line-height: 1;
+}
+.oops-errorcode {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: $subtext-font-size;
+  margin-top: $subtext-font-size / 2;
+}
+.oops-explain {
+  margin-bottom: $base-font-size / 2;
+}
+
+
+
 /* Footer styles */
 .mt-footer {
   font-size: $subtext-font-size; /* 14px; */

@@ -174,7 +174,8 @@
     <hr class="divider">
     
     <div class="row">
-      <em class="signature text-muted">Design and Coded by <a href="http://douban.com/people/karu" target="_blank">Vincent Zhang</a> in San Francisco. Copyright &copy; 2011-<?php echo date('Y'); ?> <?php bloginfo('name'); ?> & Our Authors. All Rights Reserved.</em>
+      <em class="signature text-muted">Design and Coded by <a href="http://douban.com/people/karu" target="_blank">Vincent Zhang</a> in San Francisco. Copyright &copy; 2011-<?php echo date('Y'); ?> <?php bloginfo('name'); ?> & Our Authors. All Rights Reserved.
+        <br><br><span style="font-size: 12px; color: #999;">Best wishes to T in Japan.</span></em>
     </div><!-- .row -->
   </div>
 </footer>
