@@ -13,6 +13,11 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   max-width: $two-side-content-width;
   text-align: center;
 }
+.page {
+  .article-header {
+//    margin: ($cover-title-height * 2)-$banner-height auto $cover-title-height;
+  }
+}
 .article-cover {
   height: 100vh;
   margin-bottom: $space-xl;
