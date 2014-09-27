@@ -95,11 +95,14 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 
 
-// Hover / toggle visual effect on top banner
+// Top banner related functions
 var mtBanner = $('#mt-banner');
+var mtSearch = $("#mt-search");
+mtSearch.hide();
 if (mtBanner != 0) {
   var isNativeNormal;
   
+  // Hover / toggle visual effect on top banner
   mtBanner.mouseenter(function () {
     if ($(this).hasClass("is-normal")) {
       isNativeNormal = true;
@@ -110,6 +113,7 @@ if (mtBanner != 0) {
     }
   });
   
+  // Hover / toggle visual effect on top banner
   mtBanner.mouseleave(function () {
     if (!isNativeNormal) { // immersive by default
       $(this).addClass("is-immersive");
@@ -128,16 +132,41 @@ if (mtBanner != 0) {
   
   // Toggle fixed top banner via button switch
   $("#nav-menu-switch").click(function () {
-    if ($(this).hasClass("glyphicon-chevron-down")) {
+    var icon = $(this).find("#nav-menu-switch-icon");
+    if (icon.hasClass("glyphicon-chevron-down")) {
       // Currently it's absolute, make it fixed!
-      $(this).removeClass("glyphicon-chevron-down");
-      $(this).addClass("glyphicon-chevron-up");
-      $("#mt-banner").css("position", "fixed");
+      icon.removeClass("glyphicon-chevron-down");
+      icon.addClass("glyphicon-chevron-up");
+      mtBanner.css("position", "fixed");
     } else {
       // Currently it's fixed already, so change it back!
-      $(this).removeClass("glyphicon-chevron-up");
-      $(this).addClass("glyphicon-chevron-down");
-      $("#mt-banner").css("position", "absolute");
+      icon.removeClass("glyphicon-chevron-up");
+      icon.addClass("glyphicon-chevron-down");
+      mtBanner.css("position", "absolute");
+    }
+  });
+  
+  // Toggle global search bar via button switch
+  $("#nav-search").click(function () {
+    var icon = $(this).find("#nav-search-icon");
+    if (icon.hasClass("glyphicon-zoom-out")) {
+      // Currently it's showing search, make it hidden!
+      if (mtSearch.length != 0) { // if search exists
+        mtSearch.hide();
+        mtBanner.css("top", "0");
+      }
+      
+      icon.removeClass("glyphicon-zoom-out");
+      icon.addClass("glyphicon-search");
+    } else {
+      // Currently it's not showing search, make it show!
+      if (mtSearch.length != 0) { // if search exists
+        mtSearch.show();
+        mtBanner.css("top", "50px");
+      }
+      
+      icon.removeClass("glyphicon-search");
+      icon.addClass("glyphicon-zoom-out");
     }
   });
   

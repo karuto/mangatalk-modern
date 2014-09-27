@@ -10,6 +10,7 @@ $space-xs: 8px;
 $space-xxs: 5px;
 $row-margin: 15px;
 
+$search-container-height: 50px;
 $article-content-container-lg: 700px;
 $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
@@ -86,6 +87,9 @@ body {
 .main {
   margin-bottom: $space-xl;
 }
+
+
+/* Banner nav styles */
 .mt-banner {
   margin-bottom: 0;
   position: absolute;
@@ -97,6 +101,18 @@ body {
     border: none;
   }
 }
+.mt-search {
+  height: $search-container-height;
+  .search-form {
+    margin: $space-xs auto;
+  }
+  .form-control,
+  .btn {
+    border-radius: 0px;
+    padding-bottom: 7px; // have to hardcode, sorry!
+  }
+}
+
 
 /* Homepage cover styles */
 .mt-front {

@@ -129,11 +129,11 @@
           
           <strong class="footer-header">了解漫言</strong>
           <ul class="footer-list">
-            <li><a href="#" class="mt-about-link" target="_blank" alt="about">关于我们</a></li>
-            <li><a href="#" class="mt-about-link" target="_blank" alt="team">团队成员</a></li>
-            <li><a href="#" class="mt-about-link" target="_blank" alt="faq">常见问题</a></li>
-            <li><a href="#" class="mt-about-link" target="_blank" alt="rules">社区原则</a></li>
-            <li><a href="#" class="mt-about-link" target="_blank" alt="commits">开发历史</a></li>
+            <li><a href="/about" class="mt-about-link" target="_blank" alt="about">关于我们</a></li>
+            <li><a href="/team" class="mt-about-link" target="_blank" alt="team">团队成员</a></li>
+            <li><a href="/faq" class="mt-about-link" target="_blank" alt="faq">常见问题</a></li>
+            <li><a href="/guide" class="mt-about-link" target="_blank" alt="rules">社区原则</a></li>
+            <li><a href="/history" class="mt-about-link" target="_blank" alt="commits">开发历史</a></li>
           </ul>
         
         </div>
@@ -144,11 +144,11 @@
           
           <strong class="footer-header">关注漫言</strong>
           <ul class="footer-list">
-            <li><a href="#" class="mt-connect-link" target="_blank" alt="Feedback">留言反馈</a></li>
-            <li><a href="#" class="mt-connect-link" target="_blank" alt="RSS">RSS 订阅</a></li>
-            <li><a href="#" class="mt-connect-link" target="_blank" alt="Weibo">新浪微博</a></li>
-            <li><a href="#" class="mt-connect-link" target="_blank" alt="Douban">豆瓣小站</a></li>
-            <li><a href="#" class="mt-connect-link" target="_blank" alt="Email">邮件列表</a></li>
+            <li><a href="/feed" class="mt-connect-link" target="_blank" alt="RSS">RSS 订阅</a></li>
+            <li><a href="#" class="mt-connect-link" target="_blank" alt="Email">漫言漫报</a></li>
+            <li><a href="/feedback" class="mt-connect-link" target="_blank" alt="Feedback">留言反馈</a></li>
+            <li><a href="http://weibo.com/mgtalk" class="mt-connect-link" target="_blank" alt="Weibo">新浪微博</a></li>
+            <li><a href="http://site.douban.com/manga/" class="mt-connect-link" target="_blank" alt="Douban">豆瓣小站</a></li>
           </ul>
         
         </div>
@@ -159,11 +159,11 @@
           
           <strong class="footer-header">扩展合作</strong>
           <ul class="footer-list">
-            <li><a href="#" class="mt-extend-link" target="_blank" alt="join">加入漫言</a></li>
-            <li><a href="#" class="mt-extend-link" target="_blank" alt="business">业务合作</a></li>
-            <li><a href="#" class="mt-extend-link" target="_blank" alt="writing">投稿指南</a></li>
-            <li><a href="#" class="mt-extend-link" target="_blank" alt="coding">代码手册</a></li>
-            <li><a href="#" class="mt-extend-link" target="_blank" alt="admin">登入后台</a></li>
+            <li><a href="/" class="mt-extend-link" target="_blank" alt="join">加入漫言</a></li>
+            <li><a href="/contact" class="mt-extend-link" target="_blank" alt="business">业务合作</a></li>
+            <li><a href="/author-faq" class="mt-extend-link" target="_blank" alt="writing">投稿指南</a></li>
+            <li><a href="/code-guide" class="mt-extend-link" target="_blank" alt="coding">代码手册</a></li>
+            <li><a href="/login" class="mt-extend-link" target="_blank" alt="admin">登入后台</a></li>
           </ul>
         
         </div>

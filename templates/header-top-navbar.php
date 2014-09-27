@@ -1,4 +1,8 @@
-
+<div id="mt-search" class="mt-search">
+  <div class="container">
+    <?php get_search_form(); ?>
+  </div>
+</div>
 <?php if (is_front_page() || is_single() ): /* A cover exists, so need immersive nav */ ?>
 <header id="mt-banner" class="mt-banner banner navbar navbar-static-top is-immersive" role="banner">
 <?php else: /* Normal page, don't need transparent nav */ ?>
@@ -24,8 +28,8 @@
       ?>
       
       <ul class="nav navbar-nav navbar-right">
-         <li><a href="#"><span id="nav-menu-switch" class="glyphicon glyphicon-chevron-down"></span></a></li>
-         <li><a href="#"><span id="nav-search" class="glyphicon glyphicon-search"></span></a></li>
+         <li id="nav-menu-switch"><a href="#"><span id="nav-menu-switch-icon" class="glyphicon glyphicon-chevron-down"></span></a></li>
+         <li id="nav-search"><a href="#"><span id="nav-search-icon" class="glyphicon glyphicon-search"></span></a></li>
       </ul>
       
     </nav><!-- .navbar-collapse -->
