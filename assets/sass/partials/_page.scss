@@ -1,0 +1,43 @@
+/*
+ * MangaTalk page layout rules
+ */
+
+/* General page styles */
+.page-content {
+  letter-spacing: 1px;
+  .divider {
+    
+  }
+}
+.featurette {
+  padding: 0px;
+  background-image: url('http://i.imgur.com/WlIMJcw.png');
+}
+.featurette-inner {
+}
+.featurette-content {
+  margin-top: 20%;
+  color: $base-reading-text-color;
+}
+.featurette-image {
+  margin-bottom: 0px;
+}
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: $space-lg;
+}
+.lead {
+  line-height: 1.55;  
+}
+
+/* Specific featurette styles */ 
+.feature-content {
+  
+}
+.feature-copyright {
+  background-image: none;
+}
+.feature-typography {
+  
+}
