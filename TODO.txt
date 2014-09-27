@@ -13,7 +13,7 @@ TODO: Other templates
  x conditional base templates
  x list view (archive, category, etc)
  x static homepage
- - image type for comicbits
+ x image type for comicbits
  x single page full-width blank state
  x header
  x footer
@@ -30,8 +30,11 @@ TODO: Things that are nice to have
 MVP:
  x single post template complete (comment, other article links etc)
  x most basic blank page template
- - image type template
+ x image type template
  x header, footer, basic, no need for search yet
  x archive page
  x very similar home page
+ - email sign-up
+ - contact form
+ - share social
  - CONVERSIONS
