@@ -266,6 +266,7 @@ a {
   }
   .nav>li>a:hover, .nav>li>a:focus {
     background-color: transparent;
+    border-bottom: 3px solid $base-container-bg-light;
   }
   .navbar-nav>.active>a, 
   .navbar-nav>.active>a:hover, 
@@ -353,7 +354,7 @@ a {
 }
 
 
-/* Content */
+/* Entry content */
 .cover-content-wrapper {
   background-color: $red-tint;
 }
@@ -389,6 +390,17 @@ a {
   //  text-align: center;
     color: $base-text-grey-faded;
   }
+}
+
+
+/* Page features */
+.page-cover-content {
+  color: $base-white;
+}
+.page-title {
+}
+.featurette-content {
+  color: $base-reading-text-color;
 }
 
 

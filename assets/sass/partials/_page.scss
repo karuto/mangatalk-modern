@@ -4,31 +4,50 @@
 
 /* General page styles */
 .page-content {
-  letter-spacing: 1px;
   .divider {
     
   }
 }
+.page-cover-content {
+  margin-top: $front-cover-block-height * 0.4; 
+  text-align: center;
+}
+.page-title {
+  margin-bottom: $space-md;
+}
 .featurette {
   padding: 0px;
+//  height: 100vh;
   background-image: url('http://i.imgur.com/WlIMJcw.png');
 }
 .featurette-inner {
+//  height: 100vh;
 }
 .featurette-content {
   margin-top: 20%;
-  color: $base-reading-text-color;
 }
-.featurette-image {
+.featurette-image { /* ideal height: 700px, width: 550px */
   margin-bottom: 0px;
 }
 .featurette-heading {
   font-weight: 300;
   line-height: 1.1;
+  letter-spacing: 1px;
   margin-bottom: $space-lg;
 }
 .lead {
+  letter-spacing: 1px;
   line-height: 1.55;  
+  a {
+    display: block;
+    margin-top: $space-md;
+    letter-spacing: 0.01rem;
+    font-size: $medium-font-size;
+    &:after {
+      content: "›"; 
+      margin-left: $space-sm;
+    }
+  }
 }
 
 /* Specific featurette styles */ 

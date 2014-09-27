@@ -32,8 +32,8 @@ if ( $the_query->have_posts() ) {
     <div class="container">
       <div class="row">
       <div class="front-cover-content col-xs-12 col-sm-12 col-md-12">
-        <h4 id="cover-story-title" class="h4 entry-title">
-          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <h4 class="h4 entry-title">
+          <a id="cover-story-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h4>
         <div class="entry-subtitle">
           <?php the_excerpt(); ?>

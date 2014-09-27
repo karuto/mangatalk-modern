@@ -10,7 +10,7 @@
   </div>
   <div class="oops-cover col-xs-12 col-sm-12 col-md-4">
     <img class="oops-cover-image aligncenter" src="http://i.imgur.com/gIU2tF8.png">
-    <div class="oops-errorcode">Error code: 404</div>
+    <div class="oops-errorcode">Image Copyright: あずまきよひこ『よつばと!』</div>
   </div>
 
 

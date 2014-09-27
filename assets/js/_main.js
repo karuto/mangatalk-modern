@@ -97,7 +97,7 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 // Hover / toggle visual effect on top banner
 var mtBanner = $('#mt-banner');
-if (mtBanner) {
+if (mtBanner != 0) {
   var isNativeNormal;
   
   mtBanner.mouseenter(function () {
@@ -148,22 +148,13 @@ if (mtBanner) {
 
 
 
-// Hover / toggle effect on frontpage cover
-var mtFrontcover = $('#mt-front');
-if (mtFrontcover) {
-  
+// Retrieve inner link and apply to title of frontpage cover
+var mtFrontcover = $('.home #mt-front');
+if (mtFrontcover.length != 0) {
+    console.log($("#cover-story-link").attr("href"));
   $("#cover-story").click(function () {
-    window.location = $("#cover-story-link").find("a").attr("href");
+    window.location = $("#cover-story-link").attr("href");
   });
-  
-  // mtFrontcover.mouseenter(function () {
-  //   $(this).addClass("coverActive");
-  //   $(this).removeClass("coverInactive");
-  // });
-  // mtFrontcover.mouseleave(function () {
-  //   $(this).addClass("coverInactive");
-  //   $(this).removeClass("coverActive");
-  // });
 } else {
   console.log("Front cover did not exist on this page");
 }
@@ -173,59 +164,62 @@ if (mtFrontcover) {
 
 // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 // Hover / toggle effect on article blocks
-$(".mt-block").addClass("is-inactive");
-
-var blockheight = $(".mt-block").height();
-var marginTopVar = (blockheight * 0.2) + "px";
-// console.log(marginTopVar);
-
-$(".mt-block").mouseenter(function () {
+var blocks = $(".mt-block");
+if (blocks.length != 0) { // if blocks exist
+  blocks.addClass("is-inactive");
+  var blockheight = blocks.height();
+  var marginTopVar = (blockheight * 0.2) + "px";  
   
-  // Tone down the block so that we can see clearly
-  $(this).animate({opacity:"1"}, "slow");
+  blocks.mouseenter(function () {
   
-  // Only do the following effect if we don't have a related article list (not on post page)
-  if ($('#related-article-list').length == 0) {
-    // Title needs to make room for entry summary and meta, move up
-    // $(this).find(".entry-title").animate({marginTop: '0px'}, "slow");
-
-    // Roll in entry summary and meta
-    // if (  $( window ).width() > 768 ) {
-    //   $(this).find(".entry-summary").fadeIn(1000);
-    //   $(this).find(".entry-meta").fadeIn(1000);
-    // }
+    // Tone down the block so that we can see clearly
+    $(this).animate({opacity:"1"}, "slow");
+  
+    // Only do the following effect if we don't have a related article list (not on post page)
+    if ($('#related-article-list').length == 0) {
+      // Title needs to make room for entry summary and meta, move up
+      // $(this).find(".entry-title").animate({marginTop: '0px'}, "slow");
+      // Roll in entry summary and meta
+      // if (  $( window ).width() > 768 ) {
+      //   $(this).find(".entry-summary").fadeIn(1000);
+      //   $(this).find(".entry-meta").fadeIn(1000);
+      // }
     
-    $(this).toggleClass("is-inactive");
-  }
+      $(this).toggleClass("is-inactive");
+    }
   
-});
-$(".mt-block").mouseleave(function () {
+  });
+  blocks.mouseleave(function () {
   
-  // Restore its opacity
-  $(this).animate({opacity:"0.8"}, "slow");
+    // Restore its opacity
+    $(this).animate({opacity:"0.8"}, "slow");
   
-  // Only do the following effect if we don't have a related article list (not on post page)
-  if ($('#related-article-list').length == 0) {
-    // Roll out entry summary and meta first
-    // if ( $( window ).width() > 768 ) {
-    //   $(this).find(".entry-summary").fadeOut(1000);
-    //   $(this).find(".entry-meta").fadeOut(1000);
-    // }
-
-    // Now entry title can reset itself back to original margin
-    // $(this).find(".entry-title").animate({marginTop: marginTopVar}, "slow");
+    // Only do the following effect if we don't have a related article list (not on post page)
+    if ($('#related-article-list').length == 0) {
+      // Roll out entry summary and meta first
+      // if ( $( window ).width() > 768 ) {
+      //   $(this).find(".entry-summary").fadeOut(1000);
+      //   $(this).find(".entry-meta").fadeOut(1000);
+      // }
+      // Now entry title can reset itself back to original margin
+      // $(this).find(".entry-title").animate({marginTop: marginTopVar}, "slow");
     
-    $(this).toggleClass("is-inactive");
-  }
+      $(this).toggleClass("is-inactive");
+    }
   
-});
+  });
+  
+} else {
+  console.log("No blocks exist on this page");
+}
+
 
 
 
 // Fade out article's cover image as scrolling
 function fader() {
     var coverDiv = $('.article-front .cover-image');
-    if (coverDiv) {
+    if (coverDiv.length != 0) {
       var windowHeight = $(window).height(),
           currentPos = $(document).scrollTop(),
           coverDivView = windowHeight - (coverDiv.offset().top - currentPos),
@@ -238,13 +232,13 @@ function fader() {
           if (op > 0) {
             coverDiv.css({opacity: op});            
             // since we are in the cover, make banner immersive
-            if (mtBanner) {
+            if (mtBanner != 0) {
               mtBanner.removeClass("is-normal");
               mtBanner.addClass("is-immersive");
             }
           } else {
             // since we already scroll passed the cover, make banner normal
-            if (mtBanner) {
+            if (mtBanner != 0) {
               mtBanner.removeClass("is-immersive");
               mtBanner.addClass("is-normal");
             }
@@ -252,7 +246,7 @@ function fader() {
           }
       }      
     } else {
-      console.log("This page doesn't have a cover.");
+      // console.log("This page doesn't have a cover.");
     }
 }
 // Event on scroll
