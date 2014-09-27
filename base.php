@@ -16,7 +16,7 @@
     }
   ?>
 
-<?php if (is_front_page()): ?>
+<?php if (is_front_page() || is_page()): ?>
   <div class="wrap" role="document">
 <?php else: ?>
   <div class="wrap container" role="document">
