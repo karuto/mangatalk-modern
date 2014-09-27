@@ -4,8 +4,8 @@
 
 $bootstrap-sass-asset-helper: false;
 // Vendors: third-party library stylesheets, lowest priority
-@import "vendors/bootstrap/bootstrap";
-//@import "vendors/reset";
+@import "bootstrap/bootstrap";
+@import "vendors/reset";
 
 // Modules: Mixins and helper functions, medium priority
 // Modules shouldn't cause Sass to actually output any CSS

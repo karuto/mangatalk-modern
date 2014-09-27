@@ -9,6 +9,8 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 /* Cover styles */
 .article-header {
   margin: ($cover-title-height * 2) auto $cover-title-height;
+  width: 90%;
+  max-width: $two-side-content-width;
   text-align: center;
 }
 .article-cover {
@@ -70,8 +72,14 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 
 /* Content styles */
 .format-image {
+  .entry-title-holder {
+    display: none;
+  }
   .entry-content {
     margin-top: $space-xxl; 
+    img {
+      margin-bottom: 0;
+    }
   } 
 }
 .entry-content {

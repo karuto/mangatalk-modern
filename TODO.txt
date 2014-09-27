@@ -17,7 +17,7 @@ TODO: Other templates
  x single page full-width blank state
  x header
  x footer
- - search bar (at top)
+ x search bar (at top)
  x 404 page
  
 TODO: Things that are nice to have

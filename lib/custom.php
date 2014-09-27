@@ -11,3 +11,18 @@ function roots_wrap_base_cpts($templates) {
   }
   return $templates; // Return our modified array with base-$cpt.php at the front of the queue
 }
+
+/** 
+ * Remove wpautop only for 'image' post format posts. I know, I know it's dangerous. 
+ * But the <p> are fucking up the functionality of carousel which is essential for images.
+ */  
+add_filter('the_content', 'specific_no_wpautop', 9); // last is priority, must be >8
+
+function specific_no_wpautop($content) {
+  if( get_post_format() == 'image' ) {
+    remove_filter('the_content','wpautop');
+    return $content;  //no autop
+  } else {
+    return $content; // regular autop    
+  }
+}

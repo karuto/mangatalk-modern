@@ -23,6 +23,7 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      $('.entry-content').tooltip();
     }
   },
   // Home page
@@ -73,24 +74,6 @@ $(document).ready(UTIL.loadEvents);
 // $('body').click(function(event) {
 //     console.log(event.target);
 // });
-
-
-
-
-// Enable smooth scrolling to an anchor on the same page
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('html,body').animate({
-                 scrollTop: target.offset().top
-            }, 1000);
-            return false;
-        }
-    }
-});
 
 
 
@@ -180,7 +163,6 @@ if (mtBanner != 0) {
 // Retrieve inner link and apply to title of frontpage cover
 var mtFrontcover = $('.home #mt-front');
 if (mtFrontcover.length != 0) {
-    console.log($("#cover-story-link").attr("href"));
   $("#cover-story").click(function () {
     window.location = $("#cover-story-link").attr("href");
   });
@@ -281,3 +263,14 @@ function fader() {
 // Event on scroll
 $(document).bind('scroll', fader);
 
+
+
+
+
+// Add title manually after comicbits slideshow
+var cbSlides = $('.comicbits');
+if (cbSlides.length != 0) {
+  var title = $('.entry-title-holder').text();
+  console.log(title);
+  $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
+}

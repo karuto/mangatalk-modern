@@ -87,7 +87,9 @@ body {
 .main {
   margin-bottom: $space-xl;
 }
-
+.carousel-inner img { 
+  width: 100%; 
+}
 
 /* Banner nav styles */
 .mt-banner {
