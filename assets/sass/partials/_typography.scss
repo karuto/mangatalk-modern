@@ -200,6 +200,10 @@ blockquote.large {
     font-size: $subtext-font-size;
     line-height: $subtext-line-height;
     padding: $subtext-font-size * 2;
+    &.p {
+      font-size: $subtext-font-size;
+      line-height: $subtext-line-height;
+    }
   }
 }
 
