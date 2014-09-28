@@ -9,8 +9,8 @@
           <?php echo get_the_author_link(); ?>
         </div>
         <p class="article-meta-spec">
-           Written on <?php echo get_the_date(); ?>
-           <?php the_tags( '<div>Published under: ', ' | ', '</div>' ); ?>
+           Written on <?php echo get_the_date(); ?><br>
+           <?php the_tags( 'Published under ', ', ', '' ); ?>
         </p>
         <p class="author-bio">
           <?php echo get_the_author_meta('description', $post->post_author ); ?> 
