@@ -199,6 +199,7 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   }
   figure.is-fullwidth { // ignores content container, DOES NOT SUPPORT ALIGNLEFT!!
     @extend figure;
+    margin-bottom: $space-md;
     margin-bottom: $space-xl;
     text-align: center;
     @media (max-width: $screen-sm-min) { // small screen
