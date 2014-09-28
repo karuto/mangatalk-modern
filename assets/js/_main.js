@@ -189,7 +189,7 @@ if (blocks.length != 0) { // if blocks exist
     $(this).animate({opacity:"1"}, "slow");
     
     // Only do the following effect if we don't have a related article list (not on post page)
-    if ($('#related-article-list').length == 0 && screenLargeEnough) {
+    if (($('#related-article-list').length == 0) && screenLargeEnough) {
       $(this).toggleClass("is-inactive");
     } else { // related article mini-block
       $(this).toggleClass("is-active");
@@ -202,7 +202,7 @@ if (blocks.length != 0) { // if blocks exist
     $(this).animate({opacity:"0.8"}, "slow");
   
     // Only do the following effect if we don't have a related article list (not on post page)
-    if ($('#related-article-list').length == 0 && screenLargeEnough) {
+    if (($('#related-article-list').length == 0) && screenLargeEnough) {
       $(this).toggleClass("is-inactive");
     } else { // related article mini-block
       $(this).toggleClass("is-active");
