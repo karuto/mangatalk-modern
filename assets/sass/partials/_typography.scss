@@ -203,6 +203,7 @@ blockquote.large {
     & p {
       font-size: $subtext-font-size;
       line-height: $subtext-line-height;
+      margin-bottom: ($subtext-font-size * $subtext-line-height);
     }
     h1, h2, h3, h4, h5, h6,
     .h1, .h2, .h3, .h4, .h5, .h6 {
