@@ -173,6 +173,8 @@ if (mtFrontcover.length != 0) {
 
 
 
+var width = $(window).width(); 
+var screenLargeEnough = ($(window).width() > 1200) ? true : false;
 // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 // Hover / toggle effect on article blocks
 var blocks = $(".mt-block");
@@ -187,7 +189,7 @@ if (blocks.length != 0) { // if blocks exist
     $(this).animate({opacity:"1"}, "slow");
     
     // Only do the following effect if we don't have a related article list (not on post page)
-    if ($('#related-article-list').length == 0) {
+    if ($('#related-article-list').length == 0 && screenLargeEnough) {
       $(this).toggleClass("is-inactive");
     } else { // related article mini-block
       $(this).toggleClass("is-active");
@@ -200,7 +202,7 @@ if (blocks.length != 0) { // if blocks exist
     $(this).animate({opacity:"0.8"}, "slow");
   
     // Only do the following effect if we don't have a related article list (not on post page)
-    if ($('#related-article-list').length == 0) {
+    if ($('#related-article-list').length == 0 && screenLargeEnough) {
       $(this).toggleClass("is-inactive");
     } else { // related article mini-block
       $(this).toggleClass("is-active");
