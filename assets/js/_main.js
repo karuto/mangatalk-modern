@@ -177,7 +177,7 @@ if (mtFrontcover.length != 0) {
 // Hover / toggle effect on article blocks
 var blocks = $(".mt-block");
 if (blocks.length != 0) { // if blocks exist
-  blocks.addClass("is-inactive");
+  blocks.addClass("is-inactive"); // Add inactive by default
   var blockheight = blocks.height();
   var marginTopVar = (blockheight * 0.2) + "px";  
   
@@ -185,18 +185,12 @@ if (blocks.length != 0) { // if blocks exist
   
     // Tone down the block so that we can see clearly
     $(this).animate({opacity:"1"}, "slow");
-  
+    
     // Only do the following effect if we don't have a related article list (not on post page)
     if ($('#related-article-list').length == 0) {
-      // Title needs to make room for entry summary and meta, move up
-      // $(this).find(".entry-title").animate({marginTop: '0px'}, "slow");
-      // Roll in entry summary and meta
-      // if (  $( window ).width() > 768 ) {
-      //   $(this).find(".entry-summary").fadeIn(1000);
-      //   $(this).find(".entry-meta").fadeIn(1000);
-      // }
-    
       $(this).toggleClass("is-inactive");
+    } else { // related article mini-block
+      $(this).toggleClass("is-active");
     }
   
   });
@@ -207,21 +201,25 @@ if (blocks.length != 0) { // if blocks exist
   
     // Only do the following effect if we don't have a related article list (not on post page)
     if ($('#related-article-list').length == 0) {
-      // Roll out entry summary and meta first
-      // if ( $( window ).width() > 768 ) {
-      //   $(this).find(".entry-summary").fadeOut(1000);
-      //   $(this).find(".entry-meta").fadeOut(1000);
-      // }
-      // Now entry title can reset itself back to original margin
-      // $(this).find(".entry-title").animate({marginTop: marginTopVar}, "slow");
-    
       $(this).toggleClass("is-inactive");
+    } else { // related article mini-block
+      $(this).toggleClass("is-active");
     }
   
   });
   
 } else {
   console.log("No blocks exist on this page");
+}
+
+
+
+
+var related = $("#related-article-list");
+if (related.length > 0) {
+  
+} else {
+  console.log("No related articles exist on this page");
 }
 
 

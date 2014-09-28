@@ -83,6 +83,7 @@ $front-cover-block-height: $mt-block-height * 1.5; /* 375px */
  * MangaTalk global layout rules (starts with mt-)
  */
 body {
+  overflow-x: hidden;
   min-height: $front-cover-block-height;
 }
 .main {
