@@ -44,10 +44,11 @@ wp_reset_postdata();
 
 <div class="mt-story-banner">
 <div class="container">
-  <a href="/story">
-    <h4 class="story-banner-title">
+  <a class="story-banner-link" href="/story">
+    <div class="story-banner-title">
       一个故事或许不能改变世界，但她能改变你与我的人生。
-    </h4>
+      讲述你的故事 ›
+    </div>
   </a>
 </div>
 </div>
