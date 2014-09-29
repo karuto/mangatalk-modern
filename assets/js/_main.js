@@ -305,7 +305,7 @@ if (contactForm.length > 0) {
 			var formInput = $(this).serialize();
 			$.post($(this).attr('action'),formInput, function(data){
 				contactForm.slideUp("fast", function() {				   
-					$(this).before('<div class="thanks"><h3>感谢你的联络。</h3><p>我们会抽空仔细阅读你的留言，谢谢！</p></div>');
+					$(this).before('<div class="thanks"><h3>感谢您对漫言的支持。</h3><p>您的来件已顺利提交，我们会抽空仔细阅读，谢谢！</p></div>');
 				});
 			});
 		}
