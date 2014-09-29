@@ -99,7 +99,7 @@ $regular-featurette-margin: $space-xl + $space-md;
     @media (min-width: $screen-lg-min) { // large screen
       width: 60%;
     }
-    @media (min-width: $screen-md-max) { // medium screen
+    @media (max-width: $screen-md-max) { // medium screen
       width: 80%;
     }
   }
