@@ -161,7 +161,7 @@ if(isset($_POST['submitted'])) {
       
 				<!-- <li class="screenReader"><label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" /></li> -->
 				<input type="hidden" name="submitted" id="submitted" value="true" />
-        <button type="submit" class="btn btn-default">发送留言</button>
+        <button type="submit" class="btn btn-default">发送</button>
 			</ol>
 		</form>
 	
