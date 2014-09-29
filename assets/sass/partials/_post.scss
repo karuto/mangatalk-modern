@@ -1,4 +1,4 @@
-$two-side-content-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg;
+$two-side-content-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg; // 700px
 $one-side-content-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
 $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 
