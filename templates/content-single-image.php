@@ -12,7 +12,7 @@
     <?php get_template_part('templates/meta', 'authorinfo'); ?>
   
     <div class="comments-root-container clearfix">
-      <header class="meta-header author-info-header"> 留言讨论&emsp;|&emsp;Goings-On About Town</header>
+      <header class="meta-header author-info-header">留言讨论&emsp;|&emsp;Goings-On About Town</header>
       <div class="row">
         <?php comments_template('/templates/comments.php'); ?>
   
