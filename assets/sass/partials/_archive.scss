@@ -67,11 +67,11 @@
     display: none;
   }
 }
-.mini-block,
 .is-inactive {
   opacity: 0.8;
   .block-header {
     margin: $space-xxl $space-lg 0;
+    text-align: center;
     @media (max-width: $screen-md-max) { // small and medium screen
       width: 90%;
       margin: 20% auto;

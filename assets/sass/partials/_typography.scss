@@ -5,7 +5,7 @@ $base-font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "H
 $base-font-size: 18px;
 $base-font-weight: 300;
 
-$content-font-size: 22px;
+$content-font-size: 18px;
 $content-line-height: 1.45;
 $content-line-height-px: $content-line-height * $content-font-size;
 
@@ -34,6 +34,9 @@ body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: 1.6;
+}
+p {
+  letter-spacing: 0.02rem;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 { 
@@ -113,6 +116,11 @@ blockquote.large {
   font-weight: 400;
   font-size: 180%; /* 32px */
   line-height: 1.4;
+  p {
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 180%; /* 32px */
+  }
   text-align: center;
   padding: 0;
   letter-spacing: 0.01rem;
@@ -173,7 +181,6 @@ blockquote.large {
 //    text-indent: $content-font-size*2;
     line-height: $content-line-height;
     margin-bottom: $content-line-height-px;
-    letter-spacing: 0.01rem;
   }
   h2, .h2 {
     margin-top: $space-xl;
@@ -195,6 +202,31 @@ blockquote.large {
     font-size: $subtext-font-size;
     line-height: $subtext-line-height;
     padding: $subtext-font-size * 2;
+    & p {
+      font-size: $subtext-font-size;
+      line-height: $subtext-line-height;
+      margin-bottom: ($subtext-font-size * $subtext-line-height);
+    }
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-size: 130%;
+      margin: ($subtext-font-size * $subtext-line-height) 0;
+    }
+    h1::first-of-type, 
+    h2::first-of-type, 
+    h3:first-of-type, 
+    h4:first-of-type, 
+    h5:first-of-type, 
+    h6:first-of-type,
+    .h1:first-of-type, 
+    .h2:first-of-type, 
+    .h3:first-of-type, 
+    .h4:first-of-type, 
+    .h5:first-of-type, 
+    .h6:first-of-type {
+      margin-top: 0;
+    }  
+    
   }
 }
 

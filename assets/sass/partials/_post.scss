@@ -199,7 +199,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   }
   figure.is-fullwidth { // ignores content container, DOES NOT SUPPORT ALIGNLEFT!!
     @extend figure;
+    margin-bottom: $space-md;
     margin-bottom: $space-xl;
+    text-align: center;
     @media (max-width: $screen-sm-min) { // small screen
       @include pos-reset();
     }
@@ -212,6 +214,7 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
       margin-right: -($article-content-container-padding + $extracontent-width);
     }
     figcaption {
+      max-width: $article-content-container-lg;
       @media (min-width: $screen-md-min) {
         margin-left: ($extracontent-width + $article-content-container-padding);
       }
@@ -354,36 +357,34 @@ blockquote.large {
 
 
 /* Meta and extra styles */
-
+#disqus_thread {
+  margin: 0 15px;
+}
 .hentry {
   .meta-header {
     margin-top: $space-xl;  // divider style
     margin-bottom: $space-lg;  // divider style
   }
 }
+
 $related-block-height: $mt-block-height * 0.6;
 .related-article-list {
-  .mt-block {
-    height: $related-block-height;
-    .block-content {
-      .entry-title {
-        margin-top: $row-margin;
-      }
-    }
-    .block-header {
-      width: 100%;
-    }
-    .block-cover-wrapper {
-      height: $related-block-height;
-    }
-  }
   .row {
    margin-left: 0;
    margin-right: 0; 
   }
-  .is-inactive {
+  .entry-meta,
+  .entry-comment-count {
+    display: none;
+  }
+  .mt-block {
+    height: $related-block-height;
+    .block-cover-wrapper {
+      height: $related-block-height;
+    }
     .block-header {
-      margin: 0 auto;
+      width: 100%;
+      margin: 0;
     }
     .entry-summary {
       display: block;
@@ -392,10 +393,28 @@ $related-block-height: $mt-block-height * 0.6;
       max-height: 100%;
     }
   }
-  .entry-meta,
-  .entry-comment-count {
-    display: none;
+  .mt-block.is-active {
+    .entry-title {
+      margin-top: $row-margin;
+    }
+    .entry-summary {
+      display: block;
+    }
   }
+
+  .mt-block.is-inactive {
+    .block-header {
+      margin-top: (($related-block-height / 2) - 15px);
+      text-align: center;
+    }
+    .entry-title {
+      margin-top: 0;
+    }
+    .entry-summary {
+      display: none;
+    }
+  }
+
 }
 .entry-meta-container {
   padding-bottom: $space-xl;
