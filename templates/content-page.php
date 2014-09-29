@@ -10,7 +10,7 @@
     </section>
 </header>
 
-<div class="entry-content page-content article-content-container" data-spy="scroll" data-target="#myScrollspy">
+<div class="entry-content page-content article-content-container">
 <?php while (have_posts()) : the_post(); ?>
   <?php the_content(); ?>
 <?php endwhile; ?>

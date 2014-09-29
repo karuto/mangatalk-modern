@@ -42,6 +42,9 @@ $page-cover-block-height: 500px;
 .page-title {
   margin-bottom: $space-md;
 }
+a.page-intro-link {
+  color: $base-white;
+}
 .featurette {
   padding: 0px;
 //  height: 100vh;
@@ -84,9 +87,12 @@ $regular-featurette-margin: $space-xl + $space-md;
   .featurette-content {
     margin-top: $regular-featurette-margin;
     margin-bottom: $regular-featurette-margin;
+    @media (min-width: $screen-md-max) { // medium and large screen
+      width: 60%;
+    }
   }
-  .container {
-    width: $article-content-container-lg;
+  .featurette {
+//    width: $article-content-container-lg;
   }
   .featurette-heading {
     text-align: center;
