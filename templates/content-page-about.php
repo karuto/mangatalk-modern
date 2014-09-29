@@ -4,11 +4,11 @@
  * Description: A Page Template with full-width, end-to-end display. Content is "About us"
  */
 ?>
-<div class="page-content">
+<div class="page-content page-fullwidth page-about">
   
 <header class="mt-front">
 <section class="article-cover">
-  <div id="cover-story" class="cover-image" style="/*background-image: url(http://static.tinyletter.com/mangatalk/cb8a9a4e-6817-4fe7-bcd0-faa4d6a4988f.png)*/ background-color: #E84141">
+  <div id="cover-story" class="cover-image">
     <div class="cover-image-inner">
       
     <div class="container">
@@ -44,7 +44,7 @@
         </p>
       </div>
       <div class="col-md-6">
-        <img class="featurette-image alignright img-responsive" src="http://images.apple.com/cn/iphone-6/overview/images/security_large.png" alt="精益求精。">
+        <img class="featurette-image alignright img-responsive" src="http://i.imgur.com/pNQsSQt.png" alt="精益求精。">
       </div>
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
@@ -54,7 +54,7 @@
   <div class="featurette-inner container">
     <div class="row">
       <div class="col-md-6">
-        <img class="featurette-image alignleft img-responsive" src="http://images.apple.com/cn/iphone-6/overview/images/security_large.png" alt="精益求精。">
+        <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/pNQsSQt.png" alt="尊识至源。">
       </div>
       <div class="featurette-content col-md-6">
         <h2 class="featurette-heading">尊识至源。</h2>
@@ -86,7 +86,7 @@
         </p>
       </div>
       <div class="col-md-6">
-        <img class="featurette-image alignright img-responsive" src="http://images.apple.com/cn/iphone-6/overview/images/security_large.png" alt="精益求精。">
+        <img class="featurette-image alignright img-responsive" src="http://i.imgur.com/pNQsSQt.png" alt="品读深思。">
       </div>
     </div><!-- .row -->
   </div><!-- .featurette-inner -->

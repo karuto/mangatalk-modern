@@ -1,11 +1,32 @@
 /*
  * MangaTalk page layout rules
  */
+$page-cover-block-height: 500px;
 
 /* General page styles */
 .page {
   .main {
     margin-bottom: 0;
+  }
+}
+.page-fullwidth {
+  .mt-front {
+    .cover-image-inner {
+      height: $page-cover-block-height;
+      background-image: none;
+      background-color: $grey-tint-lighter;
+    }
+    .article-cover {
+      height: $page-cover-block-height;
+      .cover-image {
+        height: $page-cover-block-height;
+        background-image: url('http://i.imgur.com/BTCoxlL.jpg'); 
+        background-color: #E84141;
+      }
+    }
+    .entry-subtitle {
+      letter-spacing: 0.05rem;
+    }
   }
 }
 .page-content {
@@ -15,7 +36,7 @@
   }
 }
 .page-cover-content {
-  margin-top: $front-cover-block-height * 0.4; 
+  margin-top: $page-cover-block-height * 0.4; 
   text-align: center;
 }
 .page-title {
@@ -24,7 +45,6 @@
 .featurette {
   padding: 0px;
 //  height: 100vh;
-  background-image: url('http://i.imgur.com/WlIMJcw.png');
 }
 .featurette-inner {
 //  height: 100vh;
@@ -44,6 +64,11 @@
 .lead {
   letter-spacing: 1px;
   line-height: 1.55;  
+}
+
+/* Specific featurette styles */ 
+$regular-featurette-margin: $space-xl + $space-md;
+.page-about {
   a {
     display: block;
     margin-top: $space-md;
@@ -55,14 +80,25 @@
     }
   }
 }
-
-/* Specific featurette styles */ 
-.feature-content {
-  
+.page-story {
+  .featurette-content {
+    margin-top: $regular-featurette-margin;
+    margin-bottom: $regular-featurette-margin;
+  }
+  .container {
+    width: $article-content-container-lg;
+  }
+  .featurette-heading {
+    text-align: center;
+  }
 }
-.feature-copyright {
+.feature-content {
   background-image: none;
 }
+.feature-story-submit,
+.feature-copyright {
+  background-image: url('http://i.imgur.com/WlIMJcw.png');
+}
 .feature-typography {
-  
+  background-image: none;
 }
