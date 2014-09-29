@@ -87,15 +87,21 @@ $regular-featurette-margin: $space-xl + $space-md;
   .featurette-content {
     margin-top: $regular-featurette-margin;
     margin-bottom: $regular-featurette-margin;
-    @media (min-width: $screen-md-max) { // medium and large screen
-      width: 60%;
-    }
   }
   .featurette {
 //    width: $article-content-container-lg;
   }
   .featurette-heading {
     text-align: center;
+  }
+  .lead {
+    margin: 0 auto;
+    @media (min-width: $screen-lg-min) { // large screen
+      width: 60%;
+    }
+    @media (min-width: $screen-md-max) { // medium screen
+      width: 80%;
+    }
   }
 }
 .feature-content {
