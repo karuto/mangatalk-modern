@@ -4,7 +4,7 @@
  */
 ?>
 
-<!-- <?php
+<?php
 /**
  * Update variable settings.
  * Load to your WP root folder.
@@ -27,77 +27,70 @@ require('wp-load.php');
 // Call the wp_mail function, display message based on the result.
 if( wp_mail( $to, $subject, $message, $headers ) ) {
     // the message was sent...
-    echo '<h1>The test message was sent. Check your email inbox.</h1>';
+    echo '<h1>'.phpinfo().'The test message was sent. Check your email inbox.</h1>';
 } else {
     // the message was not sent...
     echo '<h1>The message was not sent!</h1>';
 };
-?> -->
+?>
 
 
 
 <?php 
 //If the form is submitted
 if(isset($_POST['submitted'])) {
-
-	//Check to see if the honeypot captcha field was filled in
-	if(trim($_POST['checking']) !== '') {
-		$captchaError = true;
+	//Check to make sure that the name field is not empty
+	if(trim($_POST['contactName']) === '') {
+		$nameError = 'You forgot to enter your name.';
+		$hasError = true;
 	} else {
+		$name = trim($_POST['contactName']);
+	}
 	
-		//Check to make sure that the name field is not empty
-		if(trim($_POST['contactName']) === '') {
-			$nameError = 'You forgot to enter your name.';
-			$hasError = true;
-		} else {
-			$name = trim($_POST['contactName']);
-		}
+	//Check to make sure sure that a valid email address is submitted
+	if(trim($_POST['email']) === '')  {
+		$emailError = 'You forgot to enter your email address.';
+		$hasError = true;
+	} else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
+		$emailError = 'You entered an invalid email address.';
+		$hasError = true;
+	} else {
+		$email = trim($_POST['email']);
+	}
 		
-		//Check to make sure sure that a valid email address is submitted
-		if(trim($_POST['email']) === '')  {
-			$emailError = 'You forgot to enter your email address.';
-			$hasError = true;
-		} else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
-			$emailError = 'You entered an invalid email address.';
-			$hasError = true;
+	//Check to make sure comments were entered	
+	if(trim($_POST['comments']) === '') {
+		$commentError = 'You forgot to enter your comments.';
+		$hasError = true;
+	} else {
+		if(function_exists('stripslashes')) {
+			$comments = stripslashes(trim($_POST['comments']));
 		} else {
-			$email = trim($_POST['email']);
+			$comments = trim($_POST['comments']);
 		}
-			
-		//Check to make sure comments were entered	
-		if(trim($_POST['comments']) === '') {
-			$commentError = 'You forgot to enter your comments.';
-			$hasError = true;
-		} else {
-			if(function_exists('stripslashes')) {
-				$comments = stripslashes(trim($_POST['comments']));
-			} else {
-				$comments = trim($_POST['comments']);
-			}
+	}
+		
+	//If there is no error, send the email
+	if(!isset($hasError)) {
+    echo "<h1>got in</h1>";
+		$emailTo = 'hi@mangatalk.net';
+		$subject = '[留言反馈] 来自 ' . $name;
+		$sendCopy = trim($_POST['sendCopy']);
+		$body = "名字：$name \n\n邮件：$email \n\n附言：$comments";
+		$headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+		
+		wp_mail($emailTo, $subject, $body, $headers);
+
+    echo "<h1>sent! + ". $body ." + " . $headers ."</h1>";
+    
+		if($sendCopy == true) {
+			$subject = ' 您在漫言（http://mangatalk.net）的留言副本';
+			$headers = 'From: 漫言 MangaTalk <hi@mangatalk.net>';
+			wp_mail($email, $subject, $body, $headers);
 		}
-			
-		//If there is no error, send the email
-		if(!isset($hasError)) {
-      echo "<h1>got in</h1>";
-			$emailTo = 'hi@mangatalk.net';
-			$subject = '[留言反馈] 来自 ' . $name;
-			$sendCopy = trim($_POST['sendCopy']);
-			$body = "名字：$name \n\n邮件：$email \n\n附言：$comments";
-			$headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
-			
-			wp_mail($emailTo, $subject, $body, $headers);
 
-      echo "<h1>sent! + ". $body ." + " . $headers ."</h1>";
-      
-			if($sendCopy == true) {
-				$subject = ' 您在漫言（http://mangatalk.net）的留言副本';
-				$headers = 'From: 漫言 MangaTalk <hi@mangatalk.net>';
-				wp_mail($email, $subject, $body, $headers);
-			}
+		$emailSent = true;
 
-			$emailSent = true;
-
-		}
 	}
 } ?>
 
@@ -180,7 +173,7 @@ if(isset($_POST['submitted'])) {
         </label>
       </div>
       
-				<li class="screenReader"><label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" /></li>
+				<!-- <li class="screenReader"><label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" /></li> -->
 				<input type="hidden" name="submitted" id="submitted" value="true" />
         <button type="submit" class="btn btn-default">发送留言</button>
 			</ol>
