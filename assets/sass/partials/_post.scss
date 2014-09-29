@@ -54,6 +54,11 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
       max-width: $article-content-container-lg + $space-xl * 2;
     }
   }
+  .entry-subtitle {
+    @media (max-width: $screen-md-min) { //1200px
+      display: none;
+    }
+  }
 }
 .cover-content {
   margin-top: $cover-title-pos / 3;
