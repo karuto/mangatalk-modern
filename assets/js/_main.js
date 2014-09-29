@@ -159,6 +159,16 @@ if (mtBanner != 0) {
 
 
 
+// Story link remove
+var storyRemove = $('#story-remove');
+if (storyRemove.length != 0) {
+  storyRemove.click(function () {
+    $('.mt-story-banner').fadeOut();
+  });
+}
+
+
+
 
 // Retrieve inner link and apply to title of frontpage cover
 var mtFrontcover = $('.home #mt-front');
@@ -278,7 +288,7 @@ if (cbSlides.length != 0) {
 
 
 
-
+// Contact form validation
 var contactForm = $('form#contactForm');
 if (contactForm.length > 0) {
 	contactForm.submit(function() {

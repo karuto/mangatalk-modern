@@ -176,7 +176,6 @@ body {
 .mt-story-banner {
   background-image: url('http://i.imgur.com/dmiiS4a.png');
   padding: ($space-lg + $space-sm) 0;
-  margin-bottom: $space-lg;
   .story-banner-title {
     font-weight: 300;
     color: #fff;
@@ -185,7 +184,9 @@ body {
     
   }
 }
-
+.home .meta-header {
+  margin-top: $space-lg;
+}
 
 /* 404 styles */
 .oops-wrapper {

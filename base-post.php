@@ -1,7 +1,5 @@
 <?php get_template_part('templates/head'); ?>
 <body <?php body_class(); ?>>
-<!-- <?php
-if ( is_user_logged_in() ) { ?> -->
 
   <!--[if lt IE 8]>
     <div class="alert alert-warning">
@@ -28,12 +26,6 @@ if ( is_user_logged_in() ) { ?> -->
   </div><!-- /.wrap -->      
   
   <?php get_template_part('templates/footer'); ?>
-
-<!-- <?php
-} else {
-  get_template_part('404');
-}
-?>   -->  
   
 </body>
 </html>
