@@ -5,7 +5,7 @@ $base-font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "H
 $base-font-size: 18px;
 $base-font-weight: 300;
 
-$content-font-size: 22px;
+$content-font-size: 18px;
 $content-line-height: 1.45;
 $content-line-height-px: $content-line-height * $content-font-size;
 
@@ -34,6 +34,9 @@ body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: 1.6;
+}
+p {
+  letter-spacing: 0.02rem;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 { 
@@ -178,7 +181,6 @@ blockquote.large {
 //    text-indent: $content-font-size*2;
     line-height: $content-line-height;
     margin-bottom: $content-line-height-px;
-    letter-spacing: 0.01rem;
   }
   h2, .h2 {
     margin-top: $space-xl;
