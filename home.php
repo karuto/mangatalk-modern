@@ -44,12 +44,16 @@ wp_reset_postdata();
 
 <div class="mt-story-banner">
 <div class="container">
-  <a class="story-banner-link" href="/story">
-    <div class="story-banner-title">
-      一个故事或许不能改变世界，但她能改变你与我的人生。
-      讲述你的故事 ›
-    </div>
-  </a>
+  <div class="story-banner-title">
+    <span id="" class="alignleft">
+    <a class="story-banner-link" style="color: white" href="/story">
+      一个故事或许不能改变世界，但她能改变你与我的人生。<strong>讲述你的故事 ›</strong>
+    </a>
+    </span>
+    <span id="" class="alignright">
+      <span id="story-remove" class="glyphicon glyphicon-remove"></span>
+    </span>
+  </div>
 </div>
 </div>
 
@@ -66,7 +70,7 @@ wp_reset_postdata();
    <?php get_template_part('templates/loop', 'grid'); ?>
 
   <div class="row"> 
-    <a class="h3 archive-entry-link" href='category/<?php $category = get_the_category(); echo $category[0]->cat_slug;?>' alt="阅读更多文章">
+    <a class="h3 archive-entry-link" href='category/article' alt="阅读更多文章">
     <span id="archive-entry" class="glyphicon glyphicon-chevron-down"></span>
     </a>
   </div>
