@@ -4,6 +4,37 @@
  */
 ?>
 
+<!-- <?php
+/**
+ * Update variable settings.
+ * Load to your WP root folder.
+ */
+
+// Set $to as the email you want to send the test to
+$to = "vincentaths@gmail.com";
+
+// No need to make changes below this line
+
+// Email subject and body text
+$subject = 'wp_mail function test';
+$message = 'This is a test of the wp_mail function: wp_mail is working';
+$headers = '';
+
+// Load WP components, no themes
+define('WP_USE_THEMES', false);
+require('wp-load.php');
+
+// Call the wp_mail function, display message based on the result.
+if( wp_mail( $to, $subject, $message, $headers ) ) {
+    // the message was sent...
+    echo '<h1>The test message was sent. Check your email inbox.</h1>';
+} else {
+    // the message was not sent...
+    echo '<h1>The message was not sent!</h1>';
+};
+?> -->
+
+
 
 <?php 
 //If the form is submitted
@@ -47,18 +78,20 @@ if(isset($_POST['submitted'])) {
 			
 		//If there is no error, send the email
 		if(!isset($hasError)) {
-      console.log("Got in");
-			$emailTo = 'hi@mangatalk.com';
-			$subject = '[留言反馈] ' . $name;
+      echo "<h1>got in</h1>";
+			$emailTo = 'hi@mangatalk.net';
+			$subject = '[留言反馈] 来自 ' . $name;
 			$sendCopy = trim($_POST['sendCopy']);
-			$body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
+			$body = "名字：$name \n\n邮件：$email \n\n附言：$comments";
 			$headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 			
 			wp_mail($emailTo, $subject, $body, $headers);
 
+      echo "<h1>sent! + ". $body ." + " . $headers ."</h1>";
+      
 			if($sendCopy == true) {
-				$subject = 'You emailed Your Name';
-				$headers = 'From: Your Name <hi@mangatalk.net>';
+				$subject = ' 您在漫言（http://mangatalk.net）的留言副本';
+				$headers = 'From: 漫言 MangaTalk <hi@mangatalk.net>';
 				wp_mail($email, $subject, $body, $headers);
 			}
 
@@ -84,8 +117,8 @@ if(isset($_POST['submitted'])) {
 <?php if(isset($emailSent) && $emailSent == true) { ?>
 
 	<div class="thanks">
-		<h1>Thanks, <?=$name;?></h1>
-		<p>Your email was successfully sent. I will be in touch soon.</p>
+		<h3>感谢你的联络，<?=$name;?></h3>
+		<p>我们会抽空仔细阅读你的留言，谢谢！</p>
 	</div>
 
 <?php } else { ?>
@@ -93,39 +126,63 @@ if(isset($_POST['submitted'])) {
 	<?php if (have_posts()) : ?>
 	
 	<?php while (have_posts()) : the_post(); ?>
-		<h1><?php the_title(); ?></h1>
 		<?php the_content(); ?>
 		
 		<?php if(isset($hasError) || isset($captchaError)) { ?>
 			<p class="error">There was an error submitting the form.<p>
 		<?php } ?>
 	
-		<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-	
-			<ol class="forms">
-				<li><label for="contactName">Name</label>
-					<input type="text" name="contactName" id="contactName" value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" class="requiredField" />
-					<?php if($nameError != '') { ?>
-						<span class="error"><?=$nameError;?></span> 
-					<?php } ?>
-				</li>
-				
-				<li><label for="email">Email</label>
-					<input type="text" name="email" id="email" value="<?php if(isset($_POST['email']))  echo $_POST['email'];?>" class="requiredField email" />
-					<?php if($emailError != '') { ?>
-						<span class="error"><?=$emailError;?></span>
-					<?php } ?>
-				</li>
-				
-				<li class="textarea"><label for="commentsText">Comments</label>
-					<textarea name="comments" id="commentsText" rows="20" cols="30" class="requiredField"><?php if(isset($_POST['comments'])) { if(function_exists('stripslashes')) { echo stripslashes($_POST['comments']); } else { echo $_POST['comments']; } } ?></textarea>
-					<?php if($commentError != '') { ?>
-						<span class="error"><?=$commentError;?></span> 
-					<?php } ?>
-				</li>
-				<li class="inline"><input type="checkbox" name="sendCopy" id="sendCopy" value="true"<?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> /><label for="sendCopy">Send a copy of this email to yourself</label></li>
+		<form action="<?php the_permalink(); ?>" id="contactForm" role="form" method="post">
+
+			<div class="form-group">
+				<label for="contactName">您的名字</label>
+				<input class="form-control requiredField" type="text" 
+        name="contactName" id="contactName" placeholder="您的名字"
+        value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" />
+				<?php if($nameError != '') { ?>
+					<label class="error"><?=$nameError;?></span> 
+				<?php } ?>
+			</div>
+
+			<div class="form-group">
+				<label for="email">您的联系方式（Email）</label>
+				<input class="form-control requiredField email" type="text" 
+        name="email" id="email" placeholder="您的邮件"
+        value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>" />
+				<?php if($emailError != '') { ?>
+					<label class="error"><?=$emailError;?></span> 
+				<?php } ?>
+			</div>
+
+			<div class="form-group">
+				<label for="commentsText">您的留言内容</label>
+				<textarea class="form-control requiredField" name="comments" id="commentsText" rows="10">
+				  <?php 
+          if(isset($_POST['comments'])) { 
+            if(function_exists('stripslashes')) { 
+              echo stripslashes($_POST['comments']); 
+            } 
+            else { 
+              echo $_POST['comments']; 
+            } 
+          } ?>
+				</textarea>
+				<?php if($commentError != '') { ?>
+					<label class="error"><?=$commentError;?></span> 
+				<?php } ?>
+			</div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="sendCopy" id="sendCopy" value="true" 
+          <?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> > 
+           同时将副本发至我的邮箱
+        </label>
+      </div>
+      
 				<li class="screenReader"><label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" /></li>
-				<li class="buttons"><input type="hidden" name="submitted" id="submitted" value="true" /><button type="submit">Email me &raquo;</button></li>
+				<input type="hidden" name="submitted" id="submitted" value="true" />
+        <button type="submit" class="btn btn-default">发送留言</button>
 			</ol>
 		</form>
 	
