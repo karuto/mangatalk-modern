@@ -160,8 +160,8 @@
           <strong class="footer-header">扩展合作</strong>
           <ul class="footer-list">
             <li><a href="/story" class="mt-extend-link" target="_blank" alt="story">投稿指南</a></li>
-            <li><a href="/contact-join" class="mt-extend-link" target="_blank" alt="join">加入漫言</a></li>
-            <li><a href="/contact-business" class="mt-extend-link" target="_blank" alt="business">业务合作</a></li>
+            <li><a href="/joinus" class="mt-extend-link" target="_blank" alt="join">加入漫言</a></li>
+            <li><a href="/business" class="mt-extend-link" target="_blank" alt="business">业务合作</a></li>
             <!-- <li><a href="/code-guide" class="mt-extend-link" target="_blank" alt="coding">代码手册</a></li> -->
             <li><a href="/login" class="mt-extend-link" target="_blank" alt="admin">登入后台</a></li>
           </ul>

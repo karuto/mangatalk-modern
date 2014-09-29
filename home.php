@@ -66,7 +66,7 @@ wp_reset_postdata();
    <?php get_template_part('templates/loop', 'grid'); ?>
 
   <div class="row"> 
-    <a class="h3 archive-entry-link" href='category/<?php $category = get_the_category(); echo $category[0]->cat_name;?>' alt="阅读更多文章">
+    <a class="h3 archive-entry-link" href='category/<?php $category = get_the_category(); echo $category[0]->cat_slug;?>' alt="阅读更多文章">
     <span id="archive-entry" class="glyphicon glyphicon-chevron-down"></span>
     </a>
   </div>

@@ -93,7 +93,7 @@
         <h2 class="featurette-heading">投递你的试稿</h2>
         <p class="lead">
 
-           为了确保你的故事能顺利在漫言发表，请使用我们的试稿系统，或将符合条件的试稿直接发送至<a href="mailto:story@mangatalk.net?Subject=我的作品试稿" target="_top">官方邮箱 story@mangatalk.net。</a><br><br>
+           为了确保你的故事能顺利在漫言发表，请使用我们的<a href="http://mangatalk.net/pitch/" target="_blank">试稿投递系统</a>，或将符合条件的试稿直接发送至<a href="mailto:story@mangatalk.net?Subject=我的作品试稿" target="_top">官方邮箱 story@mangatalk.net。</a><br><br>
 
            试稿是<strong> 50 至 300  字</strong>的一小段简短概述，请将你所构思的故事的主题与核心观点精简到这个长度。我们的编辑将根据试稿内容，来判断你的故事与漫言合适与否，以及从中了解你的写作能力与文笔风格。欢迎你在试稿的表格中附上能代表你写作水平的作品链接，例如曾在别处发表过的评论、文章等。<br><br>
 
