@@ -4,36 +4,6 @@
  */
 ?>
 
-<?php
-/**
- * Update variable settings.
- * Load to your WP root folder.
- */
-
-// Set $to as the email you want to send the test to
-$to = "vincentaths@gmail.com";
-
-// No need to make changes below this line
-
-// Email subject and body text
-$subject = 'wp_mail function test';
-$message = 'This is a test of the wp_mail function: wp_mail is working';
-$headers = '';
-
-// Load WP components, no themes
-define('WP_USE_THEMES', false);
-require('wp-load.php');
-
-// Call the wp_mail function, display message based on the result.
-if( wp_mail( $to, $subject, $message, $headers ) ) {
-    // the message was sent...
-    echo '<h1>'.phpinfo().'The test message was sent. Check your email inbox.</h1>';
-} else {
-    // the message was not sent...
-    echo '<h1>The message was not sent!</h1>';
-};
-?>
-
 
 
 <?php 
@@ -41,7 +11,7 @@ if( wp_mail( $to, $subject, $message, $headers ) ) {
 if(isset($_POST['submitted'])) {
 	//Check to make sure that the name field is not empty
 	if(trim($_POST['contactName']) === '') {
-		$nameError = 'You forgot to enter your name.';
+		$nameError = '请输入您的名字。';
 		$hasError = true;
 	} else {
 		$name = trim($_POST['contactName']);
@@ -49,10 +19,10 @@ if(isset($_POST['submitted'])) {
 	
 	//Check to make sure sure that a valid email address is submitted
 	if(trim($_POST['email']) === '')  {
-		$emailError = 'You forgot to enter your email address.';
+		$emailError = '请输入您的联系邮件。';
 		$hasError = true;
 	} else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
-		$emailError = 'You entered an invalid email address.';
+		$emailError = '您输入的邮件格式不正确。';
 		$hasError = true;
 	} else {
 		$email = trim($_POST['email']);
@@ -60,7 +30,7 @@ if(isset($_POST['submitted'])) {
 		
 	//Check to make sure comments were entered	
 	if(trim($_POST['comments']) === '') {
-		$commentError = 'You forgot to enter your comments.';
+		$commentError = '请输入内容。';
 		$hasError = true;
 	} else {
 		if(function_exists('stripslashes')) {
@@ -69,29 +39,44 @@ if(isset($_POST['submitted'])) {
 			$comments = trim($_POST['comments']);
 		}
 	}
+
+  if(!isset($hasError)) {
+    $wpdb->insert( 'mt_comments', 
+      array( 
+    		'name' => $name, 
+    		'email' => $email,
+    		'type' => "comment",
+        'date' => date('Y-m-d H:i:s'),
+        'comment' => $comments
+    	), 
+  	  array( 
+  		  '%s', '%s', '%s', '%s', '%s' 
+  	  ) 
+    );
+  }
 		
-	//If there is no error, send the email
-	if(!isset($hasError)) {
-    echo "<h1>got in</h1>";
-		$emailTo = 'hi@mangatalk.net';
-		$subject = '[留言反馈] 来自 ' . $name;
-		$sendCopy = trim($_POST['sendCopy']);
-		$body = "名字：$name \n\n邮件：$email \n\n附言：$comments";
-		$headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
-		
-		wp_mail($emailTo, $subject, $body, $headers);
+  // //If there is no error, send the email
+  // if(!isset($hasError)) {
+  //     echo "<h1>got in</h1>";
+  //   $emailTo = 'hi@mangatalk.net';
+  //   $subject = '[留言反馈] 来自 ' . $name;
+  //   $sendCopy = trim($_POST['sendCopy']);
+  //   $body = "名字：$name \n\n邮件：$email \n\n附言：$comments";
+  //   $headers = 'From: My Site <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+  //
+  //   wp_mail($emailTo, $subject, $body, $headers);
+  //
+  //     echo "<h1>sent! + ". $body ." + " . $headers ."</h1>";
+  //
+  //   if($sendCopy == true) {
+  //     $subject = ' 您在漫言（http://mangatalk.net）的留言副本';
+  //     $headers = 'From: 漫言 MangaTalk <hi@mangatalk.net>';
+  //     wp_mail($email, $subject, $body, $headers);
+  //   }
+  //
+  //   $emailSent = true;
 
-    echo "<h1>sent! + ". $body ." + " . $headers ."</h1>";
-    
-		if($sendCopy == true) {
-			$subject = ' 您在漫言（http://mangatalk.net）的留言副本';
-			$headers = 'From: 漫言 MangaTalk <hi@mangatalk.net>';
-			wp_mail($email, $subject, $body, $headers);
-		}
-
-		$emailSent = true;
-
-	}
+  // }
 } ?>
 
 
@@ -101,7 +86,8 @@ if(isset($_POST['submitted'])) {
 
 <header class="article-front">
     <section class="article-header article-header-no-cover">
-      <h2 class="h2 entry-title"><?php the_title(); ?></h2>
+      <h2 class="h2 entry-title"><?php the_title(); ?>
+      </h2>
     </section>
 </header>
 
@@ -128,7 +114,7 @@ if(isset($_POST['submitted'])) {
 		<form action="<?php the_permalink(); ?>" id="contactForm" role="form" method="post">
 
 			<div class="form-group">
-				<label for="contactName">您的名字</label>
+				<label for="contactName">名字</label>
 				<input class="form-control requiredField" type="text" 
         name="contactName" id="contactName" placeholder="您的名字"
         value="<?php if(isset($_POST['contactName'])) echo $_POST['contactName'];?>" />
@@ -138,7 +124,7 @@ if(isset($_POST['submitted'])) {
 			</div>
 
 			<div class="form-group">
-				<label for="email">您的联系方式（Email）</label>
+				<label for="email">联系方式（Email）</label>
 				<input class="form-control requiredField email" type="text" 
         name="email" id="email" placeholder="您的邮件"
         value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>" />
@@ -148,7 +134,7 @@ if(isset($_POST['submitted'])) {
 			</div>
 
 			<div class="form-group">
-				<label for="commentsText">您的留言内容</label>
+				<label for="commentsText">来信内容</label>
 				<textarea class="form-control requiredField" name="comments" id="commentsText" rows="10">
 				  <?php 
           if(isset($_POST['comments'])) { 
@@ -165,13 +151,13 @@ if(isset($_POST['submitted'])) {
 				<?php } ?>
 			</div>
 
-      <div class="checkbox">
+      <!-- <div class="checkbox">
         <label>
-          <input type="checkbox" name="sendCopy" id="sendCopy" value="true" 
-          <?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> > 
+          <input type="checkbox" name="sendCopy" id="sendCopy" value="true"
+          <?php if(isset($_POST['sendCopy']) && $_POST['sendCopy'] == true) echo ' checked="checked"'; ?> >
            同时将副本发至我的邮箱
         </label>
-      </div>
+      </div> -->
       
 				<!-- <li class="screenReader"><label for="checking" class="screenReader">If you want to submit this form, do not enter anything in this field</label><input type="text" name="checking" id="checking" class="screenReader" value="<?php if(isset($_POST['checking']))  echo $_POST['checking'];?>" /></li> -->
 				<input type="hidden" name="submitted" id="submitted" value="true" />
