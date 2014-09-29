@@ -1,21 +1,3 @@
-<?php
-
-// The Query
-$the_query = new WP_Query( "showposts=1&cat=0" );
-// The Loop
-if ( $the_query->have_posts() ) {
-	echo '<ul>';
-	while ( $the_query->have_posts() ) {
-		$the_query->the_post();
-		echo '<li>' . get_the_title() . '</li>';
-	}
-	echo '</ul>';
-} else {
-	// no posts found
-  echo '<h1>NO POST FOUND</h1>';
-}
-?>
-
 <header id="mt-front" class="mt-front">
 <section class="article-cover">
   <div id="cover-story" class="cover-image" <?php post_class();
@@ -60,6 +42,16 @@ if ( $the_query->have_posts() ) {
 wp_reset_postdata();
 ?>
 
+<div class="mt-story-banner">
+<div class="container">
+  <a href="/story">
+    <h4 class="story-banner-title">
+      一个故事或许不能改变世界，但她能改变你与我的人生。
+    </h4>
+  </a>
+</div>
+</div>
+
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
@@ -67,7 +59,6 @@ wp_reset_postdata();
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
-
 
 <div class="mt-list container">
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
