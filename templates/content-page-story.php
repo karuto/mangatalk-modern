@@ -34,7 +34,7 @@
 </section>
 </header>
 
-<section class="featurette" id="story-start">
+<section class="featurette" id="story-start" name="story-start">
   <div class="featurette-inner container">
     <div class="row">
       <div class="featurette-content col-md-12">
@@ -47,8 +47,7 @@
 
           好的故事寓教于乐。<br>
           她生动有趣，却也育人教人，温故知新。<br>
-          她不会将带有偏见的立场强加于你，不会诱使你去改变你的原则与信条。
-          好的故事是一位益友良师，她以谦逊平实的步调领你踏进一扇扇的门。
+          她不会将带有偏见的立场强加于你，不会诱使你去改变你的原则与信条。好的故事是一位益友良师，她以谦逊平实的步调领你踏进一扇扇的门。
           她是一位信使，助你了解大千世界，了解你自己。<br><br>
 
           好的故事情真意切。<br>
