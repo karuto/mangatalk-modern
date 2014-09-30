@@ -43,9 +43,7 @@
           <a href="/story">您是作者？讲述你的故事</a>
         </p>
       </div>
-      <div class="col-md-6">
-        <img class="featurette-image alignright img-responsive" src="http://i.imgur.com/pNQsSQt.png" alt="精益求精。">
-      </div>
+      <div class="col-md-6"></div>
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
