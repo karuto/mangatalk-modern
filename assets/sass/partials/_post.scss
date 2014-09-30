@@ -59,6 +59,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
       display: none;
     }
   }
+  .entry-comment-count {
+    margin-top: $space-sm;
+  }
 }
 .cover-content {
   margin-top: $cover-title-pos / 3;
@@ -425,9 +428,7 @@ $related-block-height: $mt-block-height * 0.6;
   padding-bottom: $space-xl;
 }
 .avatar {
-//  border-radius: 50%;
-//  margin: $space-lg auto $space-md;
-  max-width: 100%;
+  margin-right: $space-lg;
   display: block;
 }
 .author-name {

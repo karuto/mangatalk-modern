@@ -176,8 +176,9 @@ blockquote.large {
   }
 }
 .entry-comment-count {
+  font-weight: 300;
   .glyphicon {
-    top: 7px; // override to align with text
+    top: 5px; // override to align with text
   }
 }
 .entry-content {

@@ -41,11 +41,12 @@ if(isset($_POST['submitted'])) {
 	}
 
   if(!isset($hasError)) {
+    global $post;
     $wpdb->insert( 'mt_comments', 
       array( 
     		'name' => $name, 
     		'email' => $email,
-    		'type' => "comment",
+    		'type' => $post->post_name,
         'date' => date('Y-m-d H:i:s'),
         'comment' => $comments
     	), 

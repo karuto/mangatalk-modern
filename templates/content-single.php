@@ -11,14 +11,14 @@
       <div class="cover-content article-content-container">
         <div class="cover-content-wrapper">
           <h1 class="h2 entry-title"><?php the_title(); ?></h1>
-          <h4 class="h4 entry-subtitle"><?php the_excerpt(); ?></h4>
+          <h4 class="entry-subtitle"><?php the_excerpt(); ?></h4>
             
-          <h4 class="h4 entry-comment-count alignright">
+          <h5 class="entry-comment-count alignright">
             By <?php echo get_the_author(); ?> &nbsp;
-            <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
-            &nbsp;
+            <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
+            &nbsp; -->
             <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
-          </h4>
+          </h5>
       
         </div><!-- .cover-content-wrapper -->
       </div><!-- .cover-content -->

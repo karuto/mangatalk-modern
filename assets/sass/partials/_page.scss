@@ -20,7 +20,7 @@ $page-cover-block-height: 500px;
       height: $page-cover-block-height;
       .cover-image {
         height: $page-cover-block-height;
-        background-image: url('http://i.imgur.com/BTCoxlL.jpg'); 
+        background-image: url('../img/mt-cover-brand.jpg'); 
         background-color: #E84141;
       }
     }
@@ -109,7 +109,7 @@ $regular-featurette-margin: $space-xl + $space-md;
 }
 .feature-story-submit,
 .feature-copyright {
-  background-image: url('http://i.imgur.com/WlIMJcw.png');
+  background-image: url('../img/casual-grey-texture.png');
 }
 .feature-typography {
   background-image: none;
