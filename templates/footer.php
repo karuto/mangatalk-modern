@@ -130,7 +130,7 @@
           <strong class="footer-header">了解漫言</strong>
           <ul class="footer-list">
             <li><a href="/about" class="mt-about-link" target="_blank" alt="about">关于我们</a></li>
-            <li><a href="/#" class="mt-about-link" target="_blank" alt="team">团队成员</a></li>
+            <li><a href="/team" class="mt-about-link" target="_blank" alt="team">团队成员</a></li>
             <li><a href="/copyright" class="mt-about-link" target="_blank" alt="copyright">版权信息</a></li>
             <li><a href="/guide" class="mt-about-link" target="_blank" alt="rules">社区原则</a></li>
             <!-- <li><a href="/history" class="mt-about-link" target="_blank" alt="commits">开发历史</a></li> -->
