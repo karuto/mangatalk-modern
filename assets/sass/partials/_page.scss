@@ -46,16 +46,30 @@ a.page-intro-link {
   color: $base-white;
 }
 .featurette {
-  padding: 0px;
-//  height: 100vh;
+  padding: 0;
+  @media (min-width: $screen-lg-min) { // large screen and above
+  } 
+  @media (max-width: $screen-md-max) { // medium screen 
+    padding: $space-xl 0;
+  }  
+  @media (max-width: $screen-sm-min) { // small screen
+    padding: $space-xl 0;
+    text-align: center;
+    .featurette-image {
+      display: none;
+    }
+  } 
 }
 .featurette-inner {
 //  height: 100vh;
 }
 .featurette-content {
-  margin-top: 20%;
   margin-bottom: $space-lg;
-  @media (max-width: $screen-sm-min) { // small screen
+  @media (min-width: $screen-lg-min) { // large screen
+    margin-top: 20%;
+  } 
+  @media (max-width: $screen-md-max) { // medium and small screen
+    margin-top: $space-lg;
     margin-left: 5%;
     margin-right: 5%;
   } 
@@ -88,6 +102,9 @@ $regular-featurette-margin: $space-xl + $space-md;
     }
   }
 }
+.page-about.page-content {
+//  background-image: url('../img/smart-grey-texture.jpg');
+}
 .page-story {
   .featurette-content {
     margin-top: $regular-featurette-margin;
@@ -110,25 +127,44 @@ $regular-featurette-margin: $space-xl + $space-md;
   }
 }
 .feature-content {
-    background-position: right bottom;
-    background-repeat: no-repeat;
+  background-position: right bottom;
+  background-repeat: no-repeat;
   @media (min-width: $screen-lg-min) { // large screen and above
-    background-image: url('../img/mt-demo-display-cropped.png');
     min-height: $article-content-container-lg + $space-xl;
+    background-image: url('../img/mt-demo-display-cropped.png');
   } 
   @media (max-width: $screen-md-max) { // medium screen
     background-image: url('../img/mt-demo-display-cropped-s.png');
-    min-height: $article-content-container-lg * 0.6 + $space-xl;
   }  
   @media (max-width: $screen-sm-min) { // small screen
     background-image: none;
-    min-height: $article-content-container-lg * 0.6 + $space-xl;
   } 
 
 }
-.feature-story-submit,
 .feature-copyright {
-  background-image: url('../img/casual-grey-texture.png');
+  background: white;
+//  background-image: url('http://i.imgur.com/ZfeoqfE.png');
+//  background-position: left bottom;
+//  background-repeat: no-repeat;
+  @media (min-width: $screen-lg-min) { // large screen and above
+  } 
+  @media (max-width: $screen-md-max) { // medium screen
+    .featurette-image {
+      display: none;
+    }
+  }  
+  @media (max-width: $screen-sm-min) { // small screen
+    .featurette-image {
+      display: none;
+    }
+//    background-image: none;
+    float: none;
+  } 
+  
+}
+.feature-copyright,
+.feature-story-submit {
+  background-image: url('../img/smart-grey-texture.jpg');
 }
 .feature-typography {
   background-image: none;

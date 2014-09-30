@@ -21,7 +21,7 @@
 <?php else: ?>
   <div class="wrap container" role="document">
 <?php endif; ?>
-    <div class="content row">
+    <div class="content row" style="">
       <main class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->

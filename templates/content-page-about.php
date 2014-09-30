@@ -51,10 +51,11 @@
 <section class="featurette feature-copyright">
   <div class="featurette-inner container">
     <div class="row">
-      <div class="col-md-6">
-        <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/pNQsSQt.png" alt="尊识至源。">
+      <div class="col-sm-12 col-md-6">
+        <!-- <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/v4bXVWf.png" alt="尊识至源。"> -->
+        <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/ZfeoqfE.png" alt="尊识至源。">
       </div>
-      <div class="featurette-content col-md-6">
+      <div class="featurette-content col-sm-12 col-md-6">
         <h2 class="featurette-heading">尊识至源。</h2>
         <p class="lead">
           不侵权，不抄袭，还版权于知识。<br>
@@ -72,7 +73,7 @@
 <section class="featurette feature-typography">
   <div class="featurette-inner container">
     <div class="row">
-      <div class="featurette-content col-md-6">
+      <div class="featurette-content col-sm-12 col-md-6">
         <h2 class="featurette-heading">品读深思。</h2>
         <p class="lead">
           中文互联网上领先的排版设计。<br>
@@ -83,7 +84,7 @@
           <a href="/feedback">您是读者？写下您的建议</a>
         </p>
       </div>
-      <div class="col-md-6">
+      <div class="col-sm-12 col-md-6">
         <img class="featurette-image alignright img-responsive" src="http://i.imgur.com/pNQsSQt.png" alt="品读深思。">
       </div>
     </div><!-- .row -->
