@@ -137,6 +137,7 @@ if (mtBanner != 0) {
       if (mtSearch.length != 0) { // if search exists
         mtSearch.hide();
         mtBanner.css("top", "0");
+        $("#cover-story").css("top", "0");
       }
       
       icon.removeClass("glyphicon-zoom-out");
@@ -146,6 +147,7 @@ if (mtBanner != 0) {
       if (mtSearch.length != 0) { // if search exists
         mtSearch.show();
         mtBanner.css("top", "50px");
+        $("#cover-story").css("top", "50px");
       }
       
       icon.removeClass("glyphicon-search");
