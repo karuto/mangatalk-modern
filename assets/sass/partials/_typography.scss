@@ -189,7 +189,7 @@ blockquote.large {
     font-size: $content-font-size;
 //    text-indent: $content-font-size*2;
     line-height: $content-line-height;
-    margin-bottom: $content-line-height-px;
+    margin-bottom: $content-line-height-px * 1.3;
     letter-spacing: 0.01rem;
   }
   h2, .h2 {
