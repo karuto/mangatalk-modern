@@ -116,6 +116,9 @@ blockquote {
   font-size: $content-font-size;
   margin-left: -($content-font-size + 3);
   margin-bottom: $content-font-size * $content-line-height;
+  footer {
+    margin-top: $space-md;
+  }
 }
 blockquote.large {
   font-weight: 400;

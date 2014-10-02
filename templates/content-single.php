@@ -7,7 +7,7 @@
     $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0];
   ?>
   <section class="article-cover is-darkBackgrounded">
-    <div class="cover-image" style="background-image: url('<?php echo $cover_img_url; ?>');">
+    <div id="cover-story" class="cover-image" style="background-image: url('<?php echo $cover_img_url; ?>');">
       <div class="cover-content article-content-container">
         <div class="cover-content-wrapper">
           <h1 class="h2 entry-title"><?php the_title(); ?></h1>
