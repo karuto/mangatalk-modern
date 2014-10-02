@@ -70,8 +70,8 @@ a.page-intro-link {
   } 
   @media (max-width: $screen-md-max) { // medium and small screen
     margin-top: $space-lg;
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   } 
 }
 .featurette-image { /* ideal height: 700px, width: 550px */
