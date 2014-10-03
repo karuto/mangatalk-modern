@@ -310,7 +310,8 @@ blockquote.large {
 }
 .mt-brand-capsule {
    h5 {
-     line-height: $subtext-line-height;     
+     line-height: $subtext-line-height;
+     margin-bottom: $space-sm;  
    }
 }
 .signature {

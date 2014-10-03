@@ -122,6 +122,7 @@
       
       <section class="col-xs-12 col-sm-12 col-md-6 footer-block mt-brand-capsule">
         <h5>漫言 MangaTalk. <br>We talk about Manga with Love.</h5>
+        <p class="text-muted">MangaTalk is a non-profit, community-oriented educational organization dedicated to enhance reader's understanding and appreciation of the comics medium, the people who make it and the industry behind it.</p>
       </section>
       
       <section class="col-xs-4 col-sm-4 col-md-2 footer-block">
@@ -175,7 +176,7 @@
     
     <div class="row">
       <em class="signature text-muted">Design and Coded by <a href="http://douban.com/people/karu" target="_blank">Vincent Zhang</a> in San Francisco. Copyright &copy; 2011-<?php echo date('Y'); ?> <?php bloginfo('name'); ?> & Our Authors. All Rights Reserved.
-        <br><br><span style="font-size: 12px; color: #999;">Best wishes to Z in Japan.</span></em>
+        <!-- <br><br><span style="font-size: 12px; color: #999;">Best wishes to Z in Japan.</span></em> -->
     </div><!-- .row -->
   </div>
 </footer>
