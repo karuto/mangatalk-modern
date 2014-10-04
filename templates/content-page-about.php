@@ -5,6 +5,14 @@
  */
 ?>
 <div class="page-content page-fullwidth page-about">
+<?php 
+  global $post; 
+  if ($post->post_name == "about") {
+    $is_chinese = true;
+  } else {
+    $is_chinese = false;
+  }
+?>
   
 <header class="mt-front">
 <section class="article-cover">
@@ -15,10 +23,24 @@
       <div class="row">
       <div class="page-cover-content col-xs-12 col-sm-12 col-md-12">
         <h2 class="page-title">
-           漫言 MangaTalk
+          <?php 
+            global $post; 
+            if ($is_chinese) {
+              echo "漫言 MangaTalk";
+            } else {
+              echo "MangaTalk";
+            }
+          ?>
         </h2>
         <div class="entry-subtitle">
-          创立于 2012 年初，漫言是一个非盈利性质的团队博客、自由媒体平台。
+          <?php 
+            global $post; 
+            if ($is_chinese) {
+              echo "创立于 2012 年初，漫言是一个非盈利性质的团队博客、自由媒体平台。";
+            } else {
+              echo "Founded in 2012, MangaTalk is a non-profit, educational publishing platform dedicated to the comics medium.";
+            }
+          ?>
         </div>
       
       </div><!-- .front-cover-content -->
