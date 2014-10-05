@@ -449,10 +449,11 @@ $related-block-height: $mt-block-height * 0.6;
   padding: $space-xl 0;
 }
 .promo-section {
-  margin-bottom: $space-lg;
+  border-top: 1px solid #e5e5e5;
+  padding: $space-lg 0;
 }
 .promo-block {
-  margin: $space-md 0;
+  margin: 0 0 $space-md;
   text-align: center;
 }
 .promo-text {

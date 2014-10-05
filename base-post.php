@@ -30,13 +30,13 @@
   <div class="article-content-container">
   <section class="promo-section row">
     
-    <div class="promo-block col-lg-6">
+    <div class="promo-block col-sm-6 col-md-6 col-lg-6">
       <header class="promo-header">
         <a href="http://goo.gl/R2TOHA" target="_blank">填写调查问卷</a>
       </header>
       <span class="promo-text text-muted">您的反馈，对我们意义重大。</span>
     </div>
-    <div class="promo-block col-lg-6">
+    <div class="promo-block col-sm-6 col-md-6 col-lg-6">
       <header class="promo-header">
         <a href="http://goo.gl/LVj65m" target="_blank">订阅漫言漫报</a>
       </header>
