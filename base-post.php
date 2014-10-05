@@ -32,13 +32,13 @@
     
     <div class="promo-block col-sm-6 col-md-6 col-lg-6">
       <header class="promo-header">
-        <a href="http://goo.gl/R2TOHA" target="_blank">填写调查问卷</a>
+        <a href="https://mangatalk.typeform.com/to/LpHD8h" target="_blank">填写调查问卷</a>
       </header>
       <span class="promo-text text-muted">您的反馈，对我们意义重大。</span>
     </div>
     <div class="promo-block col-sm-6 col-md-6 col-lg-6">
       <header class="promo-header">
-        <a href="http://goo.gl/LVj65m" target="_blank">订阅漫言漫报</a>
+        <a href="http://mangatalk.us4.list-manage.com/subscribe?u=3a348cad64b3e0662b001c652&id=6df5ae571d" target="_blank">订阅漫言漫报</a>
       </header>
       <span class="promo-text text-muted">每季文摘，以及最亲密联络。</span>
     </div>
