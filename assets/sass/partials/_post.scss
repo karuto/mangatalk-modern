@@ -448,3 +448,13 @@ $related-block-height: $mt-block-height * 0.6;
   min-height: $space-xxl;
   padding: $space-xl 0;
 }
+.promo-section {
+  margin-bottom: $space-lg;
+}
+.promo-block {
+  margin: $space-md 0;
+  text-align: center;
+}
+.promo-text {
+  font-size: 14px;
+}
