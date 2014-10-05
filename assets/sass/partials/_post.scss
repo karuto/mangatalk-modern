@@ -431,6 +431,9 @@ $related-block-height: $mt-block-height * 0.6;
   margin-right: $space-lg;
   display: block;
 }
+.author-info-content {
+  margin: $space-sm 0;
+}
 .author-name {
 //  text-align: center;
   font-weight: 700;
