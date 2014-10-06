@@ -11,13 +11,15 @@
       <div class="cover-content article-content-container">
         <div class="cover-content-wrapper">
           <h1 class="h2 entry-title"><?php the_title(); ?></h1>
-          <h4 class="entry-subtitle"><?php the_excerpt(); ?></h4>
+          <h5 class="entry-subtitle"><?php the_excerpt(); ?></h5>
             
           <h5 class="entry-comment-count alignright">
             By <?php echo get_the_author(); ?> &nbsp;
             <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
             &nbsp; -->
-            <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
+            <?php comments_number( '', 
+            '<span class="glyphicon glyphicon-comment"></span> %', 
+            '<span class="glyphicon glyphicon-comment"></span> %' ); ?>
           </h5>
       
         </div><!-- .cover-content-wrapper -->

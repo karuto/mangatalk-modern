@@ -36,7 +36,7 @@ body {
   line-height: 1.6;
 }
 p {
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.01rem;
 }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 { 
@@ -177,6 +177,7 @@ blockquote.large {
   }
   .entry-subtitle > p {
     font-weight: 300;
+    margin: $space-lg 0 $space-sm;
   }
 }
 .entry-comment-count {
