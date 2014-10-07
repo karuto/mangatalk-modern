@@ -18,7 +18,7 @@
             <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
             &nbsp; -->
             <?php comments_number( '', 
-            '<span class="glyphicon glyphicon-comment"></span> %', 
+            '<span class="glyphicon glyphicon-comment"></span> 1', 
             '<span class="glyphicon glyphicon-comment"></span> %' ); ?>
           </h5>
       
