@@ -330,6 +330,25 @@ a {
 }
 
 
+
+/* Generic cover */
+.cover-shade { /* TODO: use mixin */
+  opacity: 0.6;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  /* border-radius: 6px; */
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+}
+
+
+
 /* Block */
 .mt-block {
   .entry-summary {

@@ -9,6 +9,7 @@
     }
     echo 'style="background-image: url(' . $cover_img_url . ');"';
     ?>>
+    <div class="cover-shade"></div>
     <div class="cover-image-inner">
       
     <div class="container">
