@@ -302,13 +302,13 @@ a {
 .mt-front.coverActive {
   .cover-image-inner {
     opacity: 1;
-    @include opacity-transition()
+    @include opacity-transition();
   }
 }
 .mt-front.coverInactive {
   .cover-image-inner {
     opacity: 0.8;
-    @include opacity-transition()
+    @include opacity-transition();
   }
 }
 .mt-front {

@@ -45,8 +45,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
     }
   }
   .cover-content {
-    margin-top: $cover-title-pos;
-    position: relative;
+    @include absolute-center-bottom();
+
+
   }
 //  .cover-content-container,
 //  .article-content-container {
