@@ -5,7 +5,7 @@ $base-font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "H
 $base-font-size: 18px;
 $base-font-weight: 300;
 
-$cover-title-font-size: 36px;
+$cover-title-font-size: 46px;
 $cover-title-line-height: 1.4;
 
 $content-font-size: 18px;
@@ -202,7 +202,8 @@ blockquote.large {
     line-height: $content-line-height-px;
   }
   .glyphicon {
-//    top: 5px; // override to align with text
+    top: 4px; // override to align with text
+    margin-left: $space-xs;
   }
 }
 

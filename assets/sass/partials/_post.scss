@@ -58,7 +58,7 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
       display: inline-block;
       vertical-align: middle;
       height: auto;
-      margin-right: 0;
+      margin-right: $space-xs;
       border-radius: 50%;
     }
   }

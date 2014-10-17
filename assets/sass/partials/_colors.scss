@@ -345,8 +345,12 @@ a {
 //  -moz-transition: all 0.2s ease;
 //  transition: all 0.2s ease;
 }
+.entry-comment-count {
+//  color: $base-text-light-on-dark-bg;
+  color: $base-text-grey-faded;
+}
 .cover-author-name {
-  color: $base-white;
+  color: $base-text-grey-faded;
 }
 
 

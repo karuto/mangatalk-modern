@@ -10,21 +10,25 @@
     <div id="cover-story" class="cover-image" style="background-image: url('<?php echo $cover_img_url; ?>');">
       <div class="cover-shade"></div>
       <div class="cover-content-container">
-        <div class="cover-content ">
+        <div class="cover-content">
+          
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <h2 class="entry-subtitle"><?php the_excerpt(); ?></h2>
             
-          <h3 class="entry-comment-count alignright">
-            <a href="" class="cover-author-link">
-              <?php echo get_avatar( get_the_author_meta( 'user_email' ), 25); ?> &nbsp;
+          <h3 class="entry-comment-count">
+            <a href="" class="cover-author-link alignleft">
+              <?php echo get_avatar( get_the_author_meta( 'user_email' ), 25); ?>
               <span class="cover-author-name"><?php echo get_the_author(); ?></span>
             </a>
             <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
             &nbsp; -->
-            <?php comments_number( '', 
-            '<span class="glyphicon glyphicon-comment"></span> 1', 
-            '<span class="glyphicon glyphicon-comment"></span> %' ); ?>
+            <span class="alignright">
+              <?php comments_number( '', 
+              '1 <span class="glyphicon glyphicon-comment"></span>', 
+              '0 <span class="glyphicon glyphicon-comment"></span>' ); ?>
+            </span>
           </h3>
+          
         </div><!-- .cover-content -->
       </div><!-- .cover-content-container -->
     </div><!-- .cover-image -->
