@@ -11,8 +11,8 @@
       <div class="cover-shade"></div>
       <div class="cover-content article-content-container">
         <div class="cover-content-wrapper">
-          <h1 class="h2 entry-title"><?php the_title(); ?></h1>
-          <h5 class="entry-subtitle"><?php the_excerpt(); ?></h5>
+          <h1 class="h1 entry-title"><?php the_title(); ?></h1>
+          <h2 class="entry-subtitle"><?php the_excerpt(); ?></h5>
             
           <h5 class="entry-comment-count alignright">
             By <?php echo get_the_author(); ?> &nbsp;

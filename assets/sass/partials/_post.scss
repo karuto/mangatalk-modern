@@ -48,6 +48,7 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
     margin-top: $cover-title-pos;
     position: relative;
   }
+  .cover-content-container,
   .article-content-container {
     @media (min-width: $screen-lg-min) { //1200px
       width: $article-content-container-lg + $space-xl * 2;
@@ -320,6 +321,7 @@ blockquote.large {
 
 // Container widths, borrowing Bootstrap's structure
 // Set the container width, and override it for fixed navbars in media queries.
+.cover-content-container,
 .article-content-container {
   @include container-fixed();
 
