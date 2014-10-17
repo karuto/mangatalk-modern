@@ -54,6 +54,13 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   }
   .entry-comment-count {
     margin-top: $space-xxl;
+    .avatar {
+      display: inline-block;
+      vertical-align: middle;
+      height: auto;
+      margin-right: 0;
+      border-radius: 50%;
+    }
   }
 }
 .cover-content {

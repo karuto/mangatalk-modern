@@ -15,7 +15,10 @@
           <h2 class="entry-subtitle"><?php the_excerpt(); ?></h2>
             
           <h3 class="entry-comment-count alignright">
-            By <?php echo get_the_author(); ?> &nbsp;
+            <a href="" class="cover-author-link">
+              <?php echo get_avatar( get_the_author_meta( 'user_email' ), 25); ?> &nbsp;
+              <span class="cover-author-name"><?php echo get_the_author(); ?></span>
+            </a>
             <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
             &nbsp; -->
             <?php comments_number( '', 

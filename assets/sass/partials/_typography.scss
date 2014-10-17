@@ -188,8 +188,19 @@ blockquote.large {
   }
 }
 .entry-comment-count {
-  font-size: $content-font-size;
   font-weight: 300;
+  font-size: $content-font-size;
+  height: $content-line-height-px;
+  line-height: $content-line-height-px;
+  
+  .cover-author-link {
+    line-height: $content-line-height-px;
+    vertical-align: baseline;
+  }
+  .cover-author-name {
+    height: $content-line-height-px;
+    line-height: $content-line-height-px;
+  }
   .glyphicon {
 //    top: 5px; // override to align with text
   }
