@@ -5,6 +5,9 @@ $base-font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "H
 $base-font-size: 18px;
 $base-font-weight: 300;
 
+$cover-title-font-size: 36px;
+$cover-title-line-height: 1.4;
+
 $content-font-size: 18px;
 $content-line-height: 1.7;
 $content-line-height-px: $content-line-height * $content-font-size;
@@ -172,8 +175,9 @@ blockquote.large {
 /* Article page cover styles */
 .hentry {
   .entry-title {
-    font-size: 200%; /* 36px / h3 font size */
+    font-size: $cover-title-font-size; /* h3 font size */
     font-weight: 700;
+    line-height: $cover-title-line-height;
   }
   .entry-subtitle > p {
     font-size: $content-font-size;

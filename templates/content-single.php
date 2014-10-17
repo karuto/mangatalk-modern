@@ -9,7 +9,8 @@
   <section class="article-cover is-darkBackgrounded">
     <div id="cover-story" class="cover-image" style="background-image: url('<?php echo $cover_img_url; ?>');">
       <div class="cover-shade"></div>
-      <div class="cover-content article-content-container">
+      <div class="cover-content-container">
+        <div class="cover-content ">
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <h2 class="entry-subtitle"><?php the_excerpt(); ?></h2>
             
@@ -21,8 +22,8 @@
             '<span class="glyphicon glyphicon-comment"></span> 1', 
             '<span class="glyphicon glyphicon-comment"></span> %' ); ?>
           </h3>
-      
-      </div><!-- .cover-content -->
+        </div><!-- .cover-content -->
+      </div><!-- .cover-content-container -->
     </div><!-- .cover-image -->
   </section><!-- .article-cover -->
   <?php 
