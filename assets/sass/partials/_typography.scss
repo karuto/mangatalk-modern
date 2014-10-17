@@ -169,23 +169,30 @@ blockquote.large {
   font-size: $medium-font-size;
 }
 
-/* Article page content styles */
+/* Article page cover styles */
 .hentry {
   .entry-title {
-    font-size: 320%; /* remove after a week, KM TODO */
+    font-size: 200%; /* 36px / h3 font size */
     font-weight: 700;
   }
   .entry-subtitle > p {
+    font-size: $content-font-size;
+    line-height: $content-line-height;
+    letter-spacing: 0.01rem;
     font-weight: 300;
     margin: $space-lg 0 $space-sm;
   }
 }
 .entry-comment-count {
+  font-size: $small-font-size;
   font-weight: 300;
   .glyphicon {
-    top: 5px; // override to align with text
+//    top: 5px; // override to align with text
   }
 }
+
+
+/* Article page content styles */
 .entry-content {
   p {
     font-size: $content-font-size;

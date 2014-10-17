@@ -10,20 +10,18 @@
     <div id="cover-story" class="cover-image" style="background-image: url('<?php echo $cover_img_url; ?>');">
       <div class="cover-shade"></div>
       <div class="cover-content article-content-container">
-        <div class="cover-content-wrapper">
-          <h1 class="h1 entry-title"><?php the_title(); ?></h1>
-          <h2 class="entry-subtitle"><?php the_excerpt(); ?></h5>
+          <h1 class="entry-title"><?php the_title(); ?></h1>
+          <h2 class="entry-subtitle"><?php the_excerpt(); ?></h2>
             
-          <h5 class="entry-comment-count alignright">
+          <h3 class="entry-comment-count alignright">
             By <?php echo get_the_author(); ?> &nbsp;
             <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
             &nbsp; -->
             <?php comments_number( '', 
             '<span class="glyphicon glyphicon-comment"></span> 1', 
             '<span class="glyphicon glyphicon-comment"></span> %' ); ?>
-          </h5>
+          </h3>
       
-        </div><!-- .cover-content-wrapper -->
       </div><!-- .cover-content -->
     </div><!-- .cover-image -->
   </section><!-- .article-cover -->

@@ -48,13 +48,13 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
     margin-top: $cover-title-pos;
     position: relative;
   }
-  .cover-content-container,
-  .article-content-container {
-    @media (min-width: $screen-lg-min) { //1200px
-      width: $article-content-container-lg + $space-xl * 2;
-      max-width: $article-content-container-lg + $space-xl * 2;
-    }
-  }
+//  .cover-content-container,
+//  .article-content-container {
+//    @media (min-width: $screen-lg-min) { //1200px
+//      width: $article-content-container-lg + $space-xl * 2;
+//      max-width: $article-content-container-lg + $space-xl * 2;
+//    }
+//  }
   .entry-subtitle {
     @media (max-width: $screen-md-min) { //1200px
       display: none;
