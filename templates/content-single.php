@@ -25,7 +25,7 @@
             <span class="alignright">
               <?php comments_number( '', 
               '1 <span class="glyphicon glyphicon-comment"></span>', 
-              '0 <span class="glyphicon glyphicon-comment"></span>' ); ?>
+              '% <span class="glyphicon glyphicon-comment"></span>' ); ?>
             </span>
           </h3>
           
