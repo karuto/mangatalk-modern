@@ -6,17 +6,17 @@
       echo '<div class="row">';
       $rows++;
       if ($rows % 2 != 0) { // odd row
-        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-8">'; 
+        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-6">'; 
       } else { // even row
-        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-4">'; 
+        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-6">'; 
       }
       get_template_part('templates/content', get_post_format()); 
       echo '</section>';
     } else { // even post, render the end of the row
       if ($rows % 2 != 0) { // odd row
-        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-4">'; 
+        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-6">'; 
       } else { // even row
-        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-8">'; 
+        echo '<section class="mt-block col-xs-12 col-sm-6 col-md-6">'; 
       }  
       get_template_part('templates/content', get_post_format()); 
       echo '</section>';
