@@ -45,15 +45,23 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   .cover-content-container {
     @include absolute-center-bottom();
     padding: $space-xl 0 $space-xxl;
+
+    @media (max-width: $screen-sm-min) {
+      padding: $space-xl 0 $space-xl;
+    }
   }
   .entry-subtitle {
     margin-top: $space-lg;
-    @media (max-width: $screen-md-min) { //1200px
+    @media (max-width: $screen-sm-min) {
       display: none;
     }
   }
   .entry-comment-count {
     margin-top: $space-xxl;
+
+    @media (max-width: $screen-sm-min) {
+      margin-top: $space-xl;
+    }
     .avatar {
       display: inline-block;
       vertical-align: middle;
@@ -90,7 +98,7 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 //    margin-top: $space-sm;
     margin-bottom: $space-sm;
     position: relative;
-    @media (max-width: $screen-sm-min) {
+    @media (max-width: $screen-sm-min) { 
       max-width: 100%;
       @include pos-reset();
     }
