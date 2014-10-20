@@ -17,7 +17,7 @@
             
           <h3 class="entry-comment-count">
             <a href="" class="cover-author-link alignleft">
-              <?php echo get_avatar( get_the_author_meta( 'user_email' ), 25); ?>
+              <?php echo get_avatar( get_the_author_meta( 'user_email' ), 30); ?>
               <span class="cover-author-name"><?php echo get_the_author(); ?></span>
             </a>
             <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
