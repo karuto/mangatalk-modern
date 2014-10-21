@@ -135,9 +135,9 @@ if (mtBanner != 0) {
     if (icon.hasClass("glyphicon-zoom-out")) {
       // Currently it's showing search, make it hidden!
       if (mtSearch.length != 0) { // if search exists
-        mtSearch.hide();
         mtBanner.css("top", "0");
         $("#cover-story").css("top", "0");
+        mtSearch.hide();
       }
       
       icon.removeClass("glyphicon-zoom-out");
@@ -145,9 +145,9 @@ if (mtBanner != 0) {
     } else {
       // Currently it's not showing search, make it show!
       if (mtSearch.length != 0) { // if search exists
-        mtSearch.show();
         mtBanner.css("top", "50px");
         $("#cover-story").css("top", "50px");
+        mtSearch.show();
       }
       
       icon.removeClass("glyphicon-search");

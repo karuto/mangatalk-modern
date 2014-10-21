@@ -114,6 +114,11 @@ body {
     border: none;
   }
 }
+#mt-banner,
+#cover-story,
+#mt-search {
+  transition: all 1s;
+}
 .mt-search {
   height: $search-container-height;
   .search-form {
