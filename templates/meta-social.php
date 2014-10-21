@@ -23,7 +23,7 @@
   
   $douban_link = "http://www.douban.com/share/service?image=".$first_img."&href=".$format_link."&name=".$format_title."&text=".$format_excerpt;
   
-  $twitter_link = "http://twitter.com/intent/tweet?text=".$format_title." 来自「漫言 MangaTalk」 ".$format_link;
+  $twitter_link = "http://twitter.com/intent/tweet?text=".$format_title."  ".$format_link;
 ?>
 <div class="social-shares row">
   <div class="col-sm-4">
