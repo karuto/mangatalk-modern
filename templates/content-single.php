@@ -62,6 +62,7 @@
 
 <div class="entry-meta-container article-content-container">
   
+  <?php get_template_part('templates/meta', 'social'); ?>
   <?php get_template_part('templates/meta', 'relatedposts'); ?>
   <?php get_template_part('templates/meta', 'authorinfo'); ?>
 
