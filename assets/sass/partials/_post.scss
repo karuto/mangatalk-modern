@@ -367,7 +367,9 @@ blockquote.large {
     margin-bottom: $space-lg;  // divider style
   }
 }
-
+.social-shares {
+  text-align: center;
+}
 $related-block-height: $mt-block-height * 0.6;
 .related-article-list {
   .row {
