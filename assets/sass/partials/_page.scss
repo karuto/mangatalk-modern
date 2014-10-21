@@ -143,12 +143,13 @@ $regular-featurette-margin: $space-xl + $space-md;
 }
 .feature-copyright {
   background: white;
+  max-width: 100%;
 //  background-image: url('http://i.imgur.com/ZfeoqfE.png');
 //  background-position: left bottom;
 //  background-repeat: no-repeat;
   @media (min-width: $screen-lg-min) { // large screen and above
   } 
-  @media (max-width: $screen-md-max) { // medium screen
+  @media (max-width: $screen-sm-max) { // medium screen
     .featurette-image {
       display: none;
     }
