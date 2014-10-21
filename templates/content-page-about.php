@@ -97,8 +97,7 @@
   <div class="featurette-inner container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
-        <!-- <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/v4bXVWf.png" alt="尊识至源。"> -->
-        <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/ZfeoqfE.png" alt="尊识至源。">
+        <img class="featurette-image alignleft img-responsive" src="http://i.imgur.com/qrcQq4w.png" alt="尊识至源。">
       </div>
       <div class="featurette-content col-sm-12 col-md-6">
         <h2 class="featurette-heading">

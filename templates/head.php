@@ -20,4 +20,5 @@
   ga('send', 'pageview');
 
 </script>
+<meta property="wb:webmaster" content="1f71be3e6043edc4" /><!-- for fucking Weibo -->
 </head>
