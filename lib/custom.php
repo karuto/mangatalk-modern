@@ -33,6 +33,6 @@ function specific_no_wpautop($content) {
 add_filter( 'avatar_defaults', 'newgravatar' );
 function newgravatar ($avatar_defaults) {
     $myavatar = get_bloginfo('template_directory') . '/assets/img/mt-logo.png';
-    $avatar_defaults[$myavatar] = "Own";
+    $avatar_defaults[$myavatar] = "MangaTalk";
     return $avatar_defaults;
 }
