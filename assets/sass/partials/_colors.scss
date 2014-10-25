@@ -413,8 +413,9 @@ a {
     color: $base-text-grey-faded;
   }
 }
+.social-shares,
 .promo-section {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $base-divider-color;
 }
 
 /* Page features */

@@ -25,7 +25,7 @@
   
   $twitter_link = "http://twitter.com/intent/tweet?text=".$format_title." 来自「漫言 MangaTalk」 ".$format_link;
 ?>
-<div class="social-shares row">
+<div class="social-shares">
   <div class="col-sm-4">
     <a href="<?php echo $weibo_link; ?>"> 分享到微博</a>
   </div>
