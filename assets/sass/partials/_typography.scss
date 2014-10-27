@@ -160,6 +160,7 @@ blockquote.large {
 .mt-front {
   .entry-title {
     font-size: 222%; /* 40px */
+    text-align: center;
   }
   .entry-subtitle {
 //    font-size: 138%; /* 25px */
@@ -191,8 +192,8 @@ blockquote.large {
   }
 }
 .entry-comment-count {
+  font-size: $subtext-font-size;
   font-weight: $subtext-font-weight;
-  font-size: $content-font-size;
   height: $content-line-height-px;
   line-height: $content-line-height-px;
   
@@ -271,9 +272,12 @@ blockquote.large {
 
 /* Article page meta / extra styles */
 .promo-header,
+.social-shares,
 .story-banner-link {
   font-size: $medium-font-size;
-  letter-spacing: 0.03rem;
+}
+.social-shares {
+  text-align: center;
 }
 .meta-header {
   font-size: $subtext-font-size;

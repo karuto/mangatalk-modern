@@ -15,9 +15,9 @@
     <div class="container">
       <div class="row">
       <div class="front-cover-content col-xs-12 col-sm-12 col-md-12">
-        <h4 class="h4 entry-title">
+        <h1 class="entry-title">
           <a id="cover-story-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        </h4>
+        </h1>
             
         <!-- <h4 class="h4 entry-comment-count alignright">
           By Author &nbsp;
