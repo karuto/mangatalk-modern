@@ -39,6 +39,6 @@
     <a href="<?php echo $facebook_link; ?>" target="_blank"> 分享到 Facebook</a>
   </div> -->
   <div class="col-sm-4">
-    <a href="<?php echo $twitter_link; ?>" target="_blank"> 分享到 Twitter</a>
+    <a href="<?php echo $twitter_link; ?>" target="_blank"> 分享到推特</a>
   </div>
 </div>
