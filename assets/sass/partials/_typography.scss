@@ -144,6 +144,7 @@ blockquote.large {
 
 /* Content specific styles */
 .mt-banner {
+  letter-spacing: 0.03rem;
   font-size: $banner-font-size;
   font-weight: 400;
   .navbar-brand { // override Bootstrap's
@@ -171,7 +172,7 @@ blockquote.large {
   }
 }
 .mt-block {
-  font-size: $medium-font-size;
+  font-size: $subtext-font-size;
 }
 
 /* Article page cover styles */

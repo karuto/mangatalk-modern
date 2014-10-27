@@ -113,6 +113,10 @@ body {
     border-radius: 0;
     border: none;
   }
+  .nav > li > a {
+    padding-left: $space-md;
+    padding-right: $space-md;
+  }
 }
 #mt-banner,
 #cover-story,
