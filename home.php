@@ -18,9 +18,6 @@
         <h4 class="h4 entry-title">
           <a id="cover-story-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h4>
-        <div class="entry-subtitle">
-          <?php the_excerpt(); ?>
-        </div>
             
         <!-- <h4 class="h4 entry-comment-count alignright">
           By Author &nbsp;
@@ -46,7 +43,6 @@ wp_reset_postdata();
 <div class="mt-story-banner">
 <div class="container">
   <div class="story-banner-title">
-    <span id="" class="alignleft">
     <a class="story-banner-link" style="color: white" href="/story">
       一个故事或许不能改变世界，但她能改变你与我的人生。<strong>讲述你的故事 ›</strong>
     </a>
