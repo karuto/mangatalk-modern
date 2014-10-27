@@ -4,6 +4,8 @@
 $base-font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
 $base-font-size: 18px;
 $base-font-weight: 300;
+$medium-font-size: 16px;
+$small-font-size: 14px;
 
 $cover-title-font-size: 46px;
 $cover-title-line-height: 1.4;
@@ -11,9 +13,6 @@ $cover-title-line-height: 1.4;
 $content-font-size: 18px;
 $content-line-height: 1.7;
 $content-line-height-px: $content-line-height * $content-font-size;
-
-$medium-font-size: 16px;
-$small-font-size: 14px;
 
 $subtext-font-family: $base-font-family;
 $subtext-font-size: $base-font-size * 0.75; /* 14px */
@@ -26,6 +25,9 @@ $fixed-line-height: 1.2;
 
 $heading-font-family: $base-font-family;
 $heading-font-weight: 700;
+
+//$banner-font-size: $medium-font-size;
+$banner-font-size: $subtext-font-size;
 
 
 /*
@@ -142,16 +144,16 @@ blockquote.large {
 
 /* Content specific styles */
 .mt-banner {
-  font-size: $medium-font-size;
-  font-weight: 700;
+  font-size: $banner-font-size;
+  font-weight: 400;
   .navbar-brand { // override Bootstrap's
-    font-size: $medium-font-size;
+    font-size: $banner-font-size;
   }
   .dropdown-menu>li>a { // override Bootstrap's
-    font-size: $medium-font-size;
+    font-size: $banner-font-size;
   }
   .dropdown-menu { // override Bootstrap's
-    font-size: $medium-font-size;
+    font-size: $banner-font-size;
   }
 }
 .mt-front {
