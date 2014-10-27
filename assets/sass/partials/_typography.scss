@@ -15,7 +15,7 @@ $content-line-height: 1.7;
 $content-line-height-px: $content-line-height * $content-font-size;
 
 $subtext-font-family: $base-font-family;
-$subtext-font-size: $base-font-size * 0.75; /* 14px */
+$subtext-font-size: 14px;
 $subtext-font-weight: 300;
 $subtext-line-height: 1.43;
 
@@ -146,7 +146,7 @@ blockquote.large {
 .mt-banner {
   letter-spacing: 0.03rem;
   font-size: $banner-font-size;
-  font-weight: 400;
+  font-weight: $subtext-font-weight;
   .navbar-brand { // override Bootstrap's
     font-size: $banner-font-size;
   }
@@ -168,7 +168,7 @@ blockquote.large {
 }
 .page-header {
   .h2 {
-    font-weight: 300;
+    font-weight: $subtext-font-weight;
   }
 }
 .mt-block {
@@ -186,12 +186,12 @@ blockquote.large {
     font-size: $content-font-size;
     line-height: $content-line-height;
     letter-spacing: 0.01rem;
-    font-weight: 300;
+    font-weight: $subtext-font-weight;
     margin: $space-lg 0 $space-sm;
   }
 }
 .entry-comment-count {
-  font-weight: 300;
+  font-weight: $subtext-font-weight;
   font-size: $content-font-size;
   height: $content-line-height-px;
   line-height: $content-line-height-px;
@@ -270,8 +270,9 @@ blockquote.large {
 
 
 /* Article page meta / extra styles */
+.promo-header,
 .story-banner-link {
-  font-size: $subtext-font-size;
+  font-size: $medium-font-size;
   letter-spacing: 0.03rem;
 }
 .meta-header {
@@ -298,7 +299,7 @@ blockquote.large {
   }
   .article-meta-spec,
   .author-bio {
-  font-size: $subtext-font-size; /* 14px; */
+  font-size: $subtext-font-size;
   font-weight: $subtext-font-weight;
   line-height: $subtext-line-height;
   margin-bottom: $subtext-font-size / 2;
