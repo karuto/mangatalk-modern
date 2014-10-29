@@ -427,7 +427,9 @@ a {
 .featurette-content {
   color: $base-reading-text-color;
 }
-
+a.page-intro-link {
+  color: $base-white;
+}
 
 /* 404 */
 .oops-subheader,
