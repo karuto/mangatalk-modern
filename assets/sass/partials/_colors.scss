@@ -360,7 +360,13 @@ a {
     }
   }
 }
-
+.article-cover .entry-comment-count > a {
+  color: $base-text-grey-faded;
+  &:hover, &:focus {
+    color: $base-brand-normal;
+  }
+  
+}
 
 /* Block */
 .mt-block {
