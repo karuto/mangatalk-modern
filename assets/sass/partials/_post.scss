@@ -32,7 +32,6 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
     right: 0;
     top: 0;
     opacity: 1;
-//    z-index: 0;
     @include background-size(cover);
     
 //    &:after {

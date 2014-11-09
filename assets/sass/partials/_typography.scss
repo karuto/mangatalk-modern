@@ -167,6 +167,21 @@ blockquote.large {
 //    font-weight: 300;
   }
 }
+.author-front {
+  text-align: center;
+  .author-name {
+    font-size: 200%;
+    font-weight: 700;
+  }
+  .author-desc,
+  .author-desc > p { /* same as .hentry entry-subtitle >p */
+    font-size: $medium-font-size;
+    line-height: $content-line-height;
+    letter-spacing: 0.01rem;
+    font-weight: $subtext-font-weight;
+    margin: $space-lg 0 $space-sm;
+  }
+}
 .page-header {
   .h2 {
     font-weight: $subtext-font-weight;
@@ -185,18 +200,6 @@ blockquote.large {
   }
   .entry-subtitle > p {
     font-size: $content-font-size;
-    line-height: $content-line-height;
-    letter-spacing: 0.01rem;
-    font-weight: $subtext-font-weight;
-    margin: $space-lg 0 $space-sm;
-  }
-}
-.author-front {
-  text-align: center;
-  
-  .author-desc,
-  .author-desc > p { /* same as entry-subtitle >p above */
-    font-size: $medium-font-size;
     line-height: $content-line-height;
     letter-spacing: 0.01rem;
     font-weight: $subtext-font-weight;

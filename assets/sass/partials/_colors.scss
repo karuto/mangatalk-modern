@@ -331,7 +331,6 @@ a {
 }
 
 
-
 /* Generic cover */
 .cover-shade { /* TODO: use mixin */
   position: absolute;
@@ -353,7 +352,14 @@ a {
 .cover-author-name {
   color: $base-text-grey-faded;
 }
-
+.author-front {
+  .author-contact-item > a {
+    color: $base-text-grey-faded;
+    &:hover, &:focus {
+      color: $base-brand-normal;
+    }
+  }
+}
 
 
 /* Block */

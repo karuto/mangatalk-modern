@@ -70,10 +70,6 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-// // Check which element is being clicked; helper function
-// $('body').click(function(event) {
-//     console.log(event.target);
-// });
 
 // Top banner related functions
 var mtBanner = $('#mt-banner');
