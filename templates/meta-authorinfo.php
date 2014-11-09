@@ -9,7 +9,7 @@
         <div class="author-name">
           <a href="<?php echo get_author_posts_url( get_the_author_meta('ID'), $author_nicename ); ?>" target="_blank">
             <?php echo the_author_meta( 'display_name' ); ?>
-          </a><!-- TODO: don't hardcode URL -->
+          </a>
         </div>
         <p class="article-meta-spec">
            Written on <?php echo get_the_date(); ?>&nbsp;<?php edit_post_link(); ?>
