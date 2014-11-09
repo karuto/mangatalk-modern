@@ -3,10 +3,9 @@
 <header id="mt-front" class="mt-front author-front">
 <section class="article-cover">
   <div id="cover-story" class="cover-image" <?php post_class();
-     // Retrieve cover image URL then set header's background
-    if ( has_post_thumbnail() ) {
-      $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0];
-    } else {
+    // Retrieve cover image URL then set header's background
+    $cover_img_url = get_the_author_meta( 'coverimage' );
+    if ( $cover_img_url == "" ) {
       $cover_img_url = 'http://i.imgur.com/zk0ecX8.jpg';
     }
     echo 'style="background-image: url(' . $cover_img_url . ');"';
