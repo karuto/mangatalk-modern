@@ -6,7 +6,7 @@
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
-
+TEST
 <div class="mt-list">
    <?php get_template_part('templates/loop', 'grid'); ?>
 </div>
