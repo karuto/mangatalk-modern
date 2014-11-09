@@ -22,7 +22,7 @@
         </h1>
 
         <h2 class="author-desc">
-          <div class="author-name">Karuto</div>
+          <div class="author-name"><?php the_author_meta( 'display_name' ); ?></div>
           <p><?php the_author_meta( 'description' ); ?></p>
           
           <ul class="author-contact">
