@@ -19,7 +19,7 @@ $extracontent-width: 150px;
 $frontpage-cover-dimension: 50vh;
 $cover-title-pos: 40vh;
 $mt-block-height: $space-xxl * 2.5; /* 250px */
-$front-cover-block-height: $mt-block-height * 1.5; /* 375px */
+$front-cover-block-height: $mt-block-height * 2; /* 375px */
 
 @mixin border-box() {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
