@@ -19,7 +19,7 @@ $extracontent-width: 150px;
 $frontpage-cover-dimension: 50vh;
 $cover-title-pos: 40vh;
 $mt-block-height: $space-xxl * 2.5; /* 250px */
-$front-cover-block-height: $mt-block-height * 2; /* 375px */
+$front-cover-block-height: $mt-block-height * 2; /* 500px */
 
 @mixin border-box() {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -155,7 +155,7 @@ body {
   }
   .front-cover-content {
     overflow: hidden;
-    @media (max-width: $screen-md-min) { // small and medium screen
+    @media (max-width: $screen-md-min) { // small screen
       margin-top: $front-cover-block-height * 0.4; 
     }
     @media (min-width: $screen-md-min) { // medium and large screen
@@ -163,7 +163,7 @@ body {
     }
   }
   .entry-title {
-    @media (max-width: $screen-md-min) { // small and medium screen
+    @media (max-width: $screen-md-min) { // small screen
       width: 90%;
       margin: 0 auto;
     }

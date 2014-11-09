@@ -6,8 +6,19 @@
 //}
 .author-front {
   text-align: center;
+
+  .front-cover-content {
+    overflow: hidden;
+    @media (max-width: $screen-md-min) { // small screen
+      margin-top: $front-cover-block-height * 0.15;
+    }
+    @media (min-width: $screen-md-min) { // medium and large screen
+      margin-top: $front-cover-block-height * 0.25;
+    }
+  }
   
   .avatar {
+    margin: 0 auto;
     border-radius: 50%;
   }
 }
