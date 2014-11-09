@@ -1,6 +1,6 @@
 <?php if (is_author()): ?>
   
-<header id="mt-front" class="mt-front">
+<header id="mt-front" class="mt-front author-front">
 <section class="article-cover">
   <div id="cover-story" class="cover-image" <?php post_class();
      // Retrieve cover image URL then set header's background
@@ -17,16 +17,10 @@
     <div class="container">
       <div class="row">
       <div class="front-cover-content col-xs-12 col-sm-12 col-md-12">
-        <h1 class="entry-title">
-          <a id="cover-story-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+        <h1 class="author-avatar">
+          <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150); ?>
         </h1>
-            
-        <!-- <h4 class="h4 entry-comment-count alignright">
-          By Author &nbsp;
-          <span class="glyphicon glyphicon-heart"></span>3
-          &nbsp;
-          <span class="glyphicon glyphicon-comment"></span>3
-        </h4> -->
       
       </div><!-- .front-cover-content -->
       </div><!-- .row -->

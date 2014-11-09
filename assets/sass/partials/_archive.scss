@@ -1,6 +1,16 @@
 /*
  * MangaTalk archive page layout rules
  */
+//.archive-front { /* author cover */
+//  margin-bottom: $space-xl;
+//}
+.author-front {
+  text-align: center;
+  
+  .avatar {
+    border-radius: 50%;
+  }
+}
 .archive-entry-link {
   text-align: center;
   margin: $space-xl auto;

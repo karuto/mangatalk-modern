@@ -8,6 +8,9 @@
 <?php endif; ?>
 
 <div class="mt-list">
+  <?php if (is_author()): ?>
+  <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
+  <?php endif; ?>
    <?php get_template_part('templates/loop', 'grid'); ?>
 </div>
 
