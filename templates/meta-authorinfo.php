@@ -7,9 +7,9 @@
           <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150); ?>
         </div>
         <div class="author-name">
-          <?php get_author_posts_url( $author_id, $author_nicename ); ?>
-          
-          <a href="http://mangatalk.net/author/<?php echo the_author_meta( 'user_nicename' ); ?>" target="_blank"><?php echo the_author_meta( 'display_name' ); ?></a>
+          <a href="<?php echo get_author_posts_url( get_the_author_meta('ID'), $author_nicename ); ?>" target="_blank">
+            <?php echo the_author_meta( 'display_name' ); ?>
+          </a><!-- TODO: don't hardcode URL -->
         </div>
         <p class="article-meta-spec">
            Written on <?php echo get_the_date(); ?>&nbsp;<?php edit_post_link(); ?>
