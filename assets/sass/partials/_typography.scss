@@ -191,6 +191,17 @@ blockquote.large {
     margin: $space-lg 0 $space-sm;
   }
 }
+.author-front {
+  text-align: center;
+  
+  .author-desc > p { /* same as entry-subtitle >p above */
+    font-size: $content-font-size;
+    line-height: $content-line-height;
+    letter-spacing: 0.01rem;
+    font-weight: $subtext-font-weight;
+    margin: $space-lg 0 $space-sm;
+  }
+}
 .entry-comment-count {
   font-size: $subtext-font-size;
   font-weight: $subtext-font-weight;

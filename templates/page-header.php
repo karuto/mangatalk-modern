@@ -20,6 +20,10 @@
         <h1 class="author-avatar">
           <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150); ?>
         </h1>
+
+        <h2 class="author-desc">
+          <p><?php the_author_meta( 'description' ); ?></p>
+        </h2>
       
       </div><!-- .front-cover-content -->
       </div><!-- .row -->

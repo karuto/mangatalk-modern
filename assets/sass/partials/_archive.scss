@@ -5,7 +5,6 @@
 //  margin-bottom: $space-xl;
 //}
 .author-front {
-  text-align: center;
 
   .front-cover-content {
     overflow: hidden;
@@ -16,9 +15,8 @@
       margin-top: $front-cover-block-height * 0.25;
     }
   }
-  
   .avatar {
-    margin: 0 auto;
+    margin: 0 auto $space-lg;
     border-radius: 50%;
   }
 }

@@ -75,7 +75,7 @@ function extra_user_profile_fields( $user ) { ?>
 <th><label for="coverimage"><?php _e("封面图"); ?></label></th>
 <td>
 <input type="text" name="coverimage" id="coverimage" value="<?php echo esc_attr( get_the_author_meta( 'coverimage', $user->ID ) ); ?>" class="regular-text" /><br />
-<span class="description"><?php _e("填写您的封面图片地址（以 http://... 开头的完整图片链接），将用于您的作者页面顶端。"); ?></span>
+<span class="description"><?php _e("填写您的封面图片地址（以 http://... 开头的完整图片链接），将用于您的作者页面顶端。 宽度根据网页宽度自适应（越宽越好），高度为 500 像素。"); ?></span>
 </td>
 </tr>
 </table>
