@@ -21,6 +21,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 .article-cover {
   height: 100vh;
   margin-bottom: $space-xl;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   
   .cover-image {
     height: 100vh;
@@ -32,15 +35,15 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 //    z-index: 0;
     @include background-size(cover);
     
-    &:after {
-      content: '';
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
+//    &:after {
+//      content: '';
+//      position: absolute;
+//      width: inherit;
+//      height: inherit;
+//      top: 0;
+//      left: 0;
+//      right: 0;
+//    }
   }
   .cover-content-container {
     @include absolute-center-bottom();
