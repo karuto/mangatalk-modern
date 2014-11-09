@@ -1,4 +1,5 @@
 $two-side-content-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg; // 700px
+$article-cover-height: 100vh;
 $one-side-content-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
 $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 
@@ -19,14 +20,15 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   }
 }
 .article-cover {
-  height: 100vh;
+  height: $article-cover-height; // old design where it flows the whole screen
+//  height: ;
   margin-bottom: $space-xl;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
   
   .cover-image {
-    height: 100vh;
+    height: $article-cover-height;
     position: absolute;
     left: 0;
     right: 0;
