@@ -19,6 +19,9 @@
     margin: 0 auto $space-lg;
     border-radius: 50%;
   }
+  li {
+    display: inline-block;
+  }
 }
 .archive-entry-link {
   text-align: center;

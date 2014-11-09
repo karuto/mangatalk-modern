@@ -1,6 +1,6 @@
 <?php if (is_author()): ?>
   
-<header id="mt-front" class="mt-front author-front">
+<header class="mt-front author-front">
 <section class="article-cover">
   <div id="cover-story" class="cover-image" <?php post_class();
     // Retrieve cover image URL then set header's background
@@ -22,7 +22,24 @@
         </h1>
 
         <h2 class="author-desc">
+          <p>Karuto</p>
           <p><?php the_author_meta( 'description' ); ?></p>
+          
+          <ul class="author-contact">
+            
+            <li class="author-contact-item">
+              <a href="<?php echo get_the_author_meta( 'douban'); ?>">豆瓣</a>
+            </li>
+            &ensp;
+            <li class="author-contact-item">
+              <a href="<?php echo get_the_author_meta( 'weibo'); ?>">微博</a>
+            </li>
+            &ensp;
+            <li class="author-contact-item">
+              <a href="mailto:<?php echo get_the_author_meta('user_email'); ?>">邮箱</a>
+            </li>
+
+          </ul>
         </h2>
       
       </div><!-- .front-cover-content -->

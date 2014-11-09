@@ -75,9 +75,6 @@ $(document).ready(UTIL.loadEvents);
 //     console.log(event.target);
 // });
 
-
-
-
 // Top banner related functions
 var mtBanner = $('#mt-banner');
 var mtSearch = $("#mt-search");
@@ -179,7 +176,7 @@ if (mtFrontcover.length != 0) {
     window.location = $("#cover-story-link").attr("href");
   });
 } else {
-  console.log("Front cover did not exist on this page");
+  // console.log("Front cover did not exist on this page");
 }
 
 
@@ -223,7 +220,7 @@ if (blocks.length != 0) { // if blocks exist
   });
   
 } else {
-  console.log("No blocks exist on this page");
+  // console.log("No blocks exist on this page");
 }
 
 
@@ -233,7 +230,7 @@ var related = $("#related-article-list");
 if (related.length > 0) {
   
 } else {
-  console.log("No related articles exist on this page");
+  // console.log("No related articles exist on this page");
 }
 
 

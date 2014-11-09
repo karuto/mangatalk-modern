@@ -145,9 +145,6 @@ body {
   .article-cover {
     height: $front-cover-block-height;
     margin-bottom: 0;
-    &:hover {
-      cursor: pointer; 
-    }
     .cover-image {
       height: $front-cover-block-height;
       //top: $search-container-height;
@@ -163,6 +160,9 @@ body {
     }
   }
   .entry-title {
+    &:hover {
+      cursor: pointer; 
+    }
     @media (max-width: $screen-md-min) { // small screen
       width: 90%;
       margin: 0 auto;

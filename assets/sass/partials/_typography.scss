@@ -194,8 +194,9 @@ blockquote.large {
 .author-front {
   text-align: center;
   
+  .author-desc,
   .author-desc > p { /* same as entry-subtitle >p above */
-    font-size: $content-font-size;
+    font-size: $medium-font-size;
     line-height: $content-line-height;
     letter-spacing: 0.01rem;
     font-weight: $subtext-font-weight;
