@@ -35,7 +35,10 @@
 //  border-bottom: 1px solid $base-text-light-on-dark-bg;
 }
 .mt-list {
-//  margin-bottom: $space-sm;
+  .row {
+    margin-left: -$row-margin;
+    margin-right: -$row-margin;
+  }
 }
 .mt-block {
   height: $mt-block-height;
