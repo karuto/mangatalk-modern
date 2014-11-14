@@ -41,6 +41,8 @@
   height: $mt-block-height;
   margin-top: $row-margin;
   margin-bottom: $row-margin;
+  padding-left: $row-margin;
+  padding-right: $row-margin;
 
   .block-panel {
     position: relative;

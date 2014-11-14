@@ -8,7 +8,7 @@ $space-md: 20px;
 $space-sm: 10px;
 $space-xs: 8px;
 $space-xxs: 5px;
-$row-margin: 15px;
+$row-margin: 10px;
 
 $search-container-height: 50px;
 $banner-height: $search-container-height;
@@ -16,8 +16,8 @@ $article-content-container-lg: 700px;
 $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
 $extracontent-width: 150px;
-$mt-block-height: $space-xxl * 2.5; /* 250px */
-$front-cover-block-height: $mt-block-height * 2; /* 500px */
+$mt-block-height: $space-xxl * 3; /* 300px */
+$front-cover-block-height: $space-xxl * 4; /* 400px */
 
 @mixin border-box() {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
