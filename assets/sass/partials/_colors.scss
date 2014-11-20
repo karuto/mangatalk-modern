@@ -371,9 +371,13 @@ a {
 /* Block */
 .mt-block {
   .entry-category {
-    background-color: $base-brand-normal;
+    background-color: $base-action-normal;
     a {
       color: $contrast-color-on-image-bg;
+    }
+    &:hover,
+    &:focus {
+      background-color:$base-action-darker;
     }
   }
   .entry-summary {

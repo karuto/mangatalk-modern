@@ -46,6 +46,9 @@
   margin-bottom: $row-margin;
   padding-left: $row-margin;
   padding-right: $row-margin;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 
   .block-panel {
     position: relative;
@@ -69,6 +72,7 @@
   .block-content {
     padding: 0 $row-margin;
     vertical-align: middle;
+    overflow: hidden;
     z-index: 9;
   }
   .block-category {
@@ -94,8 +98,12 @@
 //    margin-bottom: $space-md;
   }
   .entry-summary {
-    padding-top: $space-md;
-    max-height: 50%;
+    padding: $space-md 0;
+    max-height: 0;
+    &:hover,
+    &:focus {
+      max-height: 1000px;
+    }
 //    -webkit-mask-image: -webkit-gradient(linear, left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
     @media (max-width: $screen-md-max) { // small and medium screen
     }
