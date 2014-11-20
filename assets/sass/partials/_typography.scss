@@ -206,6 +206,9 @@ blockquote.large {
   .entry-category {
     line-height: $content-line-height;
   }
+  .entry-summary > p {
+    font-size: $small-font-size;
+  }
 }
 
 /* Article page cover styles */
@@ -322,9 +325,8 @@ blockquote.large {
 }
 .related-article-list {
   .entry-title {
-    font-size: 130%;  // h5 style
-    margin-top: $base-font-size;
-    margin-bottom: $base-font-size * 0.5; // coordinate with .entry-summary
+    font-size: 166%; /* h4 */
+    font-weight: 300;
   }
   .entry-summary {
 //    padding-top: $base-font-size * 0.5; // coordinate with .entry-title

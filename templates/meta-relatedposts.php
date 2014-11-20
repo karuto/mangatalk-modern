@@ -8,7 +8,7 @@
         $args=array(  
           'tag__in' => $tag_ids,  
           'post__not_in' => array($post->ID),  
-          'posts_per_page'=>6, // Number of related posts to display.
+          'posts_per_page'=>4, // Number of related posts to display.
         );  
       
         $related_posts_query = new wp_query( $args );  
