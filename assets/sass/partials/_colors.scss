@@ -382,12 +382,8 @@ a {
   .text-contrast {
     color: $contrast-color-on-image-bg;
   }
-  .block-content {
-    background-color: $grey-tint-normal;
-    
-    .entry-title a {
-      color: $contrast-color-on-image-bg;
-    }
+  .entry-title a {
+    color: $contrast-color-on-image-bg;
   }
 }
 .article-cover {

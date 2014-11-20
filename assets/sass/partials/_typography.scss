@@ -194,7 +194,7 @@ blockquote.large {
   font-size: $medium-font-size;
   .entry-title {
 //    font-size: $base-font-size;
-//    line-height: $content-line-height;
+    line-height: $cover-title-line-height;
   }
   .entry-category,
   .entry-comment-count,

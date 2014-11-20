@@ -2,7 +2,7 @@
 <article class="block-panel">
   <div class="block-cover-wrapper">
     
-    <div class="block-cover overlay" <?php post_class();
+    <div class="block-cover" <?php post_class();
      // Retrieve cover image URL then set header's background
     if ( has_post_thumbnail() ) {
       $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0];
@@ -11,11 +11,15 @@
     }
     echo 'style="background-image: url(' . $cover_img_url . ');"';
     ?>>
+      <div class="cover-shade"></div>
     
       <div class="row block-content">
+        <header class="block-category">
+          <!-- #TODO: write the algorithm to retrieve the primary tag to display below. -->
+          <span class="entry-category text-contrast"><a href="">专访</a></span>
+        </header>
         
         <header class="block-header">
-          <span class="entry-category text-contrast"><a href="">专访</a></span>
           <h5 class="entry-title text-contrast">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
           </h5>
