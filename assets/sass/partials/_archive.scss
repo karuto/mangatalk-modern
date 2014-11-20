@@ -79,8 +79,16 @@
       margin: 20% auto;
     }
   }
+  .entry-category {
+    display: inline-block;
+    margin-bottom: $space-lg;
+    a {
+      padding: 4px 8px;
+      vertical-align: middle;
+    }
+  }
   .entry-title {
-    margin-bottom: $space-md;
+//    margin-bottom: $space-md;
   }
   .entry-summary {
     padding-top: $space-md;

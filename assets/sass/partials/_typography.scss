@@ -6,11 +6,12 @@ $base-font-size: 18px;
 $base-font-weight: 300;
 $medium-font-size: 16px;
 $small-font-size: 14px;
+$xs-font-size: 12px;
 
 $cover-title-font-size: 46px;
 $cover-title-line-height: 1.4;
 
-$content-font-size: 18px;
+$content-font-size: $base-font-size;
 $content-line-height: 1.7;
 $content-line-height-px: $content-line-height * $content-font-size;
 
@@ -187,8 +188,22 @@ blockquote.large {
     font-weight: $subtext-font-weight;
   }
 }
+
+/* Archive block styles */
 .mt-block {
   font-size: $medium-font-size;
+  .entry-title {
+//    font-size: $base-font-size;
+//    line-height: $content-line-height;
+  }
+  .entry-category,
+  .entry-comment-count,
+  .entry-author-name {
+    font-size: $small-font-size;
+  }
+  .entry-category {
+    line-height: $content-line-height;
+  }
 }
 
 /* Article page cover styles */
