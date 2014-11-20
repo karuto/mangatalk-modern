@@ -183,42 +183,26 @@ var screenLargeEnough = ($(window).width() > 1200) ? true : false;
 // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 
 // Hover / toggle effect on article blocks
-// var blocks = $(".mt-block");
-// if (blocks.length != 0) { // if blocks exist
-//   blocks.addClass("is-inactive"); // Add inactive by default
-//   var blockheight = blocks.height();
-//   var marginTopVar = (blockheight * 0.2) + "px";
-//
-//   blocks.mouseenter(function () {
-//
-//     // Tone down the block so that we can see clearly
-//     $(this).animate({opacity:"1"}, "slow");
-//
-//     // Only do the following effect if we don't have a related article list (not on post page)
-//     if (($('#related-article-list').length == 0) && screenLargeEnough) {
-//       $(this).toggleClass("is-inactive");
-//     } else { // related article mini-block
-//       $(this).toggleClass("is-active");
-//     }
-//
-//   });
-//   blocks.mouseleave(function () {
-//
-//     // Restore its opacity
-//     $(this).animate({opacity:"0.8"}, "slow");
-//
-//     // Only do the following effect if we don't have a related article list (not on post page)
-//     if (($('#related-article-list').length == 0) && screenLargeEnough) {
-//       $(this).toggleClass("is-inactive");
-//     } else { // related article mini-block
-//       $(this).toggleClass("is-active");
-//     }
-//
-//   });
-//
-// } else {
-//   // console.log("No blocks exist on this page");
-// }
+var blocks = $(".mt-block");
+if (blocks.length != 0) { // if blocks exist
+
+
+  blocks.mouseenter(function () {
+    var summary = $(this).find(".excerpt");
+    console.log(summary);
+    // If you hovered over block, you hovered its summary at the same time
+    summary.removeClass("hidden");
+    summary.addClass("entry-summary");
+  });
+  blocks.mouseleave(function () {
+    var summary = $(this).find(".excerpt");
+    summary.removeClass("entry-summary");
+    summary.addClass("hidden");
+  });
+
+} else {
+  // console.log("No blocks exist on this page");
+}
 
 
 

@@ -47,7 +47,7 @@
   padding-left: $row-margin;
   padding-right: $row-margin;
   transition: max-height 0.25s ease-out;
-  &:hover {
+  &:hover, &:focus {
     transition: max-height 0.25s ease-in;
   }
 //  -webkit-transition: all 0.2s ease;
@@ -84,7 +84,8 @@
   }
   .block-header {
     @include absolute-center-bottom();
-    margin: $space-md $space-md 0;
+//    margin: $space-md $space-md 0;
+    margin: $space-md;
     @media (max-width: $screen-md-max) { // small and medium screen
 //      width: 95%;
 //      margin: 20% auto;
@@ -101,38 +102,37 @@
   .entry-title {
 //    margin-bottom: $space-md;
   }
-  .entry-summary {
-    padding: $space-md 0 0;
-    max-height: 0;
-    &:hover,
-    &:focus {
-      max-height: 1000px;
-    }
-//    -webkit-mask-image: -webkit-gradient(linear, left 70%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    @media (max-width: $screen-md-max) { // small and medium screen
-    }
-  }
-  .entry-meta {
-//    display: none;
-  }
-}
-.is-inactive {
-  opacity: 0.8;
-  .block-header {
-    margin: $space-xxl $space-lg 0;
-    text-align: center;
-    @media (max-width: $screen-md-max) { // small and medium screen
-      width: 90%;
-      margin: 20% auto;
-    }
-  }
-  .entry-title {
-    margin-top: ($mt-block-height / 2) - $space-xl; // minus its own first line-height
-  }  
-  .entry-summary {
+  .hidden {
     display: none;
   }
+  .entry-summary {
+    display: block;
+    max-height: 500px;
+    padding: $space-md 0 0;
+//    max-height: 0;
+//    &:hover,
+//    &:focus {
+//      max-height: 1000px;
+//    }
+  }
 }
+//.is-inactive {
+//  opacity: 0.8;
+//  .block-header {
+//    margin: $space-xxl $space-lg 0;
+//    text-align: center;
+//    @media (max-width: $screen-md-max) { // small and medium screen
+//      width: 90%;
+//      margin: 20% auto;
+//    }
+//  }
+//  .entry-title {
+//    margin-top: ($mt-block-height / 2) - $space-xl; // minus its own first line-height
+//  }
+//  .entry-summary {
+//    display: none;
+//  }
+//}
 .pager {
   border-bottom: 1px solid #eee;
   padding-bottom: $space-sm;

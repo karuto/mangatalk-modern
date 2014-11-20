@@ -35,9 +35,8 @@
               '% <span class="glyphicon glyphicon-comment"></span>' ); ?>
             </span>
           </div>
-          <div class="entry-summary text-contrast">
+          <div class="excerpt hidden text-contrast">
             <?php the_excerpt(); ?>
-            <p>&nbsp;</p><!-- blank line for spacing -->
           </div>
           
         </header>
