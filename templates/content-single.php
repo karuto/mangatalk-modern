@@ -54,9 +54,6 @@
   <?php get_template_part('templates/meta', 'social'); ?>
   <?php get_template_part('templates/meta', 'relatedposts'); ?>
   <?php /*get_template_part('templates/meta', 'authorinfo');*/ ?>
-
-  
-  
   
   <div class="comments-root-container clearfix">
     <header class="meta-header author-info-header"> 留言讨论&emsp;|&emsp;Goings-On About Town</header>

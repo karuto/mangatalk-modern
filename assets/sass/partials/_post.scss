@@ -375,7 +375,17 @@ blockquote.large {
   margin: 0 15px;
 }
 .entry-meta-spec {
-  padding-bottom: $space-lg+$subtext-font-size;
+  padding-bottom: $space-lg + $subtext-font-size;
+  .col-xs-12 {
+    @media (max-width: $screen-sm-max) { /* Small screens */
+      text-align: center;
+    }
+  }
+}
+.social-shares {
+  @media (max-width: $screen-sm-max) { /* Small screens */
+    padding-top: $space-md;
+  }
 }
 .entry-tags > a,
 .social-button {
@@ -385,10 +395,14 @@ blockquote.large {
   vertical-align: baseline;
 }
 .entry-tags > a {
-  float: left;
+  @media (min-width: $screen-sm-max) { /* Larger than small screens */
+    float: left;
+  }
 }
 .social-button {
-  float: right;
+  @media (min-width: $screen-sm-max) { /* Larger than small screens */
+    float: right;
+  }
 }
 
 
