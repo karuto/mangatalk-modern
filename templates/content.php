@@ -1,3 +1,4 @@
+<!-- Although this is a generic content template, it's used as mt-block in loops. -->
 <article class="block-panel">
   <div class="block-cover-wrapper">
     
@@ -14,20 +15,24 @@
       <div class="row block-content">
         
         <header class="block-header">
-          
+          <div class="entry-category text-contrast">Category</div>
           <h4 class="entry-title text-contrast">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
           </h4>
           <div class="entry-summary text-contrast">
             <?php the_excerpt(); ?>
           </div>
-          <div class="entry-meta text-contrast">
-            <p class="entry-comment-count alignright">
-              By <?php echo get_the_author(); ?> &nbsp;
-              <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
-              &nbsp;
-              <span class="glyphicon glyphicon-comment"></span> <?php echo get_comments_number(); ?>
-            </p>
+          <div class="entry-meta">
+            <span class="text-contrast">
+            By <a class="text-contrast" href="<?php echo get_author_posts_url( get_the_author_meta('ID'), $author_nicename ); ?>">
+                <?php echo the_author_meta( 'display_name' ); ?>
+              </a>
+            </span> &nbsp; 
+            <span class="text-contrast">
+              <?php comments_number( '', 
+              '1 <span class="glyphicon glyphicon-comment"></span>', 
+              '% <span class="glyphicon glyphicon-comment"></span>' ); ?>
+            </span>
           </div>
           
         </header>

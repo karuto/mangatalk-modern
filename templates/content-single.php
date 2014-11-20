@@ -24,8 +24,6 @@
                 </a>
               </span>
             </a>
-            <!-- <span class="glyphicon glyphicon-heart"></span> <?php echo get_comments_number(); ?>
-            &nbsp; -->
             <span class="alignright">
               <?php comments_number( '', 
               '1 <span class="glyphicon glyphicon-comment"></span>', 
