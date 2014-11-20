@@ -20,16 +20,16 @@
         </header>
         
         <header class="block-header">
-          <h5 class="entry-title text-contrast">
+          <h4 class="entry-title text-contrast">
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          </h5>
+          </h4>
           <div class="entry-meta">
             <span class="entry-author-name text-contrast">
             By <a class="text-contrast" href="<?php echo get_author_posts_url( get_the_author_meta('ID'), $author_nicename ); ?>">
                 <?php echo the_author_meta( 'display_name' ); ?>
               </a>
             </span> &nbsp; 
-            <span class="entry-comment-count text-contrast">
+            <span class="entry-comment-count text-contrast alignright">
               <?php comments_number( '', 
               '1 <span class="glyphicon glyphicon-comment"></span>', 
               '% <span class="glyphicon glyphicon-comment"></span>' ); ?>
