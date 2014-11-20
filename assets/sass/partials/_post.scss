@@ -1,6 +1,6 @@
 $two-side-content-width: ($extracontent-width + $article-content-container-padding) * 2 + $article-content-container-lg; // 700px
 //$article-cover-height: 100vh; // old design where it flows the whole screen
-$article-cover-height: $front-cover-block-height * 2; // new design where it is fixed height 800px
+$article-cover-height: $mt-block-height * 2; // new design where it is fixed height 800px
 $one-side-content-width: $extracontent-width + $article-content-container-padding + $article-content-container-lg / 2;
 $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 
@@ -11,6 +11,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 /* Cover styles */
 .article-header {
   margin: ($cover-title-height * 2) auto $cover-title-height;
+  @media (max-width: $screen-sm-max) { /* Small screens */
+    margin: ($cover-title-height * 1) auto $cover-title-height;
+  }
   width: 90%;
   max-width: $two-side-content-width;
   text-align: center;
@@ -22,6 +25,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
 }
 .article-cover {
   height: $article-cover-height;
+  @media (max-width: $screen-sm-max) { /* Small screens */
+    height: $article-cover-height / 2;
+  }
   margin-bottom: $space-xl;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -29,6 +35,9 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
   
   .cover-image {
     height: $article-cover-height;
+    @media (max-width: $screen-sm-max) { /* Small screens */
+      height: $article-cover-height / 2;
+    }
     position: absolute;
     left: 0;
     right: 0;
@@ -50,21 +59,21 @@ $cover-title-height: $base-font-size * 3.33; /* h2 font-size: 333% */
     @include absolute-center-bottom();
     padding: $space-xl 0 $space-xxl;
 
-    @media (max-width: $screen-sm-min) {
+    @media (max-width: $screen-sm-max) { /* Small screens */
       padding: $space-xl 0 $space-xl;
     }
   }
   .entry-subtitle {
     margin-top: $space-lg;
-    @media (max-width: $screen-sm-min) {
+    @media (max-width: $screen-sm-max) {
       display: none;
     }
   }
   .entry-comment-count {
-    margin-top: $space-xxl;
+    margin-top: $space-xl;
 
-    @media (max-width: $screen-sm-min) {
-      margin-top: $space-xl;
+    @media (max-width: $screen-sm-max) {
+      margin-top: $space-lg;
     }
     .avatar {
       display: inline-block;
