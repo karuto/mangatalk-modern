@@ -257,8 +257,8 @@ function fader() {
       // console.log("This page doesn't have a cover.");
     }
 }
-// Event on scroll
-$(document).bind('scroll', fader);
+// Fading event for the article cover, on scroll
+// $(document).bind('scroll', fader); // Disable fader for now!
 
 
 
