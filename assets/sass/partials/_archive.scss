@@ -46,9 +46,13 @@
   margin-bottom: $row-margin;
   padding-left: $row-margin;
   padding-right: $row-margin;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  transition: max-height 0.25s ease-out;
+  &:hover {
+    transition: max-height 0.25s ease-in;
+  }
+//  -webkit-transition: all 0.2s ease;
+//  -moz-transition: all 0.2s ease;
+//  transition: all 0.2s ease;
 
   .block-panel {
     position: relative;
@@ -98,7 +102,7 @@
 //    margin-bottom: $space-md;
   }
   .entry-summary {
-    padding: $space-md 0;
+    padding: $space-md 0 0;
     max-height: 0;
     &:hover,
     &:focus {

@@ -37,6 +37,7 @@
           </div>
           <div class="entry-summary text-contrast">
             <?php the_excerpt(); ?>
+            <p>&nbsp;</p><!-- blank line for spacing -->
           </div>
           
         </header>
