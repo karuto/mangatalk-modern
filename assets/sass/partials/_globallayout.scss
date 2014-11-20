@@ -17,7 +17,7 @@ $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
 $extracontent-width: 150px;
 $mt-block-height: $space-xxl * 4; /* 400px */
-$front-cover-block-height: $mt-block-height * 1.25; /* 500px */
+$front-cover-block-height: $mt-block-height * 1; /* 400px */
 
 @mixin border-box() {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
