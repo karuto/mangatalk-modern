@@ -11,7 +11,7 @@
     }
     echo 'style="background-image: url(' . $cover_img_url . ');"';
     ?>>
-      <div class="cover-shade"></div>
+      <a href="<?php the_permalink(); ?>"><div class="cover-shade"></div></a>
     
       <div class="row block-content">
         <header class="block-category">
@@ -38,9 +38,7 @@
           <div class="excerpt hidden text-contrast">
             <?php the_excerpt(); ?>
           </div>
-          
-        </header>
-        
+        </header><!-- .block-header -->
       </div><!-- .block-content -->
       
     </div><!-- .block-cover -->
