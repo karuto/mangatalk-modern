@@ -28,17 +28,21 @@
   
   $twitter_link = "https://twitter.com/intent/tweet?text=《".$format_posttitle."》来自漫言 MangaTalk  ".$format_link;
 ?>
-<div class="social-shares">
-  <div class="col-sm-4">
-    <a href="<?php echo $weibo_link; ?>" target="_blank"> 分享到微博</a>
+
+<div class="entry-meta-spec">
+<div class="row">
+  <div class="col-xs-12 col-sm-6 entry-tags text-muted">
+     <!-- <?php echo get_the_date(); ?>&nbsp; -->
+     <?php the_tags( '', '', '' ); /* before, separator, after */ ?>
+     <?php edit_post_link(); ?>
   </div>
-  <div class="col-sm-4">
-    <a href="<?php echo $douban_link; ?>" target="_blank"> 分享到豆瓣</a>
-  </div>
-  <!-- <div class="col-sm-3">
-    <a href="<?php echo $facebook_link; ?>" target="_blank"> 分享到 Facebook</a>
-  </div> -->
-  <div class="col-sm-4">
-    <a href="<?php echo $twitter_link; ?>" target="_blank"> 分享到推特</a>
+
+  <div class="col-xs-12 col-sm-6 social-shares">
+      <a class="social-button" href="<?php echo $twitter_link; ?>" target="_blank"> 分享到推特</a>
+      <a class="social-button" href="<?php echo $weibo_link; ?>" target="_blank"> 分享到微博</a>
+      <a class="social-button" href="<?php echo $douban_link; ?>" target="_blank"> 分享到豆瓣</a>
   </div>
 </div>
+</div>
+
+

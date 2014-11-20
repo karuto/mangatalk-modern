@@ -228,6 +228,14 @@ blockquote.large {
     font-weight: $subtext-font-weight;
     margin: $space-lg 0 $space-sm;
   }
+  .social-shares,
+  .entry-tags,
+  .author-bio {
+    font-size: $subtext-font-size;
+    font-weight: $subtext-font-weight;
+    line-height: $subtext-line-height;
+//    margin-bottom: $subtext-font-size / 2;
+  }
 }
 .entry-comment-count {
   font-size: $subtext-font-size;
@@ -310,16 +318,13 @@ blockquote.large {
 
 /* Article page meta / extra styles */
 .promo-header,
-.social-shares,
 .story-banner-link {
   font-size: $medium-font-size;
-}
-.social-shares {
-  text-align: center;
 }
 .meta-header {
   font-size: $subtext-font-size;
   padding-top: $subtext-font-size;
+  margin-bottom: $space-sm;
   text-transform: uppercase;
   letter-spacing: 0.03rem;
 }
@@ -331,19 +336,6 @@ blockquote.large {
   .entry-summary {
 //    padding-top: $base-font-size * 0.5; // coordinate with .entry-title
     font-size: $medium-font-size;
-  }
-}
-.author-info {
-//  font-size: $medium-font-size;
-  .article-meta-spec {
-    text-transform: uppercase;
-  }
-  .article-meta-spec,
-  .author-bio {
-  font-size: $subtext-font-size;
-  font-weight: $subtext-font-weight;
-  line-height: $subtext-line-height;
-  margin-bottom: $subtext-font-size / 2;
   }
 }
 

@@ -43,6 +43,7 @@ $mt-fog: #CCCCCC; // 0, 0, 80%
 $base-text-light-on-dark-bg: $mt-fog;
 $base-form-input-placeholder: $mt-fog;
 $base-container-bg-light: $mt-fog;
+$base-divider-color: $mt-fog;
 
 
 
@@ -51,7 +52,6 @@ $base-container-bg-light: $mt-fog;
 $mt-titanite-dust: #999999; // 0, 0, 60%
 
 $base-text-grey-faded: $mt-titanite-dust;
-$base-divider-color: $mt-titanite-dust;
 $base-container-bg-grey-medium: $mt-titanite-dust;
 
 
@@ -363,7 +363,7 @@ a {
 .article-cover .entry-comment-count > a {
   color: $base-text-grey-faded;
   &:hover, &:focus {
-    color: $base-brand-normal;
+    color: $base-action-normal;
   }
   
 }
@@ -426,13 +426,23 @@ a {
   }
 }
 .author-info {
-  .article-meta-spec,
   .author-bio {
   //  text-align: center;
     color: $base-text-grey-faded;
   }
 }
-.social-shares,
+.entry-meta-spec {
+  border-bottom: 1px solid $base-divider-color;
+}
+.entry-tags > a,
+.social-button {
+  background-color: $base-container-bg-light;
+  color: $base-text-grey-faded;
+  &:hover, &:focus, &:active {
+    background-color: $base-action-normal;
+    color: $contrast-color-on-dark-bg;
+  }
+}
 .promo-section {
   border-top: 1px solid $base-divider-color;
 }

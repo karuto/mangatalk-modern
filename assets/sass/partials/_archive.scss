@@ -95,7 +95,7 @@
     display: inline-block;
     margin-bottom: $space-lg;
     a {
-      padding: 4px 8px;
+      padding: $row-margin ($row-margin * 2);
       vertical-align: middle;
     }
   }

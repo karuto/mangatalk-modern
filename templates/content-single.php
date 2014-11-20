@@ -36,37 +36,24 @@
     </div><!-- .cover-image -->
   </section><!-- .article-cover -->
   <?php 
-  } else {
+  } else { // Special markup for an article with no cover image
   ?>
     <section class="article-header article-header-no-cover">
       <h2 class="h2 entry-title"><?php the_title(); ?></h2>
     </section>
   <?php 
   }
-    // echo '<section class="article-cover is-darkBackgrounded">' .
-    //   '<div class="cover-image" style="background-image: url(' . $cover_img_url . ');">';
-  
   ?>
+</header><!-- .article-front -->
 
-
-  <?php 
-  echo ""; 
-  ?>
-    
-</header>
-
-
-
-
-<div class="entry-content article-content-container" data-spy="scroll" data-target="#myScrollspy">
+<div class="entry-content article-content-container">
   <?php the_content(); ?>
 </div>
 
 <div class="entry-meta-container article-content-container">
-  
   <?php get_template_part('templates/meta', 'social'); ?>
   <?php get_template_part('templates/meta', 'relatedposts'); ?>
-  <?php get_template_part('templates/meta', 'authorinfo'); ?>
+  <?php /*get_template_part('templates/meta', 'authorinfo');*/ ?>
 
   
   
@@ -75,15 +62,7 @@
     <header class="meta-header author-info-header"> 留言讨论&emsp;|&emsp;Goings-On About Town</header>
     <div class="row">
       <?php comments_template('/templates/comments.php'); ?>
-  
-    <!-- <?php if (roots_display_sidebar()) : ?>
-      <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-        <?php include roots_sidebar_path(); ?>
-      </aside>
-    <?php endif; ?> -->
-
     </div><!-- .row -->
-  
   </div><!-- .comments-container -->
     
 </div><!-- .entry-meta-container -->

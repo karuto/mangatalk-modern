@@ -374,17 +374,34 @@ blockquote.large {
 #disqus_thread {
   margin: 0 15px;
 }
+.entry-meta-spec {
+  padding-bottom: $space-lg+$subtext-font-size;
+}
+.entry-tags > a,
+.social-button {
+  margin-left: $row-margin;
+  padding: $row-margin;
+  border-radius: 3px;
+  vertical-align: baseline;
+}
+.entry-tags > a {
+  float: left;
+}
+.social-button {
+  float: right;
+}
+
+
 .hentry {
   .meta-header {
     margin-top: $space-lg;  // divider style
-    margin-bottom: $space-sm;  // divider style
   }
 }
 $related-block-height: $mt-block-height * 0.75;
 .related-article-list {
   .row {
-   margin-left: -5px;
-   margin-right: -5px;
+   margin-left: -$row-margin;
+   margin-right: -$row-margin;
   }
   .entry-meta,
   .entry-summary,
@@ -412,13 +429,6 @@ $related-block-height: $mt-block-height * 0.75;
 //  text-align: center;
   font-weight: 700;
   margin-bottom: $space-xs;
-}
-.article-meta-spec,
-.author-bio {
-  
-}
-.social-shares {
-  padding-top: $space-xl;
 }
 .entry-extra-container {
   min-height: $space-xxl;

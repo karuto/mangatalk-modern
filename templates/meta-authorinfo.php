@@ -14,7 +14,7 @@
         <p class="article-meta-spec">
            Written on <?php echo get_the_date(); ?>&nbsp;<?php edit_post_link(); ?>
            <br>
-           <?php the_tags( 'Published under ', ', ', '' ); ?>
+           <?php the_tags( '', ' / ', '' ); // before, separator, after ?>
         </p>
         <p class="author-bio">
           <?php echo get_the_author_meta('description', $post->post_author ); ?> 
