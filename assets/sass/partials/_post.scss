@@ -378,6 +378,7 @@ $related-block-height: $mt-block-height * 0.6;
    margin-right: 0; 
   }
   .entry-meta,
+  .entry-summary,
   .entry-comment-count {
     display: none;
   }
@@ -386,38 +387,38 @@ $related-block-height: $mt-block-height * 0.6;
     .block-cover-wrapper {
       height: $related-block-height;
     }
-    .block-header {
-      width: 100%;
-      margin: 0;
-    }
-    .entry-summary {
-      display: block;
-      border-top: none;
-      padding-top: 0;
-      max-height: 100%;
-    }
-  }
-  .mt-block.is-active {
-    .entry-title {
-      margin-top: $row-margin;
-    }
-    .entry-summary {
-      display: block;
-    }
+//    .block-header {
+//      width: 100%;
+//      margin: 0;
+//    }
+//    .entry-summary {
+//      display: block;
+//      border-top: none;
+//      padding-top: 0;
+//      max-height: 100%;
+//    }
+//  }
+//  .mt-block.is-active {
+//    .entry-title {
+//      margin-top: $row-margin;
+//    }
+//    .entry-summary {
+//      display: block;
+//    }
   }
 
-  .mt-block.is-inactive {
-    .block-header {
-      margin-top: (($related-block-height / 2) - 15px);
-      text-align: center;
-    }
-    .entry-title {
-      margin-top: 0;
-    }
-    .entry-summary {
-      display: none;
-    }
-  }
+//  .mt-block.is-inactive {
+//    .block-header {
+//      margin-top: (($related-block-height / 2) - 15px);
+//      text-align: center;
+//    }
+//    .entry-title {
+//      margin-top: 0;
+//    }
+//    .entry-summary {
+//      display: none;
+//    }
+//  }
 
 }
 .entry-meta-container {
