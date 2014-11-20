@@ -371,11 +371,11 @@ blockquote.large {
     margin-bottom: $space-lg;  // divider style
   }
 }
-$related-block-height: $mt-block-height * 0.6;
+$related-block-height: $mt-block-height * 0.75;
 .related-article-list {
   .row {
-   margin-left: 0;
-   margin-right: 0; 
+   margin-left: -5px;
+   margin-right: -5px;
   }
   .entry-meta,
   .entry-summary,
