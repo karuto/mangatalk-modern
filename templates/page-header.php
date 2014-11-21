@@ -6,7 +6,7 @@
     // Retrieve cover image URL then set header's background
     $cover_img_url = get_the_author_meta( 'coverimage' );
     if ( $cover_img_url == "" ) {
-      $cover_img_url = 'http://i.imgur.com/zk0ecX8.jpg';
+      $cover_img_url = get_template_directory_uri().'/assets/img/thumb_default_lg.jpg';
     }
     echo 'style="background-image: url(' . $cover_img_url . ');"';
     ?>>

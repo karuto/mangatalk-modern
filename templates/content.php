@@ -7,7 +7,7 @@
     if ( has_post_thumbnail() ) {
       $cover_img_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' )[0];
     } else {
-      $cover_img_url = 'http://i.imgur.com/zk0ecX8.jpg';
+      $cover_img_url = get_template_directory_uri().'/assets/img/thumb_default.jpg';
     }
     echo 'style="background-image: url(' . $cover_img_url . ');"';
     ?>>
