@@ -434,12 +434,15 @@ a {
 .entry-meta-spec {
   border-bottom: 1px solid $base-divider-color;
 }
+.mt-meta-button,
 .entry-tags > a,
 .social-button {
-  background-color: $base-container-bg-light;
+//  background-color: $base-container-bg-light;
+  border: 1px solid $base-container-bg-light;
   color: $base-text-grey-faded;
   &:hover, &:focus, &:active {
     background-color: $base-action-normal;
+    border: 1px solid $base-action-normal;
     color: $contrast-color-on-dark-bg;
   }
 }

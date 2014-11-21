@@ -66,10 +66,8 @@ wp_reset_postdata();
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
    <?php get_template_part('templates/loop', 'grid'); ?>
 
-  <div class="row"> 
-    <a class="h3 archive-entry-link" href='category/article' alt="阅读更多文章">
-    <span id="archive-entry" class="glyphicon glyphicon-chevron-down"></span>
-    </a>
+  <div class="archive-entry-link"> 
+    <a class="mt-meta-button" href='category/article' alt="阅读更多文章">阅读更多文章</a>
   </div>
 
 </div><!-- .mt-list -->

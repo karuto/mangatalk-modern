@@ -32,7 +32,7 @@ $banner-font-size: $subtext-font-size;
 
 
 /*
- * MangaTalk type styles
+ * MangaTalk universally appliable type styles
  */
 body {
   color: $text-color;
@@ -188,6 +188,13 @@ blockquote.large {
     font-weight: $subtext-font-weight;
   }
 }
+.mt-meta-button {
+  font-size: $subtext-font-size;
+  font-weight: $subtext-font-weight;
+  line-height: $subtext-line-height;
+}
+
+
 
 /* Archive block styles */
 .mt-block {
@@ -210,6 +217,8 @@ blockquote.large {
     font-size: $small-font-size;
   }
 }
+
+
 
 /* Article page cover styles */
 .hentry {
@@ -316,6 +325,7 @@ blockquote.large {
 }
 
 
+
 /* Article page meta / extra styles */
 .promo-header,
 .story-banner-link {
@@ -340,11 +350,14 @@ blockquote.large {
 }
 
 
+
 /* Comment styles */
 .comments-root-container {
     font-size: $medium-font-size;
   
 }
+
+
 
 /* 404 styles */
 .oops-header {

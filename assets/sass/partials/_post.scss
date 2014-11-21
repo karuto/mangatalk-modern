@@ -387,21 +387,28 @@ blockquote.large {
     padding-top: $space-md;
   }
 }
+.mt-meta-button,
 .entry-tags > a,
 .social-button {
-  margin-left: $row-margin;
-  padding: $row-margin;
-  border-radius: 3px;
+  padding: $row-margin ($row-margin * 2);
+//  border-radius: 3px;
   vertical-align: baseline;
+
 }
 .entry-tags > a {
   @media (min-width: $screen-sm-max) { /* Larger than small screens */
     float: left;
   }
+  &:not(:first-child) {
+    margin-left: $row-margin;
+  }
 }
 .social-button {
   @media (min-width: $screen-sm-max) { /* Larger than small screens */
     float: right;
+  }
+  &:not(:first-child) {
+    margin-right: $row-margin;
   }
 }
 

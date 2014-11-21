@@ -8,10 +8,10 @@
 
   .front-cover-content {
     overflow: hidden;
-    @media (max-width: $screen-md-min) { // small screen
+    @media (max-width: $screen-sm-max) { // Small screen
       margin-top: $front-cover-block-height * 0.15;
     }
-    @media (min-width: $screen-md-min) { // medium and large screen
+    @media (min-width: $screen-md-min) { // Medium and large screen
       margin-top: $front-cover-block-height * 0.25;
     }
   }
@@ -24,9 +24,11 @@
   }
 }
 .archive-entry-link {
-  text-align: center;
-  margin: $space-xl auto;
-  display: block;
+  margin: $row-margin 0 $space-xl;
+  @media (max-width: $screen-sm-max) { // Small screen
+    margin: $space-md auto $space-xl;
+    text-align: center;
+  }
 }
 .page-header {
   margin-top: $space-xxl;
@@ -84,12 +86,7 @@
   }
   .block-header {
     @include absolute-center-bottom();
-//    margin: $space-md $space-md 0;
     margin: $space-md;
-    @media (max-width: $screen-md-max) { // small and medium screen
-//      width: 95%;
-//      margin: 20% auto;
-    }
   }
   .entry-category {
     display: inline-block;

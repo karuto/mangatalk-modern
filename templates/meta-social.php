@@ -31,16 +31,16 @@
 
 <div class="entry-meta-spec">
 <div class="row">
-  <div class="col-xs-12 col-sm-6 entry-tags text-muted">
+  <div class="col-xs-12 col-sm-12 col-md-6 entry-tags text-muted">
      <!-- <?php echo get_the_date(); ?>&nbsp; -->
      <?php the_tags( '', '', '' ); /* before, separator, after */ ?>
      <?php edit_post_link(); ?>
   </div>
 
-  <div class="col-xs-12 col-sm-6 social-shares">
-      <a class="social-button" href="<?php echo $twitter_link; ?>" target="_blank"> 分享到推特</a>
-      <a class="social-button" href="<?php echo $weibo_link; ?>" target="_blank"> 分享到微博</a>
-      <a class="social-button" href="<?php echo $douban_link; ?>" target="_blank"> 分享到豆瓣</a>
+  <div class="col-xs-12 col-sm-12 col-md-6 social-shares">
+      <a class="social-button" href="<?php echo $twitter_link; ?>" target="_blank">推特分享</a>
+      <a class="social-button" href="<?php echo $weibo_link; ?>" target="_blank">微博分享</a>
+      <a class="social-button" href="<?php echo $douban_link; ?>" target="_blank">豆瓣分享</a>
   </div>
 </div>
 </div>
