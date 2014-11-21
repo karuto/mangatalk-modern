@@ -106,30 +106,8 @@
     display: block;
     max-height: 500px;
 //    padding: $space-md 0 0;
-//    max-height: 0;
-//    &:hover,
-//    &:focus {
-//      max-height: 1000px;
-//    }
   }
 }
-//.is-inactive {
-//  opacity: 0.8;
-//  .block-header {
-//    margin: $space-xxl $space-lg 0;
-//    text-align: center;
-//    @media (max-width: $screen-md-max) { // small and medium screen
-//      width: 90%;
-//      margin: 20% auto;
-//    }
-//  }
-//  .entry-title {
-//    margin-top: ($mt-block-height / 2) - $space-xl; // minus its own first line-height
-//  }
-//  .entry-summary {
-//    display: none;
-//  }
-//}
 .pager {
   border-bottom: 1px solid #eee;
   padding-bottom: $space-sm;
