@@ -106,17 +106,18 @@ wp_reset_postdata();
    */
    
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=10' ); // Only meta cat
+     $query = new WP_Query( 'cat=10&posts_per_page=1' ); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputBlock();
      }
+     include(locate_template('templates/content-promotions.php'));
      wp_reset_postdata();
      echo '</div>'; 
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='category/article' alt="阅读更多文章">阅读更多文章</a>
+    <a class="mt-meta-button" href='category/meta' alt="阅读更多文章">阅读更多动态</a>
   </div>
 
 </div><!-- .mt-list -->
@@ -129,9 +130,9 @@ wp_reset_postdata();
   </secion>
 </div>
 
-<div class="container">
+<!-- <div class="container">
   <section class="promo-section row">
-    
+
     <div class="promo-block col-sm-6 col-md-6 col-lg-6">
       <header class="promo-header">
         <a href="https://mangatalk.typeform.com/to/LpHD8h" target="_blank">填写调查问卷</a>
@@ -144,10 +145,10 @@ wp_reset_postdata();
       </header>
       <span class="promo-text text-muted">每季文摘，以及最亲密联络。</span>
     </div>
-    
-    
+
+
   </section>
-</div>
+</div> -->
 
 
 <!-- <?php if ($wp_query->max_num_pages > 1) : ?>
