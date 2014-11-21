@@ -1,5 +1,11 @@
 <!-- Template for editoral promotional mt-blocks in loops (home and related-post area). -->
-<section class="mt-block col-xs-6 col-sm-6 col-md-4 col-lg-3">
+<?php
+if (is_single()) { // in article page (related post) it needs to be 6-col
+  echo '<section class="mt-block col-xs-6">';
+} else { // else responsive
+  echo '<section class="mt-block col-xs-6 col-sm-6 col-md-6 col-lg-3">';
+}
+?>
 <article class="block-panel">
   <div class="block-cover-wrapper">
     
@@ -28,8 +34,13 @@
 </article>
 </section>
 
-
-<section class="mt-block col-xs-6 col-sm-6 col-md-4 col-lg-3">
+<?php
+if (is_single()) { // in article page (related post) it needs to be 6-col
+  echo '<section class="mt-block col-xs-6">';
+} else { // else responsive
+  echo '<section class="mt-block col-xs-6 col-sm-6 col-md-6 col-lg-3">';
+}
+?>
 <article class="block-panel">
   <div class="block-cover-wrapper">
 

@@ -18,14 +18,17 @@
   <div id="related-article-list" class="related-article-list clearfix">  
     <header class="meta-header related-article-header">联动阅读&emsp;|&emsp;Further Readings</header>
     <div class="row">
-    <?php while ( $related_posts_query->have_posts() ) {  
-          $related_posts_query->the_post(); 
-          echo '<section class="mt-block col-xs-6 col-sm-6">'; 
-          get_template_part('templates/content', get_post_format()); 
-          echo '</section>';
+    <?php 
+      while ( $related_posts_query->have_posts() ) {  
+        $related_posts_query->the_post(); 
+        echo '<section class="mt-block col-xs-6">'; 
+        get_template_part('templates/content', get_post_format()); 
+        echo '</section>';
           
-        } // endwhile; ?> 
-    </div>
+      }
+      include(locate_template('templates/content-promotions.php'));
+    ?>   
+    </div><!-- .row -->
   
   </div><!-- .related-article-list -->
   

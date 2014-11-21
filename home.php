@@ -104,16 +104,23 @@ wp_reset_postdata();
      // include(locate_template('templates/loop-grid.php'));
      // $renderMeta = 0;
    */
+     // Helper function to output a single block
+     function outputMetaBlock() {
+       echo '<section class="mt-block col-xs-6 col-sm-6 col-lg-3">'; 
+       get_template_part('templates/content', get_post_format()); 
+       echo '</section>';
+     }
+      
    
      echo '<div class="row">';
      $query = new WP_Query( 'cat=10&posts_per_page=2' ); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
-       outputBlock();
+       outputMetaBlock();
      }
      include(locate_template('templates/content-promotions.php'));
      wp_reset_postdata();
-     echo '</div>'; 
+     echo '</div>';
    ?>
 
   <div class="archive-entry-link"> 
