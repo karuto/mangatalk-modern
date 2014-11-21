@@ -106,7 +106,7 @@ wp_reset_postdata();
    */
    
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=10&posts_per_page=1' ); // Only meta cat
+     $query = new WP_Query( 'cat=10&posts_per_page=2' ); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputBlock();
