@@ -66,7 +66,8 @@ wp_reset_postdata();
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
    <?php 
      $renderArticles = 1; // Flag to control loop content
-     get_template_part('templates/loop', 'grid');
+     // via http://keithdevon.com/passing-variables-to-get_template_part-in-wordpress/
+     include(locate_template('templates/loop-grid.php'));
      $renderArticles = 0; 
    ?>
 
@@ -81,7 +82,7 @@ wp_reset_postdata();
    <?php
    /*
      $renderMeta = 1; // Flag to control loop content
-     get_template_part('templates/loop', 'grid');
+     include(locate_template('templates/loop-grid.php'));
      $renderMeta = 0;
    */
    ?>
