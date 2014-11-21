@@ -24,7 +24,7 @@
   }
 }
 .archive-entry-link {
-  margin: $space-sm 0;
+  margin: ($row-margin * 2) 0;
   @media (max-width: $screen-sm-max) { // Small screen
     margin: $space-md auto $space-xl;
     text-align: center;
@@ -114,18 +114,13 @@
   }
 }
 .pager {
-  border-bottom: 1px solid #eee;
-  padding-bottom: ($row-margin * 2);
-  margin-top: 0;
+  padding-bottom: $mt-block-spacing;
+  margin-top: ($row-margin * 2);
   
-  li > a, 
+  li > a,
   li > span {
     border-radius: 0px;
-    border: none;
     background: transparent;
-    padding: 0;
-    font-size: $subtext-font-size;
-    text-transform: uppercase;
   }
   
 }
