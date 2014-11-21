@@ -82,11 +82,11 @@
     z-index: 9;
   }
   .block-category {
-    margin: $space-md;
+    margin: $mt-block-spacing;
   }
   .block-header {
     @include absolute-center-bottom();
-    margin: $space-md;
+    margin: $mt-block-spacing $mt-block-spacing 0;
   }
   .entry-category {
     display: inline-block;
@@ -97,20 +97,23 @@
     }
   }
   .entry-title {
-    margin-bottom: $space-xxs;
+    margin-bottom: $row-margin;
   }
   .hidden {
     display: none;
   }
+  .entry-meta {
+    padding: 0 0 $mt-block-spacing;
+  }
   .entry-summary {
     display: block;
     max-height: 500px;
-//    padding: $space-md 0 0;
+    padding: 0 0 $mt-block-spacing;
   }
 }
 .pager {
   border-bottom: 1px solid #eee;
-  padding-bottom: $space-sm;
+  padding-bottom: ($row-margin * 2);
   margin-top: 0;
   
   li > a, 

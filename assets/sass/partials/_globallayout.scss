@@ -8,7 +8,8 @@ $space-md: 20px;
 $space-sm: 10px;
 $space-xs: 8px;
 $space-xxs: 5px;
-$row-margin: $space-xxs;
+$row-margin: $space-xxs; // 5px
+$mt-block-spacing: $row-margin * 4; // 20px
 
 $search-container-height: 50px;
 $banner-height: $search-container-height;
