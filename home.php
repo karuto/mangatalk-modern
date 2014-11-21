@@ -64,7 +64,27 @@ wp_reset_postdata();
 
 <div class="mt-list container">
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
-   <?php get_template_part('templates/loop', 'grid'); ?>
+   <?php 
+     $renderArticles = 1; // Flag to control loop content
+     get_template_part('templates/loop', 'grid');
+     $renderArticles = 0; 
+   ?>
+
+  <div class="archive-entry-link"> 
+    <a class="mt-meta-button" href='category/article' alt="阅读更多文章">阅读更多文章</a>
+  </div>
+
+</div><!-- .mt-list -->
+
+<div class="mt-list container">
+  <header class="meta-header">漫言动态&emsp;|&emsp;Editorial Updates</header>
+   <?php
+   /*
+     $renderMeta = 1; // Flag to control loop content
+     get_template_part('templates/loop', 'grid');
+     $renderMeta = 0;
+   */
+   ?>
 
   <div class="archive-entry-link"> 
     <a class="mt-meta-button" href='category/article' alt="阅读更多文章">阅读更多文章</a>
