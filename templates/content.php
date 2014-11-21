@@ -1,4 +1,33 @@
 <!-- Although this is a generic content template, it's used as mt-block in loops. -->
+<?php
+/*
+// 标签优先级：feature, interview, love, news, trans, research, industry, culture [default]
+function retrievePriorityTag() {
+  if ( has_tag('feature') ) {
+    return '专题';
+  } else if ( has_tag('interview') ) {
+    return '访谈';
+  }  else if ( has_tag('love') ) {
+    return '漫评';
+  }  else if ( has_tag('news') ) {
+    return '资讯';
+  }  else if ( has_tag('trans') ) {
+    return '译文';
+  }  else if ( has_tag('research') ) {
+    return '考据';
+  }  else if ( has_tag('industry') ) {
+    return '业界';
+  }  else if ( has_tag('culture') ) {
+    return ' 文化';
+  } else {
+    return '文章';
+  }
+  return '文章';
+}
+ $tagText = retrievePriorityTag();
+*/
+?>
+
 <article class="block-panel">
   <div class="block-cover-wrapper">
     
@@ -16,7 +45,32 @@
       <div class="row block-content">
         <header class="block-category">
           <!-- #TODO: write the algorithm to retrieve the primary tag to display below. -->
-          <span class="entry-category text-contrast"><a href="">专访</a></span>
+          <span class="entry-category text-contrast">
+            <a href="">
+              <?php 
+              if ( has_tag('feature') ) {
+                echo '专题';
+              } else if ( has_tag('interview') ) {
+                echo '访谈';
+              } else if ( has_tag('love') ) {
+                echo '漫评';
+              } else if ( has_tag('news') ) {
+                echo '资讯';
+              } else if ( has_tag('trans') ) {
+                echo '译文';
+              } else if ( has_tag('research') ) {
+                echo '考据';
+              } else if ( has_tag('industry') ) {
+                echo '业界';
+              } else if ( has_tag('culture') ) {
+                echo '文化';
+              } else if ( has_tag('mangatalk') ) {
+                echo '站务';
+              } else {
+                echo '文章';
+              } ?>
+            </a>
+          </span>
         </header>
         
         <header class="block-header">

@@ -17,9 +17,9 @@
       <div class="row">
       <div class="front-cover-content col-xs-12 col-sm-12 col-md-12">
 
-        <h1 class="author-avatar">
+        <!-- <h1 class="author-avatar">
           <?php echo get_avatar( get_the_author_meta( 'user_email' ), 150); ?>
-        </h1>
+        </h1> -->
 
         <h2 class="author-desc">
           <div class="author-name"><?php the_author_meta( 'display_name' ); ?></div>
