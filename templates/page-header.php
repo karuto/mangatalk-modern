@@ -55,7 +55,7 @@
 
 <div class="page-header">
   <header class="meta-header">
-    <?php echo roots_title(); ?> 文集
+    <?php echo roots_title(); ?>&emsp;|&emsp;Archived Readings
   </header>
 </div>
 

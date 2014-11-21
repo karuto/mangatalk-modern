@@ -24,7 +24,7 @@
   }
 }
 .archive-entry-link {
-  margin: $row-margin 0 $space-xl;
+  margin: $space-sm 0 $space-xl;
   @media (max-width: $screen-sm-max) { // Small screen
     margin: $space-md auto $space-xl;
     text-align: center;
