@@ -1,5 +1,6 @@
 <div class="row">
   <?php 
+  // Helper function to output a single block
   function outputBlock() {
     echo '<section class="mt-block col-xs-6 col-sm-6 col-md-4 col-lg-3">'; 
     get_template_part('templates/content', get_post_format()); 
@@ -19,7 +20,6 @@
       $metaquery->the_post();
       outputBlock();
     }
-    wp_reset_postdata(); // must use if the_post() is used in loop
 
   } else {
     // Normal while loop without specific $query
@@ -28,6 +28,7 @@
       outputBlock();
     }
   }
-  // wp_reset_query();
+  wp_reset_postdata(); // must use if the_post() is used in loop
+  // wp_reset_query(); // don't think we need this, but maybe?
   ?>
 </div>
