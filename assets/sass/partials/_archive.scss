@@ -86,7 +86,7 @@
   }
   .block-header {
     @include absolute-center-bottom();
-    margin: $mt-block-spacing $mt-block-spacing 0;
+    margin: $mt-block-spacing $mt-block-spacing;
   }
   .entry-category {
     display: inline-block;
@@ -102,13 +102,15 @@
   .hidden {
     display: none;
   }
-  .entry-meta {
-    padding: 0 0 $mt-block-spacing;
-  }
+//  .entry-meta {
+//    padding: 0 0 $mt-block-spacing;
+//  }
   .entry-summary {
     display: block;
     max-height: 500px;
-    padding: 0 0 $mt-block-spacing;
+    p {
+      padding: $mt-block-spacing 0 0;
+    }
   }
 }
 .pager {
