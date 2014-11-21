@@ -67,8 +67,26 @@ wp_reset_postdata();
    <?php 
      $renderArticles = 1; // Flag to control loop content
      // via http://keithdevon.com/passing-variables-to-get_template_part-in-wordpress/
-     include(locate_template('templates/loop-grid.php'));
-     $renderArticles = 0; 
+     // include(locate_template('templates/loop-grid.php'));
+     
+     function outputBlock() {
+       echo '<section class="mt-block col-xs-6 col-sm-6 col-md-4 col-lg-3">'; 
+       get_template_part('templates/content', get_post_format()); 
+       echo '</section>';
+     }
+     echo '<div class="row">';
+     // echo "<h1>article=".$renderArticles.", meta=".$renderMeta."</h1>";
+
+     if ($renderArticles == 1) {
+       $query = new WP_Query( 'cat=-10' ); // Exclude meta cat
+       while ($query->have_posts()) {
+         $query->the_post();
+         outputBlock();
+       }
+     }
+     wp_reset_postdata();
+     echo '</div>';
+     $renderArticles = 0;
    ?>
 
   <div class="archive-entry-link"> 
@@ -80,11 +98,24 @@ wp_reset_postdata();
 <div class="mt-list container">
   <header class="meta-header">漫言动态&emsp;|&emsp;Editorial Updates</header>
    <?php
-   /*
+   
      $renderMeta = 1; // Flag to control loop content
-     include(locate_template('templates/loop-grid.php'));
+     // include(locate_template('templates/loop-grid.php'));
+
+     echo '<div class="row">';
+     echo "<h1>article=".$renderArticles.", meta=".$renderMeta."</h1>";
+     if ($renderMeta == 1) {
+         $metaquery = new WP_Query( 'cat=10' ); // Only meta cat
+         while ($metaquery->have_posts()) {
+           $metaquery->the_post();
+           outputBlock();
+         }
+     }
+     wp_reset_postdata();
+     echo '</div>';
      $renderMeta = 0;
-   */
+
+
    ?>
 
   <div class="archive-entry-link"> 

@@ -1,5 +1,4 @@
 <div class="row">
-  <?php $blocks = 1; $rows = 0; ?>
   <?php 
   function outputBlock() {
     echo '<section class="mt-block col-xs-6 col-sm-6 col-md-4 col-lg-3">'; 
@@ -14,25 +13,21 @@
       outputBlock();
     }
 
-  } // else if ($renderMeta == 1) {
- //
- //    $query = new WP_Query( 'category_name=meta' ); // Only meta cat
- //    while ($query->have_posts()) {
- //      $query->the_post();
- //      outputBlock();
- //    }
- //
- //  } else {
- //    // Normal while loop without specific $query
- //    while (have_posts()) {
- //      the_post();
- //      outputBlock();
- //    }
- //  }
-  
-  wp_reset_postdata();
-  // global $query_string;
-  // query_posts($query_string . ‘&cat=-10′);
+  } elseif ($renderMeta == 1) {
+    $metaquery = new WP_Query( 'cat=10' ); // Only meta cat
+    while ($metaquery->have_posts()) {
+      $metaquery->the_post();
+      outputBlock();
+    }
+    wp_reset_postdata(); // must use if the_post() is used in loop
+
+  } else {
+    // Normal while loop without specific $query
+    while (have_posts()) {
+      the_post();
+      outputBlock();
+    }
+  }
   // wp_reset_query();
   ?>
 </div>
