@@ -176,11 +176,11 @@ blockquote.large {
   }
   .author-desc,
   .author-desc > p { /* same as .hentry entry-subtitle >p */
-    font-size: $medium-font-size;
-    line-height: $content-line-height;
-    letter-spacing: 0.01rem;
+    font-size: $subtext-font-size;
     font-weight: $subtext-font-weight;
-    margin: $space-lg 0 $space-sm;
+    line-height: $subtext-line-height;
+    letter-spacing: 0.01rem;
+    margin: $space-md 0 $space-md;
   }
 }
 .page-header {
@@ -189,6 +189,7 @@ blockquote.large {
   }
 }
 .pager > li > a,
+.social-button,
 .mt-meta-button {
   font-size: $subtext-font-size;
   font-weight: $subtext-font-weight;

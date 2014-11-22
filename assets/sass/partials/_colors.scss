@@ -353,10 +353,13 @@ a {
   color: $base-text-grey-faded;
 }
 .author-front {
+  .social-button {
+    color: $contrast-color-on-image-bg;
+  }
   .author-contact-item > a {
-    color: $base-text-grey-faded;
+//    color: $base-text-grey-faded;
     &:hover, &:focus {
-      color: $base-brand-normal;
+//      color: $base-brand-normal;
     }
   }
 }
@@ -447,6 +450,7 @@ a {
     color: $contrast-color-on-dark-bg;
   }
 }
+
 .promo-section {
   border-top: 1px solid $base-divider-color;
 }

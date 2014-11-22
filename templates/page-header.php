@@ -22,21 +22,24 @@
         </h1> -->
 
         <h2 class="author-desc">
-          <div class="author-name"><?php the_author_meta( 'display_name' ); ?></div>
+          <div class="author-avatar" style="margin-top:0px;">
+            <?php echo get_avatar( get_the_author_meta( 'user_email' ), 100); ?>
+          </div>
+          <!-- <div class="author-name"><?php the_author_meta( 'display_name' ); ?></div> -->
           <p><?php the_author_meta( 'description' ); ?></p>
           
           <ul class="author-contact">
             
             <li class="author-contact-item">
-              <a href="<?php echo get_the_author_meta( 'douban'); ?>">豆瓣</a>
+              <a class="social-button" href="<?php echo get_the_author_meta( 'douban'); ?>"><?php the_author_meta( 'display_name' ); ?>的豆瓣</a>
             </li>
             &ensp;
             <li class="author-contact-item">
-              <a href="<?php echo get_the_author_meta( 'weibo'); ?>">微博</a>
+              <a class="social-button" href="<?php echo get_the_author_meta( 'weibo'); ?>"><?php the_author_meta( 'display_name' ); ?>的微博</a>
             </li>
             &ensp;
             <li class="author-contact-item">
-              <a href="mailto:<?php echo get_the_author_meta('user_email'); ?>">邮箱</a>
+              <a class="social-button" href="mailto:<?php echo get_the_author_meta('user_email'); ?>"><?php the_author_meta( 'display_name' ); ?>的邮箱</a>
             </li>
 
           </ul>
@@ -46,7 +49,10 @@
       </div><!-- .row -->
     </div><!-- .container -->
     
-  </div><!-- .cover-image-inner -->
+
+    
+    </div><!-- .cover-image-inner -->
+    
   </div><!-- .cover-image -->
 </section>
 </header>
