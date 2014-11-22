@@ -180,7 +180,10 @@ blockquote.large {
     font-weight: $subtext-font-weight;
     line-height: $subtext-line-height;
     letter-spacing: 0.01rem;
-    margin: $space-md 0 $space-md;
+    margin: $space-md auto $space-md;
+    @media (min-width: $screen-sm-max) { /* Larger than small screens */
+      width: $article-content-container-lg;
+    }
   }
 }
 .page-header {
