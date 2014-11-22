@@ -205,6 +205,16 @@ blockquote.large {
     font-weight: $subtext-font-weight;
   }
 }
+.featurette-heading {
+  font-weight: $subtext-font-weight;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-bottom: $space-lg;
+}
+.lead {
+  font-size: $content-font-size;
+  line-height: $content-line-height;
+}
 
 
 
