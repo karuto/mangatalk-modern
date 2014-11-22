@@ -5,9 +5,11 @@
 //  margin-bottom: $space-xl;
 //}
 .author-front {
-
+  transition: all 1s;
+  
   .front-cover-content {
     overflow: hidden;
+    transition: all 1s;
     @media (max-width: $screen-sm-max) { // Small screen
       margin-top: $front-cover-block-height * 0.15;
     }
@@ -77,6 +79,7 @@
     vertical-align: middle;
     overflow: hidden;
     z-index: 9;
+    transition: all 1s;
   }
   .block-category {
     margin: $mt-block-spacing;
