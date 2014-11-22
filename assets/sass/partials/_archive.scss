@@ -48,10 +48,7 @@
   margin-bottom: $row-margin;
   padding-left: $row-margin;
   padding-right: $row-margin;
-  transition: max-height 0.25s ease-out;
-  &:hover, &:focus {
-    transition: max-height 0.25s ease-in;
-  }
+  transition: all 1s;
 //  -webkit-transition: all 0.2s ease;
 //  -moz-transition: all 0.2s ease;
 //  transition: all 0.2s ease;

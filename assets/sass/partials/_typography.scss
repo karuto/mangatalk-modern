@@ -8,7 +8,7 @@ $medium-font-size: 16px;
 $small-font-size: 14px;
 $xs-font-size: 12px;
 
-$cover-title-font-size: 46px;
+$cover-title-font-size: 222%; /* 40px */
 $cover-title-line-height: 1.4;
 
 $content-font-size: $base-font-size;
@@ -160,7 +160,7 @@ blockquote.large {
 }
 .mt-front {
   .entry-title {
-    font-size: 222%; /* 40px */
+    font-size: $cover-title-font-size; 
     text-align: center;
   }
   .entry-subtitle {
@@ -186,17 +186,24 @@ blockquote.large {
     }
   }
 }
-.page-header {
-  .h2 {
-    font-weight: $subtext-font-weight;
-  }
-}
 .pager > li > a,
 .social-button,
 .mt-meta-button {
   font-size: $subtext-font-size;
   font-weight: $subtext-font-weight;
   line-height: $subtext-line-height;
+}
+
+
+
+/* Page styles */
+.page-cover-content {
+  .page-title {
+    font-size: $cover-title-font-size;
+  }
+  .entry-subtitle {
+    font-weight: $subtext-font-weight;
+  }
 }
 
 
@@ -228,7 +235,7 @@ blockquote.large {
 /* Article page cover styles */
 .hentry {
   .entry-title {
-    font-size: $cover-title-font-size; /* 46px */
+    font-size: $cover-title-font-size;
     @media (max-width: $screen-sm-max) { /* Small screens */
       font-size: $cover-title-font-size * 0.7; /* 32px */
     }
