@@ -16,7 +16,7 @@
         if ( $related_posts_query->have_posts() ) { ?>
 
   <div id="related-article-list" class="related-article-list clearfix">  
-    <header class="meta-header related-article-header">联动阅读&emsp;|&emsp;Further Readings</header>
+    <header class="meta-header related-article-header">延伸阅读&emsp;|&emsp;Further Readings</header>
     <div class="row">
     <?php 
       while ( $related_posts_query->have_posts() ) {  
