@@ -27,23 +27,24 @@ $page-cover-block-height: $front-cover-block-height;
     }
   }
 }
-.page-content {
+.page-content { /* all page wrapper */
   margin-bottom: $space-xl;
 }
 .page-content.page-fullwidth {
   margin-bottom: 0;
 }
-.page-cover-content {
+.page-cover-content { /* page's top cover content wrapper */
   margin-top: $page-cover-block-height * 0.4;
   text-align: center;
 }
 .page-title {
   margin-bottom: $space-md;
 }
-.featurette {
+.featurette { /* a slide of content wrapper */
   padding: 0;
+  background-color: red;
 }
-.featurette-inner {
+.featurette-inner { /* one more layer inside featurette */
   margin-top: ($page-spacing * 3);
   margin-bottom: ($page-spacing * 3);
 }

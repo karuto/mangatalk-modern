@@ -49,15 +49,13 @@
 </section>
 </header>
 
-<section class="featurette feature-content">
+<section class="featurette">
   <div class="featurette-inner container">
     <div class="row">
       <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="" style="background-color: yellow">
+        <div class="featurette-content" style="background-color: yellow">
           <h2 class="featurette-heading">
-            <?php  
-              if ($is_chinese) {echo "精益求精。";} else {echo "High standards";}
-            ?>
+            <?php if ($is_chinese) {echo "精益求精。";} else {echo "High standards";} ?>
           </h2>
           <p class="lead">
             <?php 
