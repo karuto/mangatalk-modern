@@ -14,9 +14,9 @@
     <div class="container">
       <div class="row">
       <div class="page-cover-content col-xs-12 col-sm-12 col-md-12">
-        <h2 class="page-title">
+        <h3 class="page-title">
           讲述你的故事
-        </h2>
+        </h3>
         <div class="entry-subtitle">
           一个故事或许不能改变世界，但她能改变你与我的人生。<br><br><br>
           <a style="color: white;" class="page-intro-link" href="#story-start">
@@ -162,7 +162,7 @@
         <div class="featurette-content" style="">
           <h3 class="featurette-block-heading text-aligncenter">投递你的试稿</h3>
           <p class="lead">
-            为了确保你的故事能顺利在漫言发表，
+            为了确保你的文章能顺利在漫言发表，
             请使用我们的
             <a href="http://mangatalk.net/pitch/" target="_blank">
               试稿投递系统
@@ -173,9 +173,9 @@
             </a>
             <br><br>
             试稿是<strong> 50 至 300  字</strong>的一小段简短概述，
-            请将你所构思的故事的主题与核心观点精简到这个长度。
+            请将你所构思的文章的主题与核心观点精简到这个长度。
             我们的编辑将根据试稿内容，
-            来判断你的故事与漫言合适与否，
+            来判断你的文章与漫言合适与否，
             以及从中了解你的写作能力与文笔风格。
             欢迎你在试稿的表格中附上能代表你写作水平的作品链接，
             例如曾在别处发表过的评论、文章等。<br><br>
