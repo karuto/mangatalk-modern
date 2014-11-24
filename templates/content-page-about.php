@@ -24,7 +24,6 @@
       <div class="page-cover-content col-xs-12 col-sm-12 col-md-12">
         <h2 class="page-title">
           <?php 
-            global $post; 
             if ($is_chinese) {
               echo "漫言 MangaTalk";
             } else {
@@ -34,7 +33,6 @@
         </h2>
         <div class="entry-subtitle">
           <?php 
-            global $post; 
             if ($is_chinese) {
               echo "创立于 2012 年初，漫言是一个非盈利性质的团队博客、自由媒体平台。";
             } else {
@@ -57,18 +55,12 @@
       <div class="featurette-block col-xs-12 col-sm-6">
         <div class="" style="background-color: yellow">
           <h2 class="featurette-heading">
-            <?php 
-              global $post; 
-              if ($is_chinese) {
-                echo "精益求精。";
-              } else {
-                echo "High standards";
-              }
+            <?php  
+              if ($is_chinese) {echo "精益求精。";} else {echo "High standards";}
             ?>
           </h2>
           <p class="lead">
             <?php 
-              global $post; 
               if ($is_chinese) {
                 echo "
                   专注业界深入解读、主打长篇完全原创。<br>
@@ -106,8 +98,7 @@
       </div>
       <div class="featurette-content col-sm-12 col-md-6">
         <h2 class="featurette-heading">
-          <?php 
-            global $post; 
+          <?php
             if ($is_chinese) {
               echo "
                 尊识至源。
@@ -121,7 +112,6 @@
         </h2>
         <p class="lead">
           <?php 
-            global $post; 
             if ($is_chinese) {
               echo "
                 不侵权，不抄袭，还版权于知识。<br>
@@ -152,7 +142,6 @@
       <div class="featurette-content col-sm-12 col-md-6">
         <h2 class="featurette-heading">
           <?php 
-            global $post; 
             if ($is_chinese) {
               echo "
                 品读深思。
@@ -167,7 +156,6 @@
         </h2>
         <p class="lead">
           <?php 
-            global $post; 
             if ($is_chinese) {
               echo "
                 中文互联网上领先的排版设计。<br>
