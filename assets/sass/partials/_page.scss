@@ -54,7 +54,7 @@ $page-cover-block-height: $front-cover-block-height;
 //    }
 //  }
 }
-.featurette-content {
+.featurette-block {
   margin: $space-lg 0;
 //  @media (min-width: $screen-lg-min) { // large screen
 //    margin-top: $space-xxl*2;
@@ -79,7 +79,7 @@ $regular-featurette-margin: $space-xl + $space-md;
 //  background-image: url('../img/smart-grey-texture.jpg');
 }
 .page-story {
-  .featurette-content {
+  .featurette-block {
 //    margin-top: $regular-featurette-margin;
 //    margin-bottom: $regular-featurette-margin;
   }

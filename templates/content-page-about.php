@@ -54,7 +54,7 @@
 <section class="featurette feature-content">
   <div class="featurette-inner container">
     <div class="row">
-      <div class="featurette-content col-md-6">
+      <div class="featurette-block col-xs-12 col-sm-6">
         <h2 class="featurette-heading">
           <?php 
             global $post; 
@@ -87,7 +87,9 @@
           <a href="/story">您是作者？讲述你的故事</a>
         </p>
       </div>
-      <div class="col-md-6"></div>
+      <div class="featurette-block image-block col-xs-12 col-sm-6" style="background-color: white">
+        <h1>Filler</h1>
+      </div>
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
