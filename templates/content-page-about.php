@@ -161,7 +161,7 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       <div class="featurette-block image-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background-image: url('http://i.imgur.com/pNQsSQt.png');">
+        <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-desk-2.jpeg');">
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
     </div><!-- .row -->
