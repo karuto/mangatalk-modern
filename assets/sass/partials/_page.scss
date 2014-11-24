@@ -72,6 +72,7 @@ $page-cover-block-height: $front-cover-block-height;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow:hidden;
 }
 .content-row-6 {
   height: $page-cover-block-height;
