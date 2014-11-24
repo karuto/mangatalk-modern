@@ -45,15 +45,15 @@ $page-cover-block-height: $front-cover-block-height;
 //  background-color: red;
 }
 .featurette-inner { /* one more layer inside featurette */
-  padding-top: ($page-spacing * 2);
-  padding-bottom: ($page-spacing * 1); /* there's already margin-bottom = $page-spacing */
+  padding-top: ($page-spacing * 1.5);
+  padding-bottom: ($page-spacing * 1.5); /* there's already margin-bottom = $page-spacing */
   @media (min-width: $screen-sm-max) { /* Larger than small screens */
     padding-top: ($page-spacing * 3);
-    padding-bottom: ($page-spacing * 2); /* there's already margin-bottom = $page-spacing */
+    padding-bottom: ($page-spacing * 1.5); /* there's already margin-bottom = $page-spacing */
   }
 }
 .featurette-block { /* block level DOM, inside featurette-inner */
-  margin-bottom: $page-spacing;
+  margin-bottom: $page-spacing * 1.5; /* 15px*2 = 30px; $page-spacing = 20px */
   section {
     @include vertical-align-middle();
   }
