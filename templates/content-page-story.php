@@ -147,17 +147,6 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       
-      
-    </div><!-- .row -->
-  </div><!-- .featurette-inner -->
-</section><!-- .featurette -->
-
-
-<section class="featurette">
-  <div class="featurette-inner container">
-    <div class="row">
-      
-      
       <div class="featurette-block col-xs-12">
         <div class="featurette-content" style="">
           <h3 class="featurette-block-heading text-aligncenter">编辑与审稿流程</h3>
@@ -177,10 +166,10 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       
-      
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
+
 
 </div><!-- .page-content -->
 
