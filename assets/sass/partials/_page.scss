@@ -49,6 +49,11 @@ $page-cover-block-height: $front-cover-block-height;
   padding-bottom: ($page-spacing * 3);
 }
 .featurette-block { /* block level DOM, inside featurette-inner */
+  margin-bottom: $page-spacing;
+  section {
+    @include vertical-align-middle();
+  }
+  
 //  @media (min-width: $screen-lg-min) { // large screen
 //    margin-top: $space-xxl*2;
 //  }
