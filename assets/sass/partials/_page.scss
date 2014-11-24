@@ -45,8 +45,8 @@ $page-cover-block-height: $front-cover-block-height;
   background-color: red;
 }
 .featurette-inner { /* one more layer inside featurette */
-  margin-top: ($page-spacing * 3);
-  margin-bottom: ($page-spacing * 3);
+  padding-top: ($page-spacing * 3);
+  padding-bottom: ($page-spacing * 3);
 }
 .featurette-block {
 //  @media (min-width: $screen-lg-min) { // large screen
