@@ -481,6 +481,9 @@ a.page-intro-link {
 .page-story {
   .sample-story-title {
     color: $base-reading-text-color;
+    &:hover, &:active {
+      color: $base-action-normal;
+    }
   }
   .sample-story-meta {
     color: $base-reading-text-color;

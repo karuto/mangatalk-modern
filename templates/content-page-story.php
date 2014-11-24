@@ -170,7 +170,7 @@
             <a href="mailto:story@mangatalk.net?Subject=我的作品试稿" target="_top">
               官方邮箱。
             </a>
-            <br>
+            <br><br>
             试稿是<strong> 50 至 300  字</strong>的一小段简短概述，
             请将你所构思的故事的主题与核心观点精简到这个长度。
             我们的编辑将根据试稿内容，
