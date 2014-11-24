@@ -55,41 +55,45 @@
   <div class="featurette-inner container">
     <div class="row">
       <div class="featurette-block col-xs-12 col-sm-6">
-        <h2 class="featurette-heading">
-          <?php 
-            global $post; 
-            if ($is_chinese) {
-              echo "精益求精。";
-            } else {
-              echo "High standards";
-            }
-          ?>
-        </h2>
-        <p class="lead">
-          <?php 
-            global $post; 
-            if ($is_chinese) {
-              echo "
-                专注业界深入解读、主打长篇完全原创。<br>
-                没有资讯快餐，没有动游音影，全心全意关注漫画。<br>
-                漫言背后严谨而专业的编辑审校机制，<br>
-                致力于将最高质量的文章，献给最懂得欣赏的你。<br>
-                ";
-            } else {
-              echo "
-                No junk news. No click-baits. No fluff.<br>
-                It's 100% comics at MangaTalk.<br>
-                A strong focus on authentic, long-form storytelling.<br>
-                ";
-            }
-          ?>
+        <div class="" style="background-color: yellow">
+          <h2 class="featurette-heading">
+            <?php 
+              global $post; 
+              if ($is_chinese) {
+                echo "精益求精。";
+              } else {
+                echo "High standards";
+              }
+            ?>
+          </h2>
+          <p class="lead">
+            <?php 
+              global $post; 
+              if ($is_chinese) {
+                echo "
+                  专注业界深入解读、主打长篇完全原创。<br>
+                  没有资讯快餐，没有动游音影，全心全意关注漫画。<br>
+                  漫言背后严谨而专业的编辑审校机制，<br>
+                  致力于将最高质量的文章，献给最懂得欣赏的你。<br>
+                  ";
+              } else {
+                echo "
+                  No junk news. No click-baits. No fluff.<br>
+                  It's 100% comics at MangaTalk.<br>
+                  A strong focus on authentic, long-form storytelling.<br>
+                  ";
+              }
+            ?>
           
-          <a href="/story">您是作者？讲述你的故事</a>
-        </p>
-      </div>
-      <div class="featurette-block image-block col-xs-12 col-sm-6" style="background-color: white">
-        <h1>Filler</h1>
-      </div>
+            <a href="/story">您是作者？讲述你的故事</a>
+          </p>
+        </div>
+      </div><!-- .featurette-block -->
+      <div class="featurette-block image-block col-xs-12 col-sm-6">
+        <div class="" style="background-color: white">
+          <h1>Filler</h1>
+        </div>
+      </div><!-- .featurette-block -->
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->

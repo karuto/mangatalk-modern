@@ -2,6 +2,7 @@
  * MangaTalk page layout rules
  */
 $page-cover-block-height: $front-cover-block-height;
+//$regular-featurette-margin: $space-xl + $space-md;
 
 /* General page styles */
 .page {
@@ -41,21 +42,12 @@ $page-cover-block-height: $front-cover-block-height;
 }
 .featurette {
   padding: 0;
-//  @media (min-width: $screen-lg-min) { // large screen and above
-//  }
-//  @media (max-width: $screen-md-max) { // medium screen
-//    padding: $space-xl 0;
-//  }
-//  @media (max-width: $screen-sm-min) { // small screen
-//    padding: $space-xl 0;
-//    text-align: center;
-//    .featurette-image {
-//      display: none;
-//    }
-//  }
+}
+.featurette-inner {
+  margin-top: ($page-spacing * 3);
+  margin-bottom: ($page-spacing * 3);
 }
 .featurette-block {
-  margin: $space-lg 0;
 //  @media (min-width: $screen-lg-min) { // large screen
 //    margin-top: $space-xxl*2;
 //  }
@@ -74,7 +66,6 @@ $page-cover-block-height: $front-cover-block-height;
 //}
 
 /* Specific featurette styles */ 
-$regular-featurette-margin: $space-xl + $space-md;
 .page-about.page-content {
 //  background-image: url('../img/smart-grey-texture.jpg');
 }
