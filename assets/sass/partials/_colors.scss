@@ -478,6 +478,14 @@ a {
 a.page-intro-link {
   color: $base-white;
 }
+.page-story {
+  .sample-story-title {
+    color: $base-white;
+  }
+  .sample-story-meta {
+    color: $base-white;
+  }
+}
 
 /* 404 */
 .oops-subheader,

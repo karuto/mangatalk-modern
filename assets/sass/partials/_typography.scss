@@ -231,6 +231,7 @@ blockquote.large {
   line-height: $content-line-height;
 }
 
+
 /* Specific page styles */
 .page-about {
   a {
@@ -243,6 +244,18 @@ blockquote.large {
       content: "›"; 
       margin-left: $page-spacing/2;
     }
+  }
+}
+.page-story {
+  .sample-story-title {
+    font-weight: $heading-font-weight;
+    text-align: center;
+  }
+  .sample-story-meta {
+    font-size: $subtext-font-size;
+    font-weight: $subtext-font-weight;
+    line-height: $subtext-line-height;
+    text-align: center;
   }
 }
 

@@ -74,6 +74,9 @@ $page-cover-block-height: $front-cover-block-height;
   background-size: cover;
   overflow:hidden;
 }
+.content-row-3 {
+  height: $page-cover-block-height/2;
+}
 .content-row-6 {
   height: $page-cover-block-height;
 }
@@ -86,6 +89,15 @@ $page-cover-block-height: $front-cover-block-height;
 //}
 
 /* Specific featurette styles */ 
+.page-story {
+  .sample-story-meta,
+  .sample-story-title {
+    padding-top: ($page-spacing / 2);
+    display: block;
+  }
+  .sample-story-meta {
+  }
+}
 .page-about.page-content {
 //  background-image: url('../img/smart-grey-texture.jpg');
 }

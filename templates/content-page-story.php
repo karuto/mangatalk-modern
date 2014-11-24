@@ -110,6 +110,16 @@
       </div><!-- .featurette-block -->
       
       
+      <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
+        <div class="featurette-content content-row-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-writing-1.jpg');">
+            <p class="lead text-aligncenter">
+               <a class="sample-story-title" href="">黑白多棱镜：浅论漫画中的蒙太奇</a>
+               <a class="sample-story-meta" href="">考据议论类 文章案例</a>
+            </p>
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
+      
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
