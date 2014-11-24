@@ -102,20 +102,47 @@
             你的文章，既可以是描绘某部具体的漫画作品（漫评赏析类文字），
             也可以围绕某位漫画界的人物、某个机构展开（作者介绍类文字），
             或是将漫画相关的一段历史或一个现象、话题作为切入点（考据议论类文字）。<br><br>
-            你的文章应是未在别处发表过的、完全原创的<strong>非虚构作品。</strong><br>
+            你的文章应是未在别处发表过的、完全原创的<strong>非虚构作品。</strong>
             在选题上，你的文章应该做到精简、深入、自成一体，
             并应该是从只有你才能创作的独到角度出发。
+            以下是曾经在漫言刊载的几篇例文，希望在阅读过后，你会对我们 所要求的文章风格与定位有更清晰的了解。
           </p>
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       
       
       <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
-        <div class="featurette-content content-row-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-writing-1.jpg');">
+        <div class="featurette-content content-row-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/sample-emma-w.jpg');">
+          <section>
             <p class="lead text-aligncenter">
-               <a class="sample-story-title" href="">黑白多棱镜：浅论漫画中的蒙太奇</a>
+               <a class="sample-story-title" href="http://mangatalk.net/2011/i-love-emma/">致心底最柔软的地方：浅谈森薰，与她的『爱玛』</a>
+               <a class="sample-story-meta" href="">漫评赏析类 文章案例</a>
+            </p>
+          </section>
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
+      
+      <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
+        <div class="featurette-content content-row-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/sample-hagaren-w.jpg');">
+          <section>
+            <p class="lead text-aligncenter">
+               <a class="sample-story-title" href="http://mangatalk.net/2013/hiromu-arakawa-talk/">专访荒川弘：《钢炼》与成长、《银之匙》与女子力</a>
+               <a class="sample-story-meta" href="">作者介绍类 文章案例</a>
+            </p>
+          </section>
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
+      
+      <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
+        <div class="featurette-content content-row-3" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/sample-montage-w.jpg');">
+          <section>
+            <p class="lead text-aligncenter">
+               <a class="sample-story-title" href="http://mangatalk.net/2012/manga-montage-talk/">黑白多棱镜——浅论漫画中的蒙太奇</a>
                <a class="sample-story-meta" href="">考据议论类 文章案例</a>
             </p>
+          </section>
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       
@@ -141,7 +168,7 @@
             </a>，
             或将符合条件的试稿直接发送至
             <a href="mailto:story@mangatalk.net?Subject=我的作品试稿" target="_top">
-              官方邮箱 story@mangatalk.net。
+              官方邮箱。
             </a>
             <br>
             试稿是<strong> 50 至 300  字</strong>的一小段简短概述，
