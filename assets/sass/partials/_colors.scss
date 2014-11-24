@@ -399,6 +399,11 @@ a {
     color: $contrast-color-on-image-bg;
   }
 }
+.page-content {
+  .article-cover {
+    background-color: $base-white;
+  }
+}
 
 
 /* Entry content */
