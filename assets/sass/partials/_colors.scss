@@ -455,13 +455,19 @@ a {
   border-top: 1px solid $base-divider-color;
 }
 
-/* Page features */
+/* Page, page featurette styles */
+.page-content {
+  background-color: $base-white;
+}
 .page-cover-content {
   color: $base-white;
 }
-.page-title {
+.featurette {
+}
+.featurette-block {
 }
 .featurette-content {
+  background-color: $base-site-bg;
   color: $base-reading-text-color;
 }
 a.page-intro-link {

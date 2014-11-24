@@ -53,7 +53,7 @@
   <div class="featurette-inner container">
     <div class="row">
       <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background-color: yellow">
+        <div class="featurette-content content-row-6">
           <h2 class="featurette-heading">
             <?php if ($is_chinese) {echo "精益求精。";} else {echo "High standards";} ?>
           </h2>
@@ -80,7 +80,7 @@
         </div>
       </div><!-- .featurette-block -->
       <div class="featurette-block image-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background-color: white">
+        <div class="featurette-content content-row-6">
           <h1>Filler</h1>
         </div>
       </div><!-- .featurette-block -->

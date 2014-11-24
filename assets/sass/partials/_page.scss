@@ -59,7 +59,7 @@ $page-cover-block-height: $front-cover-block-height;
 //  }
 }
 .featurette-content { /* content wrapper inside featurette-block */
-  
+  padding: ($page-spacing * 2);
 }
 .content-row-6 {
   height: $page-cover-block-height;
