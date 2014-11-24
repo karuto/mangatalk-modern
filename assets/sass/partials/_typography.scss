@@ -143,6 +143,18 @@ blockquote.large {
 
 
 
+/* Helper styles */
+.text-alignleft {
+  text-align: left;
+}
+.text-alignright {
+  text-align: right;
+}
+.text-aligncenter {
+  text-align: center;
+}
+
+
 /* Content specific styles */
 .mt-banner {
   letter-spacing: 0.03rem;

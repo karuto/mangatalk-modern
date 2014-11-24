@@ -36,14 +36,12 @@
 
 <section class="featurette">
   <div class="featurette-inner container">
-    
-    <!-- <h2 class="page-title" style="padding-bottom: 20px; text-align: center;">写一个好的故事</h2> -->
-    
     <div class="row">
       
-      <div class="featurette-block col-xs-12">
+      
+      <div class="featurette-block col-xs-12" id="story-start">
         <div class="featurette-content" style="">
-          <h3 class="featurette-block-heading" style="text-align:center;">写一个好的故事</h3>
+          <h3 class="featurette-block-heading text-aligncenter">写一个好的故事</h3>
           <p class="lead">
             好的故事独一无二。
             她是你理解这个世界的折射。
@@ -62,8 +60,9 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
 
+
       <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="/*background: none;*/">
+        <div class="featurette-content" style="/*background: none;*/">
           <section>
             <h3 class="featurette-block-heading">好的故事不仅限于文字。</h3>
             <p class="lead">
@@ -89,25 +88,28 @@
 </section><!-- .featurette -->
 
 
-<section class="featurette feature-story-submit">
+<section class="featurette">
   <div class="featurette-inner container">
     <div class="row">
-      <div class="featurette-content col-md-12">
-        <h2 class="featurette-heading">漫言期待着你的来稿</h2>
-        <p class="lead">
-          漫言致力于传播漫画媒介的艺术、文化与产业价值。
-          我们希望你所写的文章，可以帮助读者们加深对漫画的理解与欣赏。<br><br>
-
-           你的文章，既可以是描绘某部具体的漫画作品（漫评赏析类文字），
-           也可以围绕某位漫画界的人物、某个机构展开（作者介绍类文字），
-           或是将漫画相关的一段历史或一个现象、话题作为切入点（考据议论类文字）。
-           <br><br>
-
-           你的文章应是未在别处发表过的、完全原创的<strong>非虚构作品。</strong>
-           在选题上，你的文章应该做到精简、深入、自成一体，
-           并应该是从只有你才能创作的独到角度出发。<br>
-        </p>
-      </div>
+      
+      
+      <div class="featurette-block col-xs-12">
+        <div class="featurette-content" style="">
+          <h3 class="featurette-block-heading text-aligncenter">漫言期待着你的来稿</h3>
+          <p class="lead">
+            漫言致力于传播漫画媒介的艺术、文化与产业价值。
+            我们希望你所写的文章，可以帮助读者们加深对漫画的理解与欣赏。<br>
+            你的文章，既可以是描绘某部具体的漫画作品（漫评赏析类文字），
+            也可以围绕某位漫画界的人物、某个机构展开（作者介绍类文字），
+            或是将漫画相关的一段历史或一个现象、话题作为切入点（考据议论类文字）。<br><br>
+            你的文章应是未在别处发表过的、完全原创的<strong>非虚构作品。</strong><br>
+            在选题上，你的文章应该做到精简、深入、自成一体，
+            并应该是从只有你才能创作的独到角度出发。
+          </p>
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
+      
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
@@ -130,7 +132,7 @@
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
 
-<section class="featurette">
+<section class="featurette feature-story-submit">
   <div class="featurette-inner container">
     <div class="row">
       <div class="featurette-content col-md-12">
