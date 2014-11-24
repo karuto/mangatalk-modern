@@ -48,7 +48,7 @@ $page-cover-block-height: $front-cover-block-height;
   padding-top: ($page-spacing * 3);
   padding-bottom: ($page-spacing * 3);
 }
-.featurette-block {
+.featurette-block { /* block level DOM, inside featurette-inner */
 //  @media (min-width: $screen-lg-min) { // large screen
 //    margin-top: $space-xxl*2;
 //  }
@@ -57,6 +57,12 @@ $page-cover-block-height: $front-cover-block-height;
 //    padding-left: 5%;
 //    padding-right: 5%;
 //  }
+}
+.featurette-content { /* content wrapper inside featurette-block */
+  
+}
+.content-row-6 {
+  height: $page-cover-block-height;
 }
 //.featurette-image { /* ideal height: 700px, width: 550px */
 //  margin-bottom: 0px;
