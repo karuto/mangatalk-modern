@@ -479,14 +479,12 @@ a.page-intro-link {
   color: $base-white;
 }
 .page-story {
+  .sample-story-meta,
   .sample-story-title {
     color: $base-reading-text-color;
     &:hover, &:active {
       color: $base-action-normal;
     }
-  }
-  .sample-story-meta {
-    color: $base-reading-text-color;
   }
 }
 

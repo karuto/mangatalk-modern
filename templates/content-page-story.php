@@ -116,7 +116,7 @@
           <section>
             <p class="lead text-aligncenter">
                <a class="sample-story-title" href="http://mangatalk.net/2011/i-love-emma/">致心底最柔软的地方：浅谈森薰，与她的『爱玛』</a>
-               <a class="sample-story-meta" href="">漫评赏析类 文章案例</a>
+               <a class="sample-story-meta" href="http://mangatalk.net/topic/love/">漫评赏析类 文章案例</a>
             </p>
           </section>
         </div><!-- .featurette-content -->
@@ -128,7 +128,7 @@
           <section>
             <p class="lead text-aligncenter">
                <a class="sample-story-title" href="http://mangatalk.net/2013/hiromu-arakawa-talk/">专访荒川弘：《钢炼》与成长、《银之匙》与女子力</a>
-               <a class="sample-story-meta" href="">作者介绍类 文章案例</a>
+               <a class="sample-story-meta" href="http://mangatalk.net/topic/interview/">作者介绍类 文章案例</a>
             </p>
           </section>
         </div><!-- .featurette-content -->
@@ -140,7 +140,7 @@
           <section>
             <p class="lead text-aligncenter">
                <a class="sample-story-title" href="http://mangatalk.net/2012/manga-montage-talk/">黑白多棱镜——浅论漫画中的蒙太奇</a>
-               <a class="sample-story-meta" href="">考据议论类 文章案例</a>
+               <a class="sample-story-meta" href="http://mangatalk.net/topic/research/">考据议论类 文章案例</a>
             </p>
           </section>
         </div><!-- .featurette-content -->
