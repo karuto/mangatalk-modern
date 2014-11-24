@@ -92,7 +92,7 @@
   <div class="featurette-inner container">
     <div class="row">
       <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6">
+        <div class="featurette-content content-row-6" style="background: none;">
           <section>
             <h2 class="featurette-heading">
               <?php if ($is_chinese) {echo "尊识至源。";} else {echo "Do No Evil";} ?>
@@ -121,7 +121,7 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       <div class="featurette-block image-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background-image: url('http://i.imgur.com/qrcQq4w.png');">
+        <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/mt-brand-550x400.png'); background-color: transparent;">
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
     </div><!-- .row -->
@@ -161,7 +161,7 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       <div class="featurette-block image-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-desk-2.jpeg');">
+        <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-desk-3.jpeg');">
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
     </div><!-- .row -->
