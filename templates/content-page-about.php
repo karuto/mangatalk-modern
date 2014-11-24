@@ -42,8 +42,7 @@
             }
           ?>
         </div>
-      
-      </div><!-- .front-cover-content -->
+      </div><!-- .page-cover-content -->
       </div><!-- .row -->
     </div><!-- .container -->
     

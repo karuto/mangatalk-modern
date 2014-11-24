@@ -72,12 +72,12 @@ h3, .h3 { /* chapter title in content */
 //  letter-spacing: 0.04em;
   letter-spacing: 0.0em; 
 }
-h4, .h4 { /* not sure yet */
+h4, .h4 { /* secondary-chapter title in content */
   font-size: 166%; /* 18 * 1.6 = 30 */
 //  letter-spacing: 0.03em;
   letter-spacing: 0.0em; 
 }
-h5, .h5 { 
+h5, .h5 { /* lowest-level chapter title in content */
   font-size: 130%; /* 18 * 1.3 = 23 */
 }
 .fixed { 
@@ -197,6 +197,7 @@ blockquote.large {
 
 
 /* Page styles */
+$page-spacing: $space-md;
 .page-cover-content {
   .page-title {
     font-size: $cover-title-font-size;
@@ -206,16 +207,29 @@ blockquote.large {
   }
 }
 .featurette-heading {
+  font-size: 200%; /* same as h3 in content */
   font-weight: $subtext-font-weight;
-  line-height: 1.1;
-  letter-spacing: 1px;
-  margin-bottom: $space-lg;
+  padding-bottom: $page-spacing;
 }
 .lead {
   font-size: $content-font-size;
   line-height: $content-line-height;
 }
 
+/* Specific page styles */
+.page-about {
+  a {
+    display: block;
+    margin-top: $page-spacing;
+    letter-spacing: 0.01rem;
+    font-size: $subtext-font-size;
+    font-weight: $subtext-font-weight;
+    &:after {
+      content: "›"; 
+      margin-left: $page-spacing/2;
+    }
+  }
+}
 
 
 /* Archive block styles */
