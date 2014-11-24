@@ -62,7 +62,7 @@
 
 
       <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="featurette-content" style="/*background: none;*/">
+        <div class="featurette-content content-row-6" style="">
           <section>
             <h3 class="featurette-block-heading">好的故事不仅限于文字。</h3>
             <p class="lead">
@@ -114,44 +114,74 @@
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
 
-<section class="featurette feature-story-submit">
-  <div class="featurette-inner container">
-    <div class="row">
-      <div class="featurette-content col-md-12">
-        <h2 class="featurette-heading">投递你的试稿</h2>
-        <p class="lead">
-
-           为了确保你的故事能顺利在漫言发表，请使用我们的<a href="http://mangatalk.net/pitch/" target="_blank">试稿投递系统</a>，或将符合条件的试稿直接发送至<a href="mailto:story@mangatalk.net?Subject=我的作品试稿" target="_top">官方邮箱 story@mangatalk.net。</a><br><br>
-
-           试稿是<strong> 50 至 300  字</strong>的一小段简短概述，请将你所构思的故事的主题与核心观点精简到这个长度。我们的编辑将根据试稿内容，来判断你的故事与漫言合适与否，以及从中了解你的写作能力与文笔风格。欢迎你在试稿的表格中附上能代表你写作水平的作品链接，例如曾在别处发表过的评论、文章等。<br><br>
-
-           鉴于漫言编辑的时间有限，不符合上述条件的投稿将不予考虑。未经编辑特别要求、直接将长篇全文发至邮箱的投稿也同样不予考虑，还请见谅。<br>
-        </p>
-      </div>
-    </div><!-- .row -->
-  </div><!-- .featurette-inner -->
-</section><!-- .featurette -->
 
 <section class="featurette feature-story-submit">
   <div class="featurette-inner container">
     <div class="row">
-      <div class="featurette-content col-md-12">
-        <h2 class="featurette-heading">编辑与审稿流程</h2>
-        <p class="lead">
-
-           在投递试稿完毕后，请耐心等待。我们每月接受的稿件数量有限，但漫言收到了大量的热情来稿。对于符合要求的试稿，我们会尽量集中进行回复，但繁忙时可能需要几个星期的时间按序处理，还请稍安勿躁。<br><br>
-
-           试稿一旦被选中，我们将会有专职的编辑与你进行联系，讨论具体的字数、截稿日期等细节。如果你出于个人原因，无法在约定时间内交稿，请提前至少一周告知责任编辑。<br><br>
-
-           如果你对此有其他意见或疑问，请随时通过站内留言或官方邮箱联系我们。谢谢！<br>
-        </p>
-      </div>
+      
+      
+      <div class="featurette-block col-xs-12">
+        <div class="featurette-content" style="">
+          <h3 class="featurette-block-heading text-aligncenter">投递你的试稿</h3>
+          <p class="lead">
+            为了确保你的故事能顺利在漫言发表，
+            请使用我们的
+            <a href="http://mangatalk.net/pitch/" target="_blank">
+              试稿投递系统
+            </a>，
+            或将符合条件的试稿直接发送至
+            <a href="mailto:story@mangatalk.net?Subject=我的作品试稿" target="_top">
+              官方邮箱 story@mangatalk.net。
+            </a>
+            <br>
+            试稿是<strong> 50 至 300  字</strong>的一小段简短概述，
+            请将你所构思的故事的主题与核心观点精简到这个长度。
+            我们的编辑将根据试稿内容，
+            来判断你的故事与漫言合适与否，
+            以及从中了解你的写作能力与文笔风格。
+            欢迎你在试稿的表格中附上能代表你写作水平的作品链接，
+            例如曾在别处发表过的评论、文章等。<br><br>
+            鉴于漫言编辑的时间有限，不符合上述条件的投稿将不予考虑。<br>
+            未经编辑特别要求、直接将长篇全文发至邮箱的投稿也同样不予考虑，还请见谅。
+          </p>
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
+      
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
-  
-<!-- <hr class="divider"> -->
 
-</div>
+
+<section class="featurette">
+  <div class="featurette-inner container">
+    <div class="row">
+      
+      
+      <div class="featurette-block col-xs-12">
+        <div class="featurette-content" style="">
+          <h3 class="featurette-block-heading text-aligncenter">编辑与审稿流程</h3>
+          <p class="lead">
+            在投递试稿完毕后，请耐心等待。
+            我们每月接受的稿件数量有限，但漫言收到了大量的热情来稿。
+            对于符合要求的试稿，我们会尽量集中进行回复，
+            但繁忙时可能需要几个星期的时间按序处理，还请稍安勿躁。<br><br>
+            试稿一旦被选中，
+            我们将会有专职的编辑与你进行联系，
+            讨论具体的字数、截稿日期等细节。
+            如果你出于个人原因，无法在约定时间内交稿，
+            请提前至少一周告知责任编辑。<br><br>
+            如果你对此有其他意见或疑问，
+            请随时通过站内留言或官方邮箱联系我们。谢谢！
+          </p>
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
+      
+    </div><!-- .row -->
+  </div><!-- .featurette-inner -->
+</section><!-- .featurette -->
+
+</div><!-- .page-content -->
 
 
