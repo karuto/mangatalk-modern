@@ -36,34 +36,69 @@
 
 <section class="featurette feature-copyright">
   <div class="featurette-inner container">
+    
+    <h2 class="page-title" style="padding-bottom: 20px; text-align: center;">写一个好的故事</h2>
+    
     <div class="row">
-      <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background: none;">
-          <section>
-            <h2 class="featurette-heading">写一个好的故事</h2>
+      
+      <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
+        <div class="featurette-content" style="background: none;">
+          <!-- <section> -->
+            <!-- <h3 class="featurette-block-heading">好的故事独一无二。</h3> -->
             <p class="lead">
-               好的故事独一无二。<br>
-               她是你理解这个世界的折射。<br>
-               好的故事是对真理和正直的不懈追求，她基于事实，却高于现实。<br>
-               好的故事不拘足于牵强和妥协，她力求完美，正物之德，臻于至善。<br><br>
+              好的故事独一无二。<br>
+              她是你理解这个世界的折射。<br>
+              好的故事是对真理和正直的不懈追求。<br>她基于事实，却高于现实。<br>
+              好的故事不拘足于牵强和妥协。<br>她力求完美，正物之德，臻于至善。<br><br>
+            </p>
+          <!-- </section> -->
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
 
+      <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
+        <div class="featurette-content" style="background: none;">
+          <!-- <section> -->
+            <!-- <h3 class="featurette-block-heading">好的故事寓教于乐。</h3> -->
+            <p class="lead">
               好的故事寓教于乐。<br>
               她生动有趣，却也育人教人，温故知新。<br>
-              她不会将带有偏见的立场强加于你，不会诱使你去改变你的原则与信条。<br>
-              好的故事是一位益友良师，她以谦逊平实的步调领你踏进一扇扇的门。<br>
-              她是一位信使，助你了解大千世界，了解你自己。<br><br>
+              她不会将带有偏见的立场强加于你，<br>不会诱使你去改变你的原则与信条。<br>
+              好的故事是一位益友良师，<br>她以谦逊平实的步调领你踏进一扇扇的门。<br>
+              她是一位信使，助你了解大千世界，了解你自己。<br>
+            </p>
+          <!-- </section> -->
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
 
+      <div class="featurette-block col-xs-12 col-sm-4 col-md-4">
+        <div class="featurette-content" style="background: none;">
+          <!-- <section> -->
+            <!-- <h3 class="featurette-block-heading">好的故事情真意切。</h3> -->
+            <p class="lead">
               好的故事情真意切。<br>
               她直白而真诚，与繁章复句、浮夸辞藻无关，<br>
               她是你寄托着所有热爱的初心本心。<br>
               若非如此，你又为何写作呢？<br>
-              好的故事不仅限于文字，她可以是一组图片、一部漫画、一个视频……
-              但不变的，她是你与读者的一次坦率的交流。<br>
-              好的故事阅毕后，或许会让你哭、让你笑、让你陷入沉思；<br>
-              但只要你觉得这一点阅读的时间没有虚度，<br>
-              她就在你的旅程上留下了一点小小的，<br>哪怕只是小小的，有意义的足音。<br><br>
+            </p>
+          <!-- </section> -->
+        </div><!-- .featurette-content -->
+      </div><!-- .featurette-block -->
+      
 
-              好的故事或许不能改变世界，但她能改变你与我的人生。<br>
+      <div class="featurette-block col-xs-12 col-sm-6">
+        <div class="featurette-content content-row-6" style="background: none;">
+          <section>
+            <h3 class="featurette-block-heading">好的故事不仅限于文字。</h3>
+            <p class="lead">
+               她可以是一组图片、一部漫画、一个视频……
+               但不变的，她是你与读者的一次坦率的交流。<br>
+               好的故事阅毕后，或许会让你哭、让你笑、让你陷入沉思；<br>
+               但只要你觉得这一点阅读的时间没有虚度，<br>
+               她就在你的旅程上留下了一点小小的，<br>哪怕只是小小的，有意义的足音。<br>
+
+               好的故事或许不能改变世界，但她能改变你与我的人生。<br>
             </p>
           </section>
         </div><!-- .featurette-content -->
@@ -72,9 +107,12 @@
         <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-desk-3.jpeg');">
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
+      
+      
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
 </section><!-- .featurette -->
+
 
 <section class="featurette feature-story-submit">
   <div class="featurette-inner container">

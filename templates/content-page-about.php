@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
       <div class="page-cover-content col-xs-12 col-sm-12 col-md-12">
-        <h2 class="page-title">
+        <h3 class="page-title">
           <?php 
             if ($is_chinese) {
               echo "漫言 MangaTalk";
@@ -30,7 +30,7 @@
               echo "MangaTalk";
             }
           ?>
-        </h2>
+        </h3>
         <div class="entry-subtitle">
           <?php 
             if ($is_chinese) {
@@ -55,9 +55,9 @@
       <div class="featurette-block col-xs-12 col-sm-6">
         <div class="featurette-content content-row-6">
           <section>
-            <h2 class="featurette-heading">
+            <h3 class="featurette-block-heading">
               <?php if ($is_chinese) {echo "精益求精。";} else {echo "High standards";} ?>
-            </h2>
+            </h3>
             <p class="lead">
               <?php 
                 if ($is_chinese) {
@@ -94,9 +94,9 @@
       <div class="featurette-block col-xs-12 col-sm-6">
         <div class="featurette-content content-row-6" style="background: none;">
           <section>
-            <h2 class="featurette-heading">
+            <h3 class="featurette-block-heading">
               <?php if ($is_chinese) {echo "尊识至源。";} else {echo "Do No Evil";} ?>
-            </h2>
+            </h3>
             <p class="lead">
               <?php 
                 if ($is_chinese) {
@@ -134,9 +134,9 @@
       <div class="featurette-block col-xs-12 col-sm-6">
         <div class="featurette-content content-row-6">
           <section>
-            <h2 class="featurette-heading">
+            <h3 class="featurette-block-heading">
               <?php if ($is_chinese) {echo "品读深思。";} else {echo "Design-driven";} ?>
-            </h2>
+            </h3>
             <p class="lead">
               <?php 
                 if ($is_chinese) {

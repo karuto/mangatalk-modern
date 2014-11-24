@@ -206,6 +206,10 @@ blockquote.large {
   }
 }
 .featurette-heading {
+  font-size: 333%;
+}
+.featurette-content .featurette-heading,
+.featurette-block-heading {
   font-size: 200%; /* same as h3 in content */
   font-weight: $subtext-font-weight;
   padding-bottom: $page-spacing;
