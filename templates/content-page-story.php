@@ -62,20 +62,17 @@
 
 
       <div class="featurette-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="">
-          <section>
-            <!-- <h3 class="featurette-block-heading">好的故事不仅限于文字。</h3> -->
-            <p class="lead">
-               好的故事不仅限于文字。<br>
-               她可以是一组图片、一部漫画、一个视频……<br>
-               但不变的，她是你与读者的一次坦率的交流。<br>
-               好的故事阅毕后，或许会让你哭、让你笑、让你陷入沉思；<br>
-               但只要你觉得这一点阅读的时间没有虚度，<br>
-               她就在你的旅程上留下了一点小小的，<br>哪怕只是小小的，有意义的足音。<br>
+        <div class="featurette-content content-row-6-lg">
+          <p class="lead">
+             好的故事不仅限于文字。<br>
+             她可以是一组图片、一部漫画、一个视频……<br>
+             但不变的，她是你与读者的一次坦率的交流。<br>
+             好的故事阅毕后，或许会让你哭、让你笑、让你陷入沉思；<br>
+             但只要你觉得这一点阅读的时间没有虚度，<br>
+             她就在你的旅程上留下了一点小小的，<br>哪怕只是小小的，有意义的足音。<br>
 
-               好的故事或许不能改变世界，但她能改变你与我的人生。<br>
-            </p>
-          </section>
+             好的故事或许不能改变世界，但她能改变你与我的人生。<br>
+          </p>
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       <div class="featurette-block image-block col-xs-12 col-sm-6">

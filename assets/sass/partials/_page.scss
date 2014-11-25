@@ -80,6 +80,11 @@ $page-cover-block-height: $front-cover-block-height;
 .content-row-6 {
   height: $page-cover-block-height;
 }
+.content-row-6-lg {
+  @media (min-width: $screen-md-max) { /* Larger than medium screens */
+    height: $page-cover-block-height;
+  }
+}
 //.featurette-image { /* ideal height: 700px, width: 550px */
 //  margin-bottom: 0px;
 //}

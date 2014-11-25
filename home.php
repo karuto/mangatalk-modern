@@ -74,13 +74,13 @@ wp_reset_postdata();
      
      // Helper function to output a single block
      function outputBlock() {
-       echo '<section class="mt-block col-xs-6 col-sm-6 col-md-4 col-lg-3">'; 
+       echo '<section class="mt-block col-xs-12 col-sm-6 col-md-4 col-lg-3">'; 
        get_template_part('templates/content', get_post_format()); 
        echo '</section>';
      }
      
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=-10' ); // Exclude meta cat
+     $query = new WP_Query( 'cat=-43' ); // Exclude meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputBlock();
@@ -106,14 +106,14 @@ wp_reset_postdata();
    */
      // Helper function to output a single block
      function outputMetaBlock() {
-       echo '<section class="mt-block col-xs-6 col-sm-6 col-lg-3">'; 
+       echo '<section class="mt-block col-xs-12 col-sm-6 col-lg-3">'; 
        get_template_part('templates/content', get_post_format()); 
        echo '</section>';
      }
       
    
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=10&posts_per_page=2' ); // Only meta cat
+     $query = new WP_Query( 'cat=43&posts_per_page=2' ); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputMetaBlock();
