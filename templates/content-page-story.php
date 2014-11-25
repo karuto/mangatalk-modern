@@ -64,8 +64,9 @@
       <div class="featurette-block col-xs-12 col-sm-6">
         <div class="featurette-content content-row-6" style="">
           <section>
-            <h3 class="featurette-block-heading">好的故事不仅限于文字。</h3>
+            <!-- <h3 class="featurette-block-heading">好的故事不仅限于文字。</h3> -->
             <p class="lead">
+               好的故事不仅限于文字。<br>
                她可以是一组图片、一部漫画、一个视频……<br>
                但不变的，她是你与读者的一次坦率的交流。<br>
                好的故事阅毕后，或许会让你哭、让你笑、让你陷入沉思；<br>

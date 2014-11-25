@@ -81,8 +81,10 @@
         </div><!-- .featurette-content -->
       </div><!-- .featurette-block -->
       <div class="featurette-block image-block col-xs-12 col-sm-6">
-        <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/stock-desk-1.jpeg');">
+        <a href="http://mangatalk.net/2014/obata-takeshi/">
+        <div class="featurette-content content-row-6" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/img/mt-screenshot.jpg');">
         </div><!-- .featurette-content -->
+        </a>
       </div><!-- .featurette-block -->
     </div><!-- .row -->
   </div><!-- .featurette-inner -->
