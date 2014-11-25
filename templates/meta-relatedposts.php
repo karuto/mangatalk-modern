@@ -21,7 +21,7 @@
     <?php 
       while ( $related_posts_query->have_posts() ) {  
         $related_posts_query->the_post(); 
-        echo '<section class="mt-block col-xs-6">'; 
+        echo '<section class="mt-block col-xs-12 col-sm-6">'; 
         get_template_part('templates/content', get_post_format()); 
         echo '</section>';
           
