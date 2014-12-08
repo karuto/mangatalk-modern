@@ -37,10 +37,10 @@
             <li class="author-contact-item">
               <a class="social-button" href="<?php echo get_the_author_meta( 'weibo'); ?>"><?php the_author_meta( 'display_name' ); ?>的微博</a>
             </li>
-            &ensp;
+            <!-- &ensp;
             <li class="author-contact-item">
               <a class="social-button" href="mailto:<?php echo get_the_author_meta('user_email'); ?>"><?php the_author_meta( 'display_name' ); ?>的邮箱</a>
-            </li>
+            </li> -->
 
           </ul>
         </h2>
