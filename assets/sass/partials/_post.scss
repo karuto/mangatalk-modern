@@ -392,6 +392,7 @@ blockquote.large {
 .entry-tags > a,
 .social-button {
   padding: $row-margin ($row-margin * 2);
+  margin-bottom: $row-margin;
 //  border-radius: 3px;
   vertical-align: baseline;
 
