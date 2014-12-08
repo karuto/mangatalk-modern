@@ -401,16 +401,16 @@ blockquote.large {
   @media (min-width: $screen-sm-max) { /* Larger than small screens */
     float: left;
   }
-  &:not(:first-child) {
-    margin-left: $row-margin;
+  &:not(:last-child) {
+    margin-right: $row-margin;
   }
 }
 .social-button {
   @media (min-width: $screen-sm-max) { /* Larger than small screens */
     float: right;
   }
-  &:not(:first-child) {
-    margin-right: $row-margin;
+  &:not(:last-child) {
+    margin-left: $row-margin;
   }
 }
 
