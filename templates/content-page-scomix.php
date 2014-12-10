@@ -67,7 +67,7 @@
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='category/scomix' alt="阅读更多文章">阅读更多文章</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $scomix_category_id )); ?>' alt="阅读更多文章">阅读更多文章</a>
   </div>
 
 </div><!-- .mt-list -->

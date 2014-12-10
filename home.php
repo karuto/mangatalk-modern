@@ -135,7 +135,7 @@ wp_reset_postdata();
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $meta_category_id )); ?>' alt="阅读更多文章">阅读更多动态</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $meta_category_id )); ?>' alt="阅读更多动态">阅读更多动态</a>
   </div>
 
 </div><!-- .mt-list -->
