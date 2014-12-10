@@ -50,9 +50,13 @@
        get_template_part('templates/content', get_post_format()); 
        echo '</section>';
      }
+     // Retrieve 'scomix' category id by slug
+     $scomix_category_object = get_category_by_slug('scomix');
+     $scomix_category_id = $scomix_category_object->term_id;
+     $query_args = 'cat='.$scomix_category_id.'&posts_per_page=12';
      
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=-43' ); // Exclude meta cat
+     $query = new WP_Query($query_args); // Exclude meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputBlock();
@@ -62,7 +66,7 @@
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='category/article' alt="阅读更多文章">阅读更多文章</a>
+    <a class="mt-meta-button" href='category/scomix' alt="阅读更多文章">阅读更多文章</a>
   </div>
 
 </div><!-- .mt-list -->
