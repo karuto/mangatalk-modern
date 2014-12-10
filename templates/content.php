@@ -66,6 +66,14 @@ function retrievePriorityTag() {
                 echo '文化';
               } else if ( has_tag('mangatalk') ) {
                 echo '站务';
+              } else if ( has_tag('scomix-misemono') ) {
+                echo '夜话';
+              } else if ( has_tag('scomix-special') ) {
+                echo '特稿';
+              } else if ( has_tag('scomix-ishi') ) {
+                echo '探石';
+              } else if ( has_tag('specialcomix') ) {
+                echo '异漫';
               } else {
                 echo '文章';
               } ?>
