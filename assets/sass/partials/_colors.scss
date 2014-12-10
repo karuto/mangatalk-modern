@@ -461,7 +461,8 @@ a {
 }
 
 /* Page & page featurette styles */
-.page-content {
+.page-about .page-content,
+.page-story .page-content {
   background-color: $base-white;
 }
 .page-cover-content {

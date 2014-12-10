@@ -35,7 +35,7 @@
 </section>
 </header>
 
-<div class="mt-list container">
+<div class="mt-list container" style="margin-bottom: 50px">
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
    <?php 
    /* TODO: use loop-grid.php to dynamically judge / load content instead of below
