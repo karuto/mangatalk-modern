@@ -81,8 +81,10 @@ wp_reset_postdata();
      // Retrieve 'meta' category id by slug
      $meta_category_object = get_category_by_slug('meta');
      $scomix_category_object = get_category_by_slug('scomix');
+     $article_category_object = get_category_by_slug('article');
      $meta_category_id = $meta_category_object->term_id;
      $scomix_category_id = $scomix_category_object->term_id;
+     $article_category_id = $article_category_object->term_id;
      $query_args = 'cat='.'-'.$meta_category_id.',-'.$scomix_category_id;
      
      echo '<div class="row">';
@@ -96,7 +98,7 @@ wp_reset_postdata();
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='category/article' alt="阅读更多文章">阅读更多文章</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $article_category_id )); ?>' alt="阅读更多文章">阅读更多文章</a>
   </div>
 
 </div><!-- .mt-list -->
@@ -133,7 +135,7 @@ wp_reset_postdata();
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='category/meta' alt="阅读更多文章">阅读更多动态</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $meta_category_id )); ?>' alt="阅读更多文章">阅读更多动态</a>
   </div>
 
 </div><!-- .mt-list -->

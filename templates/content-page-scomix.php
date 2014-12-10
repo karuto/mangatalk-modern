@@ -18,7 +18,7 @@
           异常漫画研究中心
         </h3>
         <div class="entry-subtitle">
-          只关注改革、只关注颠覆、只关注独特——探索漫画的未知之域。
+          最尖端，最异端，最本能，最文艺，你已进入漫画的未知之域。
           <!-- <br><br><br>
           <a style="color: white;" class="page-intro-link" href="#story-start">
             投稿给漫言<br>
