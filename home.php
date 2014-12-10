@@ -80,8 +80,10 @@ wp_reset_postdata();
      }
      // Retrieve 'meta' category id by slug
      $meta_category_object = get_category_by_slug('meta');
+     $scomix_category_object = get_category_by_slug('scomix');
      $meta_category_id = $meta_category_object->term_id;
-     $query_args = 'cat=-'.$meta_category_id;
+     $scomix_category_id = $scomix_category_object->term_id;
+     $query_args = 'cat='.'-'.$meta_category_id.',-'.$scomix_category_id;
      
      echo '<div class="row">';
      $query = new WP_Query($query_args); // Exclude meta cat
