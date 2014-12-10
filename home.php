@@ -78,9 +78,13 @@ wp_reset_postdata();
        get_template_part('templates/content', get_post_format()); 
        echo '</section>';
      }
+     // Retrieve 'meta' category id by slug
+     $meta_category_object = get_category_by_slug('meta');
+     $meta_category_id = $meta_category_object->term_id;
+     $query_args = 'cat=-'.$meta_category_id;
      
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=-43' ); // Exclude meta cat
+     $query = new WP_Query($query_args); // Exclude meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputBlock();
@@ -110,10 +114,13 @@ wp_reset_postdata();
        get_template_part('templates/content', get_post_format()); 
        echo '</section>';
      }
-      
+     // Retrieve 'meta' category id by slug
+     $meta_category_object = get_category_by_slug('meta');
+     $meta_category_id = $meta_category_object->term_id;
+     $query_args = 'cat='.$meta_category_id.'&posts_per_page=2';
    
      echo '<div class="row">';
-     $query = new WP_Query( 'cat=43&posts_per_page=2' ); // Only meta cat
+     $query = new WP_Query($query_args); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputMetaBlock();
