@@ -15,14 +15,15 @@
       <div class="row">
       <div class="page-cover-content col-xs-12 col-sm-12 col-md-12">
         <h3 class="page-title">
-          讲述你的故事
+          异常漫画研究中心
         </h3>
         <div class="entry-subtitle">
-          一个故事或许不能改变世界，但她能改变你与我的人生。<br><br><br>
+          只关注改革、只关注颠覆、只关注独特——探索漫画的未知之域。
+          <!-- <br><br><br>
           <a style="color: white;" class="page-intro-link" href="#story-start">
             投稿给漫言<br>
             <span id="story-entry" class="glyphicon glyphicon-chevron-down"></span>
-          </a>
+          </a> -->
         </div>
       
       </div><!-- .front-cover-content -->
