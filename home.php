@@ -85,7 +85,8 @@ wp_reset_postdata();
      $meta_category_id = $meta_category_object->term_id;
      $scomix_category_id = $scomix_category_object->term_id;
      $article_category_id = $article_category_object->term_id;
-     $query_args = 'cat='.'-'.$meta_category_id.',-'.$scomix_category_id;
+     // $query_args = 'cat='.'-'.$meta_category_id.',-'.$scomix_category_id;
+     $query_args = 'cat='.'-'.$meta_category_id;
      
      echo '<div class="row">';
      $query = new WP_Query($query_args); // Exclude meta cat

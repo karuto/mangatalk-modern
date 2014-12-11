@@ -58,12 +58,12 @@ function retrievePriorityTag() {
                 echo '资讯';
               } else if ( has_tag('trans') ) {
                 echo '译文';
-              } else if ( has_tag('research') ) {
-                echo '考据';
               } else if ( has_tag('industry') ) {
                 echo '业界';
               } else if ( has_tag('culture') ) {
                 echo '文化';
+              } else if ( has_tag('research') ) {
+                echo '考据';
               } else if ( has_tag('mangatalk') ) {
                 echo '站务';
               } else if ( has_tag('scomix-misemono') ) {
