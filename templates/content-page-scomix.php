@@ -35,7 +35,7 @@
 </section>
 </header>
 
-<div class="mt-list container" style="margin-bottom: 50px">
+<div class="mt-list container">
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
    <?php 
    /* TODO: use loop-grid.php to dynamically judge / load content instead of below
@@ -63,6 +63,7 @@
        outputBlock();
      }
      wp_reset_postdata();
+     wp_reset_query();
      echo '</div>'; 
    ?>
 
@@ -75,34 +76,37 @@
 <div class="mt-list container">
   <header class="meta-header">见世物夜话&emsp;|&emsp;Columnist</header>
    <?php
+   /*
      // Helper function to output a single block
      function outputMetaBlock() {
        echo '<section class="mt-block col-xs-12 col-sm-6 col-lg-3">'; 
        get_template_part('templates/content', get_post_format()); 
        echo '</section>';
      }
-     // Retrieve 'scomix-misemono' category id by slug
-     $m_category_object = get_category_by_slug('scomix-misemono');
-     $m_category_id = $m_category_object->term_id;
-     $query_args = 'cat='.$m_category_id.'&posts_per_page=4';
+     // Retrieve 'scomix-misemono' term id by slug
+     $m_term_object = get_term_by('slug', 'scomix-misemono', 'post_tag');
+     $m_term_id = $m_term_object->term_id;
+     $m_query_args = 'tag=scomix-misemono&posts_per_page=4';
    
      echo '<div class="row">';
-     $query = new WP_Query($query_args); // Only meta cat
+     $query = new WP_Query($m_query_args); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputMetaBlock();
      }
      wp_reset_postdata();
+     wp_reset_query();
      echo '</div>';
+   */
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $m_category_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_tag_link( $m_term_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
   </div>
 
 </div><!-- .mt-list -->
 
-<div class="mt-list container">
+<div class="mt-list container" style="margin-bottom: 50px">
   <header class="meta-header">探石行&emsp;|&emsp;Columnist</header>
    <?php
      // Helper function to output a single block
@@ -112,22 +116,23 @@
        echo '</section>';
      }
      // Retrieve 'scomix-ishi' category id by slug
-     $i_category_object = get_category_by_slug('scomix-ishi');
-     $i_category_id = $i_category_object->term_id;
-     $query_args = 'cat='.$m_category_id.'&posts_per_page=4';
+     $i_term_object = get_term_by('slug', 'scomix-ishi', 'post_tag');
+     $i_term_id = $i_term_object->term_id;
+     $i_query_args = 'tag=scomix-ishi&posts_per_page=4';
    
      echo '<div class="row">';
-     $query = new WP_Query($query_args); // Only meta cat
+     $query = new WP_Query($i_query_args); // Only meta cat
      while ($query->have_posts()) {
        $query->the_post();
        outputMetaBlock();
      }
      wp_reset_postdata();
+     wp_reset_query();
      echo '</div>';
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $i_category_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_tag_link( $i_term_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
   </div>
 
 </div><!-- .mt-list -->
