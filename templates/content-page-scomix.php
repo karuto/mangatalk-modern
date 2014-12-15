@@ -97,7 +97,37 @@
    ?>
 
   <div class="archive-entry-link"> 
-    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $m_category_id )); ?>' alt="阅读更多动态">阅读专栏文集</a>
+    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $m_category_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
+  </div>
+
+</div><!-- .mt-list -->
+
+<div class="mt-list container">
+  <header class="meta-header">探石行&emsp;|&emsp;Columnist</header>
+   <?php
+     // Helper function to output a single block
+     function outputMetaBlock() {
+       echo '<section class="mt-block col-xs-12 col-sm-6 col-lg-3">'; 
+       get_template_part('templates/content', get_post_format()); 
+       echo '</section>';
+     }
+     // Retrieve 'scomix-ishi' category id by slug
+     $i_category_object = get_category_by_slug('scomix-ishi');
+     $i_category_id = $i_category_object->term_id;
+     $query_args = 'cat='.$m_category_id.'&posts_per_page=4';
+   
+     echo '<div class="row">';
+     $query = new WP_Query($query_args); // Only meta cat
+     while ($query->have_posts()) {
+       $query->the_post();
+       outputMetaBlock();
+     }
+     wp_reset_postdata();
+     echo '</div>';
+   ?>
+
+  <div class="archive-entry-link"> 
+    <a class="mt-meta-button" href='<?php echo esc_url(get_category_link( $i_category_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
   </div>
 
 </div><!-- .mt-list -->
