@@ -73,21 +73,21 @@
 
 </div><!-- .mt-list -->
 
-<div class="mt-list container">
+<!-- <div class="mt-list container">
   <header class="meta-header">见世物夜话&emsp;|&emsp;Columnist</header>
    <?php
-   /*
+
      // Helper function to output a single block
      function outputMetaBlock() {
-       echo '<section class="mt-block col-xs-12 col-sm-6 col-lg-3">'; 
-       get_template_part('templates/content', get_post_format()); 
+       echo '<section class="mt-block col-xs-12 col-sm-6 col-lg-3">';
+       get_template_part('templates/content', get_post_format());
        echo '</section>';
      }
      // Retrieve 'scomix-misemono' term id by slug
      $m_term_object = get_term_by('slug', 'scomix-misemono', 'post_tag');
      $m_term_id = $m_term_object->term_id;
      $m_query_args = 'tag=scomix-misemono&posts_per_page=4';
-   
+
      echo '<div class="row">';
      $query = new WP_Query($m_query_args); // Only meta cat
      while ($query->have_posts()) {
@@ -97,10 +97,10 @@
      wp_reset_postdata();
      wp_reset_query();
      echo '</div>';
-   */
+
    ?>
 
-  <div class="archive-entry-link"> 
+  <div class="archive-entry-link">
     <a class="mt-meta-button" href='<?php echo esc_url(get_tag_link( $m_term_id )); ?>' alt="阅读专栏文集">阅读专栏文集</a>
   </div>
 
