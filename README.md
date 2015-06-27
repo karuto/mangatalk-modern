@@ -4,6 +4,6 @@
 
 
 
-## Install MangaTalk locally
+## Deploy MangaTalk locally
 
-
+In order to deploy this project, you must have a local version of WordPress installed on the machine.
