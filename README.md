@@ -11,3 +11,7 @@ In order to deploy this project, you must have a local version of WordPress inst
 Then, locate `wp-content/themes` directory and clone this repository into it with the following command:
 
 `git clone https://github.com/karuto/mangatalk-modern.git`
+
+This project is built upon the Roots Starter Theme framework. 
+
+Caution: as of early 2015, the classic Roots Starter Theme has become deprecated in favor of Sage (a major upgrade & rebranding). This project hasn't been updated to Sage yet. You could find the classic Roots repository [here.](https://github.com/roots/roots-sass/tree/ef0854d7602f76edd809b7dac448c2ba48fe9357)
