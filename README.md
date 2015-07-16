@@ -24,4 +24,5 @@ If you have Ruby installed (Mac machines should have it by default), you can sim
 sudo gem install sass
 sudo gem install compass
 `
+
 Where the first instruction updates RubyGems; the second and third instructions install the designated software packages accordingly with root permission.
