@@ -37,3 +37,5 @@ Once the project is successfully cloned and all dependencies are set up, run the
 ```
 grunt
 ```
+
+For more customized Grunt commands and in-depth explanation, please refer to the `Gruntfile.js` located at the project's root directory.
