@@ -7,7 +7,7 @@
 
 This project uses [Sass](http://sass-lang.com) with Compass as the CSS compiler. Ruby, Sass and Compass must be installed prior to its deployment. You may refer to [Sass'](http://sass-lang.com/install) and [Compass' official guide](http://compass-style.org/install/) for installation.
 
-If you have Ruby installed (Mac machines should have it by default), you can simply execute the following commands:
+TL;DR: If you have Ruby installed (Mac machines should have it by default), you can simply execute the following commands:
 
 `gem update --system`
 
