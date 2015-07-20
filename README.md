@@ -9,12 +9,11 @@ This project uses [Sass](http://sass-lang.com) with Compass as the CSS compiler.
 
 TL;DR: If you have Ruby installed (Mac machines should have it by default), you can simply execute the following commands:
 
-`gem update --system`
-
-`sudo gem install sass`
-
-`sudo gem install compass`
-
+```
+gem update --system
+sudo gem install sass
+sudo gem install compass
+```
 
 Where the first instruction updates RubyGems; the second and third instructions install the designated software packages accordingly with root permission.
 
