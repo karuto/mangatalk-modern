@@ -9,7 +9,7 @@ This project uses [Sass](http://sass-lang.com) with [Compass](http://compass-sty
 
 TL;DR: If you have Ruby installed (Mac machines should have it by default), you can simply execute the following commands:
 
-```
+```bash
 gem update --system
 sudo gem install sass
 sudo gem install compass
