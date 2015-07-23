@@ -24,7 +24,7 @@ In order to deploy this project, you must have a local version of WordPress inst
 
 Then, locate `wp-content/themes` directory and clone this repository into it with the following command:
 
-```
+```bash
 git clone https://github.com/karuto/mangatalk-modern.git
 ```
 
