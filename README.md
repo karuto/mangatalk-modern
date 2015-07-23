@@ -34,7 +34,7 @@ Caution: as of early 2015, the classic Roots Starter Theme has become deprecated
 
 Once the project is successfully cloned and all dependencies are set up, run the following command to build the production version of the codebase:
 
-```
+```bash
 grunt
 ```
 
