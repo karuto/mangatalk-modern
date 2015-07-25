@@ -40,7 +40,8 @@ grunt
 
 Other specific utility commands include:
 
-
+```bash
+```
 
 For more customized Grunt commands and in-depth explanation, please refer to the `Gruntfile.js` located at the project's root directory.
 
