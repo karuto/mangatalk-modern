@@ -40,9 +40,9 @@ grunt
 
 Other specific utility commands include:
 
-```bash
-grunt dev 
-```
+* `grunt dev` — Compile Sass to CSS, concatenate and validate JS
+* `grunt watch` — Compile assets when file changes are made
+* `grunt build` — Create minified assets that are used on non-development environments
 
 For more customized Grunt commands and in-depth explanation, please refer to the `Gruntfile.js` located at the project's root directory.
 
