@@ -50,4 +50,4 @@ This project is built upon the [Roots Starter Theme framework.](https://roots.io
 Caution: as of early 2015, the classic Roots Starter Theme has become deprecated in favor of Sage (a major upgrade & rebranding). This project has *not* been updated to Sage yet. You could find the classic Roots repository [here.](https://github.com/roots/roots-sass/tree/ef0854d7602f76edd809b7dac448c2ba48fe9357)
 
 The original Roots documentation:
-https://gist.github.com/retlehs/b3b3850216b42b3e0761
+https://gist.github.com/karuto/4e72a1868c042764d029
