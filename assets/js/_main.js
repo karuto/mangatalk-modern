@@ -22,7 +22,7 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      // JavaScript to be fired on all pages
+      /* JavaScript to be fired on all pages */
       $('[data-toggle="tooltip"]').tooltip();
 
       // Top banner related functions
@@ -120,6 +120,7 @@ var Roots = {
           $('.mt-story-banner').fadeOut();
         });
       }
+
 
       /* END JavaScript to be fired on the home page */
     }
