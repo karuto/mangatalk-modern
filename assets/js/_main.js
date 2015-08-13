@@ -23,6 +23,8 @@ var Roots = {
   common: {
     init: function() {
       /* JavaScript to be fired on all pages */
+
+
       $('[data-toggle="tooltip"]').tooltip();
 
       // Top banner related functions
@@ -105,6 +107,9 @@ var Roots = {
       } else {
         console.log("Banner did not exist on this page");
       }
+
+
+      /* END JavaScript to be fired on all pages */
     }
   },
   // Home page
