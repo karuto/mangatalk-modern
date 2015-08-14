@@ -126,6 +126,16 @@ var Roots = {
         });
       }
 
+      // Retrieve inner link and apply to title of frontpage cover
+      var mtFrontcover = $('.home #mt-front');
+      if (mtFrontcover.length != 0) {
+        $("#cover-story").click(function () {
+          window.location = $("#cover-story-link").attr("href");
+        });
+      } else {
+        console.log("Front cover did not exist on this page");
+      }
+
 
       /* END JavaScript to be fired on the home page */
     }
@@ -177,15 +187,7 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-// Retrieve inner link and apply to title of frontpage cover
-var mtFrontcover = $('.home #mt-front');
-if (mtFrontcover.length != 0) {
-  $("#cover-story").click(function () {
-    window.location = $("#cover-story-link").attr("href");
-  });
-} else {
-  // console.log("Front cover did not exist on this page");
-}
+
 
 
 
