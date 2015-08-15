@@ -127,7 +127,7 @@ var Roots = {
       }
 
       // Retrieve inner link and apply to title of frontpage cover
-      var mtFrontcover = $('.home #mt-front');
+      var mtFrontcover = $('#mt-front');
       if (mtFrontcover.length != 0) {
         $("#cover-story").click(function () {
           window.location = $("#cover-story-link").attr("href");
