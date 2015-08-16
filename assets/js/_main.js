@@ -228,16 +228,6 @@ if (blocks.length != 0) { // if blocks exist
 
 
 
-var related = $("#related-article-list");
-if (related.length > 0) {
-  
-} else {
-  // console.log("No related articles exist on this page");
-}
-
-
-
-
 // Fade out article's cover image as scrolling
 function fader() {
     var coverDiv = $('.article-front .cover-image');
