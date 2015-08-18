@@ -225,9 +225,6 @@ if (blocks.length != 0) { // if blocks exist
   // console.log("No blocks exist on this page");
 }
 
-
-
-
 // Fade out article's cover image as scrolling
 function fader() {
     var coverDiv = $('.article-front .cover-image');
@@ -266,8 +263,6 @@ function fader() {
 
 
 
-
-
 // Add title manually after comicbits slideshow
 var cbSlides = $('.comicbits');
 if (cbSlides.length != 0) {
@@ -275,7 +270,6 @@ if (cbSlides.length != 0) {
   console.log(title);
   $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
 }
-
 
 
 
@@ -310,9 +304,7 @@ if (contactForm.length > 0) {
         });
       });
     }
-    
-    return false;
-    
+    return false;    
   });
 } else {
   // Contact form does not exist.
