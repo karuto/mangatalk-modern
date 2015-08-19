@@ -109,6 +109,14 @@ var Roots = {
       }
 
 
+// Add title manually after comicbits slideshow
+var cbSlides = $('.comicbits');
+if (cbSlides.length != 0) {
+  var title = $('.entry-title-holder').text();
+  console.log(title);
+  $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
+}
+
       /* END JavaScript to be fired on all pages */
     }
   },
@@ -259,14 +267,6 @@ function fader() {
     }
 }
 
-
-// Add title manually after comicbits slideshow
-var cbSlides = $('.comicbits');
-if (cbSlides.length != 0) {
-  var title = $('.entry-title-holder').text();
-  console.log(title);
-  $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
-}
 
 
 
