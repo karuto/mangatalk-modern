@@ -109,6 +109,41 @@ var Roots = {
       }
 
 
+var width = $(window).width(); 
+var screenLargeEnough = ($(window).width() > 1200) ? true : false;
+// TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
+
+// Hover / toggle effect on article blocks
+var blocks = $(".mt-block");
+if (blocks.length != 0) { // if blocks exist
+
+  blocks.mouseenter(function () {
+    // If you hovered over block, darken its background
+    var bg = $(this).find(".cover-shade");
+    bg.css({ opacity: 1 });
+
+    // If you hovered over block, show its summary
+    var summary = $(this).find(".excerpt");
+    summary.removeClass("hidden");
+    summary.addClass("entry-summary");
+  });
+  blocks.mouseleave(function () {
+    // If you lefted block, lighten its background
+    var bg = $(this).find(".cover-shade");
+    bg.css({ opacity: 0.8 });
+
+    // If you lefted block, hide its summary
+    var summary = $(this).find(".excerpt");
+    summary.removeClass("entry-summary");
+    summary.addClass("hidden");
+  });
+
+} else {
+  // console.log("No blocks exist on this page");
+}
+
+
+
       // Add title manually after comicbits slideshow
       var cbSlides = $('.comicbits');
       if (cbSlides.length != 0) {
@@ -200,38 +235,7 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-var width = $(window).width(); 
-var screenLargeEnough = ($(window).width() > 1200) ? true : false;
-// TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
 
-// Hover / toggle effect on article blocks
-var blocks = $(".mt-block");
-if (blocks.length != 0) { // if blocks exist
-
-  blocks.mouseenter(function () {
-    // If you hovered over block, darken its background
-    var bg = $(this).find(".cover-shade");
-    bg.css({ opacity: 1 });
-
-    // If you hovered over block, show its summary
-    var summary = $(this).find(".excerpt");
-    summary.removeClass("hidden");
-    summary.addClass("entry-summary");
-  });
-  blocks.mouseleave(function () {
-    // If you lefted block, lighten its background
-    var bg = $(this).find(".cover-shade");
-    bg.css({ opacity: 0.8 });
-
-    // If you lefted block, hide its summary
-    var summary = $(this).find(".excerpt");
-    summary.removeClass("entry-summary");
-    summary.addClass("hidden");
-  });
-
-} else {
-  // console.log("No blocks exist on this page");
-}
 
 // Fade out article's cover image as scrolling
 function fader() {
