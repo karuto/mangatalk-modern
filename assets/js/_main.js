@@ -237,6 +237,7 @@ $(document).ready(UTIL.loadEvents);
 
 
 // Fade out article's cover image as scrolling
+/* Don't think this is currently used. */
 function fader() {
     var coverDiv = $('.article-front .cover-image');
     if (coverDiv.length != 0) {
