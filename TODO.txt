@@ -1,4 +1,9 @@
 TODO: Current
+JS
+ - remove mobile detection
+General
+ - separate HTML markup and language content for static pages
+    - maybe create separate template folder for static pages
 
 ====
 
