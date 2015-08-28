@@ -1,6 +1,10 @@
 TODO: Current
 JS
- - remove mobile detection
+ - remove mobile detection code unused
+ - specific page prefix with Roots' detection (such as comic bit pages, etc)
+ - remove hover effect on mt-block, implement with CSS instead
+ - reimplement a bunch of stuff in the init section, JS should only append class!
+ 
 General
  - separate HTML markup and language content for static pages
     - maybe create separate template folder for static pages
