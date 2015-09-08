@@ -12,6 +12,8 @@ General
     - think about how menu should present on mobile
  - separate HTML markup and language content for static pages
     - maybe create separate template folder for static pages
+ - update IE detection code in base templates
+ - re-implement homepage modules with flexbox
 ====
 
 TODO: Single post page
