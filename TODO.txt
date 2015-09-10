@@ -16,7 +16,7 @@ General
  - re-implement homepage modules with flexbox
  - review colors CSS and see if we can simplify rules with Sass syntax
  - implement full-page "hover effect / bg fadeout" search box
- - 
+ 
 ====
 
 TODO: Single post page
