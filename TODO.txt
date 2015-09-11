@@ -16,7 +16,7 @@ General
  - re-implement homepage modules with flexbox
  - review colors CSS and see if we can simplify rules with Sass syntax
  - implement full-page "hover effect / bg fadeout" search box
- 
+
 ====
 
 TODO: Single post page
@@ -29,17 +29,6 @@ TODO: Single post page
  x disqus styling
  - comments rules
  - tooltips
- 
-TODO: Other templates
- x conditional base templates
- x list view (archive, category, etc)
- x static homepage
- x image type for comicbits
- x single page full-width blank state
- x header
- x footer
- x search bar (at top)
- x 404 page
  
 TODO: Things that are nice to have
  - 3rd party plug-in supports
