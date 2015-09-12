@@ -1,5 +1,6 @@
 TODO: Current
 JS
+ - create partial js modules and include them instead
  - remove mobile detection code unused
  - specific page prefix with Roots' detection (such as comic bit pages, etc)
  - remove hover effect on mt-block, implement with CSS instead
