@@ -35,11 +35,7 @@ cd mangatalk-modern
 npm install
 ```
 
-Then use Grunt to build the production version of the codebase:
-
-```bash
-grunt
-```
+Then use `grunt` to build the production version of the codebase:
 
 Other specific utility commands include:
 
