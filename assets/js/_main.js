@@ -120,7 +120,7 @@ var Roots = {
           $('.mt-story-banner').fadeOut();
         });
       }
-
+      
     }
   },
   // About us page, note the change from about-us to about_us.
