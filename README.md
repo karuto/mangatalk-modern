@@ -28,13 +28,14 @@ Then, locate `wp-content/themes` directory and clone this repository into it wit
 git clone https://github.com/karuto/mangatalk-modern.git
 ```
 
-Once the project is successfully cloned, install all dependencies:
+Once the project is successfully cloned, install all dependencies at the root directory:
 
 ```bash
+cd mangatalk-modern
 npm install
 ```
 
-Run the following command to build the production version of the codebase:
+Then use Grunt to build the production version of the codebase:
 
 ```bash
 grunt
