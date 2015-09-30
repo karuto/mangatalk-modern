@@ -156,7 +156,7 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-// Story link remove
+// Activate story link remove feature
 var storyRemove = $('#story-remove');
 if (storyRemove.length != 0) {
   storyRemove.click(function () {
