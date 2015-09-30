@@ -110,7 +110,7 @@ var Roots = {
   // Home page
   home: {
     init: function() {
-      // JavaScript to be fired on the home page
+      /* JavaScript to be fired on the home page */
 
 
       // Activate story link remove feature
@@ -120,7 +120,8 @@ var Roots = {
           $('.mt-story-banner').fadeOut();
         });
       }
-      
+
+      /* END JavaScript to be fired on the home page */
     }
   },
   // About us page, note the change from about-us to about_us.
