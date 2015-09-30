@@ -258,9 +258,6 @@ function fader() {
       // console.log("This page doesn't have a cover.");
     }
 }
-// Fading event for the article cover, on scroll
-// $(document).bind('scroll', fader); // Disable fader for now!
-
 
 
 // Add title manually after comicbits slideshow
