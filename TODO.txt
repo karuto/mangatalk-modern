@@ -1,4 +1,5 @@
 TODO: Current
+
 JS
  - create partial js modules and include them instead
  - remove mobile detection code unused
@@ -8,6 +9,7 @@ JS
  - lazy loading images
  - scroll to top / scroll helpers
  - dynamically load more articles on same page when scroll to the bottom
+
 General
  - draft wireframe on notebook for specific improvements
     - think about how menu should present on mobile
