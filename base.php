@@ -6,6 +6,7 @@
       <?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots'); ?>
     </div>
   <![endif]-->
+
   <?php
     do_action('get_header');
     // Use Bootstrap's navbar if enabled in config.php
@@ -16,14 +17,12 @@
     }
   ?>
 
-<?php if (is_front_page() || is_page()): ?>
+  <?php if (is_front_page() || is_page()): ?>
   <div class="wrap" role="document">
-<?php else: ?>
+  <?php else: ?>
   <div class="wrap container" role="document">
-<?php endif; ?>
-    <!-- <div class="content row" style="">
-      <main class="main <?php echo roots_main_class(); ?>" role="main"> -->
-    <div class="content" style="">
+  <?php endif; ?>
+    <div class="content">
       <main class="main" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
@@ -36,9 +35,6 @@
   </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
-  
-
-
 
 </body>
 </html>
