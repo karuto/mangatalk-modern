@@ -56,10 +56,6 @@ function new_contactmethods( $contactmethods ) {
   return $contactmethods;
 }
 
-?>
-
-<?php
-
 /**
  * Author: Karuto
  *
