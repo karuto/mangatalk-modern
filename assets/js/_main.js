@@ -94,21 +94,21 @@ var globalFunctions = function() {
   mtSearch.hide();
 
   // Top banner related functions
-  var mtBanner = $('.mt-banner');
+  var mtNav = $('.mt-banner');
 
-  if (mtBanner.length) { // if banner exists
+  if (mtNav.length) { // if banner exists
     // Change banner display mode
     if ($('.cover-image').length) { // cover exists, immersive mode
-      mtBanner.addClass("is-immersive").removeClass("is-normal");
+      navOff(mtNav);
     } else { // no cover, normal mode
-      mtBanner.removeClass("is-immersive").addClass("is-normal");
+      navOn(mtNav);
     }
     
     // Hover toggle visual effect on top banner
-    mtBanner.hover(function() {
-      mtBanner.removeClass("is-immersive").addClass("is-normal");
+    mtNav.hover(function() {
+      navOff(mtNav);
     }, function() {
-      mtBanner.addClass("is-immersive").removeClass("is-normal");
+      navOn(mtNav);
     });
     
     // Toggle global search bar via button switch
@@ -117,7 +117,7 @@ var globalFunctions = function() {
       if (icon.hasClass("glyphicon-zoom-out")) {
         // Currently it's showing search, make it hidden!
         if (mtSearch.length != 0) { // if search exists
-          mtBanner.css("top", "0");
+          mtNav.css("top", "0");
           $("#cover-story").css("top", "0");
           mtSearch.hide();
         }
@@ -127,7 +127,7 @@ var globalFunctions = function() {
       } else {
         // Currently it's not showing search, make it show!
         if (mtSearch.length != 0) { // if search exists
-          mtBanner.css("top", "50px");
+          mtNav.css("top", "50px");
           $("#cover-story").css("top", "50px");
           mtSearch.show();
         }
@@ -184,10 +184,10 @@ var globalFunctions = function() {
     $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
   }
 
-  scrollController(mtBanner);
+  scrollController(mtNav);
 } /* END globalFunctions */
 
-var scrollController = function(mtBanner) {
+var scrollController = function(mtNav) {
   console.log("Got in");
   $(window).scroll(function() {
     var scrollThreshold = $('#mt-front');
@@ -197,10 +197,11 @@ var scrollController = function(mtBanner) {
         wS = $(this).scrollTop();
     // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
     if ((wS) > (hH)){
-       // console.log('you have scrolled to the content!');
-       mtBanner.css("position", "fixed");
-       mtBanner.removeClass("is-immersive").addClass("is-normal");
+      mtNav.css("position", "fixed");
+      navOn(mtNav);
     } else {
+      mtNav.css("position", "relative");
+      navOff(mtNav);
 
     }
   });
