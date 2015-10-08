@@ -162,6 +162,8 @@ blockquote.large {
   font-weight: $subtext-font-weight;
   .navbar-brand { // override Bootstrap's
     font-size: $banner-font-size;
+    text-indent: -9999px;
+    overflow: hidden;
   }
   .dropdown-menu>li>a { // override Bootstrap's
     font-size: $banner-font-size;
