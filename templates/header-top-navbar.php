@@ -13,7 +13,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>/"><img src="" alt="<?php bloginfo('name'); ?>" /></a>
+      <a class="navbar-brand" title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>/"><img class="nav-logo" src="https://cdn0.vox-cdn.com/images/polygon/logos/logo_black@2x.v0cd37af.png" alt="<?php bloginfo('name'); ?>" /></a>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">

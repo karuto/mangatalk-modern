@@ -12,8 +12,8 @@ $row-margin: $space-xxs; // 5px
 $page-spacing: $space-md;
 $mt-block-spacing: $row-margin * 4; // 20px
 
-$search-container-height: 50px;
-$banner-height: $search-container-height;
+$search-container-height: $space-xl;
+$banner-height: $space-xl;
 $article-content-container-lg: 700px;
 $article-content-container-padding: 15px;
 $article-content-container-md: 600px;
@@ -125,6 +125,13 @@ body {
     padding-right: $space-md;
   }
 }
+.navbar-brand {
+  padding: 0;
+  .nav-logo {
+    max-width: 150px;
+    max-height: $banner-height;
+  }  
+}
 #cover-story,
 #mt-banner,
 #mt-search {
@@ -146,7 +153,7 @@ body {
 /* Homepage cover styles */
 .mt-front {
   position: relative;
-  
+
   .cover-image-inner {
     height: $front-cover-block-height;
     overflow: hidden;
