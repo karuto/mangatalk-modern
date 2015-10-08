@@ -22,122 +22,8 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-
       /* JavaScript to be fired on all pages */
       globalFunctions();
-
-
-
-      $('[data-toggle="tooltip"]').tooltip();
-
-      // Top banner related functions
-      var mtBanner = $('#mt-banner');
-      var mtSearch = $("#mt-search");
-      mtSearch.hide();
-      if (mtBanner != 0) {
-        var isNativeNormal;
-        
-        // // Hover / toggle visual effect on top banner
-        // mtBanner.mouseenter(function () {
-        //   if ($(this).hasClass("is-normal")) {
-        //     isNativeNormal = true;
-        //   } else {
-        //     isNativeNormal = false;
-        //     $(this).removeClass("is-immersive");
-        //     $(this).addClass("is-normal");
-        //   }
-        // });
-        
-        // Hover / toggle visual effect on top banner
-        mtBanner.mouseleave(function () {
-          if (!isNativeNormal) { // immersive by default
-            $(this).addClass("is-immersive");
-            $(this).removeClass("is-normal");
-          }
-        });
-        
-        // Change banner display mode based on if the cover image exists
-        if ($('.cover-image').length == 0) { // no cover, normal mode
-            mtBanner.removeClass("is-immersive");
-            mtBanner.addClass("is-normal");
-        } else { // cover exists, immersive mode
-            mtBanner.addClass("is-immersive");
-            mtBanner.removeClass("is-normal");
-        }
-        
-        // Toggle global search bar via button switch
-        $("#nav-search").click(function () {
-          var icon = $(this).find("#nav-search-icon");
-          if (icon.hasClass("glyphicon-zoom-out")) {
-            // Currently it's showing search, make it hidden!
-            if (mtSearch.length != 0) { // if search exists
-              mtBanner.css("top", "0");
-              $("#cover-story").css("top", "0");
-              mtSearch.hide();
-            }
-            
-            icon.removeClass("glyphicon-zoom-out");
-            icon.addClass("glyphicon-search");
-          } else {
-            // Currently it's not showing search, make it show!
-            if (mtSearch.length != 0) { // if search exists
-              mtBanner.css("top", "50px");
-              $("#cover-story").css("top", "50px");
-              mtSearch.show();
-            }
-            
-            icon.removeClass("glyphicon-search");
-            icon.addClass("glyphicon-zoom-out");
-          }
-        });
-        
-      } else {
-        console.log("Banner did not exist on this page");
-      }
-
-
-      var width = $(window).width(); 
-      var screenLargeEnough = ($(window).width() > 1200) ? true : false;
-      // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
-
-      // Hover / toggle effect on article blocks
-      var blocks = $(".mt-block");
-      if (blocks.length != 0) { // if blocks exist
-
-        blocks.mouseenter(function () {
-          // If you hovered over block, darken its background
-          var bg = $(this).find(".cover-shade");
-          bg.css({ opacity: 1 });
-
-          // If you hovered over block, show its summary
-          var summary = $(this).find(".excerpt");
-          summary.removeClass("hidden");
-          summary.addClass("entry-summary");
-        });
-        blocks.mouseleave(function () {
-          // If you lefted block, lighten its background
-          var bg = $(this).find(".cover-shade");
-          bg.css({ opacity: 0.8 });
-
-          // If you lefted block, hide its summary
-          var summary = $(this).find(".excerpt");
-          summary.removeClass("entry-summary");
-          summary.addClass("hidden");
-        });
-
-      } else {
-        // console.log("No blocks exist on this page");
-      }
-
-
-      // Add title manually after comicbits slideshow
-      var cbSlides = $('.comicbits');
-      if (cbSlides.length != 0) {
-        var title = $('.entry-title-holder').text();
-        console.log(title);
-        $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
-      }
-
       /* END JavaScript to be fired on all pages */
     }
   },
@@ -202,8 +88,116 @@ $(document).ready(UTIL.loadEvents);
 
 // Load all your jQuery scripts from this point onward.
 var globalFunctions = function() {
-  console.log("Global script included 1");
-}
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Top banner related functions
+  var mtBanner = $('#mt-banner');
+  var mtSearch = $("#mt-search");
+  mtSearch.hide();
+  if (mtBanner != 0) {
+    var isNativeNormal;
+    
+    // // Hover / toggle visual effect on top banner
+    // mtBanner.mouseenter(function () {
+    //   if ($(this).hasClass("is-normal")) {
+    //     isNativeNormal = true;
+    //   } else {
+    //     isNativeNormal = false;
+    //     $(this).removeClass("is-immersive");
+    //     $(this).addClass("is-normal");
+    //   }
+    // });
+    
+    // Hover / toggle visual effect on top banner
+    mtBanner.mouseleave(function () {
+      if (!isNativeNormal) { // immersive by default
+        $(this).addClass("is-immersive");
+        $(this).removeClass("is-normal");
+      }
+    });
+    
+    // Change banner display mode based on if the cover image exists
+    if ($('.cover-image').length == 0) { // no cover, normal mode
+        mtBanner.removeClass("is-immersive");
+        mtBanner.addClass("is-normal");
+    } else { // cover exists, immersive mode
+        mtBanner.addClass("is-immersive");
+        mtBanner.removeClass("is-normal");
+    }
+    
+    // Toggle global search bar via button switch
+    $("#nav-search").click(function () {
+      var icon = $(this).find("#nav-search-icon");
+      if (icon.hasClass("glyphicon-zoom-out")) {
+        // Currently it's showing search, make it hidden!
+        if (mtSearch.length != 0) { // if search exists
+          mtBanner.css("top", "0");
+          $("#cover-story").css("top", "0");
+          mtSearch.hide();
+        }
+        
+        icon.removeClass("glyphicon-zoom-out");
+        icon.addClass("glyphicon-search");
+      } else {
+        // Currently it's not showing search, make it show!
+        if (mtSearch.length != 0) { // if search exists
+          mtBanner.css("top", "50px");
+          $("#cover-story").css("top", "50px");
+          mtSearch.show();
+        }
+        
+        icon.removeClass("glyphicon-search");
+        icon.addClass("glyphicon-zoom-out");
+      }
+    });
+    
+  } else {
+    console.log("Banner did not exist on this page");
+  }
+
+
+  var width = $(window).width(); 
+  var screenLargeEnough = ($(window).width() > 1200) ? true : false;
+  // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
+
+  // Hover / toggle effect on article blocks
+  var blocks = $(".mt-block");
+  if (blocks.length != 0) { // if blocks exist
+
+    blocks.mouseenter(function () {
+      // If you hovered over block, darken its background
+      var bg = $(this).find(".cover-shade");
+      bg.css({ opacity: 1 });
+
+      // If you hovered over block, show its summary
+      var summary = $(this).find(".excerpt");
+      summary.removeClass("hidden");
+      summary.addClass("entry-summary");
+    });
+    blocks.mouseleave(function () {
+      // If you lefted block, lighten its background
+      var bg = $(this).find(".cover-shade");
+      bg.css({ opacity: 0.8 });
+
+      // If you lefted block, hide its summary
+      var summary = $(this).find(".excerpt");
+      summary.removeClass("entry-summary");
+      summary.addClass("hidden");
+    });
+
+  } else {
+    // console.log("No blocks exist on this page");
+  }
+
+
+  // Add title manually after comicbits slideshow
+  var cbSlides = $('.comicbits');
+  if (cbSlides.length != 0) {
+    var title = $('.entry-title-holder').text();
+    console.log(title);
+    $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
+  }
+} /* END globalFunctions */
 
 
 
