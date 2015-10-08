@@ -184,23 +184,34 @@ var globalFunctions = function() {
     $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
   }
 
-  scrollController();
+  scrollController(mtBanner);
 } /* END globalFunctions */
 
-var scrollController = function() {
+var scrollController = function(mtBanner) {
   console.log("Got in");
   $(window).scroll(function() {
-    var scrollThreshold = $('.mt-list').eq(0);
-    var hT = scrollThreshold.offset().top,
+    var scrollThreshold = $('#mt-front');
+    var hT = scrollThreshold.offset().bottom,
         hH = scrollThreshold.outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH)){
-       console.log('you have scrolled to the content!');
+    // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
+    if ((wS) > (hH)){
+       // console.log('you have scrolled to the content!');
+       mtBanner.css("position", "fixed");
+       mtBanner.removeClass("is-immersive").addClass("is-normal");
+    } else {
+
     }
   });
 } /* END scrollController */
 
+var navOn = function(nav) {
+  nav.removeClass("is-immersive").addClass("is-normal");
+}
+var navOff = function(nav) {
+  nav.removeClass("is-normal").addClass("is-immersive");
+}
 
 
 // Contact form validation
