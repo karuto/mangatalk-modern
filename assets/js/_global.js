@@ -1,1 +1,1 @@
-console.log("included");
+console.log("Global script included");

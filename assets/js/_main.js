@@ -22,15 +22,9 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      /* JavaScript to be fired on all pages */
-$(window).scroll(function () {
 
-    if ($(window).scrollTop() + $(window).height() > $('.footer').offset().top) {
-        alert("footer visible");
-    } else {
-        alert("footer invisible");
-    }
-});
+      /* JavaScript to be fired on all pages */
+      globalFunctions();
 
 
 
@@ -207,6 +201,10 @@ $(document).ready(UTIL.loadEvents);
 })(jQuery); // Fully reference jQuery after this point.
 
 // Load all your jQuery scripts from this point onward.
+var globalFunctions = function() {
+  console.log("Global script included 1");
+}
+
 
 
 
