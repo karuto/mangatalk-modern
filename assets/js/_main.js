@@ -138,7 +138,7 @@ var globalFunctions = function() {
     });
     
   } else {
-    console.log("Banner did not exist on this page");
+    // console.log("Banner did not exist on this page");
   }
 
 
@@ -183,8 +183,23 @@ var globalFunctions = function() {
     console.log(title);
     $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
   }
+
+  scrollController();
 } /* END globalFunctions */
 
+var scrollController = function() {
+  console.log("Got in");
+  $(window).scroll(function() {
+    var scrollThreshold = $('.mt-list').eq(0);
+    var hT = scrollThreshold.offset().top,
+        hH = scrollThreshold.outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+       console.log('you have scrolled to the content!');
+    }
+  });
+} /* END scrollController */
 
 
 

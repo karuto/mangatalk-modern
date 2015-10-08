@@ -230,8 +230,9 @@ body {
 
 /* Footer styles */
 .mt-footer {
-//  margin-top: $space-xxl;
   padding-top: $space-xl;
+  max-height: 100vh;
+
   a {
     color: #999;
   }

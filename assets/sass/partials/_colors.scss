@@ -235,7 +235,7 @@ a {
     background-color: $grey-tint-darker;
   }
   .dropdown-menu>li>a:hover, 
-  .dropdown-menu>li>a:focus { // override Bootstrap's
+  .dropdown-menu>li>a:focus { /* override Bootstrap's */
     background-color: $grey-tint-darker;
   }
   .navbar-nav > li > a {
@@ -251,7 +251,7 @@ a {
     background-color: $grey-tint-normal;
   }
 }
-.mt-banner.is-normal { // when hovered, and when not on full-width covers
+.mt-banner.is-normal { /* when hovered, and when not on full-width covers */
   background-color: $base-white;
   color: $base-module-text-grey-normal;
   
@@ -261,19 +261,19 @@ a {
     color: $base-action-normal;
     }
   }
-  .navbar-toggle .icon-bar { // responsive toggle button
+  .navbar-toggle .icon-bar { /* responsive toggle button */
     background-color: $base-module-text-grey-normal;
   }
   .nav>li>a:hover, .nav>li>a:focus {
     background-color: transparent;
-    border-bottom: 3px solid $base-container-bg-light;
+    /*border-bottom: 3px solid $base-container-bg-light;*/
   }
   .navbar-nav>.active>a, 
   .navbar-nav>.active>a:hover, 
-  .navbar-nav>.active>a:focus { // override Bootstrap's
+  .navbar-nav>.active>a:focus { /*override Bootstrap's*/
     color: $base-action-normal;
     background-color: transparent;
-    border-bottom: 3px solid $base-action-normal;
+    /*border-bottom: 3px solid $base-action-normal;*/
   }
   .navbar-nav>.open>a, 
   .navbar-nav>.open>a:hover, 
