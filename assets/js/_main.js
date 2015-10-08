@@ -95,14 +95,11 @@ var globalFunctions = function() {
   var mtSearch = $("#mt-search");
   mtSearch.hide();
   if (mtBanner != 0) {
-    var isNativeNormal;
     
     // Hover / toggle visual effect on top banner
     mtBanner.mouseenter(function () {
-      if (!isNativeNormal) { // immersive by default
-        $(this).toggleClass("is-immersive");
-        $(this).toggleClass("is-normal");
-      }
+      $(this).toggleClass("is-immersive");
+      $(this).toggleClass("is-normal");
     });
     
     // Change banner display mode based on if the cover image exists
