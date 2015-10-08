@@ -4,7 +4,6 @@
   </div>
 </div>
 <header id="mt-banner" class="mt-banner banner navbar navbar-static-top" role="banner">
-<?php endif; ?>
 
   <div class="container">
     <div class="navbar-header">

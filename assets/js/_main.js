@@ -90,26 +90,26 @@ $(document).ready(UTIL.loadEvents);
 var globalFunctions = function() {
   $('[data-toggle="tooltip"]').tooltip();
 
-  // Top banner related functions
-  var mtBanner = $('#mt-banner');
   var mtSearch = $("#mt-search");
   mtSearch.hide();
-  if (mtBanner != 0) {
-    
-    // Hover / toggle visual effect on top banner
-    mtBanner.mouseenter(function () {
-      $(this).toggleClass("is-immersive");
-      $(this).toggleClass("is-normal");
-    });
-    
-    // Change banner display mode based on if the cover image exists
-    if ($('.cover-image').length == 0) { // no cover, normal mode
-        mtBanner.removeClass("is-immersive");
-        mtBanner.addClass("is-normal");
-    } else { // cover exists, immersive mode
-        mtBanner.addClass("is-immersive");
-        mtBanner.removeClass("is-normal");
+
+  // Top banner related functions
+  var mtBanner = $('.mt-banner');
+
+  if (mtBanner.length) { // if banner exists
+    // Change banner display mode
+    if ($('.cover-image').length) { // cover exists, immersive mode
+      mtBanner.addClass("is-immersive").removeClass("is-normal");
+    } else { // no cover, normal mode
+      mtBanner.removeClass("is-immersive").addClass("is-normal");
     }
+    
+    // Hover toggle visual effect on top banner
+    mtBanner.hover(function() {
+      mtBanner.removeClass("is-immersive").addClass("is-normal");
+    }, function() {
+      mtBanner.addClass("is-immersive").removeClass("is-normal");
+    });
     
     // Toggle global search bar via button switch
     $("#nav-search").click(function () {
