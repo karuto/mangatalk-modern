@@ -162,8 +162,6 @@ blockquote.large {
   font-weight: $subtext-font-weight;
   .navbar-brand { // override Bootstrap's
     font-size: $banner-font-size;
-    text-indent: -9999px;
-    overflow: hidden;
   }
   .dropdown-menu>li>a { // override Bootstrap's
     font-size: $banner-font-size;
@@ -176,10 +174,6 @@ blockquote.large {
   .entry-title {
     font-size: $cover-title-font-size; 
     text-align: center;
-  }
-  .entry-subtitle {
-//    font-size: 138%; /* 25px */
-//    font-weight: 300;
   }
 }
 .author-front {
@@ -266,7 +260,6 @@ blockquote.large {
 .mt-block {
   font-size: $medium-font-size;
   .entry-title {
-//    font-size: $base-font-size;
     font-weight: 300;
     line-height: $cover-title-line-height;
   }
