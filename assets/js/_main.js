@@ -217,63 +217,6 @@ $(document).ready(UTIL.loadEvents);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Fade out article's cover image as scrolling
-/* Don't think this is currently used. */
-function fader() {
-    var coverDiv = $('.article-front .cover-image');
-    if (coverDiv.length != 0) {
-      var windowHeight = $(window).height(),
-          currentPos = $(document).scrollTop(),
-          coverDivView = windowHeight - (coverDiv.offset().top - currentPos),
-          op; // opacity
-      //alert(coverDiv.offset().top + " | " + currentPos + "|" + windowHeight);
-      if (coverDivView > 0) {
-          op = 1 - 1 / (windowHeight + coverDiv.height()) * coverDivView;
-          op += op;
-          // console.log(op);
-          if (op > 0) {
-            coverDiv.css({opacity: op});            
-            // since we are in the cover, make banner immersive
-            if (mtBanner != 0) {
-              mtBanner.removeClass("is-normal");
-              mtBanner.addClass("is-immersive");
-            }
-          } else {
-            // since we already scroll passed the cover, make banner normal
-            if (mtBanner != 0) {
-              mtBanner.removeClass("is-immersive");
-              mtBanner.addClass("is-normal");
-            }
-            
-          }
-      }      
-    } else {
-      // console.log("This page doesn't have a cover.");
-    }
-}
-
-
-
-
 // Contact form validation
 var contactForm = $('form#contactForm');
 if (contactForm.length > 0) {
