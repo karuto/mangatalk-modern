@@ -28,7 +28,6 @@
       ?>
       
       <ul class="nav navbar-nav navbar-right">
-         <li id="nav-menu-switch"><a href="#"><span id="nav-menu-switch-icon" class="glyphicon glyphicon-chevron-down"></span></a></li>
          <li id="nav-search"><a href="#"><span id="nav-search-icon" class="glyphicon glyphicon-search"></span></a></li>
       </ul>
       
