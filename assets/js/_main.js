@@ -99,17 +99,19 @@ var globalFunctions = function() {
   if (mtNav.length) { // if banner exists
     // Change banner display mode
     if ($('.cover-image').length) { // cover exists, immersive mode
+      console.log("image yes");
+      // Hover toggle visual effect on top banner
+      mtNav.hover(function() {
+        navOff(mtNav);
+      }, function() {
+        navOn(mtNav);
+      });
       navOff(mtNav);
     } else { // no cover, normal mode
       navOn(mtNav);
     }
     
-    // Hover toggle visual effect on top banner
-    mtNav.hover(function() {
-      navOff(mtNav);
-    }, function() {
-      navOn(mtNav);
-    });
+
     
     // Toggle global search bar via button switch
     $("#nav-search").click(function () {
@@ -208,10 +210,12 @@ var scrollController = function(mtNav) {
 } /* END scrollController */
 
 var navOn = function(nav) {
+  console.log("is-normal");
   nav.removeClass("is-immersive").addClass("is-normal");
 }
 var navOff = function(nav) {
-  nav.removeClass("is-normal").addClass("is-immersive");
+  console.log("is-immersive");
+  nav.removeClass("is-normal");
 }
 
 
