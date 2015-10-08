@@ -145,6 +145,8 @@ body {
 
 /* Homepage cover styles */
 .mt-front {
+  position: relative;
+  
   .cover-image-inner {
     height: $front-cover-block-height;
     overflow: hidden;
