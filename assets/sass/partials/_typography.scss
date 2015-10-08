@@ -302,7 +302,6 @@ blockquote.large {
     font-size: $subtext-font-size;
     font-weight: $subtext-font-weight;
     line-height: $subtext-line-height;
-//    margin-bottom: $subtext-font-size / 2;
   }
 }
 .entry-comment-count {
@@ -320,7 +319,7 @@ blockquote.large {
     line-height: $content-line-height-px;
   }
   .glyphicon {
-    top: 2px; // override to align with text
+    top: 2px; /* override to align with text */
     margin-left: $space-xs;
   }
 }
@@ -330,7 +329,6 @@ blockquote.large {
 .entry-content {
   p {
     font-size: $content-font-size;
-//    text-indent: $content-font-size*2;
     line-height: $content-line-height;
     margin-bottom: $content-line-height-px * 1.3;
     letter-spacing: 0.01rem;
@@ -403,7 +401,6 @@ blockquote.large {
     font-weight: 300;
   }
   .entry-summary {
-//    padding-top: $base-font-size * 0.5; // coordinate with .entry-title
     font-size: $medium-font-size;
   }
 }
@@ -470,77 +467,78 @@ blockquote.large {
  * Source: http://bit.ly/1C3pej9
  */
 
-// improve readability
+/* improve readability */
 body  { 
   text-rendering: optimizeLegibility; 
   -webkit-font-smoothing: subpixel-antialiased!important; 
 }
 
-// font smoothing
+/* font smoothing */
 body,
 input,
 button  { 
   -webkit-font-smoothing: subpixel-antialiased!important; 
 }
 
-// Base font size to browser default (16px)
+/* Base font size to browser default (16px) */
 html    { font: 100%/1.5 Arial, sans-serif; }
 
-// Headings
-//h1      { font-size: 2em;       /* 2*16 = 32 */         }
-//h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
-//h3      { font-size: 1.17em;    /* 1.17*16 = 18.72 */   }
-//h4      { font-size: 1em;       /* 1*16 = 16 */         }
-//h5      { font-size: 0.83em;    /* 0.83*16 = 13.28 */   }
-//h6      { font-size: 0.75em;    /* 0.75*16 = 12 */      }
+/* Headings */
+h1      { font-size: 2em;       /* 2*16 = 32 */         }
+h2      { font-size: 1.5em;     /* 1.5*16 = 24 */       }
+h3      { font-size: 1.17em;    /* 1.17*16 = 18.72 */   }
+h4      { font-size: 1em;       /* 1*16 = 16 */         }
+h5      { font-size: 0.83em;    /* 0.83*16 = 13.28 */   }
+h6      { font-size: 0.75em;    /* 0.75*16 = 12 */      }
 
-// Paragraphs spacing
-//p { line-height: 1.5;
-//    margin: 0 0 1em;    }
+/* Paragraphs spacing
+p { line-height: 1.5;
+    margin: 0 0 1em;    }*/
 
-// Word breaks
-p       {   word-break: break-all;
- 
-            /* Non standard for webkit */
-            word-break: break-word;
- 
-            -webkit-hyphens: auto;
-            -moz-hyphens: auto;
-            -ms-hyphens: auto;
-            hyphens: auto;          }
+/* Word breaks */
+p       {   
+  word-break: break-all;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;          
+}
             
-// Anchor underline removal
+/* Anchor underline removal */
 a,
 a:visited   {   text-decoration: none; }
 a:hover     {   text-decoration: none; }
 
-// Anchor states for accessibility http://meyerweb.com/eric/css/tests/css2/sec05-11-03.htm
+/* Anchor states for accessibility http://meyerweb.com/eric/css/tests/css2/sec05-11-03.htm */
 a:active    {   color: tomato;      }
 a:focus     {   border: 1px dotted tomato; }
 
-// Font stylings
+/* Font stylings */
 strong  {   font-weight: bold;  }
 em      {   font-style: italic; }
 
-// Code snippets
+/* Code snippets */
 code,
 pre     {   font-family: monospace, serif;
             font-size: 1em; }
             
-// Blockquotes
+/* Blockquotes */
+/*
 blockquote {
-// font-style: italic;
  footer {
    text-align: right;
  }
 }
-//blockquote:before {
-// content: "\201C";
-// display: inline-block;
-// padding-right: .4em;
-//}
+blockquote:before {
+  content: "\201C";
+  display: inline-block;
+  padding-right: .4em;
+}
+*/
 
-// Print styles, paint everything to black, remove shadows and stuff
+/* Print styles, paint everything to black, remove shadows and stuff */
 @media print {
     * { background: transparent !important;
         color: #000 !important; /* Black prints faster: h5bp.com/s */
