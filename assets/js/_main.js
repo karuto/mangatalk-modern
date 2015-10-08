@@ -34,16 +34,16 @@ var Roots = {
       if (mtBanner != 0) {
         var isNativeNormal;
         
-        // Hover / toggle visual effect on top banner
-        mtBanner.mouseenter(function () {
-          if ($(this).hasClass("is-normal")) {
-            isNativeNormal = true;
-          } else {
-            isNativeNormal = false;
-            $(this).removeClass("is-immersive");
-            $(this).addClass("is-normal");
-          }
-        });
+        // // Hover / toggle visual effect on top banner
+        // mtBanner.mouseenter(function () {
+        //   if ($(this).hasClass("is-normal")) {
+        //     isNativeNormal = true;
+        //   } else {
+        //     isNativeNormal = false;
+        //     $(this).removeClass("is-immersive");
+        //     $(this).addClass("is-normal");
+        //   }
+        // });
         
         // Hover / toggle visual effect on top banner
         mtBanner.mouseleave(function () {
