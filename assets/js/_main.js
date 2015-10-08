@@ -62,22 +62,6 @@ var Roots = {
             mtBanner.removeClass("is-normal");
         }
         
-        // Toggle fixed top banner via button switch
-        $("#nav-menu-switch").click(function () {
-          var icon = $(this).find("#nav-menu-switch-icon");
-          if (icon.hasClass("glyphicon-chevron-down")) {
-            // Currently it's absolute, make it fixed!
-            icon.removeClass("glyphicon-chevron-down");
-            icon.addClass("glyphicon-chevron-up");
-            mtBanner.css("position", "fixed");
-          } else {
-            // Currently it's fixed already, so change it back!
-            icon.removeClass("glyphicon-chevron-up");
-            icon.addClass("glyphicon-chevron-down");
-            mtBanner.css("position", "absolute");
-          }
-        });
-        
         // Toggle global search bar via button switch
         $("#nav-search").click(function () {
           var icon = $(this).find("#nav-search-icon");
