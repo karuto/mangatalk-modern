@@ -23,6 +23,15 @@ var Roots = {
   common: {
     init: function() {
       /* JavaScript to be fired on all pages */
+$(window).scroll(function () {
+
+    if ($(window).scrollTop() + $(window).height() > $('.footer').offset().top) {
+        alert("footer visible");
+    } else {
+        alert("footer invisible");
+    }
+});
+
 
 
       $('[data-toggle="tooltip"]').tooltip();
