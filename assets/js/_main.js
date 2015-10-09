@@ -23,7 +23,7 @@ var mtNamespace = {
   common: {
     init: function() {
       /* JavaScript to be fired on all pages */
-      globalFunctions();mtFunctions.log("hi");
+      mtFunctions.globalController();
       /* END JavaScript to be fired on all pages */
     }
   },
@@ -90,9 +90,38 @@ $(document).ready(UTIL.loadEvents);
 
 // Declare additional namespaces
 var mtFunctions = mtFunctions || {};
-mtFunctions.log = function(v) { console.log("====",v) };
 
-var globalFunctions = function() {
+mtFunctions.navOn = function(nav) {
+  console.log("is-normal");
+  nav.removeClass("is-immersive").addClass("is-normal");
+}
+
+mtFunctions.navOff = function(nav) {
+  console.log("is-immersive");
+  nav.removeClass("is-normal");
+}
+
+mtFunctions.scrollController = function(mtNav) {
+  console.log("Got in");
+  $(window).scroll(function() {
+    var scrollThreshold = $('#mt-front');
+    var hT = scrollThreshold.offset().bottom,
+        hH = scrollThreshold.outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
+    if ((wS) > (hH)){
+      mtNav.css("position", "fixed");
+      this.navOn(mtNav);
+    } else {
+      mtNav.css("position", "relative");
+      this.navOff(mtNav);
+
+    }
+  });
+} /* END scrollController */
+
+mtFunctions.globalController = function() {
   $('[data-toggle="tooltip"]').tooltip();
 
   var mtSearch = $("#mt-search");
@@ -107,13 +136,13 @@ var globalFunctions = function() {
       console.log("image yes");
       // Hover toggle visual effect on top banner
       mtNav.hover(function() {
-        navOff(mtNav);
+        this.navOff(mtNav);
       }, function() {
-        navOn(mtNav);
+        this.navOn(mtNav);
       });
-      navOff(mtNav);
+      this.navOff(mtNav);
     } else { // no cover, normal mode
-      navOn(mtNav);
+      this.navOn(mtNav);
     }
     
 
@@ -191,38 +220,10 @@ var globalFunctions = function() {
     $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
   }
 
-  scrollController(mtNav);
+  this.scrollController(mtNav);
+  console.log(this);
+  
 } /* END globalFunctions */
-
-var scrollController = function(mtNav) {
-  console.log("Got in");
-  $(window).scroll(function() {
-    var scrollThreshold = $('#mt-front');
-    var hT = scrollThreshold.offset().bottom,
-        hH = scrollThreshold.outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
-    if ((wS) > (hH)){
-      mtNav.css("position", "fixed");
-      navOn(mtNav);
-    } else {
-      mtNav.css("position", "relative");
-      navOff(mtNav);
-
-    }
-  });
-} /* END scrollController */
-
-var navOn = function(nav) {
-  console.log("is-normal");
-  nav.removeClass("is-immersive").addClass("is-normal");
-}
-var navOff = function(nav) {
-  console.log("is-immersive");
-  nav.removeClass("is-normal");
-}
-
 
 // Contact form validation
 var contactForm = $('form#contactForm');
