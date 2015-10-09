@@ -18,12 +18,12 @@
 
 // Use this variable to set up the common and page specific functions. If you 
 // rename this variable, you will also need to rename the namespace below.
-var Roots = {
+var mtNamespace = {
   // All pages
   common: {
     init: function() {
       /* JavaScript to be fired on all pages */
-      globalFunctions();
+      globalFunctions();mtFunctions.log("hi");
       /* END JavaScript to be fired on all pages */
     }
   },
@@ -67,7 +67,7 @@ var Roots = {
 // Add additional events for more control over timing e.g. a finalize event
 var UTIL = {
   fire: function(func, funcname, args) {
-    var namespace = Roots;
+    var namespace = mtNamespace;
     funcname = (funcname === undefined) ? 'init' : funcname;
     if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
       namespace[func][funcname](args);
@@ -87,6 +87,11 @@ $(document).ready(UTIL.loadEvents);
 })(jQuery); // Fully reference jQuery after this point.
 
 // Load all your jQuery scripts from this point onward.
+
+// Declare additional namespaces
+var mtFunctions = mtFunctions || {};
+mtFunctions.log = function(v) { console.log("====",v) };
+
 var globalFunctions = function() {
   $('[data-toggle="tooltip"]').tooltip();
 
