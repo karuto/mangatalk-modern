@@ -91,12 +91,12 @@ $(document).ready(UTIL.loadEvents);
 // Declare additional namespaces
 var mtFunctions = mtFunctions || {};
 
-mtFunctions.navOn = function(nav) {
+var navOn = function(nav) {
   console.log("is-normal");
   nav.removeClass("is-immersive").addClass("is-normal");
 }
 
-mtFunctions.navOff = function(nav) {
+var navOff = function(nav) {
   console.log("is-immersive");
   nav.removeClass("is-normal");
 }
@@ -112,10 +112,10 @@ mtFunctions.scrollController = function(mtNav) {
     // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
     if ((wS) > (hH)){
       mtNav.css("position", "fixed");
-      this.navOn(mtNav);
+      navOn(mtNav);
     } else {
       mtNav.css("position", "relative");
-      this.navOff(mtNav);
+      navOff(mtNav);
 
     }
   });
@@ -136,13 +136,13 @@ mtFunctions.globalController = function() {
       console.log("image yes");
       // Hover toggle visual effect on top banner
       mtNav.hover(function() {
-        this.navOff(mtNav);
+        navOff(mtNav);
       }, function() {
-        this.navOn(mtNav);
+        navOn(mtNav);
       });
-      this.navOff(mtNav);
+      navOff(mtNav);
     } else { // no cover, normal mode
-      this.navOn(mtNav);
+      navOn(mtNav);
     }
     
 

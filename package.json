@@ -20,6 +20,7 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
+    "lodash": "~3.10.1",
     "grunt": "~0.4.2",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.4",
