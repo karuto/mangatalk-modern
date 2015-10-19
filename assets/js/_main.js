@@ -256,7 +256,7 @@ if (contactForm.length > 0) {
         });
       });
     }
-    return false;    
+    return false;
   });
 } else {
   // Contact form does not exist.
