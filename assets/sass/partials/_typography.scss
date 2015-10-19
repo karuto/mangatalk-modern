@@ -327,7 +327,7 @@ blockquote.large {
 
 /* Article page content styles */
 .entry-content {
-  p {
+  p, ol, ul {
     font-size: $content-font-size;
     line-height: $content-line-height;
     margin-bottom: $content-line-height-px * 1.3;
