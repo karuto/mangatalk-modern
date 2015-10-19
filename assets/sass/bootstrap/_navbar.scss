@@ -165,7 +165,7 @@
   @media (min-width: $grid-float-breakpoint) {
     .navbar > .container &,
     .navbar > .container-fluid & {
-      margin-left: -$navbar-padding-horizontal;
+      /*margin-left: -$navbar-padding-horizontal; // Removed by V */
     }
   }
 }
