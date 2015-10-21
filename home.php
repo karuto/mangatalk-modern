@@ -14,7 +14,7 @@
       
     <div class="container">
       <div class="row">
-      <div class="front-cover-content col-xs-12 col-sm-12 col-md-12">
+      <div class="front-cover-content col-xs-12">
         <h1 class="entry-title">
           <a id="cover-story-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         </h1>
