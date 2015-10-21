@@ -62,6 +62,8 @@ wp_reset_postdata();
   <?php get_search_form(); ?>
 <?php endif; ?>
 
+<?php get_template_part('templates/component', 'home'); ?>
+
 <div class="mt-list container">
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
    <?php 
@@ -74,8 +76,8 @@ wp_reset_postdata();
      
      // Helper function to output a single block
      function outputBlock() {
-       echo '<section class="mt-block col-xs-12 col-sm-6 col-md-4 col-lg-3">'; 
-       get_template_part('templates/content', get_post_format()); 
+       echo '<section class="mt-block col-xs-12 col-sm-6 col-md-4 col-lg-3">';
+       get_template_part('templates/content', get_post_format());
        echo '</section>';
      }
      // Retrieve 'meta' category id by slug
