@@ -121,6 +121,13 @@ mtFunctions.scrollController = function(mtNav) {
   });
 } /* END scrollController */
 
+/* Reference: 
+xs: width <768px
+sm: width 768-992
+md: width 992-1200
+lg: width >1200
+
+*/
 mtFunctions.globalController = function() {
   $('[data-toggle="tooltip"]').tooltip();
 

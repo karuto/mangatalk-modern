@@ -11,7 +11,7 @@
     ?>>
     <div class="cover-shade"></div>
     <div class="cover-image-inner">
-      
+
     <div class="container">
       <div class="row">
       <div class="front-cover-content col-xs-12">
