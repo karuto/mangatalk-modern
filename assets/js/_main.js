@@ -121,7 +121,7 @@ mtFunctions.scrollController = function(mtNav) {
   });
 } /* END scrollController */
 
-/* Reference: 
+/* Reference: http://getbootstrap.com/css/#grid-options
 xs: width <768px
 sm: width 768-992
 md: width 992-1200
