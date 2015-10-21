@@ -16,12 +16,14 @@
     <section class="mt-block col-sm-8 col-md-6" style="background: lightblue;">
       columns
     </section>
+    <!-- col-sm row divider -->
     <section class="mt-block col-sm-8 col-md-6" style="background: grey;">
       columns
     </section>
     <section class="mt-block col-sm-4" style="background: yellow;">
       signup
     </section>
+    <!-- col-sm row divider -->
     <section class="mt-block col-sm-8 col-md-8" style="background: grey;">
       columns
     </section>
