@@ -20,7 +20,10 @@
       columns
     </section>
     <section class="mt-block col-sm-4" style="background: yellow;">
-      feature
+      signup
+    </section>
+    <section class="mt-block col-sm-8 col-md-8" style="background: grey;">
+      columns
     </section>
   </div><!-- .row -->
 </div><!-- .mt-list -->
