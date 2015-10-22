@@ -33,13 +33,13 @@
         2 columns
       </div>
     </section>
-    <section class="mt-block col-xs-6 col-sm-4">
+    <section class="mt-block col-xs-12 col-sm-4">
       <div class="mt-block-wrapper" style="background: yellow;">
         signup
       </div>
     </section>
     <!-- col-sm row divider -->
-    <section class="mt-block col-xs-6 col-sm-8 col-md-8">
+    <section class="mt-block col-sm-12 col-md-8">
       <div class="mt-block-wrapper" style="background: white;">
         3 columns
       </div>
