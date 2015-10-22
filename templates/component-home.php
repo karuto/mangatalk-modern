@@ -18,30 +18,30 @@
     </section>
     <!-- col-sm row divider -->
     <section class="mt-block col-xs-6 col-sm-4">
-      <div class="mt-block-wrapper" style="background: lightgrey;">
-        feature + newest 5
+      <div class="mt-block-wrapper" style="background: yellow;">
+        feature single
       </div>
     </section>
     <section class="mt-block col-xs-6 col-sm-8 col-md-6">
       <div class="mt-block-wrapper" style="background: lightblue;">
-        feature + newest 5
+        2 columns
       </div>
     </section>
     <!-- col-sm row divider -->
     <section class="mt-block col-xs-6 col-sm-8 col-md-6">
       <div class="mt-block-wrapper" style="background: grey;">
-        feature + newest 5
+        2 columns
       </div>
     </section>
     <section class="mt-block col-xs-6 col-sm-4">
       <div class="mt-block-wrapper" style="background: lightblue;">
-        feature + newest 5
+        signup
       </div>
     </section>
     <!-- col-sm row divider -->
     <section class="mt-block col-xs-6 col-sm-8 col-md-8">
       <div class="mt-block-wrapper" style="background: lightblue;">
-        feature + newest 5
+        3 columns
       </div>
     </section>
   </div><!-- .row -->
