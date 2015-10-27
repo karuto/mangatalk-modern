@@ -1,12 +1,12 @@
 <style>
-  .test .mt-block {
-    height: 10rem;
-  }
-  .mt-block-wrapper {
-    margin-right: 15px;
-    background: white;
-    width: 100%;
-  }
+.test .mt-block {
+  height: 10rem;
+}
+.mt-block-wrapper {
+  margin-right: 15px;
+  background: white;
+  width: 100%;
+}
 </style>
 
 <div class="test mt-list container">
