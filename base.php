@@ -26,7 +26,7 @@
     <?php endif; ?>
   </div><!-- /.wrap -->
 
-  <?php get_template_part('templates/footer'); ?>
+  <?php get_template_part('templates/global/footer'); ?>
 
 </body>
 </html>
