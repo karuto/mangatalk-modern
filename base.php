@@ -1,13 +1,13 @@
-<?php get_template_part('templates/global/head'); ?>
+<?php get_template_part('templates/global', 'head'); ?>
 <body <?php body_class(); ?>>
 
   <?php
     do_action('get_header');
     // Use Bootstrap's navbar if enabled in config.php
     if (current_theme_supports('bootstrap-top-navbar')) {
-      get_template_part('templates/global/header-top-navbar');
+      get_template_part('templates/global', 'header-top-navbar');
     } else {
-      get_template_part('templates/global/header');
+      get_template_part('templates/global', 'header');
     }
   ?>
 
@@ -26,7 +26,7 @@
     <?php endif; ?>
   </div><!-- /.wrap -->
 
-  <?php get_template_part('templates/global/footer'); ?>
+  <?php get_template_part('templates/global', 'footer'); ?>
 
 </body>
 </html>
