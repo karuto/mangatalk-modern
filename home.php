@@ -1,3 +1,5 @@
+<?php get_template_part('templates/home/component', 'cover'); ?>
+
 <header id="mt-front" class="mt-front">
 <section class="article-cover">
   <div id="cover-story" class="cover-image" <?php post_class();
@@ -54,7 +56,7 @@ wp_reset_postdata();
   <?php get_search_form(); ?>
 <?php endif; ?>
 
-<?php get_template_part('templates/component', 'home'); ?>
+<?php get_template_part('templates/home/component', 'home'); ?>
 
 <div class="mt-list container">
   <header class="meta-header">近期文章&emsp;|&emsp;Recent Readings</header>
