@@ -14,18 +14,16 @@
   <?php if (is_front_page() || is_single() || is_page()): ?>
   <div class="wrap" role="document">
   <?php else: ?>
-  <div class="wrap container" role="document">
+  <div class="wrap container" role="document"><!-- .container is bootstrap control class -->
   <?php endif; ?>
-    <div class="content">
-      <main class="main" role="main">
-        <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
+    <main class="main" role="main">
+      <?php include roots_template_path(); ?>
+    </main><!-- /.main -->
+    <?php if (roots_display_sidebar()) : ?>
+      <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+        <?php include roots_sidebar_path(); ?>
+      </aside><!-- /.sidebar -->
+    <?php endif; ?>
   </div><!-- /.wrap -->
 
   <?php get_template_part('templates/footer'); ?>
