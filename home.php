@@ -1,4 +1,3 @@
-<?php get_template_part('templates/home/component', 'cover'); ?>
 
 <header id="mt-front" class="mt-front">
 <section class="article-cover">
