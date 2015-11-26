@@ -15,7 +15,7 @@
  * ======================================================================== */
 
 (function($) {
-console.log(ss);
+console.log('hello', ss);
 // Use this variable to set up the common and page specific functions. If you 
 // rename this variable, you will also need to rename the namespace below.
 var mtNamespace = {
@@ -32,6 +32,7 @@ var mtNamespace = {
     init: function() {
       /* JavaScript to be fired on the home page */
 
+      $('#home-cover').lazyLoadImage();
 
       // Activate story link remove feature
       var storyRemove = $('#story-remove');

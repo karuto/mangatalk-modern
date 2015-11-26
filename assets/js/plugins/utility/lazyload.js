@@ -1,7 +1,15 @@
 (function($) {
   'use strict';
-
-  OT.createNS('OT.lazyLoad');
+ 
+    // $.fn.showLinkLocation = function() {
+ 
+    //     this.filter( "a" ).append(function() {
+    //         return " (" + this.href + ")";
+    //     });
+ 
+    //     return this;
+ 
+    // };
 
   var images;
 
@@ -19,12 +27,17 @@
   };
 
   var loadImage = function(img) {
-    img = img instanceof jQuery ? img : $(img);
-    var actualImg = img.attr('data-src');
+    if (img) {
+      img = img instanceof jQuery ? img : $(img);
+    } else {
+      return false;
+    }
+    var actualImg = img.attr('data-src'); console.log(actualImg);
     var currentImg = img.attr('src');
     if(actualImg !== currentImg && actualImg !== undefined) {
       img.attr('src', actualImg).toggleClass('loaded', true);
     }
+    return this;
   };
 
   /* jshint loopfunc: true */
@@ -46,7 +59,19 @@
     processScroll();
   };
 
-  OT.lazyLoad.init = _.once(lazyLoad);
-  OT.lazyLoad.loadImage = loadImage;
+  var loadImageDirect = function() {
+    this.find('img[data-src]').each(function() {
+      var img = $(this);
+      var actualImg = img.attr('data-src');
+      var currentImg = img.attr('src');
+      if(actualImg !== currentImg && actualImg !== undefined) {
+        img.attr('src', actualImg).toggleClass('loaded', true);
+      }      
+    });
+    return this;
+  };
 
-})(jQuery);
+  $.fn.lazyLoadImage = loadImageDirect;
+  $.fn.lazyLoadAllImages = lazyLoad;
+ 
+}( jQuery ));
