@@ -31,28 +31,7 @@ var mtNamespace = {
   home: {
     init: function() {
       /* JavaScript to be fired on the home page */
-
-      $('#home-cover').lazyLoadImage();
-
-      // Activate story link remove feature
-      var storyRemove = $('#story-remove');
-      if (storyRemove.length) {
-        storyRemove.click(function () {
-          $('.mt-story-banner').fadeOut();
-        });
-      }
-
-      // Retrieve inner link and apply to title of frontpage cover
-      var mtFrontcover = $('#mt-front');
-      if (mtFrontcover.length) {
-        $("#cover-story").click(function () {
-          window.location = $("#cover-story-link").attr("href");
-        });
-      } else {
-        console.log("Front cover did not exist on this page");
-      }
-
-
+      mtFunctions.homeController();
       /* END JavaScript to be fired on the home page */
     }
   },
@@ -88,6 +67,8 @@ $(document).ready(UTIL.loadEvents);
 })(jQuery); // Fully reference jQuery after this point.
 
 // Load all your jQuery scripts from this point onward.
+
+
 
 // Declare additional namespaces
 var mtFunctions = mtFunctions || {};
@@ -218,6 +199,38 @@ mtFunctions = {
     }
 
     this.scrollController(mtNav);
-  } /* END globalController */
+  }, /* END globalController */
+
+  homeController: function() {
+    $('#home-cover').lazyLoadImage();
+
+    // Activate story link remove feature
+    var storyRemove = $('#story-remove');
+    if (storyRemove.length) {
+      storyRemove.click(function () {
+        $('.mt-story-banner').fadeOut();
+      });
+    }
+
+    // Retrieve inner link and apply to title of frontpage cover
+    var mtFrontcover = $('#mt-front');
+    if (mtFrontcover.length) {
+      $("#cover-story").click(function () {
+        window.location = $("#cover-story-link").attr("href");
+      });
+    } else {
+      console.log("Front cover did not exist on this page");
+    }
+  }, /* END homeController */
+
+
+  p: function(printTarget) {
+    if (!arguments.length) {
+      console.log("needs input");
+      return false;
+    }
+    console.log(printTarget);  
+    return true;
+  } /* END p */
 
 };
