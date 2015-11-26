@@ -74,4 +74,4 @@
   $.fn.lazyLoadImage = loadImageDirect;
   $.fn.lazyLoadAllImages = lazyLoad;
  
-}( jQuery ));
+})(jQuery);
