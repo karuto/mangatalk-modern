@@ -15,7 +15,7 @@
  * ======================================================================== */
 
 (function($) {
-
+console.log('Hey', ss);
 // Use this variable to set up the common and page specific functions. If you 
 // rename this variable, you will also need to rename the namespace below.
 var mtNamespace = {
@@ -31,27 +31,7 @@ var mtNamespace = {
   home: {
     init: function() {
       /* JavaScript to be fired on the home page */
-
-
-      // Activate story link remove feature
-      var storyRemove = $('#story-remove');
-      if (storyRemove.length != 0) {
-        storyRemove.click(function () {
-          $('.mt-story-banner').fadeOut();
-        });
-      }
-
-      // Retrieve inner link and apply to title of frontpage cover
-      var mtFrontcover = $('#mt-front');
-      if (mtFrontcover.length != 0) {
-        $("#cover-story").click(function () {
-          window.location = $("#cover-story-link").attr("href");
-        });
-      } else {
-        console.log("Front cover did not exist on this page");
-      }
-
-
+      mtFunctions.homeController();
       /* END JavaScript to be fired on the home page */
     }
   },
@@ -88,182 +68,169 @@ $(document).ready(UTIL.loadEvents);
 
 // Load all your jQuery scripts from this point onward.
 
+
+
 // Declare additional namespaces
 var mtFunctions = mtFunctions || {};
 
-var navOn = function(nav) {
-  console.log("is-normal");
-  nav.removeClass("is-immersive").addClass("is-normal");
-}
+mtFunctions = {
 
-var navOff = function(nav) {
-  console.log("is-immersive");
-  nav.removeClass("is-normal");
-}
+  navOn: function(nav) {
+    // console.log("is-normal");
+    nav.removeClass("is-immersive").addClass("is-normal");
+  },
 
-mtFunctions.scrollController = function(mtNav) {
-  console.log("Got in");
-  $(window).scroll(function() {
-    var scrollThreshold = $('#mt-front');
-    var hT = scrollThreshold.offset().bottom,
-        hH = scrollThreshold.outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
-    if ((wS) > (hH)){
-      mtNav.css("position", "fixed");
-      navOn(mtNav);
-    } else {
-      mtNav.css("position", "relative");
-      navOff(mtNav);
+  navOff: function(nav) {
+    console.log("is-immersive");
+    nav.removeClass("is-normal");
+  },
 
-    }
-  });
-} /* END scrollController */
-
-/* Reference: http://getbootstrap.com/css/#grid-options
-xs: width <768px
-sm: width 768-992
-md: width 992-1200
-lg: width >1200
-*/
-mtFunctions.globalController = function() {
-  $('[data-toggle="tooltip"]').tooltip();
-
-  var mtSearch = $("#mt-search");
-  mtSearch.hide();
-
-  // Top banner related functions
-  var mtNav = $('.mt-banner');
-
-  if (mtNav.length) { // if banner exists
-    // Change banner display mode
-    if ($('.cover-image').length) { // cover exists, immersive mode
-      console.log("image yes");
-      // Hover toggle visual effect on top banner
-      mtNav.hover(function() {
-        navOff(mtNav);
-      }, function() {
-        navOn(mtNav);
-      });
-      navOff(mtNav);
-    } else { // no cover, normal mode
-      navOn(mtNav);
-    }
-    
-
-    
-    // Toggle global search bar via button switch
-    $("#nav-search").click(function () {
-      var icon = $(this).find("#nav-search-icon");
-      if (icon.hasClass("glyphicon-zoom-out")) {
-        // Currently it's showing search, make it hidden!
-        if (mtSearch.length != 0) { // if search exists
-          mtNav.css("top", "0");
-          $("#cover-story").css("top", "0");
-          mtSearch.hide();
-        }
-        
-        icon.removeClass("glyphicon-zoom-out");
-        icon.addClass("glyphicon-search");
+  scrollController: function(mtNav) {
+    var mt = this;
+    $(window).scroll(function() {
+      var scrollThreshold = $('#mt-front');
+      var hT = scrollThreshold.offset().bottom,
+          hH = scrollThreshold.outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop();
+      // console.log("thres height", hT, "outerHeight", hH, "windowHeight", wH, "scrollTop", wS);
+      if ((wS) > (hH)){
+        mtNav.css("position", "fixed");
+        mt.navOn(mtNav);
       } else {
-        // Currently it's not showing search, make it show!
-        if (mtSearch.length != 0) { // if search exists
-          mtNav.css("top", "50px");
-          $("#cover-story").css("top", "50px");
-          mtSearch.show();
-        }
-        
-        icon.removeClass("glyphicon-search");
-        icon.addClass("glyphicon-zoom-out");
+        mtNav.css("position", "relative");
+        mt.navOff(mtNav);
+
       }
     });
-    
-  } else {
-    // console.log("Banner did not exist on this page");
-  }
+  }, /* END scrollController */
 
+  /* Reference: http://getbootstrap.com/css/#grid-options
+  xs: width <768px
+  sm: width 768-992
+  md: width 992-1200
+  lg: width >1200
+  */
+  globalController: function() {
+    var mt = this;
+    $('[data-toggle="tooltip"]').tooltip();
 
-  var width = $(window).width(); 
-  var screenLargeEnough = ($(window).width() > 1200) ? true : false;
-  // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
+    var mtSearch = $("#mt-search");
+    mtSearch.hide();
 
-  // Hover / toggle effect on article blocks
-  var blocks = $(".mt-block");
-  if (blocks.length != 0) { // if blocks exist
+    // Top banner related functions
+    var mtNav = $('.mt-banner');
 
-    blocks.mouseenter(function () {
-      // If you hovered over block, darken its background
-      var bg = $(this).find(".cover-shade");
-      bg.css({ opacity: 1 });
-
-      // If you hovered over block, show its summary
-      var summary = $(this).find(".excerpt");
-      summary.removeClass("hidden");
-      summary.addClass("entry-summary");
-    });
-    blocks.mouseleave(function () {
-      // If you lefted block, lighten its background
-      var bg = $(this).find(".cover-shade");
-      bg.css({ opacity: 0.8 });
-
-      // If you lefted block, hide its summary
-      var summary = $(this).find(".excerpt");
-      summary.removeClass("entry-summary");
-      summary.addClass("hidden");
-    });
-
-  } else {
-    // console.log("No blocks exist on this page");
-  }
-
-
-  // Add title manually after comicbits slideshow
-  var cbSlides = $('.comicbits');
-  if (cbSlides.length != 0) {
-    var title = $('.entry-title-holder').text();
-    console.log(title);
-    $('<h3 class="entry-title">' + title + '</h3>').insertAfter('.comicbits:last-of-type');
-  }
-
-  this.scrollController(mtNav);
-  console.log(this);
-  
-} /* END globalFunctions */
-
-// Contact form validation
-var contactForm = $('form#contactForm');
-if (contactForm.length > 0) {
-  contactForm.submit(function() {
-    $('form#contactForm .error').remove();
-    var hasError = false;
-    $('.requiredField').each(function() {
-      if(jQuery.trim($(this).val()) == '') {
-        var labelText = $(this).prev('label').text();
-        $(this).parent().append('<label class="error">请输入您的'+labelText+'。</label>');
-        hasError = true;
-      } else if($(this).hasClass('email')) {
-        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        if(!emailReg.test(jQuery.trim($(this).val()))) {
-          var labelText = $(this).prev('label').text();
-          $(this).parent().append('<label class="error">您输入的'+labelText+'格式不正确。</label>');
-          hasError = true;
-        }
-      }
-    });
-    if(!hasError) {
-      $('form#contactForm button').fadeOut('normal', function() {
-        $(this).parent().append('<img src="/wp-content/themes/td-v3/images/template/loading.gif" alt="Loading&hellip;" height="31" width="31" />');
-      });
-      var formInput = $(this).serialize();
-      $.post($(this).attr('action'),formInput, function(data){
-        contactForm.slideUp("fast", function() {           
-          $(this).before('<div class="thanks"><h3>感谢您对漫言的支持。</h3><p>您的来件已顺利提交，我们会抽空仔细阅读，谢谢！</p></div>');
+    if (mtNav.length) { // if banner exists
+      // Change banner display mode
+      if ($('.cover-image').length) { // cover exists, immersive mode
+        // Hover toggle visual effect on top banner
+        mtNav.hover(function() {
+          mt.navOff(mtNav);
+        }, function() {
+          mt.navOn(mtNav);
         });
+        mt.navOff(mtNav);
+      } else { // no cover, normal mode
+        mt.navOn(mtNav);
+      }
+
+      // Toggle global search bar via button switch
+      $("#nav-search").click(function () {
+        var icon = $(this).find("#nav-search-icon");
+        if (icon.hasClass("glyphicon-zoom-out")) {
+          // Currently it's showing search, make it hidden!
+          if (mtSearch.length) { // if search exists
+            mtNav.css("top", "0");
+            $("#cover-story").css("top", "0");
+            mtSearch.hide();
+          }
+          
+          icon.removeClass("glyphicon-zoom-out");
+          icon.addClass("glyphicon-search");
+        } else {
+          // Currently it's not showing search, make it show!
+          if (mtSearch.length) { // if search exists
+            mtNav.css("top", "50px");
+            $("#cover-story").css("top", "50px");
+            mtSearch.show();
+          }
+          
+          icon.removeClass("glyphicon-search");
+          icon.addClass("glyphicon-zoom-out");
+        }
+      });
+      
+    } else {
+      // console.log("Banner did not exist on this page");
+    }
+    
+    var width = $(window).width(); 
+    var screenLargeEnough = ($(window).width() > 1200) ? true : false;
+    // TODO: mobile users won't be able to see this. Find a way to let user disable all hover effects.
+
+    // Hover / toggle effect on article blocks
+    var blocks = $(".mt-block");
+    if (blocks.length) { // if blocks exist
+
+      blocks.mouseenter(function () {
+        // If you hovered over block, darken its background
+        var bg = $(this).find(".cover-shade");
+        bg.css({ opacity: 1 });
+
+        // If you hovered over block, show its summary
+        var summary = $(this).find(".excerpt");
+        summary.removeClass("hidden");
+        summary.addClass("entry-summary");
+      });
+      blocks.mouseleave(function () {
+        // If you lefted block, lighten its background
+        var bg = $(this).find(".cover-shade");
+        bg.css({ opacity: 0.8 });
+
+        // If you lefted block, hide its summary
+        var summary = $(this).find(".excerpt");
+        summary.removeClass("entry-summary");
+        summary.addClass("hidden");
+      });
+
+    } else {
+      // console.log("No blocks exist on this page");
+    }
+
+    this.scrollController(mtNav);
+  }, /* END globalController */
+
+  homeController: function() {
+    $('#home-cover').lazyLoadImage();
+
+    // Activate story link remove feature
+    var storyRemove = $('#story-remove');
+    if (storyRemove.length) {
+      storyRemove.click(function () {
+        $('.mt-story-banner').fadeOut();
       });
     }
-    return false;
-  });
-} else {
-  // Contact form does not exist.
-}
+
+    // Retrieve inner link and apply to title of frontpage cover
+    var mtFrontcover = $('#mt-front');
+    if (mtFrontcover.length) {
+      $("#cover-story").click(function () {
+        window.location = $("#cover-story-link").attr("href");
+      });
+    } else {
+      console.log("Front cover did not exist on this page");
+    }
+  }, /* END homeController */
+
+
+  p: function(printTarget) {
+    if (!arguments.length) {
+      console.log("needs input");
+      return false;
+    }
+    console.log(printTarget);  
+    return true;
+  } /* END p */
+
+};
