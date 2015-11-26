@@ -1,0 +1,29 @@
+body.home {
+
+  .hero-cover {
+    width: 800px;
+    margin: 50px auto;
+  }
+  .hero-cover-image {
+    position: relative;
+    > img {
+      min-width: 100%;
+      position: relative;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      background: radial-gradient(ellipse at center,rgba(0,0,0,.1) 0,transparent 100%) rgba(0,0,0,.3);
+    }
+  }
+  .hero-cover-text {
+    
+  }
+
+}
