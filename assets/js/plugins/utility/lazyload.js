@@ -50,13 +50,15 @@
   };
 
   var loadImageDirect = function() {
-    this.find('img[data-src]').each(function() {
-      var img = $(this);
-      var actualImg = img.attr('data-src');
-      var currentImg = img.attr('src');
-      if(actualImg !== currentImg && actualImg !== undefined) {
-        img.attr('src', actualImg).toggleClass('loaded', true);
-      }      
+    this.one('lazy-load', function(){
+      $(this).find('img[data-src]').each(function() { 
+        var img = $(this);
+        var actualImg = img.attr('data-src');
+        var currentImg = img.attr('src');
+        if(actualImg !== currentImg && actualImg !== undefined) {
+          img.attr('src', actualImg).toggleClass('loaded', true);
+        }
+      });
     });
     return this;
   };
