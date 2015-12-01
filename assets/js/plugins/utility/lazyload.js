@@ -50,20 +50,28 @@
   };
 
   var loadImageDirect = function() {
-    this.one('lazy-load', function(){
-      $(this).find('img[data-src]').each(function() { 
+    var $this = this instanceof jQuery ? this : $(this);
+    $this.one('lazy-load', function() { 
+      $.each($this, function(i, elem) {
         var img = $(this);
         var actualImg = img.attr('data-src');
         var currentImg = img.attr('src');
-        if(actualImg !== currentImg && actualImg !== undefined) {
-          img.attr('src', actualImg).toggleClass('loaded', true);
+
+        if (currentImg !== undefined && currentImg !== '') {
+          return true;
         }
+
+        if(actualImg !== currentImg && actualImg !== undefined) {
+          img.attr('src', actualImg);
+        }
+
       });
     });
+
     return this;
   };
 
-  $.fn.lazyLoadImage = loadImageDirect;
+  $.fn.lazyLoad = loadImageDirect;
   $.fn.lazyLoadAllImages = lazyLoad;
  
 })(jQuery);

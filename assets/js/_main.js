@@ -202,7 +202,9 @@ mtFunctions = {
   }, /* END globalController */
 
   homeController: function() {
-    $('#home-cover').lazyLoadImage();
+    // var coverImages = $('#home-cover img');
+    // coverImages.lazyLoad();
+    // coverImages.trigger('lazy-load');
 
     // Activate story link remove feature
     var storyRemove = $('#story-remove');
