@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*
-Theme Name: MangaTalk Theme
-Theme URI: https://github.com/karuto/mangatalk-theme
+Theme Name: Karuto Starter Theme
+Theme URI: https://github.com/karuto/karuto-starter-theme
 Author: Vincent Zhang + the WordPress team
-Author URI: https://mangatalk.net
-Description: This is MangaTalk's theme, modified from Karuto's starter theme.
+Author URI: https://vincentzh.com
+Description: This is Vincent Zhang's (karuto) starter theme, modified from WordPress' official Twenty Nineteen theme.
 Requires at least: WordPress 4.9.6
 Version: 1.2
 License: GNU General Public License v2 or later
@@ -24,7 +24,7 @@ Text Domain: twentynineteen
 /* 48px */
 /* 64px */
 /* 96px */
-/* 960px, works for 12, 8, 6, 3, 4 cols */
+/* new definition, still works for 12, 8, 6, 3, 4 cols */
 /* Fallback for non-latin fonts */
 /* vincentzh-theme mixins */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -426,14 +426,8 @@ body#tinymce {
 
 /* Global utility helper classes */
 .maxwidth {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 auto;
-}
-
-@media (max-width: 767px) {
-  .maxwidth {
-    margin: 0 32px;
-  }
 }
 
 .clearfix:after {
@@ -878,9 +872,16 @@ body#tinymce {
 .feeds {
   /* The wrapper for a collection of feed */
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 16px;
   grid-gap: 16px;
+  margin: 0 16px;
+}
+
+@media (max-width: 767px) {
+  .feeds {
+    grid-template-columns: 100%;
+  }
 }
 
 .feeds__header {
@@ -897,22 +898,25 @@ body#tinymce {
 
 .feed {
   /* The wrapper for a single article (feed item) */
+  background-color: #000;
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  border-radius: 8px;
   margin: 0;
+  box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.2);
   padding: 0 0 16px;
   /* top doesn't need padding because image cover */
 }
 
 .feed__cover {
   /* The feature image cover that wraps around the title */
-  height: 400px;
+  height: 320px;
   background-size: cover;
+  background-position: center;
   position: relative;
   display: flex;
   align-items: flex-end;
-  margin: 0 0 16px;
+  border-radius: 8px;
 }
 
 .feed__cover__shade {
@@ -944,7 +948,7 @@ body#tinymce {
 }
 
 .feed__excerpt {
-  color: #333;
+  color: #FFFFFF;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   line-height: 1.7;
   margin: 0 32px 16px;
@@ -957,6 +961,7 @@ body#tinymce {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
+  color: #FFFFFF;
   margin: 0 32px;
 }
 
@@ -973,7 +978,7 @@ body#tinymce {
 
 /* Hompage desktop - two column feeds */
 .feeds--home {
-  max-width: 960px;
+  max-width: 1140px;
   margin: 0 0 96px;
   /* Overriding the auto margin */
   display: flex;

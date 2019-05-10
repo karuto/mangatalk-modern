@@ -2,9 +2,6 @@
 .maxwidth {
   max-width: $container-maxwidth;
   margin: 0 auto;
-  @media (max-width: $mobile-max) {
-    margin: 0 $spacing-large;
-  }
 }
 .clearfix:after {
   content: "";

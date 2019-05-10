@@ -1,13 +1,18 @@
 $feed-gutter-small: $spacing;
 $feed-gutter-large: $spacing-large;
 $feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have $spacing-gigantic */
+$feed-border-radius: 8px;
 
 .feeds {
   /* The wrapper for a collection of feed */
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: $feed-gutter-small;
   grid-gap: $feed-gutter-small;
+  margin: 0 $feed-gutter-small;
+  @media (max-width: $mobile-max) {  
+    grid-template-columns: 100%;
+  }
 }
 .feeds__header {
   /* The header that summarizies to a collection of feed */
@@ -19,20 +24,25 @@ $feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have
 }
 .feed {
   /* The wrapper for a single article (feed item) */
+  background-color: $color-darkest;
   display: flex;
   flex-direction: column;
-  background-color: $color-white;
+  border-radius: $feed-border-radius;
   margin: 0;
+  box-shadow: 0px 2px 4px rgba(45, 51, 63, .2);
   padding: 0 0 $feed-gutter-small; /* top doesn't need padding because image cover */
+  &:hover {
+  }
 }
 .feed__cover {
   /* The feature image cover that wraps around the title */
-  height: 400px;
+  height: $feed-gutter-large * 10;
   background-size: cover;
+  background-position: center;
   position: relative;
   display: flex;
   align-items: flex-end;
-  margin: 0 0 $feed-gutter-small;
+  border-radius: $feed-border-radius;
 }
 .feed__cover__shade {
   position: absolute;
@@ -57,7 +67,7 @@ $feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have
   margin: $feed-gutter-large;
 }
 .feed__excerpt {
-  color: $subtle-text-color;
+  color: $color-white;
   font-family: $font-family-content;
   line-height: $line-height-content;
   margin: 0 $feed-gutter-large $feed-gutter-small;
@@ -65,6 +75,7 @@ $feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have
 }
 .feed__metas {
   @include subtlefont();
+  color: $color-white;
   margin: 0 $feed-gutter-large;
 }
 .feed__metas a {
