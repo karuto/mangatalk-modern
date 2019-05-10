@@ -1,14 +1,17 @@
 .header {
-  display: flex;
+  /* The very top level container for everything */
   justify-content: space-between;
-  margin: $spacing-medium 0 $spacing-gigantic;
   font-size: $font-size-tiny;
   font-weight: bold;
   text-transform: uppercase;
+  background-color: $color-white;
+  margin: 0 0 $spacing-gigantic;
+}
 
-  @media (max-width: $mobile-max) {
-    display: block;
-  }
+.header__wrapper {
+  /* The next top level class wrapper inside container */
+  display: flex;
+  padding: $spacing;
 }
 
 .header__title {

@@ -32,7 +32,7 @@ if (has_post_thumbnail( $post->ID ) ) {
 	</div>
 
 	<div class="feed__metas">
-    <?php get_template_part( 'templates/content/content-post-meta' ); ?>
+    <?php get_template_part( 'templates/content/content-excerpt-meta' ); ?>
 	</div>
 
 </article>

@@ -24,13 +24,14 @@ $feed-border-radius: 8px;
 }
 .feed {
   /* The wrapper for a single article (feed item) */
-  background-color: $color-darkest;
+  // background-color: $color-darkest;
+  background-color: white;
   display: flex;
   flex-direction: column;
   border-radius: $feed-border-radius;
   margin: 0;
   box-shadow: 0px 2px 4px rgba(45, 51, 63, .2);
-  padding: 0 0 $feed-gutter-small; /* top doesn't need padding because image cover */
+  padding: 0 0 $feed-gutter-large; /* top doesn't need padding because image cover */
   &:hover {
   }
 }
@@ -49,25 +50,34 @@ $feed-border-radius: 8px;
   width: 100%;
   top: 0;
   bottom: 0;
-  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
-  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
-  background-image: linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+  // background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
+  // background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
+  // background-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
+  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
+  background-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .feed__title {
   /* The anchor tag that wraps around the text */
-  color: $color-white;
+  // color: $color-white;
+  color: black;
   z-index: 9;
   width: 100%;
 }
 .feed__title__text {
   @include titlefont();
+  font-size: 22px; /* testing new typography */
+  line-height: 1.25; /* testing new typography */
   margin: $feed-gutter-large;
 }
 .feed__excerpt {
-  color: $color-white;
+  // color: $color-white;
+  color: black;
+  font-size: 14px; /* testing new typography */
+  line-height: 1.5; /* testing new typography */
   font-family: $font-family-content;
   line-height: $line-height-content;
   margin: 0 $feed-gutter-large $feed-gutter-small;
@@ -75,45 +85,13 @@ $feed-border-radius: 8px;
 }
 .feed__metas {
   @include subtlefont();
-  color: $color-white;
+  font-size: 12px; /* testing new typography */
+  line-height: 1; /* testing new typography */
+  // color: $color-white;
+  color: black;
   margin: 0 $feed-gutter-large;
 }
 .feed__metas a {
   /* hate to do this, but must override <a> without classes by the_category */
   @include linkStyleOverride();
-}
-
-
-/* Hompage desktop - two column feeds */
-.feeds--home {
-  max-width: $container-maxwidth;
-  margin: 0 0 $feed-gutter-gigantic; /* Overriding the auto margin */
-  display: flex;
-}
-.feed--home {
-  flex: 1 0 50%;
-  &:not(:last-child) {
-    padding: 0 $feed-gutter-large 0 0;
-  }
-  @media (max-width: $mobile-max) {
-    margin: 0 0 $feed-gutter-gigantic;
-  }
-}
-.feeds__header--home {
-  display: block;
-}
-.feeds__header__link {
-  @include linkStyleOverride();
-}
-
-/* Hompage mobile - one column feeds */
-@media (max-width: $mobile-max) {
-  .feeds--home {
-    display: block;
-  }
-  .feed--home {    
-    &:not(:last-child) {
-      padding: 0;
-    }
-  }
 }

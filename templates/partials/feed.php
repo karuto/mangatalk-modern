@@ -11,8 +11,12 @@
 ?>
 <?php 
 get_template_part( 'templates/partials/page-header' );
+$sectionClass = 'feeds';
+if ( is_single() || is_page() ) {
+  $sectionClass = 'single';
+}
 ?>
-<section class="feeds">
+<section class=<?php echo $sectionClass; ?>>
   <?php 
   if ( have_posts() ) {
     // Start the Loop.

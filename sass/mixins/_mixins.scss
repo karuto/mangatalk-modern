@@ -99,6 +99,16 @@
   }
 }
 
+@mixin fullpagewidth() {
+	/* https://css-tricks.com/full-width-containers-limited-width-parents/#article-header-id-6 */
+  position: relative; 
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
 // Provide site-wide "title font" style
 @mixin titlefont() {
   font-family: $font-family-title;

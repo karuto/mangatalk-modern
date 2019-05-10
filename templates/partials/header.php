@@ -13,7 +13,9 @@
 <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
 
 <header id="masthead" class="header">
-	<?php get_template_part( 'templates/partials/header-branding' ); ?>
-	<?php get_template_part( 'templates/partials/header-menu' ); ?>
+	<div class="header__wrapper maxwidth">
+		<?php get_template_part( 'templates/partials/header-branding' ); ?>
+		<?php get_template_part( 'templates/partials/header-menu' ); ?>
+	</div>
 </header><!-- #masthead -->
 

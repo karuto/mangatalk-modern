@@ -898,13 +898,13 @@ body#tinymce {
 
 .feed {
   /* The wrapper for a single article (feed item) */
-  background-color: #000;
+  background-color: white;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   margin: 0;
   box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.2);
-  padding: 0 0 16px;
+  padding: 0 0 32px;
   /* top doesn't need padding because image cover */
 }
 
@@ -924,9 +924,9 @@ body#tinymce {
   width: 100%;
   top: 0;
   bottom: 0;
-  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
-  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
+  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -934,7 +934,7 @@ body#tinymce {
 
 .feed__title {
   /* The anchor tag that wraps around the text */
-  color: #FFFFFF;
+  color: black;
   z-index: 9;
   width: 100%;
 }
@@ -944,11 +944,19 @@ body#tinymce {
   line-height: 1.15;
   font-size: 28px;
   font-weight: 400;
+  font-size: 22px;
+  /* testing new typography */
+  line-height: 1.25;
+  /* testing new typography */
   margin: 32px;
 }
 
 .feed__excerpt {
-  color: #FFFFFF;
+  color: black;
+  font-size: 14px;
+  /* testing new typography */
+  line-height: 1.5;
+  /* testing new typography */
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   line-height: 1.7;
   margin: 0 32px 16px;
@@ -961,7 +969,11 @@ body#tinymce {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
-  color: #FFFFFF;
+  font-size: 12px;
+  /* testing new typography */
+  line-height: 1;
+  /* testing new typography */
+  color: black;
   margin: 0 32px;
 }
 
@@ -974,52 +986,6 @@ body#tinymce {
 .feed__metas a:hover {
   color: #333;
   background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
-}
-
-/* Hompage desktop - two column feeds */
-.feeds--home {
-  max-width: 1140px;
-  margin: 0 0 96px;
-  /* Overriding the auto margin */
-  display: flex;
-}
-
-.feed--home {
-  flex: 1 0 50%;
-}
-
-.feed--home:not(:last-child) {
-  padding: 0 32px 0 0;
-}
-
-@media (max-width: 767px) {
-  .feed--home {
-    margin: 0 0 96px;
-  }
-}
-
-.feeds__header--home {
-  display: block;
-}
-
-.feeds__header__link {
-  color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
-}
-
-.feeds__header__link:hover {
-  color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
-}
-
-/* Hompage mobile - one column feeds */
-@media (max-width: 767px) {
-  .feeds--home {
-    display: block;
-  }
-  .feed--home:not(:last-child) {
-    padding: 0;
-  }
 }
 
 .footer {
@@ -1062,18 +1028,19 @@ body#tinymce {
 }
 
 .header {
-  display: flex;
+  /* The very top level container for everything */
   justify-content: space-between;
-  margin: 24px 0 96px;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  background-color: #FFFFFF;
+  margin: 0 0 96px;
 }
 
-@media (max-width: 767px) {
-  .header {
-    display: block;
-  }
+.header__wrapper {
+  /* The next top level class wrapper inside container */
+  display: flex;
+  padding: 16px;
 }
 
 .header__title {
