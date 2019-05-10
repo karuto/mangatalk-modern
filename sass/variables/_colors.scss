@@ -1,0 +1,30 @@
+// Greys - the colors should not be used outside of this file
+$color-white:        #FFFFFF;
+$color-lightest-gray: #F5F5F5;
+$color-lighter-gray:   #E8E8E8;
+$color-light-gray:     #DBDBDB;
+$color-mid-gray:     #CECECE;
+$color-dark-gray:    #878787;
+$color-comfort-gray: #FAF5F5; /* slight red tint; not used */
+$color-light:        #999;
+$color-medium:       #777;
+$color-dark:         #333;
+$color-darker:       #000;
+$color-darkest:      #000;
+
+
+// Brand colors
+$brand-primary: #E84141; /* Content red */
+$brand-meta: $color-light; /* For all the meta components */
+
+
+// Text colors
+$base-text-color: $color-darkest;
+$subtle-text-color: $color-dark;
+$strong-text-color: $color-darkest;
+
+
+// Non-text colors
+$page-bg-color: $color-lightest-gray;
+$block-bg-color: $color-lighter-gray;
+$hightlight-color: $brand-primary;

@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: $spacing-medium 0 $spacing-gigantic;
+  font-size: $font-size-tiny;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media (max-width: $mobile-max) {
+    display: block;
+  }
+}
+
+.header__title {
+  margin: 0;
+  font-family: $font-family-logo;
+  font-weight: $font-weight-bold;
+}
+
+.header__description {
+  display: none; /* TODO: accommodate this later. */
+}
+
+.header__nav {
+  .menu {
+    @media (max-width: $mobile-max) {
+      display: flex;
+      overflow: scroll;
+    }
+  }
+
+  .menu-item {
+    display: inline-block;
+    @media (max-width: $mobile-max) {
+      white-space: nowrap; /* force text on one line */
+    }
+    a {
+      margin: 0 0 0 $spacing-medium;
+      @include linkStyleOverride();
+      @media (max-width: $mobile-max) {
+        margin: 0 $spacing-medium 0 0;
+      }
+    }
+  }
+}

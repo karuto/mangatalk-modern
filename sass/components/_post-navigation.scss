@@ -1,0 +1,56 @@
+/* WP generated prev & next classes */
+.navigation {
+  /* the margin between you and footer is taken care of by your parent */
+  margin: 0;
+  font-size: $font-size-tiny;
+  font-weight: bold;
+
+  .screen-reader-text {
+    display: none;
+  }
+
+  & a {
+    /* hate to write this, but adding classes to this takes more work */  
+    // @include linkStyleOverride();
+  }
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+.nav-previous, .nav-next {
+  text-transform: uppercase;
+  margin: 0 $spacing-medium;
+}
+
+
+
+/* WP generated pagination classes */
+.page-numbers {
+  text-transform: uppercase;
+  margin: 0 $spacing;
+
+  &.next {
+    /* The wrapper "Previous" */
+
+  }
+
+  &.prev {
+    /* The wrapper "Next" */
+
+  }
+
+  &.current {
+
+  }
+}
+
+.nav-prev-text {
+  /* The text "Previous" */
+
+}
+
+.nav-next-text {
+  /* The text "Next" */
+  
+}

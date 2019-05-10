@@ -1,11 +1,1243 @@
+@charset "UTF-8";
 /*
-Theme Name:         MangaTalk Modern
-Theme URI:          http://mangatalk.net/
-Description:        Clean, sharp, minimalistic, with a strong focus on reading.
-Version:            0.3.20140927
-Author:             Vincent Zhang (Karuto)
-Author URI:         http://karu.me/
-
-License:            MIT License
-License URI:        http://opensource.org/licenses/MIT
+Theme Name: MangaTalk Theme
+Theme URI: https://github.com/karuto/mangatalk-theme
+Author: Vincent Zhang + the WordPress team
+Author URI: https://mangatalk.net
+Description: This is MangaTalk's theme, modified from Karuto's starter theme.
+Requires at least: WordPress 4.9.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: twentynineteen
 */
+/* NEED - Mobile bottom-line */
+/* NEED - Non-mobile bottom-line */
+/* NICE TO HAVE - Large desktop */
+/* NICE TO HAVE - Portrait tablet to landscape and desktop */
+/* NICE TO HAVE - Landscape phone to portrait tablet */
+/* NICE TO HAVE - Landscape phones and down */
+/* slight red tint; not used */
+/* Content red */
+/* For all the meta components */
+/* 1.6rem */
+/* 48px */
+/* 64px */
+/* 96px */
+/* 960px, works for 12, 8, 6, 3, 4 cols */
+/* Fallback for non-latin fonts */
+/* vincentzh-theme mixins */
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Global DOM definitions (HTML tag targeting declarations only) */
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection,
+::selection {
+  background: #E84141;
+}
+
+html, body {
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #F5F5F5;
+  margin: 0 auto;
+}
+
+body, button, input, select, textarea {
+  color: #000;
+  font-size: 16px;
+  /* 14px */
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+dl, dd, dt {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: #000;
+}
+
+a:hover {
+  color: #E84141;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 24px;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+body#tinymce {
+  /* what is this about? */
+  margin: 12px !important;
+}
+
+/* Global utility helper classes */
+.maxwidth {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .maxwidth {
+    margin: 0 32px;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #333;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+/* Criteria for adding a component stylesheet:
+ - Each file should style a single, self-contained piece of HTML.
+*/
+/* This stylesheet targets "submit new comment" form only. Also see comments.scss */
+.comment-form {
+  margin: 0;
+  /* TODO: make the textarea adaptable to input */
+  /* The <p> tag that WordPress automatically generates to the submit button */
+  /* The <input> tag that actually is the submit button */
+}
+
+.comment-form .comment__input {
+  border: 2px solid #E8E8E8;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.comment-form .comment__input__label, .comment-form .comment__checkbox {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  min-width: 48px;
+  margin: 0 16px 0 0;
+}
+
+.comment-form .comment__body {
+  align-items: center;
+}
+
+.comment-form .comment__logged-in-as,
+.comment-form .comment__notes,
+.comment-form .comment__body {
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.comment-form .comment__input {
+  width: 100%;
+}
+
+.comment-form textarea {
+  resize: vertical;
+  height: 48px;
+  /* align horizontally with avatar */
+}
+
+.comment-form .comment-form-comment {
+  margin: 0;
+}
+
+.comment-form .form-submit {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form .comment__submit {
+  /* Align to the right end */
+  align-self: flex-end;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 2px solid #E8E8E8;
+  background: #E8E8E8;
+  padding: 4px 8px;
+  transition: all 0.5s ease;
+}
+
+.comment-form .comment__submit:hover {
+  background: #E84141;
+}
+
+.comment-form .comment__checkbox {
+  width: 48px;
+}
+
+/* This stylesheet targets existing comments only. Also see comments-form.scss */
+.discussion {
+  /* Discussion = submit a comment + comments */
+  margin: -48px 0 96px;
+  padding: 0 0 48px;
+  border-bottom: 6px double #333;
+}
+
+.comments {
+  margin: 48px 0 0;
+}
+
+/* This isn't the best class to target individual comment, because a thread is one "comment" */
+.comment.depth-2, .comment.depth-3, .comment.depth-4, .comment.depth-5 {
+  margin: 0 0 0 64px;
+}
+
+@media (max-width: 767px) {
+  .comment.depth-2, .comment.depth-3, .comment.depth-4, .comment.depth-5 {
+    margin: 0;
+  }
+}
+
+/* This is the best class to target individual comment */
+/* Also being used in submit new comment form */
+.comment__body {
+  display: flex;
+  margin: 0 0 32px;
+}
+
+.comment__author {
+  margin: 0 16px 0 0;
+}
+
+.comment__author .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+
+.comment__meta {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.comment__meta__data {
+  line-height: 1;
+}
+
+.comment__content {
+  flex-grow: 2;
+}
+
+.comment__text {
+  margin: 0 0 8px;
+}
+
+.comment__reply {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.entry__content {
+  padding: 0 0 48px;
+  border-bottom: 6px double #333;
+  margin: 0 0 48px;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+}
+
+.entry__content p,
+.entry__content > ul,
+.entry__content > ol,
+.entry__content li {
+  /* These are all "paragraph level" content */
+  margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: left;
+}
+
+.entry__content a {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+}
+
+.entry__content a:hover {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
+}
+
+.entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
+  margin: 48px 0 24px;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-weight: 700;
+}
+
+.entry__content h2 {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.entry__content ul {
+  list-style: square outside;
+}
+
+.entry__content ol {
+  list-style: decimal outside;
+}
+
+.entry__content code {
+  background: #E8E8E8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 4px;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.entry__content em {
+  font-style: italic;
+}
+
+.entry__content s {
+  text-decoration: line-through;
+  color: #333;
+}
+
+.entry__content b, .entry__content strong {
+  font-weight: 700;
+}
+
+.entry__content hr {
+  border: 2px solid #333;
+  height: 0;
+  margin: 0 0 24px;
+}
+
+.entry__content pre {
+  /* Browser specific (not valid) styles to make preformatted text wrap */
+  /* https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+.entry__copyright {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+}
+
+.entry__copyright__link {
+  font-weight: 700;
+}
+
+/* Handles both single POST and PAGE */
+.entry {
+  /* anything next to footer should have $spacing-gigantic */
+  margin: 0 auto 96px;
+  max-width: 740px;
+}
+
+.entry__excerpt {
+  margin: 0;
+  color: #333;
+  padding: 0 0 48px;
+  border-bottom: 6px double #333;
+}
+
+.entry__meta {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.entry__meta a {
+  /* hate to do this, but must override <a> without classes by the_category */
+  color: #333;
+}
+
+.entry__meta a:hover {
+  color: #E84141;
+}
+
+.entry__content {
+  padding: 0 0 48px;
+  border-bottom: 6px double #333;
+  margin: 0 0 48px;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+}
+
+.entry__content p,
+.entry__content > ul,
+.entry__content > ol,
+.entry__content li {
+  /* These are all "paragraph level" content */
+  margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: left;
+}
+
+.entry__content a {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+}
+
+.entry__content a:hover {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
+}
+
+.entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
+  margin: 48px 0 24px;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-weight: 700;
+}
+
+.entry__content h2 {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.entry__content ul {
+  list-style: square outside;
+}
+
+.entry__content ol {
+  list-style: decimal outside;
+}
+
+.entry__content code {
+  background: #E8E8E8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 0 4px;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.entry__content em {
+  font-style: italic;
+}
+
+.entry__content s {
+  text-decoration: line-through;
+  color: #333;
+}
+
+.entry__content b, .entry__content strong {
+  font-weight: 700;
+}
+
+.entry__content hr {
+  border: 2px solid #333;
+  height: 0;
+  margin: 0 0 24px;
+}
+
+.entry__content pre {
+  /* Browser specific (not valid) styles to make preformatted text wrap */
+  /* https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
+.entry__copyright {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+}
+
+.entry__copyright__link {
+  font-weight: 700;
+}
+
+/* anything next to footer should have $spacing-gigantic */
+.feeds {
+  /* The wrapper for a collection of feed */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 16px;
+  grid-gap: 16px;
+}
+
+.feeds__header {
+  /* The header that summarizies to a collection of feed */
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0 0 16px;
+  margin: 0 0 32px;
+  border-bottom: 6px double #333;
+}
+
+.feed {
+  /* The wrapper for a single article (feed item) */
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0 0 16px;
+  /* top doesn't need padding because image cover */
+}
+
+.feed__cover {
+  /* The feature image cover that wraps around the title */
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 16px;
+}
+
+.feed__cover__shade {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.01) 5%, rgba(0, 0, 0, 0.95) 100%);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.feed__title {
+  /* The anchor tag that wraps around the text */
+  color: #FFFFFF;
+  z-index: 9;
+  width: 100%;
+}
+
+.feed__title__text {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  line-height: 1.15;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 32px;
+}
+
+.feed__excerpt {
+  color: #333;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  line-height: 1.7;
+  margin: 0 32px 16px;
+  flex-grow: 1;
+  /* This is to push the last flex item (metas) to the flex-end */
+}
+
+.feed__metas {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 32px;
+}
+
+.feed__metas a {
+  /* hate to do this, but must override <a> without classes by the_category */
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+}
+
+.feed__metas a:hover {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
+}
+
+/* Hompage desktop - two column feeds */
+.feeds--home {
+  max-width: 960px;
+  margin: 0 0 96px;
+  /* Overriding the auto margin */
+  display: flex;
+}
+
+.feed--home {
+  flex: 1 0 50%;
+}
+
+.feed--home:not(:last-child) {
+  padding: 0 32px 0 0;
+}
+
+@media (max-width: 767px) {
+  .feed--home {
+    margin: 0 0 96px;
+  }
+}
+
+.feeds__header--home {
+  display: block;
+}
+
+.feeds__header__link {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+}
+
+.feeds__header__link:hover {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
+}
+
+/* Hompage mobile - one column feeds */
+@media (max-width: 767px) {
+  .feeds--home {
+    display: block;
+  }
+  .feed--home:not(:last-child) {
+    padding: 0;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 96px;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    display: block;
+  }
+}
+
+.footer .widget-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer .widget {
+  /* Gutter; only works with space-between above */
+  width: calc(50% - 16px);
+}
+
+@media (max-width: 767px) {
+  .footer .widget {
+    width: 100%;
+  }
+}
+
+.footer .widget-title {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0 96px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .header {
+    display: block;
+  }
+}
+
+.header__title {
+  margin: 0;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-weight: 700;
+}
+
+.header__description {
+  display: none;
+  /* TODO: accommodate this later. */
+}
+
+@media (max-width: 767px) {
+  .header__nav .menu {
+    display: flex;
+    overflow: scroll;
+  }
+}
+
+.header__nav .menu-item {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .header__nav .menu-item {
+    white-space: nowrap;
+    /* force text on one line */
+  }
+}
+
+.header__nav .menu-item a {
+  margin: 0 0 0 24px;
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+}
+
+.header__nav .menu-item a:hover {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
+}
+
+@media (max-width: 767px) {
+  .header__nav .menu-item a {
+    margin: 0 24px 0 0;
+  }
+}
+
+.hero {
+  margin: 0 0 96px;
+}
+
+.hero--entry {
+  margin: 0 0 48px;
+}
+
+.hero--discussion {
+  margin: 0 0 48px;
+}
+
+.hero__title {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.hero__content {
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 0;
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  .hero__content {
+    width: 100%;
+  }
+}
+
+.hero__s {
+  color: #333;
+}
+
+.hero__link {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+}
+
+.hero__link:hover {
+  color: #333;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
+}
+
+/* WP generated prev & next classes */
+.navigation {
+  /* the margin between you and footer is taken care of by your parent */
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navigation .screen-reader-text {
+  display: none;
+}
+
+.navigation a {
+  /* hate to write this, but adding classes to this takes more work */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-previous, .nav-next {
+  text-transform: uppercase;
+  margin: 0 24px;
+}
+
+/* WP generated pagination classes */
+.page-numbers {
+  text-transform: uppercase;
+  margin: 0 16px;
+}
+
+.page-numbers.next {
+  /* The wrapper "Previous" */
+}
+
+.page-numbers.prev {
+  /* The wrapper "Next" */
+}
+
+.nav-prev-text {
+  /* The text "Previous" */
+}
+
+.nav-next-text {
+  /* The text "Next" */
+}
+
+.searchform {
+  margin: 48px 0;
+}
+
+.searchform-input,
+.searchform-submit {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  outline-offset: 0px;
+  /* reset browser defaults */
+  outline: transparent none medium;
+  /* reset browser defaults */
+  border: 2px solid #333;
+}
+
+.searchform-input {
+  width: 50%;
+  margin: 0 16px 0 0;
+  padding: 8px 16px;
+}
+
+.searchform-submit {
+  background-color: #E8E8E8;
+  padding: 8px 32px;
+}
+
+.screen-reader-text {
+  display: none;
+}

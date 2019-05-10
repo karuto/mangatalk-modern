@@ -1,0 +1,70 @@
+/* This stylesheet targets existing comments only. Also see comments-form.scss */
+
+.discussion {
+  /* Discussion = submit a comment + comments */
+  margin: -$spacing-xxlarge 0 $spacing-gigantic;
+  padding: 0 0 $spacing-xxlarge;
+  border-bottom: $border-line-bold;
+}
+.discussion--closed {
+}
+.discussion__heading {
+  
+}
+.discussion__heading--no-responses {
+  
+}
+.discussion__heading__title {
+
+}
+.comments {
+  margin: $spacing-xxlarge 0 0;
+}
+/* This isn't the best class to target individual comment, because a thread is one "comment" */
+.comment {
+  &.depth-2, 
+  &.depth-3, 
+  &.depth-4, 
+  &.depth-5 {
+    // calc($spacing-xxlarge + $spacing) = 48 + 16 = 64;
+    // set left margin to indent comparing to parent
+    margin: 0 0 0 64px;
+    @media (max-width: $mobile-max) {
+      margin: 0;
+    }
+  }
+}
+/* This is the best class to target individual comment */
+/* Also being used in submit new comment form */
+.comment__body {
+  display: flex;
+  margin: 0 0 $spacing-large;
+}
+.comment__author {
+  margin: 0 $spacing 0 0;
+  .avatar {
+    width: $spacing-xxlarge;
+    height: $spacing-xxlarge;
+    border-radius: $base-border-radius;
+  }
+}
+.comment__meta {
+  @include subtlefont();
+  margin: 0 0 $spacing-small;
+}
+.comment__meta__data {
+  line-height: 1;
+}
+.comment__meta__awaiting-moderation {
+  
+}
+.comment__content {
+  flex-grow: 2;
+}
+.comment__text {
+  margin: 0 0 $spacing-small;
+}
+.comment__reply {
+  @include subtlefont();
+  margin: 0;
+}

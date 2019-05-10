@@ -1,0 +1,18 @@
+/*
+Theme Name: Karuto Starter Theme
+Theme URI: https://github.com/karuto/karuto-starter-theme
+Author: Vincent Zhang + the WordPress team
+Author URI: https://vincentzh.com
+Description: This is Vincent Zhang's (karuto) starter theme, modified from WordPress' official Twenty Nineteen theme.
+Requires at least: WordPress 4.9.6
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: twentynineteen
+*/
+
+@import "sass/variables/variables";
+@import "sass/mixins/mixins";
+@import "sass/normalize";
+@import "sass/globals/globals";
+@import "sass/components/components";

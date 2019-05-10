@@ -1,0 +1,21 @@
+// Globally applicable spacings
+$rem-base: 16px; /* 1.6rem */
+$spacing: $rem-base;
+$spacing-xsmall: ($spacing * 0.25);
+$spacing-small: ($spacing * 0.5);
+$spacing-smaller: ($spacing * 0.75);
+$spacing-medium: ($spacing * 1.5);
+$spacing-large: ($spacing * 2);
+$spacing-xlarge: ($spacing * 2.5);
+$spacing-xxlarge: ($spacing * 3); /* 48px */
+$spacing-xxxlarge: ($spacing * 4); /* 64px */
+$spacing-gigantic: ($spacing * 6); /* 96px */
+
+
+// Page specific but reusable spacings
+$base-border-radius: $spacing-xsmall;
+$container-maxwidth: $spacing * 60; /* 960px, works for 12, 8, 6, 3, 4 cols */
+$onecolumn-maxwidth: 740px;
+$border-line: 2px solid $color-dark;
+$border-line-bold: 6px double $color-dark;
+$entry-meta-width: $spacing * 6;

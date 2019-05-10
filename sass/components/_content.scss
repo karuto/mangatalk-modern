@@ -1,0 +1,88 @@
+.entry__content {
+  padding: 0 0 $spacing-xxlarge;
+  border-bottom: $border-line-bold;
+  margin: 0 0 $spacing-xxlarge;
+  font-family: $font-family-content;
+
+  p,
+  & > ul,
+  & > ol,
+  li {
+    /* These are all "paragraph level" content */
+    @include contentfont();
+  }
+
+  a {
+    @include linkStyleOverride();
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: $spacing-xxlarge 0 $spacing-medium;
+    font-family: $font-family-title;
+    font-weight: $font-weight-bold;
+  }
+
+  h2 {
+    font-size: $font-size-title;
+    line-height: $line-height-title;
+  }
+
+  ul {
+    list-style: square outside;
+  }
+
+  ol {
+    list-style: decimal outside;
+  }
+
+  code {
+    background: $block-bg-color;
+    padding: 2px $spacing-small;
+    border-radius: $base-border-radius;
+    margin: 0 $spacing-xsmall;
+    font-size: $font-size-tiny;
+    font-family: $font-family-mono;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  s {
+    text-decoration: line-through;
+    color: $subtle-text-color;
+  }
+
+  b, strong {
+    font-weight: $font-weight-bold;
+  }
+
+  hr {
+    border: $border-line;
+    height: 0;
+    margin: 0 0 $spacing-medium;
+  }
+
+  pre {
+    /* Browser specific (not valid) styles to make preformatted text wrap */
+    /* https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+}
+
+
+.entry__copyright {
+  margin: 0;
+  color: $subtle-text-color;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+
+  &__link {
+    font-weight: $font-weight-bold;
+  }
+}

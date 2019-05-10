@@ -1,0 +1,38 @@
+<?php
+/**
+ * Template part for displaying post archives and search results.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage karuto_starter_theme
+ * @since added by Vincent Zhang
+ */
+?>
+
+<?php 
+$imageUrl = '';
+if (has_post_thumbnail( $post->ID ) ) {
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+	$imageUrl = $image[0];
+}
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class('feed'); ?>>
+
+	<div class="feed__cover" style="background-image: url('<?php echo $image[0]; ?>')">
+		<a class="feed__title" href="<?php the_permalink(); ?>">
+			<h2 class="feed__title__text"><?php the_title(); ?></h1>
+		</a>
+		<div class="feed__cover__shade"></div>
+	</div>
+
+	<div class="feed__excerpt">
+		<?php echo get_the_excerpt(); ?>
+	</div>
+
+	<div class="feed__metas">
+    <?php get_template_part( 'templates/content/content-post-meta' ); ?>
+	</div>
+
+</article>

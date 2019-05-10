@@ -1,0 +1,71 @@
+/* This stylesheet targets "submit new comment" form only. Also see comments.scss */
+
+
+
+.comment-form {
+  margin: 0;
+
+  %input {
+    border: 2px solid $block-bg-color;
+    border-radius: $base-border-radius;
+    padding: $spacing-xsmall $spacing-small;
+  }
+  %leftSide {
+    @include subtlefont();
+    display: inline-block;
+    min-width: $spacing-xxlarge;
+    margin: 0 $spacing 0 0;
+  }
+  .comment__body {
+    align-items: center;
+  }
+  .comment__logged-in-as,
+  .comment__notes,
+  .comment__body {
+    line-height: 1;
+    margin: 0 0 $spacing-small;
+  }
+  /* TODO: make the textarea adaptable to input */
+  .comment__input {
+    @extend %input;
+    width: 100%;
+  }
+  textarea {
+    resize: vertical;
+    height: $spacing-xxlarge; /* align horizontally with avatar */
+  }
+  .comment-form-comment {
+    margin: 0;
+  }
+  /* The <p> tag that WordPress automatically generates to the submit button */
+  .form-submit {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  /* The <input> tag that actually is the submit button */
+  .comment__submit {
+    /* Align to the right end */
+    align-self: flex-end;
+    @include subtlefont();
+    border-radius: $base-border-radius;
+    border: 2px solid $block-bg-color;
+    background: $block-bg-color;
+    padding: $spacing-xsmall $spacing-small;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background: $hightlight-color;
+    }
+  }
+  .comment__input__label {
+    @extend %leftSide;
+  }
+  .comment__checkbox {
+    @extend %leftSide;
+    width: $spacing-xxlarge;
+  }
+  .comment__checkbox__label {
+    // line-height: $line-height-base;
+  }
+}

@@ -1,0 +1,24 @@
+.searchform {
+  margin: $spacing-xxlarge 0;
+}
+.searchform-input,
+.searchform-submit {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  outline-offset: 0px; /* reset browser defaults */
+  outline: transparent none medium; /* reset browser defaults */
+  border: $border-line;
+}
+.searchform-input {
+  width: 50%;
+  margin: 0 $spacing 0 0;
+  padding: $spacing-small $spacing;
+}
+.searchform-submit {
+  background-color: $block-bg-color;
+  padding: $spacing-small $spacing-large;
+}
+.screen-reader-text {
+  display: none;
+}

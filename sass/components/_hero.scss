@@ -1,0 +1,42 @@
+.hero {
+  margin: 0 0 $spacing-gigantic;
+}
+
+.hero--oops {
+}
+
+.hero--entry {
+  margin: 0 0 $spacing-xxlarge;
+}
+
+.hero--home {
+}
+
+.hero--discussion {
+  margin: 0 0 $spacing-xxlarge;
+}
+
+.hero__title {
+  font-family: $font-family-title;
+  font-size: $font-size-hero;
+  line-height: $line-height-hero;
+  margin: 0 0 $spacing-small;
+}
+
+.hero__content {
+  font-size: $font-size-hero;
+  line-height: $line-height-hero;
+  margin: 0;
+  width: 50%;
+  @media (max-width: $mobile-max) {
+    width: 100%;
+  }
+}
+
+.hero__s {
+  color: $subtle-text-color;
+
+}
+.hero__link {
+  @include linkStyleOverride();
+}

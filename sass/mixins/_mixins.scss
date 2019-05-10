@@ -1,0 +1,162 @@
+/* Fallback for non-latin fonts */
+
+@mixin non-latin-fonts( $wrapper_classname: '.site' ) {
+
+	/* Arabic */
+	html[lang="ar"] #{$wrapper_classname} *,
+	html[lang="ary"] #{$wrapper_classname} *,
+	html[lang="azb"] #{$wrapper_classname} *,
+	html[lang="ckb"] #{$wrapper_classname} *,
+	html[lang="fa-IR"] #{$wrapper_classname} *,
+	html[lang="haz"] #{$wrapper_classname} *,
+	html[lang="ps"] #{$wrapper_classname} * {
+	  font-family: Tahoma, Arial, sans-serif !important;
+	}
+
+	/* Cyrillic */
+	html[lang="be"] #{$wrapper_classname} *,
+	html[lang="bg-BG"] #{$wrapper_classname} *,
+	html[lang="kk"] #{$wrapper_classname} *,
+	html[lang="mk-MK"] #{$wrapper_classname} *,
+	html[lang="mn"] #{$wrapper_classname} *,
+	html[lang="ru-RU"] #{$wrapper_classname} *,
+	html[lang="sah"] #{$wrapper_classname} *,
+	html[lang="sr-RS"] #{$wrapper_classname} *,
+	html[lang="tt-RU"] #{$wrapper_classname} *,
+	html[lang="uk"] #{$wrapper_classname} * {
+	  font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif !important;
+	}
+
+	/* Chinese (Hong Kong) */
+	html[lang="zh-HK"] #{$wrapper_classname} * {
+		font-family: -apple-system, BlinkMacSystemFont, 'PingFang HK', 'Helvetica Neue', "Microsoft YaHei New", STHeiti Light, sans-serif !important;
+	}
+
+	/* Chinese (Taiwan) */
+	html[lang="zh-TW"] #{$wrapper_classname} * {
+		font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Helvetica Neue', "Microsoft YaHei New", STHeiti Light, sans-serif !important;
+	}
+
+	/* Chinese (China) */
+	html[lang="zh-CN"] #{$wrapper_classname} * {
+		font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', "Microsoft YaHei New", STHeiti Light, sans-serif !important;
+	}
+
+	/* Devanagari */
+	html[lang="bn-BD"] #{$wrapper_classname} *,
+	html[lang="hi-IN"] #{$wrapper_classname} *,
+	html[lang="mr"] #{$wrapper_classname} *,
+	html[lang="ne-NP"] #{$wrapper_classname} * {
+	  font-family: Arial, sans-serif !important;
+	}
+
+	/* Greek */
+	html[lang="el"] #{$wrapper_classname} * {
+	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	}
+
+	/* Gujarati */
+	html[lang="gu"] #{$wrapper_classname} * {
+	  font-family: Arial, sans-serif !important;
+	}
+
+	/* Hebrew */
+	html[lang="he-IL"] #{$wrapper_classname} * {
+	  font-family: 'Arial Hebrew', Arial, sans-serif !important;
+	}
+
+	/* Japanese */
+	html[lang="ja"] #{$wrapper_classname} * {
+	  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif !important;
+	}
+
+	/* Korean */
+	html[lang="ko-KR"] #{$wrapper_classname} * {
+	  font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Nanum Gothic', Dotum, sans-serif !important;
+	}
+
+	/* Thai */
+	html[lang="th"] #{$wrapper_classname} * {
+	  font-family: 'Sukhumvit Set', 'Helvetica Neue', helvetica, arial, sans-serif !important;
+	}
+
+	/* Vietnamese */
+	html[lang="vi"] #{$wrapper_classname} * {
+	  font-family: 'Libre Franklin', sans-serif !important;
+	}
+}
+
+
+
+/* vincentzh-theme mixins */
+// Provide site-wide "link" style
+@mixin linkStyleOverride() {
+  color: $subtle-text-color;
+  background: linear-gradient(to bottom, transparent 0%, transparent 50%, $color-light-gray 50%, $color-light-gray 100%);
+  &:hover {
+    color: $subtle-text-color;
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, $hightlight-color 50%, $hightlight-color 100%);
+  }
+}
+
+// Provide site-wide "title font" style
+@mixin titlefont() {
+  font-family: $font-family-title;
+  line-height: $line-height-title;
+  font-size: $font-size-title;
+  font-weight: $font-weight-normal;
+}
+
+// Provide site-wide "subtle font" style
+@mixin subtlefont() {
+  color: $subtle-text-color;
+  text-transform: uppercase;
+  font-size: $font-size-tiny;
+  font-weight: $font-weight-bold;
+}
+
+// Provide site-wide "content font" style
+@mixin contentfont() {
+  margin: 0 0 $spacing-medium;
+  font-size: $font-size-content;
+  line-height: $line-height-content;
+  font-weight: $font-weight-normal;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  // https://designforhackers.com/blog/justify-text-html-css/
+  text-align: left;
+}
+
+// Flex container style that forces all elements to be vertically equal
+@mixin flexstretch() {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  flex-direction: row;
+  align-items: stretch; /* force all elements to be vertically equal! */
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}

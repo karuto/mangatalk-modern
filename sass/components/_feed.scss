@@ -1,0 +1,108 @@
+$feed-gutter-small: $spacing;
+$feed-gutter-large: $spacing-large;
+$feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have $spacing-gigantic */
+
+.feeds {
+  /* The wrapper for a collection of feed */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: $feed-gutter-small;
+  grid-gap: $feed-gutter-small;
+}
+.feeds__header {
+  /* The header that summarizies to a collection of feed */
+  @include subtlefont();
+  display: inline-block;
+  padding: 0 0 $spacing;
+  margin: 0 0 $feed-gutter-large;
+  border-bottom: $border-line-bold;
+}
+.feed {
+  /* The wrapper for a single article (feed item) */
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  margin: 0;
+  padding: 0 0 $feed-gutter-small; /* top doesn't need padding because image cover */
+}
+.feed__cover {
+  /* The feature image cover that wraps around the title */
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 $feed-gutter-small;
+}
+.feed__cover__shade {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.01) 5%, rgba(0,0,0,0.95) 100%);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.feed__title {
+  /* The anchor tag that wraps around the text */
+  color: $color-white;
+  z-index: 9;
+  width: 100%;
+}
+.feed__title__text {
+  @include titlefont();
+  margin: $feed-gutter-large;
+}
+.feed__excerpt {
+  color: $subtle-text-color;
+  font-family: $font-family-content;
+  line-height: $line-height-content;
+  margin: 0 $feed-gutter-large $feed-gutter-small;
+  flex-grow: 1; /* This is to push the last flex item (metas) to the flex-end */
+}
+.feed__metas {
+  @include subtlefont();
+  margin: 0 $feed-gutter-large;
+}
+.feed__metas a {
+  /* hate to do this, but must override <a> without classes by the_category */
+  @include linkStyleOverride();
+}
+
+
+/* Hompage desktop - two column feeds */
+.feeds--home {
+  max-width: $container-maxwidth;
+  margin: 0 0 $feed-gutter-gigantic; /* Overriding the auto margin */
+  display: flex;
+}
+.feed--home {
+  flex: 1 0 50%;
+  &:not(:last-child) {
+    padding: 0 $feed-gutter-large 0 0;
+  }
+  @media (max-width: $mobile-max) {
+    margin: 0 0 $feed-gutter-gigantic;
+  }
+}
+.feeds__header--home {
+  display: block;
+}
+.feeds__header__link {
+  @include linkStyleOverride();
+}
+
+/* Hompage mobile - one column feeds */
+@media (max-width: $mobile-max) {
+  .feeds--home {
+    display: block;
+  }
+  .feed--home {    
+    &:not(:last-child) {
+      padding: 0;
+    }
+  }
+}

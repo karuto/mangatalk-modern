@@ -1,0 +1,29 @@
+/* Handles both single POST and PAGE */
+.entry {
+  /* anything next to footer should have $spacing-gigantic */
+  margin: 0 auto $spacing-gigantic;
+  max-width: $onecolumn-maxwidth;
+}
+
+.entry__excerpt {
+  margin: 0;
+  color: $subtle-text-color;
+  padding: 0 0 $spacing-xxlarge;
+  border-bottom: $border-line-bold;
+}
+
+.entry__meta {
+  @include subtlefont();
+  margin: 0 0 $spacing-small;
+}
+
+.entry__meta a {
+  /* hate to do this, but must override <a> without classes by the_category */
+  color: $subtle-text-color;
+
+  &:hover {
+    color: $hightlight-color;
+  }
+}
+
+@import "./content.scss";

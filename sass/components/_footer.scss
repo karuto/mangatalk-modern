@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 $spacing-gigantic;
+  font-size: $font-size-tiny;
+  @media (max-width: $mobile-max) {
+    display: block;
+  }
+  .widget-area {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .widget {
+    /* Gutter; only works with space-between above */
+    width:calc(50% - 16px);
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+  }
+  .widget-title {
+    @include subtlefont();
+    margin: 0 0 $spacing;
+  }
+}
