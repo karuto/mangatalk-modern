@@ -13,11 +13,9 @@
 <?php endif; ?>
 <?php $blog_info = get_bloginfo( 'name' ); ?>
 <?php if ( ! empty( $blog_info ) ) : ?>
-	<p class="header__title">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<?php bloginfo( 'name' ); ?>
-		</a>
-	</p>
+	<a class="header__title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<?php bloginfo( 'name' ); ?>
+	</a>
 <?php endif; ?>
 <?php
 $description = get_bloginfo( 'description', 'display' );

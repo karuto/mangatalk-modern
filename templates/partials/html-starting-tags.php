@@ -22,6 +22,3 @@
 	<body <?php body_class('mangatalk-theme'); ?>>
 		<?php get_template_part( 'templates/partials/header' ); ?>
 		<div id="page" class="site maxwidth">
-			<div id="content">
-				<section id="primary">
-					<main id="main">

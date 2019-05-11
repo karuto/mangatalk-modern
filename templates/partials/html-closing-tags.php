@@ -15,10 +15,6 @@
  */
 ?>
 
-					</main>
-				</section>
-
-			</div><!-- #content -->
 			<?php get_template_part( 'templates/partials/footer' ); ?>
 		</div><!-- #page -->
 

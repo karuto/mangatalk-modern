@@ -1,6 +1,6 @@
 <?php
 /**
- * The template that displays the page's header. 
+ * The template that displays the page's hero section. 
  * Do not be confused with the header (title section) of a post or a page.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -13,8 +13,9 @@
 
 <?php
 if ( is_archive() || is_search() || is_404() ) {
+  echo '<div class="stage">';
+  echo '</div>'; //.stage
   echo '<header class="feeds__header">';
-  echo '<div class="page-title">';
 
   if ( is_archive() ) {
     echo get_the_archive_title();
@@ -23,7 +24,6 @@ if ( is_archive() || is_search() || is_404() ) {
   } else if ( is_404() ) {
     _e( 'Oops! That page can&rsquo;t be found.', 'twentynineteen' );
   }
-  echo '</div>';
 
   // Extra div just for search result pages.
   if( is_search() ) {
@@ -31,7 +31,7 @@ if ( is_archive() || is_search() || is_404() ) {
     echo get_search_query();
     echo '</div>';
   }
-  echo '</header>';
+  echo '</header>'; //.feeds__header
 }
 
 ?>

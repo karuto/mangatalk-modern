@@ -472,11 +472,6 @@ body#tinymce {
   /* Above WP toolbar. */
 }
 
-/* Do not show the outline on the skip link target. */
-#content[tabindex="-1"]:focus {
-  outline: 0;
-}
-
 /* Criteria for adding a component stylesheet:
  - Each file should style a single, self-contained piece of HTML.
 */
@@ -649,12 +644,10 @@ body#tinymce {
 
 .entry__content a {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
 }
 
 .entry__content a:hover {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -786,12 +779,10 @@ body#tinymce {
 
 .entry__content a {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
 }
 
 .entry__content a:hover {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -980,12 +971,10 @@ body#tinymce {
 .feed__metas a {
   /* hate to do this, but must override <a> without classes by the_category */
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
 }
 
 .feed__metas a:hover {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
 }
 
 .footer {
@@ -1029,12 +1018,26 @@ body#tinymce {
 
 .header {
   /* The very top level container for everything */
-  justify-content: space-between;
-  font-size: 14px;
-  font-weight: bold;
+  color: #333;
   text-transform: uppercase;
-  background-color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
   margin: 0 0 96px;
+}
+
+.header--toolbar {
+  background-color: #000;
+  margin: 0;
+}
+
+.header--toolbar .header__wrapper {
+  padding: 0;
+}
+
+.header__toolbar__item {
+  color: #FFFFFF;
+  display: inline-block;
+  margin: 8px 16px;
 }
 
 .header__wrapper {
@@ -1045,6 +1048,7 @@ body#tinymce {
 
 .header__title {
   margin: 0;
+  color: #FFFFFF;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-weight: 700;
 }
@@ -1075,18 +1079,28 @@ body#tinymce {
 .header__nav .menu-item a {
   margin: 0 0 0 24px;
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
+  color: #FFFFFF;
 }
 
 .header__nav .menu-item a:hover {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
 }
 
 @media (max-width: 767px) {
   .header__nav .menu-item a {
     margin: 0 24px 0 0;
   }
+}
+
+.stage {
+  background-image: url("./img/hero-bg.png");
+  background-color: yellow;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: -1;
 }
 
 .hero {
@@ -1127,12 +1141,10 @@ body#tinymce {
 
 .hero__link {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #DBDBDB 50%, #DBDBDB 100%);
 }
 
 .hero__link:hover {
   color: #333;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, #E84141 50%, #E84141 100%);
 }
 
 /* WP generated prev & next classes */

@@ -1,11 +1,22 @@
 .header {
   /* The very top level container for everything */
-  justify-content: space-between;
-  font-size: $font-size-tiny;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: $color-white;
+  @include subtlefont();
   margin: 0 0 $spacing-gigantic;
+}
+
+.header--toolbar {
+  background-color: $color-darkest;
+  margin: 0;
+
+  .header__wrapper {
+    padding: 0;
+  }
+}
+
+.header__toolbar__item {
+  color: $color-white;
+  display: inline-block;
+  margin: $spacing-small $spacing;
 }
 
 .header__wrapper {
@@ -16,6 +27,7 @@
 
 .header__title {
   margin: 0;
+  color: $color-white;
   font-family: $font-family-logo;
   font-weight: $font-weight-bold;
 }
@@ -40,6 +52,7 @@
     a {
       margin: 0 0 0 $spacing-medium;
       @include linkStyleOverride();
+      color: $color-white;
       @media (max-width: $mobile-max) {
         margin: 0 $spacing-medium 0 0;
       }

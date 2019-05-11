@@ -10,7 +10,7 @@
  */
 ?>
 <?php 
-get_template_part( 'templates/partials/page-header' );
+get_template_part( 'templates/partials/page-hero' );
 $sectionClass = 'feeds';
 if ( is_single() || is_page() ) {
   $sectionClass = 'single';

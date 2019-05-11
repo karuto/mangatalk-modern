@@ -92,10 +92,8 @@
 // Provide site-wide "link" style
 @mixin linkStyleOverride() {
   color: $subtle-text-color;
-  background: linear-gradient(to bottom, transparent 0%, transparent 50%, $color-light-gray 50%, $color-light-gray 100%);
   &:hover {
     color: $subtle-text-color;
-    background: linear-gradient(to bottom, transparent 0%, transparent 50%, $hightlight-color 50%, $hightlight-color 100%);
   }
 }
 
