@@ -13,8 +13,7 @@
 
 <?php
 if ( is_archive() || is_search() || is_404() ) {
-  echo '<div class="stage">';
-  echo '</div>'; //.stage
+  echo '<div class="stage"></div>';
   echo '<header class="feeds__header">';
 
   if ( is_archive() ) {

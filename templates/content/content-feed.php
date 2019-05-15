@@ -1,6 +1,7 @@
 <?php
 /**
- * Template part for displaying post archives and search results.
+ * Template part for displaying a conten excerpt piece - a.k.a a feed.
+ * A 
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -24,7 +25,7 @@ if (has_post_thumbnail( $post->ID ) ) {
 		<a class="feed__title" href="<?php the_permalink(); ?>">
 			<h2 class="feed__title__text"><?php the_title(); ?></h1>
 		</a>
-		<div class="feed__cover__shade"></div>
+		<div class="feed__cover__shade feed__cover__shade--white"></div>
 	</div>
 
 	<div class="feed__excerpt">
@@ -32,7 +33,7 @@ if (has_post_thumbnail( $post->ID ) ) {
 	</div>
 
 	<div class="feed__metas">
-    <?php get_template_part( 'templates/content/content-excerpt-meta' ); ?>
+    <?php get_template_part( 'templates/content/content-feed-meta' ); ?>
 	</div>
 
 </article>

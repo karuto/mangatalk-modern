@@ -107,35 +107,6 @@
   width: 100vw;
 }
 
-// Provide site-wide "title font" style
-@mixin titlefont() {
-  font-family: $font-family-title;
-  line-height: $line-height-title;
-  font-size: $font-size-title;
-  font-weight: $font-weight-normal;
-}
-
-// Provide site-wide "subtle font" style
-@mixin subtlefont() {
-  color: $subtle-text-color;
-  text-transform: uppercase;
-  font-size: $font-size-tiny;
-  font-weight: $font-weight-bold;
-}
-
-// Provide site-wide "content font" style
-@mixin contentfont() {
-  margin: 0 0 $spacing-medium;
-  font-size: $font-size-content;
-  line-height: $line-height-content;
-  font-weight: $font-weight-normal;
-  letter-spacing: normal;
-  word-wrap: break-word;
-  word-break: break-word;
-  // https://designforhackers.com/blog/justify-text-html-css/
-  text-align: left;
-}
-
 // Flex container style that forces all elements to be vertically equal
 @mixin flexstretch() {
   display: -webkit-flex;

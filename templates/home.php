@@ -10,4 +10,7 @@
  */
 ?>
 
-<?php get_template_part( 'templates/partials/feed' ); ?>
+<?php 
+get_template_part( 'templates/partials/home-mosaic' );
+get_template_part( 'templates/partials/feed' ); 
+?>

@@ -1,23 +1,29 @@
-.stage {
-  background-image: url('./img/hero-bg.png');
-  background-color: yellow;
-  height: 500px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: -1;
+.hero {
+  margin: 0 0 $spacing-gigantic;
 }
 
 
+.hero--page {
+  margin: 0 $spacing $spacing-large;
+}
+.feed__cover--hero {
+  height: $feed-gutter-large * 20; /* 640px */
+  padding: 0;
 
-
-
-
-
-
-.hero {
-  margin: 0 0 $spacing-gigantic;
+  .feed__cover__content {
+    z-index: 9;
+    max-width: $onecolumn-maxwidth;
+    margin: 0 auto;
+  }
+  .feed__title {
+    color: $color-white;
+  }
+  .feed__title__text {
+    font-size: 38px;
+    line-height: 1.25;
+    color: $color-white;
+    margin: $spacing-large 0;
+  }
 }
 
 .hero--oops {

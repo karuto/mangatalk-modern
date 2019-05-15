@@ -14,7 +14,7 @@
  * 
  * templates
  * --content
- * 	 [Templates for content types: post, page, excerpt, none...]
+ * 	 [Templates for content types: post, page, feed, none...]
  * 	 [Template partials, exclusive to content: comments, meta, title...]
  * --partials
  *   [Template partials, generic (not just for content): footer, header, feed...]

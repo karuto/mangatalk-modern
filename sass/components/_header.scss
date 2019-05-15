@@ -1,7 +1,7 @@
 .header {
   /* The very top level container for everything */
   @include subtlefont();
-  margin: 0 0 $spacing-gigantic;
+  margin: 0 0 $spacing-large;
 }
 
 .header--toolbar {
@@ -14,9 +14,14 @@
 }
 
 .header__toolbar__item {
+  font-size: 12px;
   color: $color-white;
   display: inline-block;
-  margin: $spacing-small $spacing;
+  margin: $spacing-xsmall $spacing-small;
+
+  &:first-child {
+    margin-left: $spacing;
+  }
 }
 
 .header__wrapper {

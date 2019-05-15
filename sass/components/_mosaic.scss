@@ -1,0 +1,28 @@
+$feed-gutter-small: $spacing;
+
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: $feed-gutter-small;
+  grid-gap: $feed-gutter-small;
+  margin: 0 $feed-gutter-small;
+}
+
+.article {
+  color: $color-white;
+}
+.article__image {
+
+}
+.article__content {
+
+}
+.article__meta {
+
+}
+.article__title {
+
+}
+.article__excerpt {
+
+}
