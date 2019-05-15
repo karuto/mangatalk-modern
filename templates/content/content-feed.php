@@ -1,7 +1,6 @@
 <?php
 /**
- * Template part for displaying a conten excerpt piece - a.k.a a feed.
- * A 
+ * Template part for displaying a single content excerpt piece - a.k.a a feed.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

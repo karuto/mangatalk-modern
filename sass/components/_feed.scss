@@ -3,7 +3,7 @@ $feed-gutter-large: $spacing-large;
 $feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have $spacing-gigantic */
 $feed-border-radius: 8px;
 
-.feeds {
+.grid {
   /* The wrapper for a collection of feed */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -14,6 +14,17 @@ $feed-border-radius: 8px;
     grid-template-columns: 100%;
   }
 }
+.collection-of-feeds {
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $feed-gutter-small;
+  grid-gap: $feed-gutter-small;
+}
+.feeds {
+
+}
+
 .feeds__header {
   /* The header that summarizies to a collection of feed */
   @include subtlefont();
@@ -32,8 +43,6 @@ $feed-border-radius: 8px;
   margin: 0;
   box-shadow: 0px 2px 4px rgba(45, 51, 63, .2);
   padding: 0 0 $feed-gutter-large; /* top doesn't need padding because image cover */
-  &:hover {
-  }
 }
 .feed__cover {
   /* .feed__cover--hero is at hero.scss */
