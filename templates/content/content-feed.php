@@ -18,21 +18,22 @@ if (has_post_thumbnail( $post->ID ) ) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('feed'); ?>>
+<article id="post-<?php the_ID(); ?>" class="feed">
 
-	<div class="feed__cover" style="background-image: url('<?php echo $image[0]; ?>')">
+	<div class="feed__image" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+
+	<div class="feed__content">
 		<a class="feed__title" href="<?php the_permalink(); ?>">
-			<h2 class="feed__title__text"><?php the_title(); ?></h1>
+			<h2 class="feed__title__text"><?php the_title(); ?></h2>
 		</a>
-		<div class="feed__cover__shade feed__cover__shade--white"></div>
-	</div>
 
-	<div class="feed__excerpt">
-		<?php echo get_the_excerpt(); ?>
-	</div>
+		<div class="feed__excerpt">
+			<?php echo get_the_excerpt(); ?>
+		</div>
 
-	<div class="feed__metas">
-    <?php get_template_part( 'templates/content/content-feed-meta' ); ?>
+		<div class="feed__metas">
+			<?php get_template_part( 'templates/content/content-feed-meta' ); ?>
+		</div>
 	</div>
 
 </article>

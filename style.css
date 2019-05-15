@@ -861,26 +861,27 @@ body#tinymce {
 
 /* anything next to footer should have $spacing-gigantic */
 .grid {
-  /* The wrapper for a collection of feed */
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.collection-of-feeds {
+  grid-column: 1/3;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid,
+.collection-of-feeds {
+  display: grid;
   grid-column-gap: 16px;
   grid-gap: 16px;
   margin: 0 16px;
 }
 
 @media (max-width: 767px) {
-  .grid {
+  .grid,
+  .collection-of-feeds {
     grid-template-columns: 100%;
   }
-}
-
-.collection-of-feeds {
-  grid-column: 1/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 16px;
-  grid-gap: 16px;
 }
 
 .feeds__header {
@@ -897,56 +898,18 @@ body#tinymce {
 
 .feed {
   /* The wrapper for a single article (feed item) */
-  background-color: white;
   display: flex;
-  flex-direction: column;
-  margin: 0;
-  box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.2);
-  padding: 0 0 32px;
-  /* top doesn't need padding because image cover */
 }
 
-.feed__cover {
-  /* .feed__cover--hero is at hero.scss */
-  /* The feature image cover that wraps around the title */
-  width: 100%;
-  height: 320px;
-  /* 320px */
+.feed__image {
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
-
-.feed__cover__shade {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.feed__cover__shade--black {
-  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, black 100%);
-  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, black 100%);
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, black 100%);
-}
-
-.feed__cover__shade--white {
-  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
-  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
 }
 
 .feed__title {
   /* The anchor tag that wraps around the text */
-  color: black;
-  z-index: 9;
-  width: 100%;
 }
 
 .feed__title__text {
@@ -958,18 +921,15 @@ body#tinymce {
   /* testing new typography */
   line-height: 1.25;
   /* testing new typography */
-  margin: 32px;
 }
 
 .feed__excerpt {
-  color: black;
   font-size: 14px;
   /* testing new typography */
   line-height: 1.5;
   /* testing new typography */
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   line-height: 1.7;
-  margin: 0 32px 16px;
   flex-grow: 1;
   /* This is to push the last flex item (metas) to the flex-end */
 }
@@ -983,8 +943,6 @@ body#tinymce {
   /* testing new typography */
   line-height: 1;
   /* testing new typography */
-  color: black;
-  margin: 0 32px;
 }
 
 .feed__metas a {
@@ -1122,6 +1080,42 @@ body#tinymce {
 
 .hero--page {
   margin: 0 16px 32px;
+}
+
+.feed__cover {
+  /* .feed__cover--hero is at hero.scss */
+  /* The feature image cover that wraps around the title */
+  width: 100%;
+  height: 320px;
+  /* 320px */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.feed__cover__shade {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.feed__cover__shade--black {
+  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, black 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, black 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, black 100%);
+}
+
+.feed__cover__shade--white {
+  background-image: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 5%, white 100%);
 }
 
 .feed__cover--hero {

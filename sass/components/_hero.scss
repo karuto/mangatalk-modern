@@ -6,6 +6,42 @@
 .hero--page {
   margin: 0 $spacing $spacing-large;
 }
+
+
+
+.feed__cover {
+  /* .feed__cover--hero is at hero.scss */
+  /* The feature image cover that wraps around the title */
+  width: 100%;
+  height: $feed-gutter-large * 10; /* 320px */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  // border-radius: $feed-border-radius;
+}
+.feed__cover__shade {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.feed__cover__shade--black {
+  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
+  background-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
+}
+.feed__cover__shade--white {
+  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
+  background-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
+}
+
 .feed__cover--hero {
   height: $feed-gutter-large * 20; /* 640px */
   padding: 0;

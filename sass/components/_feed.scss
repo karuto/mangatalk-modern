@@ -4,9 +4,15 @@ $feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have
 $feed-border-radius: 8px;
 
 .grid {
-  /* The wrapper for a collection of feed */
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+.collection-of-feeds {
+  grid-column: 1/3;
+  grid-template-columns: 1fr 1fr;
+}
+.grid,
+.collection-of-feeds {
+  display: grid;
   grid-column-gap: $feed-gutter-small;
   grid-gap: $feed-gutter-small;
   margin: 0 $feed-gutter-small;
@@ -14,17 +20,9 @@ $feed-border-radius: 8px;
     grid-template-columns: 100%;
   }
 }
-.collection-of-feeds {
-  grid-column: 1/3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: $feed-gutter-small;
-  grid-gap: $feed-gutter-small;
-}
 .feeds {
 
 }
-
 .feeds__header {
   /* The header that summarizies to a collection of feed */
   @include subtlefont();
@@ -33,79 +31,39 @@ $feed-border-radius: 8px;
   margin: 0 0 $feed-gutter-large;
   border-bottom: $border-line-bold;
 }
+
+
+
+
 .feed {
   /* The wrapper for a single article (feed item) */
-  // background-color: $color-darkest;
-  background-color: white;
   display: flex;
-  flex-direction: column;
-  // border-radius: $feed-border-radius;
-  margin: 0;
-  box-shadow: 0px 2px 4px rgba(45, 51, 63, .2);
-  padding: 0 0 $feed-gutter-large; /* top doesn't need padding because image cover */
 }
-.feed__cover {
-  /* .feed__cover--hero is at hero.scss */
-  /* The feature image cover that wraps around the title */
-  width: 100%;
-  height: $feed-gutter-large * 10; /* 320px */
+.feed__image {
+  width: 100px;
+  height: 100px;
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  // border-radius: $feed-border-radius;
-}
-.feed__cover__shade {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.feed__cover__shade--black {
-  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
-  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
-  background-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 100%);
-}
-.feed__cover__shade--white {
-  background-image: -webkit-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
-  background-image: -moz-linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
-  background-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, rgba(255,255,255,1) 100%);
 }
 .feed__title {
   /* The anchor tag that wraps around the text */
-  // color: $color-white;
-  color: black;
-  z-index: 9;
-  width: 100%;
 }
 .feed__title__text {
   @include titlefont();
   font-size: 22px; /* testing new typography */
   line-height: 1.25; /* testing new typography */
-  margin: $feed-gutter-large;
 }
 .feed__excerpt {
-  // color: $color-white;
-  color: black;
   font-size: 14px; /* testing new typography */
   line-height: 1.5; /* testing new typography */
   font-family: $font-family-content;
   line-height: $line-height-content;
-  margin: 0 $feed-gutter-large $feed-gutter-small;
   flex-grow: 1; /* This is to push the last flex item (metas) to the flex-end */
 }
 .feed__metas {
   @include subtlefont();
   font-size: 12px; /* testing new typography */
   line-height: 1; /* testing new typography */
-  // color: $color-white;
-  color: black;
-  margin: 0 $feed-gutter-large;
 }
 .feed__metas a {
   /* hate to do this, but must override <a> without classes by the_category */
