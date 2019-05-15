@@ -27,9 +27,9 @@ if (has_post_thumbnail( $post->ID ) ) {
 			<h2 class="feed__title__text"><?php the_title(); ?></h2>
 		</a>
 
-		<div class="feed__excerpt">
+		<!-- <div class="feed__excerpt">
 			<?php echo get_the_excerpt(); ?>
-		</div>
+		</div> -->
 
 		<div class="feed__metas">
 			<?php get_template_part( 'templates/content/content-feed-meta' ); ?>

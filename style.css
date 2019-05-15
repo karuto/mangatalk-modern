@@ -874,14 +874,18 @@ body#tinymce {
   display: grid;
   grid-column-gap: 16px;
   grid-gap: 16px;
-  margin: 0 16px;
 }
 
 @media (max-width: 767px) {
   .grid,
   .collection-of-feeds {
+    grid-column: unset;
     grid-template-columns: 100%;
   }
+}
+
+.feeds {
+  margin: 0 16px;
 }
 
 .feeds__header {
@@ -898,7 +902,12 @@ body#tinymce {
 
 .feed {
   /* The wrapper for a single article (feed item) */
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-column-gap: 16px;
+  padding: 0 0 16px;
+  margin: 0 0 16px;
+  border-bottom: 2px solid #333;
 }
 
 .feed__image {
@@ -908,8 +917,14 @@ body#tinymce {
   background-position: center;
 }
 
+.feed__content {
+  display: flex;
+  flex-direction: column;
+}
+
 .feed__title {
   /* The anchor tag that wraps around the text */
+  flex-grow: 1;
 }
 
 .feed__title__text {
@@ -921,6 +936,7 @@ body#tinymce {
   /* testing new typography */
   line-height: 1.25;
   /* testing new typography */
+  margin: 0;
 }
 
 .feed__excerpt {
@@ -1038,6 +1054,11 @@ body#tinymce {
 .header__description {
   display: none;
   /* TODO: accommodate this later. */
+}
+
+.header__nav {
+  max-width: 50%;
+  /* TODO: testing, fix it for real */
 }
 
 @media (max-width: 767px) {

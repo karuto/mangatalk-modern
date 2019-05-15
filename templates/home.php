@@ -70,6 +70,7 @@ function generateFeedsBySlug( $catSlug ) {
 
 <?php 
 
+  echo '<div class="stage"></div>';
   echo '<div class="grid">';
   echo '<section class="collection-of-feeds">';
   generateFeedsBySlug( 'article' );

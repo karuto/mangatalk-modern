@@ -42,6 +42,7 @@
 }
 
 .header__nav {
+  max-width: 50%; /* TODO: testing, fix it for real */
   .menu {
     @media (max-width: $mobile-max) {
       display: flex;
