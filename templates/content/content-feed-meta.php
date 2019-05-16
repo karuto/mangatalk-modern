@@ -13,8 +13,12 @@
 
 <?php 
 
-echo '<div class="feed__meta">';
-echo get_the_author_meta( 'display_name' );
+echo '<div class="feed__meta feed__meta--author">';
+echo '<a class="feed__meta__link" href="';
+echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) );
+echo '">';
+the_author();
+echo '</a>';
 echo '</div>';
 get_template_part( 'templates/content/content-post-views' ); 
 ?>

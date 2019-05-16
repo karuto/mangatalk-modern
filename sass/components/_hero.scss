@@ -65,6 +65,10 @@
 
 
 
+.hero__cover,
+.hero__cover__shade {
+  border-radius: $base-border-radius;
+}
 .hero__cover {
   /* .hero__cover--hero is at hero.scss */
   /* The feature image cover that wraps around the title */

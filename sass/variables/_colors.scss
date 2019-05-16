@@ -14,8 +14,8 @@ $color-darkest:      #000;
 
 
 // Brand colors
-$brand-primary: #E84141; /* Content red */
-$brand-meta: $color-light; /* For all the meta components */
+$color-brand-primary: #E84141; /* Content red */
+$color-brand-meta: $color-light; /* For all the meta components */
 
 
 // Text colors
@@ -27,4 +27,4 @@ $strong-text-color: $color-darkest;
 // Non-text colors
 $page-bg-color: $color-lightest-gray;
 $block-bg-color: $color-lighter-gray;
-$hightlight-color: $brand-primary;
+$highlight-color: $color-brand-primary;

@@ -405,7 +405,7 @@ dl, dd, dt {
 a {
   text-decoration: none;
   transition: all 0.5s ease;
-  color: #000;
+  color: #E84141;
 }
 
 a:hover {
@@ -643,11 +643,11 @@ body#tinymce {
 }
 
 .entry__content a {
-  color: #777;
+  color: #000;
 }
 
 .entry__content a:hover {
-  color: #777;
+  color: #E84141;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -778,11 +778,11 @@ body#tinymce {
 }
 
 .entry__content a {
-  color: #777;
+  color: #000;
 }
 
 .entry__content a:hover {
-  color: #777;
+  color: #E84141;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -896,6 +896,8 @@ body#tinymce {
   font-size: 14px;
   font-weight: 700;
   margin: 0 0 16px;
+  border-bottom: 2px solid #E84141;
+  padding: 0 0 8px;
 }
 
 .feed {
@@ -932,8 +934,13 @@ body#tinymce {
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-size: 18px;
   line-height: 1.3;
-  font-weight: 400;
+  font-weight: 700;
+  color: #000;
   margin: 0 0 8px;
+}
+
+.feed__title__text:hover {
+  color: #E84141;
 }
 
 .feed__excerpt {
@@ -941,7 +948,7 @@ body#tinymce {
   font-size: 13px;
   /* testing new typography */
   line-height: 1.7;
-  color: #777;
+  color: #000;
   flex-grow: 1;
   /* This is to push the last flex item (metas) to the flex-end */
   margin: 0 0 8px;
@@ -963,6 +970,14 @@ body#tinymce {
   display: flex;
   align-items: center;
   margin: 0 0 0 16px;
+}
+
+.feed__meta__link {
+  color: #000;
+}
+
+.feed__meta__link:hover {
+  color: #E84141;
 }
 
 .feed__meta__icon {
@@ -1073,12 +1088,12 @@ body#tinymce {
 
 .header__nav .menu-item a {
   margin: 0 0 0 24px;
-  color: #777;
+  color: #000;
   color: #FFFFFF;
 }
 
 .header__nav .menu-item a:hover {
-  color: #777;
+  color: #E84141;
 }
 
 @media (max-width: 767px) {
@@ -1165,6 +1180,11 @@ body#tinymce {
   display: none;
 }
 
+.hero__cover,
+.hero__cover__shade {
+  border-radius: 4px;
+}
+
 .hero__cover {
   /* .hero__cover--hero is at hero.scss */
   /* The feature image cover that wraps around the title */
@@ -1225,7 +1245,7 @@ body#tinymce {
   font-size: 13px;
   /* testing new typography */
   line-height: 1.7;
-  color: #777;
+  color: #000;
   color: #FFFFFF;
   margin: 16px 0;
 }
@@ -1312,7 +1332,7 @@ body#tinymce {
 .stage {
   background-image: url("./img/hero-bg.png");
   background-color: yellow;
-  height: 500px;
+  height: 400px;
   position: absolute;
   top: 0;
   width: 100%;

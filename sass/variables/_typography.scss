@@ -36,7 +36,7 @@ $font-weight-bold: 700;
   font-family: $font-family-title;
   font-size: $font-size-title;
   line-height: $line-height-title;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-bold;
 }
 
 // Provide site-wide "excerpt font" style
@@ -44,7 +44,7 @@ $font-weight-bold: 700;
   font-family: $font-family-content;
   font-size: 13px; /* testing new typography */
   line-height: $line-height-content;
-  color: $subtle-text-color;
+  color: $strong-text-color;
 }
 
 // Provide site-wide "subtle font" style

@@ -28,6 +28,8 @@ $feed-border-radius: 8px;
   /* The header that summarizies to a collection of feed */
   @include subtlefont();
   margin: 0 0 $feed-gutter-small;
+  border-bottom: 2px solid $color-brand-primary;
+  padding: 0 0 8px;
 }
 
 
@@ -60,6 +62,7 @@ $feed-border-radius: 8px;
 }
 .feed__title__text {
   @include titlefont();
+  @include linkStyleOverride();
   margin: 0 0 $spacing-small;
 }
 .feed__excerpt {
@@ -80,6 +83,9 @@ $feed-border-radius: 8px;
   display: flex;
   align-items: center;
   margin: 0 0 0 $spacing;
+}
+.feed__meta__link {
+  @include linkStyleOverride();
 }
 .feed__meta__icon {
   width: $spacing;

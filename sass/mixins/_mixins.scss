@@ -91,9 +91,9 @@
 /* vincentzh-theme mixins */
 // Provide site-wide "link" style
 @mixin linkStyleOverride() {
-  color: $subtle-text-color;
+  color: $strong-text-color;
   &:hover {
-    color: $subtle-text-color;
+    color: $highlight-color;
   }
 }
 

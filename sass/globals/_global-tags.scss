@@ -4,7 +4,7 @@
 }
 ::-moz-selection,
 ::selection {
-  background: $hightlight-color;
+  background: $highlight-color;
 }
 html, body {
   padding: 0;
@@ -36,9 +36,9 @@ dl, dd, dt {
 a {
   text-decoration: none;
   transition: all 0.5s ease;
-  color: $strong-text-color;
+  color: $highlight-color;
   &:hover {
-    color: $hightlight-color;
+    color: $highlight-color;
     text-decoration: none;
   }
 }
