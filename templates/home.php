@@ -73,16 +73,15 @@ function generateFeedsBySlug( $catSlug ) {
 ?>
 
 <?php 
-  // echo '<div class="stage"></div>';
-  echo '<div class="grid">';
-  echo '<section class="collection-of-feeds">';
-  generateFeedsBySlug( 'article' );
-  generateFeedsBySlug( 'scomix' );
-  generateFeedsBySlug( 'scomix' );
-  generateFeedsBySlug( 'article' );
-  echo '</section>';
-  echo '<aside class="sidebar">Hi sidebar</div>';
-  echo '</div>'
-
-// get_template_part( 'templates/partials/home-mosaic' );
+get_template_part( 'templates/partials/home-mosaic' );
+// echo '<div class="stage"></div>';
+echo '<div class="grid">';
+echo '<section class="collection-of-feeds">';
+generateFeedsBySlug( 'article' );
+generateFeedsBySlug( 'scomix' );
+generateFeedsBySlug( 'scomix' );
+generateFeedsBySlug( 'article' );
+echo '</section>';
+echo '<aside class="sidebar">Hi sidebar</div>';
+echo '</div>'
 ?>

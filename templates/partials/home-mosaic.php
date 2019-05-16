@@ -1,20 +1,17 @@
+<?php
+/**
+ * The template that displays the home page's "mosaic", a.k.a featured hero content.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#home-page-display
+ *
+ * @package WordPress
+ * @subpackage karuto_starter_theme
+ * @since 1.0.0
+ */
+?>
+
 <div class="stage"></div>
-
-<div class="mosaic">
-  <div class="article">
-    <div class="article__image">
-    </div>
-    <div class="article__content">
-      <div class="article__meta">
-        漫言文章 •  47 VIEWS
-      </div>
-      <div class="article__title">
-        花间絮语：「少女爱—Girl’s Love—百合」溯源经纬浅谈
-      </div>
-      <div class="article__excerpt">
-        一去不返的少女时光，梦里盎然花飘香，朵朵绽放轻摘下，全都献给——令人爱怜的你。
-      </div>
-    </div>
-
-  </div>
+<div class="heroes">
+  <?php get_template_part( 'templates/content/content-post-hero' ); ?>
+  <div style="background: yellow;">sidebar</div>
 </div>

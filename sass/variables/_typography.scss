@@ -7,9 +7,8 @@ $font-size-hero: $font-size-title;
 
 $line-height-base: 1.5;
 $line-height-content: 1.7;
-$line-height-title: 1.15;
+$line-height-title: 1.3;
 $line-height-hero: 1.3;
-
 
 // Typography - fonts
 $font-family-base: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体",  sans-serif;
@@ -24,11 +23,19 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 
-// Provide site-wide "title font" style
+// Provide site-wide "hero font" style (used in hero item)
+@mixin herofont() {
+  font-family: $font-family-title;
+  font-size: $font-size-hero;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-hero;
+}
+
+// Provide site-wide "title font" style (used in feed item)
 @mixin titlefont() {
   font-family: $font-family-title;
+  font-size: $font-size-content;
   line-height: $line-height-title;
-  font-size: $font-size-title;
   font-weight: $font-weight-normal;
 }
 
