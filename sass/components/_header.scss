@@ -32,9 +32,8 @@
 
 .header__title {
   margin: 0;
+  @include subtlefont();
   color: $color-white;
-  font-family: $font-family-logo;
-  font-weight: $font-weight-bold;
 }
 
 .header__description {

@@ -1,0 +1,25 @@
+.sidebar {
+
+}
+.widget {
+  /* widget is a section inside a sidebar */
+}
+.widget__content {
+  display: grid;
+  grid-gap: $spacing;
+}
+.columnrec {
+  height: 50.5px; /* so that a columnrec is half height of the feed item */
+  border-bottom: $border-line;
+}
+.columnrec__content {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+.columnrec__image {
+
+}
+.columnrec__author__link {
+  @include linkStyleOverride();
+  @include subtlefont();
+}

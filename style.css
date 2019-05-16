@@ -1036,7 +1036,7 @@ body#tinymce {
 }
 
 .header {
-  /* The very top level container for everything */
+  /* The very top level container for everything about header */
   color: #777;
   line-height: 1;
   text-transform: uppercase;
@@ -1077,9 +1077,12 @@ body#tinymce {
 
 .header__title {
   margin: 0;
-  color: #FFFFFF;
-  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
   font-weight: 700;
+  color: #FFFFFF;
 }
 
 .header__description {
@@ -1339,6 +1342,39 @@ body#tinymce {
 
 .screen-reader-text {
   display: none;
+}
+
+.widget {
+  /* widget is a section inside a sidebar */
+}
+
+.widget__content {
+  display: grid;
+  grid-gap: 16px;
+}
+
+.columnrec {
+  height: 50.5px;
+  /* so that a columnrec is half height of the feed item */
+  border-bottom: 1px solid #CECECE;
+}
+
+.columnrec__content {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.columnrec__author__link {
+  color: #000;
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.columnrec__author__link:hover {
+  color: #E84141;
 }
 
 .stage {

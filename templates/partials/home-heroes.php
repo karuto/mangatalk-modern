@@ -1,6 +1,6 @@
 <?php
 /**
- * The template that displays the home page's "mosaic", a.k.a featured hero content.
+ * The template that displays the home page's "heroes", a collection of hero tiles.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#home-page-display
  *

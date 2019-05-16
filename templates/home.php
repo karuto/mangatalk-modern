@@ -77,14 +77,16 @@ function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
 }
 ?>
 
-<?php 
-get_template_part( 'templates/partials/home-heroes' );
-echo '<div class="grid">';
-echo '<section class="collection-of-feeds">';
-generateFeedsBySlug( 'article' ); // culture
-generateFeedsBySlug( 'scomix' ); // recommendations
-generateFeedsBySlug( 'scomix' ); // people
-echo '</section>';
-echo '<aside class="sidebar">Hi sidebar</div>';
-echo '</div>'
-?>
+<?php get_template_part( 'templates/partials/home-heroes' ); ?>
+<div class="grid">
+  <section class="collection-of-feeds">
+  <?php
+  generateFeedsBySlug( 'article' ); // culture
+  generateFeedsBySlug( 'scomix' ); // recommendations
+  generateFeedsBySlug( 'scomix' ); // people
+  ?>
+  </section>
+  <aside class="sidebar">
+    <?php get_template_part( 'templates/partials/widget-columns' ); ?>
+  </aside>
+</div>
