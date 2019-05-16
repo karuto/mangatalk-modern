@@ -26,10 +26,7 @@ $feed-border-radius: 8px;
 .feeds__header {
   /* The header that summarizies to a collection of feed */
   @include subtlefont();
-  display: inline-block;
-  padding: 0 0 $spacing;
-  margin: 0 0 $feed-gutter-large;
-  border-bottom: $border-line-bold;
+  margin: 0 0 $feed-gutter-small;
 }
 
 
@@ -42,7 +39,9 @@ $feed-border-radius: 8px;
   grid-column-gap: $feed-gutter-small;
   padding: 0 0 $spacing;
   margin: 0 0 $spacing;
-  border-bottom: $border-line;
+  &:not(:last-child) {
+    border-bottom: $border-line;
+  }
 }
 .feed__image {
   width: 100px;
@@ -60,16 +59,18 @@ $feed-border-radius: 8px;
 }
 .feed__title__text {
   @include titlefont();
-  font-size: 22px; /* testing new typography */
+  font-size: 18px; /* testing new typography */
   line-height: 1.25; /* testing new typography */
-  margin: 0;
+  margin: 0 0 $spacing-small;
 }
 .feed__excerpt {
-  font-size: 14px; /* testing new typography */
-  line-height: 1.5; /* testing new typography */
+  font-size: 13px; /* testing new typography */
+  line-height: 1.45; /* testing new typography */
+  color: $color-medium;
   font-family: $font-family-content;
   line-height: $line-height-content;
   flex-grow: 1; /* This is to push the last flex item (metas) to the flex-end */
+  margin: 0 0 $spacing-small;
 }
 .feed__metas {
   @include subtlefont();

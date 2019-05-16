@@ -11,7 +11,7 @@
 ?>
 
 <?php
-$postsPerPage = 5;
+$postsPerPage = 4;
 
 function outputBlock() {
   get_template_part( 'templates/content/content-feed' );
@@ -44,9 +44,12 @@ function getQueryExcludeCategory( $catId, $postsPerPage ) {
 }
 
 function generateFeed( $query ) {
+  $feedLimit = 4;
+  $feedCount = 0;
   if ( !is_null( $query ) ) {
-    while ( $query->have_posts() ) {
+    while ( $query->have_posts() && ($feedCount < $feedLimit) ) {
       $query->the_post();
+      $feedCount++;
       // at this point, thanks to the binding of the_post() above,
       // you can use native single post functions, such as get_post_type().
       outputBlock();
@@ -59,26 +62,27 @@ function generateFeed( $query ) {
 function generateFeedsBySlug( $catSlug ) {
   $catId = getCategoryIdBySlug( $catSlug );
   $catUrl = esc_url( get_category_link( $catId ) );
+  $catName = get_cat_name( $catId );
   $catPosts = getQueryIncludeCategory( $catId, $postsPerPage );
 
   echo '<section class="feeds">';
-  echo '<div class="feeds__header"><a href="' . $catUrl . '">Title</a></div>';
+  echo '<div class="feeds__header"><a href="' . $catUrl . '">' . $catName . '</a></div>';
   generateFeed( $catPosts );
   echo '</section>';
 }
 ?>
 
 <?php 
-
-  echo '<div class="stage"></div>';
+  // echo '<div class="stage"></div>';
   echo '<div class="grid">';
   echo '<section class="collection-of-feeds">';
   generateFeedsBySlug( 'article' );
   generateFeedsBySlug( 'scomix' );
+  generateFeedsBySlug( 'scomix' );
+  generateFeedsBySlug( 'article' );
   echo '</section>';
   echo '<aside class="sidebar">Hi sidebar</div>';
   echo '</div>'
 
 // get_template_part( 'templates/partials/home-mosaic' );
-// get_template_part( 'templates/partials/feed' ); 
 ?>

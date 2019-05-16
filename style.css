@@ -692,7 +692,7 @@ body#tinymce {
 }
 
 .entry__content hr {
-  border: 2px solid #333;
+  border: 1px solid #CECECE;
   height: 0;
   margin: 0 0 24px;
 }
@@ -827,7 +827,7 @@ body#tinymce {
 }
 
 .entry__content hr {
-  border: 2px solid #333;
+  border: 1px solid #CECECE;
   height: 0;
   margin: 0 0 24px;
 }
@@ -894,10 +894,7 @@ body#tinymce {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
-  display: inline-block;
-  padding: 0 0 16px;
-  margin: 0 0 32px;
-  border-bottom: 6px double #333;
+  margin: 0 0 16px;
 }
 
 .feed {
@@ -907,7 +904,10 @@ body#tinymce {
   grid-column-gap: 16px;
   padding: 0 0 16px;
   margin: 0 0 16px;
-  border-bottom: 2px solid #333;
+}
+
+.feed:not(:last-child) {
+  border-bottom: 1px solid #CECECE;
 }
 
 .feed__image {
@@ -932,22 +932,24 @@ body#tinymce {
   line-height: 1.15;
   font-size: 28px;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   /* testing new typography */
   line-height: 1.25;
   /* testing new typography */
-  margin: 0;
+  margin: 0 0 8px;
 }
 
 .feed__excerpt {
-  font-size: 14px;
+  font-size: 13px;
   /* testing new typography */
-  line-height: 1.5;
+  line-height: 1.45;
   /* testing new typography */
+  color: #777;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   line-height: 1.7;
   flex-grow: 1;
   /* This is to push the last flex item (metas) to the flex-end */
+  margin: 0 0 8px;
 }
 
 .feed__metas {
@@ -1054,18 +1056,6 @@ body#tinymce {
 .header__description {
   display: none;
   /* TODO: accommodate this later. */
-}
-
-.header__nav {
-  max-width: 50%;
-  /* TODO: testing, fix it for real */
-}
-
-@media (max-width: 767px) {
-  .header__nav .menu {
-    display: flex;
-    overflow: scroll;
-  }
 }
 
 .header__nav .menu-item {
@@ -1275,7 +1265,7 @@ body#tinymce {
   /* reset browser defaults */
   outline: transparent none medium;
   /* reset browser defaults */
-  border: 2px solid #333;
+  border: 1px solid #CECECE;
 }
 
 .searchform-input {

@@ -42,12 +42,12 @@
 }
 
 .header__nav {
-  max-width: 50%; /* TODO: testing, fix it for real */
   .menu {
-    @media (max-width: $mobile-max) {
-      display: flex;
-      overflow: scroll;
-    }
+    // TODO: fix mobile, this CSS is messing up the page width
+    // @media (max-width: $mobile-max) {
+    //   display: flex;
+    //   overflow: scroll;
+    // }
   }
 
   .menu-item {
