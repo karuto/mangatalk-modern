@@ -861,13 +861,12 @@ body#tinymce {
 
 /* anything next to footer should have $spacing-gigantic */
 .grid {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   margin: 0 16px;
 }
 
 .collection-of-feeds {
-  grid-column: 1/3;
-  grid-template-columns: 1fr 1fr;
+  grid-column: 1/2;
 }
 
 .grid,
@@ -927,7 +926,6 @@ body#tinymce {
 
 .feed__title {
   /* The anchor tag that wraps around the text */
-  flex-grow: 1;
 }
 
 .feed__title__text {
@@ -1330,8 +1328,10 @@ body#tinymce {
 }
 
 .stage {
-  background-image: url("./img/hero-bg.png");
-  background-color: yellow;
+  background-image: url("./img/mt-cover-brand.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #E84141;
   height: 400px;
   position: absolute;
   top: 0;

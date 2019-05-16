@@ -81,10 +81,9 @@ function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
 get_template_part( 'templates/partials/home-heroes' );
 echo '<div class="grid">';
 echo '<section class="collection-of-feeds">';
-generateFeedsBySlug( 'article' );
-generateFeedsBySlug( 'scomix' );
-generateFeedsBySlug( 'scomix' );
-generateFeedsBySlug( 'article' );
+generateFeedsBySlug( 'article' ); // culture
+generateFeedsBySlug( 'scomix' ); // recommendations
+generateFeedsBySlug( 'scomix' ); // people
 echo '</section>';
 echo '<aside class="sidebar">Hi sidebar</div>';
 echo '</div>'

@@ -1,6 +1,8 @@
 .stage {
-  background-image: url('./img/hero-bg.png');
-  background-color: yellow;
+  background-image: url('./img/mt-cover-brand.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color: $highlight-color;
   height: 400px;
   position: absolute;
   top: 0;
