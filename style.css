@@ -657,7 +657,7 @@ body#tinymce {
 }
 
 .entry__content h2 {
-  font-size: 28px;
+  font-size: 18px;
   line-height: 1.3;
 }
 
@@ -792,7 +792,7 @@ body#tinymce {
 }
 
 .entry__content h2 {
-  font-size: 28px;
+  font-size: 18px;
   line-height: 1.3;
 }
 
@@ -1135,6 +1135,7 @@ body#tinymce {
 
 .hero--home .hero__title__text {
   margin: 16px;
+  font-size: 18px;
 }
 
 .hero--home .hero__excerpt {
@@ -1149,10 +1150,13 @@ body#tinymce {
 
 .latest .hero--home {
   height: auto;
+  /* so that they can split the parent height */
 }
 
 @media (max-width: 767px) {
   .latest .hero--home {
+    height: 160px;
+    /* 160px */
     grid-column: unset;
   }
 }

@@ -2,8 +2,8 @@
 $font-size-base: 16px;
 $font-size-tiny: 14px;
 $font-size-content: 18px;
-$font-size-title: 28px;
-$font-size-hero: $font-size-title;
+$font-size-title: $font-size-content;
+$font-size-hero: 28px;
 
 $line-height-base: 1.5;
 $line-height-content: 1.7;
@@ -34,7 +34,7 @@ $font-weight-bold: 700;
 // Provide site-wide "title font" style (used in feed item)
 @mixin titlefont() {
   font-family: $font-family-title;
-  font-size: $font-size-content;
+  font-size: $font-size-title;
   line-height: $line-height-title;
   font-weight: $font-weight-normal;
 }

@@ -11,7 +11,7 @@
 
 
 .hero--content {
-  height: $feed-gutter-large * 20; /* 640px */
+  height: $spacing-large * 20; /* 640px */
   margin: 0 $spacing $spacing-large;
 }
 
@@ -31,7 +31,7 @@
 .hero--home {
   grid-column: 1/3;
   margin: 0;
-  height: $feed-gutter-large * 10; /* 320px */
+  height: $spacing-large * 10; /* 320px */
   @media (max-width: $mobile-max) {  
     grid-column: unset;
   }
@@ -40,6 +40,7 @@
   }
   .hero__title__text {
     margin: $spacing;
+    font-size: 18px;
   }
   .hero__excerpt {
     margin: $spacing;
@@ -50,8 +51,9 @@
   grid-template-rows: 1fr 1fr;
   grid-gap: $spacing;
   .hero--home {
-    height: auto;
-    @media (max-width: $mobile-max) {  
+    height: auto; /* so that they can split the parent height */
+    @media (max-width: $mobile-max) {
+      height: $spacing-large * 5; /* 160px */
       grid-column: unset;
     }
   }
