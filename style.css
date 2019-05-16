@@ -953,23 +953,30 @@ body#tinymce {
 }
 
 .feed__metas {
-  color: #333;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
+  /* Wrapper for all meta items that describes a feed item */
+  color: #999;
   font-size: 12px;
   /* testing new typography */
   line-height: 1;
   /* testing new typography */
+  display: flex;
+  justify-content: flex-end;
 }
 
-.feed__metas a {
-  /* hate to do this, but must override <a> without classes by the_category */
-  color: #333;
+.feed__meta {
+  /* Individual meta item that describes a feed item */
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 16px;
 }
 
-.feed__metas a:hover {
-  color: #333;
+.feed__meta__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.feed__meta__label {
+  margin: 0 0 0 4px;
 }
 
 .footer {

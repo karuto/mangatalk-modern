@@ -73,11 +73,23 @@ $feed-border-radius: 8px;
   margin: 0 0 $spacing-small;
 }
 .feed__metas {
-  @include subtlefont();
+  /* Wrapper for all meta items that describes a feed item */
+  color: $color-light;
   font-size: 12px; /* testing new typography */
   line-height: 1; /* testing new typography */
+  display: flex;
+  justify-content: flex-end;
 }
-.feed__metas a {
-  /* hate to do this, but must override <a> without classes by the_category */
-  @include linkStyleOverride();
+.feed__meta {
+  /* Individual meta item that describes a feed item */
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 $spacing;
+}
+.feed__meta__icon {
+  width: $spacing;
+  height: $spacing;
+}
+.feed__meta__label {
+  margin: 0 0 0 $spacing-xsmall;
 }
