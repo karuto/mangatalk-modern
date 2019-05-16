@@ -1141,6 +1141,26 @@ body#tinymce {
   margin: 16px;
 }
 
+.latest {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.latest .hero--home {
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .latest .hero--home {
+    grid-column: unset;
+  }
+}
+
+.latest .hero__excerpt {
+  display: none;
+}
+
 .hero__cover {
   /* .hero__cover--hero is at hero.scss */
   /* The feature image cover that wraps around the title */

@@ -45,7 +45,21 @@
     margin: $spacing;
   }
 }
+.latest {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: $spacing;
+  .hero--home {
+    height: auto;
+    @media (max-width: $mobile-max) {  
+      grid-column: unset;
+    }
+  }
+  .hero__excerpt {
+    display: none;
+  }
 
+}
 
 
 

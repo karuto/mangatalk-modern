@@ -12,6 +12,9 @@
 
 <div class="stage"></div>
 <div class="heroes">
-  <?php get_template_part( 'templates/content/content-post-hero' ); ?>
-  <div style="background: yellow;">sidebar</div>
+  <!-- TODO: this doesn't work, because right now the code only works for a tag, not a category. -->
+  <?php generateFeedsBySlug( 'featured', 1, 'hero' ); ?>
+  <section class="latest">
+    <?php generateFeedsBySlug( 'scomix', 2, 'hero' ); ?>
+  </section>
 </div>

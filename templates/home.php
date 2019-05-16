@@ -11,10 +11,12 @@
 ?>
 
 <?php
-$postsPerPage = 4;
-
-function outputBlock() {
-  get_template_part( 'templates/content/content-feed' );
+function renderTemplate( $template ) {
+  if ( $template == 'feed' ) {
+    get_template_part( 'templates/content/content-feed' );
+  } else if ( $template == 'hero' ) {
+    get_template_part( 'templates/content/content-post-hero' );
+  }
 }
 
 function getCategoryIdBySlug( $slug ) {
@@ -23,58 +25,60 @@ function getCategoryIdBySlug( $slug ) {
   return $category_id;
 }
 
-function getQueryIncludeCategory( $catId, $postsPerPage ) {
+function getQueryIncludeCategory( $catId, $postsCount ) {
   $posts = new WP_Query(
     array(
       'cat' => $catId,
-      'posts_per_page' => $postsPerPage
+      'posts_per_page' => $postsCount
     )
   );
   return $posts;
 }
 
-function getQueryExcludeCategory( $catId, $postsPerPage ) {
+function getQueryExcludeCategory( $catId, $postsCount ) {
   $posts = new WP_Query(
     array(
       'category__not_in' => $catId,
-      'posts_per_page' => $postsPerPage,
+      'posts_per_page' => $postsCount,
     )
   );
   return $posts;
 }
 
-function generateFeed( $query ) {
-  $feedLimit = 4;
+function generateFeed( $query, $postsCount, $template ) {
   $feedCount = 0;
   if ( !is_null( $query ) ) {
-    while ( $query->have_posts() && ($feedCount < $feedLimit) ) {
+    while ( $query->have_posts() && ($feedCount < $postsCount) ) {
       $query->the_post();
       $feedCount++;
       // at this point, thanks to the binding of the_post() above,
       // you can use native single post functions, such as get_post_type().
-      outputBlock();
+      renderTemplate( $template );
     }
     wp_reset_postdata();
     wp_reset_query();
   }
 }
 
-function generateFeedsBySlug( $catSlug ) {
+function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
   $catId = getCategoryIdBySlug( $catSlug );
   $catUrl = esc_url( get_category_link( $catId ) );
   $catName = get_cat_name( $catId );
-  $catPosts = getQueryIncludeCategory( $catId, $postsPerPage );
+  $catPosts = getQueryIncludeCategory( $catId, $postsCount );
 
-  echo '<section class="feeds">';
-  echo '<div class="feeds__header"><a href="' . $catUrl . '">' . $catName . '</a></div>';
-  generateFeed( $catPosts );
-  echo '</section>';
+  if ( $template == 'feed' ) {
+    echo '<section class="feeds">';
+    echo '<div class="feeds__header"><a href="' . $catUrl . '">' . $catName . '</a></div>';  
+  }
+  generateFeed( $catPosts, $postsCount, $template );
+  if ( $template == 'feed' ) {
+    echo '</section>';
+  }
 }
 ?>
 
 <?php 
-get_template_part( 'templates/partials/home-mosaic' );
-// echo '<div class="stage"></div>';
+get_template_part( 'templates/partials/home-heroes' );
 echo '<div class="grid">';
 echo '<section class="collection-of-feeds">';
 generateFeedsBySlug( 'article' );
