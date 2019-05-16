@@ -71,9 +71,8 @@ $feed-border-radius: 8px;
 }
 .feed__metas {
   /* Wrapper for all meta items that describes a feed item */
+  @include subtlefont();
   color: $color-light;
-  font-size: 12px; /* testing new typography */
-  line-height: 1; /* testing new typography */
   display: flex;
   justify-content: flex-end;
 }
@@ -85,6 +84,7 @@ $feed-border-radius: 8px;
 }
 .feed__meta__link {
   @include linkStyleOverride();
+  color: $color-light;
 }
 .feed__meta__icon {
   width: $spacing;

@@ -491,8 +491,9 @@ body#tinymce {
 
 .comment-form .comment__input__label, .comment-form .comment__checkbox {
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   display: inline-block;
   min-width: 48px;
@@ -534,8 +535,9 @@ body#tinymce {
   /* Align to the right end */
   align-self: flex-end;
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   border-radius: 4px;
   border: 2px solid #E8E8E8;
@@ -594,8 +596,9 @@ body#tinymce {
 
 .comment__meta {
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   margin: 0 0 8px;
 }
@@ -614,8 +617,9 @@ body#tinymce {
 
 .comment__reply {
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   margin: 0;
 }
@@ -674,7 +678,7 @@ body#tinymce {
   padding: 2px 8px;
   border-radius: 4px;
   margin: 0 4px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: monospace;
 }
 
@@ -740,8 +744,9 @@ body#tinymce {
 
 .entry__meta {
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   margin: 0 0 8px;
 }
@@ -809,7 +814,7 @@ body#tinymce {
   padding: 2px 8px;
   border-radius: 4px;
   margin: 0 4px;
-  font-size: 14px;
+  font-size: 13px;
   font-family: monospace;
 }
 
@@ -891,8 +896,9 @@ body#tinymce {
 .feeds__header {
   /* The header that summarizies to a collection of feed */
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   margin: 0 0 16px;
   border-bottom: 2px solid #E84141;
@@ -954,11 +960,12 @@ body#tinymce {
 
 .feed__metas {
   /* Wrapper for all meta items that describes a feed item */
-  color: #999;
-  font-size: 12px;
-  /* testing new typography */
+  color: #777;
   line-height: 1;
-  /* testing new typography */
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #999;
   display: flex;
   justify-content: flex-end;
 }
@@ -972,6 +979,7 @@ body#tinymce {
 
 .feed__meta__link {
   color: #000;
+  color: #999;
 }
 
 .feed__meta__link:hover {
@@ -991,7 +999,7 @@ body#tinymce {
   display: flex;
   justify-content: flex-end;
   margin: 0 0 96px;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 @media (max-width: 767px) {
@@ -1020,8 +1028,9 @@ body#tinymce {
 
 .footer .widget-title {
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   margin: 0 0 16px;
 }
@@ -1029,8 +1038,9 @@ body#tinymce {
 .header {
   /* The very top level container for everything */
   color: #777;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   margin: 0 0 32px;
 }
@@ -1045,10 +1055,14 @@ body#tinymce {
 }
 
 .header__toolbar__item {
-  font-size: 12px;
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
   color: #FFFFFF;
   display: inline-block;
-  margin: 4px 8px;
+  margin: 8px;
 }
 
 .header__toolbar__item:first-child {
@@ -1252,7 +1266,7 @@ body#tinymce {
 .navigation {
   /* the margin between you and footer is taken care of by your parent */
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
 }
 

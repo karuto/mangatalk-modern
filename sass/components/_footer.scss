@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-end;
   margin: 0 0 $spacing-gigantic;
-  font-size: $font-size-tiny;
+  font-size: $font-size-small;
   @media (max-width: $mobile-max) {
     display: block;
   }

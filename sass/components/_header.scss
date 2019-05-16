@@ -1,5 +1,5 @@
 .header {
-  /* The very top level container for everything */
+  /* The very top level container for everything about header */
   @include subtlefont();
   margin: 0 0 $spacing-large;
 }
@@ -14,10 +14,10 @@
 }
 
 .header__toolbar__item {
-  font-size: 12px;
+  @include subtlefont();
   color: $color-white;
   display: inline-block;
-  margin: $spacing-xsmall $spacing-small;
+  margin:  $spacing-small;
 
   &:first-child {
     margin-left: $spacing;

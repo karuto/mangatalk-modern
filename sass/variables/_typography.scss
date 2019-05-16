@@ -1,6 +1,6 @@
 // Typography - sizes and heights
 $font-size-base: 16px;
-$font-size-tiny: 14px;
+$font-size-small: 13px;
 $font-size-content: 18px;
 $font-size-title: $font-size-content;
 $font-size-hero: 28px;
@@ -42,7 +42,7 @@ $font-weight-bold: 700;
 // Provide site-wide "excerpt font" style
 @mixin excerptfont() {
   font-family: $font-family-content;
-  font-size: 13px; /* testing new typography */
+  font-size: $font-size-small; /* testing new typography */
   line-height: $line-height-content;
   color: $strong-text-color;
 }
@@ -50,8 +50,9 @@ $font-weight-bold: 700;
 // Provide site-wide "subtle font" style
 @mixin subtlefont() {
   color: $subtle-text-color;
+  line-height: 1;
   text-transform: uppercase;
-  font-size: $font-size-tiny;
+  font-size: $font-size-small;
   font-weight: $font-weight-bold;
 }
 
