@@ -39,6 +39,14 @@ $font-weight-bold: 700;
   font-weight: $font-weight-normal;
 }
 
+// Provide site-wide "excerpt font" style
+@mixin excerptfont() {
+  font-family: $font-family-content;
+  font-size: 13px; /* testing new typography */
+  line-height: $line-height-content;
+  color: $subtle-text-color;
+}
+
 // Provide site-wide "subtle font" style
 @mixin subtlefont() {
   color: $subtle-text-color;

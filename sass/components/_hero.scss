@@ -4,6 +4,12 @@
 
 
 
+.hero--discussion {
+  margin: 0 0 $spacing-xxlarge;
+}
+
+
+
 .hero--content {
   height: $feed-gutter-large * 20; /* 640px */
   margin: 0 $spacing $spacing-large;
@@ -22,7 +28,6 @@
     grid-template-columns: 100%;
   }
 }
-
 .hero--home {
   grid-column: 1/3;
   margin: 0;
@@ -30,9 +35,14 @@
   @media (max-width: $mobile-max) {  
     grid-column: unset;
   }
-
   .hero__cover__content {
-    margin: 0 $spacing;
+    width: 100%;
+  }
+  .hero__title__text {
+    margin: $spacing;
+  }
+  .hero__excerpt {
+    margin: $spacing;
   }
 }
 
@@ -43,7 +53,7 @@
   /* .hero__cover--hero is at hero.scss */
   /* The feature image cover that wraps around the title */
   width: 100%;
-  height: $feed-gutter-large * 10; /* 320px */
+  height: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -80,46 +90,13 @@
   max-width: $onecolumn-maxwidth;
   margin: 0 auto;
 }
-.hero__title {
-}
 .hero__title__text {
   @include herofont();
   color: $color-white;
   margin: $spacing-large 0;
 }
-
-.hero--oops {
-}
-
-.hero--entry {
-  margin: 0 0 $spacing-xxlarge;
-}
-
-.hero--discussion {
-  margin: 0 0 $spacing-xxlarge;
-}
-
-// .hero__title {
-//   font-family: $font-family-title;
-//   font-size: $font-size-hero;
-//   line-height: $line-height-hero;
-//   margin: 0 0 $spacing-small;
-// }
-
-// .hero__content {
-//   font-size: $font-size-hero;
-//   line-height: $line-height-hero;
-//   margin: 0;
-//   width: 50%;
-//   @media (max-width: $mobile-max) {
-//     width: 100%;
-//   }
-// }
-
-.hero__s {
-  color: $subtle-text-color;
-
-}
-.hero__link {
-  @include linkStyleOverride();
+.hero__excerpt {
+  @include excerptfont();
+  color: $color-white;
+  margin: $spacing 0;
 }

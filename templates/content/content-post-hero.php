@@ -25,6 +25,7 @@ $heroClasses = is_home() ? "hero hero--home" : "hero hero--content";
       <a class="hero__title" href="<?php the_permalink(); ?>">
         <h2 class="hero__title__text"><?php the_title(); ?></h1>
       </a>
+      <aside class="hero__excerpt"><?php echo get_the_excerpt(); ?></aside>
     </div>
     <div class="hero__cover__shade hero__cover__shade--black"></div>
   </div>

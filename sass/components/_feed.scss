@@ -63,11 +63,7 @@ $feed-border-radius: 8px;
   margin: 0 0 $spacing-small;
 }
 .feed__excerpt {
-  font-size: 13px; /* testing new typography */
-  line-height: 1.45; /* testing new typography */
-  color: $color-medium;
-  font-family: $font-family-content;
-  line-height: $line-height-content;
+  @include excerptfont();
   flex-grow: 1; /* This is to push the last flex item (metas) to the flex-end */
   margin: 0 0 $spacing-small;
 }

@@ -490,7 +490,7 @@ body#tinymce {
 }
 
 .comment-form .comment__input__label, .comment-form .comment__checkbox {
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -533,7 +533,7 @@ body#tinymce {
 .comment-form .comment__submit {
   /* Align to the right end */
   align-self: flex-end;
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -593,7 +593,7 @@ body#tinymce {
 }
 
 .comment__meta {
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -613,7 +613,7 @@ body#tinymce {
 }
 
 .comment__reply {
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -643,11 +643,11 @@ body#tinymce {
 }
 
 .entry__content a {
-  color: #333;
+  color: #777;
 }
 
 .entry__content a:hover {
-  color: #333;
+  color: #777;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -684,7 +684,7 @@ body#tinymce {
 
 .entry__content s {
   text-decoration: line-through;
-  color: #333;
+  color: #777;
 }
 
 .entry__content b, .entry__content strong {
@@ -714,7 +714,7 @@ body#tinymce {
 
 .entry__copyright {
   margin: 0;
-  color: #333;
+  color: #777;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
@@ -733,13 +733,13 @@ body#tinymce {
 
 .entry__excerpt {
   margin: 0;
-  color: #333;
+  color: #777;
   padding: 0 0 48px;
   border-bottom: 6px double #333;
 }
 
 .entry__meta {
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -748,7 +748,7 @@ body#tinymce {
 
 .entry__meta a {
   /* hate to do this, but must override <a> without classes by the_category */
-  color: #333;
+  color: #777;
 }
 
 .entry__meta a:hover {
@@ -778,11 +778,11 @@ body#tinymce {
 }
 
 .entry__content a {
-  color: #333;
+  color: #777;
 }
 
 .entry__content a:hover {
-  color: #333;
+  color: #777;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -819,7 +819,7 @@ body#tinymce {
 
 .entry__content s {
   text-decoration: line-through;
-  color: #333;
+  color: #777;
 }
 
 .entry__content b, .entry__content strong {
@@ -849,7 +849,7 @@ body#tinymce {
 
 .entry__copyright {
   margin: 0;
-  color: #333;
+  color: #777;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
@@ -891,7 +891,7 @@ body#tinymce {
 
 .feeds__header {
   /* The header that summarizies to a collection of feed */
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -937,13 +937,11 @@ body#tinymce {
 }
 
 .feed__excerpt {
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   font-size: 13px;
   /* testing new typography */
-  line-height: 1.45;
-  /* testing new typography */
-  color: #777;
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   line-height: 1.7;
+  color: #777;
   flex-grow: 1;
   /* This is to push the last flex item (metas) to the flex-end */
   margin: 0 0 8px;
@@ -1008,7 +1006,7 @@ body#tinymce {
 }
 
 .footer .widget-title {
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -1017,7 +1015,7 @@ body#tinymce {
 
 .header {
   /* The very top level container for everything */
-  color: #333;
+  color: #777;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -1075,12 +1073,12 @@ body#tinymce {
 
 .header__nav .menu-item a {
   margin: 0 0 0 24px;
-  color: #333;
+  color: #777;
   color: #FFFFFF;
 }
 
 .header__nav .menu-item a:hover {
-  color: #333;
+  color: #777;
 }
 
 @media (max-width: 767px) {
@@ -1091,6 +1089,10 @@ body#tinymce {
 
 .hero {
   margin: 0 0 96px;
+}
+
+.hero--discussion {
+  margin: 0 0 48px;
 }
 
 .hero--content {
@@ -1128,15 +1130,22 @@ body#tinymce {
 }
 
 .hero--home .hero__cover__content {
-  margin: 0 16px;
+  width: 100%;
+}
+
+.hero--home .hero__title__text {
+  margin: 16px;
+}
+
+.hero--home .hero__excerpt {
+  margin: 16px;
 }
 
 .hero__cover {
   /* .hero__cover--hero is at hero.scss */
   /* The feature image cover that wraps around the title */
   width: 100%;
-  height: 320px;
-  /* 320px */
+  height: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1187,24 +1196,14 @@ body#tinymce {
   margin: 32px 0;
 }
 
-.hero--entry {
-  margin: 0 0 48px;
-}
-
-.hero--discussion {
-  margin: 0 0 48px;
-}
-
-.hero__s {
-  color: #333;
-}
-
-.hero__link {
-  color: #333;
-}
-
-.hero__link:hover {
-  color: #333;
+.hero__excerpt {
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #777;
+  color: #FFFFFF;
+  margin: 16px 0;
 }
 
 /* WP generated prev & next classes */
