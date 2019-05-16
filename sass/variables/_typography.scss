@@ -24,7 +24,7 @@ $font-weight-bold: 700;
 
 
 // Provide site-wide "hero font" style (used in hero item)
-@mixin herofont() {
+@mixin heroFont() {
   font-family: $font-family-title;
   font-size: $font-size-hero;
   font-weight: $font-weight-bold;
@@ -32,7 +32,7 @@ $font-weight-bold: 700;
 }
 
 // Provide site-wide "title font" style (used in feed item)
-@mixin titlefont() {
+@mixin titleFont() {
   font-family: $font-family-title;
   font-size: $font-size-title;
   line-height: $line-height-title;
@@ -40,7 +40,7 @@ $font-weight-bold: 700;
 }
 
 // Provide site-wide "excerpt font" style
-@mixin excerptfont() {
+@mixin excerptFont() {
   font-family: $font-family-content;
   font-size: $font-size-small; /* testing new typography */
   line-height: $line-height-content;
@@ -48,7 +48,7 @@ $font-weight-bold: 700;
 }
 
 // Provide site-wide "subtle font" style
-@mixin subtlefont() {
+@mixin subtleFont() {
   color: $subtle-text-color;
   line-height: 1;
   text-transform: uppercase;
@@ -57,7 +57,7 @@ $font-weight-bold: 700;
 }
 
 // Provide site-wide "content font" style
-@mixin contentfont() {
+@mixin contentFont() {
   margin: 0 0 $spacing-medium;
   font-size: $font-size-content;
   line-height: $line-height-content;

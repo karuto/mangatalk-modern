@@ -9,7 +9,7 @@
   & > ol,
   li {
     /* These are all "paragraph level" content */
-    @include contentfont();
+    @include contentFont();
   }
 
   a {

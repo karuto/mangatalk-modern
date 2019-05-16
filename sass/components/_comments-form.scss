@@ -11,7 +11,7 @@
     padding: $spacing-xsmall $spacing-small;
   }
   %leftSide {
-    @include subtlefont();
+    @include subtleFont();
     display: inline-block;
     min-width: $spacing-xxlarge;
     margin: 0 $spacing 0 0;
@@ -47,7 +47,7 @@
   .comment__submit {
     /* Align to the right end */
     align-self: flex-end;
-    @include subtlefont();
+    @include subtleFont();
     border-radius: $base-border-radius;
     border: 2px solid $block-bg-color;
     background: $block-bg-color;

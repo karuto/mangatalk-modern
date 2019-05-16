@@ -1,6 +1,6 @@
 .header {
   /* The very top level container for everything about header */
-  @include subtlefont();
+  @include subtleFont();
   margin: 0 0 $spacing-large;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .header__toolbar__item {
-  @include subtlefont();
+  @include subtleFont();
   color: $color-white;
   display: inline-block;
   margin:  $spacing-small;
@@ -32,7 +32,7 @@
 
 .header__title {
   margin: 0;
-  @include subtlefont();
+  @include subtleFont();
   color: $color-white;
 }
 

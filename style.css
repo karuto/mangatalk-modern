@@ -1361,19 +1361,69 @@ body#tinymce {
 
 .columnrec__content {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 40px;
+  grid-column-gap: 16px;
 }
 
-.columnrec__author__link {
+.columnrec__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.columnrec__authorlink {
   color: #000;
   color: #777;
   line-height: 1;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
+  font-size: 16px;
+  color: #000;
 }
 
-.columnrec__author__link:hover {
+.columnrec__authorlink:hover {
+  color: #E84141;
+}
+
+.columnrec__authorcount {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 0 8px;
+  color: #777;
+}
+
+.columnrec__desc {
+  color: #000;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 275px;
+}
+
+.columnrec__desc:hover {
+  color: #E84141;
+}
+
+.columnrec__desclink {
+  color: #000;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+}
+
+.columnrec__desclink:hover {
   color: #E84141;
 }
 

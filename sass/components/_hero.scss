@@ -111,12 +111,12 @@
   margin: 0 auto;
 }
 .hero__title__text {
-  @include herofont();
+  @include heroFont();
   color: $color-white;
   margin: $spacing-large 0;
 }
 .hero__excerpt {
-  @include excerptfont();
+  @include excerptFont();
   color: $color-white;
   margin: $spacing 0;
 }

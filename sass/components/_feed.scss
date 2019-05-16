@@ -26,7 +26,7 @@ $feed-border-radius: 8px;
 }
 .feeds__header {
   /* The header that summarizies to a collection of feed */
-  @include subtlefont();
+  @include subtleFont();
   margin: 0 0 $feed-gutter-small;
   border-bottom: 2px solid $color-brand-primary;
   padding: 0 0 8px;
@@ -60,18 +60,18 @@ $feed-border-radius: 8px;
   /* The anchor tag that wraps around the text */
 }
 .feed__title__text {
-  @include titlefont();
+  @include titleFont();
   @include linkStyleOverride();
   margin: 0 0 $spacing-small;
 }
 .feed__excerpt {
-  @include excerptfont();
+  @include excerptFont();
   flex-grow: 1; /* This is to push the last flex item (metas) to the flex-end */
   margin: 0 0 $spacing-small;
 }
 .feed__metas {
   /* Wrapper for all meta items that describes a feed item */
-  @include subtlefont();
+  @include subtleFont();
   color: $color-light;
   display: flex;
   justify-content: flex-end;

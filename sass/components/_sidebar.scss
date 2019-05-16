@@ -1,3 +1,5 @@
+$columnrec_image_dimension: 40px;
+
 .sidebar {
 
 }
@@ -14,12 +16,38 @@
 }
 .columnrec__content {
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: $columnrec_image_dimension 1fr;
+  grid-template-rows: $columnrec_image_dimension;
+  grid-column-gap: $spacing;
 }
 .columnrec__image {
 
 }
-.columnrec__author__link {
+.columnrec__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.columnrec__authorlink {
   @include linkStyleOverride();
-  @include subtlefont();
+  @include subtleFont();
+  font-size: $font-size-base;
+  color: $strong-text-color;
+}
+.columnrec__authorcount {
+  @include subtleFont();
+  margin: 0 0 0 $spacing-small;
+  color: $subtle-text-color;
+}
+.columnrec__desc {
+  @include linkStyleOverride();
+  @include excerptFont();
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 275px;
+}
+.columnrec__desclink {
+  @include linkStyleOverride();
+  @include excerptFont();
 }
