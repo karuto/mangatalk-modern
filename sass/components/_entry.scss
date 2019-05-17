@@ -10,9 +10,18 @@
   border-bottom: $border-line-bold;
 }
 
-.entry__meta {
+.entry__intro {
   @include subtleFont();
   margin: 0 0 $spacing-large;
+  padding: 0 0 $spacing-large;
+  border-bottom: $border-line-highlight;
+
+  .entry__intro__content {
+    /* see _sidebar.scss for styling */
+  }
+  .avatar {
+    border-radius: $base-border-radius;
+  }
 }
 
 @import "./entry-content.scss";

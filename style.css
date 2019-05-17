@@ -703,13 +703,23 @@ section.archive {
   border-bottom: 6px double #333;
 }
 
-.entry__meta {
+.entry__intro {
   color: #777;
   line-height: 1;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
   margin: 0 0 32px;
+  padding: 0 0 32px;
+  border-bottom: 3px solid #E84141;
+}
+
+.entry__intro .entry__intro__content {
+  /* see _sidebar.scss for styling */
+}
+
+.entry__intro .avatar {
+  border-radius: 4px;
 }
 
 .single {
@@ -794,7 +804,7 @@ section.archive {
 }
 
 .entry__content blockquote {
-  border-left: 3px solid #E84141;
+  border-left: 3px solid #333;
   margin: 0 0 32px;
   margin-left: -32px;
   padding: 0 0 0 32px;
@@ -1578,6 +1588,7 @@ section.archive {
   border-bottom: 1px solid #CECECE;
 }
 
+.entry__intro__content,
 .columnrec__content {
   display: grid;
   grid-template-columns: 40px 1fr;
@@ -1650,6 +1661,15 @@ section.archive {
 
 .columnrec__desc__link:hover {
   color: #E84141;
+}
+
+.columnrec__stats {
+  /* this class is only used in entry-intro, not in the sidebar */
+  display: flex;
+}
+
+.columnrec__stats .feed__meta:first-child {
+  margin: 0;
 }
 
 .stage {

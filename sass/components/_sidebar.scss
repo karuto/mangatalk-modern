@@ -14,6 +14,7 @@ $columnrec_image_dimension: 40px;
   height: 50.5px; /* so that a columnrec is half height of the feed item */
   border-bottom: $border-line;
 }
+.entry__intro__content,
 .columnrec__content {
   display: grid;
   grid-template-columns: $columnrec_image_dimension 1fr;
@@ -47,4 +48,11 @@ $columnrec_image_dimension: 40px;
 .columnrec__desc__link {
   @include linkStyleOverride();
   @include excerptFont();
+}
+.columnrec__stats {
+  /* this class is only used in entry-intro, not in the sidebar */
+  display: flex;
+  .feed__meta:first-child {
+    margin: 0;
+  }
 }

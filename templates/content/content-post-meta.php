@@ -13,14 +13,21 @@
 $userId = get_the_author_meta( 'ID' );
 ?>
 
-<aside class="entry__meta">
-  <div class="columnrec__image">
-    <?php echo get_avatar( $userId, 40 ); ?>
+<aside class="entry__intro">
+  <div class="entry__intro__content">
+    <div class="entry__intro__image">
+      <?php echo get_avatar( $userId, 40 ); ?>
+    </div>
+    <div class="columnrec__meta">
+      <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $user->ID ); ?>">
+        <?php echo get_the_author_meta( 'display_name' ); ?>
+        <span class="columnrec__authorcount">
+          <?php echo count_user_posts( $userId ); ?> 篇文章
+        </span>
+      </a>
+      <div class="columnrec__stats">
+        <?php get_template_part( 'templates/content/content-post-stats' ); ?>
+      </div>
+    </div>
   </div>
-  <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $user->ID ); ?>">
-    <?php echo get_the_author_meta( 'display_name' ); ?>
-    <span class="columnrec__authorcount">
-      <?php echo count_user_posts( $user->ID ); ?> 篇文章
-    </span>
-  </a>
 </aside>
