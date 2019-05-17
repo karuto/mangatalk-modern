@@ -11,17 +11,10 @@ section.archive {
       margin: $spacing;
     }
   }
-  .stage {
-    height: 200px;
-  }
 }
 .archive-head {
   @include heroFont();
   color: $color-white;
   text-align: center;
-  margin: 0 auto $spacing-large;
-  min-height: 96px; /* this made it line up exactly with .stage */
-  @media (max-width: $mobile-max) {
-    min-height: 80px; /* this made it line up exactly with .stage */
-  }
+  margin: 0;
 }

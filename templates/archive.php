@@ -10,7 +10,9 @@
  */
 ?>
 
-<div class="archive-head">
-  <?php echo get_the_archive_title(); ?>
+<div class="stage stage--relative">
+  <div class="archive-head">
+    <?php echo get_the_archive_title(); ?>
+  </div>
 </div>
 <?php get_template_part( 'templates/partials/feed' ); ?>

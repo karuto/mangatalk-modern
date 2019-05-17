@@ -518,10 +518,6 @@ section.archive {
   }
 }
 
-.archive .stage {
-  height: 200px;
-}
-
 .archive-head {
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-size: 28px;
@@ -529,16 +525,7 @@ section.archive {
   line-height: 1.3;
   color: #FFFFFF;
   text-align: center;
-  margin: 0 auto 32px;
-  min-height: 96px;
-  /* this made it line up exactly with .stage */
-}
-
-@media (max-width: 767px) {
-  .archive-head {
-    min-height: 80px;
-    /* this made it line up exactly with .stage */
-  }
+  margin: 0;
 }
 
 /* This stylesheet targets "submit new comment" form only. Also see comments.scss */
@@ -1322,6 +1309,7 @@ section.archive {
 }
 
 .header__title {
+  white-space: nowrap;
   margin: 0;
   color: #777;
   line-height: 1;
@@ -1448,7 +1436,7 @@ section.archive {
 }
 
 .hero--home .hero__title__text {
-  margin: 16px;
+  margin: 16px 16px 8px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-size: 18px;
   line-height: 1.3;
@@ -1456,7 +1444,7 @@ section.archive {
 }
 
 .hero--home .hero__excerpt {
-  margin: 16px;
+  margin: 0 16px 16px;
 }
 
 .latest {
@@ -1763,4 +1751,21 @@ section.archive {
   width: 100%;
   left: 0;
   z-index: -1;
+}
+
+.stage--relative {
+  /* https://css-tricks.com/full-width-containers-limited-width-parents/#article-header-id-6 */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  height: 200px;
+  margin-top: -77px;
+  /* 45px masthead height + 32px margin-bttom */
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

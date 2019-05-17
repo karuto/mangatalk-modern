@@ -11,4 +11,13 @@
   z-index: -1;
 }
 
+.stage--relative {
+  @include fullpagewidth();
+  height: 200px;
+  margin-top: -77px; /* 45px masthead height + 32px margin-bttom */
+  margin-bottom: $spacing-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

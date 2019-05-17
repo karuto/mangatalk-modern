@@ -60,11 +60,11 @@
     width: 100%;
   }
   .hero__title__text {
-    margin: $spacing;
+    margin: $spacing $spacing $spacing-small;
     @include titleFont();
   }
   .hero__excerpt {
-    margin: $spacing;
+    margin: 0 $spacing $spacing;
   }
 }
 .latest {
