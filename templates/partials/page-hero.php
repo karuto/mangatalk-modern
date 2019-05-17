@@ -17,7 +17,7 @@ if ( is_archive() || is_search() || is_404() ) {
   echo '<header class="feeds__header">';
 
   if ( is_archive() ) {
-    echo get_the_archive_title();
+    echo '所有文章：' . get_the_archive_title();
   } else if ( is_search() ) {
     _e( 'Search results for:', 'twentynineteen' );
   } else if ( is_404() ) {

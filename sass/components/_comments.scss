@@ -2,9 +2,6 @@
 
 .discussion {
   /* Discussion = submit a comment + comments */
-  margin: -$spacing-xxlarge 0 $spacing-gigantic;
-  padding: 0 0 $spacing-xxlarge;
-  border-bottom: $border-line-bold;
   @media (max-width: $mobile-max) {
     margin: 0 $spacing;
   }

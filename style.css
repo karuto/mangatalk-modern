@@ -524,8 +524,15 @@ section.archive {
   color: #FFFFFF;
   text-align: center;
   margin: 0 auto 32px;
-  min-height: 80px;
+  min-height: 96px;
   /* this made it line up exactly with .stage */
+}
+
+@media (max-width: 767px) {
+  .archive-head {
+    min-height: 80px;
+    /* this made it line up exactly with .stage */
+  }
 }
 
 /* This stylesheet targets "submit new comment" form only. Also see comments.scss */
@@ -610,9 +617,6 @@ section.archive {
 /* This stylesheet targets existing comments only. Also see comments-form.scss */
 .discussion {
   /* Discussion = submit a comment + comments */
-  margin: -48px 0 96px;
-  padding: 0 0 48px;
-  border-bottom: 6px double #333;
 }
 
 @media (max-width: 767px) {
@@ -700,7 +704,7 @@ section.archive {
   margin: 0;
   color: #777;
   padding: 0 0 48px;
-  border-bottom: 6px double #333;
+  border-bottom: 3px solid #E84141;
 }
 
 .entry__intro {
@@ -728,7 +732,7 @@ section.archive {
 
 .entry__content {
   padding: 0 0 48px;
-  border-bottom: 6px double #333;
+  border-bottom: 3px solid #E84141;
   margin: 0 0 48px;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
 }
@@ -1306,6 +1310,8 @@ section.archive {
 }
 
 .hero--content {
+  box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.3);
+  border-radius: 4px;
   height: 640px;
   /* 640px */
   margin: 0 16px 32px;
@@ -1345,7 +1351,7 @@ section.archive {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 16px;
   grid-gap: 16px;
-  margin: 0 16px 96px;
+  margin: 0 16px 48px;
 }
 
 @media (max-width: 767px) {
@@ -1356,6 +1362,8 @@ section.archive {
 }
 
 .hero--home {
+  box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.3);
+  border-radius: 4px;
   grid-column: 1/3;
   margin: 0;
   height: 320px;
@@ -1385,6 +1393,8 @@ section.archive {
 }
 
 .latest {
+  box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.3);
+  border-radius: 4px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: 16px;

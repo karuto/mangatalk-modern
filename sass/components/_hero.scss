@@ -11,6 +11,8 @@
 
 
 .hero--content {
+  box-shadow: $box-shadow;
+  border-radius: $base-border-radius;
   height: $spacing-large * 20; /* 640px */
   margin: 0 $spacing $spacing-large;
   @media (max-width: $mobile-max) {
@@ -39,13 +41,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: $spacing;
   grid-gap: $spacing;
-  margin: 0 $spacing $spacing-gigantic;
+  margin: 0 $spacing $spacing-xxlarge;
   @media (max-width: $mobile-max) {
     grid-column: unset;
     grid-template-columns: 100%;
   }
 }
 .hero--home {
+  box-shadow: $box-shadow;
+  border-radius: $base-border-radius;
   grid-column: 1/3;
   margin: 0;
   height: $spacing-large * 10; /* 320px */
@@ -64,6 +68,8 @@
   }
 }
 .latest {
+  box-shadow: $box-shadow;
+  border-radius: $base-border-radius;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: $spacing;
