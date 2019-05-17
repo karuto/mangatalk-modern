@@ -1,8 +1,20 @@
+$extracontent-width: 150px;
+$content-gutter: $spacing-large;
+
+.single {
+  /* top level wrapper on single pages */
+}
+
 .entry__content {
   padding: 0 0 $spacing-xxlarge;
   border-bottom: $border-line-bold;
   margin: 0 0 $spacing-xxlarge;
   font-family: $font-family-content;
+
+  @media (max-width: $mobile-max) {
+    margin: 0 $spacing $spacing-xxlarge;
+    font-size: 16px;
+  }
 
   p,
   & > ul,
@@ -10,14 +22,50 @@
   li {
     /* These are all "paragraph level" content */
     @include contentFont();
+    @media (max-width: $mobile-max) {
+      font-size: 16px;
+    }
   }
 
-  a {
-    @include linkStyleOverride();
+  img {
+    max-width: 100%;
+  }
+
+  h1 {
+
+  }
+
+  aside {
+    margin: 0 0 $content-gutter;
+    @include excerptFont();
+    background: $color-white;
+    border: $border-line;
+    padding: $content-gutter;
+  }
+
+  blockquote {
+    border-left: $border-line-highlight;
+    margin: 0 0 $content-gutter;
+    margin-left: -$content-gutter;
+    padding: 0 0 0 $content-gutter;
+    .big {
+      @include contentFont();
+    }
+    footer {
+      text-align: right;
+      margin: $content-gutter 0 0;
+      @include excerptFont();
+      &:before {
+        content: '\2014 \00A0';
+      }
+      cite {
+        font-style: normal;
+      }
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin: $spacing-xxlarge 0 $spacing-medium;
+    margin: $spacing-xxlarge 0 $content-gutter;
     font-family: $font-family-title;
     font-weight: $font-weight-bold;
   }
@@ -71,6 +119,73 @@
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: $content-gutter;
+  }
+  figure.is-fullwidth {
+    display: flex;
+    flex-direction: column;
+    margin-left: -$extracontent-width;
+    margin-right: -$extracontent-width;
+    max-width: $container-maxwidth;
+
+    @media (max-width: $mobile-max) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    figcaption {
+      padding: $spacing-small 0 0;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  figcaption {
+    @include excerptFont();
+    line-height: 1.5;
+  }
+  .alignleft {
+    float: left;
+    margin-right: $content-gutter;
+
+    @media (max-width: $mobile-max) {
+      float: none;
+      margin-right: 0;
+    }
+  }
+  .alignright {
+    float: right;
+    margin-left: $content-gutter;
+
+    @media (max-width: $mobile-max) {
+      float: none;
+      margin-left: 0;
+    }
+  }
+  .alignright,
+  .alignleft {
+    position: relative;
+  }
+
+  figcaption.alignright {
+    right: -165px;
+    text-align: left;
+    position: absolute;
+    width: 150px;
+    top: 0;
+    margin-top: 0;
+
+    @media (max-width: $mobile-max) {
+      position: relative;
+      right: 0;
+      width: 100%;
+    }
   }
 }
 

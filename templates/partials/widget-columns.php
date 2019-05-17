@@ -81,7 +81,7 @@ $users = get_users(
                 )
               );
               foreach ( $userPosts as $post ) {
-                echo '<a class="columnrec__desclink" href="';
+                echo '<a class="columnrec__desc__link" href="';
                 echo the_permalink();
                 echo '">';
                 echo the_title();

@@ -46,8 +46,11 @@ $columnrec_image_dimension: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 275px;
+  @media (max-width: $mobile-max) {
+    max-width: 65vw;
+  }
 }
-.columnrec__desclink {
+.columnrec__desc__link {
   @include linkStyleOverride();
   @include excerptFont();
 }

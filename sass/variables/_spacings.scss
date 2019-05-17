@@ -6,7 +6,7 @@ $spacing-small: ($spacing * 0.5);
 $spacing-smaller: ($spacing * 0.75);
 $spacing-medium: ($spacing * 1.5);
 $spacing-large: ($spacing * 2);
-$spacing-xlarge: ($spacing * 2.5);
+$spacing-xlarge: ($spacing * 2.5); /* 40px */
 $spacing-xxlarge: ($spacing * 3); /* 48px */
 $spacing-xxxlarge: ($spacing * 4); /* 64px */
 $spacing-gigantic: ($spacing * 6); /* 96px */
@@ -20,4 +20,5 @@ $onecolumn-maxwidth: 740px;
 
 $border-line: 1px solid $color-mid-gray;
 $border-line-bold: 6px double $color-dark;
+$border-line-highlight: 3px solid $color-brand-primary;
 $entry-meta-width: $spacing * 6;

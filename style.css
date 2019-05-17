@@ -21,6 +21,7 @@ Text Domain: twentynineteen
 /* Content red */
 /* For all the meta components */
 /* 1.6rem */
+/* 40px */
 /* 48px */
 /* 64px */
 /* 96px */
@@ -624,11 +625,22 @@ body#tinymce {
   margin: 0;
 }
 
+.single {
+  /* top level wrapper on single pages */
+}
+
 .entry__content {
   padding: 0 0 48px;
   border-bottom: 6px double #333;
   margin: 0 0 48px;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+}
+
+@media (max-width: 767px) {
+  .entry__content {
+    margin: 0 16px 48px;
+    font-size: 16px;
+  }
 }
 
 .entry__content p,
@@ -646,16 +658,69 @@ body#tinymce {
   text-align: left;
 }
 
-.entry__content a {
+@media (max-width: 767px) {
+  .entry__content p,
+  .entry__content > ul,
+  .entry__content > ol,
+  .entry__content li {
+    font-size: 16px;
+  }
+}
+
+.entry__content img {
+  max-width: 100%;
+}
+
+.entry__content aside {
+  margin: 0 0 32px;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  background: #FFFFFF;
+  border: 1px solid #CECECE;
+  padding: 32px;
+}
+
+.entry__content blockquote {
+  border-left: 3px solid #E84141;
+  margin: 0 0 32px;
+  margin-left: -32px;
+  padding: 0 0 0 32px;
+}
+
+.entry__content blockquote .big {
+  margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: left;
+}
+
+.entry__content blockquote footer {
+  text-align: right;
+  margin: 32px 0 0;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
   color: #000;
 }
 
-.entry__content a:hover {
-  color: #E84141;
+.entry__content blockquote footer:before {
+  content: '\2014 \00A0';
+}
+
+.entry__content blockquote footer cite {
+  font-style: normal;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
-  margin: 48px 0 24px;
+  margin: 48px 0 32px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-weight: 700;
 }
@@ -714,6 +779,92 @@ body#tinymce {
   /* Opera 7 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
+}
+
+.entry__content figure {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.entry__content figure.is-fullwidth {
+  display: flex;
+  flex-direction: column;
+  margin-left: -150px;
+  margin-right: -150px;
+  max-width: 1140px;
+}
+
+@media (max-width: 767px) {
+  .entry__content figure.is-fullwidth {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.entry__content figure.is-fullwidth figcaption {
+  padding: 8px 0 0;
+}
+
+.entry__content figure.is-fullwidth img {
+  display: block;
+  margin: 0 auto;
+}
+
+.entry__content figcaption {
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  line-height: 1.5;
+}
+
+.entry__content .alignleft {
+  float: left;
+  margin-right: 32px;
+}
+
+@media (max-width: 767px) {
+  .entry__content .alignleft {
+    float: none;
+    margin-right: 0;
+  }
+}
+
+.entry__content .alignright {
+  float: right;
+  margin-left: 32px;
+}
+
+@media (max-width: 767px) {
+  .entry__content .alignright {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+.entry__content .alignright,
+.entry__content .alignleft {
+  position: relative;
+}
+
+.entry__content figcaption.alignright {
+  right: -165px;
+  text-align: left;
+  position: absolute;
+  width: 150px;
+  top: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .entry__content figcaption.alignright {
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
 }
 
 .entry__copyright {
@@ -760,11 +911,22 @@ body#tinymce {
   color: #E84141;
 }
 
+.single {
+  /* top level wrapper on single pages */
+}
+
 .entry__content {
   padding: 0 0 48px;
   border-bottom: 6px double #333;
   margin: 0 0 48px;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+}
+
+@media (max-width: 767px) {
+  .entry__content {
+    margin: 0 16px 48px;
+    font-size: 16px;
+  }
 }
 
 .entry__content p,
@@ -782,16 +944,69 @@ body#tinymce {
   text-align: left;
 }
 
-.entry__content a {
+@media (max-width: 767px) {
+  .entry__content p,
+  .entry__content > ul,
+  .entry__content > ol,
+  .entry__content li {
+    font-size: 16px;
+  }
+}
+
+.entry__content img {
+  max-width: 100%;
+}
+
+.entry__content aside {
+  margin: 0 0 32px;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  background: #FFFFFF;
+  border: 1px solid #CECECE;
+  padding: 32px;
+}
+
+.entry__content blockquote {
+  border-left: 3px solid #E84141;
+  margin: 0 0 32px;
+  margin-left: -32px;
+  padding: 0 0 0 32px;
+}
+
+.entry__content blockquote .big {
+  margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  text-align: left;
+}
+
+.entry__content blockquote footer {
+  text-align: right;
+  margin: 32px 0 0;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
   color: #000;
 }
 
-.entry__content a:hover {
-  color: #E84141;
+.entry__content blockquote footer:before {
+  content: '\2014 \00A0';
+}
+
+.entry__content blockquote footer cite {
+  font-style: normal;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
-  margin: 48px 0 24px;
+  margin: 48px 0 32px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-weight: 700;
 }
@@ -850,6 +1065,92 @@ body#tinymce {
   /* Opera 7 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
+}
+
+.entry__content figure {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.entry__content figure.is-fullwidth {
+  display: flex;
+  flex-direction: column;
+  margin-left: -150px;
+  margin-right: -150px;
+  max-width: 1140px;
+}
+
+@media (max-width: 767px) {
+  .entry__content figure.is-fullwidth {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.entry__content figure.is-fullwidth figcaption {
+  padding: 8px 0 0;
+}
+
+.entry__content figure.is-fullwidth img {
+  display: block;
+  margin: 0 auto;
+}
+
+.entry__content figcaption {
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  line-height: 1.5;
+}
+
+.entry__content .alignleft {
+  float: left;
+  margin-right: 32px;
+}
+
+@media (max-width: 767px) {
+  .entry__content .alignleft {
+    float: none;
+    margin-right: 0;
+  }
+}
+
+.entry__content .alignright {
+  float: right;
+  margin-left: 32px;
+}
+
+@media (max-width: 767px) {
+  .entry__content .alignright {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+.entry__content .alignright,
+.entry__content .alignleft {
+  position: relative;
+}
+
+.entry__content figcaption.alignright {
+  right: -165px;
+  text-align: left;
+  position: absolute;
+  width: 150px;
+  top: 0;
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .entry__content figcaption.alignright {
+    position: relative;
+    right: 0;
+    width: 100%;
+  }
 }
 
 .entry__copyright {
@@ -1414,7 +1715,13 @@ body#tinymce {
   color: #E84141;
 }
 
-.columnrec__desclink {
+@media (max-width: 767px) {
+  .columnrec__desc {
+    max-width: 65vw;
+  }
+}
+
+.columnrec__desc__link {
   color: #000;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   font-size: 13px;
@@ -1423,7 +1730,7 @@ body#tinymce {
   color: #000;
 }
 
-.columnrec__desclink:hover {
+.columnrec__desc__link:hover {
   color: #E84141;
 }
 
