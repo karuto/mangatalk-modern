@@ -1,3 +1,6 @@
+$footer-gutter: $spacing;
+$footer-gutter-large: $spacing-large;
+
 .footer {
   margin: $spacing-gigantic 0 0;
   background-image: url('./img/hero-bg.png');
@@ -17,19 +20,23 @@
   }
   .widget-title {
     @include subtleFont();
-    margin: 0 0 $spacing;
+    margin: 0 0 $footer-gutter;
   }
 }
 .footer__wrapper {
-  padding: 0 $spacing;
+  /* this div is solely for adding the padding, more of a utility */
+  /* because .footer__content the real one is occupied by .maxwidth and cannot set horizontal paddings */
+  padding: $footer-gutter-large $footer-gutter;
+  display: grid;
+  grid-gap: $footer-gutter;
+  grid-column-gap: $footer-gutter;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  @media (max-width: $mobile-max) {
+    display: block;
+  }
 }
 .footer__content {
-  padding: $spacing-xlarge 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  @media (max-width: $mobile-max) {
-    grid-template-columns: 1fr;
-  }
 }
 .footer__content__intro__name {
   @include titleFont();
@@ -43,4 +50,11 @@
 .footer__content__copyright {
   @include excerptFont();
   color: $color-white;
+}
+.footer__content__widgets {
+  margin: 0 0 $footer-gutter;
+}
+.footer__content__copyright {
+  grid-row: 2/3;
+  grid-column: 1/3;
 }

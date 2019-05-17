@@ -49,6 +49,9 @@
     display: flex;
     overflow-x: scroll;
     margin: 0 $spacing;
+    @media (max-width: $mobile-max) {
+      margin: 0 0 0 $spacing;
+    }
   }
 
   .menu-item {
@@ -59,13 +62,16 @@
       @include linkStyleOverride();
       color: $color-white;
       @media (max-width: $mobile-max) {
-        margin: 0 $spacing-medium 0 0;
+        margin: 0 $spacing 0 0;
       }
     }
   }
   .menu-item:first-child {
     a {
-      margin: 0;
+      margin: 0; /* remove left margin on desktop */
+      @media (max-width: $mobile-max) {
+        margin: 0 $spacing 0 0; /* restore normal margin on mobile */
+      }
     }
   }
 }
