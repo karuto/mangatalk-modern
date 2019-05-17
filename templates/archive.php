@@ -14,7 +14,7 @@
 // Retrieve cover image URL then set header's background
 $cover_img_url = get_the_author_meta( 'coverimage' );
 if ( $cover_img_url == "" ) {
-  $cover_img_url = get_template_directory_uri().'/assets/img/thumb_default_lg.jpg';
+  $cover_img_url = get_template_directory_uri().'/img/mt-cover-brand.jpg';
 }
 // echo $cover_img_url;
 // echo 'style="background-image: url(' . $cover_img_url . ');"';

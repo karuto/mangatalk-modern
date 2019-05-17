@@ -35,32 +35,47 @@
     flex-direction: column;
     justify-content: space-between;
     @media (max-width: $mobile-max) {
-      grid-rows: 1/3;
-    }
-  }
-  .social {
-    align-self: flex-end;
-    display: flex;
-    svg:hover {
-      fill: $color-brand-primary;
-    }
-    path {
-      pointer-events:all;
+      grid-row: 2/3;
+      grid-column: 1/3;
     }
   }
   .tags {
     align-self: flex-end;
     margin: 0 0 $spacing-small;
+    @media (max-width: $mobile-max) {
+      align-self: flex-start;
+    }
     a {
       white-space: nowrap;
-      margin: 0 $spacing 0 0;
+      margin: 0  $spacing-small 0 0;
+      &:last-child {
+        margin: 0;
+      }
     }
-  }
-  .social__link {
-    @include linkStyleOverride();
-    margin: 0 $spacing 0 0;
-    white-space: nowrap;
   }
 }
 
+
+.social {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  @media (max-width: $mobile-max) {
+    align-self: flex-start;
+  }
+}
+.social__label {
+  margin: 0 $spacing-small 0 0;
+}
+.social__link {
+  @include linkStyleOverride();
+  margin: 0 $spacing 0 0;
+  white-space: nowrap;
+  &:last-child {
+    margin: 0;
+  }
+  &:hover {
+    background-color: $highlight-color;
+  }
+}
 @import "./entry-content.scss";
