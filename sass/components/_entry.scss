@@ -17,10 +17,19 @@
   border-bottom: $border-line-highlight;
 
   .entry__intro__content {
-    /* see _sidebar.scss for styling */
+    display: grid;
+    grid-template-columns: 40px 1fr 200px;
+    grid-template-rows: 40px;
+    grid-column-gap: 16px;
   }
   .avatar {
     border-radius: $base-border-radius;
+  }
+  .social {
+    display: flex;
+  }
+  .social__link {
+    @include linkStyleOverride();
   }
 }
 

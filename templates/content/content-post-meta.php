@@ -29,5 +29,6 @@ $userId = get_the_author_meta( 'ID' );
         <?php get_template_part( 'templates/content/content-post-stats' ); ?>
       </div>
     </div>
+    <?php get_template_part( 'templates/content/content-post-social' ); ?>
   </div>
 </aside>

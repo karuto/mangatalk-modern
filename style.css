@@ -725,11 +725,26 @@ section.archive {
 }
 
 .entry__intro .entry__intro__content {
-  /* see _sidebar.scss for styling */
+  display: grid;
+  grid-template-columns: 40px 1fr 200px;
+  grid-template-rows: 40px;
+  grid-column-gap: 16px;
 }
 
 .entry__intro .avatar {
   border-radius: 4px;
+}
+
+.entry__intro .social {
+  display: flex;
+}
+
+.entry__intro .social__link {
+  color: #000;
+}
+
+.entry__intro .social__link:hover {
+  color: #E84141;
 }
 
 .single {
@@ -1614,7 +1629,6 @@ section.archive {
   border-bottom: 1px solid #CECECE;
 }
 
-.entry__intro__content,
 .columnrec__content {
   display: grid;
   grid-template-columns: 40px 1fr;
