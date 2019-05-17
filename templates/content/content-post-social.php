@@ -25,8 +25,13 @@ $douban_link = "http://www.douban.com/share/service?image=" . $first_img . "&hre
 $twitter_link = "https://twitter.com/intent/tweet?text=《" . $format_posttitle. "》来自漫言 @manga_talk" . $format_link;
 ?>
 
-<div class="social">
-  <a class="social__link" href="<?php echo $twitter_link; ?>" target="_blank">推特分享</a>
-  <a class="social__link" href="<?php echo $weibo_link; ?>" target="_blank">微博分享</a>
-  <a class="social__link" href="<?php echo $douban_link; ?>" target="_blank"><?php echo $douban_svg; ?></a>
+<div class="secondary">
+  <div class="tags">
+    <?php the_tags( '', '', '' ); /* before, separator, after */ ?>
+  </div>
+  <div class="social">
+    <a class="social__link" href="<?php echo $twitter_link; ?>" target="_blank">推特分享</a>
+    <a class="social__link" href="<?php echo $weibo_link; ?>" target="_blank">微博分享</a>
+    <a class="social__link" href="<?php echo $douban_link; ?>" target="_blank">douban</a>
+  </div>
 </div>

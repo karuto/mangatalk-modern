@@ -20,16 +20,38 @@
     display: grid;
     grid-template-columns: 40px 1fr 200px;
     grid-template-rows: 40px;
-    grid-column-gap: 16px;
+    grid-gap: $spacing;
+    grid-column-gap: $spacing;
+    @media (max-width: $mobile-max) {
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: 40px 1fr;
+    }
   }
   .avatar {
     border-radius: $base-border-radius;
   }
+  .secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $mobile-max) {
+      grid-rows: 1/3;
+    }
+  }
   .social {
     display: flex;
   }
+  .tags {
+    margin: 0 0 $spacing-small;
+    a {
+      white-space: nowrap;
+      margin: 0 $spacing 0 0;
+    }
+  }
   .social__link {
     @include linkStyleOverride();
+    margin: 0 $spacing 0 0;
+    white-space: nowrap;
   }
 }
 
