@@ -137,6 +137,9 @@
   @include heroFont();
   color: $color-white;
   margin: $spacing-large 0;
+  &:hover {
+    color: $color-brand-primary;
+  }
 }
 .hero__excerpt {
   @include excerptFont();

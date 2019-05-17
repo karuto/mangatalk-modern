@@ -20,13 +20,13 @@ if (has_post_thumbnail( $post->ID ) ) {
 $heroClasses = is_home() ? "hero hero--home" : "hero hero--content";
 ?>
 <div class="<?php echo $heroClasses; ?>">
-  <div class="hero__cover" style="background-image: url('<?php echo $image[0]; ?>')">
-    <div class="hero__cover__content">
-      <a class="hero__title" href="<?php the_permalink(); ?>">
-        <h2 class="hero__title__text"><?php the_title(); ?></h1>
-      </a>
-      <aside class="hero__excerpt"><?php echo get_the_excerpt(); ?></aside>
+  <a class="hero__title" href="<?php the_permalink(); ?>">
+    <div class="hero__cover" style="background-image: url('<?php echo $image[0]; ?>')">
+      <div class="hero__cover__content">
+          <h2 class="hero__title__text"><?php the_title(); ?></h1>
+        <aside class="hero__excerpt"><?php echo get_the_excerpt(); ?></aside>
+      </div>
+      <div class="hero__cover__shade hero__cover__shade--black"></div>
     </div>
-    <div class="hero__cover__shade hero__cover__shade--black"></div>
-  </div>
+  </a>
 </div>

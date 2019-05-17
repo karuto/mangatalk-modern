@@ -159,9 +159,12 @@ $content-gutter: $spacing-large;
     display: flex;
     flex-direction: column;
     @include extraWidthContainer();
-    figcaption {
+    figcaption,
+    figcaption.alignleft,
+    figcaption.alignright {
       text-align: center;
-      padding: $spacing-small 0 0;
+      max-width: 100%;
+      margin: $spacing-small 0 0;
       @media (max-width: $mobile-max) { 
         text-align: left;
       }
