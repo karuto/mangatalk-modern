@@ -11,14 +11,15 @@
  */
 ?>
 <?php 
-get_template_part( 'templates/partials/page-hero' );
+get_template_part( 'templates/partials/feeds-header' );
 $sectionClass = 'feeds';
 if ( is_single() || is_page() ) {
   $sectionClass = 'single';
-} else if ( is_archive() ) {
+} else if ( is_archive() || is_search() ) {
   $sectionClass = 'archive';
 }
 ?>
+
 <section class=<?php echo $sectionClass; ?>>
   <?php 
   if ( have_posts() ) {
@@ -34,7 +35,6 @@ if ( is_single() || is_page() ) {
         $post_type = 'feed';
       }
       get_template_part( 'templates/content/content', $post_type );
-
       // End the loop.
     }
 

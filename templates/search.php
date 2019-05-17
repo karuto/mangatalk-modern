@@ -9,5 +9,9 @@
  * @since 1.0.0
  */
 ?>
-
+<div class="stage stage--relative">
+  <div class="stage-heading">
+    搜索「<?php echo get_search_query(); ?>」
+  </div>
+</div>
 <?php get_template_part( 'templates/partials/feed' ); ?>

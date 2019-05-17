@@ -12,7 +12,7 @@
 
 <div class="error-404 not-found">
 	<?php
-	get_template_part( 'templates/partials/page-hero' );
+	get_template_part( 'templates/partials/feeds-header' );
 	?>
 
 	<div class="page-content">

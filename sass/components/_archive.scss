@@ -2,19 +2,3 @@ section.archive {
   /* Specify section because .archive is added to body automatically */
   @include oneColumnContainer();
 }
-.archive {
-  /* Now this is the body style, we are overriding the header completely */
-  .feeds__header {
-    @include oneColumnContainer();
-    margin: 0 auto $spacing;
-    @media (max-width: $mobile-max) {
-      margin: $spacing;
-    }
-  }
-}
-.archive-head {
-  @include heroFont();
-  color: $color-white;
-  text-align: center;
-  margin: 0;
-}

@@ -494,38 +494,6 @@ section.archive {
   }
 }
 
-.archive {
-  /* Now this is the body style, we are overriding the header completely */
-}
-
-.archive .feeds__header {
-  margin: 0 auto;
-  max-width: 740px;
-  margin: 0 auto 16px;
-}
-
-@media (max-width: 959px) {
-  .archive .feeds__header {
-    margin: 0 16px;
-  }
-}
-
-@media (max-width: 959px) {
-  .archive .feeds__header {
-    margin: 16px;
-  }
-}
-
-.archive-head {
-  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #FFFFFF;
-  text-align: center;
-  margin: 0;
-}
-
 /* This stylesheet targets "submit new comment" form only. Also see comments.scss */
 .comment-form {
   margin: 0;
@@ -1163,6 +1131,28 @@ section.archive {
   padding: 0 0 8px;
 }
 
+.archive, .search {
+  /* Override header with one column styles */
+}
+
+.archive .feeds__header, .search .feeds__header {
+  margin: 0 auto;
+  max-width: 740px;
+  margin: 0 auto 16px;
+}
+
+@media (max-width: 959px) {
+  .archive .feeds__header, .search .feeds__header {
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 959px) {
+  .archive .feeds__header, .search .feeds__header {
+    margin: 16px;
+  }
+}
+
 .feed {
   /* The wrapper for a single article (feed item) */
   display: grid;
@@ -1333,6 +1323,7 @@ section.archive {
 .footer__content__copyright {
   grid-row: 2/3;
   grid-column: 1/3;
+  text-align: center;
 }
 
 .header {
@@ -1867,4 +1858,14 @@ section.archive {
 
 .stage--author {
   height: 400px;
+}
+
+.stage-heading {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
 }

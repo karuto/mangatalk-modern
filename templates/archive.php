@@ -23,7 +23,7 @@ if ( $cover_img_url == "" ) {
 <div 
   class="stage stage--relative <?php echo is_author() ? 'stage--author' : ''; ?>" 
   style="background-image: url(<?php echo $cover_img_url; ?>);">
-  <div class="archive-head">
+  <div class="stage-heading">
     <?php echo get_the_archive_title(); ?>
   </div>
 </div>

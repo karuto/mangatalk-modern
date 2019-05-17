@@ -10,7 +10,6 @@
   left: 0;
   z-index: -1;
 }
-
 .stage--relative {
   @include fullpagewidth();
   height: 200px;
@@ -20,7 +19,12 @@
   justify-content: center;
   align-items: center;
 }
-
 .stage--author {
   height: 400px;
+}
+.stage-heading {
+  @include heroFont();
+  color: $color-white;
+  text-align: center;
+  margin: 0;
 }
