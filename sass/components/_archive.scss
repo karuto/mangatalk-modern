@@ -16,7 +16,7 @@ section.archive {
   }
 }
 .archive-head {
-  @include titleFont();
+  @include heroFont();
   color: $color-white;
   text-align: center;
   margin: 0 auto $spacing-large;

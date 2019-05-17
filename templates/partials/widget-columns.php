@@ -74,7 +74,7 @@ $users = get_users(
               $userPosts = get_posts(
                 array(
                   'author'  => $user->ID,
-                  'category' => 1,
+                  'category' => array( 1, 46 ),
                   'orderby' => 'post_date',
                   'order' => 'DESC',
                   'posts_per_page' => 1

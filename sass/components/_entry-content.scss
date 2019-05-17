@@ -1,4 +1,4 @@
-$extracontent-width: 150px;
+$partial-content-max-width: 350px;
 $content-gutter: $spacing-large;
 
 .single {
@@ -46,6 +46,14 @@ $content-gutter: $spacing-large;
     background: $color-white;
     border: $border-line;
     padding: $content-gutter;
+
+    p {
+      @include excerptFont();
+    }
+
+    h3, h4, h5 {
+      margin-top: 0;
+    }
   }
 
   blockquote {
@@ -53,7 +61,7 @@ $content-gutter: $spacing-large;
     margin: 0 0 $content-gutter;
     margin-left: -$content-gutter;
     padding: 0 0 0 $content-gutter;
-    .big {
+    .big { /* TODO: WTF, we have .big and .large??? */
       @include contentFont();
     }
     footer {
@@ -66,6 +74,21 @@ $content-gutter: $spacing-large;
       cite {
         font-style: normal;
       }
+    }
+  }
+
+  blockquote.large {
+    @include extraWidthContainer();
+    margin-top: $spacing-xxlarge;
+    margin-bottom: $spacing-xxlarge;
+    padding: 0;
+    border-left: 0;
+    @media (max-width: $mobile-max) {
+      font-size: 16px;
+    }
+    p {
+      text-align: center;
+      @include heroFont();
     }
   }
 
@@ -135,14 +158,7 @@ $content-gutter: $spacing-large;
   figure.is-fullwidth {
     display: flex;
     flex-direction: column;
-    margin-left: -$extracontent-width;
-    margin-right: -$extracontent-width;
-    max-width: $container-maxwidth;
-
-    @media (max-width: $mobile-max) {
-      margin-left: 0;
-      margin-right: 0;
-    }
+    @include extraWidthContainer();
     figcaption {
       text-align: center;
       padding: $spacing-small 0 0;
@@ -180,6 +196,7 @@ $content-gutter: $spacing-large;
   }
   .alignright,
   .alignleft {
+    max-width: $partial-content-max-width;
     position: relative;
   }
 

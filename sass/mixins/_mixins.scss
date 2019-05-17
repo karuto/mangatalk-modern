@@ -97,6 +97,17 @@
   }
 }
 
+@mixin extraWidthContainer() {
+	margin-left: -150px;
+	margin-right: -150px;
+	max-width: $container-maxwidth;
+
+	@media (max-width: $mobile-max) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
 @mixin oneColumnContainer() {
 	/* anything next to footer should have $spacing-gigantic */
   margin: 0 auto $spacing-gigantic;

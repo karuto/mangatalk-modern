@@ -518,9 +518,9 @@ section.archive {
 
 .archive-head {
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
-  font-size: 18px;
-  line-height: 1.3;
+  font-size: 28px;
   font-weight: 700;
+  line-height: 1.3;
   color: #FFFFFF;
   text-align: center;
   margin: 0 auto 32px;
@@ -781,6 +781,18 @@ section.archive {
   padding: 32px;
 }
 
+.entry__content aside p {
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+}
+
+.entry__content aside h3, .entry__content aside h4, .entry__content aside h5 {
+  margin-top: 0;
+}
+
 .entry__content blockquote {
   border-left: 3px solid #E84141;
   margin: 0 0 32px;
@@ -789,6 +801,7 @@ section.archive {
 }
 
 .entry__content blockquote .big {
+  /* TODO: WTF, we have .big and .large??? */
   margin: 0 0 24px;
   font-size: 18px;
   line-height: 1.7;
@@ -815,6 +828,37 @@ section.archive {
 
 .entry__content blockquote footer cite {
   font-style: normal;
+}
+
+.entry__content blockquote.large {
+  margin-left: -150px;
+  margin-right: -150px;
+  max-width: 1140px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  padding: 0;
+  border-left: 0;
+}
+
+@media (max-width: 767px) {
+  .entry__content blockquote.large {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .entry__content blockquote.large {
+    font-size: 16px;
+  }
+}
+
+.entry__content blockquote.large p {
+  text-align: center;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
@@ -953,6 +997,7 @@ section.archive {
 
 .entry__content .alignright,
 .entry__content .alignleft {
+  max-width: 350px;
   position: relative;
 }
 
@@ -1265,6 +1310,7 @@ section.archive {
 
 .hero--content .hero__cover__content {
   width: 740px;
+  margin: 0 auto 32px;
 }
 
 @media (max-width: 767px) {
