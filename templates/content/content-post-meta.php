@@ -19,7 +19,7 @@ $userId = get_the_author_meta( 'ID' );
       <?php echo get_avatar( $userId, 40 ); ?>
     </div>
     <div class="columnrec__meta">
-      <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $user->ID ); ?>">
+      <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $userId ); ?>">
         <?php echo get_the_author_meta( 'display_name' ); ?>
         <span class="columnrec__authorcount">
           <?php echo count_user_posts( $userId ); ?> 篇文章

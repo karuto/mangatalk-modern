@@ -56,6 +56,7 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
+				'toplinks' => __( 'Top Links', 'twentynineteen' ),
 				'header' => __( 'Header', 'twentynineteen' ),
 				'footer' => __( 'Footer', 'twentynineteen' )
 			)

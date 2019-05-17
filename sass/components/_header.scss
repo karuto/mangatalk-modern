@@ -4,9 +4,10 @@
   margin: 0 0 $spacing-large;
 }
 
-.header--toolbar {
+.header--toplinks {
   background-color: $color-darkest;
   margin: 0;
+  padding: $spacing-small 0;
 
   .header__wrapper {
     padding: 0;
@@ -17,7 +18,8 @@
   @include subtleFont();
   color: $color-white;
   display: inline-block;
-  margin:  $spacing-small;
+  margin: $spacing-small;
+  white-space: nowrap;
 
   &:first-child {
     margin-left: $spacing;
@@ -27,6 +29,7 @@
 .header__wrapper {
   /* The next top level class wrapper inside container */
   display: flex;
+  overflow-x: scroll;
   padding: $spacing;
 }
 
@@ -42,25 +45,26 @@
 
 .header__nav {
   .menu {
-    // TODO: fix mobile, this CSS is messing up the page width
-    // @media (max-width: $mobile-max) {
-    //   display: flex;
-    //   overflow: scroll;
-    // }
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 $spacing;
   }
 
   .menu-item {
     display: inline-block;
-    @media (max-width: $mobile-max) {
-      white-space: nowrap; /* force text on one line */
-    }
+    white-space: nowrap; /* force text on one line */
     a {
-      margin: 0 0 0 $spacing-medium;
+      margin: 0 0 0 $spacing;
       @include linkStyleOverride();
       color: $color-white;
       @media (max-width: $mobile-max) {
         margin: 0 $spacing-medium 0 0;
       }
+    }
+  }
+  .menu-item:first-child {
+    a {
+      margin: 0;
     }
   }
 }

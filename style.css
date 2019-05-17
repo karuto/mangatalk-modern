@@ -431,6 +431,12 @@ body#tinymce {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .maxwidth {
+    max-width: 100vw;
+  }
+}
+
 .clearfix:after {
   content: "";
   display: table;
@@ -856,6 +862,7 @@ section.archive {
 
 @media (max-width: 767px) {
   .entry__content blockquote.large {
+    max-width: 100vw;
     margin-left: 0;
     margin-right: 0;
   }
@@ -954,6 +961,7 @@ section.archive {
 
 @media (max-width: 767px) {
   .entry__content figure.is-fullwidth {
+    max-width: 100vw;
     margin-left: 0;
     margin-right: 0;
   }
@@ -1229,12 +1237,13 @@ section.archive {
   margin: 0 0 32px;
 }
 
-.header--toolbar {
+.header--toplinks {
   background-color: #000;
   margin: 0;
+  padding: 8px 0;
 }
 
-.header--toolbar .header__wrapper {
+.header--toplinks .header__wrapper {
   padding: 0;
 }
 
@@ -1247,6 +1256,7 @@ section.archive {
   color: #FFFFFF;
   display: inline-block;
   margin: 8px;
+  white-space: nowrap;
 }
 
 .header__toolbar__item:first-child {
@@ -1256,6 +1266,7 @@ section.archive {
 .header__wrapper {
   /* The next top level class wrapper inside container */
   display: flex;
+  overflow-x: scroll;
   padding: 16px;
 }
 
@@ -1274,19 +1285,20 @@ section.archive {
   /* TODO: accommodate this later. */
 }
 
-.header__nav .menu-item {
-  display: inline-block;
+.header__nav .menu {
+  display: flex;
+  overflow-x: scroll;
+  margin: 0 16px;
 }
 
-@media (max-width: 767px) {
-  .header__nav .menu-item {
-    white-space: nowrap;
-    /* force text on one line */
-  }
+.header__nav .menu-item {
+  display: inline-block;
+  white-space: nowrap;
+  /* force text on one line */
 }
 
 .header__nav .menu-item a {
-  margin: 0 0 0 24px;
+  margin: 0 0 0 16px;
   color: #000;
   color: #FFFFFF;
 }
@@ -1299,6 +1311,10 @@ section.archive {
   .header__nav .menu-item a {
     margin: 0 24px 0 0;
   }
+}
+
+.header__nav .menu-item:first-child a {
+  margin: 0;
 }
 
 .hero {

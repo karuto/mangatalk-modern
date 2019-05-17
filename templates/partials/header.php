@@ -10,13 +10,21 @@
  */
 ?>
 
-<header id="toolbar" class="header header--toolbar">
-	<div class="maxwidth header__wrapper">
-		<a href="" class="header__toolbar__item">关于漫言</a>
-		<a href="" class="header__toolbar__item">版权声明</a>
-		<a href="" class="header__toolbar__item">意见反馈</a>
-		<a href="" class="header__toolbar__item">成为作者</a>
-	</div>
+<header id="top-links" class="header header--toplinks">
+<?php 
+// TODO: the main-navigation class is wrangled with a lot of assumptions. Clean it up later.
+if ( has_nav_menu( 'header' ) ) : ?>
+  <nav class="maxwidth header__nav" aria-label="<?php esc_attr_e( 'Top Links', 'twentynineteen' ); ?>">
+    <?php
+    wp_nav_menu(
+      array(
+        'theme_location' => 'toplinks',
+        'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      )
+    );
+    ?>
+  </nav>
+<?php endif; ?>
 </header><!-- #masthead -->
 
 <header id="masthead" class="header">
