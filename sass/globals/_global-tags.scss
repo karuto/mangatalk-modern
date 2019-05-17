@@ -35,7 +35,7 @@ dl, dd, dt {
 }
 a {
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: color 1s ease;
   color: $highlight-color;
   &:hover {
     color: $highlight-color;

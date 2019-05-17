@@ -1,0 +1,54 @@
+$columnrec_image_dimension: 40px;
+
+.columnrec {
+  height: 50.5px; /* so that a columnrec is half height of the feed item */
+  border-bottom: $border-line;
+  &:last-child {
+    margin: 0 0 $spacing-large;
+  }
+}
+.columnrec__content {
+  display: grid;
+  grid-template-columns: $columnrec_image_dimension 1fr;
+  grid-template-rows: $columnrec_image_dimension;
+  grid-column-gap: $spacing;
+}
+.columnrec__image {
+
+}
+.columnrec__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.columnrec__authorlink {
+  @include linkStyleOverride();
+  @include subtleFont();
+  font-size: $font-size-base;
+  color: $strong-text-color;
+}
+.columnrec__authorcount {
+  @include subtleFont();
+  margin: 0 0 0 $spacing-small;
+  color: $subtle-text-color;
+}
+.columnrec__desc {
+  @include linkStyleOverride();
+  @include excerptFont();
+  @include forceOneLine();
+  max-width: 250px;
+  @media (max-width: $mobile-max) {
+    max-width: calc(100vw - #{$columnrec_image_dimension} - #{$spacing} * 3 );
+  }
+}
+.columnrec__desc__link {
+  @include linkStyleOverride();
+  @include excerptFont();
+}
+.columnrec__stats {
+  /* this class is only used in entry-intro, not in the sidebar */
+  display: flex;
+  .feed__meta:first-child {
+    margin: 0;
+  }
+}

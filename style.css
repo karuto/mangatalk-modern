@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*
-Theme Name: Karuto Starter Theme
-Theme URI: https://github.com/karuto/karuto-starter-theme
-Author: Vincent Zhang + the WordPress team
+Theme Name: 漫言后台 2.0
+Theme URI: https://github.com/karuto/mangatalk-modern
+Author: Vincent Zhang
 Author URI: https://vincentzh.com
-Description: This is Vincent Zhang's (karuto) starter theme, modified from WordPress' official Twenty Nineteen theme.
-Requires at least: WordPress 4.9.6
-Version: 1.2
+Description: 漫言前端 + 后台 2.0 版本
+Requires at least: WordPress 5
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: twentynineteen
@@ -405,7 +405,7 @@ dl, dd, dt {
 
 a {
   text-decoration: none;
-  transition: all 0.5s ease;
+  transition: color 1s ease;
   color: #E84141;
 }
 
@@ -494,6 +494,106 @@ section.archive {
   }
 }
 
+.columnrec {
+  height: 50.5px;
+  /* so that a columnrec is half height of the feed item */
+  border-bottom: 1px solid #CECECE;
+}
+
+.columnrec:last-child {
+  margin: 0 0 32px;
+}
+
+.columnrec__content {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: 40px;
+  grid-column-gap: 16px;
+}
+
+.columnrec__meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.columnrec__authorlink {
+  color: #000;
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+
+.columnrec__authorlink:hover {
+  color: #E84141;
+}
+
+.columnrec__authorcount {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 0 8px;
+  color: #777;
+}
+
+.columnrec__desc {
+  color: #000;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 275px;
+  max-width: 250px;
+}
+
+.columnrec__desc:hover {
+  color: #E84141;
+}
+
+@media (max-width: 959px) {
+  .columnrec__desc {
+    max-width: calc(100vw - 16px * 5);
+  }
+}
+
+@media (max-width: 959px) {
+  .columnrec__desc {
+    max-width: calc(100vw - 40px - 16px * 3);
+  }
+}
+
+.columnrec__desc__link {
+  color: #000;
+  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+}
+
+.columnrec__desc__link:hover {
+  color: #E84141;
+}
+
+.columnrec__stats {
+  /* this class is only used in entry-intro, not in the sidebar */
+  display: flex;
+}
+
+.columnrec__stats .feed__meta:first-child {
+  margin: 0;
+}
+
 /* This stylesheet targets "submit new comment" form only. Also see comments.scss */
 .comment-form {
   margin: 0;
@@ -562,7 +662,6 @@ section.archive {
   border: 2px solid #E8E8E8;
   background: #E8E8E8;
   padding: 4px 8px;
-  transition: all 0.5s ease;
 }
 
 .comment-form .comment__submit:hover {
@@ -1303,7 +1402,7 @@ section.archive {
 }
 
 .footer__content__widgets {
-  background: gray;
+  background: yellowgreen;
 }
 
 .footer__content__intro__summary,
@@ -1334,6 +1433,20 @@ section.archive {
   font-size: 13px;
   font-weight: 700;
   margin: 0 0 32px;
+}
+
+.header__search {
+  height: 20px;
+  width: 20px;
+}
+
+.search-icon {
+  fill: #FFFFFF;
+}
+
+.search-icon:hover {
+  fill: #E84141;
+  transition: fill 1s ease;
 }
 
 .header--toplinks {
@@ -1367,6 +1480,7 @@ section.archive {
   display: flex;
   overflow-x: scroll;
   padding: 16px;
+  position: relative;
 }
 
 .header__title {
@@ -1583,9 +1697,6 @@ section.archive {
   top: 0;
   bottom: 0;
   left: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
 .hero__cover__shade--black {
@@ -1730,100 +1841,17 @@ section.archive {
   grid-gap: 16px;
 }
 
-.columnrec {
-  height: 50.5px;
-  /* so that a columnrec is half height of the feed item */
-  border-bottom: 1px solid #CECECE;
-}
-
-.columnrec__content {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  grid-template-rows: 40px;
-  grid-column-gap: 16px;
-}
-
-.columnrec__meta {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.columnrec__authorlink {
-  color: #000;
-  color: #777;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 700;
-  font-size: 16px;
-  color: #000;
-}
-
-.columnrec__authorlink:hover {
-  color: #E84141;
-}
-
-.columnrec__authorcount {
-  color: #777;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 700;
-  margin: 0 0 0 8px;
-  color: #777;
-}
-
-.columnrec__desc {
-  color: #000;
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-  font-size: 13px;
-  /* testing new typography */
-  line-height: 1.7;
-  color: #000;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 275px;
-  max-width: 250px;
-}
-
-.columnrec__desc:hover {
-  color: #E84141;
+.sidebar__block {
+  background: yellowgreen;
+  height: 166px;
+  margin: 0 0 32px;
+  padding: 16px;
 }
 
 @media (max-width: 959px) {
-  .columnrec__desc {
-    max-width: calc(100vw - 16px * 5);
+  .sidebar__block {
+    height: auto;
   }
-}
-
-@media (max-width: 959px) {
-  .columnrec__desc {
-    max-width: calc(100vw - 40px - 16px * 3);
-  }
-}
-
-.columnrec__desc__link {
-  color: #000;
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-  font-size: 13px;
-  /* testing new typography */
-  line-height: 1.7;
-  color: #000;
-}
-
-.columnrec__desc__link:hover {
-  color: #E84141;
-}
-
-.columnrec__stats {
-  /* this class is only used in entry-intro, not in the sidebar */
-  display: flex;
-}
-
-.columnrec__stats .feed__meta:first-child {
-  margin: 0;
 }
 
 .stage {

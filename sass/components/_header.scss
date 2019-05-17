@@ -4,6 +4,22 @@
   margin: 0 0 $spacing-large;
 }
 
+.header__search {
+  height: 20px;
+  width: 20px;
+  // position: absolute;
+  // right: $spacing;
+  // top: 13px; /* specified by design */
+}
+
+.search-icon {
+  fill: $color-white;
+  &:hover {
+    fill: $highlight-color;
+    transition: fill 1s ease;
+  }
+}
+
 .header--toplinks {
   background-color: $color-darkest;
   margin: 0;
@@ -31,6 +47,7 @@
   display: flex;
   overflow-x: scroll;
   padding: $spacing;
+  position: relative;
 }
 
 .header__title {

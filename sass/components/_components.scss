@@ -2,6 +2,7 @@
  - Each file should style a single, self-contained piece of HTML.
 */
 @import "archive";
+@import "columnrec";
 @import "comments-form";
 @import "comments";
 // @import "entry-content"; /* this is imported at the end of _entry.scss */
