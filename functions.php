@@ -285,9 +285,11 @@ add_action( 'wp_head', 'twentynineteen_colors_css_wrap' );
 require get_template_directory() . '/classes/class-twentynineteen-svg-icons.php';
 require get_template_directory() . '/classes/class-twentynineteen-walker-comment.php';
 
-require get_template_directory() . '/inc/archive-title.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/icon-functions.php';
 require get_template_directory() . '/inc/post-views.php';
 require get_template_directory() . '/inc/relative-comment-time.php';
 require get_template_directory() . '/inc/template-functions.php';
+
+require get_template_directory() . '/inc/mt-archive-title.php';
+require get_template_directory() . '/inc/mt-admin.php';

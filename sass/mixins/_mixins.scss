@@ -97,6 +97,15 @@
   }
 }
 
+@mixin oneColumnContainer() {
+	/* anything next to footer should have $spacing-gigantic */
+  margin: 0 auto $spacing-gigantic;
+  max-width: $onecolumn-maxwidth;
+  @media (max-width: $mobile-max) {
+    margin: 0 $spacing $spacing-gigantic;
+  }
+}
+
 @mixin forceOneLine() {
 	white-space: nowrap;
 	overflow: hidden;

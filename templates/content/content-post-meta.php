@@ -9,3 +9,7 @@
  * @since added by Vincent Zhang
  */
 ?>
+
+<aside class="entry__meta">
+
+</aside>

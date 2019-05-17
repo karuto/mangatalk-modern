@@ -1,0 +1,24 @@
+section.archive {
+  /* Specify section because .archive is added to body automatically */
+  @include oneColumnContainer();
+}
+.archive {
+  /* Now this is the body style, we are overriding the header completely */
+  .feeds__header {
+    @include oneColumnContainer();
+    margin: 0 auto $spacing;
+    @media (max-width: $mobile-max) {
+      margin: $spacing;
+    }
+  }
+  .stage {
+    height: 200px;
+  }
+}
+.archive-head {
+  @include titleFont();
+  color: $color-white;
+  text-align: center;
+  margin: 0 auto $spacing-large;
+  min-height: 80px; /* this made it line up exactly with .stage */
+}

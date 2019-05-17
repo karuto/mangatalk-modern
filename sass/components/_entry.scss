@@ -1,8 +1,6 @@
 /* Handles both single POST and PAGE */
 .entry {
-  /* anything next to footer should have $spacing-gigantic */
-  margin: 0 auto $spacing-gigantic;
-  max-width: $onecolumn-maxwidth;
+  @include oneColumnContainer();
 }
 
 .entry__excerpt {
@@ -14,16 +12,7 @@
 
 .entry__meta {
   @include subtleFont();
-  margin: 0 0 $spacing-small;
-}
-
-.entry__meta a {
-  /* hate to do this, but must override <a> without classes by the_category */
-  color: $subtle-text-color;
-
-  &:hover {
-    color: $highlight-color;
-  }
+  margin: 0 0 $spacing-large;
 }
 
 @import "./entry-content.scss";

@@ -1,7 +1,7 @@
 /* WP generated prev & next classes */
 .navigation {
   /* the margin between you and footer is taken care of by your parent */
-  margin: 0;
+  margin: $spacing-large 0;
   font-size: $font-size-small;
   font-weight: bold;
 
@@ -16,6 +16,7 @@
 }
 .nav-links {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .nav-previous, .nav-next {
@@ -29,15 +30,17 @@
 .page-numbers {
   text-transform: uppercase;
   margin: 0 $spacing;
+  line-height: 1;
+  @media (max-width: $mobile-max) {
+    margin: 0 $spacing-small;
+  }
 
   &.next {
     /* The wrapper "Previous" */
-
   }
 
   &.prev {
     /* The wrapper "Next" */
-
   }
 
   &.current {

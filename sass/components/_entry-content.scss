@@ -12,7 +12,6 @@ $content-gutter: $spacing-large;
   font-family: $font-family-content;
 
   @media (max-width: $mobile-max) {
-    margin: 0 $spacing $spacing-xxlarge;
     font-size: 16px;
   }
 

@@ -476,6 +476,58 @@ body#tinymce {
 /* Criteria for adding a component stylesheet:
  - Each file should style a single, self-contained piece of HTML.
 */
+section.archive {
+  /* Specify section because .archive is added to body automatically */
+  /* anything next to footer should have $spacing-gigantic */
+  margin: 0 auto 96px;
+  max-width: 740px;
+}
+
+@media (max-width: 767px) {
+  section.archive {
+    margin: 0 16px 96px;
+  }
+}
+
+.archive {
+  /* Now this is the body style, we are overriding the header completely */
+}
+
+.archive .feeds__header {
+  /* anything next to footer should have $spacing-gigantic */
+  margin: 0 auto 96px;
+  max-width: 740px;
+  margin: 0 auto 16px;
+}
+
+@media (max-width: 767px) {
+  .archive .feeds__header {
+    margin: 0 16px 96px;
+  }
+}
+
+@media (max-width: 767px) {
+  .archive .feeds__header {
+    margin: 16px;
+  }
+}
+
+.archive .stage {
+  height: 200px;
+}
+
+.archive-head {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 auto 32px;
+  min-height: 80px;
+  /* this made it line up exactly with .stage */
+}
+
 /* This stylesheet targets "submit new comment" form only. Also see comments.scss */
 .comment-form {
   margin: 0;
@@ -638,6 +690,12 @@ body#tinymce {
   max-width: 740px;
 }
 
+@media (max-width: 767px) {
+  .entry {
+    margin: 0 16px 96px;
+  }
+}
+
 .entry__excerpt {
   margin: 0;
   color: #777;
@@ -651,16 +709,7 @@ body#tinymce {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  margin: 0 0 8px;
-}
-
-.entry__meta a {
-  /* hate to do this, but must override <a> without classes by the_category */
-  color: #777;
-}
-
-.entry__meta a:hover {
-  color: #E84141;
+  margin: 0 0 32px;
 }
 
 .single {
@@ -676,7 +725,6 @@ body#tinymce {
 
 @media (max-width: 767px) {
   .entry__content {
-    margin: 0 16px 48px;
     font-size: 16px;
   }
 }
@@ -1385,7 +1433,7 @@ body#tinymce {
 /* WP generated prev & next classes */
 .navigation {
   /* the margin between you and footer is taken care of by your parent */
-  margin: 0;
+  margin: 32px 0;
   font-size: 13px;
   font-weight: bold;
 }
@@ -1400,6 +1448,7 @@ body#tinymce {
 
 .nav-links {
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -1412,6 +1461,13 @@ body#tinymce {
 .page-numbers {
   text-transform: uppercase;
   margin: 0 16px;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .page-numbers {
+    margin: 0 8px;
+  }
 }
 
 .page-numbers.next {

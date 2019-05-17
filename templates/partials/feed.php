@@ -15,6 +15,8 @@ get_template_part( 'templates/partials/page-hero' );
 $sectionClass = 'feeds';
 if ( is_single() || is_page() ) {
   $sectionClass = 'single';
+} else if ( is_archive() ) {
+  $sectionClass = 'archive';
 }
 ?>
 <section class=<?php echo $sectionClass; ?>>
