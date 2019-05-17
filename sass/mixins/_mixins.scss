@@ -97,6 +97,16 @@
   }
 }
 
+@mixin forceOneLine() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 275px;
+	@media (max-width: $mobile-max) {
+		max-width: 65vw;
+	}
+}
+
 @mixin fullpagewidth() {
 	/* https://css-tricks.com/full-width-containers-limited-width-parents/#article-header-id-6 */
   position: relative; 

@@ -13,6 +13,22 @@
 .hero--content {
   height: $spacing-large * 20; /* 640px */
   margin: 0 $spacing $spacing-large;
+  @media (max-width: $mobile-max) {
+    height: $spacing-large * 10; /* 320px */
+  }
+  .hero__cover__content {
+    width: $onecolumn-maxwidth;
+    @media (max-width: $mobile-max) {
+      width: 100%;
+      margin: 0 $spacing;
+    }
+  }
+  .hero__title__text {
+    @media (max-width: $mobile-max) {    
+      @include titleFont();
+      margin: $spacing 0;
+    }
+  }
 }
 
 
@@ -40,7 +56,7 @@
   }
   .hero__title__text {
     margin: $spacing;
-    font-size: 18px;
+    @include titleFont();
   }
   .hero__excerpt {
     margin: $spacing;
@@ -58,7 +74,7 @@
     }
   }
   .hero__excerpt {
-    display: none;
+    @include forceOneLine();
   }
 
 }

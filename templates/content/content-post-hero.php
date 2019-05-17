@@ -29,9 +29,4 @@ $heroClasses = is_home() ? "hero hero--home" : "hero hero--content";
     </div>
     <div class="hero__cover__shade hero__cover__shade--black"></div>
   </div>
-  <!-- <aside class="entry__meta">
-    <?php get_template_part( 'templates/content/content-post-meta' ); ?>
-  </aside>
-  <h1 class="hero__title"><?php single_post_title(); ?></h1>
-  <aside class="entry__excerpt"><?php echo get_the_excerpt(); ?></aside> -->
 </div>

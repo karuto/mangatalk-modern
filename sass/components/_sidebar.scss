@@ -42,13 +42,7 @@ $columnrec_image_dimension: 40px;
 .columnrec__desc {
   @include linkStyleOverride();
   @include excerptFont();
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 275px;
-  @media (max-width: $mobile-max) {
-    max-width: 65vw;
-  }
+  @include forceOneLine();
 }
 .columnrec__desc__link {
   @include linkStyleOverride();

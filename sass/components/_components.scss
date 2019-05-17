@@ -3,7 +3,7 @@
 */
 @import "comments-form";
 @import "comments";
-@import "content";
+// @import "entry-content"; /* this is imported at the end of _entry.scss */
 @import "entry";
 @import "feed";
 @import "footer";

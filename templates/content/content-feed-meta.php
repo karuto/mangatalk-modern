@@ -1,7 +1,6 @@
 <?php
 /**
  * Template part for displaying the metadata section of excerpts.
- * This includes category, views, posted time.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -20,5 +19,5 @@ echo '">';
 the_author();
 echo '</a>';
 echo '</div>';
-get_template_part( 'templates/content/content-post-views' ); 
+get_template_part( 'templates/content/content-post-stats' ); 
 ?>

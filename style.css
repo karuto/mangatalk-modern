@@ -563,6 +563,12 @@ body#tinymce {
   border-bottom: 6px double #333;
 }
 
+@media (max-width: 767px) {
+  .discussion {
+    margin: 0 16px;
+  }
+}
+
 .comments {
   margin: 48px 0 0;
 }
@@ -623,260 +629,6 @@ body#tinymce {
   font-size: 13px;
   font-weight: 700;
   margin: 0;
-}
-
-.single {
-  /* top level wrapper on single pages */
-}
-
-.entry__content {
-  padding: 0 0 48px;
-  border-bottom: 6px double #333;
-  margin: 0 0 48px;
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-}
-
-@media (max-width: 767px) {
-  .entry__content {
-    margin: 0 16px 48px;
-    font-size: 16px;
-  }
-}
-
-.entry__content p,
-.entry__content > ul,
-.entry__content > ol,
-.entry__content li {
-  /* These are all "paragraph level" content */
-  margin: 0 0 24px;
-  font-size: 18px;
-  line-height: 1.7;
-  font-weight: 400;
-  letter-spacing: normal;
-  word-wrap: break-word;
-  word-break: break-word;
-  text-align: left;
-}
-
-@media (max-width: 767px) {
-  .entry__content p,
-  .entry__content > ul,
-  .entry__content > ol,
-  .entry__content li {
-    font-size: 16px;
-  }
-}
-
-.entry__content img {
-  max-width: 100%;
-}
-
-.entry__content aside {
-  margin: 0 0 32px;
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-  font-size: 13px;
-  /* testing new typography */
-  line-height: 1.7;
-  color: #000;
-  background: #FFFFFF;
-  border: 1px solid #CECECE;
-  padding: 32px;
-}
-
-.entry__content blockquote {
-  border-left: 3px solid #E84141;
-  margin: 0 0 32px;
-  margin-left: -32px;
-  padding: 0 0 0 32px;
-}
-
-.entry__content blockquote .big {
-  margin: 0 0 24px;
-  font-size: 18px;
-  line-height: 1.7;
-  font-weight: 400;
-  letter-spacing: normal;
-  word-wrap: break-word;
-  word-break: break-word;
-  text-align: left;
-}
-
-.entry__content blockquote footer {
-  text-align: right;
-  margin: 32px 0 0;
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-  font-size: 13px;
-  /* testing new typography */
-  line-height: 1.7;
-  color: #000;
-}
-
-.entry__content blockquote footer:before {
-  content: '\2014 \00A0';
-}
-
-.entry__content blockquote footer cite {
-  font-style: normal;
-}
-
-.entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
-  margin: 48px 0 32px;
-  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
-  font-weight: 700;
-}
-
-.entry__content h2 {
-  font-size: 18px;
-  line-height: 1.3;
-}
-
-.entry__content ul {
-  list-style: square outside;
-}
-
-.entry__content ol {
-  list-style: decimal outside;
-}
-
-.entry__content code {
-  background: #E8E8E8;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin: 0 4px;
-  font-size: 13px;
-  font-family: monospace;
-}
-
-.entry__content em {
-  font-style: italic;
-}
-
-.entry__content s {
-  text-decoration: line-through;
-  color: #777;
-}
-
-.entry__content b, .entry__content strong {
-  font-weight: 700;
-}
-
-.entry__content hr {
-  border: 1px solid #CECECE;
-  height: 0;
-  margin: 0 0 24px;
-}
-
-.entry__content pre {
-  /* Browser specific (not valid) styles to make preformatted text wrap */
-  /* https://css-tricks.com/snippets/css/make-pre-text-wrap/ */
-  white-space: pre-wrap;
-  /* css-3 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
-}
-
-.entry__content figure {
-  margin: 0;
-  padding: 0;
-  margin-top: 0;
-  margin-bottom: 32px;
-}
-
-.entry__content figure.is-fullwidth {
-  display: flex;
-  flex-direction: column;
-  margin-left: -150px;
-  margin-right: -150px;
-  max-width: 1140px;
-}
-
-@media (max-width: 767px) {
-  .entry__content figure.is-fullwidth {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.entry__content figure.is-fullwidth figcaption {
-  padding: 8px 0 0;
-}
-
-.entry__content figure.is-fullwidth img {
-  display: block;
-  margin: 0 auto;
-}
-
-.entry__content figcaption {
-  font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-  font-size: 13px;
-  /* testing new typography */
-  line-height: 1.7;
-  color: #000;
-  line-height: 1.5;
-}
-
-.entry__content .alignleft {
-  float: left;
-  margin-right: 32px;
-}
-
-@media (max-width: 767px) {
-  .entry__content .alignleft {
-    float: none;
-    margin-right: 0;
-  }
-}
-
-.entry__content .alignright {
-  float: right;
-  margin-left: 32px;
-}
-
-@media (max-width: 767px) {
-  .entry__content .alignright {
-    float: none;
-    margin-left: 0;
-  }
-}
-
-.entry__content .alignright,
-.entry__content .alignleft {
-  position: relative;
-}
-
-.entry__content figcaption.alignright {
-  right: -165px;
-  text-align: left;
-  position: absolute;
-  width: 150px;
-  top: 0;
-  margin-top: 0;
-}
-
-@media (max-width: 767px) {
-  .entry__content figcaption.alignright {
-    position: relative;
-    right: 0;
-    width: 100%;
-  }
-}
-
-.entry__copyright {
-  margin: 0;
-  color: #777;
-  font-size: 16px;
-  line-height: 1.5;
-  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
-}
-
-.entry__copyright__link {
-  font-weight: 700;
 }
 
 /* Handles both single POST and PAGE */
@@ -957,6 +709,18 @@ body#tinymce {
   max-width: 100%;
 }
 
+.entry__content h3 {
+  font-size: 150%;
+}
+
+.entry__content h4 {
+  font-size: 125%;
+}
+
+.entry__content h5 {
+  font-size: 115%;
+}
+
 .entry__content aside {
   margin: 0 0 32px;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
@@ -1090,7 +854,14 @@ body#tinymce {
 }
 
 .entry__content figure.is-fullwidth figcaption {
+  text-align: center;
   padding: 8px 0 0;
+}
+
+@media (max-width: 767px) {
+  .entry__content figure.is-fullwidth figcaption {
+    text-align: left;
+  }
 }
 
 .entry__content figure.is-fullwidth img {
@@ -1104,6 +875,7 @@ body#tinymce {
   /* testing new typography */
   line-height: 1.7;
   color: #000;
+  color: #777;
   line-height: 1.5;
 }
 
@@ -1151,6 +923,10 @@ body#tinymce {
     right: 0;
     width: 100%;
   }
+}
+
+.entry__content .text-muted {
+  color: #777;
 }
 
 .entry__copyright {
@@ -1432,6 +1208,34 @@ body#tinymce {
   margin: 0 16px 32px;
 }
 
+@media (max-width: 767px) {
+  .hero--content {
+    height: 320px;
+    /* 320px */
+  }
+}
+
+.hero--content .hero__cover__content {
+  width: 740px;
+}
+
+@media (max-width: 767px) {
+  .hero--content .hero__cover__content {
+    width: 100%;
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero--content .hero__title__text {
+    font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+    margin: 16px 0;
+  }
+}
+
 .heroes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1466,7 +1270,10 @@ body#tinymce {
 
 .hero--home .hero__title__text {
   margin: 16px;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 .hero--home .hero__excerpt {
@@ -1493,7 +1300,16 @@ body#tinymce {
 }
 
 .latest .hero__excerpt {
-  display: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 275px;
+}
+
+@media (max-width: 767px) {
+  .latest .hero__excerpt {
+    max-width: 65vw;
+  }
 }
 
 .hero__cover,
