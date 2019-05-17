@@ -167,6 +167,7 @@ $content-gutter: $spacing-large;
       margin: $spacing-small 0 0;
       @media (max-width: $mobile-max) { 
         text-align: left;
+        margin: 0 auto;
       }
     }
     img {
@@ -182,25 +183,24 @@ $content-gutter: $spacing-large;
   .alignleft {
     float: left;
     margin-right: $content-gutter;
-
-    @media (max-width: $mobile-max) {
-      float: none;
-      margin-right: 0;
-    }
   }
   .alignright {
     float: right;
     margin-left: $content-gutter;
-
-    @media (max-width: $mobile-max) {
-      float: none;
-      margin-left: 0;
-    }
   }
+
   .alignright,
   .alignleft {
     max-width: $partial-content-max-width;
     position: relative;
+    @media (max-width: $mobile-max) {
+      float: none;
+      margin: $content-gutter auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   figcaption.alignright {
@@ -213,6 +213,7 @@ $content-gutter: $spacing-large;
 
     @media (max-width: $mobile-max) {
       position: relative;
+      margin: calc(#{$content-gutter} / 2) auto 0;
       right: 0;
       width: 100%;
     }

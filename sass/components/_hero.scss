@@ -20,13 +20,14 @@
   }
   .hero__cover__content {
     width: $onecolumn-maxwidth;
-    margin: 0 auto $spacing-large;
+    margin: 0 auto $spacing;
     @media (max-width: $mobile-max) {
       width: 100%;
       margin: 0 $spacing;
     }
   }
   .hero__title__text {
+    margin: $spacing-large 0 $spacing;
     @media (max-width: $mobile-max) {    
       @include titleFont();
       margin: $spacing 0;

@@ -1020,6 +1020,7 @@ section.archive {
   .entry__content figure.is-fullwidth figcaption.alignleft,
   .entry__content figure.is-fullwidth figcaption.alignright {
     text-align: left;
+    margin: 0 auto;
   }
 }
 
@@ -1043,29 +1044,27 @@ section.archive {
   margin-right: 32px;
 }
 
-@media (max-width: 959px) {
-  .entry__content .alignleft {
-    float: none;
-    margin-right: 0;
-  }
-}
-
 .entry__content .alignright {
   float: right;
   margin-left: 32px;
-}
-
-@media (max-width: 959px) {
-  .entry__content .alignright {
-    float: none;
-    margin-left: 0;
-  }
 }
 
 .entry__content .alignright,
 .entry__content .alignleft {
   max-width: 350px;
   position: relative;
+}
+
+@media (max-width: 959px) {
+  .entry__content .alignright,
+  .entry__content .alignleft {
+    float: none;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .entry__content figcaption.alignright {
@@ -1080,6 +1079,7 @@ section.archive {
 @media (max-width: 959px) {
   .entry__content figcaption.alignright {
     position: relative;
+    margin: calc(32px / 2) auto 0;
     right: 0;
     width: 100%;
   }
@@ -1419,7 +1419,7 @@ section.archive {
 
 .hero--content .hero__cover__content {
   width: 740px;
-  margin: 0 auto 32px;
+  margin: 0 auto 16px;
 }
 
 @media (max-width: 959px) {
@@ -1427,6 +1427,10 @@ section.archive {
     width: 100%;
     margin: 0 16px;
   }
+}
+
+.hero--content .hero__title__text {
+  margin: 32px 0 16px;
 }
 
 @media (max-width: 959px) {
