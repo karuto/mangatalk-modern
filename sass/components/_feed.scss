@@ -1,15 +1,13 @@
 $feed-gutter-small: $spacing;
 $feed-gutter-large: $spacing-large;
-$feed-gutter-gigantic: $spacing-gigantic; /* anything next to footer should have $spacing-gigantic */
 $feed-border-radius: 8px;
 
 .grid {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0 $spacing;
 }
 .collection-of-feeds {
-  grid-column: 1/2;
-  // grid-template-columns: 1fr;
+  grid-column: 1/3;
 }
 .grid,
 .collection-of-feeds {

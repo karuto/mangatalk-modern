@@ -110,11 +110,10 @@
 }
 
 @mixin oneColumnContainer() {
-	/* anything next to footer should have $spacing-gigantic */
-  margin: 0 auto $spacing-gigantic;
+  margin: 0 auto;
   max-width: $onecolumn-maxwidth;
   @media (max-width: $mobile-max) {
-    margin: 0 $spacing $spacing-gigantic;
+    margin: 0 $spacing;
   }
 }
 
@@ -124,7 +123,7 @@
 	text-overflow: ellipsis;
 	max-width: 275px;
 	@media (max-width: $mobile-max) {
-		max-width: 65vw;
+		max-width: calc(100vw - #{$spacing} * 5 );
 	}
 }
 

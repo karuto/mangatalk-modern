@@ -68,12 +68,12 @@
   }
 }
 .latest {
-  box-shadow: $box-shadow;
-  border-radius: $base-border-radius;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: $spacing;
   .hero--home {
+    box-shadow: $box-shadow;
+    border-radius: $base-border-radius;
     height: auto; /* so that they can split the parent height */
     @media (max-width: $mobile-max) {
       height: $spacing-large * 5; /* 160px */

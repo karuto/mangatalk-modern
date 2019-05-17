@@ -15,9 +15,8 @@
  */
 ?>
 
-			<?php get_template_part( 'templates/partials/footer' ); ?>
 		</div><!-- #page -->
-
+		<?php get_template_part( 'templates/partials/footer' ); ?>
 		<?php get_template_part( 'templates/partials/html-end-of-body' ); ?>
 	</body>
 </html>

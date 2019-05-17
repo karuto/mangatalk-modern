@@ -43,6 +43,10 @@ $columnrec_image_dimension: 40px;
   @include linkStyleOverride();
   @include excerptFont();
   @include forceOneLine();
+  max-width: 250px;
+  @media (max-width: $mobile-max) {
+    max-width: calc(100vw - #{$columnrec_image_dimension} - #{$spacing} * 3 );
+  }
 }
 .columnrec__desc__link {
   @include linkStyleOverride();

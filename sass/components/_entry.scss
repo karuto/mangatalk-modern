@@ -18,7 +18,7 @@
 
   .entry__intro__content {
     display: grid;
-    grid-template-columns: 40px 1fr 200px;
+    grid-template-columns: 40px auto 1fr;
     grid-template-rows: 40px;
     grid-gap: $spacing;
     grid-column-gap: $spacing;
@@ -39,9 +39,17 @@
     }
   }
   .social {
+    align-self: flex-end;
     display: flex;
+    svg:hover {
+      fill: $color-brand-primary;
+    }
+    path {
+      pointer-events:all;
+    }
   }
   .tags {
+    align-self: flex-end;
     margin: 0 0 $spacing-small;
     a {
       white-space: nowrap;

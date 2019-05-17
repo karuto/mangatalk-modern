@@ -20,7 +20,9 @@ if (has_post_thumbnail( $post->ID ) ) {
 
 <article id="post-<?php the_ID(); ?>" class="feed">
 
-	<div class="feed__image" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+	<a href="<?php the_permalink(); ?>">
+		<div class="feed__image" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+	</a>
 
 	<div class="feed__content">
 		<a class="feed__title" href="<?php the_permalink(); ?>">
