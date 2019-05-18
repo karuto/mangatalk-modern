@@ -36,6 +36,7 @@ $twitter_link = "https://twitter.com/intent/tweet?text=《" . $format_posttitle.
 
 <div class="secondary">
   <div class="tags">
+    <span class="social__label">标签：</span>
     <?php the_tags( '', '', '' ); /* before, separator, after */ ?>
   </div>
   <div class="social">

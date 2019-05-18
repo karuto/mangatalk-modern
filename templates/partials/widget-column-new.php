@@ -10,19 +10,29 @@
 ?>
 
 <?php
-$topUsers = get_users(
+$newUsersCount = 1;
+$newUsersLimit = 5;
+$newUsers = get_users(
   array(
     'orderby' => 'post_count',
-    'order' => 'DESC',
-    'number' => '6'
+    'order' => 'ASC',
+    'number' => '15'
   )
 );
 ?>
 
 <section class="widget">
-  <div class="feeds__header"><a href="#">专栏排行</a></div>
+  <div class="feeds__header"><a href="#">专栏推荐</a></div>
   <div class="widget__content">
-    <?php foreach ( $topUsers as $user ): ?>
+    <?php 
+    foreach ( $newUsers as $user ): 
+      $post_count = count_user_posts( $user->ID );
+      // Move on if user has not published a post (yet).
+      if ( !$post_count || ($newUsersCount > $newUsersLimit)) {
+          continue;
+      }
+      $newUsersCount++;
+    ?>
       <div class="columnrec">
         <div class="columnrec__content">
           <div class="columnrec__image">
