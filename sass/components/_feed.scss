@@ -23,23 +23,6 @@ $image-dimension: 112px;
 .feeds {
   margin: 0;
 }
-.feeds__header {
-  /* The header that summarizies to a collection of feed */
-  @include subtleFont();
-  margin: 0 0 $feed-gutter-small;
-  border-bottom: 2px solid $color-brand-primary;
-  padding: 0 0 8px;
-}
-.archive, .search {
-  /* Override header with one column styles */
-  .feeds__header {
-    @include oneColumnContainer();
-    margin: 0 auto $spacing;
-    @media (max-width: $mobile-max) {
-      margin: $spacing;
-    }
-  }
-}
 
 
 

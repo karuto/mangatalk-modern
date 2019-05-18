@@ -68,7 +68,7 @@ function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
 
   if ( $template == 'feed' ) {
     echo '<section class="feeds">';
-    echo '<div class="feeds__header"><a href="' . $catUrl . '">' . $catName . '</a></div>';  
+    echo '<div class="heading"><a href="' . $catUrl . '">' . $catName . '</a></div>';  
   }
   generateFeed( $catPosts, $postsCount, $template );
   if ( $template == 'feed' ) {

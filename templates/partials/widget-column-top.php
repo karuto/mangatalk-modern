@@ -20,7 +20,7 @@ $topUsers = get_users(
 ?>
 
 <section class="widget">
-  <div class="feeds__header"><a href="#">专栏排行</a></div>
+  <div class="heading"><a href="#">专栏排行</a></div>
   <div class="widget__content widget__content--columnrec">
     <?php foreach ( $topUsers as $user ): ?>
       <div class="columnrec">

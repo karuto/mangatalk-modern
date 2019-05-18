@@ -12,7 +12,7 @@
 
 <?php
 if ( is_archive() || is_search() || is_404() ) {
-  echo '<header class="feeds__header">';
+  echo '<header class="heading">';
   if ( is_archive() ) {
     echo get_the_archive_title() . '的文章';
   } else if ( is_search() ) {
