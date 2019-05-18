@@ -1,6 +1,7 @@
 $feed-gutter-small: $spacing;
 $feed-gutter-large: $spacing-large;
 $feed-border-radius: 8px;
+$image-dimension: 112px;
 
 .grid {
   grid-template-columns: 1fr 1fr 1fr;
@@ -45,7 +46,7 @@ $feed-border-radius: 8px;
 .feed {
   /* The wrapper for a single article (feed item) */
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: $image-dimension 1fr;
   grid-column-gap: $feed-gutter-small;
   padding: 0 0 $spacing;
   margin: 0 0 $spacing;
@@ -54,8 +55,8 @@ $feed-border-radius: 8px;
   }
 }
 .feed__image {
-  width: 100px;
-  height: 100px;
+  width: $image-dimension;
+  height: $image-dimension;
   background-size: cover;
   background-position: center;
 }

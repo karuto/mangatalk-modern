@@ -16,7 +16,7 @@ $userId = get_the_author_meta( 'ID' );
 <aside class="entry__intro">
   <div class="entry__intro__content">
     <div class="entry__intro__image">
-      <?php echo get_avatar( $userId, 40 ); ?>
+      <?php echo get_avatar( $userId, 48 ); ?>
     </div>
     <div class="columnrec__meta">
       <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $userId ); ?>">

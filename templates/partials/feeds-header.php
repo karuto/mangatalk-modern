@@ -14,9 +14,9 @@
 if ( is_archive() || is_search() || is_404() ) {
   echo '<header class="feeds__header">';
   if ( is_archive() ) {
-    echo '所有文章：' . get_the_archive_title();
+    echo get_the_archive_title() . '的文章';
   } else if ( is_search() ) {
-    echo '搜索结果';
+    echo '搜索结果：' . get_search_query();;
   } else if ( is_404() ) {
     _e( 'Oops! That page can&rsquo;t be found.', 'twentynineteen' );
   }

@@ -2,9 +2,7 @@
 
 .discussion {
   /* Discussion = submit a comment + comments */
-  @media (max-width: $mobile-max) {
-    margin: 0 $spacing;
-  }
+  margin: 0 $spacing;
 }
 .discussion--closed {
 }
@@ -30,14 +28,16 @@
     // set left margin to indent comparing to parent
     margin: 0 0 0 64px;
     @media (max-width: $mobile-max) {
-      margin: 0;
+      margin: 0 0 0 32px;
     }
   }
 }
 /* This is the best class to target individual comment */
 /* Also being used in submit new comment form */
 .comment__body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-column-gap: $spacing;
   margin: 0 0 $spacing-large;
 }
 .comment__author {
@@ -62,7 +62,11 @@
   flex-grow: 2;
 }
 .comment__text {
+  font-size: 16px;
   margin: 0 0 $spacing-small;
+  @media (max-width: $mobile-max) {
+    @include excerptFont();
+  }
 }
 .comment__reply {
   @include subtleFont();

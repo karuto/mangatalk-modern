@@ -494,9 +494,12 @@ section.archive {
   }
 }
 
+.widget__content--columnrec {
+  grid-gap: 16px;
+}
+
 .columnrec {
-  height: 50.5px;
-  /* so that a columnrec is half height of the feed item */
+  padding: 0 0 16px;
   border-bottom: 1px solid #CECECE;
 }
 
@@ -506,8 +509,8 @@ section.archive {
 
 .columnrec__content {
   display: grid;
-  grid-template-columns: 40px 1fr;
-  grid-template-rows: 40px;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: 48px;
   grid-column-gap: 16px;
 }
 
@@ -568,7 +571,7 @@ section.archive {
 
 @media (max-width: 959px) {
   .columnrec__desc {
-    max-width: calc(100vw - 40px - 16px * 3);
+    max-width: calc(100vw - 48px - 16px * 3);
   }
 }
 
@@ -619,10 +622,6 @@ section.archive {
   margin: 0 16px 0 0;
 }
 
-.comment-form .comment__body {
-  align-items: center;
-}
-
 .comment-form .comment__logged-in-as,
 .comment-form .comment__notes,
 .comment-form .comment__body {
@@ -634,9 +633,13 @@ section.archive {
   width: 100%;
 }
 
+.comment-form .comment__body {
+  align-items: center;
+}
+
 .comment-form textarea {
   resize: vertical;
-  height: 48px;
+  height: calc(48px * 2);
   /* align horizontally with avatar */
 }
 
@@ -659,28 +662,34 @@ section.archive {
   font-size: 13px;
   font-weight: 700;
   border-radius: 4px;
-  border: 2px solid #E8E8E8;
-  background: #E8E8E8;
-  padding: 4px 8px;
+  background-color: #E84141;
+  color: #FFFFFF;
+  padding: 8px 8px;
+  transition: background-color 1s ease;
 }
 
 .comment-form .comment__submit:hover {
-  background: #E84141;
+  cursor: pointer;
+  background-color: #ae1515;
 }
 
 .comment-form .comment__checkbox {
   width: 48px;
 }
 
+.comment-form .comment__checkbox__label {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 /* This stylesheet targets existing comments only. Also see comments-form.scss */
 .discussion {
   /* Discussion = submit a comment + comments */
-}
-
-@media (max-width: 959px) {
-  .discussion {
-    margin: 0 16px;
-  }
+  margin: 0 16px;
 }
 
 .comments {
@@ -694,14 +703,16 @@ section.archive {
 
 @media (max-width: 959px) {
   .comment.depth-2, .comment.depth-3, .comment.depth-4, .comment.depth-5 {
-    margin: 0;
+    margin: 0 0 0 32px;
   }
 }
 
 /* This is the best class to target individual comment */
 /* Also being used in submit new comment form */
 .comment__body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-column-gap: 16px;
   margin: 0 0 32px;
 }
 
@@ -733,7 +744,18 @@ section.archive {
 }
 
 .comment__text {
+  font-size: 16px;
   margin: 0 0 8px;
+}
+
+@media (max-width: 959px) {
+  .comment__text {
+    font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+    font-size: 13px;
+    /* testing new typography */
+    line-height: 1.7;
+    color: #000;
+  }
 }
 
 .comment__reply {
@@ -745,6 +767,7 @@ section.archive {
   margin: 0;
 }
 
+/* 48px */
 /* Handles both single POST and PAGE */
 .entry {
   margin: 0 auto;
@@ -777,16 +800,16 @@ section.archive {
 
 .entry__intro .entry__intro__content {
   display: grid;
-  grid-template-columns: 40px auto 1fr;
-  grid-template-rows: 40px;
+  grid-template-columns: 48px auto 1fr;
+  grid-template-rows: 48px;
   grid-gap: 16px;
   grid-column-gap: 16px;
 }
 
 @media (max-width: 959px) {
   .entry__intro .entry__intro__content {
-    grid-template-columns: 40px 1fr;
-    grid-template-rows: 40px 1fr;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: 48px 1fr;
   }
 }
 
@@ -1255,7 +1278,7 @@ section.archive {
 .feed {
   /* The wrapper for a single article (feed item) */
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 112px 1fr;
   grid-column-gap: 16px;
   padding: 0 0 16px;
   margin: 0 0 16px;
@@ -1266,8 +1289,8 @@ section.archive {
 }
 
 .feed__image {
-  width: 100px;
-  height: 100px;
+  width: 112px;
+  height: 112px;
   background-size: cover;
   background-position: center;
 }
@@ -1838,7 +1861,6 @@ section.archive {
 
 .widget__content {
   display: grid;
-  grid-gap: 16px;
 }
 
 .sidebar__block {

@@ -1,3 +1,5 @@
+$avatar-dimension: $spacing-xxlarge; /* 48px */
+
 /* Handles both single POST and PAGE */
 .entry {
   @include oneColumnContainer();
@@ -18,13 +20,13 @@
 
   .entry__intro__content {
     display: grid;
-    grid-template-columns: 40px auto 1fr;
-    grid-template-rows: 40px;
+    grid-template-columns: $avatar-dimension auto 1fr;
+    grid-template-rows: $avatar-dimension;
     grid-gap: $spacing;
     grid-column-gap: $spacing;
     @media (max-width: $mobile-max) {
-      grid-template-columns: 40px 1fr;
-      grid-template-rows: 40px 1fr;
+      grid-template-columns: $avatar-dimension 1fr;
+      grid-template-rows: $avatar-dimension 1fr;
     }
   }
   .avatar {

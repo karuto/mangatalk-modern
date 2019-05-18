@@ -9,6 +9,7 @@
  * @since 1.0.0
  */
 ?>
+
 <div class="stage stage--relative">
   <div class="stage-heading">
     搜索「<?php echo get_search_query(); ?>」

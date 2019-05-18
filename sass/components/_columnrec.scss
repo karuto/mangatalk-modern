@@ -1,7 +1,10 @@
-$columnrec_image_dimension: 40px;
+$columnrec_image_dimension: 48px;
 
+.widget__content--columnrec {
+  grid-gap: $spacing;
+}
 .columnrec {
-  height: 50.5px; /* so that a columnrec is half height of the feed item */
+  padding: 0 0 $spacing;
   border-bottom: $border-line;
   &:last-child {
     margin: 0 0 $spacing-large;

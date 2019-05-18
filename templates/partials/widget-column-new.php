@@ -23,7 +23,7 @@ $newUsers = get_users(
 
 <section class="widget">
   <div class="feeds__header"><a href="#">专栏推荐</a></div>
-  <div class="widget__content">
+  <div class="widget__content widget__content--columnrec">
     <?php 
     foreach ( $newUsers as $user ): 
       $post_count = count_user_posts( $user->ID );
@@ -36,7 +36,7 @@ $newUsers = get_users(
       <div class="columnrec">
         <div class="columnrec__content">
           <div class="columnrec__image">
-            <?php echo get_avatar( $user->ID, 40 ); ?>
+            <?php echo get_avatar( $user->ID, 48 ); ?>
           </div>
           <div class="columnrec__meta">
             <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $user->ID ); ?>">
