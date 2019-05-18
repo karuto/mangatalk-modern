@@ -11,8 +11,6 @@
 ?>
 
 <?php 
-$logged_in_as = '<p class="comment__logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) ) ) . '</p>';
-
 $default_avatar = 'https://c.disquscdn.com/uploads/forums/128/5454/avatar92.jpg?1330293846';
 global $current_user;
 $avatar = get_avatar( $current_user->ID, 48 );

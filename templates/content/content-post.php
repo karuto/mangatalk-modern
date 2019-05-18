@@ -16,7 +16,6 @@
 	<?php get_template_part( 'templates/content/content-post-meta' ); ?>
 	<div class="entry__content">
 		<?php the_content(); ?>
-		<?php get_template_part( 'templates/content/content-post-footer' ); ?>
 	</div>
 </article>
-
+<?php get_template_part( 'templates/content/content-post-related' ); ?>

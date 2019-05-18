@@ -8,6 +8,7 @@ $columnrec_image_dimension: 48px;
   border-bottom: $border-line;
   &:last-child {
     margin: 0 0 $spacing-large;
+    border-bottom: none;
   }
 }
 .columnrec__content {

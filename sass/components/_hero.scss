@@ -135,6 +135,7 @@
   @include heroFont();
   color: $color-white;
   margin: $spacing-large 0;
+  transition: color 1s ease;
   &:hover {
     color: $color-brand-primary;
   }

@@ -11,7 +11,7 @@
  */
 
 /* Get data from current discussion on post. */
-$discussion    = twentynineteen_get_discussion_data();
+$discussion = twentynineteen_get_discussion_data();
 $has_responses = $discussion->responses > 0;
 
 if ( $has_responses ) {

@@ -92,6 +92,7 @@
 // Provide site-wide "link" style
 @mixin linkStyleOverride() {
   color: $strong-text-color;
+  transition: color 1s ease;
   &:hover {
     color: $highlight-color;
   }

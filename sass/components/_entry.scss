@@ -73,6 +73,7 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
   @include linkStyleOverride();
   margin: 0 $spacing 0 0;
   white-space: nowrap;
+  transition: background-color 1s ease;
   &:last-child {
     margin: 0;
   }
@@ -80,4 +81,20 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
     background-color: $highlight-color;
   }
 }
+
+.entry__footer {
+  padding: 0 16px;
+  .feeds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    @media (max-width: $mobile-max) {
+      grid-template-columns: 100%;
+    }
+  }
+  .feed:last-child {
+    border-bottom: $border-line;
+  }
+}
+
 @import "./entry-content.scss";
