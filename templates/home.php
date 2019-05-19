@@ -35,10 +35,10 @@ function getQueryIncludeCategory( $catId, $postsCount ) {
   return $posts;
 }
 
-function getQueryExcludeCategory( $catId, $postsCount ) {
+function getQueryExcludeTag( $catId, $postsCount ) {
   $posts = new WP_Query(
     array(
-      'category__not_in' => $catId,
+      'tag__not_in' => array( $catId ),
       'posts_per_page' => $postsCount,
     )
   );
@@ -60,20 +60,33 @@ function generateFeed( $query, $postsCount, $template ) {
   }
 }
 
-function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
+function generateFeedsByCat( $catSlug, $postsCount = 4 ) {
   $catId = getCategoryIdBySlug( $catSlug );
   $catUrl = esc_url( get_category_link( $catId ) );
   $catName = get_cat_name( $catId );
   $catPosts = getQueryIncludeCategory( $catId, $postsCount );
 
-  if ( $template == 'feed' ) {
-    echo '<section class="feeds">';
-    echo '<a href="' . $catUrl . '"><div class="heading"><span class="heading__label">' . $catName . '</span><span class="heading__secondary">查看全部</span></div></a>';  
-  }
-  generateFeed( $catPosts, $postsCount, $template );
-  if ( $template == 'feed' ) {
-    echo '</section>';
-  }
+  echo '<section class="feeds">';
+  echo '<a href="' . $catUrl . '"><div class="heading"><span class="heading__label">' . $catName . '</span><span class="heading__secondary">查看全部</span></div></a>';
+  generateFeed( $catPosts, $postsCount, 'feed' );
+  echo '</section>';
+}
+
+function generateFeedsByTag( $tagSlug, $postsCount = 4 ) {
+  $tagPosts = new WP_Query(
+    array(
+      'tag' => $tagSlug,
+      'posts_per_page' => $postsCount
+    )
+  );
+  generateFeed( $tagPosts, $postsCount, 'hero' );
+}
+
+function generateFeedsByRecentExcludingFeatured() {
+  $featuredTagId = get_term_by('name', 'featured', 'post_tag');
+  $thisPostsCount = 2;
+  $postsExcludingFeatured = getQueryExcludeTag( $featuredTagId, $thisPostsCount );
+  generateFeed( $postsExcludingFeatured, $thisPostsCount, 'hero' );
 }
 ?>
 
@@ -81,9 +94,9 @@ function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
 <div class="grid">
   <section class="collection-of-feeds">
   <?php
-  generateFeedsBySlug( 'article' ); // culture
-  generateFeedsBySlug( 'scomix' ); // recommendations
-  generateFeedsBySlug( 'scomix' ); // people
+  generateFeedsByCat( 'culture' ); // culture
+  generateFeedsByCat( 'recommendation' ); // recommendation
+  generateFeedsByCat( 'people' ); // people
   ?>
   </section>
   <aside class="sidebar">

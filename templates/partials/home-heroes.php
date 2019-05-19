@@ -12,9 +12,8 @@
 
 <div class="stage"></div>
 <div class="heroes">
-  <!-- TODO: this doesn't work, because right now the code only works for a tag, not a category. -->
-  <?php generateFeedsBySlug( 'featured', 1, 'hero' ); ?>
+  <?php generateFeedsByTag( 'featured', 1 ); ?>
   <section class="latest">
-    <?php generateFeedsBySlug( 'scomix', 2, 'hero' ); ?>
+    <?php generateFeedsByRecentExcludingFeatured(); ?>
   </section>
 </div>
