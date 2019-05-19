@@ -88,9 +88,7 @@ function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
   </section>
   <aside class="sidebar">
     <?php get_template_part( 'templates/partials/widget-column-top' ); ?>
-    <div class="sidebar__block">
-      MangaTalk is a non-profit, community-oriented educational organization dedicated to enhance reader's understanding and appreciation of the comics medium, the people who make it and the industry behind it.
-    </div>
+    <?php get_template_part( 'templates/partials/widget-ad' ); ?>
     <?php get_template_part( 'templates/partials/widget-column-new' ); ?>
   </aside>
 </div>

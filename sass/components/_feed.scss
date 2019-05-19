@@ -52,7 +52,7 @@ $image-dimension: 112px;
 }
 .feed__title__text {
   @include titleFont();
-  @include linkStyleOverride();
+  @include linkBlack();
   margin: 0 0 $spacing-small;
 }
 .feed__excerpt {
@@ -74,7 +74,7 @@ $image-dimension: 112px;
   margin: 0 0 0 $spacing;
 }
 .feed__meta__link {
-  @include linkStyleOverride();
+  @include linkBlack();
   color: $color-light;
 }
 .feed__meta__icon {

@@ -3,6 +3,7 @@ $footer-gutter-large: $spacing-large;
 
 .footer {
   margin: $spacing-gigantic 0 0;
+  background-color: $subtle-text-color;
   background-image: url('./img/hero-bg.png');
   height: 500px;
   .widget-area {
@@ -28,8 +29,8 @@ $footer-gutter-large: $spacing-large;
   /* because .footer__content the real one is occupied by .maxwidth and cannot set horizontal paddings */
   padding: $footer-gutter-large $footer-gutter;
   display: grid;
-  grid-gap: $footer-gutter;
-  grid-column-gap: $footer-gutter;
+  grid-gap: $footer-gutter-large;
+  grid-column-gap: $footer-gutter-large;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   @media (max-width: $mobile-max) {
@@ -42,6 +43,12 @@ $footer-gutter-large: $spacing-large;
   @include titleFont();
   color: $color-white;
   margin-top: 0;
+}
+.footer__content__intro__name__secondary {
+  @include excerptFont();
+  color: $color-white;
+  font-weight: $font-weight-bold;
+  margin: 0 0 0 $spacing-small;
 }
 .footer__content__widgets {
   background: yellowgreen;

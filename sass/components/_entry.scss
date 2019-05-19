@@ -72,12 +72,17 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
     align-self: flex-start;
   }
 }
+.entry__content {
+  .social {
+    margin-top: $spacing-xxlarge; /* social div appears at end of content */
+  }
+}
 .social__label {
   @include subtleFont();
   margin: 0 $spacing-small 0 0;
 }
 .social__link {
-  @include linkStyleOverride();
+  @include linkBlack();
   margin: 0 $spacing 0 0;
   white-space: nowrap;
   transition: all $ease;

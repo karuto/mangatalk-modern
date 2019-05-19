@@ -18,6 +18,9 @@
 .comments {
   margin: $spacing-xxlarge 0 0;
 }
+.pingback {
+  display: none;
+}
 /* This isn't the best class to target individual comment, because a thread is one "comment" */
 .comment {
   &.depth-2, 

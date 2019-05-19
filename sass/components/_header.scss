@@ -76,7 +76,7 @@
     white-space: nowrap; /* force text on one line */
     a {
       margin: 0 0 0 $spacing;
-      @include linkStyleOverride();
+      @include linkBlack();
       color: $color-white;
       @media (max-width: $mobile-max) {
         margin: 0 $spacing 0 0;

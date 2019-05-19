@@ -700,6 +700,10 @@ section.archive {
   margin: 48px 0 0;
 }
 
+.pingback {
+  display: none;
+}
+
 /* This isn't the best class to target individual comment, because a thread is one "comment" */
 .comment.depth-2, .comment.depth-3, .comment.depth-4, .comment.depth-5 {
   margin: 0 0 0 64px;
@@ -871,6 +875,11 @@ section.archive {
   .social {
     align-self: flex-start;
   }
+}
+
+.entry__content .social {
+  margin-top: 48px;
+  /* social div appears at end of content */
 }
 
 .social__label {
@@ -1409,6 +1418,7 @@ section.archive {
 
 .footer {
   margin: 96px 0 0;
+  background-color: #777;
   background-image: url("./img/hero-bg.png");
   height: 500px;
 }
@@ -1445,8 +1455,8 @@ section.archive {
   /* because .footer__content the real one is occupied by .maxwidth and cannot set horizontal paddings */
   padding: 32px 16px;
   display: grid;
-  grid-gap: 16px;
-  grid-column-gap: 16px;
+  grid-gap: 32px;
+  grid-column-gap: 32px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -1464,6 +1474,17 @@ section.archive {
   font-weight: 700;
   color: #FFFFFF;
   margin-top: 0;
+}
+
+.footer__content__intro__name__secondary {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin: 0 0 0 8px;
 }
 
 .footer__content__widgets {
@@ -1845,8 +1866,8 @@ section.archive {
   font-weight: 700;
   line-height: 1.3;
   color: #FFFFFF;
-  margin: 32px 0;
   transition: color 0.5s ease;
+  margin: 32px 0;
 }
 
 .hero__title__text:hover {
@@ -1958,16 +1979,48 @@ section.archive {
   display: grid;
 }
 
-.sidebar__block {
-  background: yellowgreen;
+.ad {
+  border-radius: 4px;
+  background-color: #777;
+  background-image: url("./img/ad-morning.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
   margin: 0 0 32px;
   padding: 16px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 959px) {
-  .sidebar__block {
-    height: auto;
+  .ad {
+    height: 50vw;
   }
+}
+
+.ad__link {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.ad__link:hover {
+  color: #E84141;
+}
+
+.ad__link__desc {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  color: #FFFFFF;
+  margin: 16px 0 0;
 }
 
 .stage {

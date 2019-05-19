@@ -90,12 +90,25 @@
 
 /* vincentzh-theme mixins */
 // Provide site-wide "link" style
-@mixin linkStyleOverride() {
+@mixin linkBlack() {
   color: $strong-text-color;
   transition: color $ease;
   &:hover {
     color: $highlight-color;
   }
+}
+
+@mixin linkWhite() {
+  color: $color-white;
+  transition: color $ease;
+  &:hover {
+    color: $color-brand-primary;
+  }
+}
+
+@mixin shadowBox() {
+  box-shadow: $box-shadow;
+  border-radius: $base-border-radius;
 }
 
 @mixin extraWidthContainer() {

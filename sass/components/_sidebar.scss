@@ -1,17 +1,38 @@
+$sidebar-gutter: $spacing-large;
+
 .sidebar {
 
 }
 .widget {
   /* widget is a section inside a sidebar */
+  // margin: 0 0 $sidebar-gutter;
 }
 .widget__content {
   display: grid;
 }
-.sidebar__block {
-  background: yellowgreen;
-  margin: 0 0 $spacing-large;
+.ad {
+  border-radius: $base-border-radius;
+  background-color: $subtle-text-color;
+  background-image: url('./img/ad-morning.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin: 0 0 $sidebar-gutter;
   padding: $spacing;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: $mobile-max) {
-    height: auto;
+    height: 50vw;
   }
+}
+.ad__link {
+  @include titleFont();
+  @include linkWhite();
+}
+.ad__link__desc {
+  @include excerptFont();
+  color: $color-white;
+  margin: $spacing 0 0;
 }

@@ -26,7 +26,7 @@ $columnrec_image_dimension: 48px;
   justify-content: space-between;
 }
 .columnrec__authorlink {
-  @include linkStyleOverride();
+  @include linkBlack();
   @include subtleFont();
   font-size: $font-size-base;
   color: $strong-text-color;
@@ -37,7 +37,7 @@ $columnrec_image_dimension: 48px;
   color: $subtle-text-color;
 }
 .columnrec__desc {
-  @include linkStyleOverride();
+  @include linkBlack();
   @include excerptFont();
   @include forceOneLine();
   max-width: 250px;
@@ -46,7 +46,7 @@ $columnrec_image_dimension: 48px;
   }
 }
 .columnrec__desc__link {
-  @include linkStyleOverride();
+  @include linkBlack();
   @include excerptFont();
 }
 .columnrec__stats {
