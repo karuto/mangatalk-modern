@@ -1420,34 +1420,7 @@ section.archive {
   margin: 96px 0 0;
   background-color: #777;
   background-image: url("./img/hero-bg.png");
-  height: 500px;
-}
-
-.footer .widget-area {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer .widget {
-  /* Gutter; only works with space-between above */
-  width: calc(50% - 16px);
-}
-
-@media (max-width: 959px) {
-  .footer .widget {
-    width: 100%;
-  }
-}
-
-.footer .widget-title {
-  color: #777;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 700;
-  margin: 0 0 16px;
+  min-height: 500px;
 }
 
 .footer__wrapper {
@@ -1488,7 +1461,52 @@ section.archive {
 }
 
 .footer__content__widgets {
-  background: yellowgreen;
+  display: grid;
+  grid-gap: 32px;
+  grid-column-gap: 32px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer__content__widgets .widget {
+  margin: 0 0 16px;
+}
+
+@media (max-width: 959px) {
+  .footer__content__widgets .widget {
+    width: 100%;
+  }
+}
+
+.footer__content__widgets .widget-title {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+  padding: 8px 0;
+  border-bottom: 2px solid white;
+  /* special case */
+}
+
+.footer__content__widgets .custom-html-widget {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+}
+
+.footer__content__widgets .footer__link {
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.footer__content__widgets .footer__link:hover {
+  color: #E84141;
 }
 
 .footer__content__intro__summary,

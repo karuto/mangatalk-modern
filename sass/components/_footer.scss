@@ -5,24 +5,7 @@ $footer-gutter-large: $spacing-large;
   margin: $spacing-gigantic 0 0;
   background-color: $subtle-text-color;
   background-image: url('./img/hero-bg.png');
-  height: 500px;
-  .widget-area {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .widget {
-    /* Gutter; only works with space-between above */
-    width:calc(50% - 16px);
-    @media (max-width: $mobile-max) {
-      width: 100%;
-    }
-  }
-  .widget-title {
-    @include subtleFont();
-    margin: 0 0 $footer-gutter;
-  }
+  min-height: 500px;
 }
 .footer__wrapper {
   /* this div is solely for adding the padding, more of a utility */
@@ -51,7 +34,31 @@ $footer-gutter-large: $spacing-large;
   margin: 0 0 0 $spacing-small;
 }
 .footer__content__widgets {
-  background: yellowgreen;
+  display: grid;
+  grid-gap: $footer-gutter-large;
+  grid-column-gap: $footer-gutter-large;
+  grid-template-columns: 1fr 1fr;
+  .widget {
+    margin: 0 0 $footer-gutter;
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+  }
+  .widget-title {
+    @include subtleFont();
+    color: $color-white;
+    margin: 0 0 $footer-gutter;
+    padding: $spacing-small 0;
+    border-bottom: 2px solid white; /* special case */
+  }
+  .custom-html-widget {
+    display: flex;
+    flex-direction: column;
+    @include excerptFont();
+  }
+  .footer__link {
+    @include linkWhite();
+  }
 }
 .footer__content__intro__summary,
 .footer__content__copyright {
