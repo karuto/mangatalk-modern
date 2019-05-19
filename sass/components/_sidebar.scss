@@ -12,7 +12,8 @@ $sidebar-gutter: $spacing-large;
 }
 .ad {
   border-radius: $base-border-radius;
-  background-color: $subtle-text-color;
+  background-color: $base-text-color;
+  background-image: url('./img/hero-bg.png');
   background-image: url('./img/ad-morning.jpg');
   background-size: cover;
   background-position: center;

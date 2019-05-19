@@ -1999,7 +1999,8 @@ section.archive {
 
 .ad {
   border-radius: 4px;
-  background-color: #777;
+  background-color: #000;
+  background-image: url("./img/hero-bg.png");
   background-image: url("./img/ad-morning.jpg");
   background-size: cover;
   background-position: center;
