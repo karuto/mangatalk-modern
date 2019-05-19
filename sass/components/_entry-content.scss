@@ -57,6 +57,7 @@ $content-gutter: $spacing-large;
     }
   }
 
+  .wp-block-quote:not(.is-large):not(.is-style-large), /* block style */
   blockquote {
     border-left: $border-line-blockquote;
     margin: 0 0 $content-gutter;
@@ -64,6 +65,10 @@ $content-gutter: $spacing-large;
     padding: 0 0 0 $content-gutter;
     .big { /* TODO: WTF, we have .big and .large??? */
       @include contentFont();
+    }
+    @media (max-width: $mobile-max) {
+      margin-left: calc(#{$content-gutter} * -0.25);
+      padding: 0 0 0 calc(#{$content-gutter} * 0.25);
     }
     footer {
       text-align: right;
@@ -218,6 +223,14 @@ $content-gutter: $spacing-large;
   .text-muted {
     color: $subtle-text-color;
   }
+
+  /* Below are all Gutenberg block styles */
+  .alignwide {
+    @include extraWidthContainer();
+  }
+  .alignfull {
+    @include fullpagewidth();
+  }
 }
 
 
@@ -232,5 +245,3 @@ $content-gutter: $spacing-large;
     font-weight: $font-weight-bold;
   }
 }
-
-@import "./entry-content-blocks.scss";

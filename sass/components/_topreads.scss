@@ -1,0 +1,42 @@
+.widget__content--topreads {
+  .feed {
+    grid-template-columns: 64px 1fr;
+  }
+  .feed__content {
+    justify-content: space-between;
+  }
+  .feed__image {
+    width: 64px;
+    height: 64px;
+  }
+  .feed__title__text {
+    @include excerptFont();
+    font-weight: $font-weight-normal;
+  }
+  .feed__excerpt {
+    display: none;
+  }
+}
+.rank {
+  @include subtleFont(); /* 13px font */
+  text-align: center;
+  color: $color-white;
+  position: relative;
+  background-color: $color-brand-primary;
+  padding: $spacing-small; /* 8px */
+  width: 29px; /* 8+13+8px */
+  margin-top: -29px; /* cancels out its own existence */
+  top: 21px; /* move it down to overlap */
+}
+.rank--2 {
+  background-color: adjust-hue($color-brand-primary, 20deg);
+}
+.rank--3 {
+  background-color: adjust-hue($color-brand-primary, 40deg);
+}
+.rank--4 {
+  background-color: adjust-hue($color-brand-primary, 60deg);
+}
+.rank--5 {
+  background-color: adjust-hue($color-brand-primary, 80deg);
+}

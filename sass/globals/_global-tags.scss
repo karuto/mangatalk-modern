@@ -35,10 +35,10 @@ dl, dd, dt {
 }
 a {
   text-decoration: none;
-  transition: color $ease;
   color: $highlight-color;
+  transition: color $ease;
   &:hover {
-    color: $highlight-color;
+    color: darken( $highlight-color, 30% );
     text-decoration: none;
   }
 }

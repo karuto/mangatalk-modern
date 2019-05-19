@@ -80,12 +80,13 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
   @include linkStyleOverride();
   margin: 0 $spacing 0 0;
   white-space: nowrap;
-  transition: background-color $ease;
+  transition: all $ease;
   &:last-child {
     margin: 0;
   }
   &:hover {
     background-color: $highlight-color;
+    border-radius: 50%;
   }
 }
 
