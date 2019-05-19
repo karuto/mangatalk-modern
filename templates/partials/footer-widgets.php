@@ -8,7 +8,6 @@
  */
 
 if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
-
 	<aside 
 		class="widget-area" 
 		role="complementary" 

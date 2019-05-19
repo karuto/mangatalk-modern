@@ -57,8 +57,7 @@ if ( ! function_exists( 'twentynineteen_setup' ) ) :
 		register_nav_menus(
 			array(
 				'toplinks' => __( 'Top Links', 'twentynineteen' ),
-				'header' => __( 'Header', 'twentynineteen' ),
-				'footer' => __( 'Footer', 'twentynineteen' )
+				'header' => __( 'Header', 'twentynineteen' )
 			)
 		);
 

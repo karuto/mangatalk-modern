@@ -2023,6 +2023,10 @@ section.archive {
   margin: 16px 0 0;
 }
 
+.ad__link__desc:before {
+  content: '"';
+}
+
 .stage {
   background-image: url("./img/mt-cover-brand.jpg");
   background-position: center;

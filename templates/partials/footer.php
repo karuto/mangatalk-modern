@@ -21,23 +21,8 @@
 				hihi
 			</div>
 			<?php get_template_part( 'templates/partials/footer-widgets' ); ?>
-			<!-- <?php if ( has_nav_menu( 'footer' ) ) : ?>
-				<nav class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'twentynineteen' ); ?>">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'menu_class'     => 'footer-menu',
-							'depth'          => 1,
-						)
-					);
-					?>
-				</nav>
-			<?php endif; ?> -->
-
 			<div class="footer__content__copyright">
 				<em class="">版权所属 &copy; 2011-<?php echo date('Y'); ?> <?php bloginfo('name'); ?> 及其作者群体。著作权持有人保留著作权法规定的所有权利。</em>
-					<!-- <br><br><span style="font-size: 12px; color: #999;">Best wishes to Z in Japan.</span></em> -->
 			</div>
 		</div>
 	</section>
