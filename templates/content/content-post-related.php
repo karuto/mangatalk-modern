@@ -30,7 +30,7 @@ if ( $originalPostTags ) {
   );
   if ( $relatedPostsByTagsQuery->have_posts() ) {
     echo '<div class="entry__footer">';
-    echo '<div class="heading"><a href="#">你可能也会喜欢</a></div>';
+    echo '<div class="heading"><span class="heading__label">你可能也会喜欢</span></div>';
     echo '<section class="feeds">';
     while ( $relatedPostsByTagsQuery->have_posts() ) {
       $relatedPostsByTagsQuery->the_post();

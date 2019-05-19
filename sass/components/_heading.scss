@@ -1,18 +1,35 @@
 
 .heading {
-  /* The header that summarizies to a collection of feed */
+  /* The heading that summarizies to a collection of feed */
   @include subtleFont();
+  color: $color-brand-primary;
+  transition: color $ease;
   margin: 0 0 $feed-gutter-small;
   border-bottom: 2px solid $color-brand-primary;
   padding: 0 0 8px;
+  &:hover {
+    color: darken( $color-brand-primary, 30% );
+  }
 }
 .archive, .search {
-  /* Override header with one column styles */
+  /* Override heading with one column styles */
   .heading {
     @include oneColumnContainer();
     margin: 0 auto $spacing;
     @media (max-width: $mobile-max) {
       margin: $spacing;
     }
+  }
+}
+.heading__label {
+  border-bottom: $border-line-highlight;
+  padding: 0 0$spacing-small;
+}
+.heading__secondary {
+  color: $subtle-text-color;
+  transition: color $ease;
+  float: right;
+  &:hover {
+    color: darken( $subtle-text-color, 30% );
   }
 }

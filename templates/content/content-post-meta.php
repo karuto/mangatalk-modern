@@ -29,6 +29,12 @@ $userId = get_the_author_meta( 'ID' );
         <?php get_template_part( 'templates/content/content-post-stats' ); ?>
       </div>
     </div>
+    <div class="secondary">
+      <div class="tags">
+        <span class="social__label">标签：</span>
+        <?php the_tags( '', '', '' ); /* before, separator, after */ ?>
+      </div>
     <?php get_template_part( 'templates/content/content-post-social' ); ?>
+    </div>
   </div>
 </aside>

@@ -9,15 +9,11 @@
  * @since 1.0.0
  */
 ?>
+<?php get_template_part( 'templates/content/content-post-social-func' ); ?>
 
 <article <?php post_class(); ?>>
-	<div class="entry">
-
-		<?php get_template_part( 'templates/content/content-page-hero' ); ?>
-
-		<div class="entry__content">
-			<?php the_content(); ?>
-		</div>
-
+	<div class="entry__content">
+		<?php the_content(); ?>
+		<?php get_template_part( 'templates/content/content-post-social' ); ?>
 	</div>
 </article>

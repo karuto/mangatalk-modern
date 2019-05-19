@@ -52,11 +52,11 @@ $avatar-dimension: 48px;
     background-color: $highlight-color;
     color: $color-white;
     padding: $spacing-small $spacing-small;
-    transition: background-color 1s ease;
+    transition: background-color $ease;
 
     &:hover {
       cursor: pointer;
-      background-color: darken( $highlight-color, 20% );
+      background-color: darken( $highlight-color, 30% );
     }
   }
   .comment__input__label {

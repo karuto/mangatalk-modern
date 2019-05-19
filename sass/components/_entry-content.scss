@@ -6,8 +6,6 @@ $content-gutter: $spacing-large;
 }
 
 .entry__content {
-  padding: 0 0 $spacing-xxlarge;
-  border-bottom: $border-line-highlight;
   margin: 0 0 $spacing-xxlarge;
   font-family: $font-family-content;
 
@@ -30,6 +28,9 @@ $content-gutter: $spacing-large;
     max-width: 100%;
   }
 
+  h2 {
+    font-size: 150%;
+  }
   h3 {
     font-size: 150%;
   }
@@ -96,11 +97,6 @@ $content-gutter: $spacing-large;
     margin: $spacing-xxlarge 0 $content-gutter;
     font-family: $font-family-title;
     font-weight: $font-weight-bold;
-  }
-
-  h2 {
-    font-size: $font-size-title;
-    line-height: $line-height-title;
   }
 
   ul {
@@ -236,3 +232,5 @@ $content-gutter: $spacing-large;
     font-weight: $font-weight-bold;
   }
 }
+
+@import "./entry-content-blocks.scss";

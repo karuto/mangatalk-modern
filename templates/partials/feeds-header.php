@@ -12,7 +12,7 @@
 
 <?php
 if ( is_archive() || is_search() || is_404() ) {
-  echo '<header class="heading">';
+  echo '<header class="heading"><span class="heading__label">';
   if ( is_archive() ) {
     echo get_the_archive_title() . '的文章';
   } else if ( is_search() ) {
@@ -20,7 +20,7 @@ if ( is_archive() || is_search() || is_404() ) {
   } else if ( is_404() ) {
     _e( 'Oops! That page can&rsquo;t be found.', 'twentynineteen' );
   }
-  echo '</header>';
+  echo '</span></header>';
 }
 
 ?>

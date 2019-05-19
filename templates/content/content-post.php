@@ -9,6 +9,7 @@
  * @since 1.0.0
  */
 ?>
+<?php get_template_part( 'templates/content/content-post-social-func' ); ?>
 
 <div class="stage"></div>
 <?php get_template_part( 'templates/content/content-post-hero' ); ?>
@@ -16,6 +17,7 @@
 	<?php get_template_part( 'templates/content/content-post-meta' ); ?>
 	<div class="entry__content">
 		<?php the_content(); ?>
+		<?php get_template_part( 'templates/content/content-post-social' ); ?>
 	</div>
 </article>
 <?php get_template_part( 'templates/content/content-post-related' ); ?>

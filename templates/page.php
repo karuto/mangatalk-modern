@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single pages.
+ * The template for displaying all single page (non-post) pages.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-page
  *
@@ -10,4 +10,10 @@
  */
 ?>
 
+<div 
+  class="stage stage--relative">
+  <div class="stage-heading">
+    <?php single_post_title(); ?>
+  </div>
+</div>
 <?php get_template_part( 'templates/partials/feed' ); ?>

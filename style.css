@@ -405,7 +405,7 @@ dl, dd, dt {
 
 a {
   text-decoration: none;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   color: #E84141;
 }
 
@@ -523,7 +523,7 @@ section.archive {
 
 .columnrec__authorlink {
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   color: #777;
   line-height: 1;
   text-transform: uppercase;
@@ -549,7 +549,7 @@ section.archive {
 
 .columnrec__desc {
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   font-size: 13px;
   /* testing new typography */
@@ -580,7 +580,7 @@ section.archive {
 
 .columnrec__desc__link {
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   font-size: 13px;
   /* testing new typography */
@@ -669,12 +669,12 @@ section.archive {
   background-color: #E84141;
   color: #FFFFFF;
   padding: 8px 8px;
-  transition: background-color 1s ease;
+  transition: background-color 0.5s ease;
 }
 
 .comment-form .comment__submit:hover {
   cursor: pointer;
-  background-color: #ae1515;
+  background-color: #801010;
 }
 
 .comment-form .comment__checkbox {
@@ -693,7 +693,7 @@ section.archive {
 /* This stylesheet targets existing comments only. Also see comments-form.scss */
 .discussion {
   /* Discussion = submit a comment + comments */
-  margin: 0 16px;
+  margin: 48px 16px;
 }
 
 .comments {
@@ -817,6 +817,11 @@ section.archive {
   }
 }
 
+.entry__intro .columnrec__authorlink {
+  padding: 0 0 8px;
+  border-bottom: 1px solid #CECECE;
+}
+
 .entry__intro .avatar {
   border-radius: 4px;
 }
@@ -857,7 +862,9 @@ section.archive {
 .social {
   align-self: flex-end;
   display: flex;
+  justify-content: center;
   align-items: center;
+  line-height: 1;
 }
 
 @media (max-width: 959px) {
@@ -867,15 +874,20 @@ section.archive {
 }
 
 .social__label {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
   margin: 0 8px 0 0;
 }
 
 .social__link {
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   margin: 0 16px 0 0;
   white-space: nowrap;
-  transition: background-color 1s ease;
+  transition: background-color 0.5s ease;
 }
 
 .social__link:hover {
@@ -915,8 +927,6 @@ section.archive {
 }
 
 .entry__content {
-  padding: 0 0 48px;
-  border-bottom: 3px solid #E84141;
   margin: 0 0 48px;
   font-family: "Noto Serif", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
 }
@@ -953,6 +963,10 @@ section.archive {
 
 .entry__content img {
   max-width: 100%;
+}
+
+.entry__content h2 {
+  font-size: 150%;
 }
 
 .entry__content h3 {
@@ -1064,11 +1078,6 @@ section.archive {
   margin: 48px 0 32px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-weight: 700;
-}
-
-.entry__content h2 {
-  font-size: 18px;
-  line-height: 1.3;
 }
 
 .entry__content ul {
@@ -1302,7 +1311,7 @@ section.archive {
   line-height: 1.3;
   font-weight: 700;
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   margin: 0 0 8px;
 }
 
@@ -1342,7 +1351,7 @@ section.archive {
 
 .feed__meta__link {
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   color: #999;
 }
 
@@ -1463,7 +1472,7 @@ section.archive {
 
 .search-icon:hover {
   fill: #E84141;
-  transition: fill 1s ease;
+  transition: fill 0.5s ease;
 }
 
 .header--toplinks {
@@ -1537,7 +1546,7 @@ section.archive {
 .header__nav .menu-item a {
   margin: 0 0 0 16px;
   color: #000;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
   color: #FFFFFF;
 }
 
@@ -1564,19 +1573,25 @@ section.archive {
 }
 
 .heading {
-  /* The header that summarizies to a collection of feed */
+  /* The heading that summarizies to a collection of feed */
   color: #777;
   line-height: 1;
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
+  color: #E84141;
+  transition: color 0.5s ease;
   margin: 0 0 16px;
   border-bottom: 2px solid #E84141;
   padding: 0 0 8px;
 }
 
+.heading:hover {
+  color: #801010;
+}
+
 .archive, .search {
-  /* Override header with one column styles */
+  /* Override heading with one column styles */
 }
 
 .archive .heading, .search .heading {
@@ -1597,12 +1612,23 @@ section.archive {
   }
 }
 
-.hero {
-  margin: 0 0 96px;
+.heading__label {
+  border-bottom: 3px solid #E84141;
+  padding: 0 0 8px;
 }
 
-.hero--discussion {
-  margin: 0 0 48px;
+.heading__secondary {
+  color: #777;
+  transition: color 0.5s ease;
+  float: right;
+}
+
+.heading__secondary:hover {
+  color: #2b2b2b;
+}
+
+.hero {
+  margin: 0 0 96px;
 }
 
 .hero--content {
@@ -1781,7 +1807,7 @@ section.archive {
   line-height: 1.3;
   color: #FFFFFF;
   margin: 32px 0;
-  transition: color 1s ease;
+  transition: color 0.5s ease;
 }
 
 .hero__title__text:hover {

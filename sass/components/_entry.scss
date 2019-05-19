@@ -29,6 +29,10 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
       grid-template-rows: $avatar-dimension 1fr;
     }
   }
+  .columnrec__authorlink {
+    padding: 0 0 $spacing-small;
+    border-bottom: $border-line;
+  }
   .avatar {
     border-radius: $base-border-radius;
   }
@@ -61,19 +65,22 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
 .social {
   align-self: flex-end;
   display: flex;
+  justify-content: center;
   align-items: center;
+  line-height: 1;
   @media (max-width: $mobile-max) {
     align-self: flex-start;
   }
 }
 .social__label {
+  @include subtleFont();
   margin: 0 $spacing-small 0 0;
 }
 .social__link {
   @include linkStyleOverride();
   margin: 0 $spacing 0 0;
   white-space: nowrap;
-  transition: background-color 1s ease;
+  transition: background-color $ease;
   &:last-child {
     margin: 0;
   }

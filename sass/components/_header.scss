@@ -16,7 +16,7 @@
   fill: $color-white;
   &:hover {
     fill: $highlight-color;
-    transition: fill 1s ease;
+    transition: fill $ease;
   }
 }
 

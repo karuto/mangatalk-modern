@@ -4,12 +4,6 @@
 
 
 
-.hero--discussion {
-  margin: 0 0 $spacing-xxlarge;
-}
-
-
-
 .hero--content {
   box-shadow: $box-shadow;
   border-radius: $base-border-radius;
@@ -135,7 +129,7 @@
   @include heroFont();
   color: $color-white;
   margin: $spacing-large 0;
-  transition: color 1s ease;
+  transition: color $ease;
   &:hover {
     color: $color-brand-primary;
   }

@@ -68,7 +68,7 @@ function generateFeedsBySlug( $catSlug, $postsCount = 4, $template = 'feed' ) {
 
   if ( $template == 'feed' ) {
     echo '<section class="feeds">';
-    echo '<div class="heading"><a href="' . $catUrl . '">' . $catName . '</a></div>';  
+    echo '<a href="' . $catUrl . '"><div class="heading"><span class="heading__label">' . $catName . '</span><span class="heading__secondary">查看全部</span></div></a>';  
   }
   generateFeed( $catPosts, $postsCount, $template );
   if ( $template == 'feed' ) {
