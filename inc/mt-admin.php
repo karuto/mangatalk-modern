@@ -7,7 +7,7 @@
  */
 add_filter( 'avatar_defaults', 'newgravatar' );
 function newgravatar( $avatar_defaults ) {
-    $myavatar = get_bloginfo('template_directory') . '/assets/img/mt-logo.png';
+    $myavatar = get_bloginfo('template_directory') . '/img/mt-logo.png';
     $avatar_defaults[$myavatar] = "MangaTalk";
     return $avatar_defaults;
 }

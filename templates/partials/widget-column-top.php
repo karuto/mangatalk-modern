@@ -20,7 +20,7 @@ $topPosts = get_posts(
 ?>
 
 <section class="widget">
-  <div class="heading"><span class="heading__label">本周热榜</span></div>
+  <div class="heading"><span class="heading__label">本月热榜</span></div>
   <div class="widget__content widget__content--topreads">
     <?php foreach ( $topPosts as $rank=>$post ) {
       setup_postdata( $post );

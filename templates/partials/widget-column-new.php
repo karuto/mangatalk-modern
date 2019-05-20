@@ -36,7 +36,9 @@ $newUsers = get_users(
       <div class="columnrec">
         <div class="columnrec__content">
           <div class="columnrec__image">
-            <?php echo get_avatar( $user->ID, 48 ); ?>
+            <a href="<?php echo get_author_posts_url( $user->ID ); ?>">
+              <?php echo get_avatar( $user->ID, 48 ); ?>
+            </a>
           </div>
           <div class="columnrec__meta">
             <a class="columnrec__authorlink" href="<?php echo get_author_posts_url( $user->ID ); ?>">

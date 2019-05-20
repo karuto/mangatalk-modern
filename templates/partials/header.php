@@ -25,7 +25,7 @@ if ( has_nav_menu( 'header' ) ) : ?>
     ?>
   </nav>
 <?php endif; ?>
-</header><!-- #masthead -->
+</header>
 
 <header id="masthead" class="header">
 	<div class="maxwidth header__wrapper">

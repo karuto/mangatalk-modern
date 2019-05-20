@@ -60,7 +60,7 @@ function generateFeed( $query, $postsCount, $template ) {
   }
 }
 
-function generateFeedsByCat( $catSlug, $postsCount = 4 ) {
+function generateFeedsByCat( $catSlug, $postsCount = 3 ) {
   $catId = getCategoryIdBySlug( $catSlug );
   $catUrl = esc_url( get_category_link( $catId ) );
   $catName = get_cat_name( $catId );
@@ -72,7 +72,7 @@ function generateFeedsByCat( $catSlug, $postsCount = 4 ) {
   echo '</section>';
 }
 
-function generateFeedsByTag( $tagSlug, $postsCount = 4 ) {
+function generateFeedsByTag( $tagSlug, $postsCount = 3 ) {
   $tagPosts = new WP_Query(
     array(
       'tag' => $tagSlug,
@@ -83,7 +83,7 @@ function generateFeedsByTag( $tagSlug, $postsCount = 4 ) {
 }
 
 function generateFeedsByRecentExcludingFeatured() {
-  $featuredTagId = get_term_by('name', 'featured', 'post_tag');
+  $featuredTagId = 8; /* FUCK THIS SHIT */
   $thisPostsCount = 2;
   $postsExcludingFeatured = getQueryExcludeTag( $featuredTagId, $thisPostsCount );
   generateFeed( $postsExcludingFeatured, $thisPostsCount, 'hero' );

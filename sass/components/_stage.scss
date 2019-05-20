@@ -1,9 +1,11 @@
+$stage-height: 350px;
+
 .stage {
   background-image: url('./img/mt-cover-brand.jpg');
   background-position: center;
   background-size: cover;
   background-color: $highlight-color;
-  height: 400px;
+  height: $stage-height;
   position: absolute;
   top: 0;
   width: 100%;
@@ -12,7 +14,7 @@
 }
 .stage--relative {
   @include fullpagewidth();
-  height: 200px;
+  height: calc(#{$stage-height} * 0.5);
   margin-top: -77px; /* 45px masthead height + 32px margin-bttom */
   margin-bottom: $spacing-large;
   display: flex;
@@ -20,7 +22,7 @@
   align-items: center;
 }
 .stage--author {
-  height: 400px;
+  height: $stage-height;
 }
 .stage-heading {
   @include heroFont();

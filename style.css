@@ -2042,16 +2042,12 @@ section.archive {
   margin: 16px 0 0;
 }
 
-.ad__link__desc:before {
-  content: '"';
-}
-
 .stage {
   background-image: url("./img/mt-cover-brand.jpg");
   background-position: center;
   background-size: cover;
   background-color: #E84141;
-  height: 400px;
+  height: 350px;
   position: absolute;
   top: 0;
   width: 100%;
@@ -2067,7 +2063,7 @@ section.archive {
   margin-left: -50vw;
   margin-right: -50vw;
   width: 100vw;
-  height: 200px;
+  height: calc(350px * 0.5);
   margin-top: -77px;
   /* 45px masthead height + 32px margin-bttom */
   margin-bottom: 32px;
@@ -2077,7 +2073,7 @@ section.archive {
 }
 
 .stage--author {
-  height: 400px;
+  height: 350px;
 }
 
 .stage-heading {
