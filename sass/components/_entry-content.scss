@@ -95,6 +95,10 @@ $content-gutter: $spacing-large;
     p {
       text-align: center;
       @include heroFont();
+      @media (max-width: $mobile-max) {
+        font-size: 125%;
+        line-height: $line-height-content;
+      }
     }
   }
 

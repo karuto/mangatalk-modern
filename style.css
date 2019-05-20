@@ -1098,6 +1098,13 @@ section.archive {
   line-height: 1.3;
 }
 
+@media (max-width: 959px) {
+  .entry__content blockquote.large p {
+    font-size: 125%;
+    line-height: 1.7;
+  }
+}
+
 .entry__content h1, .entry__content h2, .entry__content h3, .entry__content h4, .entry__content h5, .entry__content h6 {
   margin: 48px 0 32px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
