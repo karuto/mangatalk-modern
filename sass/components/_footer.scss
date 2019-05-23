@@ -65,6 +65,9 @@ $footer-gutter-large: $spacing-large;
   @include excerptFont();
   color: $color-white;
 }
+.footer__content__intro__summary__link {
+  @include linkWhite(); 
+}
 .footer__content__widgets {
   margin: 0 0 $footer-gutter;
 }

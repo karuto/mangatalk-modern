@@ -522,6 +522,7 @@ section.archive {
 }
 
 .columnrec__authorlink {
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   color: #777;
@@ -548,6 +549,7 @@ section.archive {
 }
 
 .columnrec__desc {
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
@@ -579,6 +581,7 @@ section.archive {
 }
 
 .columnrec__desc__link {
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
@@ -892,6 +895,7 @@ section.archive {
 }
 
 .social__link {
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   margin: 0 16px 0 0;
@@ -1366,6 +1370,7 @@ section.archive {
   font-size: 18px;
   line-height: 1.3;
   font-weight: 700;
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   margin: 0 0 8px;
@@ -1406,6 +1411,7 @@ section.archive {
 }
 
 .feed__meta__link {
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   color: #999;
@@ -1509,6 +1515,7 @@ section.archive {
 }
 
 .footer__content__widgets .footer__link {
+  cursor: pointer;
   color: #FFFFFF;
   transition: color 0.5s ease;
 }
@@ -1525,6 +1532,16 @@ section.archive {
   line-height: 1.7;
   color: #000;
   color: #FFFFFF;
+}
+
+.footer__content__intro__summary__link {
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: color 0.5s ease;
+}
+
+.footer__content__intro__summary__link:hover {
+  color: #E84141;
 }
 
 .footer__content__widgets {
@@ -1631,6 +1648,7 @@ section.archive {
 
 .header__nav .menu-item a {
   margin: 0 0 0 16px;
+  cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   color: #FFFFFF;
@@ -1891,6 +1909,7 @@ section.archive {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.3;
+  cursor: pointer;
   color: #FFFFFF;
   transition: color 0.5s ease;
   margin: 32px 0;
@@ -2032,6 +2051,7 @@ section.archive {
   font-size: 18px;
   line-height: 1.3;
   font-weight: 700;
+  cursor: pointer;
   color: #FFFFFF;
   transition: color 0.5s ease;
 }

@@ -91,6 +91,7 @@
 /* vincentzh-theme mixins */
 // Provide site-wide "link" style
 @mixin linkBlack() {
+	cursor: pointer;
   color: $strong-text-color;
   transition: color $ease;
   &:hover {
@@ -99,6 +100,7 @@
 }
 
 @mixin linkWhite() {
+	cursor: pointer;
   color: $color-white;
   transition: color $ease;
   &:hover {
