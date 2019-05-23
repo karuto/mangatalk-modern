@@ -53,7 +53,7 @@ $newUsers = get_users(
               $userPosts = get_posts(
                 array(
                   'author'  => $user->ID,
-                  'category' => array( 1, 46 ),
+                  'category' => array( 89, 90, 91 ), // YOU MUST SPECIFY CATEGORIES
                   'orderby' => 'post_date',
                   'order' => 'DESC',
                   'posts_per_page' => 1
