@@ -36,7 +36,4 @@ $sidebar-gutter: $spacing-large;
   @include excerptFont();
   color: $color-white;
   margin: $spacing 0 0;
-  &:before {
-    // content: '"';
-  }
 }

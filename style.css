@@ -370,6 +370,10 @@ template {
   background: #E84141;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   padding: 0;
   height: 100%;

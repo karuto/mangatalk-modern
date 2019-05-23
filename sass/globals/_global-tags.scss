@@ -6,6 +6,9 @@
 ::selection {
   background: $highlight-color;
 }
+html {
+  scroll-behavior: smooth;
+}
 html, body {
   padding: 0;
   height: 100%;

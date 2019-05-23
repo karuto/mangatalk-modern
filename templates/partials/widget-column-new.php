@@ -21,7 +21,7 @@ $newUsers = get_users(
 );
 ?>
 
-<section class="widget">
+<section class="widget" id="new" role="command">
   <div class="heading"><span class="heading__label">专栏推荐</span></div>
   <div class="widget__content widget__content--columnrec">
     <?php 
