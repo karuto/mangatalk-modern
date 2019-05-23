@@ -50,11 +50,16 @@ $content-gutter: $spacing-large;
 
     p {
       @include excerptFont();
+      width: 100%;
     }
 
     h3, h4, h5 {
       margin-top: 0;
     }
+  }
+
+  hr {
+
   }
 
   .wp-block-quote:not(.is-large):not(.is-style-large), /* block style */
@@ -141,7 +146,7 @@ $content-gutter: $spacing-large;
   hr {
     border: $border-line;
     height: 0;
-    margin: 0 0 $spacing-medium;
+    margin: $spacing-medium auto;
   }
 
   pre {

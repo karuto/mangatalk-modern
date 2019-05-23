@@ -1010,6 +1010,7 @@ section.archive {
   /* testing new typography */
   line-height: 1.7;
   color: #000;
+  width: 100%;
 }
 
 .entry__content aside h3, .entry__content aside h4, .entry__content aside h5 {
@@ -1144,7 +1145,7 @@ section.archive {
 .entry__content hr {
   border: 1px solid #CECECE;
   height: 0;
-  margin: 0 0 24px;
+  margin: 24px auto;
 }
 
 .entry__content pre {
