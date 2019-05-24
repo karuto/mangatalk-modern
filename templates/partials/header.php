@@ -10,11 +10,11 @@
  */
 ?>
 
-<header id="top-links" class="header header--toplinks">
+<!-- <header id="top-links" class="header header--toplinks"> -->
 <?php 
 // TODO: the main-navigation class is wrangled with a lot of assumptions. Clean it up later.
 if ( has_nav_menu( 'header' ) ) : ?>
-  <nav class="maxwidth header__nav" aria-label="<?php esc_attr_e( 'Top Links', 'twentynineteen' ); ?>">
+  <!-- <nav class="maxwidth header__nav" aria-label="<?php esc_attr_e( 'Top Links', 'twentynineteen' ); ?>">
     <?php
     wp_nav_menu(
       array(
@@ -23,9 +23,9 @@ if ( has_nav_menu( 'header' ) ) : ?>
       )
     );
     ?>
-  </nav>
+  </nav> -->
 <?php endif; ?>
-</header>
+<!-- </header> -->
 
 <header id="masthead" class="header">
 	<div class="maxwidth header__wrapper">
