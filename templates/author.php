@@ -25,7 +25,8 @@ if ( $coverImgUrl == "" ) {
   class="stage stage--relative stage--author"  
   style="background-image: url(<?php echo $coverImgUrl; ?>);">
   <div class="stage-heading">
-    <?php echo $authorDisplayName ?>
+    <?php echo $authorDisplayName; ?>
+    <?php echo get_avatar( $authorId, 48 ); ?>
   </div>
 </div>
 <?php get_template_part( 'templates/partials/feed' ); ?>
