@@ -39,9 +39,9 @@ if ( is_home() ) {
 } else if ( is_page() ) {
 	// any pages; excludes posts and attachments
 	get_template_part( 'templates/page' );
-// } 
-// else if ( is_author() ) {
-// 	get_template_part( 'templates/author' );
+} 
+else if ( is_author() ) {
+	get_template_part( 'templates/author' );
 } else if ( is_archive() ) {
 	get_template_part( 'templates/archive' );
 } else if ( is_search() ) {
