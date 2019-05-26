@@ -11,7 +11,7 @@
 ?>
 <div 
   class="stage stage--relative">
-  <div class="stage-heading">
+  <div class="stage__heading">
     <?php echo get_the_archive_title(); ?>
   </div>
 </div>
