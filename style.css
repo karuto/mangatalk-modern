@@ -2108,7 +2108,7 @@ section.archive {
   height: 350px;
 }
 
-.stage-heading {
+.stage__heading {
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-size: 28px;
   font-weight: 700;
@@ -2116,6 +2116,18 @@ section.archive {
   color: #FFFFFF;
   text-align: center;
   margin: 0;
+}
+
+.stage__heading__desc,
+.stage__heading__avatar .avatar {
+  border-radius: 4px;
+  margin: 16px;
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  color: #FFFFFF;
 }
 
 .widget__content--topreads .feed {

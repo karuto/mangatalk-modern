@@ -24,9 +24,16 @@ $stage-height: 350px;
 .stage--author {
   height: $stage-height;
 }
-.stage-heading {
+.stage__heading {
   @include heroFont();
   color: $color-white;
   text-align: center;
   margin: 0;
+}
+.stage__heading__desc,
+.stage__heading__avatar .avatar {
+  border-radius: $base-border-radius;
+  margin: $spacing;
+  @include excerptFont();
+  color: $color-white;
 }

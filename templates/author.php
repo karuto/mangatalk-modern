@@ -11,9 +11,6 @@
 ?>
 
 <?php 
-$authorId = get_the_author_meta( 'ID' );
-$authorDisplayName = get_the_author_meta( 'display_name' );
-
 // Retrieve cover image URL then set header's background
 $coverImgUrl = get_the_author_meta( 'coverimage' );
 if ( $coverImgUrl == "" ) {
@@ -24,9 +21,14 @@ if ( $coverImgUrl == "" ) {
 <div 
   class="stage stage--relative stage--author"  
   style="background-image: url(<?php echo $coverImgUrl; ?>);">
-  <div class="stage-heading">
-    <?php echo $authorDisplayName; ?>
-    <?php echo get_avatar( $authorId, 48 ); ?>
+  <div class="stage__heading">
+    <div class="stage__heading__avatar">
+      <?php echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?>
+    </div>
+    <?php echo get_the_author_meta( 'display_name' ) ?>
+    <div class="stage__heading__desc">
+      <?php echo get_the_author_meta( 'description' ) ?>
+    </div>
   </div>
 </div>
 <?php get_template_part( 'templates/partials/feed' ); ?>
