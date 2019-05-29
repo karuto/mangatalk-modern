@@ -11,7 +11,7 @@
 ?>
 
 <div class="stage stage--relative">
-  <div class="stage-heading">
+  <div class="stage__heading">
     出错了。
   </div>
 </div>

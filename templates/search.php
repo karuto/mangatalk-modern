@@ -11,7 +11,7 @@
 ?>
 
 <div class="stage stage--relative">
-  <div class="stage-heading">
+  <div class="stage__heading">
     搜索「<?php echo get_search_query(); ?>」
   </div>
 </div>

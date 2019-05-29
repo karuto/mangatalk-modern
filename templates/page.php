@@ -12,7 +12,7 @@
 
 <div 
   class="stage stage--relative">
-  <div class="stage-heading">
+  <div class="stage__heading">
     <?php single_post_title(); ?>
   </div>
 </div>
