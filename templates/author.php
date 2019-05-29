@@ -13,8 +13,8 @@
 <?php 
 // Retrieve cover image URL then set header's background
 $coverImgUrl = get_the_author_meta( 'coverimage' );
-if ( $coverImgUrl == "" ) {
-  $coverImgUrl = get_template_directory_uri().'/img/mt-cover-brand.jpg';
+if ( $coverImgUrl === '' ) {
+  $coverImgUrl = get_template_directory_uri() . '/img/mt-cover-brand.jpg';
 }
 ?>
 

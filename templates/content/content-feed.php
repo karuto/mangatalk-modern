@@ -13,15 +13,17 @@
 <?php 
 $imageUrl = '';
 if ( has_post_thumbnail( $post->ID ) ) {
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
 	$imageUrl = $image[0];
+} else {
+	$imageUrl = get_template_directory_uri() . '/img/mt-cover-brand.jpg';
 }
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="feed">
 
 	<a href="<?php the_permalink(); ?>">
-		<div class="feed__image" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+		<div class="feed__image" style="background-image: url('<?php echo $imageUrl; ?>')"></div>
 	</a>
 
 	<div class="feed__content">
