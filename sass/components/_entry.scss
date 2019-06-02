@@ -48,6 +48,7 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
   .tags {
     align-self: flex-end;
     margin: 0 0 $spacing-small;
+    line-height: $line-height-base;
     @media (max-width: $mobile-max) {
       align-self: flex-start;
     }
