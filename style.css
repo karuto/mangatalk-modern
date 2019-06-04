@@ -853,6 +853,7 @@ section.archive {
 .entry__intro .tags {
   align-self: flex-end;
   margin: 0 0 8px;
+  line-height: 1.5;
 }
 
 @media (max-width: 959px) {
