@@ -37,6 +37,7 @@ Everything here can be applied site-wide.
 
 	&:hover {
 		cursor: pointer;
+		color: $color-white;
 		background-color: darken( $highlight-color, 30% );
 	}
 }

@@ -455,10 +455,25 @@ body#tinymce {
   }
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Button styles; this is for plugins that does not have access to mixins. */
+.button--primary {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  background-color: #E84141;
+  padding: 8px 16px;
+  transition: background-color 0.5s ease;
+}
+
+.button--primary:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #801010;
 }
 
 /* Text meant only for screen readers. */
@@ -696,6 +711,7 @@ section.archive {
 
 .comment-form .comment__submit:hover {
   cursor: pointer;
+  color: #FFFFFF;
   background-color: #801010;
 }
 

@@ -11,6 +11,16 @@
 
 
 
+/* Button styles; this is for plugins that does not have access to mixins. */
+.button {
+
+}
+.button--primary {
+	@include buttonPrimary();
+}
+
+
+
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
