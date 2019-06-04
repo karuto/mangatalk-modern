@@ -26,6 +26,19 @@ Everything here can be applied site-wide.
   }
 }
 
+@mixin buttonPrimary() {
+	@include subtleFont();
+	border-radius: $base-border-radius;
+	background-color: $highlight-color;
+	color: $color-white;
+	padding: $spacing-small $spacing-small;
+	transition: background-color $ease;
+
+	&:hover {
+		cursor: pointer;
+		background-color: darken( $highlight-color, 30% );
+	}
+}
 
 
 /*

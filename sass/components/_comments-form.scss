@@ -47,17 +47,7 @@ $avatar-dimension: 48px;
   .comment__submit {
     /* Align to the right end */
     align-self: flex-end;
-    @include subtleFont();
-    border-radius: $base-border-radius;
-    background-color: $highlight-color;
-    color: $color-white;
-    padding: $spacing-small $spacing-small;
-    transition: background-color $ease;
-
-    &:hover {
-      cursor: pointer;
-      background-color: darken( $highlight-color, 30% );
-    }
+    @include buttonPrimary();
   }
   .comment__input__label {
     @extend %leftSide;
