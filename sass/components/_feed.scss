@@ -66,6 +66,9 @@ $image-dimension: 112px;
   color: $color-light;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: $mobile-max) {
+    margin-left: -$spacing-medium; /* let it spill to the left side instead of right */
+  }
 }
 .feed__meta {
   /* Individual meta item that describes a feed item */
@@ -73,9 +76,17 @@ $image-dimension: 112px;
   align-items: center;
   margin: 0 0 0 $spacing;
 }
+.feed__meta--author {
+  margin: 0;
+}
 .feed__meta__link {
   @include linkBlack();
   color: $color-light;
+  margin: 0;
+  max-width: $spacing-xxxlarge;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .feed__meta__icon {
   width: $spacing;

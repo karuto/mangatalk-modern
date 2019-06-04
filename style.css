@@ -1439,6 +1439,13 @@ section.archive {
   justify-content: flex-end;
 }
 
+@media (max-width: 959px) {
+  .feed__metas {
+    margin-left: -24px;
+    /* let it spill to the left side instead of right */
+  }
+}
+
 .feed__meta {
   /* Individual meta item that describes a feed item */
   display: flex;
@@ -1446,11 +1453,20 @@ section.archive {
   margin: 0 0 0 16px;
 }
 
+.feed__meta--author {
+  margin: 0;
+}
+
 .feed__meta__link {
   cursor: pointer;
   color: #000;
   transition: color 0.5s ease;
   color: #999;
+  margin: 0;
+  max-width: 64px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .feed__meta__link:hover {
