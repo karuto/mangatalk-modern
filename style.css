@@ -26,8 +26,22 @@ Text Domain: twentynineteen
 /* 64px */
 /* 96px */
 /* new definition, still works for 12, 8, 6, 3, 4 cols */
-/* Fallback for non-latin fonts */
-/* vincentzh-theme mixins */
+/*
+mangatalk-twentynineteen mixins.
+Everything here can be applied site-wide.
+*/
+/*
+ * Hyperlinks, anchors, buttons
+ */
+/*
+ * Box shadows
+ */
+/*
+ * Containers
+ */
+/*
+ * Text / typography utilities
+ */
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
@@ -672,10 +686,11 @@ section.archive {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
+  color: #FFFFFF;
+  border: none;
   border-radius: 4px;
   background-color: #E84141;
-  color: #FFFFFF;
-  padding: 8px 8px;
+  padding: 8px 16px;
   transition: background-color 0.5s ease;
 }
 

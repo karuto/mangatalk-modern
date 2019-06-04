@@ -28,10 +28,11 @@ Everything here can be applied site-wide.
 
 @mixin buttonPrimary() {
 	@include subtleFont();
+	color: $color-white;
+	border: none;
 	border-radius: $base-border-radius;
 	background-color: $highlight-color;
-	color: $color-white;
-	padding: $spacing-small $spacing-small;
+	padding: $spacing-small $spacing;
 	transition: background-color $ease;
 
 	&:hover {
@@ -39,6 +40,7 @@ Everything here can be applied site-wide.
 		background-color: darken( $highlight-color, 30% );
 	}
 }
+
 
 
 /*
