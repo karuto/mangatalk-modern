@@ -45,7 +45,7 @@
 .header__wrapper {
   /* The next top level class wrapper inside container */
   display: flex;
-  overflow-x: scroll;
+  @include scrollableButNoBars();
   padding: $spacing;
   position: relative;
 }
@@ -64,7 +64,7 @@
 .header__nav {
   .menu {
     display: flex;
-    overflow-x: scroll;
+    @include scrollableButNoBars();
     margin: 0 $spacing;
     @media (max-width: $mobile-max) {
       margin: 0 0 0 $spacing;

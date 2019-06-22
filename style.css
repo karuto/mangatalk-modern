@@ -1659,7 +1659,9 @@ section.archive {
 .header__wrapper {
   /* The next top level class wrapper inside container */
   display: flex;
-  overflow-x: scroll;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
   padding: 16px;
   position: relative;
 }
@@ -1682,7 +1684,9 @@ section.archive {
 
 .header__nav .menu {
   display: flex;
-  overflow-x: scroll;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
   margin: 0 16px;
 }
 

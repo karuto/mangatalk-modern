@@ -108,6 +108,12 @@ Everything here can be applied site-wide.
 	margin-right: auto;
 }
 
+// Scroll behaviors
+@mixin scrollableButNoBars {
+	overflow: scroll;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
 
 
 /*
