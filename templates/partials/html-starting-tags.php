@@ -18,6 +18,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 	<?php get_template_part( 'templates/partials/head' ); ?>
+	<?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); ?>
 
 	<body <?php body_class('mangatalk-theme'); ?>>
 		<?php get_template_part( 'templates/partials/header' ); ?>

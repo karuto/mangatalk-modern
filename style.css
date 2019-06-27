@@ -1441,6 +1441,7 @@ section.archive {
 
 @media (max-width: 959px) {
   .feed__metas {
+    font-size: 11px;
     margin-left: -24px;
     /* let it spill to the left side instead of right */
   }

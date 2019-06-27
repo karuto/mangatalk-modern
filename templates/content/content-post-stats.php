@@ -24,6 +24,12 @@ if ( $post_views == '' ) {
  $post_views = 0;
 }
 
+if ( is_plugin_active( 'mangatalk-likes/mangatalk-likes.php' ) ) {
+  $post_likes = get_post_meta( get_the_ID(), 'post_likes', true );
+  if ( $post_likes == '' ) {
+    $post_likes = 0;
+   }
+}
 $comments_count = get_comments_number( $post->ID );
 ?>
 
@@ -33,6 +39,14 @@ $comments_count = get_comments_number( $post->ID );
     <?php echo esc_attr( $post_views ); ?>
   </span>
 </div>
+<?php if ( is_plugin_active( 'mangatalk-likes/mangatalk-likes.php' ) ) : ?>
+<div class="feed__meta">
+  <span class="feed__meta__icon"><?php echo $icThumbsUp; ?></span>
+  <span class="feed__meta__label">
+    <?php echo esc_attr( $post_likes ); ?>
+  </span>
+</div>
+<?php endif; ?>
 <div class="feed__meta">
   <span class="feed__meta__icon"><?php echo $icReview; ?></span>
   <span class="feed__meta__label"><?php echo $comments_count; ?></span>
