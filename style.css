@@ -11,12 +11,8 @@ License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: twentynineteen
 */
-/* NEED - Mobile bottom-line */
-/* NEED - Non-mobile bottom-line */
-/* NICE TO HAVE - Large desktop */
-/* NICE TO HAVE - Portrait tablet to landscape and desktop */
-/* NICE TO HAVE - Landscape phone to portrait tablet */
-/* NICE TO HAVE - Landscape phones and down */
+/* NEED - The dividing breakpoint between mobile & desktop */
+/* NICE TO HAVE - Other more specific breakpoints */
 /* slight red tint; not used */
 /* Content red */
 /* For all the meta components */
@@ -1441,7 +1437,6 @@ section.archive {
 
 @media (max-width: 959px) {
   .feed__metas {
-    font-size: 11px;
     margin-left: -24px;
     /* let it spill to the left side instead of right */
   }
@@ -1456,6 +1451,12 @@ section.archive {
 
 .feed__meta--author {
   margin: 0;
+}
+
+@media (max-width: 374px) {
+  .feed__meta--author {
+    display: none;
+  }
 }
 
 .feed__meta__link {

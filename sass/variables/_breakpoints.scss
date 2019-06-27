@@ -1,20 +1,8 @@
 // Breakpoints
-/* NEED - Mobile bottom-line */
+/* NEED - The dividing breakpoint between mobile & desktop */
 $mobile-max: 959px;
 @media (max-width: $mobile-max) {}
 
-/* NEED - Non-mobile bottom-line */
-$desktop-min: 768px;
-@media (min-width: $desktop-min) {}
-
-/* NICE TO HAVE - Large desktop */
-@media (min-width: 1056px) {}
-
-/* NICE TO HAVE - Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {}
-
-/* NICE TO HAVE - Landscape phone to portrait tablet */
-@media (max-width: 767px) {}
-
-/* NICE TO HAVE - Landscape phones and down */
-@media (max-width: 480px) {}
+/* NICE TO HAVE - Other more specific breakpoints */
+$tablet-max: 767px;
+$nokia-max: 374px;

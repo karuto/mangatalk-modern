@@ -67,7 +67,6 @@ $image-dimension: 112px;
   display: flex;
   justify-content: flex-end;
   @media (max-width: $mobile-max) {
-    font-size: 11px;
     margin-left: -$spacing-medium; /* let it spill to the left side instead of right */
   }
 }
@@ -79,6 +78,9 @@ $image-dimension: 112px;
 }
 .feed__meta--author {
   margin: 0;
+  @media (max-width: $nokia-max) {
+    display: none;
+  }
 }
 .feed__meta__link {
   @include linkBlack();
