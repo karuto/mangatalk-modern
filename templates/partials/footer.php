@@ -15,7 +15,7 @@
 		<div class="footer__wrapper">
 			<div class="footer__content__intro">
 				<h3 class="footer__content__intro__name"><?php bloginfo('name'); ?><span class="footer__content__intro__name__secondary">优质漫画文化媒体</span></h3>
-				<p class="footer__content__intro__summary">没有资讯快餐，没有动游音影。我们致力于收集与输出中文互联网上最具长远留存价值的漫画内容，让你更了解漫画及其身后世界的魅力。<br/><br/><strong><a class="footer__content__intro__summary__link" href="/joinus">喜欢漫画的，都是我们的朋友。一起来玩吧！</strong></a></p>
+				<p class="footer__content__intro__summary">没有资讯快餐，没有动游音影。我们致力于收集与输出中文互联网上最具长远留存价值的漫画内容，让你更了解漫画及其背后世界的魅力。<br/><br/><strong><a class="footer__content__intro__summary__link" href="/joinus">喜欢漫画的，都是我们的朋友。一起来玩吧！</strong></a></p>
 			</div>
 			<?php get_template_part( 'templates/partials/footer-widgets' ); ?>
 			<div class="footer__content__copyright">
