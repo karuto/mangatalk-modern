@@ -1,6 +1,7 @@
 <?php
 /**
- * Hide password protected posts from all WP loops.
+ * Hide password protected posts in all WP loops.
+ * This also hides password protected posts in the RSS feed.
  * https://www.wpbeginner.com/wp-tutorials/how-to-hide-password-protected-posts-from-wordpress-loop/
  *
  * @package WordPress

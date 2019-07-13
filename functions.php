@@ -293,3 +293,4 @@ require get_template_directory() . '/inc/template-functions.php';
 
 require get_template_directory() . '/inc/mt-archive-title.php';
 require get_template_directory() . '/inc/mt-admin.php';
+require get_template_directory() . '/inc/mt-hide-password-posts.php';
