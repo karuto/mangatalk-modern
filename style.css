@@ -1304,6 +1304,10 @@ section.archive {
   color: #777;
 }
 
+.entry__content .post-password-form {
+  background: yellow;
+}
+
 .entry__content .alignwide {
   margin-left: -150px;
   margin-right: -150px;

@@ -25,7 +25,7 @@ $heroClasses = is_home() ? "hero hero--home" : "hero hero--content";
   <a class="hero__title" href="<?php the_permalink(); ?>">
     <div class="hero__cover" style="background-image: url('<?php echo $imageUrl; ?>')">
       <div class="hero__cover__content">
-          <h2 class="hero__title__text"><?php the_title(); ?></h1>
+          <h1 class="hero__title__text"><?php the_title(); ?></h1>
         <aside class="hero__excerpt"><?php echo get_the_excerpt(); ?></aside>
       </div>
       <div class="hero__cover__shade hero__cover__shade--black"></div>

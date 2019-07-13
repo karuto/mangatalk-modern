@@ -58,10 +58,6 @@ $content-gutter: $spacing-large;
     }
   }
 
-  hr {
-
-  }
-
   .wp-block-quote:not(.is-large):not(.is-style-large), /* block style */
   blockquote {
     border-left: $border-line-blockquote;
@@ -190,10 +186,12 @@ $content-gutter: $spacing-large;
     color: $subtle-text-color;
     line-height: 1.5;
   }
+
   .alignleft {
     float: left;
     margin-right: $content-gutter;
   }
+
   .alignright {
     float: right;
     margin-left: $content-gutter;
@@ -231,6 +229,10 @@ $content-gutter: $spacing-large;
 
   .text-muted {
     color: $subtle-text-color;
+  }
+
+  .post-password-form {
+    background: yellow;
   }
 
   /* Below are all Gutenberg block styles */

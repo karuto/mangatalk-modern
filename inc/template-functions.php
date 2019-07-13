@@ -23,11 +23,6 @@ function twentynineteen_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class if image filters are enabled.
-	if ( twentynineteen_image_filters_enabled() ) {
-		$classes[] = 'image-filters-enabled';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'twentynineteen_body_classes' );
@@ -51,34 +46,6 @@ function twentynineteen_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'twentynineteen_pingback_header' );
-
-/**
- * Changes comment form default fields.
- * It intercepts the defaults HTML and regex replaces the "rows" attr.
- */
-function twentynineteen_comment_form_defaults( $defaults ) {
-	$comment_field = $defaults['comment_field'];
-
-	// Adjust height of comment form.
-	$defaults['comment_field'] = preg_replace( '/rows="\d+"/', 'rows="2"', $comment_field );
-
-	return $defaults;
-}
-add_filter( 'comment_form_defaults', 'twentynineteen_comment_form_defaults' );
-
-/**
- * Determines if post thumbnail can be displayed.
- */
-function twentynineteen_can_show_post_thumbnail() {
-	return apply_filters( 'twentynineteen_can_show_post_thumbnail', ! post_password_required() && ! is_attachment() && has_post_thumbnail() );
-}
-
-/**
- * Returns true if image filters are enabled on the theme options.
- */
-function twentynineteen_image_filters_enabled() {
-	return 0 !== get_theme_mod( 'image_filter', 1 );
-}
 
 /**
  * Returns true if comment is by author of the post.
