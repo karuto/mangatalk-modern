@@ -35,7 +35,7 @@ function mt_protected_password_form() {
     <form class="form form--mini" action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
     <div class="form__exerpt">请输入密码，解锁文章内容：</div>
     <div class="form__content">
-    <input class="form__input" name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input class="form__action" type="submit" name="Submit" value="' . 解锁 . '" />
+    <input class="form__input" name="post_password" id="' . $label . '" type="password" placeholder="编辑给的密码" size="20" maxlength="20" /><input class="form__action" type="submit" name="Submit" value="' . 解锁 . '" />
     </div>
     </form>
     ';

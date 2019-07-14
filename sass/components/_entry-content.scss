@@ -204,6 +204,7 @@ $content-gutter: $spacing-large;
     @media (max-width: $mobile-max) {
       float: none;
       margin: $content-gutter auto;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;

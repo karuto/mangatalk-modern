@@ -34,6 +34,8 @@ Everything here can be applied site-wide.
 	background-color: $highlight-color;
 	padding: $spacing-small $spacing;
 	transition: background-color $ease;
+  outline-offset: 0px; /* reset browser defaults */
+  outline: transparent none medium; /* reset browser defaults */
 
 	&:hover {
 		cursor: pointer;
@@ -47,9 +49,12 @@ Everything here can be applied site-wide.
 }
 
 @mixin formInput() {
+	background-color: $color-white;
 	border: 0 solid $block-bg-color;
 	border-radius: $base-border-radius;
 	padding: $spacing-xsmall $spacing-small;
+  outline-offset: 0px; /* reset browser defaults */
+  outline: transparent none medium; /* reset browser defaults */
 }
 
 @mixin formInputInlineOverride() {

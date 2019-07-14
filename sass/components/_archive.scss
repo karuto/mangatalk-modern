@@ -1,4 +1,5 @@
-section.archive {
+section.archive,
+section.not-found {
   /* Specify section because .archive is added to body automatically */
   @include oneColumnContainer();
 }

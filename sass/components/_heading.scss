@@ -11,7 +11,7 @@
     color: darken( $color-brand-primary, 30% );
   }
 }
-.archive, .search {
+.archive, .search, .error404 {
   /* Override heading with one column styles */
   .heading {
     @include oneColumnContainer();
