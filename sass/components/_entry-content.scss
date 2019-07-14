@@ -231,10 +231,6 @@ $content-gutter: $spacing-large;
     color: $subtle-text-color;
   }
 
-  .post-password-form {
-    background: yellow;
-  }
-
   /* Below are all Gutenberg block styles */
   .alignwide {
     @include extraWidthContainer();

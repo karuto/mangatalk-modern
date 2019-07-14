@@ -6,7 +6,7 @@ Everything here can be applied site-wide.
 
 
 /*
- * Hyperlinks, anchors, buttons
+ * Hyperlinks, anchors, buttons, inputs
  */
 @mixin linkBlack() {
 	cursor: pointer;
@@ -40,6 +40,20 @@ Everything here can be applied site-wide.
 		color: $color-white;
 		background-color: darken( $highlight-color, 30% );
 	}
+}
+
+@mixin buttonInlineOverride() {
+	border-radius: 0 $base-border-radius $base-border-radius 0;
+}
+
+@mixin formInput() {
+	border: 0 solid $block-bg-color;
+	border-radius: $base-border-radius;
+	padding: $spacing-xsmall $spacing-small;
+}
+
+@mixin formInputInlineOverride() {
+	border-radius: $base-border-radius 0 0 $base-border-radius;
 }
 
 

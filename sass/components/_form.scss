@@ -1,0 +1,30 @@
+.form {
+}
+.form__exerpt {
+  margin: 0 0 $spacing;
+}
+.form__content {
+  margin: 0 0 $spacing;
+}
+.form__input {
+  @include formInput();
+}
+.form__action {
+  @include buttonPrimary();
+}
+
+
+
+.form--mini {
+  text-align: center;
+  .form__content {
+    display: flex;
+    justify-content: center;
+  }
+  .form__input {
+    @include formInputInlineOverride();
+  }
+  .form__action {
+    @include buttonInlineOverride();
+  }
+}

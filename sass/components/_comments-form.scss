@@ -24,7 +24,7 @@ $avatar-dimension: 48px;
   }
   /* TODO: make the textarea adaptable to input */
   .comment__input {
-    @extend %input;
+    @include formInput();
     width: 100%;
   }
   .comment__body {
