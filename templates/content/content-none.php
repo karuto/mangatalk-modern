@@ -14,12 +14,12 @@
 	<div style="text-align: center;">
 		<?php
 		if ( is_search() ) {
-			$message = 'Sorry, but nothing matched your search terms. Please try again with some different keywords.';
+			$message = '很抱歉！漫言无法找到您需要的内容。试试搜点别的？';
 		} else {
-			$message = 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.';
+			$message = '很抱歉！漫言无法找到您需要的内容。试试搜索？';
 		}
 
-		echo '<p>' . _e( $message, 'twentynineteen' ) . '</p>';
+		echo '<p>' . $message . '</p>';
 		get_search_form();
 		?>
 	</div><!-- .page-content -->

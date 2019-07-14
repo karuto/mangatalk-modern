@@ -290,7 +290,8 @@ require get_template_directory() . '/inc/icon-functions.php';
 require get_template_directory() . '/inc/relative-comment-time.php';
 require get_template_directory() . '/inc/template-functions.php';
 
-require get_template_directory() . '/inc/mt-post-views.php';
-require get_template_directory() . '/inc/mt-archive-title.php';
 require get_template_directory() . '/inc/mt-admin.php';
+require get_template_directory() . '/inc/mt-archive-title.php';
 require get_template_directory() . '/inc/mt-password-protected.php';
+require get_template_directory() . '/inc/mt-post-views.php';
+require get_template_directory() . '/inc/mt-search.php';
