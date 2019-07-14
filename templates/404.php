@@ -16,14 +16,3 @@
   </div>
 </div>
 <?php get_template_part( 'templates/partials/feed' ); ?>
-
-<!-- <div class="error-404 not-found">
-	<?php
-	get_template_part( 'templates/partials/feeds-header' );
-	?>
-
-	<div class="page-content">
-		<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentynineteen' ); ?></p>
-		<?php get_search_form(); ?>
-	</div>
-</div> -->

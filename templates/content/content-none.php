@@ -11,11 +11,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header>
-		<h1><?php _e( 'Nothing Found', 'twentynineteen' ); ?></h1>
-	</header>
-
-	<div class="page-content">
+	<div style="text-align: center;">
 		<?php
 		if ( is_search() ) {
 			$message = 'Sorry, but nothing matched your search terms. Please try again with some different keywords.';
