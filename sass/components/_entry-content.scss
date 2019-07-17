@@ -53,6 +53,10 @@ $content-gutter: $spacing-large;
       width: 100%;
     }
 
+    p:last-child {
+      margin-bottom: 0;
+    }
+
     h3, h4, h5 {
       margin-top: 0;
     }

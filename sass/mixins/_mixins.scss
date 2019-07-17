@@ -131,8 +131,13 @@ Everything here can be applied site-wide.
 @mixin scrollableButNoBars {
 	overflow: scroll;
 	overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
 }
-
 
 /*
  * Text / typography utilities

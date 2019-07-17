@@ -1061,6 +1061,10 @@ section.not-found {
   width: 100%;
 }
 
+.entry__content aside p:last-child {
+  margin-bottom: 0;
+}
+
 .entry__content aside h3, .entry__content aside h4, .entry__content aside h5 {
   margin-top: 0;
 }
@@ -1736,8 +1740,18 @@ section.not-found {
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
   padding: 16px;
   position: relative;
+}
+
+.header__wrapper::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* Chrome/Safari/Webkit */
 }
 
 .header__title {
@@ -1760,7 +1774,17 @@ section.not-found {
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
   margin: 0 16px;
+}
+
+.header__nav .menu::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* Chrome/Safari/Webkit */
 }
 
 @media (max-width: 959px) {
