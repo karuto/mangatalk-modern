@@ -1692,7 +1692,9 @@ section.not-found {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  margin: 0 0 32px;
+  position: absolute;
+  top: 16px;
+  margin: 0 16px;
 }
 
 .header__search {
@@ -1707,16 +1709,6 @@ section.not-found {
 .search-icon:hover {
   fill: #E84141;
   transition: fill 0.5s ease;
-}
-
-.header--toplinks {
-  background-color: #000;
-  margin: 0;
-  padding: 8px 0;
-}
-
-.header--toplinks .header__wrapper {
-  padding: 0;
 }
 
 .header__toolbar__item {
@@ -1744,7 +1736,6 @@ section.not-found {
   /* Firefox */
   -ms-overflow-style: none;
   /* IE 10+ */
-  padding: 16px;
   position: relative;
 }
 
@@ -1934,7 +1925,7 @@ section.not-found {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 16px;
   grid-gap: 16px;
-  margin: 0 16px 48px;
+  margin: 48px 16px;
 }
 
 @media (max-width: 959px) {
@@ -2251,8 +2242,6 @@ section.not-found {
   margin-right: -50vw;
   width: 100vw;
   height: calc(350px * 0.5);
-  margin-top: -77px;
-  /* 45px masthead height + 32px margin-bttom */
   margin-bottom: 32px;
   display: flex;
   justify-content: center;

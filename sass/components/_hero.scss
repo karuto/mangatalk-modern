@@ -35,7 +35,7 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: $spacing;
   grid-gap: $spacing;
-  margin: 0 $spacing $spacing-xxlarge;
+  margin: $spacing-xxlarge $spacing;
   @media (max-width: $mobile-max) {
     grid-column: unset;
     grid-template-columns: 100%;

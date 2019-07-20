@@ -1,7 +1,9 @@
 .header {
   /* The very top level container for everything about header */
   @include subtleFont();
-  margin: 0 0 $spacing-large;
+  position: absolute;
+  top: $spacing;
+  margin: 0 $spacing;
 }
 
 .header__search {
@@ -36,7 +38,7 @@
   /* The next top level class wrapper inside container */
   display: flex;
   @include scrollableButNoBars();
-  padding: $spacing;
+  // padding: $spacing;
   position: relative;
 }
 

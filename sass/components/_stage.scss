@@ -15,7 +15,6 @@ $stage-height: 350px;
 .stage--relative {
   @include fullpagewidth();
   height: calc(#{$stage-height} * 0.5);
-  margin-top: -77px; /* 45px masthead height + 32px margin-bttom */
   margin-bottom: $spacing-large;
   display: flex;
   justify-content: center;
