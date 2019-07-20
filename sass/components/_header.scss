@@ -20,16 +20,6 @@
   }
 }
 
-.header--toplinks {
-  background-color: $color-darkest;
-  margin: 0;
-  padding: $spacing-small 0;
-
-  .header__wrapper {
-    padding: 0;
-  }
-}
-
 .header__toolbar__item {
   @include subtleFont();
   color: $color-white;
