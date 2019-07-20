@@ -59,7 +59,7 @@ npm run watch
 
 漫言模板，如同所有 WordPress 模板主题一样，使用 PHP 作为驱动模板和后端的语言。
 
-漫言模板组织 PHP 代码的理论与思路，请见 [Karuto 的父主题系统的文档]（https://github.com/karuto/karuto-starter-theme/blob/master/README.md)。
+漫言模板组织 PHP 代码的理论与思路，请见 [Karuto 的父主题系统的文档](https://github.com/karuto/karuto-starter-theme/blob/master/README.md)。
 
 ### 其他问题
 
