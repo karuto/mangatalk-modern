@@ -1376,7 +1376,7 @@ section.not-found {
 }
 
 .entry__content .wp-block-quote__citation::before, .entry__content .wp-block-quote cite::before, .entry__content .wp-block-quote footer::before {
-  content: '\2014\2014&emsp;';
+  content: '—— ';
 }
 
 .entry__copyright {
