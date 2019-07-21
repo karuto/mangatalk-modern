@@ -14,8 +14,10 @@ Text Domain: twentynineteen
 /* NEED - The dividing breakpoint between mobile & desktop */
 /* NICE TO HAVE - Other more specific breakpoints */
 /* slight red tint; not used */
-/* Content red */
+/* CMYK 0%, 72%, 72%, 9% */
+/* CMYK 0%, 72%, 72%, 64% */
 /* For all the meta components */
+/* only used for quotes */
 /* 1.6rem */
 /* 40px */
 /* 48px */
@@ -982,12 +984,13 @@ section.not-found {
 
 .single {
   /* top level wrapper on single pages */
+  margin: 48px 0 0;
 }
 
 .entry__content {
   margin: 0 0 48px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
-  /* Below are all Gutenberg block styles */
+  /* Below are styles to override default Gutenberg block styles */
 }
 
 @media (max-width: 959px) {
@@ -1040,6 +1043,11 @@ section.not-found {
   font-size: 115%;
 }
 
+.entry__content sup > a {
+  font-weight: 700;
+  padding: 0 4px;
+}
+
 .entry__content aside {
   margin: 0 0 32px;
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
@@ -1071,10 +1079,17 @@ section.not-found {
 
 .entry__content .wp-block-quote:not(.is-large):not(.is-style-large),
 .entry__content blockquote {
-  border-left: 3px solid #333;
+  border-left: 3px solid #777;
   margin: 0 0 32px;
   margin-left: -32px;
   padding: 0 0 0 32px;
+  color: #5c1a1a;
+  display: flex;
+  flex-direction: column;
+  /* TODO: clean this up.
+    footer > cite is custom markup by the authors, 
+    whereas WP default has no footer in blockquote,
+    the markup is directly blockquote > cite. */
 }
 
 .entry__content .wp-block-quote:not(.is-large):not(.is-style-large) .big,
@@ -1096,6 +1111,11 @@ section.not-found {
     margin-left: calc(32px * -0.25);
     padding: 0 0 0 calc(32px * 0.25);
   }
+}
+
+.entry__content .wp-block-quote:not(.is-large):not(.is-style-large) p:last-child,
+.entry__content blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 .entry__content .wp-block-quote:not(.is-large):not(.is-style-large) footer,
@@ -1343,6 +1363,20 @@ section.not-found {
   margin-left: -50vw;
   margin-right: -50vw;
   width: 100vw;
+}
+
+.entry__content .wp-block-quote__citation, .entry__content .wp-block-quote cite, .entry__content .wp-block-quote footer {
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #5c1a1a;
+  align-self: flex-end;
+}
+
+.entry__content .wp-block-quote__citation::before, .entry__content .wp-block-quote cite::before, .entry__content .wp-block-quote footer::before {
+  content: '\2014\2014&emsp;';
 }
 
 .entry__copyright {

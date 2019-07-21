@@ -3,6 +3,7 @@ $content-gutter: $spacing-large;
 
 .single {
   /* top level wrapper on single pages */
+  margin: $spacing-xxlarge 0 0;
 }
 
 .entry__content {
@@ -41,6 +42,12 @@ $content-gutter: $spacing-large;
     font-size: 115%;
   }
 
+
+  sup > a {
+    font-weight: $font-weight-bold;
+    padding: 0 $spacing-xsmall;
+  }
+
   aside {
     margin: 0 0 $content-gutter;
     @include excerptFont();
@@ -62,12 +69,15 @@ $content-gutter: $spacing-large;
     }
   }
 
-  .wp-block-quote:not(.is-large):not(.is-style-large), /* block style */
+  .wp-block-quote:not(.is-large):not(.is-style-large), /* Override Gutenberg block style */
   blockquote {
     border-left: $border-line-blockquote;
     margin: 0 0 $content-gutter;
     margin-left: -$content-gutter;
     padding: 0 0 0 $content-gutter;
+    color: $strong-text-color-content;
+    display: flex;
+    flex-direction: column;
     .big { /* TODO: WTF, we have .big and .large??? */
       @include contentFont();
     }
@@ -75,6 +85,15 @@ $content-gutter: $spacing-large;
       margin-left: calc(#{$content-gutter} * -0.25);
       padding: 0 0 0 calc(#{$content-gutter} * 0.25);
     }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* TODO: clean this up.
+    footer > cite is custom markup by the authors, 
+    whereas WP default has no footer in blockquote,
+    the markup is directly blockquote > cite. */
     footer {
       text-align: right;
       margin: $content-gutter 0 0;
@@ -236,12 +255,21 @@ $content-gutter: $spacing-large;
     color: $subtle-text-color;
   }
 
-  /* Below are all Gutenberg block styles */
+  /* Below are styles to override default Gutenberg block styles */
   .alignwide {
     @include extraWidthContainer();
   }
   .alignfull {
     @include fullpagewidth();
+  }
+  .wp-block-quote__citation, .wp-block-quote cite, .wp-block-quote footer {
+    @include subtleFont();
+    color: $strong-text-color-content;
+    align-self: flex-end;
+
+    &::before {
+      content: '\2014\2014&emsp;';
+    }
   }
 }
 

@@ -18,7 +18,8 @@ $box-shadow: 0px 2px 4px rgba(45, 51, 63, .3);
 
 
 // Brand colors
-$color-brand-primary: #E84141; /* Content red */
+$color-brand-primary: #E84141; /* CMYK 0%, 72%, 72%, 9% */
+$color-brand-darkest: #5c1a1a; /* CMYK 0%, 72%, 72%, 64% */
 $color-brand-meta: $color-light; /* For all the meta components */
 
 
@@ -26,6 +27,7 @@ $color-brand-meta: $color-light; /* For all the meta components */
 $base-text-color: $color-darkest;
 $subtle-text-color: $color-medium;
 $strong-text-color: $color-darkest;
+$strong-text-color-content: $color-brand-darkest; /* only used for quotes */
 
 
 // Non-text colors
