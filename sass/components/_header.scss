@@ -36,6 +36,7 @@
 
 .header__wrapper {
   /* The next top level class wrapper inside container */
+  width: calc(100vw - 32px); /* $spacing on each side needs to be deducted */
   display: flex;
   @include scrollableButNoBars();
   // padding: $spacing;
