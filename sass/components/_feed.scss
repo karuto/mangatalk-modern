@@ -24,6 +24,17 @@ $image-dimension: 112px;
   margin: 0;
 }
 
+.no-css-grid {
+	.grid {
+		@include gridFlow($feed-gutter-small);
+		> :nth-child(1) {
+			@include gridEqualWidth($feed-gutter-small, 3, 2);
+		}
+		> :nth-child(2) {
+			@include gridEqualWidth($feed-gutter-small, 3, 1);
+		}
+	}
+}
 
 
 .feed {
@@ -36,6 +47,9 @@ $image-dimension: 112px;
   &:not(:last-child) {
     border-bottom: $border-line;
   }
+}
+.no-css-grid .feed {
+	@include gridFixedLeft($feed-gutter-small);
 }
 .feed__image {
   width: $image-dimension;
@@ -92,6 +106,7 @@ $image-dimension: 112px;
   overflow: hidden;
 }
 .feed__meta__icon {
+	display: inline-block;
   width: $spacing;
   height: $spacing;
 }

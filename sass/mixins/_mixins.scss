@@ -98,7 +98,7 @@ Everything here can be applied site-wide.
 
 @mixin fullpagewidth() {
 	/* https://css-tricks.com/full-width-containers-limited-width-parents/#article-header-id-6 */
-  position: relative; 
+  position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
@@ -149,5 +149,46 @@ Everything here can be applied site-wide.
 	max-width: 275px;
 	@media (max-width: $mobile-max) {
 		max-width: calc(100vw - #{$spacing} * 5 );
+	}
+}
+
+/* Utils for simulating grid on old browsers */
+
+/**
+ * PC: one row
+ * Mobile: one column
+ */
+@mixin gridFlow($gap) {
+	display: block;
+	@extend .clearfix;
+	> * {
+		float: left;
+		margin-left: $gap;
+		&:first-child {
+			margin-left: 0;
+		}
+		@media (max-width: $mobile-max) {
+			float: none;
+			margin-left: 0;
+			margin-top: $gap;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@mixin gridEqualWidth($gap, $count, $span) {
+	width: calc((100% - #{$count - 1} * #{$gap}) / #{$count} * #{$span} + #{$gap} * #{$span - 1});
+	@media (max-width: $mobile-max) {
+		width: auto;
+	}
+}
+
+@mixin gridFixedLeft($gap) {
+	display: flex;
+	> :nth-child(2) {
+		flex: auto;
+		margin-left: $gap;
 	}
 }

@@ -17,6 +17,9 @@ $columnrec_image_dimension: 48px;
   grid-template-rows: $columnrec_image_dimension;
   grid-column-gap: $spacing;
 }
+.no-css-grid .columnrec__content {
+	@include gridFixedLeft($spacing);
+}
 .columnrec__image {
 
 }
