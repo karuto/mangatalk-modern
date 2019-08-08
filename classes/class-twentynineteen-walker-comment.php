@@ -72,7 +72,7 @@ class TwentyNineteen_Walker_Comment extends Walker_Comment {
 					</footer><!-- .comment__meta -->
 
 					<p class='comment__text'>
-						<?php echo get_comment_text(); ?>
+						<?php echo nl2br(get_comment_text()); ?>
 					</p><!-- .comment__text -->
 
 					<?php
