@@ -1,7 +1,6 @@
 <?php
 /**
  * The template that displays the feed, based on any query to render some posts.
- * A collection of fee
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

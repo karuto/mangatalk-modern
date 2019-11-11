@@ -1,6 +1,8 @@
 <?php
 /**
- * Template part for displaying the metadata section of a single post.
+ * The template that displays the bio section on author archive pages.
+ * Structurally similar to content/content-post-meta.
+ * TODO: Consolidate this and content/content-post-meta.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -9,11 +11,8 @@
  * @since added by Vincent Zhang
  */
 ?>
-<?php 
-$authorId = get_the_author_meta( 'ID' );
-?>
 
-<aside class="author-bio">
+<aside class="author-bio author-bio__archive">
   <div class="author-bio__content">
     <div class="author-bio__image">
       <a href="<?php echo get_author_posts_url( $authorId ); ?>">
@@ -27,16 +26,9 @@ $authorId = get_the_author_meta( 'ID' );
           <?php echo count_user_posts( $authorId ); ?> 篇文章
         </span>
       </a>
-      <div class="columnrec__stats">
-        <?php get_template_part( 'templates/content/content-post-stats' ); ?>
-      </div>
-    </div>
-    <div class="secondary">
-      <div class="tags">
-        <span class="social__label">标签：</span>
-        <?php the_tags( '', '', '' ); /* before, separator, after */ ?>
-      </div>
-    <?php get_template_part( 'templates/content/content-post-social' ); ?>
     </div>
   </div>
 </aside>
+
+
+<!-- <?php echo get_the_author_meta( 'description' ) ?> -->
