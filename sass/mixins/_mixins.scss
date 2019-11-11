@@ -92,7 +92,8 @@ Everything here can be applied site-wide.
   margin: 0 auto;
   max-width: $onecolumn-maxwidth;
   @media (max-width: $mobile-max) {
-    margin: 0 $spacing;
+		margin: 0 $spacing;
+		max-width: $mobile-max;
   }
 }
 

@@ -1,6 +1,7 @@
 // Breakpoints
 /* NEED - The dividing breakpoint between mobile & desktop */
 $mobile-max: 959px;
+// Usage example
 @media (max-width: $mobile-max) {}
 
 /* NICE TO HAVE - Other more specific breakpoints */

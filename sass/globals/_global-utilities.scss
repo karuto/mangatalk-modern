@@ -2,7 +2,6 @@
 .maxwidth {
   max-width: $container-maxwidth;
 	margin: 0 auto;
-	
 
 	@media (max-width: $mobile-max) {
 		max-width: 100vw;

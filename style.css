@@ -528,6 +528,7 @@ section.not-found {
   section.archive,
   section.not-found {
     margin: 0 16px;
+    max-width: 959px;
   }
 }
 
@@ -833,6 +834,7 @@ section.not-found {
 @media (max-width: 959px) {
   .entry {
     margin: 0 16px;
+    max-width: 959px;
   }
 }
 
@@ -1887,6 +1889,7 @@ section.not-found {
 @media (max-width: 959px) {
   .archive .heading, .search .heading, .error404 .heading {
     margin: 0 16px;
+    max-width: 959px;
   }
 }
 
