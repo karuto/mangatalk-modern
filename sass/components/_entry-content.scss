@@ -60,6 +60,8 @@ $content-gutter: $spacing-large;
       width: 100%;
     }
 
+    ul > 
+
     p:last-child {
       margin-bottom: 0;
     }
@@ -225,13 +227,8 @@ $content-gutter: $spacing-large;
     max-width: $partial-content-max-width;
     position: relative;
     @media (max-width: $mobile-max) {
-      float: none;
-      margin: $content-gutter auto;
+      margin: 0 auto $content-gutter;
       max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
   }
 
@@ -242,7 +239,6 @@ $content-gutter: $spacing-large;
     width: 150px;
     top: 0;
     margin-top: 0;
-
     @media (max-width: $mobile-max) {
       position: relative;
       margin: calc(#{$content-gutter} / 2) auto 0;
