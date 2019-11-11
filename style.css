@@ -1312,6 +1312,7 @@ p:last-child {
 @media (max-width: 959px) {
   .entry__content .alignright,
   .entry__content .alignleft {
+    float: none;
     margin: 0 auto 32px;
     max-width: 100%;
   }

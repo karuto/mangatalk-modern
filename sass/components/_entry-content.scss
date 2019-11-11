@@ -227,6 +227,7 @@ $content-gutter: $spacing-large;
     max-width: $partial-content-max-width;
     position: relative;
     @media (max-width: $mobile-max) {
+      float: none;
       margin: 0 auto $content-gutter;
       max-width: 100%;
     }
