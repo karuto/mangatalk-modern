@@ -1,11 +1,11 @@
 // Globally applicable spacings
 $rem-base: 16px; /* 1.6rem */
 $spacing: $rem-base;
-$spacing-xsmall: ($spacing * 0.25);
-$spacing-small: ($spacing * 0.5);
-$spacing-smaller: ($spacing * 0.75);
-$spacing-medium: ($spacing * 1.5);
-$spacing-large: ($spacing * 2);
+$spacing-xsmall: ($spacing * 0.25); /* 4px */
+$spacing-small: ($spacing * 0.5); /* 8px */
+$spacing-smaller: ($spacing * 0.75); /* 12px */
+$spacing-medium: ($spacing * 1.5); /* 24px */
+$spacing-large: ($spacing * 2); /* 32px */
 $spacing-xlarge: ($spacing * 2.5); /* 40px */
 $spacing-xxlarge: ($spacing * 3); /* 48px */
 $spacing-xxxlarge: ($spacing * 4); /* 64px */

@@ -60,10 +60,13 @@ $content-gutter: $spacing-large;
       width: 100%;
     }
 
-    ul > 
-
     p:last-child {
       margin-bottom: 0;
+    }
+
+    li {
+      @include excerptFont();
+      margin: 0 0 $spacing-small;
     }
 
     h3, h4, h5 {
@@ -152,7 +155,13 @@ $content-gutter: $spacing-large;
   }
 
   em {
-    font-style: italic;
+    font-style: normal;
+    -moz-text-emphasis: filled dot;
+    -webkit-text-emphasis: filled dot;
+    text-emphasis: filled dot;
+    -moz-text-emphasis-position: under;
+    -webkit-text-emphasis-position: under;
+    text-emphasis-position: under;
   }
 
   s {

@@ -19,6 +19,11 @@ Text Domain: twentynineteen
 /* For all the meta components */
 /* only used for quotes */
 /* 1.6rem */
+/* 4px */
+/* 8px */
+/* 12px */
+/* 24px */
+/* 32px */
 /* 40px */
 /* 48px */
 /* 64px */
@@ -1071,9 +1076,17 @@ section.not-found {
   width: 100%;
 }
 
-.entry__content aside ul >
-p:last-child {
+.entry__content aside p:last-child {
   margin-bottom: 0;
+}
+
+.entry__content aside li {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  margin: 0 0 8px;
 }
 
 .entry__content aside h3, .entry__content aside h4, .entry__content aside h5 {
@@ -1205,7 +1218,13 @@ p:last-child {
 }
 
 .entry__content em {
-  font-style: italic;
+  font-style: normal;
+  -moz-text-emphasis: filled dot;
+  -webkit-text-emphasis: filled dot;
+  text-emphasis: filled dot;
+  -moz-text-emphasis-position: under;
+  -webkit-text-emphasis-position: under;
+  text-emphasis-position: under;
 }
 
 .entry__content s {
