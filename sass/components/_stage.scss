@@ -21,7 +21,9 @@ $stage-height: 350px;
   align-items: center;
 }
 .stage--author {
+  @extend .stage--relative;
   height: $stage-height;
+  margin-bottom: 0; /* overriding .stage--relative */
 }
 .stage__heading {
   @include heroFont();

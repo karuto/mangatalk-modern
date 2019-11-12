@@ -3,16 +3,35 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
 .author-bio {
   @include subtleFont();
   margin: 0 0 $spacing-large;
-  padding: 0 0 $spacing-large;
+  padding: 0 0 $spacing-large; /* for the border-bottom effect */
   border-bottom: $border-line-highlight;
 
   &__archive {
+    @include shadowBox();
     @include oneColumnContainer();
-    margin-left: auto;
-    margin-right: auto;
+    margin: -$avatar-dimension auto $spacing-large;
+    padding: $spacing;
+    background: white;
+    border-bottom: none;
+    border-radius: $base-border-radius;
+    @media (max-width: $mobile-max) {
+      margin: -$avatar-dimension $spacing $spacing-large; /* overriding oneColumnContainer() */
+    }
+  }
+  &__archive &__desc {
+    @include excerptFont();
+    font-weight: $font-weight-normal;
+    margin: $spacing-small 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  &__archive &__image {
+    margin: 0 $spacing 0 0;
   }
 
-  .author-bio__content {
+  &__content {
     display: grid;
     grid-template-columns: $avatar-dimension auto 1fr;
     grid-template-rows: $avatar-dimension;
@@ -23,6 +42,12 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
       grid-template-rows: $avatar-dimension 1fr;
     }
   }
+  &__archive > &__content {
+    display: grid;
+    grid-template-columns: $avatar-dimension 1fr;
+    grid-template-rows: $avatar-dimension 1fr;
+  }
+
   .columnrec__authorlink {
     padding: 0 0 $spacing-small;
     border-bottom: $border-line;

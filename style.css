@@ -546,14 +546,20 @@ section.not-found {
   font-weight: 700;
   margin: 0 0 32px;
   padding: 0 0 32px;
+  /* for the border-bottom effect */
   border-bottom: 3px solid #E84141;
 }
 
 .author-bio__archive {
+  box-shadow: 0px 2px 4px rgba(45, 51, 63, 0.3);
+  border-radius: 4px;
   margin: 0 auto;
   max-width: 740px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: -48px auto 32px;
+  padding: 16px;
+  background: white;
+  border-bottom: none;
+  border-radius: 4px;
 }
 
 @media (max-width: 959px) {
@@ -563,7 +569,32 @@ section.not-found {
   }
 }
 
-.author-bio .author-bio__content {
+@media (max-width: 959px) {
+  .author-bio__archive {
+    margin: -48px 16px 32px;
+    /* overriding oneColumnContainer() */
+  }
+}
+
+.author-bio__archive .author-bio__desc {
+  font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
+  font-size: 13px;
+  /* testing new typography */
+  line-height: 1.7;
+  color: #000;
+  font-weight: 400;
+  margin: 8px 0;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.author-bio__archive .author-bio__image {
+  margin: 0 16px 0 0;
+}
+
+.author-bio__content {
   display: grid;
   grid-template-columns: 48px auto 1fr;
   grid-template-rows: 48px;
@@ -572,10 +603,16 @@ section.not-found {
 }
 
 @media (max-width: 959px) {
-  .author-bio .author-bio__content {
+  .author-bio__content {
     grid-template-columns: 48px 1fr;
     grid-template-rows: 48px 1fr;
   }
+}
+
+.author-bio__archive > .author-bio__content {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: 48px 1fr;
 }
 
 .author-bio .columnrec__authorlink {
@@ -2302,7 +2339,7 @@ section.not-found {
   z-index: -1;
 }
 
-.stage--relative {
+.stage--relative, .stage--author {
   /* https://css-tricks.com/full-width-containers-limited-width-parents/#article-header-id-6 */
   position: relative;
   left: 50%;
@@ -2319,6 +2356,8 @@ section.not-found {
 
 .stage--author {
   height: 350px;
+  margin-bottom: 0;
+  /* overriding .stage--relative */
 }
 
 .stage__heading {

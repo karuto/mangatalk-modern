@@ -20,7 +20,7 @@ if ( $coverImgUrl === '' ) {
 ?>
 
 <div 
-  class="stage stage--relative stage--author"  
+  class="stage stage--author"  
   style="background-image: url(<?php echo $coverImgUrl; ?>);">
 </div>
 <?php get_template_part( 'templates/partials/author-bio' ); ?>
