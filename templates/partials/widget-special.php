@@ -21,7 +21,7 @@
 <div class="sidebar__block">
   <div class="heading"><span class="heading__label">随机推荐</span></div>
     <div class="special" style="background-image: url('<?php echo $imageUrl; ?>')">
-    <a class="special__link" href="http://mangatalk.net/2012/morning-manga-lab-1/">
+    <a class="special__link" href="<?php the_permalink(); ?>">
       <?php the_title(); ?>
       <div class="special__link__desc">
       <?php echo get_the_excerpt(); ?>

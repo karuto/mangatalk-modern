@@ -101,7 +101,7 @@ function generateFeedsByRecentExcludingFeatured() {
   </section>
   <aside class="sidebar">
     <?php get_template_part( 'templates/partials/widget-column-top' ); ?>
-    <?php get_template_part( 'templates/partials/widget-ad' ); ?>
+    <?php get_template_part( 'templates/partials/widget-special' ); ?>
     <?php get_template_part( 'templates/partials/widget-column-new' ); ?>
   </aside>
 </div>
