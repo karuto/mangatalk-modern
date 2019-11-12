@@ -30,6 +30,9 @@ $avatar-dimension: $spacing-xxlarge; /* 48px */
   &__archive &__image {
     margin: 0 $spacing 0 0;
   }
+  &__archive &__meta__item {
+    margin: 0 $spacing 0 0;
+  }
 
   &__content {
     display: grid;

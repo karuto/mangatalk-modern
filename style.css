@@ -594,6 +594,10 @@ section.not-found {
   margin: 0 16px 0 0;
 }
 
+.author-bio__archive .author-bio__meta__item {
+  margin: 0 16px 0 0;
+}
+
 .author-bio__content {
   display: grid;
   grid-template-columns: 48px auto 1fr;

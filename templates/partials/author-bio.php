@@ -53,19 +53,13 @@ $authorRole = $rolesMapping[$authorMeta->roles[0]];
       <div class="author-bio__meta">
         <span class="author-bio__meta__item"><?php echo $authorRole ?></span>
         <?php if ( $authorUrl ): ?>
-          <a class="author-bio__meta__item" href="<?php echo $authorUrl ?>" target="_blank">
-            博客
-          </a>
+          <a class="author-bio__meta__item" href="<?php echo $authorUrl ?>" target="_blank">博客</a>
         <?php endif; ?>
         <?php if ( $authorDouban ): ?>
-          <a class="author-bio__meta__item" href="<?php echo $authorDouban ?>" target="_blank">
-            豆瓣
-          </a>
+          <a class="author-bio__meta__item" href="<?php echo $authorDouban ?>" target="_blank">豆瓣</a>
         <?php endif; ?>
         <?php if ( $authorWeibo ): ?>
-          <a class="author-bio__meta__item" href="<?php echo $authorWeibo ?>" target="_blank">
-            微博
-          </a>
+          <a class="author-bio__meta__item" href="<?php echo $authorWeibo ?>" target="_blank">微博</a>
         <?php endif; ?>
       </div>
     </div>
