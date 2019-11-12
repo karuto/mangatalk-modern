@@ -12,11 +12,20 @@
  */
 // TODO: why is this variable, defined in author.php, not available here and forcing me to redeclare?
 $authorId = get_the_author_meta( 'ID' ); 
+
+// Description processing
+$authorDesc = get_the_author_meta( 'description' );
+if (!$authorDesc) {
+  $authorDesc = '这个家伙很懒，什么都没有留下。';
+}
+
+// Social links processing
 $authorMeta = get_userdata( $authorId, '', true );
 $authorWeibo = $authorMeta->weibo;
 $authorDouban = $authorMeta->douban;
 $authorUrl = $authorMeta->user_url;
 
+// Role processing
 $rolesMapping = [
   'administrator' => '漫言苦力',
   'editor' => '漫言编辑',
@@ -60,9 +69,7 @@ $authorRole = $rolesMapping[$authorMeta->roles[0]];
         <?php endif; ?>
       </div>
     </div>
-    <div class="author-bio__desc">
-      <?php echo get_the_author_meta( 'description' ) ?>
-    </div>
+    <div class="author-bio__desc"><?php echo $authorDesc ?></div>
   </div>
 </aside>
 
