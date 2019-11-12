@@ -10,7 +10,7 @@ $sidebar-gutter: $spacing-large;
 .widget__content {
   display: grid;
 }
-.ad {
+.special {
   border-radius: $base-border-radius;
   background-color: $base-text-color;
   background-image: url('./img/hero-bg.png');
@@ -28,11 +28,11 @@ $sidebar-gutter: $spacing-large;
     height: 50vw;
   }
 }
-.ad__link {
+.special__link {
   @include titleFont();
   @include linkWhite();
 }
-.ad__link__desc {
+.special__link__desc {
   @include excerptFont();
   color: $color-white;
   margin: $spacing 0 0;

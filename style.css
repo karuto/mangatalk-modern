@@ -2284,7 +2284,7 @@ section.not-found {
   display: grid;
 }
 
-.ad {
+.special {
   border-radius: 4px;
   background-color: #000;
   background-image: url("./img/hero-bg.png");
@@ -2301,12 +2301,12 @@ section.not-found {
 }
 
 @media (max-width: 959px) {
-  .ad {
+  .special {
     height: 50vw;
   }
 }
 
-.ad__link {
+.special__link {
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", sans-serif;
   font-size: 18px;
   line-height: 1.3;
@@ -2316,11 +2316,11 @@ section.not-found {
   transition: color 0.5s ease;
 }
 
-.ad__link:hover {
+.special__link:hover {
   color: #E84141;
 }
 
-.ad__link__desc {
+.special__link__desc {
   font-family: "Roboto", "Hiragino Sans GB", "冬青黑", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", serif;
   font-size: 13px;
   /* testing new typography */
