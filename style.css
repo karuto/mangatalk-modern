@@ -2287,8 +2287,6 @@ section.not-found {
 .special {
   border-radius: 4px;
   background-color: #000;
-  background-image: url("./img/hero-bg.png");
-  background-image: url("./img/rec-morning.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -2298,12 +2296,25 @@ section.not-found {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 @media (max-width: 959px) {
   .special {
     height: 50vw;
   }
+}
+
+.special:before {
+  /* Overlay for the special */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  opacity: .6;
 }
 
 .special__link {
@@ -2314,6 +2325,7 @@ section.not-found {
   cursor: pointer;
   color: #FFFFFF;
   transition: color 0.5s ease;
+  z-index: 100;
 }
 
 .special__link:hover {

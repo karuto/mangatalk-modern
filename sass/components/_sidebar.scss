@@ -13,8 +13,6 @@ $sidebar-gutter: $spacing-large;
 .special {
   border-radius: $base-border-radius;
   background-color: $base-text-color;
-  background-image: url('./img/hero-bg.png');
-  background-image: url('./img/rec-morning.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -24,13 +22,26 @@ $sidebar-gutter: $spacing-large;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   @media (max-width: $mobile-max) {
     height: 50vw;
+  }
+  &:before {
+    /* Overlay for the special */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: .6; 
   }
 }
 .special__link {
   @include titleFont();
   @include linkWhite();
+  z-index: 100;
 }
 .special__link__desc {
   @include excerptFont();
