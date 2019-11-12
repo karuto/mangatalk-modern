@@ -19,6 +19,7 @@ if ( has_post_thumbnail( $post->ID ) ) {
 	$imageUrl = get_template_directory_uri() . '/img/mt-cover-brand.jpg';
 }
 // Really sorry, because home page hero is also using this template
+// And also the special post widget
 $heroClasses = is_home() ? "hero hero--home" : "hero hero--content";
 ?>
 <div class="<?php echo $heroClasses; ?>">

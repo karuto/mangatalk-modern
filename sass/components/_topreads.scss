@@ -1,6 +1,10 @@
 .widget__content--topreads {
   .feed {
     grid-template-columns: 64px 1fr;
+    &:last-child {
+      margin: 0;
+      padding: 0;
+    }
   }
   .feed__content {
     justify-content: space-between;

@@ -18,17 +18,20 @@
     }
 ?>
 
-<div class="sidebar__block">
+<section class="widget" id="special" role="command">
   <div class="heading"><span class="heading__label">随机推荐</span></div>
-    <div class="special" style="background-image: url('<?php echo $imageUrl; ?>')">
-    <a class="special__link" href="<?php the_permalink(); ?>">
-      <?php the_title(); ?>
-      <div class="special__link__desc">
-      <?php echo get_the_excerpt(); ?>
+  <div class="hero hero--home hero--widget">
+    <a class="hero__title" href="<?php the_permalink(); ?>">
+      <div class="hero__cover" style="background-image: url('<?php echo $imageUrl; ?>')">
+        <div class="hero__cover__content">
+            <h1 class="hero__title__text"><?php the_title(); ?></h1>
+          <aside class="hero__excerpt"><?php echo get_the_excerpt(); ?></aside>
+        </div>
+        <div class="hero__cover__shade hero__cover__shade--black"></div>
       </div>
     </a>
   </div>
-</div>
+</section>
 
 <?php
 endwhile;

@@ -93,11 +93,11 @@ function generateFeedsByRecentExcludingFeatured() {
 <?php get_template_part( 'templates/partials/home-heroes' ); ?>
 <div class="grid">
   <section class="collection-of-feeds">
-  <?php
-  generateFeedsByCat( 'culture' ); // culture
-  generateFeedsByCat( 'recommendation' ); // recommendation
-  generateFeedsByCat( 'people' ); // people
-  ?>
+    <?php
+    generateFeedsByCat( 'culture' ); // culture
+    generateFeedsByCat( 'recommendation' ); // recommendation
+    generateFeedsByCat( 'people' ); // people
+    ?>
   </section>
   <aside class="sidebar">
     <?php get_template_part( 'templates/partials/widget-column-top' ); ?>

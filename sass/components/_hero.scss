@@ -60,6 +60,9 @@
     margin: 0 $spacing $spacing;
   }
 }
+.hero--widget {
+  grid-column: none; /* Overriding .hero--home */
+}
 .latest {
   display: grid;
   grid-template-rows: 1fr 1fr;
