@@ -11,6 +11,12 @@
 
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() . '/js/app.js' ?>">
 </script>
+
+<?php if ( is_home() ) { ?>
+<script src="https://cdn.jsdelivr.net/npm/swiper@5.2.1/js/swiper.min.js"></script>
+<script async defer="defer" src="<?php echo get_stylesheet_directory_uri() . '/js/home.js' ?>"></script>
+<?php } ?>
+
 <meta property="wb:webmaster" content="1f71be3e6043edc4" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55145791-1"></script>
