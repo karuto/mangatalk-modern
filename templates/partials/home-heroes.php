@@ -12,7 +12,14 @@
 
 <div class="stage"></div>
 <div class="heroes">
-  <?php generateFeedsByTag( 'featured', 1 ); ?>
+  <div class="hero-swiper">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <?php generateFeedsByTag( 'featured', 'hero-swiper', 3 ); ?>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
   <section class="latest">
     <?php generateFeedsByRecentExcludingFeatured(); ?>
   </section>

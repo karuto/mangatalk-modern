@@ -16,6 +16,8 @@ function renderTemplate( $template ) {
     get_template_part( 'templates/content/content-feed' );
   } else if ( $template == 'hero' ) {
     get_template_part( 'templates/content/content-post-hero' );
+  } else if ( $template == 'hero-swiper' ) {
+    get_template_part( 'templates/content/content-post-hero-swiper' );
   }
 }
 
@@ -72,14 +74,14 @@ function generateFeedsByCat( $catSlug, $postsCount = 3 ) {
   echo '</section>';
 }
 
-function generateFeedsByTag( $tagSlug, $postsCount = 3 ) {
+function generateFeedsByTag( $tagSlug, $templateName, $postsCount = 3 ) {
   $tagPosts = new WP_Query(
     array(
       'tag' => $tagSlug,
       'posts_per_page' => $postsCount
     )
   );
-  generateFeed( $tagPosts, $postsCount, 'hero' );
+  generateFeed( $tagPosts, $postsCount, $templateName );
 }
 
 function generateFeedsByRecentExcludingFeatured() {

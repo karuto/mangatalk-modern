@@ -21,7 +21,7 @@
   }
   .hero__title__text {
     margin: $spacing-large 0 $spacing;
-    @media (max-width: $mobile-max) {    
+    @media (max-width: $mobile-max) {
       @include titleFont();
       margin: $spacing 0;
     }
@@ -32,7 +32,8 @@
 
 .heroes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // 使用 minmax(0, 1fr) 代替 1fr: 避免内容过长时 grid column 的宽度随内容增长而不是截断 https://css-tricks.com/preventing-a-grid-blowout/
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-column-gap: $spacing;
   grid-gap: $spacing;
   margin: $spacing-xxlarge $spacing;
@@ -43,12 +44,8 @@
 }
 .hero--home {
   @include shadowBox();
-  grid-column: 1/3;
   margin: 0;
   height: $spacing-large * 10; /* 320px */
-  @media (max-width: $mobile-max) {  
-    grid-column: unset;
-  }
   .hero__cover__content {
     width: 100%;
   }
@@ -58,6 +55,31 @@
   }
   .hero__excerpt {
     margin: 0 $spacing $spacing;
+  }
+}
+/* Homepage swiper */
+.heroes > .hero-swiper {
+  grid-column: 1/3;
+  @media (max-width: $mobile-max) {
+    grid-column: unset;
+  }
+  .swiper-wrapper {
+    transition-property: left;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 4px;
+  }
+  .swiper-pagination-bullet {
+    opacity: .5;
+    background: #eee;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: .8;
+  }
+  .hero--home {
+    .hero__excerpt {
+      margin: 0 $spacing $spacing-medium;
+    }
   }
 }
 .hero--widget {
