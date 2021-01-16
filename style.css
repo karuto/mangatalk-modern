@@ -1087,6 +1087,7 @@ section.not-found {
 
 .entry__content img {
   max-width: 100%;
+  height: auto;
 }
 
 .entry__content h2 {
