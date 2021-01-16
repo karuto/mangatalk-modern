@@ -1273,16 +1273,6 @@ section.not-found {
   font-family: monospace;
 }
 
-.entry__content em {
-  font-style: normal;
-  -moz-text-emphasis: filled dot;
-  -webkit-text-emphasis: filled dot;
-  text-emphasis: filled dot;
-  -moz-text-emphasis-position: under;
-  -webkit-text-emphasis-position: under;
-  text-emphasis-position: under;
-}
-
 .entry__content s {
   text-decoration: line-through;
   color: #777;
