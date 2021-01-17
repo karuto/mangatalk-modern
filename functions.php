@@ -281,16 +281,21 @@ function twentynineteen_colors_css_wrap() {
 }
 add_action( 'wp_head', 'twentynineteen_colors_css_wrap' );
 
+/* Enqueue default Twentynineteen classes */
 require get_template_directory() . '/classes/class-twentynineteen-svg-icons.php';
 require get_template_directory() . '/classes/class-twentynineteen-walker-comment.php';
 
+/* Enqueue default Twentynineteen functions */
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/icon-functions.php';
 require get_template_directory() . '/inc/relative-comment-time.php';
 require get_template_directory() . '/inc/template-functions.php';
 
+/* Enqueue MangaTalk custom functions */
 require get_template_directory() . '/inc/mt-admin.php';
 require get_template_directory() . '/inc/mt-archive-title.php';
+// require get_template_directory() . '/inc/mt-get-authors.php';
+require get_template_directory() . '/inc/mt-head-meta.php';
 require get_template_directory() . '/inc/mt-password-protected.php';
 require get_template_directory() . '/inc/mt-post-views.php';
 require get_template_directory() . '/inc/mt-search.php';
