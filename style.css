@@ -807,6 +807,13 @@ section.not-found {
   /* reset browser defaults */
   outline: transparent none medium;
   /* reset browser defaults */
+  color: #777;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  font-weight: 400;
+  /* override the subtleFont boldness */
   width: 100%;
 }
 
@@ -866,6 +873,8 @@ section.not-found {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
+  font-weight: 400;
+  /* override the subtleFont boldness */
   line-height: 1.3;
 }
 

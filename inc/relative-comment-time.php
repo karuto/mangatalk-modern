@@ -8,7 +8,7 @@
  * @return string - The comment's date.
  */
 function relative_comment_time($date, $d, $comment){
-	return sprintf( _x( '%s ago', '%s = human-readable time difference', 'twentynineteen' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+	return sprintf( _x( '%s以前', '%s = human-readable time difference', 'twentynineteen' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
 }
 add_filter('get_comment_date', 'relative_comment_time', 10, 3);
 ?>

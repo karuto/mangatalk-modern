@@ -25,6 +25,8 @@ $avatar-dimension: 48px;
   /* TODO: make the textarea adaptable to input */
   .comment__input {
     @include formInput();
+    @include subtleFont();
+    font-weight: $font-weight-normal; /* override the subtleFont boldness */
     width: 100%;
   }
   .comment__body {
@@ -58,6 +60,7 @@ $avatar-dimension: 48px;
   }
   .comment__checkbox__label {
     @include subtleFont();
+    font-weight: $font-weight-normal; /* override the subtleFont boldness */
     line-height: 1.3;
   }
 }

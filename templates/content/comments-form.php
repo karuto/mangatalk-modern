@@ -34,12 +34,12 @@ $fields =  array(
   'email' =>
     '<div class="comment__body"><label class="comment__input__label" for="email">' . '邮箱' .
     ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-    '<input class="comment__input" id="email" name="email" type="text" placeholder="Your email address will not be published" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '<input class="comment__input" id="email" name="email" type="text" placeholder="邮箱仅为记录不会公开。" value="' . esc_attr(  $commenter['comment_author_email'] ) .
     '" size="30"' . $aria_req . ' /></div>',
 
   'url' =>
     '<div class="comment__body"><label class="comment__input__label" for="url">' . '主页' . '</label>' .
-    '<input class="comment__input" id="url" name="url" type="text" placeholder="Your personal website URL" value="' . esc_attr( $commenter['comment_author_url'] ) .
+    '<input class="comment__input" id="url" name="url" type="text" placeholder="主页是选填项哦！" value="' . esc_attr( $commenter['comment_author_url'] ) .
     '" size="30" /></div>',
 
   'cookies' => 
