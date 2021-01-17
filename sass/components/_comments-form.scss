@@ -46,8 +46,7 @@ $avatar-dimension: 48px;
     flex-direction: column;
   }
   /* The <input> tag that actually is the submit button */
-  #submit,
-  #cancel-comment-reply-link {
+  #submit {
     /* Align to the right end */
     align-self: flex-end;
     @include buttonPrimary();
@@ -70,4 +69,7 @@ $avatar-dimension: 48px;
   margin: $spacing-large 0;
   padding: 0 0 $spacing-large; /* for the border-bottom effect */
   border-bottom: $border-line-highlight;
+}
+#cancel-comment-reply-link {
+  @include buttonPrimary();
 }
