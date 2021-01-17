@@ -46,7 +46,8 @@ $avatar-dimension: 48px;
     flex-direction: column;
   }
   /* The <input> tag that actually is the submit button */
-  .comment__submit {
+  #submit,
+  #cancel-comment-reply-link {
     /* Align to the right end */
     align-self: flex-end;
     @include buttonPrimary();
@@ -63,4 +64,10 @@ $avatar-dimension: 48px;
     font-weight: $font-weight-normal; /* override the subtleFont boldness */
     line-height: 1.3;
   }
+}
+
+#respond.comment-respond {
+  margin: $spacing-large 0;
+  padding: 0 0 $spacing-large; /* for the border-bottom effect */
+  border-bottom: $border-line-highlight;
 }
