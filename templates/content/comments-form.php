@@ -20,7 +20,7 @@ $comment_content .= '<div class="comment__author">';
 $comment_content .= $avatar;
 $comment_content .= '</div>';
 $comment_content .= '<div class="comment__content">';
-$comment_content .= '<textarea class="comment__input" id="comment" name="comment" aria-required="true"></textarea>';
+$comment_content .= '<textarea class="comment__input" id="comment" name="comment" placeholder="请尽量让自己的回复能够对别人有帮助。" aria-required="true"></textarea>';
 $comment_content .= '</div>';
 $comment_content .= '</div>';
 
@@ -28,13 +28,13 @@ $fields =  array(
   'author' =>
     '<div class="comment__body"><label class="comment__input__label" for="author">' . '名字' .
     ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-    '<input class="comment__input" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+    '<input class="comment__input" id="author" name="author" type="text" placeholder="名字是必填项。" value="' . esc_attr( $commenter['comment_author'] ) .
     '" size="30"' . $aria_req . ' /></div>',
 
   'email' =>
     '<div class="comment__body"><label class="comment__input__label" for="email">' . '邮箱' .
     ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-    '<input class="comment__input" id="email" name="email" type="text" placeholder="邮箱仅为记录不会公开。" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+    '<input class="comment__input" id="email" name="email" type="text" placeholder="邮箱必填但不会公开。" value="' . esc_attr(  $commenter['comment_author_email'] ) .
     '" size="30"' . $aria_req . ' /></div>',
 
   'url' =>
