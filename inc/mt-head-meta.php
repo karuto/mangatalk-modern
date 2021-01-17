@@ -15,13 +15,20 @@ add_filter('language_attributes', 'add_opengraph_doctype');
 
 //Add Open Graph Meta Info
 function mt_head_meta_opengraph() {
+  $description_default = "优质漫画文化媒体。我们致力于收集与输出中文互联网上最具长远留存价值的漫画内容，让你更了解漫画及其背后世界的魅力。";
+  $description_post = get_the_excerpt();
+
   global $post;
   if ( !is_singular()) {
     //if it is not a post or a page
+    echo '<meta property="description" content="' . $description_default . '"/>';
+    echo '<meta property="og:description" content="' . $description_default . '"/>';
     return;
   }
   echo '<meta property="og:title" content="' . get_the_title() . '"/>';
   echo '<meta property="og:type" content="article"/>';
+  echo '<meta property="description" content="' . $description_post . '"/>';
+  echo '<meta property="og:description" content="' . $description_post . '"/>';
   echo '<meta property="og:url" content="' . get_permalink() . '"/>';
   if (!has_post_thumbnail( $post->ID )) {
     // if the post does not have featured image, use a default image
