@@ -53,6 +53,9 @@
       grid-template-columns: 100%;
     }
   }
+  .feed:last-child {
+    border-bottom: $border-line;
+  }
 }
 
 @import "./entry-content.scss";

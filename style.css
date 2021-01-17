@@ -1080,6 +1080,10 @@ section.not-found {
   }
 }
 
+.entry__footer .feed:last-child {
+  border-bottom: 1px solid #CECECE;
+}
+
 .single {
   /* top level wrapper on single pages */
   margin: 48px 0 0;
