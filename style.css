@@ -1126,6 +1126,7 @@ section.not-found {
 }
 
 .entry__content img {
+  border-radius: 4px;
   max-width: 100%;
   height: auto;
 }
